@@ -4,7 +4,7 @@ import SocialMedia from "./socialMedia";
 const MainLayout = ({ children }: any) => {
   return (
     <>
-      <div className="p-3  flex justify-between w-screen items-center">
+      <div className="p-5  flex justify-between w-screen items-center">
         <img src={mobileHouseLogo} height={260} width={300} />
         <Naviagtion />
         <SocialMedia />
