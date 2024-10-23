@@ -1,4 +1,10 @@
+import ImageSlider from "components/Home/imageSlider";
+
 const HomePage = () => {
-  return <div></div>;
+  return (
+    <div>
+      <ImageSlider />
+    </div>
+  );
 };
 export default HomePage;

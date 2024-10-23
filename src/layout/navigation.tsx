@@ -3,15 +3,17 @@ import { Link } from "react-router-dom";
 const Naviagtion = () => {
   return (
     <nav className="mr-6">
-      <ul className="flex space-x-5">
+      <ul className="flex space-x-8">
         <li>
-          <Link to="/">Home</Link>
+          <Link className="font-semibold" to="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">New Arrival</Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact">Special Offer </Link>
         </li>
       </ul>
     </nav>
