@@ -3,7 +3,7 @@ import SocialMediaItems from "constants/socialMediaItems";
 
 const SocialMedia = () => {
   return (
-    <div className="flex space-x-4">
+    <div className="hidden space-x-4  md:flex">
       {SocialMediaItems?.map((item: any) => (
         <DynamicMuiIcon iconName={item.icon} />
       ))}

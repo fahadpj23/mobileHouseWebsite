@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.carousel-container-with-gap .react-multi-carousel-item {
+  margin-right: 10px;
+  width: 120px !important;
+}
+
+.carousel-item-gap {
+  margin-right: 5px; /* Set the gap between items */
+}
+
+body {
+  overflow-x: hidden;
+}

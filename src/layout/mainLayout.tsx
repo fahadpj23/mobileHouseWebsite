@@ -6,8 +6,12 @@ const MainLayout = ({ children }: any) => {
     <>
       <div className="p-5  flex justify-between w-screen items-center">
         <img src={mobileHouseLogo} height={260} width={300} />
-        <Naviagtion />
-        <SocialMedia />
+        <div className="hidden md:block">
+          <Naviagtion />
+        </div>
+        <div>
+          <SocialMedia />
+        </div>
       </div>
       <main>{children}</main>
     </>

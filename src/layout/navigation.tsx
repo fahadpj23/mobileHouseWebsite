@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Naviagtion = () => {
   return (
-    <nav className="mr-6">
+    <nav className="mr-6 hidden md:block">
       <ul className="flex space-x-8">
         <li>
           <Link className="font-semibold" to="/">
