@@ -1,11 +1,13 @@
-import VIVOV40PHONE from "assets/vivoV40Phone.jpg";
 import { FC } from "react";
 
 interface props {
   product: any;
 }
 const SingleProductCard: FC<props> = ({ product }) => {
-  const DiscountPercentage = (45000 / 37000) * 100;
+  const DiscountPercentage =
+    ((product.mrp - product.salesPrice) /
+      ((product.mrp + product.salesPrice) / 2)) *
+    100;
 
   return (
     <div>
@@ -18,8 +20,9 @@ const SingleProductCard: FC<props> = ({ product }) => {
             width={150}
           />
         </div>
+        <h1 className="font-semibold">{product?.name}</h1>
         <h1 className="absolute top-3 right-3 bg-blue-500 text-white rounded p-1  text-xs md:text-base">
-          {80}%off
+          {Math.floor(DiscountPercentage)}%off
         </h1>
         <div className=" flex space-x-3 items-center">
           <h1 className="font-semibold text-xs md:text-base">

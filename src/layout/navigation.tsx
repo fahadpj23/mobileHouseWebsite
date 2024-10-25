@@ -1,20 +1,19 @@
 import { Link } from "react-router-dom";
+import { NAVIGATIONITEMS } from "constants/navigationItems";
 
 const Naviagtion = () => {
   return (
     <nav className="mr-6 hidden md:block">
       <ul className="flex space-x-8">
-        <li>
-          <Link className="font-semibold" to="/">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/about">New Arrival</Link>
-        </li>
-        <li>
-          <Link to="/contact">Special Offer </Link>
-        </li>
+        {NAVIGATIONITEMS?.map((navigation) => {
+          return (
+            <li>
+              <Link className="font-semibold" to={navigation?.link}>
+                {navigation?.title}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

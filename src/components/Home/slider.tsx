@@ -22,6 +22,7 @@ const SliderList = () => {
     arrows: false,
     className: "px-9",
     swipeToSlide: true,
+    infinite: true,
 
     responsive: [
       {

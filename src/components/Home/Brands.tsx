@@ -1,8 +1,10 @@
 import { PHONEBRANDS } from "constants/phoneBrands";
+import { Link } from "react-router-dom";
 
 interface brandType {
   name: string;
   image: string;
+  link: string;
 }
 interface brands {
   data: brandType[];
@@ -20,12 +22,14 @@ const Brands = () => {
       <div className="flex space-x-9">
         {PHONEBRANDS?.map((brand: brandType) => {
           return (
-            <img
-              src={brand?.image}
-              alt="logo "
-              style={imageStyle}
-              className="hover:scale-110 duration-150"
-            />
+            <Link to={`brand${brand?.link}`}>
+              <img
+                src={brand?.image}
+                alt="logo "
+                style={imageStyle}
+                className="hover:scale-110 duration-150"
+              />
+            </Link>
           );
         })}
       </div>
