@@ -1,6 +1,6 @@
 const SocialMediaItems = [
   { name: "instagram", icon: "Instagram" },
-  { name: "instagram", icon: "Facebook" },
-  { name: "instagram", icon: "WhatsApp" },
+  { name: "facebook", icon: "Facebook" },
+  { name: "whstapp", icon: "WhatsApp" },
 ];
 export default SocialMediaItems;

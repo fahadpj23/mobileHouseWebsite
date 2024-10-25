@@ -4,8 +4,6 @@ import ProductMiniList from "components/Home/productMiniList";
 import { SpecialOfferPhones } from "constants/specialOfferPhones";
 import Banner from "components/Home/banner";
 import MultiCarousel from "components/Home/multiCarousel";
-import { PHONEBRANDS } from "constants/phoneBrands";
-import SliderList from "components/Home/slider";
 
 const HomePage = () => {
   return (
@@ -13,7 +11,7 @@ const HomePage = () => {
       <div className="w-11/12 flex flex-col space-y-10">
         <ImageSlider />
         <div className="block md:hidden">
-          <MultiCarousel data={PHONEBRANDS} />
+          <MultiCarousel />
         </div>
         <div className="hidden md:block">
           <Brands />

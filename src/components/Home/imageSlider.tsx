@@ -17,7 +17,7 @@ const ImageSlider = () => {
         showArrows={false}
       >
         {images?.map((image) => (
-          <div>
+          <div key={image}>
             <img
               src={image}
               className="h-[60vW] md:h-[30vw] rounded-xl "

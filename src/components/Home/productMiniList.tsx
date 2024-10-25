@@ -11,7 +11,7 @@ const ProductMiniList: FC<props> = ({ title, listItems }) => {
       <h1 className="font-semibold text-lg w-full">{title}</h1>
       <div className=" mt-2  grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-5 ">
         {listItems?.map((product: any) => (
-          <SingleProductCard product={product} />
+          <SingleProductCard key={product?.name} product={product} />
         ))}
       </div>
     </div>

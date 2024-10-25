@@ -16,8 +16,7 @@ const SingleProductCard: FC<props> = ({ product }) => {
           <img
             src={product?.image}
             alt="phone Image"
-            height={150}
-            width={150}
+            style={{ objectFit: "fill", width: "150px", height: "170px" }}
           />
         </div>
         <h1 className="font-semibold">{product?.name}</h1>

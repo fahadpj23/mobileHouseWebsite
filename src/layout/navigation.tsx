@@ -7,7 +7,7 @@ const Naviagtion = () => {
       <ul className="flex space-x-8">
         {NAVIGATIONITEMS?.map((navigation) => {
           return (
-            <li>
+            <li key={navigation?.title}>
               <Link className="font-semibold" to={navigation?.link}>
                 {navigation?.title}
               </Link>

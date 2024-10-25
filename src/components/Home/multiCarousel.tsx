@@ -1,7 +1,7 @@
-import { FC } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
+import { Link } from "react-router-dom";
+import { PHONEBRANDS } from "constants/phoneBrands";
 interface dataprops {
   name: string;
   image: string;
@@ -27,7 +27,7 @@ const responsive = {
   },
 };
 
-const MultiCarousel: FC<Props> = ({ data }) => {
+const MultiCarousel = () => {
   return (
     <Carousel
       swipeable={true}
@@ -42,18 +42,20 @@ const MultiCarousel: FC<Props> = ({ data }) => {
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item"
     >
-      {data?.map((item: dataprops) => {
+      {PHONEBRANDS?.map((brand: any) => {
         return (
-          <img
-            src={item?.image}
-            alt="logo "
-            style={{
-              width: "100px",
-              height: "40px",
-              objectFit: "fill",
-              borderRadius: "5px",
-            }}
-          />
+          <Link key={brand?.name} to={`brand${brand?.link}`}>
+            <img
+              src={brand?.image}
+              alt="logo "
+              style={{
+                width: "100px",
+                height: "40px",
+                objectFit: "fill",
+                borderRadius: "5px",
+              }}
+            />
+          </Link>
         );
       })}
     </Carousel>

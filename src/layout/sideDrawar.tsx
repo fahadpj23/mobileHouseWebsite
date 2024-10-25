@@ -1,10 +1,4 @@
-import {
-  Button,
-  List,
-  ListItem,
-  ListItemText,
-  SwipeableDrawer,
-} from "@mui/material";
+import { List, ListItem, SwipeableDrawer } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import { NAVIGATIONITEMS } from "constants/navigationItems";
@@ -47,7 +41,7 @@ const SideDrawar = () => {
             <>
               <div className="flex justify-end space-x-3">
                 {SocialMediaItems?.map((item: any) => (
-                  <DynamicMuiIcon iconName={item.icon} />
+                  <DynamicMuiIcon key={item?.name} iconName={item.icon} />
                 ))}
               </div>
               {NAVIGATIONITEMS.map((navigation, index) => (

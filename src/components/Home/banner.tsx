@@ -6,7 +6,12 @@ const Banner = () => {
       <div className="hidden justify-between space-x-5  md:flex">
         {MINIBANNERS?.map((banner: any) => {
           return (
-            <img src={banner?.image} alt="banner" className="w-full h-[30vh]" />
+            <img
+              key={banner?.name}
+              src={banner?.image}
+              alt="banner"
+              className="w-full h-[30vh]"
+            />
           );
         })}
       </div>

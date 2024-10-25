@@ -6,9 +6,6 @@ interface brandType {
   image: string;
   link: string;
 }
-interface brands {
-  data: brandType[];
-}
 
 const Brands = () => {
   const imageStyle = {
@@ -22,7 +19,7 @@ const Brands = () => {
       <div className="flex space-x-9">
         {PHONEBRANDS?.map((brand: brandType) => {
           return (
-            <Link to={`brand${brand?.link}`}>
+            <Link key={brand?.name} to={`brand${brand?.link}`}>
               <img
                 src={brand?.image}
                 alt="logo "
