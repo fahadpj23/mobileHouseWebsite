@@ -21,8 +21,8 @@ const SideDrawar = () => {
   };
 
   return (
-    <div className=" block md:hidden mt-20">
-      <button className="fixed top-2 right-3" onClick={toggleDrawer(true)}>
+    <div className=" block md:hidden">
+      <button className="fixed top-2 right-3 " onClick={toggleDrawer(true)}>
         <MenuIcon />
       </button>
       <SwipeableDrawer

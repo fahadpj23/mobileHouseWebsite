@@ -39,11 +39,11 @@
 
 .carousel-container-with-gap .react-multi-carousel-item {
   margin-right: 10px;
-  width: 120px !important;
+  width: 100px !important;
 }
 
 .carousel-item-gap {
-  margin-right: 5px; /* Set the gap between items */
+  margin-right: 3px; /* Set the gap between items */
 }
 
 body {

@@ -20,7 +20,7 @@ const ImageSlider = () => {
           <div key={image}>
             <img
               src={image}
-              className="h-[60vW] md:h-[30vw] rounded-xl "
+              className="h-[60vW] md:h-[25vw] rounded-xl "
               alt="banner"
             />
           </div>
