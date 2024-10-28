@@ -19,7 +19,7 @@ const SingleProductCard: FC<props> = ({ product }) => {
             style={{ objectFit: "fill", width: "150px", height: "170px" }}
           />
         </div>
-        <h1 className="font-semibold">{product?.name}</h1>
+        <h1 className="font-semibold truncate w-full">{product?.name}</h1>
         <h1 className="absolute top-3 right-3 bg-blue-500 text-white rounded p-1  text-xs md:text-base">
           {Math.floor(DiscountPercentage)}%off
         </h1>

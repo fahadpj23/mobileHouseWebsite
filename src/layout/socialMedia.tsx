@@ -5,7 +5,9 @@ const SocialMedia = () => {
   return (
     <div className="hidden space-x-4  md:flex">
       {SocialMediaItems?.map((item: any) => (
-        <DynamicMuiIcon key={item?.name} iconName={item.icon} />
+        <a href={item?.link}>
+          <DynamicMuiIcon key={item?.name} iconName={item.icon} />
+        </a>
       ))}
     </div>
   );
