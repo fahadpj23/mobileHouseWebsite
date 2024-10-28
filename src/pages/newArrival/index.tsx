@@ -3,7 +3,7 @@ import { NEWARRIVALITEMS } from "constants/newArrivalItems";
 
 const NewArrival = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-5">
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-5">
       {NEWARRIVALITEMS?.map((product: any) => {
         return <SingleProductCard product={product} key={product?.name} />;
       })}

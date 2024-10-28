@@ -39,9 +39,11 @@ const SideDrawar = () => {
         >
           <List>
             <>
-              <div className="flex justify-end space-x-3">
+              <div className="flex justify-end space-x-3 mr-3">
                 {SocialMediaItems?.map((item: any) => (
-                  <DynamicMuiIcon key={item?.name} iconName={item.icon} />
+                  <a href={item?.link}>
+                    <DynamicMuiIcon key={item?.name} iconName={item.icon} />
+                  </a>
                 ))}
               </div>
               {NAVIGATIONITEMS.map((navigation, index) => (

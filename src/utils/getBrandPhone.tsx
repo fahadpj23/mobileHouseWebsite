@@ -2,6 +2,7 @@ import { VIVOPHONES } from "constants/vivo";
 import { OPPOPHONES } from "constants/oppo";
 import { REALMEPHONES } from "constants/realme";
 import { SAMSUNGPHONES } from "constants/samsung";
+import { MIPHONES } from "constants/mi";
 
 export const getBrandPhones = (brandName: string) => {
   switch (brandName) {
@@ -13,6 +14,8 @@ export const getBrandPhones = (brandName: string) => {
       return REALMEPHONES;
     case "samsung":
       return SAMSUNGPHONES;
+    case "mi":
+      return MIPHONES;
     default:
       return "";
   }
