@@ -1,8 +1,11 @@
+import { Divider } from "@mui/material";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 const SingleItem = () => {
   const location = useLocation();
   const linkState = location?.state;
   const product = linkState?.product;
+
   const DiscountPercentage =
     ((product.mrp - product.salesPrice) /
       ((product.mrp + product.salesPrice) / 2)) *
@@ -18,17 +21,40 @@ const SingleItem = () => {
           />
         </div>
       </div>
-      <div className="ml-6 w-1/2 space-y-2">
-        <h1 className=" text-green-500 rounded p-1 font-semibold  text-sm md:text-base">
-          Extra ₹{product?.mrp - product?.salesPrice} off
-        </h1>
-        <h1 className="font-semibold text-sm md:text-lg text-black-600 tracking-wider">
-          Offer Price: ₹{product.salesPrice}.00
-        </h1>
+      <div className=" w-full md:w-1/2 mt:0 md:mt-20 ">
+        <div className="space-y-2 ml-6">
+          <h1 className="font-semibold truncate w-full text-xl">
+            {product?.name}
+          </h1>
+          <div className="flex items-center space-x-2 text-lg">
+            <h1 className="font-semibold  text-green-600 tracking-wide">
+              ₹{product.salesPrice}.00
+            </h1>
 
-        <h1 className="line-through text-[11px] md:text-base text-gray-500">
-          MRP: ₹{product.mrp}
-        </h1>
+            <h1 className="line-through  text-red-500 text-xs">
+              MRP: ₹{product.mrp}
+            </h1>
+            <h1 className=" text-[#11a453] rounded p-1 font-semibold  t">
+              {DiscountPercentage && Math.floor(DiscountPercentage)}% off
+            </h1>
+          </div>
+        </div>
+        <div className=" pb-3">
+          <div className="space-y-3 py-3">
+            <h1 className="font-semibold ml-6 ">Specifications</h1>
+            <Divider sx={{ width: "100%" }} />
+          </div>
+          <div className="space-y-3 ml-6">
+            {product?.specification &&
+              Object.entries(product?.specification)?.map(
+                (specification: any) => (
+                  <h1 key={specification[0]} className="font-light text-sm ">
+                    {specification[0]} : {specification[1]}
+                  </h1>
+                )
+              )}
+          </div>
+        </div>
       </div>
     </div>
   );
