@@ -2,6 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from "react-router-dom";
 import { PHONEBRANDS } from "constants/phoneBrands";
+import { useEffect } from "react";
 interface dataprops {
   name: string;
   image: string;
@@ -42,13 +43,13 @@ const MultiCarousel = () => {
     //   // itemClass="carousel-item"
     //   autoPlay={true}
     // >
-    <div className="w-full grid grid-cols-3 gap-2 justify-between  ">
+    <div className="w-full grid grid-cols-3 gap-3 justify-between bg-gray-100 px-1 py-4  ">
       {PHONEBRANDS?.map((brand: any) => {
         return (
           <Link
             key={brand?.name}
             to={`brand${brand?.link}`}
-            className="w-full "
+            className="item w-full border-1 border-black bg-white  rounded-md flex justify-center shadow-md  "
           >
             <img
               src={brand?.image}

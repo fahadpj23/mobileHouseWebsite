@@ -4,6 +4,7 @@ import MainLayout from "layout/mainLayout";
 import NewArrival from "pages/newArrival";
 import SpecialOffer from "pages/specialOffer";
 import Brand from "pages/brand";
+import SingleItem from "pages/singleItem";
 
 const PageRoute = () => {
   return (
@@ -15,6 +16,7 @@ const PageRoute = () => {
             <Route index path="newArrival" element={<NewArrival />} />
             <Route index path="specialOffer" element={<SpecialOffer />} />
             <Route index path="brand/:brandName" element={<Brand />} />
+            <Route index path="phone/:phoneName" element={<SingleItem />} />
           </Routes>
         </MainLayout>
       </BrowserRouter>

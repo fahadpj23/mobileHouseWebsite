@@ -48,7 +48,9 @@ const SideDrawar = () => {
               </div>
               {NAVIGATIONITEMS.map((navigation, index) => (
                 <ListItem key={navigation.title}>
-                  <Link to={navigation.link}>{navigation?.title}</Link>
+                  <Link className="w-full " to={navigation.link}>
+                    {navigation?.title}
+                  </Link>
                 </ListItem>
               ))}
             </>

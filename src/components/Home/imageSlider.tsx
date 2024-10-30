@@ -1,13 +1,10 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import RENO12 from "assets/reno12.jpg";
-import VIVOV40 from "assets/VivoV40.jpg";
-import SAMSUNGA16 from "assets/samsunga16.jpg";
+import { MAINBANNER } from "constants/mainBanner";
 
 const ImageSlider = () => {
-  const images = [RENO12, VIVOV40, SAMSUNGA16];
   return (
-    <div className="h-[60vW] md:h-[30vw]">
+    <div className="h-[35vW] md:h-[30vw]">
       <Carousel
         autoPlay={true}
         showThumbs={false}
@@ -16,11 +13,11 @@ const ImageSlider = () => {
         showStatus={false}
         showArrows={false}
       >
-        {images?.map((image) => (
-          <div key={image}>
+        {MAINBANNER?.map((banner) => (
+          <div key={banner?.id}>
             <img
-              src={image}
-              className="h-[60vW] md:h-[25vw] rounded-xl "
+              src={banner?.image}
+              className="h-[40vW] md:h-[25vw] rounded-xl "
               alt="banner"
             />
           </div>

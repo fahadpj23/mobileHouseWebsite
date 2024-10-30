@@ -1,15 +1,15 @@
-import VIVOLOGO from "assets/vivoLogo.jpg";
-import OPPOLOGO from "assets/oppoLogo.png";
-import SAMSUNGLOGO from "assets/samsungLogo.png";
-import REALMELOGO from "assets/realmeLogo.png";
-import MILOGO from "assets/miLogo.png";
-import TECNOLOGO from "assets/tecnoLogo.jpg";
+import VIVOLOGO from "assets/brands/vivoLogo.png";
+import OPPOLOGO from "assets/brands/oppoLogo.png";
+import SAMSUNGLOGO from "assets/brands/samsungLogo.png";
+import REALMELOGO from "assets/brands/realmeLogo.png";
+import MILOGO from "assets/brands/miLogo.png";
+import TECNOLOGO from "assets/brands/tecnoLogo.png";
 
 export const PHONEBRANDS = [
-  { name: "vivoLogo", image: VIVOLOGO, link: "/vivo" },
-  { name: "oppoLogo", image: OPPOLOGO, link: "/oppo" },
-  { name: "samsungLogo", image: SAMSUNGLOGO, link: "/samsung" },
-  { name: "realmeLogo", image: REALMELOGO, link: "/realme" },
-  { name: "miLogo", image: MILOGO, link: "/mi" },
-  { name: "tecnoLogo", image: TECNOLOGO, link: "/tecno" },
+  { name: "vivo", image: VIVOLOGO, link: "/vivo" },
+  { name: "oppo", image: OPPOLOGO, link: "/oppo" },
+  { name: "samsung", image: SAMSUNGLOGO, link: "/samsung" },
+  { name: "realme", image: REALMELOGO, link: "/realme" },
+  { name: "mi", image: MILOGO, link: "/mi" },
+  { name: "tecno", image: TECNOLOGO, link: "/tecno" },
 ];

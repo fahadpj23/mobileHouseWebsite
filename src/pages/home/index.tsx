@@ -16,11 +16,16 @@ const HomePage = () => {
         <div className="hidden md:block">
           <Brands />
         </div>
-        <ProductMiniList title="Special Offer" listItems={SpecialOfferPhones} />
+        <ProductMiniList
+          title="Special Offer"
+          listItems={SpecialOfferPhones}
+          link="/specialOffer"
+        />
         <Banner />
         <ProductMiniList
           title="Trending Phones"
           listItems={SpecialOfferPhones}
+          link="/newArrival"
         />
       </div>
     </div>
