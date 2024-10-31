@@ -1,4 +1,5 @@
 import { Divider } from "@mui/material";
+import { getSpecificationIcon } from "utils/getSpecificationIcon";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 const SingleItem = () => {
@@ -10,6 +11,7 @@ const SingleItem = () => {
     ((product.mrp - product.salesPrice) /
       ((product.mrp + product.salesPrice) / 2)) *
     100;
+
   return (
     <div className="block md:flex items-center ">
       <div className="flex justify-center w-full md:w-1/2 ">
@@ -44,15 +46,20 @@ const SingleItem = () => {
             <h1 className="font-semibold ml-6 ">Specifications</h1>
             <Divider sx={{ width: "100%" }} />
           </div>
-          <div className="space-y-3 ml-6">
-            {product?.specification &&
-              Object.entries(product?.specification)?.map(
-                (specification: any) => (
-                  <h1 key={specification[0]} className="font-light text-sm ">
-                    {specification[0]} : {specification[1]}
-                  </h1>
-                )
-              )}
+          <div className="space-y-3 ml-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+            {Object.entries(product?.specifications).map(
+              (specification: any) => {
+                return (
+                  <div className="flex items-center space-x-2">
+                    <div>{getSpecificationIcon(specification[0])}</div>
+                    <div>
+                      <h1 className="text-gray-500">{specification[0]}</h1>
+                      <h1>{specification[1]}</h1>
+                    </div>
+                  </div>
+                );
+              }
+            )}
           </div>
         </div>
       </div>
