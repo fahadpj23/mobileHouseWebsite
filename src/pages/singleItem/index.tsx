@@ -24,7 +24,7 @@ const SingleItem = () => {
         </div>
       </div>
       <div className=" w-full md:w-1/2 mt:0 md:mt-20 ">
-        <div className="space-y-2 ml-6">
+        <div className="space-y-2 ml-3 md:ml-6">
           <h1 className="font-semibold truncate w-full text-xl">
             {product?.name}
           </h1>
@@ -43,10 +43,10 @@ const SingleItem = () => {
         </div>
         <div className=" pb-3">
           <div className="space-y-3 py-3">
-            <h1 className="font-semibold ml-6 ">Specifications</h1>
+            <h1 className="font-semibold ml-3 md:ml-6">Specifications</h1>
             <Divider sx={{ width: "100%" }} />
           </div>
-          <div className="space-y-3 ml-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="space-y-3 ml-3 md:ml-6 grid grid-cols-1 md:grid-cols-2 gap-5">
             {Object.entries(product?.specifications).map(
               (specification: any) => {
                 return (
