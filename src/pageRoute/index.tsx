@@ -5,7 +5,6 @@ import NewArrival from "pages/newArrival";
 import SpecialOffer from "pages/specialOffer";
 import Brand from "pages/brand";
 import SingleItem from "pages/singleItem";
-import SpecCreator from "pages/specCreator";
 
 const PageRoute = () => {
   return (
@@ -18,7 +17,6 @@ const PageRoute = () => {
             <Route index path="specialOffer" element={<SpecialOffer />} />
             <Route index path="brand/:brandName" element={<Brand />} />
             <Route index path="phone/:phoneName" element={<SingleItem />} />
-            <Route index path="specCreator" element={<SpecCreator />} />
           </Routes>
         </MainLayout>
       </BrowserRouter>
