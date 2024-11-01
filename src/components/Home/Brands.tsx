@@ -8,23 +8,16 @@ interface brandType {
 }
 
 const Brands = () => {
-  const imageStyle = {
-    width: "180px",
-    height: "80px",
-    borderRadius: "5px",
-  };
-
   return (
     <div className="flex justify-center">
-      <div className="flex space-x-9">
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-5 bg-gray-100 p-3 ">
         {PHONEBRANDS?.map((brand: brandType) => {
           return (
             <Link key={brand?.name} to={`brand${brand?.link}`}>
               <img
                 src={brand?.image}
                 alt="logo "
-                style={imageStyle}
-                className="hover:scale-110 duration-150"
+                className="hover:scale-110 duration-150 w-[95px] h-[40px] rounded-sm md:w-[180px] md:h-[80px] bg-white shadow-md"
               />
             </Link>
           );

@@ -1,6 +1,5 @@
 import { Divider } from "@mui/material";
 import { getSpecificationIcon } from "utils/getSpecificationIcon";
-import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 const SingleItem = () => {
   const location = useLocation();
