@@ -11,7 +11,7 @@ const MainLayout = ({ children }: any) => {
   const [isSearchOpen, setSearchOpen] = useState(false);
 
   return (
-    <div className="p-0 md:p-5">
+    <div className="p-1 md:p-5">
       <div className=" flex  justify-between w-full items-center">
         <SideDrawar />
         <img
@@ -20,7 +20,7 @@ const MainLayout = ({ children }: any) => {
           className="mt-3 md:mt-0 h-[40px] w-[180px] md:h-[60px] md:w-[250px]"
           onClick={() => navigate("/")}
         />
-        <div>
+        <div className="block md:hidden">
           <button onClick={() => setSearchOpen(true)}>
             <SearchOutlinedIcon />
           </button>

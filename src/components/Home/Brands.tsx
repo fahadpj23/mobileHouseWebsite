@@ -11,7 +11,7 @@ const Brands = () => {
   return (
     <div>
       <div className="hidden md:flex justify-center w-full">
-        <div className="flex bg-gray-100 p-3 w-full space-x-3 md:space-x-6 ">
+        <div className="flex bg-gray-100 p-3 w-full space-x-3 md:space-x-6 justify-center ">
           {PHONEBRANDS?.map((brand: brandType) => {
             return (
               <Link
@@ -22,7 +22,7 @@ const Brands = () => {
                 <img
                   src={brand?.image}
                   alt="logo "
-                  className="hover:scale-110 duration-150  h-[40px]  bg-white shadow-md "
+                  className="hover:scale-110 duration-150  h-[50px] w-[150px]  bg-white shadow-md "
                 />
               </Link>
             );
@@ -36,7 +36,7 @@ const Brands = () => {
               <Link
                 key={brand?.name}
                 to={`brand${brand?.link}`}
-                className=" flex items-center  w-24 mr-3"
+                className=" flex items-center  w-20 mr-3"
               >
                 <img
                   src={brand?.image}
