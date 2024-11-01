@@ -9,10 +9,10 @@ const Brand = () => {
   useEffect(() => {
     brandName && setPhoneList(getBrandPhones(brandName));
   }, [brandName]);
-  console.log(phoneList);
+
   return (
     <div>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap:3 md:gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-5">
         {phoneList?.length &&
           phoneList?.map((product: any) => {
             return <SingleProductCard product={product} key={product?.name} />;

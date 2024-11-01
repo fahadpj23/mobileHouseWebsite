@@ -6,10 +6,10 @@ import MILOGO from "assets/brands/miLogo.png";
 import TECNOLOGO from "assets/brands/tecnoLogo.png";
 
 export const PHONEBRANDS = [
-  { name: "vivo", image: VIVOLOGO, link: "/vivo" },
-  { name: "oppo", image: OPPOLOGO, link: "/oppo" },
-  { name: "samsung", image: SAMSUNGLOGO, link: "/samsung" },
-  { name: "realme", image: REALMELOGO, link: "/realme" },
-  { name: "mi", image: MILOGO, link: "/mi" },
-  { name: "tecno", image: TECNOLOGO, link: "/tecno" },
+  { name: "VIVO", image: VIVOLOGO, link: "/vivo" },
+  { name: "OPPO", image: OPPOLOGO, link: "/oppo" },
+  { name: "SAMSUNG", image: SAMSUNGLOGO, link: "/samsung" },
+  { name: "REALME", image: REALMELOGO, link: "/realme" },
+  { name: "MI", image: MILOGO, link: "/mi" },
+  { name: "TECNO", image: TECNOLOGO, link: "/tecno" },
 ];

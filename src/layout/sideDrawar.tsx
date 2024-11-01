@@ -22,11 +22,11 @@ const SideDrawar = () => {
 
   return (
     <div className=" block md:hidden">
-      <button className="fixed top-2 right-3 " onClick={toggleDrawer(true)}>
+      <button onClick={toggleDrawer(true)}>
         <MenuIcon />
       </button>
       <SwipeableDrawer
-        anchor="right"
+        anchor="left"
         open={isDrawerOpen}
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}

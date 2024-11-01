@@ -11,16 +11,13 @@ const SingleProductCard: FC<props> = ({ product }) => {
     100;
 
   return (
-    <Link
-      to={`/phone/${product?.name?.replace(/[ /]/g, "")}`}
-      state={{ product }}
-    >
+    <Link to={`/phone/${product?.id}`} state={{ product }}>
       <div className="shadow-xl  bg-white p-3 md:p-6 flex flex-col space-y-2  relative rounded-md">
         <div className="flex justify-center">
           <img
             src={product?.image}
             alt="phone Image"
-            style={{ objectFit: "fill", width: "150px", height: "170px" }}
+            className="w-[130px] h-[140px] md:w-[150px] md:h-[170px] object-fill"
           />
         </div>
         <h1 className="font-semibold truncate w-full">{product?.name}</h1>

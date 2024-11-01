@@ -7,11 +7,9 @@ import Banner from "components/Home/banner";
 const HomePage = () => {
   return (
     <div className="w-screen flex justify-center pb-6 ">
-      <div className="w-11/12 flex flex-col space-y-10">
+      <div className=" w-full md:w-11/12 flex flex-col space-y-10">
         <ImageSlider />
-        <div className="">
-          <Brands />
-        </div>
+        <Brands />
         <ProductMiniList
           title="Special Offer"
           listItems={SpecialOfferPhones}

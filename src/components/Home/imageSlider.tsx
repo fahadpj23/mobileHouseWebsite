@@ -8,7 +8,7 @@ const ImageSlider = () => {
       <Carousel
         autoPlay={true}
         showThumbs={false}
-        showIndicators={false}
+        showIndicators={true}
         infiniteLoop={true}
         showStatus={false}
         showArrows={false}
@@ -17,7 +17,7 @@ const ImageSlider = () => {
           <div key={banner?.id}>
             <img
               src={banner?.image}
-              className="h-[40vW] md:h-[25vw] rounded-xl "
+              className="h-[40vW] md:h-[25vw] rounded-none md:rounded-xl "
               alt="banner"
             />
           </div>
