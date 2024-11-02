@@ -11,14 +11,13 @@ interface props {
 }
 const ProductMiniList: FC<props> = ({ title, listItems, link }) => {
   return (
-    <div className="bg-grayBackground">
-      <div className="flex justify-between pb-2 ">
-        <h1 className="font-semibold text-lg ">{title}</h1>
+    <div className="">
+      <div className="flex justify-between pb-2 items-center ">
+        <h1 className="font-semibold text-sm md:text-lg ">{title}</h1>
         <div className="flex space-x-1 text-xs items-center">
           <Link to={link} className="text-blue-600">
-            View All{" "}
+            show more
           </Link>
-          <ArrowRightAltIcon />
         </div>
       </div>
       <div className=" hidden md:grid grid-cols-5 gap-5 items-center">

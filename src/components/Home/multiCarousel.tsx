@@ -30,10 +30,10 @@ const MultiCarousel: FC<props> = ({ listItems }) => {
   };
 
   return (
-    <div className="bg-grayBackground">
+    <div className="bg-white">
       <Carousel responsive={responsive} infinite={true} arrows={false}>
         {listItems?.map((product: any) => (
-          <div key={product?.name} style={{ margin: "0px 3px" }}>
+          <div key={product?.name} style={{ margin: "0px 2px" }}>
             <SingleProductCard product={product} />
           </div>
         ))}

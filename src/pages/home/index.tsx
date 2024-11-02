@@ -12,7 +12,7 @@ const HomePage = () => {
       <div className=" w-full md:w-11/12 flex flex-col space-y-6">
         <ImageSlider bannerItems={MAINBANNER} />
         <Brands />
-        <div className="p-2 bg-grayBackground ">
+        <div className="p-2 bg-white ">
           <ProductMiniList
             title="Special Offer"
             listItems={getSpecialOfferPhones()?.slice(0, 7)}
@@ -20,7 +20,7 @@ const HomePage = () => {
           />
         </div>
         <Banner />
-        <div className="p-2 bg-gray-100">
+        <div className="p-2 bg-white ">
           <ProductMiniList
             title="Trending Phones"
             listItems={getTrendingPhones()?.slice(0, 7)}
