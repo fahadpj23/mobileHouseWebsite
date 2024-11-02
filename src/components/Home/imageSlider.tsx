@@ -1,10 +1,14 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { MAINBANNER } from "constants/mainBanner";
+import { FC } from "react";
 
-const ImageSlider = () => {
+interface props {
+  bannerItems: any;
+}
+const ImageSlider: FC<props> = ({ bannerItems }) => {
   return (
-    <div className="h-[35vW] md:h-[30vw]">
+    <div className="h-[45vW] md:h-[30vw] mt-3">
       <Carousel
         autoPlay={true}
         showThumbs={false}
@@ -13,11 +17,11 @@ const ImageSlider = () => {
         showStatus={false}
         showArrows={false}
       >
-        {MAINBANNER?.map((banner) => (
+        {bannerItems?.map((banner: any) => (
           <div key={banner?.id}>
             <img
               src={banner?.image}
-              className="h-[40vW] md:h-[25vw] rounded-none md:rounded-xl "
+              className="h-[45vW] md:h-[25vw] rounded-none md:rounded-xl "
               alt="banner"
             />
           </div>

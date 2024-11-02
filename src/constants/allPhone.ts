@@ -44,6 +44,7 @@ export const ALLPHONES = [
     salesPrice: 10499,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 13999,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
@@ -64,6 +65,7 @@ export const ALLPHONES = [
     salesPrice: 11999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 15999,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
@@ -85,6 +87,7 @@ export const ALLPHONES = [
     salesPrice: 17999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 22999,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
@@ -106,6 +109,7 @@ export const ALLPHONES = [
     salesPrice: 16999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 20999,
     specifications: {
       Processor: "MediaTek Dimensity 6080 Octa core ",
@@ -126,6 +130,7 @@ export const ALLPHONES = [
     salesPrice: 18999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 22999,
     specifications: {
       Processor: "MediaTek Dimensity 6080 Octa core ",
@@ -147,6 +152,7 @@ export const ALLPHONES = [
     salesPrice: 32999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 35999,
     specifications: {
       Processor: "MediaTek Dimensity 7200 Ultra Octa core ",
@@ -169,6 +175,7 @@ export const ALLPHONES = [
     salesPrice: 10999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 16990,
     specifications: {
       Processor: "MediaTek Helio G35 Octa core ",
@@ -190,6 +197,7 @@ export const ALLPHONES = [
     salesPrice: 8499,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 12999,
     specifications: {
       Processor: "MediaTek Helio G35 Octa core ",
@@ -211,6 +219,7 @@ export const ALLPHONES = [
     salesPrice: 15999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 19999,
     specifications: {
       Processor: "MediaTek Helio G35 Octa core ",
@@ -232,6 +241,7 @@ export const ALLPHONES = [
     salesPrice: 16000,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 18999,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
@@ -253,6 +263,7 @@ export const ALLPHONES = [
     salesPrice: 36999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 53999,
     specifications: {
       Processor: "MediaTek Dimensity 7300 Energy Octa core ",
@@ -274,6 +285,7 @@ export const ALLPHONES = [
     salesPrice: 32999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 43999,
     specifications: {
       Processor: "MediaTek Dimensity 7300 Energy Octa core ",
@@ -295,6 +307,7 @@ export const ALLPHONES = [
     salesPrice: 29999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 34999,
     specifications: {
       Processor: "MediaTek Dimensity 7050 Octa core ",
@@ -316,6 +329,7 @@ export const ALLPHONES = [
     salesPrice: 24999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 28999,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core",
@@ -337,6 +351,7 @@ export const ALLPHONES = [
     salesPrice: 19999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 22999,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
@@ -358,6 +373,7 @@ export const ALLPHONES = [
     salesPrice: 17999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 20999,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
@@ -379,6 +395,7 @@ export const ALLPHONES = [
     salesPrice: 13499,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 15999,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
@@ -401,6 +418,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 10999,
     specifications: {
       Processor: "Unisoc Octa core ",
@@ -422,6 +440,7 @@ export const ALLPHONES = [
     salesPrice: 19999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 22999,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
@@ -443,6 +462,7 @@ export const ALLPHONES = [
     salesPrice: 18999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 20999,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
@@ -465,6 +485,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 15999,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
@@ -486,6 +507,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 16999,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
@@ -506,6 +528,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 17999,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
@@ -527,6 +550,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 10999,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
@@ -548,6 +572,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 17999,
     specifications: {
       Processor: "Samsung Exynos 1330 Octa core ",
@@ -569,6 +594,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 15499,
     specifications: {
       Processor: "Samsung Exynos 1330 Octa core ",
@@ -590,6 +616,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 10499,
     specifications: {
       Processor: "Samsung Exynos 1330 Octa core ",
@@ -611,6 +638,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 11999,
     specifications: {
       Processor: "Samsung Exynos 1330 Octa core ",
@@ -632,6 +660,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 15999,
     specifications: {
       Processor: "Snapdragon 680 Octa core ",
@@ -653,6 +682,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 11499,
     specifcatin: {
       Processor: "MediaTek Helio G85 Octa core ",
@@ -674,6 +704,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 15999,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
@@ -695,6 +726,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 36999,
     specifications: {
       Processor: "Samsung Exynos 1380 Octa core ",
@@ -716,6 +748,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 48999,
     specifications: {
       Processor: "Samsung Exynos 1480 Octa core ",
@@ -737,6 +770,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 45999,
     specifications: {
       Processor: "Samsung Exynos 1480 Octa core ",
@@ -758,6 +792,7 @@ export const ALLPHONES = [
     salesPrice: 45000,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 95999,
     specifications: {
       Processor: "Snapdragon 8 Gen 2 Octa core ",
@@ -780,6 +815,7 @@ export const ALLPHONES = [
     salesPrice: 36999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 42999,
     specifications: {
       Processor: "Snapdragon 7 Gen 3 Octa core ",
@@ -801,6 +837,7 @@ export const ALLPHONES = [
     salesPrice: 34999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 39999,
     specifications: {
       Processor: "Snapdragon 7 Gen 3 Octa core ",
@@ -822,6 +859,7 @@ export const ALLPHONES = [
     salesPrice: 29000,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 33999,
     specifications: {
       Processor: "MediaTek Dimensity 7300 Octa core ",
@@ -843,6 +881,7 @@ export const ALLPHONES = [
     salesPrice: 31000,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 35999,
     specifications: {
       Processor: "MediaTek Dimensity 7300 Octa core ",
@@ -864,6 +903,7 @@ export const ALLPHONES = [
     salesPrice: 20999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 25999,
     specifications: {
       Processor: "Snapdragon 4 Gen 2 Octa core ",
@@ -885,6 +925,7 @@ export const ALLPHONES = [
     salesPrice: 18499,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 23999,
     specifications: {
       Processor: "Snapdragon 4 Gen 2 Octa core ",
@@ -906,6 +947,7 @@ export const ALLPHONES = [
     salesPrice: 23999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 29999,
     specifications: {
       Processor: "Snapdragon 695 Octa core ",
@@ -927,6 +969,7 @@ export const ALLPHONES = [
     salesPrice: 16499,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 21999,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
@@ -948,6 +991,7 @@ export const ALLPHONES = [
     salesPrice: 14999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 19999,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
@@ -969,6 +1013,7 @@ export const ALLPHONES = [
     salesPrice: 13999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 17999,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
@@ -990,6 +1035,7 @@ export const ALLPHONES = [
     salesPrice: 15499,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 19999,
     specifications: {
       Processor: "MediaTek Dimensity 6020 Octa core ",
@@ -1011,6 +1057,7 @@ export const ALLPHONES = [
     salesPrice: 10999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 14999,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
@@ -1032,6 +1079,7 @@ export const ALLPHONES = [
     salesPrice: 7999,
     specialOffer: true,
     trendingPhone: true,
+    newArrival:true,
     mrp: 11999,
     specifications: {
       Processor: " Unisoc T612 octa-core ",

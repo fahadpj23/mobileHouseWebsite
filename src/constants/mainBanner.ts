@@ -1,17 +1,17 @@
-import RENO12 from "assets/mainBanner/reno12.jpg";
-import SAMSUNGA16 from "assets/mainBanner/samsunga16.jpg";
-import VIVOV40 from "assets/mainBanner/VivoV40.jpg";
+import BANNER1 from "assets/mainBanner/banner1.jpg";
+import BANNER2 from "assets/mainBanner/banner2.jpg";
+import BANNER3 from "assets/mainBanner/banner3.jpg";
 export const MAINBANNER = [
   {
     id: 1,
-    image: RENO12,
+    image: BANNER1,
   },
   {
     id: 2,
-    image: SAMSUNGA16,
+    image: BANNER2,
   },
   {
     id: 3,
-    image: VIVOV40,
+    image: BANNER3,
   },
 ];

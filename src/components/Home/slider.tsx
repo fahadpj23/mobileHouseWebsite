@@ -80,7 +80,7 @@ const SliderList = () => {
   };
 
   return (
-    <div className=" px-2">
+    <div className=" px-2 mt-2">
       <Slider {...settingsSlider}>
         {PHONEBRANDS?.map((brand: brandType) => {
           return (

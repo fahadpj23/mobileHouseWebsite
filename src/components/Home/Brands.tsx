@@ -11,7 +11,7 @@ const Brands = () => {
   return (
     <div>
       <div className="hidden md:flex justify-center w-full">
-        <div className="flex bg-gray-100 p-3 w-full space-x-3 md:space-x-6 justify-center ">
+        <div className="flex bg-grayBackground p-3 w-full space-x-3 md:space-x-6 justify-center ">
           {PHONEBRANDS?.map((brand: brandType) => {
             return (
               <Link
@@ -29,7 +29,7 @@ const Brands = () => {
           })}
         </div>
       </div>
-      <div className="block md:hidden bg-gray-100 py-2">
+      <div className="block md:hidden bg-grayBackground py-2">
         <Marquee>
           {PHONEBRANDS?.map((brand: brandType) => {
             return (

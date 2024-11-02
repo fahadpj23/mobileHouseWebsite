@@ -1,21 +1,21 @@
 import ImageSlider from "components/Home/imageSlider";
 import Brands from "components/Home/Brands";
-import ProductMiniList from "components/Home/productMiniList";
-import { SpecialOfferPhones } from "constants/specialOfferPhones";
 import Banner from "components/Home/banner";
 import { getSpecialOfferPhones } from "utils/getSpecialOfferPhone";
 import { getTrendingPhones } from "utils/getTrendingPhones";
+import { MAINBANNER } from "constants/mainBanner";
+import ProductMiniList from "components/Home/productMiniList";
 
 const HomePage = () => {
   return (
     <div className="w-screen flex justify-center pb-6 ">
       <div className=" w-full md:w-11/12 flex flex-col space-y-6">
-        <ImageSlider />
+        <ImageSlider bannerItems={MAINBANNER} />
         <Brands />
-        <div className="p-2 bg-gray-100 ">
+        <div className="p-2 bg-grayBackground ">
           <ProductMiniList
             title="Special Offer"
-            listItems={getSpecialOfferPhones()?.slice(0, 4)}
+            listItems={getSpecialOfferPhones()?.slice(0, 7)}
             link="/specialOffer"
           />
         </div>
@@ -23,8 +23,8 @@ const HomePage = () => {
         <div className="p-2 bg-gray-100">
           <ProductMiniList
             title="Trending Phones"
-            listItems={getTrendingPhones()?.slice(0, 4)}
-            link="/newArrival"
+            listItems={getTrendingPhones()?.slice(0, 7)}
+            link="/trendingPhones"
           />
         </div>
       </div>

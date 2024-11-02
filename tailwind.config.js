@@ -3,7 +3,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}", // For React and TypeScript
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        grayBackground: "#f8f9fa",
+      },
+    },
   },
   plugins: [],
 };
