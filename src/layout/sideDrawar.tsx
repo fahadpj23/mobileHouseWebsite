@@ -21,7 +21,7 @@ const SideDrawar = () => {
   };
 
   return (
-    <div className=" block md:hidden">
+    <div className=" block md:hidden ml-2 ">
       <button onClick={toggleDrawer(true)}>
         <MenuIcon />
       </button>

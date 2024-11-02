@@ -22,10 +22,12 @@ const MultiCarousel: FC<props> = ({ listItems }) => {
     tablet: {
       breakpoint: { max: 768, min: 464 },
       items: 2,
+      slidesToSlide: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 2,
+      slidesToSlide: 2,
     },
   };
 

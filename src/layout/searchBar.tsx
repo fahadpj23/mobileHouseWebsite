@@ -18,7 +18,7 @@ const SearchBar: FC<any> = ({ setSearchOpen }) => {
   };
 
   return (
-    <div className="fixed top-0  left-0 w-screen h-screen bg-white z-10">
+    <div className="fixed top-0  left-0 right-0 w-screen h-screen bg-white z-10">
       <div className="flex space-x-3 w-full   p-2 ">
         <SearchOutlinedIcon sx={{ color: "#0e86d4" }} />
         <input

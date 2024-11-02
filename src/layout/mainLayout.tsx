@@ -20,7 +20,7 @@ const MainLayout = ({ children }: any) => {
           className="mt-3 md:mt-0 h-[40px] w-[180px] md:h-[60px] md:w-[250px]"
           onClick={() => navigate("/")}
         />
-        <div className="block md:hidden">
+        <div className="block md:hidden ">
           <button onClick={() => setSearchOpen(true)}>
             <SearchOutlinedIcon />
           </button>
