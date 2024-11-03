@@ -1,0 +1,26 @@
+import { AvailableEmiItems } from "constants/availableEmiItem";
+import Marquee from "react-fast-marquee";
+
+const AvailableEmi = () => {
+  return (
+    <div className="flex items-center bg-white">
+      <h1 className="px-2 z-20 text-sm text-center font-semibold w-[40vw] md:w-[20vw] glow-text">
+        Available Emi
+      </h1>
+      <Marquee direction="right">
+        {AvailableEmiItems?.map((emi: any) => {
+          return (
+            <div className="mr-3 md:mr-5">
+              <img
+                src={emi?.image}
+                alt="emiLogo "
+                className=" w-[20vw] md:w-[8vw] h-[20px] md:h-[30px]  bg-white  "
+              />
+            </div>
+          );
+        })}
+      </Marquee>
+    </div>
+  );
+};
+export default AvailableEmi;

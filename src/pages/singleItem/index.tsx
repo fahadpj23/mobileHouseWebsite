@@ -56,7 +56,10 @@ const SingleItem = () => {
                     Object.entries(product?.specifications).map(
                       (specification: any) => {
                         return (
-                          <div className="flex items-center space-x-2 text-xs md:text-base">
+                          <div
+                            key={specification[0]}
+                            className="flex items-center space-x-2 text-xs md:text-base"
+                          >
                             <div>{getSpecificationIcon(specification[0])}</div>
                             <div>
                               <h1 className="text-gray-500">

@@ -5,6 +5,9 @@ import { getSpecialOfferPhones } from "utils/getSpecialOfferPhone";
 import { getTrendingPhones } from "utils/getTrendingPhones";
 import { MAINBANNER } from "constants/mainBanner";
 import ProductMiniList from "components/Home/productMiniList";
+import WhatsappAds from "components/Home/whatsappAds";
+import { getNewArrivalPhones } from "utils/getNewArrival";
+import AvailableEmi from "components/Home/availableEmi";
 
 const HomePage = () => {
   return (
@@ -12,6 +15,7 @@ const HomePage = () => {
       <div className=" w-full md:w-11/12 flex flex-col space-y-6">
         <ImageSlider bannerItems={MAINBANNER} />
         <Brands />
+        <AvailableEmi />
         <div className="p-2 bg-white ">
           <ProductMiniList
             title="Special Offer"
@@ -19,12 +23,20 @@ const HomePage = () => {
             link="/specialOffer"
           />
         </div>
-        <Banner />
+        <WhatsappAds />
         <div className="p-2 bg-white ">
           <ProductMiniList
             title="Trending Phones"
             listItems={getTrendingPhones()?.slice(0, 7)}
             link="/trendingPhones"
+          />
+        </div>
+        <Banner />
+        <div className="p-2 bg-white ">
+          <ProductMiniList
+            title="new Arrival"
+            listItems={getNewArrivalPhones()?.slice(0, 7)}
+            link="/newArrival"
           />
         </div>
       </div>

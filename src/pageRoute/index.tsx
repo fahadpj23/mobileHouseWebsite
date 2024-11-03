@@ -15,8 +15,8 @@ const PageRoute = () => {
           <Routes>
             <Route index path="/" element={<HomePage />} />
             <Route index path="/newArrival" element={<NewArrival />} />
-            <Route index path="specialOffer" element={<SpecialOffer />} />
-            <Route index path="trendingPhones" element={<TrendingPhones />} />
+            <Route index path="/specialOffer" element={<SpecialOffer />} />
+            <Route index path="/trendingPhones" element={<TrendingPhones />} />
             <Route index path="brand/:brandName" element={<Brand />} />
             <Route index path="phone/:productId" element={<SingleItem />} />
           </Routes>
