@@ -49,7 +49,7 @@ const SingleItem = () => {
                     <button
                       key={image}
                       onClick={() => setDisplayImage(image)}
-                      className="p-1 border-2 border-gray-300"
+                      className="p-1 border border-gray-400 rounded-sm"
                     >
                       <img
                         src={image}
