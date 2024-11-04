@@ -33,6 +33,24 @@ import VIVOY300PLUS from "assets/vivo/VIVOY300PLUS.jpg";
 import VIVOY28S from "assets/vivo/VIVOY28S.jpg";
 import VIVOY28 from "assets/vivo/VIVOY28.jpg";
 import VIVOY28E from "assets/vivo/VIVOY28E.jpg";
+import REDMI13CBLACK1 from "assets/mi/REDMI13C/StarlightBlack/redmi13cBlack1.jpg";
+import REDMI13CBLACK2 from "assets/mi/REDMI13C/StarlightBlack/redmi13cBlack2.jpg";
+import REDMI13CBLACK3 from "assets/mi/REDMI13C/StarlightBlack/redmi13cBlack3.jpg";
+import REDMI13CBLACK4 from "assets/mi/REDMI13C/StarlightBlack/redmi13cBlack4.jpg";
+import REDMI13CBLACK5 from "assets/mi/REDMI13C/StarlightBlack/redmi13cBlack5.jpg";
+import REDMI13CBLACK6 from "assets/mi/REDMI13C/StarlightBlack/redmi13cBlack6.jpg";
+import REDMI13CGREEN1 from "assets/mi/REDMI13C/StartrailGreen/redmi13cGreen1.jpg";
+import REDMI13CGREEN2 from "assets/mi/REDMI13C/StartrailGreen/redmi13cGreen2.jpg";
+import REDMI13CGREEN3 from "assets/mi/REDMI13C/StartrailGreen/redmi13cGreen3.jpg";
+import REDMI13CGREEN4 from "assets/mi/REDMI13C/StartrailGreen/redmi13cGreen4.jpg";
+import REDMI13CGREEN5 from "assets/mi/REDMI13C/StartrailGreen/redmi13cGreen5.jpg";
+import REDMI13CGREEN6 from "assets/mi/REDMI13C/StartrailGreen/redmi13cGreen6.jpg";
+import REDMI13CSILVER1 from "assets/mi/REDMI13C/StartrailSilver/redmi13cSilver1.jpg";
+import REDMI13CSILVER2 from "assets/mi/REDMI13C/StartrailSilver/redmi13cSilver2.jpg";
+import REDMI13CSILVER3 from "assets/mi/REDMI13C/StartrailSilver/redmi13cSilver3.jpg";
+import REDMI13CSILVER4 from "assets/mi/REDMI13C/StartrailSilver/redmi13cSilver4.jpg";
+import REDMI13CSILVER5 from "assets/mi/REDMI13C/StartrailSilver/redmi13cSilver5.jpg";
+import REDMI13CSILVER6 from "assets/mi/REDMI13C/StartrailSilver/redmi13cSilver6.jpg";
 
 export const ALLPHONES = [
   //MI Phones
@@ -47,6 +65,44 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 13999,
+    colors: [
+      {
+        id: 1,
+        name: "Starlight Black",
+        images: [
+          REDMI13CBLACK1,
+          REDMI13CBLACK2,
+          REDMI13CBLACK3,
+          REDMI13CBLACK4,
+          REDMI13CBLACK5,
+          REDMI13CBLACK6,
+        ],
+      },
+      {
+        id: 2,
+        name: "Starlight Green",
+        images: [
+          REDMI13CGREEN1,
+          REDMI13CGREEN2,
+          REDMI13CGREEN3,
+          REDMI13CGREEN4,
+          REDMI13CGREEN5,
+          REDMI13CGREEN6,
+        ],
+      },
+      {
+        id: 2,
+        name: "Starlight Silver",
+        images: [
+          REDMI13CSILVER1,
+          REDMI13CSILVER2,
+          REDMI13CSILVER3,
+          REDMI13CSILVER4,
+          REDMI13CSILVER5,
+          REDMI13CSILVER6,
+        ],
+      },
+    ],
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",

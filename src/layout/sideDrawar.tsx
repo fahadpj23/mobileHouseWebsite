@@ -46,13 +46,21 @@ const SideDrawar = () => {
                   </a>
                 ))}
               </div>
-              {NAVIGATIONITEMS.map((navigation, index) => (
-                <ListItem key={navigation.title}>
-                  <Link className="w-full " to={navigation.link}>
-                    {navigation?.title}
-                  </Link>
-                </ListItem>
-              ))}
+              <div className="mt-5 space-y-3">
+                {NAVIGATIONITEMS.map((navigation, index) => (
+                  <ListItem key={navigation.title}>
+                    <Link
+                      className="w-full flex space-x-4 items-center "
+                      to={navigation.link}
+                    >
+                      <div className="">{navigation?.icon}</div>
+                      <h1 className="font-semibold text-sm">
+                        {navigation?.title}
+                      </h1>
+                    </Link>
+                  </ListItem>
+                ))}
+              </div>
             </>
           </List>
         </div>
