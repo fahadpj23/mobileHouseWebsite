@@ -51,6 +51,101 @@ import REDMI13CSILVER3 from "assets/mi/REDMI13C/StartrailSilver/redmi13cSilver3.
 import REDMI13CSILVER4 from "assets/mi/REDMI13C/StartrailSilver/redmi13cSilver4.jpg";
 import REDMI13CSILVER5 from "assets/mi/REDMI13C/StartrailSilver/redmi13cSilver5.jpg";
 import REDMI13CSILVER6 from "assets/mi/REDMI13C/StartrailSilver/redmi13cSilver6.jpg";
+import REDMINOTE13WHITE1 from "assets/mi/REDMINOTE13/ArcticWhite/MINOTE13WHITE1.jpg";
+import REDMINOTE13WHITE2 from "assets/mi/REDMINOTE13/ArcticWhite/MINOTE13WHITE2.jpg";
+import REDMINOTE13WHITE3 from "assets/mi/REDMINOTE13/ArcticWhite/MINOTE13WHITE3.jpg";
+import REDMINOTE13WHITE4 from "assets/mi/REDMINOTE13/ArcticWhite/MINOTE13WHITE4.jpg";
+import REDMINOTE13WHITE5 from "assets/mi/REDMINOTE13/ArcticWhite/MINOTE13WHITE5.jpg";
+import REDMINOTE13PURPLE1 from "assets/mi/REDMINOTE13/ChromaticPurple/MINOTE13PURPLE1.jpg";
+import REDMINOTE13PURPLE2 from "assets/mi/REDMINOTE13/ChromaticPurple/MINOTE13PURPLE2.jpg";
+import REDMINOTE13PURPLE3 from "assets/mi/REDMINOTE13/ChromaticPurple/MINOTE13PURPLE3.jpg";
+import REDMINOTE13PURPLE4 from "assets/mi/REDMINOTE13/ChromaticPurple/MINOTE13PURPLE4.jpg";
+import REDMINOTE13PURPLE5 from "assets/mi/REDMINOTE13/ChromaticPurple/MINOTE13PURPLE5.jpg";
+import REDMINOTE13PURPLE6 from "assets/mi/REDMINOTE13/ChromaticPurple/MINOTE13PURPLE6.jpg";
+import REDMINOTE13GOLD1 from "assets/mi/REDMINOTE13/PrismGold/MINOTE13GOLD1.jpg";
+import REDMINOTE13GOLD2 from "assets/mi/REDMINOTE13/PrismGold/MINOTE13GOLD1.jpg";
+import REDMINOTE13GOLD3 from "assets/mi/REDMINOTE13/PrismGold/MINOTE13GOLD2.jpg";
+import REDMINOTE13GOLD4 from "assets/mi/REDMINOTE13/PrismGold/MINOTE13GOLD3.jpg";
+import REDMINOTE13GOLD5 from "assets/mi/REDMINOTE13/PrismGold/MINOTE13GOLD4.jpg";
+import REDMINOTE13GOLD6 from "assets/mi/REDMINOTE13/PrismGold/MINOTE13GOLD5.jpg";
+import REDMINOTE13BLACK1 from "assets/mi/REDMINOTE13/StealthBlack/MINOTE13BLACK1.jpg";
+import REDMINOTE13BLACK2 from "assets/mi/REDMINOTE13/StealthBlack/MINOTE13BLACK2.jpg";
+import REDMINOTE13BLACK3 from "assets/mi/REDMINOTE13/StealthBlack/MINOTE13BLACK3.jpg";
+import REDMINOTE13BLACK4 from "assets/mi/REDMINOTE13/StealthBlack/MINOTE13BLACK4.jpg";
+import REDMINOTE13BLACK5 from "assets/mi/REDMINOTE13/StealthBlack/MINOTE13BLACK5.jpg";
+
+//oppo import
+
+import OPPOA17kGOLD1 from "assets/oppo/OPPOA17K/OPPOA17KGOLD/OPPOA17KGOLD1.jpg";
+import OPPOA17kGOLD2 from "assets/oppo/OPPOA17K/OPPOA17KGOLD/OPPOA17KGOLD2.jpg";
+import OPPOA17kGOLD3 from "assets/oppo/OPPOA17K/OPPOA17KGOLD/OPPOA17KGOLD3.jpg";
+import OPPOA17kGOLD4 from "assets/oppo/OPPOA17K/OPPOA17KGOLD/OPPOA17KGOLD4.jpg";
+import OPPOA17kGOLD5 from "assets/oppo/OPPOA17K/OPPOA17KGOLD/OPPOA17KGOLD5.jpg";
+import OPPOA17kBLUE1 from "assets/oppo/OPPOA17K/OPPOA17KNAVYBLUE/OPPOA17KNAVYBLUE1.jpg";
+import OPPOA17kBLUE2 from "assets/oppo/OPPOA17K/OPPOA17KNAVYBLUE/OPPOA17KNAVYBLUE2.jpg";
+import OPPOA17kBLUE3 from "assets/oppo/OPPOA17K/OPPOA17KNAVYBLUE/OPPOA17KNAVYBLUE3.jpg";
+import OPPOA17kBLUE4 from "assets/oppo/OPPOA17K/OPPOA17KNAVYBLUE/OPPOA17KNAVYBLUE4.jpg";
+import OPPOA17kBLUE5 from "assets/oppo/OPPOA17K/OPPOA17KNAVYBLUE/OPPOA17KNAVYBLUE5.jpg";
+
+import OPPOA57BLACK1 from "assets/oppo/OPPOA57/OPPOA57GLOWINGBLACK/OPPOA57GLOWINGBLACK1.jpg";
+import OPPOA57BLACK2 from "assets/oppo/OPPOA57/OPPOA57GLOWINGBLACK/OPPOA57GLOWINGBLACK2.jpg";
+import OPPOA57BLACK3 from "assets/oppo/OPPOA57/OPPOA57GLOWINGBLACK/OPPOA57GLOWINGBLACK3.jpg";
+import OPPOA57BLACK4 from "assets/oppo/OPPOA57/OPPOA57GLOWINGBLACK/OPPOA57GLOWINGBLACK4.jpg";
+import OPPOA57GREEN1 from "assets/oppo/OPPOA57/OPPOA57GREEN/OPPOA57GREEN1.jpg";
+import OPPOA57GREEN2 from "assets/oppo/OPPOA57/OPPOA57GREEN/OPPOA57GREEN2.jpg";
+import OPPOA57GREEN3 from "assets/oppo/OPPOA57/OPPOA57GREEN/OPPOA57GREEN3.jpg";
+import OPPOA57GREEN4 from "assets/oppo/OPPOA57/OPPOA57GREEN/OPPOA57GREEN4.jpg";
+import OPPOA57GREEN5 from "assets/oppo/OPPOA57/OPPOA57GREEN/OPPOA57GREEN5.jpg";
+
+import OPPOA77BLUE1 from "assets/oppo/OPPOA77/OPPOA77SKYBLUE/OPPOA77SKYBLUE1.jpg";
+import OPPOA77BLUE2 from "assets/oppo/OPPOA77/OPPOA77SKYBLUE/OPPOA77SKYBLUE2.jpg";
+import OPPOA77BLUE3 from "assets/oppo/OPPOA77/OPPOA77SKYBLUE/OPPOA77SKYBLUE3.jpg";
+import OPPOA77BLUE4 from "assets/oppo/OPPOA77/OPPOA77SKYBLUE/OPPOA77SKYBLUE4.jpg";
+import OPPOA77BLUE5 from "assets/oppo/OPPOA77/OPPOA77SKYBLUE/OPPOA77SKYBLUE5.jpg";
+import OPPOA77ORANGE1 from "assets/oppo/OPPOA77/OPPOA77SUNSETORANGE/OPPOA77SUNSETORANGE1.jpg";
+import OPPOA77ORANGE2 from "assets/oppo/OPPOA77/OPPOA77SUNSETORANGE/OPPOA77SUNSETORANGE2.jpg";
+import OPPOA77ORANGE3 from "assets/oppo/OPPOA77/OPPOA77SUNSETORANGE/OPPOA77SUNSETORANGE3.jpg";
+import OPPOA77ORANGE4 from "assets/oppo/OPPOA77/OPPOA77SUNSETORANGE/OPPOA77SUNSETORANGE4.jpg";
+import OPPOA77ORANGE5 from "assets/oppo/OPPOA77/OPPOA77SUNSETORANGE/OPPOA77SUNSETORANGE5.jpg";
+
+import OPPOK12XBLUE1 from "assets/oppo/OPPOK12X/OPPOK12XBREEZEBLUE/OPPOK12XBREEZEBLUE1.jpg";
+import OPPOK12XBLUE2 from "assets/oppo/OPPOK12X/OPPOK12XBREEZEBLUE/OPPOK12XBREEZEBLUE2.jpg";
+import OPPOK12XBLUE3 from "assets/oppo/OPPOK12X/OPPOK12XBREEZEBLUE/OPPOK12XBREEZEBLUE3.jpg";
+import OPPOK12XBLUE4 from "assets/oppo/OPPOK12X/OPPOK12XBREEZEBLUE/OPPOK12XBREEZEBLUE4.jpg";
+import OPPOK12XBLUE5 from "assets/oppo/OPPOK12X/OPPOK12XBREEZEBLUE/OPPOK12XBREEZEBLUE5.jpg";
+import OPPOK12XVOILET1 from "assets/oppo/OPPOK12X/OPPOK12XMIDNIGHTVOILET/OPPOK12XMIDNIGHTVOILET1.jpg";
+import OPPOK12XVOILET2 from "assets/oppo/OPPOK12X/OPPOK12XMIDNIGHTVOILET/OPPOK12XMIDNIGHTVOILET2.jpg";
+import OPPOK12XVOILET3 from "assets/oppo/OPPOK12X/OPPOK12XMIDNIGHTVOILET/OPPOK12XMIDNIGHTVOILET3.jpg";
+import OPPOK12XVOILET4 from "assets/oppo/OPPOK12X/OPPOK12XMIDNIGHTVOILET/OPPOK12XMIDNIGHTVOILET4.jpg";
+import OPPOK12XVOILET5 from "assets/oppo/OPPOK12X/OPPOK12XMIDNIGHTVOILET/OPPOK12XMIDNIGHTVOILET5.jpg";
+
+import OPPORENO12BROWN1 from "assets/oppo/OPPORENO12/OPPORENO12MATTEBROWN/OPPORENO12MATTEBROWN1.jpg";
+import OPPORENO12BROWN2 from "assets/oppo/OPPORENO12/OPPORENO12MATTEBROWN/OPPORENO12MATTEBROWN2.jpg";
+import OPPORENO12BROWN3 from "assets/oppo/OPPORENO12/OPPORENO12MATTEBROWN/OPPORENO12MATTEBROWN3.jpg";
+import OPPORENO12BROWN4 from "assets/oppo/OPPORENO12/OPPORENO12MATTEBROWN/OPPORENO12MATTEBROWN4.jpg";
+import OPPORENO12BROWN5 from "assets/oppo/OPPORENO12/OPPORENO12MATTEBROWN/OPPORENO12MATTEBROWN5.jpg";
+import OPPORENO12BROWN6 from "assets/oppo/OPPORENO12/OPPORENO12MATTEBROWN/OPPORENO12MATTEBROWN6.jpg";
+import OPPORENO12BROWN7 from "assets/oppo/OPPORENO12/OPPORENO12MATTEBROWN/OPPORENO12MATTEBROWN7.jpg";
+import OPPORENO12BROWN8 from "assets/oppo/OPPORENO12/OPPORENO12MATTEBROWN/OPPORENO12MATTEBROWN8.jpg";
+import OPPORENO12PEACH1 from "assets/oppo/OPPORENO12/OPPORENO12SUNSETPEACH/OPPORENO12SUNSETPEACH1.jpg";
+import OPPORENO12PEACH2 from "assets/oppo/OPPORENO12/OPPORENO12SUNSETPEACH/OPPORENO12SUNSETPEACH2.jpg";
+import OPPORENO12PEACH3 from "assets/oppo/OPPORENO12/OPPORENO12SUNSETPEACH/OPPORENO12SUNSETPEACH3.jpg";
+import OPPORENO12PEACH4 from "assets/oppo/OPPORENO12/OPPORENO12SUNSETPEACH/OPPORENO12SUNSETPEACH4.jpg";
+import OPPORENO12PEACH5 from "assets/oppo/OPPORENO12/OPPORENO12SUNSETPEACH/OPPORENO12SUNSETPEACH5.jpg";
+import OPPORENO12PEACH6 from "assets/oppo/OPPORENO12/OPPORENO12SUNSETPEACH/OPPORENO12SUNSETPEACH6.jpg";
+import OPPORENO12PEACH7 from "assets/oppo/OPPORENO12/OPPORENO12SUNSETPEACH/OPPORENO12SUNSETPEACH7.jpg";
+import OPPORENO12PEACH8 from "assets/oppo/OPPORENO12/OPPORENO12SUNSETPEACH/OPPORENO12SUNSETPEACH8.jpg";
+
+import OPPORENO12PROBROWN1 from "assets/oppo/OPPORENO12PRO/OPPORENO12PROSPACEBROWN/OPPORENO12PROSPACEBROWN1.jpg";
+import OPPORENO12PROBROWN2 from "assets/oppo/OPPORENO12PRO/OPPORENO12PROSPACEBROWN/OPPORENO12PROSPACEBROWN2.jpg";
+import OPPORENO12PROBROWN3 from "assets/oppo/OPPORENO12PRO/OPPORENO12PROSPACEBROWN/OPPORENO12PROSPACEBROWN3.jpg";
+import OPPORENO12PROBROWN4 from "assets/oppo/OPPORENO12PRO/OPPORENO12PROSPACEBROWN/OPPORENO12PROSPACEBROWN4.jpg";
+import OPPORENO12PROBROWN5 from "assets/oppo/OPPORENO12PRO/OPPORENO12PROSPACEBROWN/OPPORENO12PROSPACEBROWN5.jpg";
+import OPPORENO12PROGOLD1 from "assets/oppo/OPPORENO12PRO/OPPORENO12PROSUNSETGOLD/OPPORENO12PROSUNSETGOLD1.jpg";
+import OPPORENO12PROGOLD2 from "assets/oppo/OPPORENO12PRO/OPPORENO12PROSUNSETGOLD/OPPORENO12PROSUNSETGOLD2.jpg";
+import OPPORENO12PROGOLD3 from "assets/oppo/OPPORENO12PRO/OPPORENO12PROSUNSETGOLD/OPPORENO12PROSUNSETGOLD3.jpg";
+import OPPORENO12PROGOLD4 from "assets/oppo/OPPORENO12PRO/OPPORENO12PROSUNSETGOLD/OPPORENO12PROSUNSETGOLD4.jpg";
+import OPPORENO12PROGOLD5 from "assets/oppo/OPPORENO12PRO/OPPORENO12PROSUNSETGOLD/OPPORENO12PROSUNSETGOLD5.jpg";
 
 export const ALLPHONES = [
   //MI Phones
@@ -91,7 +186,7 @@ export const ALLPHONES = [
         ],
       },
       {
-        id: 2,
+        id: 3,
         name: "Starlight Silver",
         images: [
           REDMI13CSILVER1,
@@ -125,6 +220,44 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 15999,
+    colors: [
+      {
+        id: 1,
+        name: "Starlight Black",
+        images: [
+          REDMI13CBLACK1,
+          REDMI13CBLACK2,
+          REDMI13CBLACK3,
+          REDMI13CBLACK4,
+          REDMI13CBLACK5,
+          REDMI13CBLACK6,
+        ],
+      },
+      {
+        id: 2,
+        name: "Starlight Green",
+        images: [
+          REDMI13CGREEN1,
+          REDMI13CGREEN2,
+          REDMI13CGREEN3,
+          REDMI13CGREEN4,
+          REDMI13CGREEN5,
+          REDMI13CGREEN6,
+        ],
+      },
+      {
+        id: 3,
+        name: "Starlight Silver",
+        images: [
+          REDMI13CSILVER1,
+          REDMI13CSILVER2,
+          REDMI13CSILVER3,
+          REDMI13CSILVER4,
+          REDMI13CSILVER5,
+          REDMI13CSILVER6,
+        ],
+      },
+    ],
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",
@@ -148,6 +281,44 @@ export const ALLPHONES = [
     rating: 3,
     newArrival: true,
     mrp: 22999,
+    colors: [
+      {
+        id: 1,
+        name: "Starlight Black",
+        images: [
+          REDMI13CBLACK1,
+          REDMI13CBLACK2,
+          REDMI13CBLACK3,
+          REDMI13CBLACK4,
+          REDMI13CBLACK5,
+          REDMI13CBLACK6,
+        ],
+      },
+      {
+        id: 2,
+        name: "Starlight Green",
+        images: [
+          REDMI13CGREEN1,
+          REDMI13CGREEN2,
+          REDMI13CGREEN3,
+          REDMI13CGREEN4,
+          REDMI13CGREEN5,
+          REDMI13CGREEN6,
+        ],
+      },
+      {
+        id: 3,
+        name: "Starlight Silver",
+        images: [
+          REDMI13CSILVER1,
+          REDMI13CSILVER2,
+          REDMI13CSILVER3,
+          REDMI13CSILVER4,
+          REDMI13CSILVER5,
+          REDMI13CSILVER6,
+        ],
+      },
+    ],
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",
@@ -171,6 +342,54 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 20999,
+    colors: [
+      {
+        id: 1,
+        name: "Arctic White",
+        images: [
+          REDMINOTE13WHITE1,
+          REDMINOTE13WHITE2,
+          REDMINOTE13WHITE3,
+          REDMINOTE13WHITE4,
+          REDMINOTE13WHITE5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Chromatic Purple",
+        images: [
+          REDMINOTE13PURPLE1,
+          REDMINOTE13PURPLE2,
+          REDMINOTE13PURPLE3,
+          REDMINOTE13PURPLE4,
+          REDMINOTE13PURPLE5,
+          REDMINOTE13PURPLE6,
+        ],
+      },
+      {
+        id: 3,
+        name: "Prism Gold",
+        images: [
+          REDMINOTE13GOLD1,
+          REDMINOTE13GOLD2,
+          REDMINOTE13GOLD3,
+          REDMINOTE13GOLD4,
+          REDMINOTE13GOLD5,
+          REDMINOTE13GOLD6,
+        ],
+      },
+      {
+        id: 4,
+        name: "Stealth Black",
+        images: [
+          REDMINOTE13BLACK1,
+          REDMINOTE13BLACK2,
+          REDMINOTE13BLACK3,
+          REDMINOTE13BLACK4,
+          REDMINOTE13BLACK5,
+        ],
+      },
+    ],
     specifications: {
       Processor: "MediaTek Dimensity 6080 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
@@ -193,6 +412,54 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 22999,
+    colors: [
+      {
+        id: 1,
+        name: "Arctic White",
+        images: [
+          REDMINOTE13WHITE1,
+          REDMINOTE13WHITE2,
+          REDMINOTE13WHITE3,
+          REDMINOTE13WHITE4,
+          REDMINOTE13WHITE5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Chromatic Purple",
+        images: [
+          REDMINOTE13PURPLE1,
+          REDMINOTE13PURPLE2,
+          REDMINOTE13PURPLE3,
+          REDMINOTE13PURPLE4,
+          REDMINOTE13PURPLE5,
+          REDMINOTE13PURPLE6,
+        ],
+      },
+      {
+        id: 3,
+        name: "Prism Gold",
+        images: [
+          REDMINOTE13GOLD1,
+          REDMINOTE13GOLD2,
+          REDMINOTE13GOLD3,
+          REDMINOTE13GOLD4,
+          REDMINOTE13GOLD5,
+          REDMINOTE13GOLD6,
+        ],
+      },
+      {
+        id: 4,
+        name: "Stealth Black",
+        images: [
+          REDMINOTE13BLACK1,
+          REDMINOTE13BLACK2,
+          REDMINOTE13BLACK3,
+          REDMINOTE13BLACK4,
+          REDMINOTE13BLACK5,
+        ],
+      },
+    ],
     specifications: {
       Processor: "MediaTek Dimensity 6080 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
@@ -240,6 +507,24 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 16990,
+    colors: [
+      {
+        id: 1,
+        name: "GLOWING BLACK",
+        images: [OPPOA57BLACK1, OPPOA57BLACK2, OPPOA57BLACK3, OPPOA57BLACK4],
+      },
+      {
+        id: 2,
+        name: "GLOWING GREEN",
+        images: [
+          OPPOA57GREEN1,
+          OPPOA57GREEN2,
+          OPPOA57GREEN3,
+          OPPOA57GREEN4,
+          OPPOA57GREEN5,
+        ],
+      },
+    ],
     specifications: {
       Processor: "MediaTek Helio G35 Octa core ",
       Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
@@ -263,6 +548,24 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 12999,
+    colors: [
+      {
+        id: 1,
+        name: "GLOWING BLACK",
+        images: [OPPOA57BLACK1, OPPOA57BLACK2, OPPOA57BLACK3, OPPOA57BLACK4],
+      },
+      {
+        id: 2,
+        name: "GLOWING GREEN",
+        images: [
+          OPPOA57GREEN1,
+          OPPOA57GREEN2,
+          OPPOA57GREEN3,
+          OPPOA57GREEN4,
+          OPPOA57GREEN5,
+        ],
+      },
+    ],
     specifications: {
       Processor: "MediaTek Helio G35 Octa core ",
       Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
@@ -286,6 +589,30 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 19999,
+    colors: [
+      {
+        id: 1,
+        name: "SKY BLUE",
+        images: [
+          OPPOA77BLUE1,
+          OPPOA77BLUE2,
+          OPPOA77BLUE3,
+          OPPOA77BLUE4,
+          OPPOA77BLUE5,
+        ],
+      },
+      {
+        id: 2,
+        name: "SUNSET ORANGE",
+        images: [
+          OPPOA77ORANGE1,
+          OPPOA77ORANGE2,
+          OPPOA77ORANGE3,
+          OPPOA77ORANGE4,
+          OPPOA77ORANGE5,
+        ],
+      },
+    ],
     specifications: {
       Processor: "MediaTek Helio G35 Octa core ",
       Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
@@ -309,6 +636,30 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 18999,
+    colors: [
+      {
+        id: 1,
+        name: "BREEZE BLUE",
+        images: [
+          OPPOK12XBLUE1,
+          OPPOK12XBLUE2,
+          OPPOK12XBLUE3,
+          OPPOK12XBLUE4,
+          OPPOK12XBLUE5,
+        ],
+      },
+      {
+        id: 2,
+        name: "MIDNIGHT VOILET",
+        images: [
+          OPPOK12XVOILET1,
+          OPPOK12XVOILET2,
+          OPPOK12XVOILET3,
+          OPPOK12XVOILET4,
+          OPPOK12XVOILET5,
+        ],
+      },
+    ],
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz LCD ",
@@ -332,6 +683,30 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 53999,
+    colors: [
+      {
+        id: 1,
+        name: "SPACE BROWN",
+        images: [
+          OPPORENO12PROBROWN1,
+          OPPORENO12PROBROWN2,
+          OPPORENO12PROBROWN3,
+          OPPORENO12PROBROWN4,
+          OPPORENO12PROBROWN5,
+        ],
+      },
+      {
+        id: 2,
+        name: "SUNSET GOLD",
+        images: [
+          OPPORENO12PROGOLD1,
+          OPPORENO12PROGOLD2,
+          OPPORENO12PROGOLD3,
+          OPPORENO12PROGOLD4,
+          OPPORENO12PROGOLD5,
+        ],
+      },
+    ],
     specifications: {
       Processor: "MediaTek Dimensity 7300 Energy Octa core ",
       Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
@@ -355,6 +730,36 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 43999,
+    colors: [
+      {
+        id: 1,
+        name: "MATTE BROWN",
+        images: [
+          OPPORENO12BROWN1,
+          OPPORENO12BROWN2,
+          OPPORENO12BROWN3,
+          OPPORENO12BROWN4,
+          OPPORENO12BROWN5,
+          OPPORENO12BROWN6,
+          OPPORENO12BROWN7,
+          OPPORENO12BROWN8,
+        ],
+      },
+      {
+        id: 2,
+        name: "SUNSET PEACH",
+        images: [
+          OPPORENO12PEACH1,
+          OPPORENO12PEACH2,
+          OPPORENO12PEACH3,
+          OPPORENO12PEACH4,
+          OPPORENO12PEACH5,
+          OPPORENO12PEACH6,
+          OPPORENO12PEACH7,
+          OPPORENO12PEACH8,
+        ],
+      },
+    ],
     specifications: {
       Processor: "MediaTek Dimensity 7300 Energy Octa core ",
       Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
