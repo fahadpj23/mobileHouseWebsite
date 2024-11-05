@@ -35,27 +35,26 @@ const SingleItem = () => {
           <div className="flex justify-center w-full md:w-1/2 ">
             <div className=" flex flex-col justify-center items-center ">
               <div className=" p-3 w-screen mb-3 flex justify-center">
-                <div className="w-[70vw] h-[70vw] md:w-[26vw] md:h-[30vw] flex justify-center items-center  bg-grayBackground">
+                <div className="w-[45vw] h-[80vw] md:w-[26vw] md:h-[25vw] flex justify-center items-center  ">
                   <img
                     src={displayImage}
                     alt={`${product?.name} Image `}
-                    className="w-full h-full "
+                    className="w-full h-full object-contain "
                   />
                 </div>
               </div>
-              <div className="flex space-x-2">
+              <div className="flex space-x-3 justify-center w-full ">
                 {productImages?.images?.map((image: any) => {
                   return (
                     <button
                       key={image}
                       onClick={() => setDisplayImage(image)}
-                      className="p-1 border border-gray-400 rounded-sm"
+                      className="p-1 border border-gray-400 rounded-sm w-10 h-14 md:w-20 md:h-16 "
                     >
                       <img
                         src={image}
                         alt={`productImage `}
-                        width={40}
-                        height={40}
+                        className="w-full h-full object-contain"
                       />
                     </button>
                   );
@@ -84,20 +83,21 @@ const SingleItem = () => {
             <div className="flex flex-col">
               {product?.colors && (
                 <div>
-                  <div className="flex space-x-5 ml-6 mt-6">
+                  <div className="flex space-x-5 ml-6 mt-6 ">
                     {product?.colors?.map((color: any) => {
                       return (
                         <button
                           key={color?.images[0]}
                           onClick={() => handleColor(color)}
-                          className=" flex flex-col items-center"
+                          className=" flex flex-col items-center "
                         >
-                          <img
-                            src={color?.images[0]}
-                            width={50}
-                            height={50}
-                            alt="phone image"
-                          />
+                          <div className="w-10 h-16 md:w-16 ">
+                            <img
+                              src={color?.images[0]}
+                              className="w-full h-full object-contain "
+                              alt="phone image"
+                            />
+                          </div>
                           <h1 className="text-[13px] font-semibold">
                             {color?.name}
                           </h1>
