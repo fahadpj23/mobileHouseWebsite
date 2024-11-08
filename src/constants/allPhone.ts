@@ -1497,21 +1497,9 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 16999,
-    Colours: [
+    colors: [
       {
         id: 1,
-        name: "Ash Black",
-        images: [
-          SAMSUNGF15ASHBLACK1,
-          SAMSUNGF15ASHBLACK2,
-          SAMSUNGF15ASHBLACK3,
-          SAMSUNGF15ASHBLACK4,
-          SAMSUNGF15ASHBLACK5,
-          SAMSUNGF15ASHBLACK6,
-        ],
-      },
-      {
-        id: 2,
         name: "Groovy Violet",
         images: [
           SAMSUNGF15GROOVYVIOLET1,
@@ -1520,6 +1508,18 @@ export const ALLPHONES = [
           SAMSUNGF15GROOVYVIOLET4,
           SAMSUNGF15GROOVYVIOLET5,
           SAMSUNGF15GROOVYVIOLET6,
+        ],
+      },
+      {
+        id: 2,
+        name: "Ash Black",
+        images: [
+          SAMSUNGF15ASHBLACK1,
+          SAMSUNGF15ASHBLACK2,
+          SAMSUNGF15ASHBLACK3,
+          SAMSUNGF15ASHBLACK4,
+          SAMSUNGF15ASHBLACK5,
+          SAMSUNGF15ASHBLACK6,
         ],
       },
 
@@ -1558,9 +1558,21 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 17999,
-    Colours: [
+    colors: [
       {
         id: 1,
+        name: "Jazzy Green",
+        images: [
+          SAMSUNGF15JAZZYGREEN1,
+          SAMSUNGF15JAZZYGREEN2,
+          SAMSUNGF15JAZZYGREEN3,
+          SAMSUNGF15JAZZYGREEN4,
+          SAMSUNGF15JAZZYGREEN5,
+          SAMSUNGF15JAZZYGREEN6,
+        ],
+      },
+      {
+        id: 2,
         name: "Ash Black",
         images: [
           SAMSUNGF15ASHBLACK1,
@@ -1572,7 +1584,7 @@ export const ALLPHONES = [
         ],
       },
       {
-        id: 2,
+        id: 3,
         name: "Groovy Violet",
         images: [
           SAMSUNGF15GROOVYVIOLET1,
@@ -1581,19 +1593,6 @@ export const ALLPHONES = [
           SAMSUNGF15GROOVYVIOLET4,
           SAMSUNGF15GROOVYVIOLET5,
           SAMSUNGF15GROOVYVIOLET6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Jazzy Green",
-        images: [
-          SAMSUNGF15JAZZYGREEN1,
-          SAMSUNGF15JAZZYGREEN2,
-          SAMSUNGF15JAZZYGREEN3,
-          SAMSUNGF15JAZZYGREEN4,
-          SAMSUNGF15JAZZYGREEN5,
-          SAMSUNGF15JAZZYGREEN6,
         ],
       },
     ],
@@ -1620,7 +1619,7 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 10999,
-    Colours: [
+    colors: [
       {
         id: 1,
         name: "BLUE",
@@ -1682,7 +1681,7 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 17999,
-    Colours: [
+    colors: [
       {
         id: 1,
         name: "ARCTIC BLUEE",
@@ -1731,7 +1730,7 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 15499,
-    Colours: [
+    colors: [
       {
         id: 1,
         name: "BLACK",
@@ -1792,7 +1791,7 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 10499,
-    Colours: [
+    colors: [
       {
         id: 1,
         name: "BLACK",
@@ -1877,7 +1876,7 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 15999,
-    Colours: [
+    colors: [
       {
         id: 1,
         name: "BLACK",
@@ -1917,7 +1916,7 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 11499,
-    Colours: [
+    colors: [
       {
         id: 1,
         name: "BLACK",
@@ -1978,7 +1977,7 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 15999,
-    Colours: [
+    colors: [
       {
         id: 1,
         name: " BLUE TOPAZ",
@@ -2039,7 +2038,7 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 36999,
-    Colours: [
+    colors: [
       {
         id: 1,
         name: " AWESOME ICEBLUE",
@@ -2123,7 +2122,7 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 45999,
-    Colours: [
+    colors: [
       {
         id: 1,
         name: " AWESOME NAVY",
@@ -2172,7 +2171,7 @@ export const ALLPHONES = [
     rating: 5,
     newArrival: true,
     mrp: 95999,
-    Colours: [
+    colors: [
       {
         id: 1,
         name: "CREAM",
