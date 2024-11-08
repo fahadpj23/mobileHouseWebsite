@@ -13,10 +13,13 @@ const Brand = () => {
   return (
     <div>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-5">
-        {phoneList?.length &&
-          phoneList?.map((product: any) => {
-            return <SingleProductCard product={product} key={product?.name} />;
-          })}
+        {phoneList?.length
+          ? phoneList?.map((product: any) => {
+              return (
+                <SingleProductCard product={product} key={product?.name} />
+              );
+            })
+          : null}
       </div>
     </div>
   );
