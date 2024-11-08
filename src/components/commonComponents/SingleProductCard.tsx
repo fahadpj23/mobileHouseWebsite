@@ -16,9 +16,11 @@ const SingleProductCard: FC<props> = ({ product }) => {
       <div className=" p-3 md:p-6 flex flex-col space-y-2  bg-white relative rounded-md">
         <div className="flex justify-center bg-grayBackground rounded-md shadow-md p-2">
           <img
-            src={product?.image}
+            src={
+              product?.colors ? product?.colors[0]?.images[0] : product?.image
+            }
             alt="phone Image"
-            className="w-[130px] h-[140px] md:w-[150px] md:h-[170px] object-fill"
+            className="w-[120px] h-[150px] md:w-[150px] md:h-[170px] object-contain"
           />
         </div>
         <div className="flex flex-col space-y-1">

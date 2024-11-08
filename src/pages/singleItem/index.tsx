@@ -35,7 +35,7 @@ const SingleItem = () => {
           <div className="flex justify-center w-full md:w-1/2 ">
             <div className=" flex flex-col justify-center items-center ">
               <div className=" p-3 w-screen mb-3 flex justify-center">
-                <div className="w-[45vw] h-[80vw] md:w-[26vw] md:h-[25vw] flex justify-center items-center  ">
+                <div className="w-[50vw] h-[85vw] md:w-[26vw] md:h-[25vw] flex justify-center items-center  ">
                   <img
                     src={displayImage}
                     alt={`${product?.name} Image `}
@@ -49,7 +49,7 @@ const SingleItem = () => {
                     <button
                       key={image}
                       onClick={() => setDisplayImage(image)}
-                      className="p-1 border border-gray-400 rounded-sm w-10 h-14 md:w-20 md:h-16 "
+                      className="p-1 border border-gray-300 rounded-md w-10 h-14 md:w-20 md:h-16 "
                     >
                       <img
                         src={image}
