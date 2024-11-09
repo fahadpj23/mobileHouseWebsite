@@ -6,6 +6,7 @@ import SpecialOffer from "pages/specialOffer";
 import Brand from "pages/brand";
 import SingleItem from "pages/singleItem";
 import TrendingPhones from "pages/trendingPhone";
+import SpecCreator from "pages/specCreator";
 
 const PageRoute = () => {
   return (
@@ -19,6 +20,7 @@ const PageRoute = () => {
             <Route index path="/trendingPhones" element={<TrendingPhones />} />
             <Route index path="brand/:brandName" element={<Brand />} />
             <Route index path="phone/:productId" element={<SingleItem />} />
+            <Route index path="specCreator" element={<SpecCreator />} />
           </Routes>
         </MainLayout>
       </BrowserRouter>
