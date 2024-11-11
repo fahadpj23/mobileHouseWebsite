@@ -4,6 +4,8 @@ import { useLocation, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getProductDetails } from "utils/getProductDetails";
 import { getDiscountPercentage } from "utils/getDiscountPercentage";
+import { RiWhatsappFill } from "react-icons/ri";
+
 const SingleItem = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState<any>("");
@@ -28,6 +30,15 @@ const SingleItem = () => {
     setDisplayImage(color?.images[0]);
   };
 
+  const handleWhatapp = () => {
+    const phoneNumber = "8304830868";
+    const currentURL = window.location.href;
+    const encodedMessage = encodeURIComponent(
+      `Check out this link: ${currentURL}`
+    );
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
   return (
     <div className="block md:flex items-center ">
       {product && (
@@ -80,6 +91,11 @@ const SingleItem = () => {
                 </h1>
               </div>
             </div>
+            <RiWhatsappFill
+              onClick={() => handleWhatapp()}
+              className="fixed bottom-10 right-10 text-green-600 z-50 text-[40px] animate-bounce shadow-2xl "
+            />
+
             <div className="flex flex-col">
               {product?.colors && (
                 <div>

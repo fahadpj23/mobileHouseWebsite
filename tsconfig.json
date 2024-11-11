@@ -25,7 +25,8 @@
       "@asset/*": ["./asset/*"],
       "@utils/*": ["./utils/*"],
       "@slice/*": ["./slice/*"],
-      "@context/*": ["./context/*"]
+      "@context/*": ["./context/*"],
+      "@hooks/*": ["./hooks/*"]
     }
   },
   "include": ["src"]

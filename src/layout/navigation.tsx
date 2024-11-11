@@ -4,7 +4,7 @@ import { NAVIGATIONITEMS } from "constants/navigationItems";
 const Naviagtion = () => {
   return (
     <nav className="mr-6 hidden md:block">
-      <ul className="flex space-x-10">
+      <ul className="flex space-x-6">
         {NAVIGATIONITEMS?.map((navigation) => {
           return (
             <li key={navigation?.title}>

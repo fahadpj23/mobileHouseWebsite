@@ -6,22 +6,8 @@ import { MIPHONES } from "constants/mi";
 import { ALLPHONES } from "constants/allPhone";
 
 export const getBrandPhones = (brandName: string) => {
-  // switch (brandName) {
-  //   case "vivo":
-  //     return VIVOPHONES;
-  //   case "oppo":
-  //     return OPPOPHONES;
-  //   case "realme":
-  //     return REALMEPHONES;
-  //   case "samsung":
-  //     return SAMSUNGPHONES;
-  //   case "mi":
-  //     return MIPHONES;
-  //   default:
-  //     return "";
-  // }
   const brandPhones = ALLPHONES.filter(
-    (phones) => phones.brand === brandName.toUpperCase()
+    (phones) => phones.brand.toUpperCase() === brandName.toUpperCase()
   );
   return brandPhones;
 };
