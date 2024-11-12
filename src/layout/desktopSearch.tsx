@@ -39,7 +39,7 @@ const DesktopSearch = () => {
           {searchData?.map((phone: any) => {
             return (
               <Link
-                to={`/phone/${phone?.id}`}
+                to={`/phone/${phone?.id}/${encodeURIComponent(phone?.name)}`}
                 key={phone?.id}
                 className="flex items-center space-x-4"
                 onClick={() => handleSelect()}
