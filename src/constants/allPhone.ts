@@ -2967,7 +2967,7 @@ export const ALLPHONES = [
     specialOffer: true,
     trendingPhone: true,
     rating: 5,
-    newArrival: true,
+    newArrival: false,
     mrp: 25999,
     colors: [
       {
@@ -3013,10 +3013,10 @@ export const ALLPHONES = [
     brand: "VIVO",
     image: VIVOY58,
     salesPrice: 18499,
-    specialOffer: true,
-    trendingPhone: true,
+    specialOffer: false,
+    trendingPhone: false,
     rating: 5,
-    newArrival: true,
+    newArrival: false,
     mrp: 23999,
     colors: [
       {
@@ -3060,8 +3060,8 @@ export const ALLPHONES = [
     brand: "VIVO",
     image: VIVOY300PLUS,
     salesPrice: 23999,
-    specialOffer: true,
-    trendingPhone: true,
+    specialOffer: false,
+    trendingPhone: false,
     rating: 5,
     newArrival: true,
     mrp: 29999,
@@ -3107,10 +3107,10 @@ export const ALLPHONES = [
     brand: "VIVO",
     image: VIVOY28S,
     salesPrice: 16499,
-    specialOffer: true,
-    trendingPhone: true,
+    specialOffer: false,
+    trendingPhone: false,
     rating: 5,
-    newArrival: true,
+    newArrival: false,
     mrp: 21999,
     colors: [
       {
@@ -3154,10 +3154,10 @@ export const ALLPHONES = [
     brand: "VIVO",
     image: VIVOY28S,
     salesPrice: 14999,
-    specialOffer: true,
-    trendingPhone: true,
+    specialOffer: false,
+    trendingPhone: false,
     rating: 5,
-    newArrival: true,
+    newArrival: false,
     mrp: 19999,
     colors: [
       {
@@ -3201,10 +3201,10 @@ export const ALLPHONES = [
     brand: "VIVO",
     image: VIVOY28S,
     salesPrice: 13999,
-    specialOffer: true,
-    trendingPhone: true,
+    specialOffer: false,
+    trendingPhone: false,
     rating: 5,
-    newArrival: true,
+    newArrival: false,
     mrp: 17999,
     colors: [
       {
@@ -3248,10 +3248,10 @@ export const ALLPHONES = [
     brand: "VIVO",
     image: VIVOY28,
     salesPrice: 15499,
-    specialOffer: true,
-    trendingPhone: true,
+    specialOffer: false,
+    trendingPhone: false,
     rating: 5,
-    newArrival: true,
+    newArrival: false,
     mrp: 19999,
     colors: [
       {
@@ -3294,10 +3294,10 @@ export const ALLPHONES = [
     brand: "VIVO",
     image: VIVOY28E,
     salesPrice: 10999,
-    specialOffer: true,
-    trendingPhone: true,
+    specialOffer: false,
+    trendingPhone: false,
     rating: 5,
-    newArrival: true,
+    newArrival: false,
     mrp: 14999,
     colors: [
       {
@@ -3341,10 +3341,10 @@ export const ALLPHONES = [
     brand: "VIVO",
     image: VIVOY28E,
     salesPrice: 7999,
-    specialOffer: true,
-    trendingPhone: true,
+    specialOffer: false,
+    trendingPhone: false,
     rating: 5,
-    newArrival: true,
+    newArrival: false,
     mrp: 11999,
     colors: [
       {

@@ -1,7 +1,7 @@
 import { getBrandPhones } from "utils/getBrandPhone";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import SingleProductCard from "components/commonComponents/SingleProductCard";
+import ProductList from "components/commonComponents/productList";
 
 const Brand = () => {
   const { brandName } = useParams();
@@ -12,14 +12,8 @@ const Brand = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-5">
-        {phoneList?.length
-          ? phoneList?.map((product: any) => {
-              return (
-                <SingleProductCard product={product} key={product?.name} />
-              );
-            })
-          : null}
+      <div>
+        {phoneList?.length ? <ProductList products={phoneList} /> : null}
       </div>
     </div>
   );

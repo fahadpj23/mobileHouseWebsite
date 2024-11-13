@@ -7,6 +7,9 @@ module.exports = {
       colors: {
         grayBackground: "#f8f9fa",
       },
+      animation: {
+        spin: "spin 1s linear infinite",
+      },
     },
   },
   plugins: [],

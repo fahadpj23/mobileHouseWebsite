@@ -30,11 +30,12 @@ const SingleItem = () => {
     setDisplayImage(color?.images[0]);
   };
 
-  const handleWhatapp = () => {
+  const handleWhatapp = (product: any) => {
     const phoneNumber = "8304830868";
     const currentURL = window.location.href;
     const encodedMessage = encodeURIComponent(
-      `Check out this link: ${currentURL}`
+      `${product?.name}
+    Check out this link: ${currentURL}`
     );
     const whatsappURL = `https://wa.me/+91${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");
@@ -51,6 +52,7 @@ const SingleItem = () => {
                     src={displayImage}
                     alt={`${product?.name} Image `}
                     className="w-full h-full object-contain "
+                    id="mainImage"
                   />
                 </div>
               </div>
@@ -92,7 +94,7 @@ const SingleItem = () => {
               </div>
             </div>
             <RiWhatsappFill
-              onClick={() => handleWhatapp()}
+              onClick={() => handleWhatapp(product)}
               className="fixed bottom-10 right-10 text-green-600 z-50 text-[40px] animate-bounce shadow-2xl "
             />
 
