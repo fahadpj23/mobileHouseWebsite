@@ -6,54 +6,55 @@ import { CiDiscount1 } from "react-icons/ci";
 import { filterProducts } from "utils/filterProductList";
 import { FormControl, MenuItem, Select } from "@mui/material";
 import { useScreenSize } from "hooks/useScreenSize";
+import { UrlReplace } from "utils/urlReplace";
+import { ProductListSort } from "utils/productListSort";
+import { useSearchParams } from "react-router-dom";
 
 const ProductList: FC<any> = ({ products }) => {
-  const [filters, setFilters] = useState(FilterInitialValue);
+  const [searchParams] = useSearchParams();
+  const [filters, setFilters] = useState({
+    connectivity: searchParams.get("connectivity") ?? "",
+    specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
+  });
   const { isMobile } = useScreenSize();
   const [productList, setProductList] = useState(products);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [sort, setSort] = useState("newest");
+  const [sort, setSort] = useState(searchParams.get("sort") ?? "newest");
+
   const filterAdd = (key: any, value: any) => {
+    UrlReplace(key, value);
     setIsLoading(true);
     setFilters({ ...filters, [key]: value });
   };
 
   useEffect(() => {
-    const filteredProducts: any = filterProducts(products, filters);
-    setProductList(filteredProducts);
+    if (products) {
+      const filteredProducts: any = filterProducts(products, filters);
+      setProductList(filteredProducts);
+    }
   }, [filters]);
 
   useEffect(() => {
     isLoading &&
       setTimeout(() => {
         setIsLoading(false);
-      }, 500);
+      }, 300);
   }, [isLoading]);
 
   const handleSort = (sortValue: string) => {
+    UrlReplace("sort", sortValue);
     setSort(sortValue);
-    if (sortValue === "newest") {
-      productList.sort((a: any, b: any) => {
-        const numA = parseInt(a.id.match(/\d+/)[0], 10);
-        const numB = parseInt(b.id.match(/\d+/)[0], 10);
-        return numA - numB;
-      });
-    } else if (sortValue === "HighToLow") {
-      setProductList(
-        productList.sort((a: any, b: any) => b.salesPrice - a.salesPrice)
-      );
-    } else {
-      setProductList(
-        productList.sort((a: any, b: any) => a.salesPrice - b.salesPrice)
-      );
-    }
-    setIsLoading(true);
   };
+
+  useEffect(() => {
+    setProductList(ProductListSort(productList, sort));
+    setIsLoading(true);
+  }, [sort]);
 
   return (
     <div className="mt-4">
       {isLoading && (
-        <div className="flex items-center justify-center min-h-screen fixed top-0 left-0">
+        <div className="flex items-center justify-center min-h-screen fixed top-0 left-0 w-screen z-50 bg-white">
           <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
@@ -113,7 +114,7 @@ const ProductList: FC<any> = ({ products }) => {
           </div>
         </div>
       )}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-5   lg:grid-cols-5  gap-2 md:gap-5">
         {productList?.map((product: any) => {
           return <SingleProductCard product={product} key={product?.name} />;
         })}
