@@ -20,7 +20,7 @@ const ProductMiniList: FC<props> = ({ title, listItems, link }) => {
           </Link>
         </div>
       </div>
-      <div className=" hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-5 items-center">
+      <div className=" hidden sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-5 items-center">
         {listItems?.slice(0, 5).map((product: any) => (
           <SingleProductCard key={product?.name} product={product} />
         ))}

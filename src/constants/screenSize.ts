@@ -1,6 +1,6 @@
 export const SCREENSIZES = {
   MOBILE: 480,
-  TABLET: 768,
+  TABLET: 600,
   DESKTOP: 1024,
   LARGE_DESKTOP: 1200,
 };

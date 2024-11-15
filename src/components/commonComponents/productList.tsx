@@ -114,7 +114,7 @@ const ProductList: FC<any> = ({ products }) => {
           </div>
         </div>
       )}
-      <div className="grid grid-cols-2 md:grid-cols-5   lg:grid-cols-5  gap-2 md:gap-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-2 md:gap-5">
         {productList?.map((product: any) => {
           return <SingleProductCard product={product} key={product?.name} />;
         })}
