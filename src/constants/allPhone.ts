@@ -537,6 +537,27 @@ import SAMSUNGS24ULTRA5GTITANIUMYELLOW3 from "assets/samsung/SAMSUNGS24ULTRA5G/S
 import SAMSUNGS24ULTRA5GTITANIUMYELLOW4 from "assets/samsung/SAMSUNGS24ULTRA5G/SAMSUNGS24ULTRA5GTITANIUMYELLOW/SAMSUNGS24ULTRA5GTITANIUMYELLOW4.jpg";
 import SAMSUNGS24ULTRA5GTITANIUMYELLOW5 from "assets/samsung/SAMSUNGS24ULTRA5G/SAMSUNGS24ULTRA5GTITANIUMYELLOW/SAMSUNGS24ULTRA5GTITANIUMYELLOW5.jpg";
 
+import SAMSUNGS24FE5GBLUE1 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GBLUE/SAMSUNGS24FE5GBLUE1.jpg";
+import SAMSUNGS24FE5GBLUE2 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GBLUE/SAMSUNGS24FE5GBLUE2.jpg";
+import SAMSUNGS24FE5GBLUE3 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GBLUE/SAMSUNGS24FE5GBLUE3.jpg";
+import SAMSUNGS24FE5GBLUE4 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GBLUE/SAMSUNGS24FE5GBLUE4.jpg";
+import SAMSUNGS24FE5GBLUE5 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GBLUE/SAMSUNGS24FE5GBLUE5.jpg";
+import SAMSUNGS24FE5GBLUE6 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GBLUE/SAMSUNGS24FE5GBLUE6.jpg";
+
+import SAMSUNGS24FE5GGRAPHITE1 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GGRAPHITE/SAMSUNGS24FE5GGRAPHITE1.jpg";
+import SAMSUNGS24FE5GGRAPHITE2 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GGRAPHITE/SAMSUNGS24FE5GGRAPHITE2.jpg";
+import SAMSUNGS24FE5GGRAPHITE3 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GGRAPHITE/SAMSUNGS24FE5GGRAPHITE3.jpg";
+import SAMSUNGS24FE5GGRAPHITE4 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GGRAPHITE/SAMSUNGS24FE5GGRAPHITE4.jpg";
+import SAMSUNGS24FE5GGRAPHITE5 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GGRAPHITE/SAMSUNGS24FE5GGRAPHITE5.jpg";
+import SAMSUNGS24FE5GGRAPHITE6 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GGRAPHITE/SAMSUNGS24FE5GGRAPHITE6.jpg";
+
+import SAMSUNGS24FE5GMINT1 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GMINT/SAMSUNGS24FE5GMINT1.jpg";
+import SAMSUNGS24FE5GMINT2 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GMINT/SAMSUNGS24FE5GMINT2.jpg";
+import SAMSUNGS24FE5GMINT3 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GMINT/SAMSUNGS24FE5GMINT3.jpg";
+import SAMSUNGS24FE5GMINT4 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GMINT/SAMSUNGS24FE5GMINT4.jpg";
+import SAMSUNGS24FE5GMINT5 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GMINT/SAMSUNGS24FE5GMINT5.jpg";
+import SAMSUNGS24FE5GMINT6 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GMINT/SAMSUNGS24FE5GMINT6.jpg";
+
 import SAMSUNGA144GBLACK1 from "assets/samsung/SAMSUNGA144G/SAMSUNGA144GBLACK/SAMSUNGA144GBLACK1.jpg";
 import SAMSUNGA144GBLACK2 from "assets/samsung/SAMSUNGA144G/SAMSUNGA144GBLACK/SAMSUNGA144GBLACK2.jpg";
 import SAMSUNGA144GBLACK3 from "assets/samsung/SAMSUNGA144G/SAMSUNGA144GBLACK/SAMSUNGA144GBLACK3.jpg";
@@ -3516,7 +3537,7 @@ export const ALLPHONES = [
     name: "SAMSUNG S24 5G 8/256",
     brand: "SAMSUNG",
     image: SAMSUNGS245GMARBLEGRAY1,
-    launchDate: "17-02-2023",
+    launchDate: "17-01-2024",
     salesPrice: 52999,
     specialOffer: true,
     trendingPhone: true,
@@ -3571,14 +3592,14 @@ export const ALLPHONES = [
       },
     ],
     specifications: {
-      Processor: "Snapdragon 8 Gen 2 Octa core ",
-      Display: "6.1″ (15.49 cm) 120Hz Dynamic AMOLED 2x ",
+      Processor: "Samsung Exynos 2400 Deca Core ",
+      Display: "6.2″ (15.75 cm) 120Hz Dynamic AMOLED 2x ",
       "Rear Camera": "50+12+10 MP",
       "Front Camera": "12 MP",
       "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "3900 mAh | 25W Fast Charging ",
+      Battery: "4000 mAh | 25W Fast Charging ",
       Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13",
+      OS: "Android v14 ",
     },
   },
   {
@@ -3586,7 +3607,7 @@ export const ALLPHONES = [
     name: "SAMSUNG s24 plus",
     brand: "SAMSUNG",
     image: SAMSUNGA35,
-    launchDate: "11-03-2024",
+    launchDate: "17-01-2024",
     salesPrice: 33999,
     specialOffer: true,
     trendingPhone: true,
@@ -3619,14 +3640,14 @@ export const ALLPHONES = [
       },
     ],
     specifications: {
-      Processor: "Samsung Exynos 1380 Octa core ",
-      Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
-      "Rear Camera": "50+8+5 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5000 mAh | 25W Fast Charging ",
+      Processor: "Samsung Exynos 2400 Deca Core ",
+      Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "50+12+10 MP",
+      "Front Camera": "12 MP",
+      "RAM | Storage": "12 GB | 256 GB ",
+      Battery: "4900 mAh | 45W Fast Charging ",
       Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14",
+      OS: "Android v14 ",
     },
   },
   {
@@ -3634,7 +3655,7 @@ export const ALLPHONES = [
     name: "SAMSUNG S24 Ultra 5G 8/256",
     brand: "SAMSUNG",
     image: SAMSUNGS24ULTRA5GTITANIUMGRAY1,
-    launchDate: "17-02-2023",
+    launchDate: "17-01-2024",
     salesPrice: 52999,
     specialOffer: true,
     trendingPhone: true,
@@ -3688,14 +3709,75 @@ export const ALLPHONES = [
       },
     ],
     specifications: {
-      Processor: "Snapdragon 8 Gen 2 Octa core ",
-      Display: "6.1″ (15.49 cm) 120Hz Dynamic AMOLED 2x ",
-      "Rear Camera": "50+12+10 MP",
+      Processor: "Snapdragon 8 Gen 3 Octa core ",
+      Display: "6.8″ (17.27 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "200+12+10+50 MP",
       "Front Camera": "12 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "3900 mAh | 25W Fast Charging ",
+      "RAM | Storage": "12 GB | 256 GB ",
+      Battery: "5000 mAh | 45W Fast Charging ",
       Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13",
+      OS: "Android v14 ",
+    },
+  },
+  {
+    id: "SAMSUNG19",
+    name: "SAMSUNG S24 FE 5G",
+    brand: "SAMSUNG",
+    image: SAMSUNGS24FE5GBLUE1,
+    launchDate: "26-09-2024",
+    salesPrice: 52999,
+    specialOffer: true,
+    trendingPhone: true,
+    rating: 5,
+    newArrival: true,
+    mrp: 95999,
+    colors: [
+      {
+        id: 1,
+        name: "Blue",
+        images: [
+          SAMSUNGS24FE5GBLUE1,
+          SAMSUNGS24FE5GBLUE2,
+          SAMSUNGS24FE5GBLUE3,
+          SAMSUNGS24FE5GBLUE4,
+          SAMSUNGS24FE5GBLUE5,
+          SAMSUNGS24FE5GBLUE6,
+        ],
+      },
+      {
+        id: 2,
+        name: "Graphite",
+        images: [
+          SAMSUNGS24FE5GGRAPHITE1,
+          SAMSUNGS24FE5GGRAPHITE2,
+          SAMSUNGS24FE5GGRAPHITE3,
+          SAMSUNGS24FE5GGRAPHITE4,
+          SAMSUNGS24FE5GGRAPHITE5,
+          SAMSUNGS24FE5GGRAPHITE6,
+        ],
+      },
+      {
+        id: 3,
+        name: "Mint",
+        images: [
+          SAMSUNGS24FE5GMINT1,
+          SAMSUNGS24FE5GMINT2,
+          SAMSUNGS24FE5GMINT3,
+          SAMSUNGS24FE5GMINT4,
+          SAMSUNGS24FE5GMINT5,
+          SAMSUNGS24FE5GMINT6,
+        ],
+      },
+    ],
+    specifications: {
+      Processor: "Samsung Exynos 2400e Deca Core ",
+      Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "50+12+8 MP",
+      "Front Camera": "10 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "4700 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
     },
   },
 ];

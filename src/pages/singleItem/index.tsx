@@ -33,10 +33,8 @@ const SingleItem = () => {
   const handleWhatapp = (product: any) => {
     const phoneNumber = "8304830868";
     const currentURL = window.location.href;
-    const encodedMessage = encodeURIComponent(
-      `${product?.name}
-    Check out this link: ${currentURL}`
-    );
+    const encodedMessage = encodeURIComponent(`${product?.name}
+    Check out this link: ${currentURL}`);
     const whatsappURL = `https://wa.me/+91${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");
   };
@@ -80,7 +78,7 @@ const SingleItem = () => {
               <h1 className="font-semibold truncate w-full text-[18px] md:text-base">
                 {product?.name} {productImages?.name}
               </h1>
-              <div className="flex items-center space-x-2 text-sm md:text-base">
+              <div className="flex items-center space-x-2 text-base">
                 <h1 className="font-semibold  text-green-600 tracking-wide">
                   ₹{product.salesPrice}.00
                 </h1>
