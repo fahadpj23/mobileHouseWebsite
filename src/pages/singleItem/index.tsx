@@ -5,12 +5,15 @@ import { useEffect, useState } from "react";
 import { getProductDetails } from "utils/getProductDetails";
 import { getDiscountPercentage } from "utils/getDiscountPercentage";
 import { RiWhatsappFill } from "react-icons/ri";
+import { useScreenSize } from "hooks/useScreenSize";
+import ProductImageSlider from "components/commonComponents/productImageSlider";
 
 const SingleItem = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState<any>("");
   const [productImages, setProductImages] = useState<any>();
   const [displayImage, setDisplayImage] = useState<any>();
+  const { isMobile } = useScreenSize();
 
   useEffect(() => {
     productId && setProduct(getProductDetails(productId));
@@ -45,48 +48,53 @@ const SingleItem = () => {
           <div className="flex justify-center w-full md:w-1/2 ">
             <div className=" flex flex-col justify-center items-center ">
               <div className=" p-3 w-screen mb-3 flex justify-center">
-                <div className="w-[50vw] h-[85vw] md:w-[26vw] md:h-[25vw] flex justify-center items-center  ">
-                  <img
-                    src={displayImage}
-                    alt={`${product?.name} Image `}
-                    className="w-full h-full object-contain "
-                    id="mainImage"
-                  />
-                </div>
+                {isMobile ? (
+                  <ProductImageSlider productImages={productImages} />
+                ) : (
+                  <div className="w-[50vw] h-[85vw] md:w-[26vw] md:h-[25vw] flex justify-center items-center  ">
+                    <img
+                      src={displayImage}
+                      alt={`${product?.name} Image `}
+                      className="w-full h-full object-contain "
+                      id="mainImage"
+                    />
+                  </div>
+                )}
               </div>
               <div className="flex space-x-3 justify-center w-full ">
-                {productImages?.images?.map((image: any) => {
-                  return (
-                    <button
-                      key={image}
-                      onClick={() => setDisplayImage(image)}
-                      className="p-1 border border-gray-300 rounded-md w-10 h-14 md:w-20 md:h-16 "
-                    >
-                      <img
-                        src={image}
-                        alt={`productImage `}
-                        className="w-full h-full object-contain"
-                      />
-                    </button>
-                  );
-                })}
+                {!isMobile &&
+                  productImages?.images?.map((image: any) => {
+                    return (
+                      <button
+                        key={image}
+                        onClick={() => setDisplayImage(image)}
+                        className="p-1 border border-gray-300 rounded-md w-10 h-14 md:w-20 md:h-16 "
+                      >
+                        <img
+                          src={image}
+                          alt={`productImage `}
+                          className="w-full h-full object-contain"
+                        />
+                      </button>
+                    );
+                  })}
               </div>
             </div>
           </div>
-          <div className=" w-full md:w-1/2 mt-5 md:mt-20 ">
+          <div className=" w-full md:w-1/2 mt-0 md:mt-20 ">
             <div className="space-y-2 ml-3 md:ml-6">
-              <h1 className="font-semibold truncate w-full text-[18px] md:text-base">
+              <h1 className="font-semibold truncate w-full text-[15px] md:text-base">
                 {product?.name} {productImages?.name}
               </h1>
               <div className="flex items-center space-x-2 text-base">
-                <h1 className="font-semibold  text-green-600 tracking-wide">
+                <h1 className="font-semibold   tracking-wide text-[16px]">
                   ₹{product.salesPrice}.00
                 </h1>
 
-                <h1 className="line-through  text-red-500 text-xs">
+                <h1 className="line-through text-gray-500 text-xs">
                   MRP: ₹{product.mrp}
                 </h1>
-                <h1 className=" text-[#11a453] rounded p-1 font-semibold  text-sm md:text-base">
+                <h1 className=" text-[#11a453] text-[18px] rounded p-1 font-semibold  text-sm md:text-base">
                   {product && getDiscountPercentage(product)}% off
                 </h1>
               </div>

@@ -49,3 +49,12 @@
 body {
   overflow-x: hidden;
 }
+
+.carousel .thumb {
+  border: 2px solid #ddd; /* Add a border */
+  background-color: "#b1b1b1";
+}
+
+.carousel .thumb.selected {
+  border-color: #007bff; /* Highlight active thumbnail */
+}
