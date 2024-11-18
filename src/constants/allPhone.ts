@@ -1339,7 +1339,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "VIVO12",
+    id: "VIVO13",
     name: "VIVO Y28E 5G 4/128 ",
     brand: "VIVO",
     image: VIVOY28E,
@@ -1387,7 +1387,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "VIVO13",
+    id: "VIVO14",
     name: "VIVO Y18I 4G 4/64 ",
     brand: "VIVO",
     image: VIVOY28E,
@@ -1703,7 +1703,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "TECNO5",
+    id: "TECNO7",
     name: "TECNO POVA 6 NEO",
     brand: "TECNO",
     launchDate: "04-04-2024",
@@ -1760,7 +1760,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "TECNO6",
+    id: "TECNO8",
     name: "TECNO POVA 6 PRO",
     brand: "TECNO",
     launchDate: "26-02-2024",
@@ -1807,7 +1807,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "TECNO7",
+    id: "TECNO9",
     name: "TECNO SPARK 30C 5G",
     brand: "TECNO",
     launchDate: "02-10-2024",
@@ -2111,7 +2111,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "MI4",
+    id: "MI5",
     name: "MI NOTE 13 5G 12/256",
     brand: "MI",
     image: MINOTE13,
@@ -2182,7 +2182,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "MI5",
+    id: "MI6",
     name: "MI NOTE 13 5G 8/256",
     brand: "MI",
     image: MINOTE13,
@@ -2254,7 +2254,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "MI6",
+    id: "MI7",
     name: "MI 13 5G 6/128",
     brand: "MI",
     image: REDMI135GBLACKDIAMOND1,
@@ -2314,7 +2314,7 @@ export const ALLPHONES = [
     ],
   },
   {
-    id: "MI7",
+    id: "MI8",
     name: "MI 13 5G 8/128",
     brand: "MI",
     image: REDMI135GBLACKDIAMOND1,
@@ -2375,7 +2375,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "MI8",
+    id: "MI9",
     name: "MI Note 13 Pro Plus 5G 8/256",
     brand: "MI",
     image: REDMINOTE13PROPLUS5GFUSIONBLACK1,
@@ -2435,7 +2435,7 @@ export const ALLPHONES = [
     ],
   },
   {
-    id: "MI8",
+    id: "MI10",
     name: "MI Note 13 Pro Plus 5G 12/256",
     brand: "MI",
     image: REDMINOTE13PROPLUS5GFUSIONBLACK1,
@@ -2495,7 +2495,7 @@ export const ALLPHONES = [
     ],
   },
   {
-    id: "MI8",
+    id: "MI11",
     name: "MI Note 13 Pro Plus 5G 12/512",
     brand: "MI",
     image: REDMINOTE13PROPLUS5GFUSIONBLACK1,
@@ -2743,7 +2743,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "OPPO4",
+    id: "OPPO5",
     name: "OPPO K12X 5G 8/256 ",
     brand: "OPPO",
     image: OPPOK12X,
@@ -2790,7 +2790,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "OPPO4",
+    id: "OPPO6",
     name: "OPPO K12X 5G 6/128 ",
     brand: "OPPO",
     image: OPPOK12X,
@@ -2838,7 +2838,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "OPPO5",
+    id: "OPPO7",
     name: "OPPO RENO12 PRO 5G 12/256 ",
     brand: "OPPO",
     image: OPPORENO12PRO,
@@ -2886,7 +2886,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "OPPO5",
+    id: "OPPO8",
     name: "OPPO RENO12 PRO 5G 12/512 ",
     brand: "OPPO",
     image: OPPORENO12PRO,
@@ -2933,7 +2933,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "OPPO6",
+    id: "OPPO9",
     name: "OPPO RENO12 5G 8/256 ",
     brand: "OPPO",
     image: OPPORENO12,
@@ -2983,7 +2983,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "OPPO7",
+    id: "OPPO10",
     name: "OPPO F27PRO+ 5G 8/256 ",
     brand: "OPPO",
     image: OPPOF27PROPLUS,
@@ -3030,7 +3030,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "OPPO7",
+    id: "OPPO11",
     name: "OPPO F27PRO+ 5G 8/128 ",
     brand: "OPPO",
     image: OPPOF27PROPLUS,
@@ -3078,7 +3078,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "OPPO8",
+    id: "OPPO12",
     name: "OPPO F27 5G 8/256 ",
     brand: "OPPO",
     image: OPPOF27,
@@ -3125,7 +3125,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "OPPO8",
+    id: "OPPO13",
     name: "OPPO F27 5G 8/128",
     brand: "OPPO",
     image: OPPOF27,
@@ -3173,7 +3173,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "OPPO9",
+    id: "OPPO14",
     name: "OPPO A3 PRO 5G 8/256 ",
     brand: "OPPO",
     image: OPPOA3PRO,
@@ -3232,7 +3232,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "OPPO10",
+    id: "OPPO15",
     name: "OPPO A3 PRO 5G 8/128 ",
     brand: "OPPO",
     image: OPPOA3PRO,
@@ -3291,7 +3291,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "OPPO11",
+    id: "OPPO16",
     name: "OPPO A3X 5G 4/128 ",
     brand: "OPPO",
     image: OPPOA3X,
@@ -3339,7 +3339,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "OPPO11",
+    id: "OPPO17",
     name: "OPPO A3X 5G 4/64 ",
     brand: "OPPO",
     image: OPPOA3X,
@@ -3522,10 +3522,10 @@ export const ALLPHONES = [
     ],
   },
   {
-    id: "SAMSUNG1",
+    id: "SAMSUNG2",
     name: "SAMSUNG A16 5G 8/128",
     brand: "SAMSUNG",
-    image: SAMSUNGA165GGOLD1,
+    image: SASMSUNGA165GBLUEBLACK1,
     launchDate: "07-10-2024",
     salesPrice: 18999,
     specialOffer: true,
@@ -3546,18 +3546,6 @@ export const ALLPHONES = [
     colors: [
       {
         id: 1,
-        name: "Blue Black",
-        images: [
-          SASMSUNGA165GBLUEBLACK1,
-          SASMSUNGA165GBLUEBLACK2,
-          SASMSUNGA165GBLUEBLACK3,
-          SASMSUNGA165GBLUEBLACK4,
-          SASMSUNGA165GBLUEBLACK5,
-        ],
-      },
-
-      {
-        id: 2,
         name: "Light Green",
         images: [
           SASMSUNGA165GLIGHTGREEN1,
@@ -3565,6 +3553,17 @@ export const ALLPHONES = [
           SASMSUNGA165GLIGHTGREEN3,
           SASMSUNGA165GLIGHTGREEN4,
           SASMSUNGA165GLIGHTGREEN5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Blue Black",
+        images: [
+          SASMSUNGA165GBLUEBLACK1,
+          SASMSUNGA165GBLUEBLACK2,
+          SASMSUNGA165GBLUEBLACK3,
+          SASMSUNGA165GBLUEBLACK4,
+          SASMSUNGA165GBLUEBLACK5,
         ],
       },
 
@@ -3583,10 +3582,10 @@ export const ALLPHONES = [
     ],
   },
   {
-    id: "SAMSUNG1",
+    id: "SAMSUNG3",
     name: "SAMSUNG A16 5G 8/256",
     brand: "SAMSUNG",
-    image: SAMSUNGA165GGOLD1,
+    image: SASMSUNGA165GLIGHTGREEN1,
     launchDate: "07-10-2024",
     salesPrice: 21999,
     specialOffer: true,
@@ -3607,6 +3606,18 @@ export const ALLPHONES = [
     colors: [
       {
         id: 1,
+        name: "gold",
+        images: [
+          SAMSUNGA165GGOLD1,
+          SAMSUNGA165GGOLD2,
+          SAMSUNGA165GGOLD3,
+          SAMSUNGA165GGOLD4,
+          SAMSUNGA165GGOLD5,
+          SAMSUNGA165GGOLD6,
+        ],
+      },
+      {
+        id: 2,
         name: "Blue Black",
         images: [
           SASMSUNGA165GBLUEBLACK1,
@@ -3618,7 +3629,7 @@ export const ALLPHONES = [
       },
 
       {
-        id: 2,
+        id: 3,
         name: "Light Green",
         images: [
           SASMSUNGA165GLIGHTGREEN1,
@@ -3628,23 +3639,10 @@ export const ALLPHONES = [
           SASMSUNGA165GLIGHTGREEN5,
         ],
       },
-
-      {
-        id: 3,
-        name: "gold",
-        images: [
-          SAMSUNGA165GGOLD1,
-          SAMSUNGA165GGOLD2,
-          SAMSUNGA165GGOLD3,
-          SAMSUNGA165GGOLD4,
-          SAMSUNGA165GGOLD5,
-          SAMSUNGA165GGOLD6,
-        ],
-      },
     ],
   },
   {
-    id: "SAMSUNG1",
+    id: "SAMSUNG4",
     name: "SAMSUNG F15 5G 4/128",
     brand: "SAMSUNG",
     image: SAMSUNGF15,
@@ -3707,7 +3705,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG2",
+    id: "SAMSUNG5",
     name: "SAMSUNG F15 5G 6/128",
     brand: "SAMSUNG",
     image: SAMSUNGF15,
@@ -3769,7 +3767,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG3",
+    id: "SAMSUNG6",
     name: "SAMSUNG F15 5G 8/128",
     brand: "SAMSUNG",
     image: SAMSUNGF15,
@@ -3831,7 +3829,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG4",
+    id: "SAMSUNG7",
     name: "SAMSUNG A15 5G 8/128",
     brand: "SAMSUNG",
     image: SAMSUNGA15,
@@ -3893,7 +3891,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG4",
+    id: "SAMSUNG8",
     name: "SAMSUNG A15 5G 6/128",
     brand: "SAMSUNG",
     image: SAMSUNGA15,
@@ -3955,7 +3953,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG4",
+    id: "SAMSUNG9",
     name: "SAMSUNG A15 5G 8/256",
     brand: "SAMSUNG",
     image: SAMSUNGA15,
@@ -4018,7 +4016,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG5",
+    id: "SAMSUNG10",
     name: "SAMSUNG M14 4G 4/128",
     brand: "SAMSUNG",
     image: SAMSUNGM14,
@@ -4068,7 +4066,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG6",
+    id: "SAMSUNG11",
     name: "SAMSUNG A14 5G 4/128",
     brand: "SAMSUNG",
     image: SAMSUNGA14,
@@ -4130,7 +4128,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG7",
+    id: "SAMSUNG12",
     name: "SAMSUNG A14 4G 4/128",
     brand: "SAMSUNG",
     image: SAMSUNGA14,
@@ -4189,7 +4187,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG8",
+    id: "SAMSUNG13",
     name: "SAMSUNG F14 4G 4/64",
     brand: "SAMSUNG",
     image: SAMSUNGF14,
@@ -4214,7 +4212,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG9",
+    id: "SAMSUNG14",
     name: "SAMSUNG A05S 4G 4/128",
     brand: "SAMSUNG",
     image: SAMSUNGA05S,
@@ -4255,7 +4253,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG10",
+    id: "SAMSUNG15",
     name: "SAMSUNG A06 4G 4/64",
     brand: "SAMSUNG",
     image: SAMSUNGA06,
@@ -4317,7 +4315,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG11",
+    id: "SAMSUNG16",
     name: "SAMSUNG M15 5G 4/128",
     brand: "SAMSUNG",
     image: SAMSUNGM15,
@@ -4379,7 +4377,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG12",
+    id: "SAMSUNG17",
     name: "SAMSUNG A35 5G 8/256",
     brand: "SAMSUNG",
     image: SAMSUNGA35,
@@ -4440,7 +4438,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG12",
+    id: "SAMSUNG18",
     name: "SAMSUNG A35 5G 8/128",
     brand: "SAMSUNG",
     image: SAMSUNGA35,
@@ -4502,7 +4500,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG13",
+    id: "SAMSUNG19",
     name: "SAMSUNG A55 5G 12/256",
     brand: "SAMSUNG",
     image: SAMSUNGA55,
@@ -4552,7 +4550,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG13",
+    id: "SAMSUNG20",
     name: "SAMSUNG A55 5G 8/128",
     brand: "SAMSUNG",
     image: SAMSUNGA55,
@@ -4602,7 +4600,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG14",
+    id: "SAMSUNG21",
     name: "SAMSUNG A55 5G 8/256",
     brand: "SAMSUNG",
     image: SAMSUNGA55,
@@ -4652,7 +4650,7 @@ export const ALLPHONES = [
   },
 
   {
-    id: "SAMSUNG15",
+    id: "SAMSUNG22",
     name: "SAMSUNG S23 5G 8/256",
     brand: "SAMSUNG",
     image: SAMSUNGS23,
@@ -4713,7 +4711,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG15",
+    id: "SAMSUNG23",
     name: "SAMSUNG S23 5G 8/128",
     brand: "SAMSUNG",
     image: SAMSUNGS23,
@@ -4774,7 +4772,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG16",
+    id: "SAMSUNG24",
     name: "SAMSUNG S24 5G 8/128",
     brand: "SAMSUNG",
     image: SAMSUNGS245GMARBLEGRAY1,
@@ -4844,7 +4842,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG16",
+    id: "SAMSUNG25",
     name: "SAMSUNG S24 5G 8/256",
     brand: "SAMSUNG",
     image: SAMSUNGS245GMARBLEGRAY1,
@@ -4914,7 +4912,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG16",
+    id: "SAMSUNG26",
     name: "SAMSUNG S24 5G 8/512",
     brand: "SAMSUNG",
     image: SAMSUNGS245GMARBLEGRAY1,
@@ -4984,7 +4982,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG17",
+    id: "SAMSUNG27",
     name: "SAMSUNG s24 plus 12/256",
     brand: "SAMSUNG",
     image: SAMSUNGS24PLUS5GCOBALTVIOLET1,
@@ -5032,7 +5030,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG17",
+    id: "SAMSUNG28",
     name: "SAMSUNG s24 plus 12/512",
     brand: "SAMSUNG",
     image: SAMSUNGS24PLUS5GCOBALTVIOLET1,
@@ -5080,7 +5078,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG18",
+    id: "SAMSUNG29",
     name: "SAMSUNG S24 Ultra 5G 12/256",
     brand: "SAMSUNG",
     image: SAMSUNGS24ULTRA5GTITANIUMGRAY1,
@@ -5149,7 +5147,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG18",
+    id: "SAMSUNG30",
     name: "SAMSUNG S24 Ultra 5G 12/512",
     brand: "SAMSUNG",
     image: SAMSUNGS24ULTRA5GTITANIUMGRAY1,
@@ -5218,7 +5216,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG19",
+    id: "SAMSUNG31",
     name: "SAMSUNG S24 FE 5G 8/128",
     brand: "SAMSUNG",
     image: SAMSUNGS24FE5GBLUE1,
@@ -5279,7 +5277,7 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "SAMSUNG19",
+    id: "SAMSUNG32",
     name: "SAMSUNG S24 FE 5G 8/256",
     brand: "SAMSUNG",
     image: SAMSUNGS24FE5GBLUE1,

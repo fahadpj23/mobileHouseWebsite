@@ -107,7 +107,7 @@ const SingleItem = () => {
             <div className="flex flex-col">
               {product?.colors && (
                 <div>
-                  <div className="flex space-x-5 ml-6 mt-6 ">
+                  <div className="flex space-x-6 ml-6 mt-6 ">
                     {product?.colors?.map((color: any) => {
                       return (
                         <button
