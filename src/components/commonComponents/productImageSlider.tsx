@@ -4,9 +4,9 @@ import { FC } from "react";
 
 const ProductImageSlider: FC<any> = ({ productImages }) => {
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="w-[70vw] flex items-center justify-center">
       {productImages?.images?.length ? (
-        <div className="w-[70vw] h-full">
+        <div className="w-full h-full">
           <Carousel
             autoPlay={true}
             showThumbs={false}
@@ -14,13 +14,14 @@ const ProductImageSlider: FC<any> = ({ productImages }) => {
             infiniteLoop={true}
             showStatus={false}
             showArrows={false}
+            selectedItem={0}
           >
             {productImages?.images?.map((image: any) => (
               <img
                 src={image}
                 alt="product image"
                 key={image}
-                className="pb-8"
+                className="pb-8 max-h-[80vw] w-full object-contain"
               />
             ))}
           </Carousel>

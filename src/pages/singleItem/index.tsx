@@ -48,7 +48,7 @@ const SingleItem = () => {
           <div className="flex justify-center w-full md:w-1/2 ">
             <div className=" flex flex-col justify-center items-center ">
               <div className=" p-3 w-screen mb-3 flex justify-center">
-                {isMobile ? (
+                {isMobile && productImages?.images?.length ? (
                   <ProductImageSlider productImages={productImages} />
                 ) : (
                   <div className="w-[50vw] h-[85vw] md:w-[26vw] md:h-[25vw] flex justify-center items-center  ">
