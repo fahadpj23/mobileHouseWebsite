@@ -342,6 +342,24 @@ import Y28GLITTERAQUA3 from "assets/vivo/VIVOY28/Y28GLITTERAQUA/Y28GLITTERAQUA3.
 import Y28GLITTERAQUA4 from "assets/vivo/VIVOY28/Y28GLITTERAQUA/Y28GLITTERAQUA4.jpeg";
 
 //samsung
+import SAMSUNGA165GGOLD1 from "assets/samsung/SASMSUNGA165G/SAMSUNGA165GGOLD/SAMSUNGA165GGOLD1.jpeg";
+import SAMSUNGA165GGOLD2 from "assets/samsung/SASMSUNGA165G/SAMSUNGA165GGOLD/SAMSUNGA165GGOLD2.jpeg";
+import SAMSUNGA165GGOLD3 from "assets/samsung/SASMSUNGA165G/SAMSUNGA165GGOLD/SAMSUNGA165GGOLD3.jpeg";
+import SAMSUNGA165GGOLD4 from "assets/samsung/SASMSUNGA165G/SAMSUNGA165GGOLD/SAMSUNGA165GGOLD4.jpeg";
+import SAMSUNGA165GGOLD5 from "assets/samsung/SASMSUNGA165G/SAMSUNGA165GGOLD/SAMSUNGA165GGOLD5.jpeg";
+import SAMSUNGA165GGOLD6 from "assets/samsung/SASMSUNGA165G/SAMSUNGA165GGOLD/SAMSUNGA165GGOLD6.jpeg";
+
+import SASMSUNGA165GBLUEBLACK1 from "assets/samsung/SASMSUNGA165G/SASMSUNGA165GBLUEBLACK/SASMSUNGA165GBLUEBLACK1.jpeg";
+import SASMSUNGA165GBLUEBLACK2 from "assets/samsung/SASMSUNGA165G/SASMSUNGA165GBLUEBLACK/SASMSUNGA165GBLUEBLACK2.jpeg";
+import SASMSUNGA165GBLUEBLACK3 from "assets/samsung/SASMSUNGA165G/SASMSUNGA165GBLUEBLACK/SASMSUNGA165GBLUEBLACK3.jpeg";
+import SASMSUNGA165GBLUEBLACK4 from "assets/samsung/SASMSUNGA165G/SASMSUNGA165GBLUEBLACK/SASMSUNGA165GBLUEBLACK4.jpeg";
+import SASMSUNGA165GBLUEBLACK5 from "assets/samsung/SASMSUNGA165G/SASMSUNGA165GBLUEBLACK/SASMSUNGA165GBLUEBLACK5.jpeg";
+
+import SASMSUNGA165GLIGHTGREEN1 from "assets/samsung/SASMSUNGA165G/SASMSUNGA165GLIGHTGREEN/SASMSUNGA165GLIGHTGREEN1.jpeg";
+import SASMSUNGA165GLIGHTGREEN2 from "assets/samsung/SASMSUNGA165G/SASMSUNGA165GLIGHTGREEN/SASMSUNGA165GLIGHTGREEN2.jpeg";
+import SASMSUNGA165GLIGHTGREEN3 from "assets/samsung/SASMSUNGA165G/SASMSUNGA165GLIGHTGREEN/SASMSUNGA165GLIGHTGREEN3.jpeg";
+import SASMSUNGA165GLIGHTGREEN4 from "assets/samsung/SASMSUNGA165G/SASMSUNGA165GLIGHTGREEN/SASMSUNGA165GLIGHTGREEN4.jpeg";
+import SASMSUNGA165GLIGHTGREEN5 from "assets/samsung/SASMSUNGA165G/SASMSUNGA165GLIGHTGREEN/SASMSUNGA165GLIGHTGREEN5.jpeg";
 
 import A05SBLACK1 from "assets/samsung/A05S/A05SBLACK/A05SBLACK1.jpeg";
 import A05SBLACK2 from "assets/samsung/A05S/A05SBLACK/A05SBLACK2.jpeg";
@@ -2416,6 +2434,126 @@ export const ALLPHONES = [
       },
     ],
   },
+  {
+    id: "MI8",
+    name: "MI Note 13 Pro Plus 5G 12/256",
+    brand: "MI",
+    image: REDMINOTE13PROPLUS5GFUSIONBLACK1,
+    launchDate: "21-09-2023",
+    salesPrice: 29999,
+    specialOffer: true,
+    trendingPhone: true,
+    rating: 5,
+    newArrival: true,
+    mrp: 35999,
+    specifications: {
+      Processor: "MediaTek Dimensity 7200 Ultra Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
+      "Rear Camera": "200+8+2 MP",
+      "Front Camera": "16 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5000 mAh | 120W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13 ",
+    },
+    colors: [
+      {
+        id: 1,
+        name: "Fusion Black",
+        images: [
+          REDMINOTE13PROPLUS5GFUSIONBLACK1,
+          REDMINOTE13PROPLUS5GFUSIONBLACK2,
+          REDMINOTE13PROPLUS5GFUSIONBLACK3,
+          REDMINOTE13PROPLUS5GFUSIONBLACK4,
+          REDMINOTE13PROPLUS5GFUSIONBLACK5,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "Fusion Purple",
+        images: [
+          REDMINOTE13PROPLUS5GFUSIONPURPLE1,
+          REDMINOTE13PROPLUS5GFUSIONPURPLE2,
+          REDMINOTE13PROPLUS5GFUSIONPURPLE3,
+          REDMINOTE13PROPLUS5GFUSIONPURPLE4,
+          REDMINOTE13PROPLUS5GFUSIONPURPLE5,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "Fusion White",
+        images: [
+          REDMINOTE13PROPLUS5GFUSIONWHITE1,
+          REDMINOTE13PROPLUS5GFUSIONWHITE2,
+          REDMINOTE13PROPLUS5GFUSIONWHITE3,
+          REDMINOTE13PROPLUS5GFUSIONWHITE4,
+          REDMINOTE13PROPLUS5GFUSIONWHITE5,
+        ],
+      },
+    ],
+  },
+  {
+    id: "MI8",
+    name: "MI Note 13 Pro Plus 5G 12/512",
+    brand: "MI",
+    image: REDMINOTE13PROPLUS5GFUSIONBLACK1,
+    launchDate: "21-09-2023",
+    salesPrice: 31999,
+    specialOffer: true,
+    trendingPhone: true,
+    rating: 5,
+    newArrival: true,
+    mrp: 37999,
+    specifications: {
+      Processor: "MediaTek Dimensity 7200 Ultra Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
+      "Rear Camera": "200+8+2 MP",
+      "Front Camera": "16 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5000 mAh | 120W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13 ",
+    },
+    colors: [
+      {
+        id: 1,
+        name: "Fusion Black",
+        images: [
+          REDMINOTE13PROPLUS5GFUSIONBLACK1,
+          REDMINOTE13PROPLUS5GFUSIONBLACK2,
+          REDMINOTE13PROPLUS5GFUSIONBLACK3,
+          REDMINOTE13PROPLUS5GFUSIONBLACK4,
+          REDMINOTE13PROPLUS5GFUSIONBLACK5,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "Fusion Purple",
+        images: [
+          REDMINOTE13PROPLUS5GFUSIONPURPLE1,
+          REDMINOTE13PROPLUS5GFUSIONPURPLE2,
+          REDMINOTE13PROPLUS5GFUSIONPURPLE3,
+          REDMINOTE13PROPLUS5GFUSIONPURPLE4,
+          REDMINOTE13PROPLUS5GFUSIONPURPLE5,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "Fusion White",
+        images: [
+          REDMINOTE13PROPLUS5GFUSIONWHITE1,
+          REDMINOTE13PROPLUS5GFUSIONWHITE2,
+          REDMINOTE13PROPLUS5GFUSIONWHITE3,
+          REDMINOTE13PROPLUS5GFUSIONWHITE4,
+          REDMINOTE13PROPLUS5GFUSIONWHITE5,
+        ],
+      },
+    ],
+  },
 
   // OPPO PHONES
   {
@@ -3322,6 +3460,189 @@ export const ALLPHONES = [
   },
 
   //SAMSUNG PHONES
+  {
+    id: "SAMSUNG1",
+    name: "SAMSUNG A16 5G 6/128",
+    brand: "SAMSUNG",
+    image: SAMSUNGA165GGOLD1,
+    launchDate: "07-10-2024",
+    salesPrice: 17499,
+    specialOffer: true,
+    trendingPhone: true,
+    rating: 5,
+    newArrival: true,
+    mrp: 19999,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.7″ (17.02 cm) 90Hz Super AMOLED ",
+      "Rear Camera": "50+5+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
+    colors: [
+      {
+        id: 1,
+        name: "Blue Black",
+        images: [
+          SASMSUNGA165GBLUEBLACK1,
+          SASMSUNGA165GBLUEBLACK2,
+          SASMSUNGA165GBLUEBLACK3,
+          SASMSUNGA165GBLUEBLACK4,
+          SASMSUNGA165GBLUEBLACK5,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "Light Green",
+        images: [
+          SASMSUNGA165GLIGHTGREEN1,
+          SASMSUNGA165GLIGHTGREEN2,
+          SASMSUNGA165GLIGHTGREEN3,
+          SASMSUNGA165GLIGHTGREEN4,
+          SASMSUNGA165GLIGHTGREEN5,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "gold",
+        images: [
+          SAMSUNGA165GGOLD1,
+          SAMSUNGA165GGOLD2,
+          SAMSUNGA165GGOLD3,
+          SAMSUNGA165GGOLD4,
+          SAMSUNGA165GGOLD5,
+          SAMSUNGA165GGOLD6,
+        ],
+      },
+    ],
+  },
+  {
+    id: "SAMSUNG1",
+    name: "SAMSUNG A16 5G 8/128",
+    brand: "SAMSUNG",
+    image: SAMSUNGA165GGOLD1,
+    launchDate: "07-10-2024",
+    salesPrice: 18999,
+    specialOffer: true,
+    trendingPhone: true,
+    rating: 5,
+    newArrival: true,
+    mrp: 21499,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.7″ (17.02 cm) 90Hz Super AMOLED ",
+      "Rear Camera": "50+5+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
+    colors: [
+      {
+        id: 1,
+        name: "Blue Black",
+        images: [
+          SASMSUNGA165GBLUEBLACK1,
+          SASMSUNGA165GBLUEBLACK2,
+          SASMSUNGA165GBLUEBLACK3,
+          SASMSUNGA165GBLUEBLACK4,
+          SASMSUNGA165GBLUEBLACK5,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "Light Green",
+        images: [
+          SASMSUNGA165GLIGHTGREEN1,
+          SASMSUNGA165GLIGHTGREEN2,
+          SASMSUNGA165GLIGHTGREEN3,
+          SASMSUNGA165GLIGHTGREEN4,
+          SASMSUNGA165GLIGHTGREEN5,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "gold",
+        images: [
+          SAMSUNGA165GGOLD1,
+          SAMSUNGA165GGOLD2,
+          SAMSUNGA165GGOLD3,
+          SAMSUNGA165GGOLD4,
+          SAMSUNGA165GGOLD5,
+          SAMSUNGA165GGOLD6,
+        ],
+      },
+    ],
+  },
+  {
+    id: "SAMSUNG1",
+    name: "SAMSUNG A16 5G 8/256",
+    brand: "SAMSUNG",
+    image: SAMSUNGA165GGOLD1,
+    launchDate: "07-10-2024",
+    salesPrice: 21999,
+    specialOffer: true,
+    trendingPhone: true,
+    rating: 5,
+    newArrival: true,
+    mrp: 24499,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.7″ (17.02 cm) 90Hz Super AMOLED ",
+      "Rear Camera": "50+5+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
+    colors: [
+      {
+        id: 1,
+        name: "Blue Black",
+        images: [
+          SASMSUNGA165GBLUEBLACK1,
+          SASMSUNGA165GBLUEBLACK2,
+          SASMSUNGA165GBLUEBLACK3,
+          SASMSUNGA165GBLUEBLACK4,
+          SASMSUNGA165GBLUEBLACK5,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "Light Green",
+        images: [
+          SASMSUNGA165GLIGHTGREEN1,
+          SASMSUNGA165GLIGHTGREEN2,
+          SASMSUNGA165GLIGHTGREEN3,
+          SASMSUNGA165GLIGHTGREEN4,
+          SASMSUNGA165GLIGHTGREEN5,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "gold",
+        images: [
+          SAMSUNGA165GGOLD1,
+          SAMSUNGA165GGOLD2,
+          SAMSUNGA165GGOLD3,
+          SAMSUNGA165GGOLD4,
+          SAMSUNGA165GGOLD5,
+          SAMSUNGA165GGOLD6,
+        ],
+      },
+    ],
+  },
   {
     id: "SAMSUNG1",
     name: "SAMSUNG F15 5G 4/128",
