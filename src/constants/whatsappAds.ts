@@ -16,23 +16,19 @@ export const WhatappAdsList = [
     image: whatsAppImage2,
     name: "realme12+",
   },
+
   {
     id: 3,
-    image: whatsAppImage3,
-    name: "realmec65",
-  },
-  {
-    id: 4,
     image: whatsAppImage4,
     name: "oppoa3x",
   },
   {
-    id: 5,
+    id: 4,
     image: whatsAppImage5,
     name: "y300plus",
   },
   {
-    id: 6,
+    id: 5,
     image: whatsAppImage6,
     name: "vivov40e",
   },

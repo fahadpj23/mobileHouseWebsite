@@ -46,9 +46,7 @@ const DesktopSearch = () => {
               >
                 <div>
                   <img
-                    src={
-                      phone?.colors ? phone?.colors[0]?.images[0] : phone?.image
-                    }
+                    src={phone?.image ?? phone?.colors[0]?.images[0]}
                     alt="phone Image"
                     className=" w-10 h-10"
                   />
