@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import { WhatappAdsList } from "constants/whatsappAds";
+import { Link } from "react-router-dom";
 
 const WhatsappAds = () => {
   const responsive = {
@@ -27,13 +28,13 @@ const WhatsappAds = () => {
     <div className="p-2">
       <Carousel responsive={responsive} infinite={true} arrows={false}>
         {WhatappAdsList.map((item) => (
-          <div key={item?.id} style={{ margin: "0px 8px" }}>
+          <Link to={item?.name} key={item?.id} style={{ margin: "0px 8px" }}>
             <img
               src={item?.image}
               alt="phone Image"
               className="w-full h-[60vw] md:h-[25vw]   object-fill"
             />
-          </div>
+          </Link>
         ))}
       </Carousel>
     </div>
