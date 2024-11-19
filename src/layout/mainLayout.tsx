@@ -8,7 +8,6 @@ import { useState } from "react";
 import SearchBar from "./searchBar";
 import { useScreenSize } from "hooks/useScreenSize";
 import DesktopSearch from "./desktopSearch";
-import { RiWhatsappFill } from "react-icons/ri";
 
 const MainLayout = ({ children }: any) => {
   const navigate = useNavigate();
@@ -39,8 +38,6 @@ const MainLayout = ({ children }: any) => {
 
         {/* <SocialMedia /> */}
       </div>
-
-      {/* <RiWhatsappFill className="fixed bottom-10 right-10 text-green-600 z-50 text-[40px] animate-bounce shadow-2xl z-50" /> */}
 
       <main>{children}</main>
     </div>

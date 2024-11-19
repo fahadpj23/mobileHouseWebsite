@@ -1,18 +1,20 @@
 import { Divider } from "@mui/material";
 import { getSpecificationIcon } from "utils/getSpecificationIcon";
-import { useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getProductDetails } from "utils/getProductDetails";
 import { getDiscountPercentage } from "utils/getDiscountPercentage";
 import { RiWhatsappFill } from "react-icons/ri";
 import { useScreenSize } from "hooks/useScreenSize";
 import ProductImageSlider from "components/commonComponents/productImageSlider";
+import { getPhoneVariants } from "utils/getPhoneVariants";
 
 const SingleItem = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState<any>("");
   const [productImages, setProductImages] = useState<any>();
   const [displayImage, setDisplayImage] = useState<any>();
+  const [phoneVariants, setPhoneVariants] = useState<any>([]);
   const { isMobile } = useScreenSize();
 
   useEffect(() => {
@@ -26,6 +28,10 @@ const SingleItem = () => {
         product?.colors ? product?.colors[0]?.images[0] : product?.image
       );
     }
+  }, [product]);
+
+  useEffect(() => {
+    product?.series && setPhoneVariants(getPhoneVariants(product?.series));
   }, [product]);
 
   const handleColor = (color: any) => {
@@ -122,7 +128,7 @@ const SingleItem = () => {
                               alt="phone image"
                             />
                           </div>
-                          <h1 className="text-[13px] font-semibold">
+                          <h1 className="text-[13px] font-semibold capitalize">
                             {color?.name}
                           </h1>
                         </button>
@@ -131,6 +137,23 @@ const SingleItem = () => {
                   </div>
                 </div>
               )}
+              <div className="grid grid-cols-3 md:grid-cols-5 gap-4 py-3 ml-6 mt-5 text-center">
+                {phoneVariants?.map((variant: any) => (
+                  <Link
+                    key={variant?.id}
+                    to={`/phone/${variant?.id}/${encodeURIComponent(
+                      variant?.name
+                    )}`}
+                    className={`p-1 border ${
+                      product?.id === variant?.id
+                        ? "border-2 border-blue-500"
+                        : "border border-gray-400"
+                    } text-[12px] rounded-xs`}
+                  >
+                    {variant?.specifications?.["RAM | Storage"]}
+                  </Link>
+                ))}
+              </div>
               {product?.specifications && (
                 <div className=" pb-3">
                   <div className="space-y-3 py-3">
