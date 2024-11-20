@@ -96,7 +96,7 @@ const ProductList: FC<any> = ({ products }) => {
               <FormControl size="small">
                 <Select
                   id="sort-select"
-                  sx={{ fontSize: { sm: "11px", ms: "13px" } }}
+                  sx={{ fontSize: "11px" }}
                   value={sort}
                   onChange={(e) => handleSort(e.target?.value)}
                 >
