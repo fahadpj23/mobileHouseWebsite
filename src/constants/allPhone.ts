@@ -472,12 +472,12 @@ import SAMSUNGF15GROOVYVIOLET3 from "assets/samsung/SAMSUNGF15/SAMSUNGF15GROOVYV
 import SAMSUNGF15GROOVYVIOLET4 from "assets/samsung/SAMSUNGF15/SAMSUNGF15GROOVYVIOLET/SAMSUNGF15GROOVYVIOLET4.jpg";
 import SAMSUNGF15GROOVYVIOLET5 from "assets/samsung/SAMSUNGF15/SAMSUNGF15GROOVYVIOLET/SAMSUNGF15GROOVYVIOLET5.jpg";
 import SAMSUNGF15GROOVYVIOLET6 from "assets/samsung/SAMSUNGF15/SAMSUNGF15GROOVYVIOLET/SAMSUNGF15GROOVYVIOLET6.jpg";
-import SAMSUNGF15JAZZYGREEN1 from "assets/samsung/SAMSUNGF15/SAMSUNGF15GROOVYVIOLET/SAMSUNGF15GROOVYVIOLET1.jpg";
-import SAMSUNGF15JAZZYGREEN2 from "assets/samsung/SAMSUNGF15/SAMSUNGF15GROOVYVIOLET/SAMSUNGF15GROOVYVIOLET2.jpg";
-import SAMSUNGF15JAZZYGREEN3 from "assets/samsung/SAMSUNGF15/SAMSUNGF15GROOVYVIOLET/SAMSUNGF15GROOVYVIOLET3.jpg";
-import SAMSUNGF15JAZZYGREEN4 from "assets/samsung/SAMSUNGF15/SAMSUNGF15GROOVYVIOLET/SAMSUNGF15GROOVYVIOLET4.jpg";
-import SAMSUNGF15JAZZYGREEN5 from "assets/samsung/SAMSUNGF15/SAMSUNGF15GROOVYVIOLET/SAMSUNGF15GROOVYVIOLET5.jpg";
-import SAMSUNGF15JAZZYGREEN6 from "assets/samsung/SAMSUNGF15/SAMSUNGF15GROOVYVIOLET/SAMSUNGF15GROOVYVIOLET6.jpg";
+import SAMSUNGF15JAZZYGREEN1 from "assets/samsung/SAMSUNGF15/SAMSUNGF15JAZZYGREEN/SAMSUNGF15JAZZYGREEN1.jpg";
+import SAMSUNGF15JAZZYGREEN2 from "assets/samsung/SAMSUNGF15/SAMSUNGF15JAZZYGREEN/SAMSUNGF15JAZZYGREEN2.jpg";
+import SAMSUNGF15JAZZYGREEN3 from "assets/samsung/SAMSUNGF15/SAMSUNGF15JAZZYGREEN/SAMSUNGF15JAZZYGREEN3.jpg";
+import SAMSUNGF15JAZZYGREEN4 from "assets/samsung/SAMSUNGF15/SAMSUNGF15JAZZYGREEN/SAMSUNGF15JAZZYGREEN4.jpg";
+import SAMSUNGF15JAZZYGREEN5 from "assets/samsung/SAMSUNGF15/SAMSUNGF15JAZZYGREEN/SAMSUNGF15JAZZYGREEN5.jpg";
+import SAMSUNGF15JAZZYGREEN6 from "assets/samsung/SAMSUNGF15/SAMSUNGF15JAZZYGREEN/SAMSUNGF15JAZZYGREEN6.jpg";
 
 import SAMSUNGM14ARCTICBLUE1 from "assets/samsung/SAMSUNGM14/SAMSUNGM14ARCTICBLUE/SAMSUNGM14ARCTICBLUE1.jpg";
 import SAMSUNGM14ARCTICBLUE2 from "assets/samsung/SAMSUNGM14/SAMSUNGM14ARCTICBLUE/SAMSUNGM14ARCTICBLUE2.jpg";
@@ -745,7 +745,7 @@ export const ALLPHONES = [
     salesPrice: 36999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.5,
     newArrival: true,
     mrp: 42999,
     colors: [
@@ -807,7 +807,7 @@ export const ALLPHONES = [
     salesPrice: 34999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.5,
     newArrival: true,
     mrp: 39999,
     colors: [
@@ -869,7 +869,7 @@ export const ALLPHONES = [
     salesPrice: 28999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.4,
     newArrival: true,
     mrp: 33999,
     colors: [
@@ -918,7 +918,7 @@ export const ALLPHONES = [
     salesPrice: 30999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.4,
     newArrival: true,
     mrp: 35999,
     colors: [
@@ -966,7 +966,7 @@ export const ALLPHONES = [
     salesPrice: 20999,
     specialOffer: false,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: false,
     mrp: 25999,
     colors: [
@@ -1016,7 +1016,7 @@ export const ALLPHONES = [
     salesPrice: 18499,
     specialOffer: false,
     trendingPhone: false,
-    rating: 5,
+    rating: 4.4,
     newArrival: false,
     mrp: 23999,
     colors: [
@@ -1064,7 +1064,7 @@ export const ALLPHONES = [
     salesPrice: 23999,
     specialOffer: false,
     trendingPhone: false,
-    rating: 5,
+    rating: 4.7,
     newArrival: true,
     mrp: 29999,
     colors: [
@@ -1114,7 +1114,7 @@ export const ALLPHONES = [
     salesPrice: 16499,
     specialOffer: false,
     trendingPhone: false,
-    rating: 5,
+    rating: 4.3,
     newArrival: false,
     mrp: 21999,
     colors: [
@@ -1163,7 +1163,7 @@ export const ALLPHONES = [
     salesPrice: 14999,
     specialOffer: false,
     trendingPhone: false,
-    rating: 5,
+    rating: 4.3,
     newArrival: false,
     mrp: 19999,
     colors: [
@@ -1212,7 +1212,7 @@ export const ALLPHONES = [
     salesPrice: 13499,
     specialOffer: false,
     trendingPhone: false,
-    rating: 5,
+    rating: 4.3,
     newArrival: false,
     mrp: 17999,
     colors: [
@@ -1260,7 +1260,7 @@ export const ALLPHONES = [
     salesPrice: 14999,
     specialOffer: false,
     trendingPhone: false,
-    rating: 5,
+    rating: 4.3,
     newArrival: false,
     mrp: 19999,
     colors: [
@@ -1308,7 +1308,7 @@ export const ALLPHONES = [
     salesPrice: 10999,
     specialOffer: false,
     trendingPhone: false,
-    rating: 5,
+    rating: 4,
     newArrival: false,
     mrp: 14999,
     colors: [
@@ -1356,7 +1356,7 @@ export const ALLPHONES = [
     salesPrice: 11999,
     specialOffer: false,
     trendingPhone: false,
-    rating: 5,
+    rating: 4,
     newArrival: false,
     mrp: 15999,
     colors: [
@@ -1404,7 +1404,7 @@ export const ALLPHONES = [
     salesPrice: 7999,
     specialOffer: false,
     trendingPhone: false,
-    rating: 5,
+    rating: 4.1,
     newArrival: false,
     mrp: 11999,
     colors: [
@@ -1441,7 +1441,7 @@ export const ALLPHONES = [
     salesPrice: 10499,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 13999,
     colors: [
@@ -1488,7 +1488,7 @@ export const ALLPHONES = [
     salesPrice: 17999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.1,
     newArrival: true,
     mrp: 24999,
     colors: [
@@ -1534,7 +1534,7 @@ export const ALLPHONES = [
     salesPrice: 22999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 27999,
     colors: [
@@ -1581,7 +1581,7 @@ export const ALLPHONES = [
     salesPrice: 39999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.6,
     newArrival: true,
     mrp: 47999,
     colors: [
@@ -1628,7 +1628,7 @@ export const ALLPHONES = [
     salesPrice: 36999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 3.8,
     newArrival: true,
     mrp: 51999,
     colors: [
@@ -1673,7 +1673,7 @@ export const ALLPHONES = [
     salesPrice: 44999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.3,
     newArrival: true,
     mrp: 61999,
     colors: [
@@ -1719,7 +1719,7 @@ export const ALLPHONES = [
     salesPrice: 12999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 15999,
     colors: [
@@ -1776,7 +1776,7 @@ export const ALLPHONES = [
     salesPrice: 21999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.3,
     newArrival: true,
     mrp: 24999,
     colors: [
@@ -1823,9 +1823,9 @@ export const ALLPHONES = [
     salesPrice: 10499,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.3,
     newArrival: true,
-    mrp: 24999,
+    mrp: 11999,
     colors: [
       {
         id: 1,
@@ -1873,7 +1873,7 @@ export const ALLPHONES = [
     salesPrice: 10499,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 13999,
     colors: [
@@ -1935,7 +1935,7 @@ export const ALLPHONES = [
     salesPrice: 11999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 15999,
     colors: [
@@ -1998,7 +1998,7 @@ export const ALLPHONES = [
     salesPrice: 13999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 3,
+    rating: 4.2,
     newArrival: true,
     mrp: 22999,
     colors: [
@@ -2061,7 +2061,7 @@ export const ALLPHONES = [
     salesPrice: 16999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 20999,
     colors: [
@@ -2133,7 +2133,7 @@ export const ALLPHONES = [
     salesPrice: 18999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 24999,
     colors: [
@@ -2205,7 +2205,7 @@ export const ALLPHONES = [
     salesPrice: 18999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 22999,
     colors: [
@@ -2278,7 +2278,7 @@ export const ALLPHONES = [
     salesPrice: 12999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 17999,
     specifications: {
@@ -2339,7 +2339,7 @@ export const ALLPHONES = [
     salesPrice: 14499,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 19999,
     specifications: {
@@ -2401,7 +2401,7 @@ export const ALLPHONES = [
     salesPrice: 27999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.3,
     newArrival: true,
     mrp: 33999,
     specifications: {
@@ -2462,7 +2462,7 @@ export const ALLPHONES = [
     salesPrice: 29999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.3,
     newArrival: true,
     mrp: 35999,
     specifications: {
@@ -2523,7 +2523,7 @@ export const ALLPHONES = [
     salesPrice: 31999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.3,
     newArrival: true,
     mrp: 37999,
     specifications: {
@@ -2575,7 +2575,7 @@ export const ALLPHONES = [
     ],
   },
 
-  // OPPO PHONES
+  //OPPO PHONES
   {
     id: "OPPO1",
     name: "OPPO A57 4G 4/64 ",
@@ -2585,7 +2585,7 @@ export const ALLPHONES = [
     salesPrice: 10999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.0,
     newArrival: true,
     mrp: 16990,
     colors: [
@@ -2627,7 +2627,7 @@ export const ALLPHONES = [
     salesPrice: 8499,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 3.5,
     newArrival: true,
     mrp: 12999,
     colors: [
@@ -2675,7 +2675,7 @@ export const ALLPHONES = [
     salesPrice: 15999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 19999,
     colors: [
@@ -2724,7 +2724,7 @@ export const ALLPHONES = [
     salesPrice: 15999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.5,
     newArrival: true,
     mrp: 18999,
     colors: [
@@ -2772,7 +2772,7 @@ export const ALLPHONES = [
     salesPrice: 12999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.5,
     newArrival: true,
     mrp: 16999,
     colors: [
@@ -2821,7 +2821,7 @@ export const ALLPHONES = [
     salesPrice: 36999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.4,
     newArrival: true,
     mrp: 53999,
     colors: [
@@ -2870,7 +2870,7 @@ export const ALLPHONES = [
     salesPrice: 40999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.4,
     newArrival: true,
     mrp: 55999,
     colors: [
@@ -2917,7 +2917,7 @@ export const ALLPHONES = [
     salesPrice: 32999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.4,
     newArrival: true,
     mrp: 43999,
     colors: [
@@ -2968,7 +2968,7 @@ export const ALLPHONES = [
     salesPrice: 29999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.3,
     newArrival: true,
     mrp: 34999,
     colors: [
@@ -3016,7 +3016,7 @@ export const ALLPHONES = [
     salesPrice: 27999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.3,
     newArrival: true,
     mrp: 32999,
     colors: [
@@ -3065,7 +3065,7 @@ export const ALLPHONES = [
     salesPrice: 24999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 28999,
     colors: [
@@ -3113,7 +3113,7 @@ export const ALLPHONES = [
     salesPrice: 20999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 26999,
     colors: [
@@ -3162,7 +3162,7 @@ export const ALLPHONES = [
     salesPrice: 19999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.3,
     newArrival: true,
     mrp: 22999,
     colors: [
@@ -3222,7 +3222,7 @@ export const ALLPHONES = [
     salesPrice: 17999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.3,
     newArrival: true,
     mrp: 20999,
     colors: [
@@ -3282,7 +3282,7 @@ export const ALLPHONES = [
     salesPrice: 13499,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.1,
     newArrival: true,
     mrp: 15999,
     colors: [
@@ -3331,7 +3331,7 @@ export const ALLPHONES = [
     salesPrice: 12499,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.1,
     newArrival: true,
     mrp: 14999,
     colors: [
@@ -3380,7 +3380,7 @@ export const ALLPHONES = [
     salesPrice: 7700,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.3,
     newArrival: true,
     mrp: 10999,
     specifications: {
@@ -3404,7 +3404,7 @@ export const ALLPHONES = [
     salesPrice: 19999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.3,
     newArrival: true,
     mrp: 22999,
     specifications: {
@@ -3428,7 +3428,7 @@ export const ALLPHONES = [
     salesPrice: 17999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.3,
     newArrival: true,
     mrp: 20999,
     specifications: {
@@ -3454,7 +3454,7 @@ export const ALLPHONES = [
     salesPrice: 17499,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.7,
     newArrival: true,
     mrp: 19999,
     specifications: {
@@ -3516,7 +3516,7 @@ export const ALLPHONES = [
     salesPrice: 18999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.7,
     newArrival: true,
     mrp: 21499,
     specifications: {
@@ -3577,7 +3577,7 @@ export const ALLPHONES = [
     salesPrice: 21999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.7,
     newArrival: true,
     mrp: 24499,
     specifications: {
@@ -3638,7 +3638,7 @@ export const ALLPHONES = [
     salesPrice: 12999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 15999,
     colors: [
@@ -3702,7 +3702,7 @@ export const ALLPHONES = [
     salesPrice: 14499,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 16999,
     colors: [
@@ -3765,7 +3765,7 @@ export const ALLPHONES = [
     salesPrice: 15999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 17999,
     colors: [
@@ -3828,7 +3828,7 @@ export const ALLPHONES = [
     salesPrice: 16999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.1,
     newArrival: true,
     mrp: 10999,
     colors: [
@@ -3891,7 +3891,7 @@ export const ALLPHONES = [
     salesPrice: 14999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.1,
     newArrival: true,
     mrp: 19999,
     colors: [
@@ -3954,7 +3954,7 @@ export const ALLPHONES = [
     salesPrice: 19999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.1,
     newArrival: true,
     mrp: 24499,
     colors: [
@@ -4017,7 +4017,7 @@ export const ALLPHONES = [
     salesPrice: 8999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.1,
     newArrival: true,
     mrp: 17999,
     colors: [
@@ -4067,7 +4067,7 @@ export const ALLPHONES = [
     salesPrice: 12999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4,
     newArrival: true,
     mrp: 15499,
     colors: [
@@ -4129,9 +4129,9 @@ export const ALLPHONES = [
     salesPrice: 10999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4,
     newArrival: true,
-    mrp: 10499,
+    mrp: 12999,
     colors: [
       {
         id: 1,
@@ -4188,7 +4188,7 @@ export const ALLPHONES = [
     salesPrice: 8999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 11999,
 
@@ -4213,7 +4213,7 @@ export const ALLPHONES = [
     salesPrice: 11499,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 15999,
     colors: [
@@ -4254,7 +4254,7 @@ export const ALLPHONES = [
     salesPrice: 9999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 3.9,
     newArrival: true,
     mrp: 11499,
     colors: [
@@ -4316,7 +4316,7 @@ export const ALLPHONES = [
     salesPrice: 12999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 3.8,
     newArrival: true,
     mrp: 15999,
     colors: [
@@ -4379,7 +4379,7 @@ export const ALLPHONES = [
     salesPrice: 33999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 36999,
     colors: [
@@ -4441,7 +4441,7 @@ export const ALLPHONES = [
     salesPrice: 33999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 36999,
     colors: [
@@ -4504,7 +4504,7 @@ export const ALLPHONES = [
     salesPrice: 45999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 48999,
     specifications: {
@@ -4555,7 +4555,7 @@ export const ALLPHONES = [
     salesPrice: 33999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 42999,
     colors: [
@@ -4606,7 +4606,7 @@ export const ALLPHONES = [
     salesPrice: 42999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.2,
     newArrival: true,
     mrp: 45999,
     colors: [
@@ -4657,7 +4657,7 @@ export const ALLPHONES = [
     salesPrice: 52999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.5,
     newArrival: true,
     mrp: 95999,
     colors: [
@@ -4719,7 +4719,7 @@ export const ALLPHONES = [
     salesPrice: 41999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.5,
     newArrival: true,
     mrp: 89999,
     colors: [
@@ -4852,23 +4852,12 @@ export const ALLPHONES = [
     salesPrice: 67999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.5,
     newArrival: true,
     mrp: 79999,
     colors: [
       {
         id: 1,
-        name: "Cobal Violet",
-        images: [
-          SAMSUNGS24COBALTVIOLET1,
-          SAMSUNGS24COBALTVIOLET2,
-          SAMSUNGS24COBALTVIOLET3,
-          SAMSUNGS24COBALTVIOLET4,
-          SAMSUNGS24COBALTVIOLET5,
-        ],
-      },
-      {
-        id: 2,
         name: "Gamber Yellow",
         images: [
           SAMSUNGS245GAMBERYELLOW1,
@@ -4876,6 +4865,17 @@ export const ALLPHONES = [
           SAMSUNGS245GAMBERYELLOW3,
           SAMSUNGS245GAMBERYELLOW4,
           SAMSUNGS245GAMBERYELLOW5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Cobal Violet",
+        images: [
+          SAMSUNGS24COBALTVIOLET1,
+          SAMSUNGS24COBALTVIOLET2,
+          SAMSUNGS24COBALTVIOLET3,
+          SAMSUNGS24COBALTVIOLET4,
+          SAMSUNGS24COBALTVIOLET5,
         ],
       },
       {
@@ -4923,34 +4923,12 @@ export const ALLPHONES = [
     salesPrice: 77999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 3.7,
+    rating: 4.5,
     newArrival: true,
     mrp: 89999,
     colors: [
       {
         id: 1,
-        name: "Cobal Violet",
-        images: [
-          SAMSUNGS24COBALTVIOLET1,
-          SAMSUNGS24COBALTVIOLET2,
-          SAMSUNGS24COBALTVIOLET3,
-          SAMSUNGS24COBALTVIOLET4,
-          SAMSUNGS24COBALTVIOLET5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Gamber Yellow",
-        images: [
-          SAMSUNGS245GAMBERYELLOW1,
-          SAMSUNGS245GAMBERYELLOW2,
-          SAMSUNGS245GAMBERYELLOW3,
-          SAMSUNGS245GAMBERYELLOW4,
-          SAMSUNGS245GAMBERYELLOW5,
-        ],
-      },
-      {
-        id: 3,
         name: "Marble Gray",
         images: [
           SAMSUNGS245GMARBLEGRAY1,
@@ -4961,6 +4939,29 @@ export const ALLPHONES = [
           SAMSUNGS245GMARBLEGRAY6,
         ],
       },
+      {
+        id: 2,
+        name: "Cobal Violet",
+        images: [
+          SAMSUNGS24COBALTVIOLET1,
+          SAMSUNGS24COBALTVIOLET2,
+          SAMSUNGS24COBALTVIOLET3,
+          SAMSUNGS24COBALTVIOLET4,
+          SAMSUNGS24COBALTVIOLET5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Gamber Yellow",
+        images: [
+          SAMSUNGS245GAMBERYELLOW1,
+          SAMSUNGS245GAMBERYELLOW2,
+          SAMSUNGS245GAMBERYELLOW3,
+          SAMSUNGS245GAMBERYELLOW4,
+          SAMSUNGS245GAMBERYELLOW5,
+        ],
+      },
+
       {
         id: 4,
         name: "Ony Black",
@@ -4994,7 +4995,7 @@ export const ALLPHONES = [
     salesPrice: 64999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.5,
     newArrival: true,
     mrp: 99999,
     colors: [
@@ -5043,7 +5044,7 @@ export const ALLPHONES = [
     salesPrice: 74999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.5,
     newArrival: true,
     mrp: 119999,
     colors: [
@@ -5092,7 +5093,7 @@ export const ALLPHONES = [
     salesPrice: 117999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.5,
     newArrival: true,
     mrp: 134999,
     colors: [
@@ -5162,7 +5163,7 @@ export const ALLPHONES = [
     salesPrice: 127999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.5,
     newArrival: true,
     mrp: 144999,
     colors: [
@@ -5232,7 +5233,7 @@ export const ALLPHONES = [
     salesPrice: 59999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.5,
     newArrival: true,
     mrp: 64999,
     colors: [
@@ -5294,7 +5295,7 @@ export const ALLPHONES = [
     salesPrice: 65999,
     specialOffer: true,
     trendingPhone: true,
-    rating: 5,
+    rating: 4.5,
     newArrival: false,
     mrp: 79999,
     colors: [

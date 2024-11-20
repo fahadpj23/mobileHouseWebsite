@@ -15,6 +15,7 @@ const SingleItem = () => {
   const [productImages, setProductImages] = useState<any>();
   const [displayImage, setDisplayImage] = useState<any>();
   const [phoneVariants, setPhoneVariants] = useState<any>([]);
+  const [isLoading, setIsLoading] = useState<any>(true);
   const { isMobile } = useScreenSize();
 
   useEffect(() => {
@@ -35,6 +36,7 @@ const SingleItem = () => {
   }, [product]);
 
   const handleColor = (color: any) => {
+    setIsLoading(true);
     setProductImages(color);
     setDisplayImage(color?.images[0]);
   };
@@ -47,14 +49,26 @@ const SingleItem = () => {
     const whatsappURL = `https://wa.me/+91${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 300);
+  }, [isLoading]);
+
   return (
     <div className="block md:flex items-center ">
+      {isLoading && (
+        <div className="flex items-center justify-center min-h-screen fixed top-0 left-0 w-screen z-50 bg-white">
+          <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      )}
       {product && (
         <>
           <div className="flex justify-center w-full md:w-1/2 ">
             <div className=" flex flex-col justify-center items-center ">
               <div className=" p-3 w-screen mb-3 flex justify-center">
-                {isMobile && productImages?.images?.length ? (
+                {isMobile && !isLoading && productImages?.images?.length ? (
                   <ProductImageSlider productImages={productImages} />
                 ) : (
                   <div className="w-[50vw] h-[85vw] md:w-[26vw] md:h-[25vw] flex justify-center items-center  ">
@@ -89,8 +103,9 @@ const SingleItem = () => {
           </div>
           <div className=" w-full md:w-1/2 mt-0 md:mt-20 ">
             <div className="space-y-2 ml-3 md:ml-6">
-              <h1 className="font-semibold truncate w-full text-[15px] md:text-base">
-                {product?.name} {productImages?.name}
+              <h1 className="font-semibold truncate w-full text-[15px] md:text-base flex items-center space-x-1">
+                <span>{product?.name} </span>
+                <span> {productImages?.name}</span>
               </h1>
               <div className="flex items-center space-x-2 text-base">
                 <h1 className="font-semibold   tracking-wide text-[16px]">
@@ -109,6 +124,13 @@ const SingleItem = () => {
               onClick={() => handleWhatapp(product)}
               className="fixed bottom-10 right-10 text-green-600 z-50 text-[40px] animate-bounce shadow-2xl "
             />
+            {/* <div className="flex items-center space-x-2 fixed bottom-10 right-10  z-50 animate-bounce bg-gray-100 p-2">
+              <RiWhatsappFill
+                onClick={() => handleWhatapp(product)}
+                className=" text-green-600 z-50 text-[40px]  shadow-2xl "
+              />
+              <h1 className="text-green-600 ">Whatsapp Now</h1>
+            </div> */}
 
             <div className="flex flex-col">
               {product?.colors && (
@@ -137,9 +159,11 @@ const SingleItem = () => {
                   </div>
                 </div>
               )}
-              <div className="grid grid-cols-3 md:grid-cols-5 gap-4 py-3 ml-6 mt-5 text-center">
+              <div className="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-4 py-3 ml-2 mt-5 text-center">
                 {phoneVariants?.map((variant: any) => (
                   <Link
+                    onClick={() => setIsLoading(true)}
+                    replace
                     key={variant?.id}
                     to={`/phone/${variant?.id}/${encodeURIComponent(
                       variant?.name

@@ -26,13 +26,18 @@ const WhatsappAds = () => {
 
   return (
     <div className="p-2">
-      <Carousel responsive={responsive} infinite={true} arrows={false}>
+      <Carousel
+        responsive={responsive}
+        infinite={true}
+        arrows={false}
+        autoPlay={true}
+      >
         {WhatappAdsList.map((item) => (
           <Link to={item?.name} key={item?.id} style={{ margin: "3px 8px" }}>
             <img
               src={item?.image}
               alt="phone Image"
-              className="w-full h-[60vw] md:h-[25vw]   object-contain"
+              className="w-[93%] h-[60vw] md:h-[22vw]   object-fill"
             />
           </Link>
         ))}

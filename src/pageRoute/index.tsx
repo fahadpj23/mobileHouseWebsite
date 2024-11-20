@@ -8,11 +8,13 @@ import SingleItem from "pages/singleItem";
 import TrendingPhones from "pages/trendingPhone";
 import SpecCreator from "pages/specCreator";
 import SearchList from "pages/searchList";
+import { ScrollProvider } from "context/scrollContext";
 
 const PageRoute = () => {
   return (
     <div>
       <BrowserRouter>
+        {/* <ScrollProvider> */}
         <MainLayout>
           <Routes>
             <Route index path="/" element={<HomePage />} />
@@ -29,6 +31,7 @@ const PageRoute = () => {
             <Route index path="specCreator" element={<SpecCreator />} />
           </Routes>
         </MainLayout>
+        {/* </ScrollProvider> */}
       </BrowserRouter>
     </div>
   );

@@ -39,6 +39,7 @@ const SingleProductCard: FC<props> = ({ product }) => {
             </h1>
           </div>
           <Rating
+            precision={0.1}
             sx={{ fontSize: 12 }}
             name="read-only"
             value={product?.rating}
