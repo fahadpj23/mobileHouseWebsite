@@ -18,12 +18,17 @@ const ImageSlider: FC<props> = ({ bannerItems }) => {
         showArrows={false}
       >
         {bannerItems?.map((banner: any) => (
-          <div key={banner?.id}>
+          <div key={banner?.id} className="relative">
             <img
               src={banner?.image}
               className="h-[45vW] md:h-[25vw] rounded-none md:rounded-xl "
               alt="banner"
             />
+            {banner?.link && (
+              <button className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 p-1 rounded-lg text-white text-[11px] absolute left-5 bottom-4">
+                {banner?.link?.title}
+              </button>
+            )}
           </div>
         ))}
       </Carousel>

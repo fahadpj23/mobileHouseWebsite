@@ -7,7 +7,7 @@ const AvailableEmi = () => {
       <h1 className="px-2 z-20 text-sm text-center font-semibold w-[40vw] md:w-[10vw] ">
         Available Emi
       </h1>
-      <Marquee direction="right">
+      <Marquee direction="left">
         {AvailableEmiItems?.map((emi: any) => {
           return (
             <div key={emi?.name} className="mr-3 md:mr-5">
