@@ -3,11 +3,22 @@ import { GiNetworkBars } from "react-icons/gi";
 import SingleProductCard from "./SingleProductCard";
 import { CiDiscount1 } from "react-icons/ci";
 import { filterProducts } from "utils/filterProductList";
-import { FormControl, MenuItem, Select } from "@mui/material";
+import {
+  Box,
+  Drawer,
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  MenuItem,
+  Radio,
+  RadioGroup,
+  Select,
+} from "@mui/material";
 import { useScreenSize } from "hooks/useScreenSize";
 import { UrlReplace } from "utils/urlReplace";
 import { ProductListSort } from "utils/productListSort";
 import { useSearchParams } from "react-router-dom";
+import ProductListFilters from "./Filters";
 
 const ProductList: FC<any> = ({ products }) => {
   const [searchParams] = useSearchParams();
@@ -19,6 +30,9 @@ const ProductList: FC<any> = ({ products }) => {
   const [productList, setProductList] = useState(products);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [sort, setSort] = useState(searchParams.get("sort") ?? "newest");
+  const [isSortOpen, setSortIsOpen] = useState(false);
+  const [isFilterOpen, setFilterIsOpen] = useState<boolean>(false);
+  const [selectedFilter, setSelectedFilter] = useState(false);
 
   const filterAdd = (key: any, value: any) => {
     UrlReplace(key, value);
@@ -41,8 +55,9 @@ const ProductList: FC<any> = ({ products }) => {
   }, [isLoading]);
 
   const handleSort = (sortValue: string) => {
-    UrlReplace("sort", sortValue);
+    setSortIsOpen(false);
     setSort(sortValue);
+    UrlReplace("sort", sortValue);
   };
 
   useEffect(() => {
@@ -50,6 +65,51 @@ const ProductList: FC<any> = ({ products }) => {
     setIsLoading(true);
   }, [sort]);
 
+  const sortFilter = () => (
+    <Drawer
+      anchor="bottom"
+      open={isSortOpen}
+      onClose={() => setSortIsOpen(false)}
+    >
+      <Box
+        sx={{
+          padding: 2,
+          backgroundColor: "#f5f5f5",
+          overflow: "auto",
+        }}
+      >
+        <FormControl>
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            value={sort}
+            name="radio-buttons-group"
+            onChange={(e) => handleSort(e.target?.value)}
+          >
+            <FormControlLabel
+              value={"newest"}
+              control={<Radio size="small" />}
+              label="Newest"
+            />
+            <FormControlLabel
+              value={"HighToLow"}
+              control={<Radio size="small" />}
+              label=" price -- High to Low"
+            />
+            <FormControlLabel
+              value={"LowToHigh"}
+              control={<Radio size="small" />}
+              label=" price -- Low to High"
+            />
+          </RadioGroup>
+        </FormControl>
+      </Box>
+    </Drawer>
+  );
+
+  // const Filters = () => (
+
+  // );
+  console.log(productList);
   return (
     <div className="mt-4">
       {isLoading && (
@@ -59,8 +119,17 @@ const ProductList: FC<any> = ({ products }) => {
       )}
       {productList?.length && (
         <div>
+          <div className="w-full flex justify-between">
+            <button onClick={() => setSortIsOpen(true)}>Sort</button>
+            <button onClick={() => setFilterIsOpen(true)}>Filters</button>
+          </div>
+          {sortFilter()}
+          <ProductListFilters
+            isFilterOpen={isFilterOpen}
+            setFilterIsOpen={setFilterIsOpen}
+          />
           {/* {isMobile && ( */}
-          <div className=" border-t border-b  border-gray-200 p-1 ">
+          {/* <div className=" border-t border-b  border-gray-200 p-1 ">
             <div className="flex ml-3 space-x-3 mt-3 ">
               <button
                 onClick={() => {
@@ -112,7 +181,7 @@ const ProductList: FC<any> = ({ products }) => {
                 </Select>
               </FormControl>
             </div>
-          </div>
+          </div> */}
           {/* )} */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-2 md:gap-5">
             {productList?.length &&
