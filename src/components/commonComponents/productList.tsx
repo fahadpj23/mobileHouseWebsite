@@ -25,6 +25,8 @@ const ProductList: FC<any> = ({ products }) => {
   const [filters, setFilters] = useState({
     connectivity: searchParams.get("connectivity") ?? "",
     specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
+    ram: searchParams.get("ram") ?? [],
+    brand: searchParams.get("brand") ?? [],
   });
   const { isMobile } = useScreenSize();
   const [productList, setProductList] = useState(products);
@@ -32,7 +34,6 @@ const ProductList: FC<any> = ({ products }) => {
   const [sort, setSort] = useState(searchParams.get("sort") ?? "newest");
   const [isSortOpen, setSortIsOpen] = useState(false);
   const [isFilterOpen, setFilterIsOpen] = useState<boolean>(false);
-  const [selectedFilter, setSelectedFilter] = useState(false);
 
   const filterAdd = (key: any, value: any) => {
     UrlReplace(key, value);
@@ -127,6 +128,8 @@ const ProductList: FC<any> = ({ products }) => {
           <ProductListFilters
             isFilterOpen={isFilterOpen}
             setFilterIsOpen={setFilterIsOpen}
+            setFilters={setFilters}
+            filters={filters}
           />
           {/* {isMobile && ( */}
           {/* <div className=" border-t border-b  border-gray-200 p-1 ">

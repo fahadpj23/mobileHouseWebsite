@@ -5,8 +5,15 @@ import { PHONEBRANDS } from "constants/phoneBrands";
 interface props {
   isFilterOpen: Boolean;
   setFilterIsOpen: any;
+  setFilters: any;
+  filters: any;
 }
-const ProductListFilters: FC<props> = ({ isFilterOpen, setFilterIsOpen }) => {
+const ProductListFilters: FC<props> = ({
+  isFilterOpen,
+  setFilterIsOpen,
+  setFilters,
+  filters,
+}) => {
   const [selectedFilter, setSelectedFilter] = useState("brand");
 
   const RamVariant = [
@@ -23,21 +30,33 @@ const ProductListFilters: FC<props> = ({ isFilterOpen, setFilterIsOpen }) => {
   const productFilters = [
     { name: "Brand", value: "brand" },
     { name: "Ram", value: "ram" },
-    { name: "Rating", value: "rating" },
+    // { name: "Rating", value: "rating" },
   ];
 
+  const handleChange = (event: any, value: any) => {
+    const { checked } = event.target;
+    console.log(value);
+    setFilters({
+      ...filters,
+      [selectedFilter]: checked
+        ? filters[selectedFilter].filter((item: any) => item !== value)
+        : [...filters[selectedFilter], value],
+    });
+  };
+  console.log(filters);
   const checkBoxList = (list: any) => (
     <div className="p-2">
       <FormGroup>
-        {list?.map((brand: any) => {
+        {list?.map((item: any) => {
           return (
             <FormControlLabel
-              key={brand?.value}
-              control={<Checkbox size="small" />}
-              label={brand?.name}
+              key={item?.value}
+              control={<Checkbox size="small" value={item?.value} />}
+              onChange={(e) => handleChange(e, item)}
+              label={item?.name}
               sx={{
                 "& .MuiFormControlLabel-label": {
-                  fontSize: "13px", // Custom font size
+                  fontSize: "13px",
                 },
               }}
             />
@@ -80,8 +99,8 @@ const ProductListFilters: FC<props> = ({ isFilterOpen, setFilterIsOpen }) => {
                     return checkBoxList(PHONEBRANDS);
                   case "ram":
                     return checkBoxList(RamVariant);
-                  case "rating":
-                    return checkBoxList(starRating);
+                  // case "rating":
+                  //   return checkBoxList(starRating);
                   // default:
                   //   return <div style={{ color: "gray" }}>Default Message</div>;
                 }
