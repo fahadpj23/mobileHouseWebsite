@@ -107,10 +107,6 @@ const ProductList: FC<any> = ({ products }) => {
     </Drawer>
   );
 
-  // const Filters = () => (
-
-  // );
-  console.log(productList);
   return (
     <div className="mt-4">
       {isLoading && (

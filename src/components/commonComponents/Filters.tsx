@@ -33,14 +33,13 @@ const ProductListFilters: FC<props> = ({
     // { name: "Rating", value: "rating" },
   ];
 
-  const handleChange = (event: any, value: any) => {
+  const handleFilter = (event: any, value: any) => {
     const { checked } = event.target;
-    console.log(value);
     setFilters({
       ...filters,
-      [selectedFilter]: checked
-        ? filters[selectedFilter].filter((item: any) => item !== value)
-        : [...filters[selectedFilter], value],
+      [selectedFilter]: Boolean(checked)
+        ? [...filters[selectedFilter], value]
+        : filters[selectedFilter]?.filter((item: any) => item !== value),
     });
   };
   console.log(filters);
@@ -52,7 +51,7 @@ const ProductListFilters: FC<props> = ({
             <FormControlLabel
               key={item?.value}
               control={<Checkbox size="small" value={item?.value} />}
-              onChange={(e) => handleChange(e, item)}
+              onChange={(e) => handleFilter(e, item?.value)}
               label={item?.name}
               sx={{
                 "& .MuiFormControlLabel-label": {
