@@ -15,6 +15,13 @@ export const filterProducts = (products: any, filters: any) => {
       return false;
     }
 
+    if (
+      filters?.brand &&
+      !filters.brand.includes(product.brand.toLowerCase())
+    ) {
+      return false;
+    }
+
     //   if (filters.minPrice !== undefined && product.price < filters.minPrice) {
     //     return false;
     //   }

@@ -1,18 +1,21 @@
 import { Checkbox, Drawer, FormControlLabel, FormGroup } from "@mui/material";
 import { FC, useState } from "react";
 import { PHONEBRANDS } from "constants/phoneBrands";
+import { UrlReplace } from "utils/urlReplace";
 
 interface props {
   isFilterOpen: Boolean;
   setFilterIsOpen: any;
   setFilters: any;
   filters: any;
+  addFilter: any;
 }
 const ProductListFilters: FC<props> = ({
   isFilterOpen,
   setFilterIsOpen,
   setFilters,
   filters,
+  addFilter,
 }) => {
   const [selectedFilter, setSelectedFilter] = useState("brand");
 
@@ -43,6 +46,13 @@ const ProductListFilters: FC<props> = ({
     });
   };
   console.log(filters);
+
+  // const ApplyFilters = () => {
+  //   Object.entries(filters)?.map((filter: any) => {
+  //     UrlReplace(filter[0], filter[1]);
+  //   });
+  // };
+
   const checkBoxList = (list: any) => (
     <div className="p-2">
       <FormGroup>
@@ -50,7 +60,13 @@ const ProductListFilters: FC<props> = ({
           return (
             <FormControlLabel
               key={item?.value}
-              control={<Checkbox size="small" value={item?.value} />}
+              control={
+                <Checkbox
+                  size="small"
+                  value={item?.value}
+                  checked={filters[selectedFilter].includes(item?.value)}
+                />
+              }
               onChange={(e) => handleFilter(e, item?.value)}
               label={item?.name}
               sx={{
@@ -105,7 +121,10 @@ const ProductListFilters: FC<props> = ({
                 }
               })()}
             </>
-            <button className="bg-orange-600 p-1 w-[60%] text-white absolute bottom-0 right-1">
+            <button
+              onClick={addFilter}
+              className="bg-orange-600 p-1 w-[60%] text-white absolute bottom-0 right-1"
+            >
               Apply
             </button>
           </div>

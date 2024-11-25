@@ -25,8 +25,8 @@ const ProductList: FC<any> = ({ products }) => {
   const [filters, setFilters] = useState({
     connectivity: searchParams.get("connectivity") ?? "",
     specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
-    ram: searchParams.get("ram") ?? [],
-    brand: searchParams.get("brand") ?? [],
+    ram: searchParams.get("ram")?.split(",") ?? [],
+    brand: searchParams.get("brand")?.split(",") ?? [],
   });
   const { isMobile } = useScreenSize();
   const [productList, setProductList] = useState(products);
@@ -59,6 +59,14 @@ const ProductList: FC<any> = ({ products }) => {
     setSortIsOpen(false);
     setSort(sortValue);
     UrlReplace("sort", sortValue);
+  };
+
+  const addFilter = () => {
+    Object.entries(filters)?.map((filter: any) => {
+      UrlReplace(filter[0], filter[1]);
+    });
+    setFilterIsOpen(false);
+    setIsLoading(true);
   };
 
   useEffect(() => {
@@ -126,6 +134,7 @@ const ProductList: FC<any> = ({ products }) => {
             setFilterIsOpen={setFilterIsOpen}
             setFilters={setFilters}
             filters={filters}
+            addFilter={addFilter}
           />
           {/* {isMobile && ( */}
           {/* <div className=" border-t border-b  border-gray-200 p-1 ">
