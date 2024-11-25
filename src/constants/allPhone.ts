@@ -748,6 +748,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 42999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "Snapdragon 7 Gen 3 Octa core ",
       Display: "6.78″ (17.22 cm) 120Hz AMOLED ",
@@ -810,6 +812,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 39999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "Snapdragon 7 Gen 3 Octa core ",
       Display: "6.78″ (17.22 cm) 120Hz AMOLED ",
@@ -872,6 +876,8 @@ export const ALLPHONES = [
     rating: 4.4,
     newArrival: true,
     mrp: 33999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 7300 Octa core ",
       Display: "6.77″ (17.2 cm) 120Hz AMOLED ",
@@ -921,6 +927,8 @@ export const ALLPHONES = [
     rating: 4.4,
     newArrival: true,
     mrp: 35999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 7300 Octa core ",
       Display: "6.77″ (17.2 cm) 120Hz AMOLED ",
@@ -969,6 +977,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: false,
     mrp: 25999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "Snapdragon 4 Gen 2 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
@@ -1019,6 +1029,8 @@ export const ALLPHONES = [
     rating: 4.4,
     newArrival: false,
     mrp: 23999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "Snapdragon 4 Gen 2 Octa core ",
       Display: "6.72″ (17.07 cm) 120Hz LCD ",
@@ -1067,6 +1079,8 @@ export const ALLPHONES = [
     rating: 4.7,
     newArrival: true,
     mrp: 29999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "Snapdragon 695 Octa core ",
       Display: "6.78″ (17.22 cm) 120Hz AMOLED ",
@@ -1117,6 +1131,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: false,
     mrp: 21999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.56″ (16.66 cm) 90Hz LCD ",
@@ -1166,6 +1182,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: false,
     mrp: 19999,
+    ram: 6,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.56″ (16.66 cm) 90Hz LCD ",
@@ -1215,6 +1233,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: false,
     mrp: 17999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.56″ (16.66 cm) 90Hz LCD ",
@@ -1263,6 +1283,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: false,
     mrp: 19999,
+    ram: 6,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6020 Octa core ",
       Display: "6.56″ (16.66 cm) 90Hz IPS LCD ",
@@ -1311,6 +1333,8 @@ export const ALLPHONES = [
     rating: 4,
     newArrival: false,
     mrp: 14999,
+    ram: 4,
+    storage: 64,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.56″ (16.66 cm) 90Hz LCD ",
@@ -1359,6 +1383,8 @@ export const ALLPHONES = [
     rating: 4,
     newArrival: false,
     mrp: 15999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.56″ (16.66 cm) 90Hz LCD ",
@@ -1407,6 +1433,8 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: false,
     mrp: 11999,
+    ram: 4,
+    storage: 64,
     specifications: {
       Processor: " Unisoc T612 octa-core ",
       Display: " 6.56-inch (720x1612) 90Hz ",
@@ -1444,6 +1472,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 13999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Helio G85 Octa core ",
       Display: "6.67″ (16.94 cm) 60Hz AMOLED ",
@@ -1491,6 +1521,8 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 24999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 8050 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
@@ -1537,6 +1569,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 27999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 7020 Octa core ",
       Display: "6.78″ (17.22 cm) 120Hz LTPS AMOLED ",
@@ -1584,6 +1618,8 @@ export const ALLPHONES = [
     rating: 4.6,
     newArrival: true,
     mrp: 47999,
+    ram: 12,
+    storage: 512,
     specifications: {
       Processor: "MediaTek Dimensity 8200 Octa core ",
       Display: "6.77″ (17.2 cm) 120Hz LTPO AMOLED ",
@@ -1631,6 +1667,8 @@ export const ALLPHONES = [
     rating: 3.8,
     newArrival: true,
     mrp: 51999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 9000 Octa core ",
       Display: "6.8″ (17.27 cm) 120Hz AMOLED ",
@@ -1676,6 +1714,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 61999,
+    ram: 12,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 9000 Octa core ",
       Display: "6.8″ (17.27 cm) 120Hz AMOLED ",
@@ -1722,6 +1762,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 15999,
+    ram: 6,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz IPS LCD ",
@@ -1779,6 +1821,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 24999,
+    ram: 12,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 6080 Octa core ",
       Display: "6.78″ (17.22 cm) 120Hz AMOLED ",
@@ -1826,6 +1870,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 11999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz IPS LCD ",
@@ -1876,6 +1922,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 13999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",
@@ -1938,6 +1986,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 15999,
+    ram: 6,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",
@@ -2001,6 +2051,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 22999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",
@@ -2064,6 +2116,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 20999,
+    ram: 6,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6080 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
@@ -2136,6 +2190,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 24999,
+    ram: 12,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 6080 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
@@ -2208,6 +2264,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 22999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 6080 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
@@ -2281,6 +2339,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 17999,
+    ram: 6,
+    storage: 128,
     specifications: {
       Processor: "Snapdragon 4 Gen 2 Octa core ",
       Display: "6.79″ (17.25 cm) 120Hz IPS LCD ",
@@ -2342,6 +2402,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 19999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "Snapdragon 4 Gen 2 Octa core ",
       Display: "6.79″ (17.25 cm) 120Hz IPS LCD ",
@@ -2404,6 +2466,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 33999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 7200 Ultra Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
@@ -2465,6 +2529,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 35999,
+    ram: 12,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 7200 Ultra Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
@@ -2526,6 +2592,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 37999,
+    ram: 12,
+    storage: 512,
     specifications: {
       Processor: "MediaTek Dimensity 7200 Ultra Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
@@ -2588,6 +2656,8 @@ export const ALLPHONES = [
     rating: 4.0,
     newArrival: true,
     mrp: 16990,
+    ram: 4,
+    storage: 64,
     specifications: {
       Processor: "MediaTek Helio G35 Octa core ",
       Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
@@ -2630,6 +2700,8 @@ export const ALLPHONES = [
     rating: 3.5,
     newArrival: true,
     mrp: 12999,
+    ram: 3,
+    storage: 64,
     specifications: {
       Processor: "MediaTek Helio G35 Octa core ",
       Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
@@ -2678,6 +2750,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 19999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Helio G35 Octa core ",
       Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
@@ -2727,6 +2801,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 18999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz LCD ",
@@ -2775,6 +2851,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 16999,
+    ram: 6,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz LCD ",
@@ -2824,6 +2902,8 @@ export const ALLPHONES = [
     rating: 4.4,
     newArrival: true,
     mrp: 53999,
+    ram: 12,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 7300 Energy Octa core ",
       Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
@@ -2873,6 +2953,8 @@ export const ALLPHONES = [
     rating: 4.4,
     newArrival: true,
     mrp: 55999,
+    ram: 12,
+    storage: 512,
     specifications: {
       Processor: "MediaTek Dimensity 7300 Energy Octa core ",
       Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
@@ -2920,6 +3002,8 @@ export const ALLPHONES = [
     rating: 4.4,
     newArrival: true,
     mrp: 43999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 7300 Energy Octa core ",
       Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
@@ -2971,6 +3055,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 34999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 7050 Octa core ",
       Display: "6.7″ (17.02 cm) AMOLED ",
@@ -3019,6 +3105,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 32999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 7050 Octa core ",
       Display: "6.7″ (17.02 cm) AMOLED ",
@@ -3068,6 +3156,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 28999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core",
       Display: "6.67″ (16.94 cm) 120Hz Flat OLED ",
@@ -3116,6 +3206,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 26999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core",
       Display: "6.67″ (16.94 cm) 120Hz Flat OLED ",
@@ -3165,6 +3257,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 22999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz LCD ",
@@ -3225,6 +3319,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 20999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz LCD ",
@@ -3285,6 +3381,8 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 15999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz LCD ",
@@ -3334,6 +3432,8 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 14999,
+    ram: 4,
+    storage: 64,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz LCD ",
@@ -3383,6 +3483,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 10999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "Unisoc Octa core ",
       Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",
@@ -3407,6 +3509,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 22999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.72″ (17.07 cm) 120Hz IPS LCD ",
@@ -3431,6 +3535,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 20999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.72″ (17.07 cm) 120Hz IPS LCD ",
@@ -3457,6 +3563,8 @@ export const ALLPHONES = [
     rating: 4.7,
     newArrival: true,
     mrp: 19999,
+    ram: 6,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.7″ (17.02 cm) 90Hz Super AMOLED ",
@@ -3519,6 +3627,8 @@ export const ALLPHONES = [
     rating: 4.7,
     newArrival: true,
     mrp: 21499,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.7″ (17.02 cm) 90Hz Super AMOLED ",
@@ -3580,6 +3690,8 @@ export const ALLPHONES = [
     rating: 4.7,
     newArrival: true,
     mrp: 24499,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.7″ (17.02 cm) 90Hz Super AMOLED ",
@@ -3641,6 +3753,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 15999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
@@ -3705,6 +3819,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 16999,
+    ram: 6,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
@@ -3768,6 +3884,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 17999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
@@ -3831,6 +3949,8 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 10999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
@@ -3894,6 +4014,8 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 19999,
+    ram: 6,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
@@ -3957,6 +4079,8 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 24499,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
@@ -4020,6 +4144,8 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 17999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "Samsung Exynos 1330 Octa core ",
       Display: "6.6″ (16.76 cm) 90Hz PLS LCD ",
@@ -4070,6 +4196,8 @@ export const ALLPHONES = [
     rating: 4,
     newArrival: true,
     mrp: 15499,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "Samsung Exynos 1330 Octa core ",
       Display: "6.6″ (16.76 cm) 90Hz PLS LCD ",
@@ -4132,6 +4260,8 @@ export const ALLPHONES = [
     rating: 4,
     newArrival: true,
     mrp: 12999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "Samsung Exynos 1330 Octa core ",
       Display: "6.6″ (16.76 cm) 90Hz PLS LCD ",
@@ -4192,6 +4322,8 @@ export const ALLPHONES = [
     newArrival: true,
     mrp: 11999,
 
+    ram: 4,
+    storage: 64,
     specifications: {
       Processor: "Samsung Exynos 1330 Octa core ",
       Display: "6.6″ (16.76 cm) 90Hz PLS LCD ",
@@ -4216,6 +4348,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 15999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "Snapdragon 680 Octa core ",
       Display: "6.7″ (17.02 cm) 90Hz PLS LCD ",
@@ -4257,6 +4391,8 @@ export const ALLPHONES = [
     rating: 3.9,
     newArrival: true,
     mrp: 11499,
+    ram: 4,
+    storage: 64,
     specifcatin: {
       Processor: "MediaTek Helio G85 Octa core ",
       Display: "6.7″ (17.02 cm) 60Hz PLS LCD ",
@@ -4319,6 +4455,8 @@ export const ALLPHONES = [
     rating: 3.8,
     newArrival: true,
     mrp: 15999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
@@ -4382,6 +4520,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 36999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "Samsung Exynos 1380 Octa core ",
       Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
@@ -4444,6 +4584,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 36999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "Samsung Exynos 1380 Octa core ",
       Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
@@ -4507,6 +4649,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 48999,
+    ram: 12,
+    storage: 256,
     specifications: {
       Processor: "Samsung Exynos 1480 Octa core ",
       Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
@@ -4558,6 +4702,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 42999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "Samsung Exynos 1480 Octa core ",
       Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
@@ -4609,6 +4755,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 45999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "Samsung Exynos 1480 Octa core ",
       Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
@@ -4660,6 +4808,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 95999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "Snapdragon 8 Gen 2 Octa core ",
       Display: "6.1″ (15.49 cm) 120Hz Dynamic AMOLED 2x ",
@@ -4722,6 +4872,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 89999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "Snapdragon 8 Gen 2 Octa core ",
       Display: "6.1″ (15.49 cm) 120Hz Dynamic AMOLED 2x ",
@@ -4784,6 +4936,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 74999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "Samsung Exynos 2400 Deca Core ",
       Display: "6.2″ (15.75 cm) 120Hz Dynamic AMOLED 2x ",
@@ -4855,6 +5009,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 79999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "Samsung Exynos 2400 Deca Core ",
       Display: "6.2″ (15.75 cm) 120Hz Dynamic AMOLED 2x ",
@@ -4926,6 +5082,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 89999,
+    ram: 8,
+    storage: 512,
     specifications: {
       Processor: "Samsung Exynos 2400 Deca Core ",
       Display: "6.2″ (15.75 cm) 120Hz Dynamic AMOLED 2x ",
@@ -4998,6 +5156,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 99999,
+    ram: 12,
+    storage: 256,
     specifications: {
       Processor: "Samsung Exynos 2400 Deca Core ",
       Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",
@@ -5047,6 +5207,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 119999,
+    ram: 12,
+    storage: 512,
     specifications: {
       Processor: "Samsung Exynos 2400 Deca Core ",
       Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",
@@ -5096,6 +5258,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 134999,
+    ram: 12,
+    storage: 256,
     specifications: {
       Processor: "Snapdragon 8 Gen 3 Octa core ",
       Display: "6.8″ (17.27 cm) 120Hz Dynamic AMOLED 2x ",
@@ -5166,6 +5330,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 144999,
+    ram: 12,
+    storage: 512,
     specifications: {
       Processor: "Snapdragon 8 Gen 3 Octa core ",
       Display: "6.8″ (17.27 cm) 120Hz Dynamic AMOLED 2x ",
@@ -5236,6 +5402,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 64999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "Samsung Exynos 2400e Deca Core ",
       Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",
@@ -5298,6 +5466,8 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: false,
     mrp: 79999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "Samsung Exynos 2400e Deca Core ",
       Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",

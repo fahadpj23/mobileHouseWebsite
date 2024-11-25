@@ -18,7 +18,8 @@ const ProductListFilters: FC<props> = ({
   addFilter,
 }) => {
   const [selectedFilter, setSelectedFilter] = useState("brand");
-
+  const [selectedProductFilters, setSelectedProductFilters] =
+    useState<any>(filters);
   const RamVariant = [
     { name: 4, value: 4 },
     { name: 6, value: 6 },
@@ -38,20 +39,24 @@ const ProductListFilters: FC<props> = ({
 
   const handleFilter = (event: any, value: any) => {
     const { checked } = event.target;
-    setFilters({
+    setSelectedProductFilters({
       ...filters,
       [selectedFilter]: Boolean(checked)
-        ? [...filters[selectedFilter], value]
-        : filters[selectedFilter]?.filter((item: any) => item !== value),
+        ? [...selectedProductFilters[selectedFilter], value]
+        : selectedProductFilters[selectedFilter]?.filter(
+            (item: any) => item !== value
+          ),
     });
   };
-  console.log(filters);
 
-  // const ApplyFilters = () => {
-  //   Object.entries(filters)?.map((filter: any) => {
-  //     UrlReplace(filter[0], filter[1]);
-  //   });
-  // };
+  const ApplyFilters = () => {
+    setSelectedProductFilters({
+      ...filters,
+      ram: selectedProductFilters?.ram,
+      brand: selectedProductFilters?.brand,
+    });
+    addFilter();
+  };
 
   const checkBoxList = (list: any) => (
     <div className="p-2">
@@ -64,7 +69,9 @@ const ProductListFilters: FC<props> = ({
                 <Checkbox
                   size="small"
                   value={item?.value}
-                  checked={filters[selectedFilter].includes(item?.value)}
+                  checked={selectedProductFilters[selectedFilter]?.includes(
+                    item?.value
+                  )}
                 />
               }
               onChange={(e) => handleFilter(e, item?.value)}
@@ -122,7 +129,7 @@ const ProductListFilters: FC<props> = ({
               })()}
             </>
             <button
-              onClick={addFilter}
+              onClick={ApplyFilters}
               className="bg-orange-600 p-1 w-[60%] text-white absolute bottom-0 right-1"
             >
               Apply

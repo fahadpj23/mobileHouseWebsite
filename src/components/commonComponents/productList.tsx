@@ -22,10 +22,10 @@ import ProductListFilters from "./Filters";
 
 const ProductList: FC<any> = ({ products }) => {
   const [searchParams] = useSearchParams();
-  const [filters, setFilters] = useState({
+  const [filters, setFilters] = useState<any>({
     connectivity: searchParams.get("connectivity") ?? "",
     specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
-    ram: searchParams.get("ram")?.split(",") ?? [],
+    ram: searchParams.get("ram")?.split(",").map(Number) ?? [],
     brand: searchParams.get("brand")?.split(",") ?? [],
   });
   const { isMobile } = useScreenSize();
@@ -34,7 +34,7 @@ const ProductList: FC<any> = ({ products }) => {
   const [sort, setSort] = useState(searchParams.get("sort") ?? "newest");
   const [isSortOpen, setSortIsOpen] = useState(false);
   const [isFilterOpen, setFilterIsOpen] = useState<boolean>(false);
-
+  console.log(filters);
   const filterAdd = (key: any, value: any) => {
     UrlReplace(key, value);
     setIsLoading(true);
@@ -122,20 +122,22 @@ const ProductList: FC<any> = ({ products }) => {
           <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
-      {productList?.length && (
+      <div className="w-full flex justify-between">
+        <button onClick={() => setSortIsOpen(true)}>Sort</button>
+        <button onClick={() => setFilterIsOpen(true)}>Filters</button>
+      </div>
+      {productList?.length ? (
         <div>
-          <div className="w-full flex justify-between">
-            <button onClick={() => setSortIsOpen(true)}>Sort</button>
-            <button onClick={() => setFilterIsOpen(true)}>Filters</button>
-          </div>
           {sortFilter()}
-          <ProductListFilters
-            isFilterOpen={isFilterOpen}
-            setFilterIsOpen={setFilterIsOpen}
-            setFilters={setFilters}
-            filters={filters}
-            addFilter={addFilter}
-          />
+          {isFilterOpen && (
+            <ProductListFilters
+              isFilterOpen={isFilterOpen}
+              setFilterIsOpen={setFilterIsOpen}
+              setFilters={setFilters}
+              filters={filters}
+              addFilter={addFilter}
+            />
+          )}
           {/* {isMobile && ( */}
           {/* <div className=" border-t border-b  border-gray-200 p-1 ">
             <div className="flex ml-3 space-x-3 mt-3 ">
@@ -200,7 +202,7 @@ const ProductList: FC<any> = ({ products }) => {
               })}
           </div>
         </div>
-      )}
+      ) : null}
     </div>
   );
 };
