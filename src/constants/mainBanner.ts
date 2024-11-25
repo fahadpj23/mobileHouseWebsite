@@ -6,10 +6,6 @@ export const MAINBANNER = [
   {
     id: 1,
     image: BANNER1,
-    link: {
-      title: "PreBook Now",
-      link: "/prebook/y300",
-    },
   },
   {
     id: 2,

@@ -8,6 +8,7 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { useScreenSize } from "hooks/useScreenSize";
 import ProductImageSlider from "components/commonComponents/productImageSlider";
 import { getPhoneVariants } from "utils/getPhoneVariants";
+import { toPascalCase } from "utils/pascalCaseConvert";
 
 const SingleItem = () => {
   const { productId } = useParams();
@@ -150,8 +151,8 @@ const SingleItem = () => {
                               alt="phone image"
                             />
                           </div>
-                          <h1 className="text-[13px] font-semibold capitalize">
-                            {color?.name}
+                          <h1 className="text-[12px] md:text-[14px] font-semibold capitalize">
+                            {color?.name && toPascalCase(color?.name)}
                           </h1>
                         </button>
                       );

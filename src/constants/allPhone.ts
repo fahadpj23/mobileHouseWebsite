@@ -230,6 +230,22 @@ import OPPOA3XSTARLIGHTWHITE4 from "assets/oppo/OPPOA3PRO/OPPOA3XSTARLIGHTWHITE/
 import OPPOA3XSTARLIGHTWHITE5 from "assets/oppo/OPPOA3PRO/OPPOA3XSTARLIGHTWHITE/OPPOA3XSTARLIGHTWHITE5.jpg";
 
 //vivo
+import VIVOY3005GEMERALDGREEN1 from "assets/vivo/VIVOY3005G/VIVOY3005GEMERALDGREEN/VIVOY3005GEMERALDGREEN1.jpg";
+import VIVOY3005GEMERALDGREEN2 from "assets/vivo/VIVOY3005G/VIVOY3005GEMERALDGREEN/VIVOY3005GEMERALDGREEN2.jpg";
+import VIVOY3005GEMERALDGREEN3 from "assets/vivo/VIVOY3005G/VIVOY3005GEMERALDGREEN/VIVOY3005GEMERALDGREEN3.jpg";
+import VIVOY3005GEMERALDGREEN4 from "assets/vivo/VIVOY3005G/VIVOY3005GEMERALDGREEN/VIVOY3005GEMERALDGREEN4.jpg";
+import VIVOY3005GEMERALDGREEN5 from "assets/vivo/VIVOY3005G/VIVOY3005GEMERALDGREEN/VIVOY3005GEMERALDGREEN5.jpg";
+import VIVOY3005GPHANTOMPURPLE1 from "assets/vivo/VIVOY3005G/VIVOY3005GPHANTOMPURPLE/VIVOY3005GPHANTOMPURPLE1.jpg";
+import VIVOY3005GPHANTOMPURPLE2 from "assets/vivo/VIVOY3005G/VIVOY3005GPHANTOMPURPLE/VIVOY3005GPHANTOMPURPLE2.jpg";
+import VIVOY3005GPHANTOMPURPLE3 from "assets/vivo/VIVOY3005G/VIVOY3005GPHANTOMPURPLE/VIVOY3005GPHANTOMPURPLE3.jpg";
+import VIVOY3005GPHANTOMPURPLE4 from "assets/vivo/VIVOY3005G/VIVOY3005GPHANTOMPURPLE/VIVOY3005GPHANTOMPURPLE4.jpg";
+import VIVOY3005GPHANTOMPURPLE5 from "assets/vivo/VIVOY3005G/VIVOY3005GPHANTOMPURPLE/VIVOY3005GPHANTOMPURPLE5.jpg";
+import VIVOY3005GTITANIUMSILVER1 from "assets/vivo/VIVOY3005G/VIVOY3005GTITANIUMSILVER/VIVOY3005GTITANIUMSILVER1.jpg";
+import VIVOY3005GTITANIUMSILVER2 from "assets/vivo/VIVOY3005G/VIVOY3005GTITANIUMSILVER/VIVOY3005GTITANIUMSILVER2.jpg";
+import VIVOY3005GTITANIUMSILVER3 from "assets/vivo/VIVOY3005G/VIVOY3005GTITANIUMSILVER/VIVOY3005GTITANIUMSILVER3.jpg";
+import VIVOY3005GTITANIUMSILVER4 from "assets/vivo/VIVOY3005G/VIVOY3005GTITANIUMSILVER/VIVOY3005GTITANIUMSILVER4.jpg";
+import VIVOY3005GTITANIUMSILVER5 from "assets/vivo/VIVOY3005G/VIVOY3005GTITANIUMSILVER/VIVOY3005GTITANIUMSILVER5.jpg";
+
 import VIVOV40GANGESBLUE1 from "assets/vivo/VIVOV40/VIVOV40GANGESBLUE/VIVOV40GANGESBLUE1.jpg";
 import VIVOV40GANGESBLUE2 from "assets/vivo/VIVOV40/VIVOV40GANGESBLUE/VIVOV40GANGESBLUE2.jpg";
 import VIVOV40GANGESBLUE3 from "assets/vivo/VIVOV40/VIVOV40GANGESBLUE/VIVOV40GANGESBLUE3.jpg";
@@ -748,6 +764,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 42999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "Snapdragon 7 Gen 3 Octa core ",
+      Display: "6.78″ (17.22 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+50 MP",
+      "Front Camera": "50 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5500 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -785,16 +813,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Snapdragon 7 Gen 3 Octa core ",
-      Display: "6.78″ (17.22 cm) 120Hz AMOLED ",
-      "Rear Camera": "50+50 MP",
-      "Front Camera": "50 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5500 mAh | 80W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -810,6 +828,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 39999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "Snapdragon 7 Gen 3 Octa core ",
+      Display: "6.78″ (17.22 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+50 MP",
+      "Front Camera": "50 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5500 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -847,16 +877,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Snapdragon 7 Gen 3 Octa core ",
-      Display: "6.78″ (17.22 cm) 120Hz AMOLED ",
-      "Rear Camera": "50+50 MP",
-      "Front Camera": "50 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "5500 mAh | 80W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -872,6 +892,18 @@ export const ALLPHONES = [
     rating: 4.4,
     newArrival: true,
     mrp: 33999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 7300 Octa core ",
+      Display: "6.77″ (17.2 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+8 MP",
+      "Front Camera": "50 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5500 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -896,16 +928,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 7300 Octa core ",
-      Display: "6.77″ (17.2 cm) 120Hz AMOLED ",
-      "Rear Camera": "50+8 MP",
-      "Front Camera": "50 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "5500 mAh | 80W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -921,6 +943,18 @@ export const ALLPHONES = [
     rating: 4.4,
     newArrival: true,
     mrp: 35999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 7300 Octa core ",
+      Display: "6.77″ (17.2 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+8 MP",
+      "Front Camera": "50 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5500 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -945,16 +979,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 7300 Octa core ",
-      Display: "6.77″ (17.2 cm) 120Hz AMOLED ",
-      "Rear Camera": "50+8 MP",
-      "Front Camera": "50 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5500 mAh | 80W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -969,6 +993,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: false,
     mrp: 25999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "Snapdragon 4 Gen 2 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "16 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5000 mAh | 44W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -995,16 +1031,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Snapdragon 4 Gen 2 Octa core ",
-      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
-      "Rear Camera": "50+2 MP",
-      "Front Camera": "16 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "5000 mAh | 44W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -1019,6 +1045,18 @@ export const ALLPHONES = [
     rating: 4.4,
     newArrival: false,
     mrp: 23999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "Snapdragon 4 Gen 2 Octa core ",
+      Display: "6.72″ (17.07 cm) 120Hz LCD ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "6000 mAh | 44W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -1043,16 +1081,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Snapdragon 4 Gen 2 Octa core ",
-      Display: "6.72″ (17.07 cm) 120Hz LCD ",
-      "Rear Camera": "50+2 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "6000 mAh | 44W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -1067,6 +1095,18 @@ export const ALLPHONES = [
     rating: 4.7,
     newArrival: true,
     mrp: 29999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "Snapdragon 695 Octa core ",
+      Display: "6.78″ (17.22 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5000 mAh | 44W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14",
+    },
     colors: [
       {
         id: 1,
@@ -1092,16 +1132,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Snapdragon 695 Octa core ",
-      Display: "6.78″ (17.22 cm) 120Hz AMOLED ",
-      "Rear Camera": "50+2 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "5000 mAh | 44W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14",
-    },
   },
 
   {
@@ -1117,6 +1147,18 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: false,
     mrp: 21999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.56″ (16.66 cm) 90Hz LCD ",
+      "Rear Camera": "50+0.08 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5000 mAh | 15W Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14",
+    },
     colors: [
       {
         id: 1,
@@ -1141,16 +1183,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-      Display: "6.56″ (16.66 cm) 90Hz LCD ",
-      "Rear Camera": "50+0.08 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "5000 mAh | 15W Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14",
-    },
   },
 
   {
@@ -1166,6 +1198,18 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: false,
     mrp: 19999,
+    ram: 6,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.56″ (16.66 cm) 90Hz LCD ",
+      "Rear Camera": "50+0.08 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "6 GB | 128 GB ",
+      Battery: "5000 mAh | 15W Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14",
+    },
     colors: [
       {
         id: 1,
@@ -1190,16 +1234,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-      Display: "6.56″ (16.66 cm) 90Hz LCD ",
-      "Rear Camera": "50+0.08 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "6 GB | 128 GB ",
-      Battery: "5000 mAh | 15W Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14",
-    },
   },
 
   {
@@ -1215,6 +1249,18 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: false,
     mrp: 17999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.56″ (16.66 cm) 90Hz LCD ",
+      "Rear Camera": "50+0.08 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "5000 mAh | 15W Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14",
+    },
     colors: [
       {
         id: 1,
@@ -1239,16 +1285,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-      Display: "6.56″ (16.66 cm) 90Hz LCD ",
-      "Rear Camera": "50+0.08 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
-      Battery: "5000 mAh | 15W Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14",
-    },
   },
 
   {
@@ -1263,6 +1299,18 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: false,
     mrp: 19999,
+    ram: 6,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6020 Octa core ",
+      Display: "6.56″ (16.66 cm) 90Hz IPS LCD ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "6 GB | 128 GB ",
+      Battery: "5000 mAh | 15W ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13",
+    },
     colors: [
       {
         id: 1,
@@ -1286,16 +1334,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6020 Octa core ",
-      Display: "6.56″ (16.66 cm) 90Hz IPS LCD ",
-      "Rear Camera": "50+2 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "6 GB | 128 GB ",
-      Battery: "5000 mAh | 15W ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13",
-    },
   },
 
   {
@@ -1311,6 +1349,18 @@ export const ALLPHONES = [
     rating: 4,
     newArrival: false,
     mrp: 14999,
+    ram: 4,
+    storage: 64,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.56″ (16.66 cm) 90Hz LCD ",
+      "Rear Camera": "13+0.08 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "4 GB | 64 GB ",
+      Battery: "5000 mAh | 15W Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14",
+    },
     colors: [
       {
         id: 1,
@@ -1335,16 +1385,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-      Display: "6.56″ (16.66 cm) 90Hz LCD ",
-      "Rear Camera": "13+0.08 MP",
-      "Front Camera": "5 MP",
-      "RAM | Storage": "4 GB | 64 GB ",
-      Battery: "5000 mAh | 15W Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14",
-    },
   },
   {
     id: "VIVO13",
@@ -1359,6 +1399,18 @@ export const ALLPHONES = [
     rating: 4,
     newArrival: false,
     mrp: 15999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.56″ (16.66 cm) 90Hz LCD ",
+      "Rear Camera": "13+0.08 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "5000 mAh | 15W Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14",
+    },
     colors: [
       {
         id: 1,
@@ -1383,16 +1435,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-      Display: "6.56″ (16.66 cm) 90Hz LCD ",
-      "Rear Camera": "13+0.08 MP",
-      "Front Camera": "5 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
-      Battery: "5000 mAh | 15W Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14",
-    },
   },
 
   {
@@ -1407,6 +1449,18 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: false,
     mrp: 11999,
+    ram: 4,
+    storage: 64,
+    specifications: {
+      Processor: " Unisoc T612 octa-core ",
+      Display: " 6.56-inch (720x1612) 90Hz ",
+      "Rear Camera": "13MP + 0.08MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "4 GB | 64 GB ",
+      Battery: "5000 mAh  ",
+      Network: "Dual SIM: 4G & 4G",
+      OS: "Android 14 ",
+    },
     colors: [
       {
         id: 1,
@@ -1420,16 +1474,130 @@ export const ALLPHONES = [
         ],
       },
     ],
+  },
+
+  {
+    id: "VIVO15",
+    name: "VIVO Y300 5G 8/128",
+    brand: "VIVO",
+    series: "Y300",
+    image: VIVOY3005GPHANTOMPURPLE1,
+    launchDate: "21-11-2024",
+    salesPrice: 21999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 4.3,
+    newArrival: true,
+    mrp: 26999,
+    ram: 8,
+    storage: 128,
     specifications: {
-      Processor: " Unisoc T612 octa-core ",
-      Display: " 6.56-inch (720x1612) 90Hz ",
-      "Rear Camera": "13MP + 0.08MP",
-      "Front Camera": "5 MP",
-      "RAM | Storage": "4 GB | 64 GB ",
-      Battery: "5000 mAh  ",
-      Network: "Dual SIM: 4G & 4G",
-      OS: "Android 14 ",
+      Processor: "Snapdragon 4 Gen 2 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5000 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
     },
+    colors: [
+      {
+        id: 1,
+        name: "MERALD GREEN",
+        images: [
+          VIVOY3005GEMERALDGREEN1,
+          VIVOY3005GEMERALDGREEN2,
+          VIVOY3005GEMERALDGREEN3,
+          VIVOY3005GEMERALDGREEN4,
+          VIVOY3005GEMERALDGREEN5,
+        ],
+      },
+      {
+        id: 2,
+        name: "PHANTOM PURPLE",
+        images: [
+          VIVOY3005GPHANTOMPURPLE1,
+          VIVOY3005GPHANTOMPURPLE2,
+          VIVOY3005GPHANTOMPURPLE3,
+          VIVOY3005GPHANTOMPURPLE4,
+          VIVOY3005GPHANTOMPURPLE5,
+        ],
+      },
+      {
+        id: 3,
+        name: "TITANIUM SILVER",
+        images: [
+          VIVOY3005GTITANIUMSILVER1,
+          VIVOY3005GTITANIUMSILVER2,
+          VIVOY3005GTITANIUMSILVER3,
+          VIVOY3005GTITANIUMSILVER4,
+          VIVOY3005GTITANIUMSILVER5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "VIVO16",
+    name: "VIVO Y300 5G 8/256",
+    brand: "VIVO",
+    series: "Y300",
+    image: VIVOY3005GPHANTOMPURPLE1,
+    launchDate: "21-11-2024",
+    salesPrice: 23999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 4.3,
+    newArrival: true,
+    mrp: 28999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "Snapdragon 4 Gen 2 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB | 256  GB ",
+      Battery: "5000 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
+    colors: [
+      {
+        id: 1,
+        name: "MERALD GREEN",
+        images: [
+          VIVOY3005GEMERALDGREEN1,
+          VIVOY3005GEMERALDGREEN2,
+          VIVOY3005GEMERALDGREEN3,
+          VIVOY3005GEMERALDGREEN4,
+          VIVOY3005GEMERALDGREEN5,
+        ],
+      },
+      {
+        id: 2,
+        name: "PHANTOM PURPLE",
+        images: [
+          VIVOY3005GPHANTOMPURPLE1,
+          VIVOY3005GPHANTOMPURPLE2,
+          VIVOY3005GPHANTOMPURPLE3,
+          VIVOY3005GPHANTOMPURPLE4,
+          VIVOY3005GPHANTOMPURPLE5,
+        ],
+      },
+      {
+        id: 3,
+        name: "TITANIUM SILVER",
+        images: [
+          VIVOY3005GTITANIUMSILVER1,
+          VIVOY3005GTITANIUMSILVER2,
+          VIVOY3005GTITANIUMSILVER3,
+          VIVOY3005GTITANIUMSILVER4,
+          VIVOY3005GTITANIUMSILVER5,
+        ],
+      },
+    ],
   },
 
   //tecno
@@ -1444,6 +1612,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 13999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Helio G85 Octa core ",
+      Display: "6.67″ (16.94 cm) 60Hz AMOLED ",
+      "Rear Camera": "64+2+0.08 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5000 mAh | 33W Fast Charging ",
+      Network: "Dual SIM: 4G & 4G",
+      OS: "Android v13 ",
+    },
     colors: [
       {
         id: 1,
@@ -1468,16 +1648,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Helio G85 Octa core ",
-      Display: "6.67″ (16.94 cm) 60Hz AMOLED ",
-      "Rear Camera": "64+2+0.08 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5000 mAh | 33W Fast Charging ",
-      Network: "Dual SIM: 4G & 4G",
-      OS: "Android v13 ",
-    },
   },
 
   {
@@ -1491,6 +1661,18 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 24999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 8050 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
+      "Rear Camera": "64+2+2 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5000 mAh | 33W Fast Charging ",
+      Network: "Dual SIM: 5G & 4G",
+      OS: "Android v13",
+    },
     colors: [
       {
         id: 1,
@@ -1514,16 +1696,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 8050 Octa core ",
-      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
-      "Rear Camera": "64+2+2 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "5000 mAh | 33W Fast Charging ",
-      Network: "Dual SIM: 5G & 4G",
-      OS: "Android v13",
-    },
   },
 
   {
@@ -1537,6 +1709,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 27999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 7020 Octa core ",
+      Display: "6.78″ (17.22 cm) 120Hz LTPS AMOLED ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "50 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5000 mAh | 33W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -1561,16 +1745,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 7020 Octa core ",
-      Display: "6.78″ (17.22 cm) 120Hz LTPS AMOLED ",
-      "Rear Camera": "50+2 MP",
-      "Front Camera": "50 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5000 mAh | 33W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -1584,6 +1758,18 @@ export const ALLPHONES = [
     rating: 4.6,
     newArrival: true,
     mrp: 47999,
+    ram: 12,
+    storage: 512,
+    specifications: {
+      Processor: "MediaTek Dimensity 8200 Octa core ",
+      Display: "6.77″ (17.2 cm) 120Hz LTPO AMOLED ",
+      "Rear Camera": "50+50+50 MP",
+      "Front Camera": "50 MP",
+      "RAM | Storage": "12 GB | 512 GB ",
+      Battery: "5000 mAh | 70W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14",
+    },
     colors: [
       {
         id: 1,
@@ -1608,16 +1794,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 8200 Octa core ",
-      Display: "6.77″ (17.2 cm) 120Hz LTPO AMOLED ",
-      "Rear Camera": "50+50+50 MP",
-      "Front Camera": "50 MP",
-      "RAM | Storage": "12 GB | 512 GB ",
-      Battery: "5000 mAh | 70W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14",
-    },
   },
 
   {
@@ -1631,6 +1807,18 @@ export const ALLPHONES = [
     rating: 3.8,
     newArrival: true,
     mrp: 51999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 9000 Octa core ",
+      Display: "6.8″ (17.27 cm) 120Hz AMOLED ",
+      "Rear Camera": "64+13+2 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5160 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 4G",
+      OS: "Android v12 ",
+    },
     colors: [
       {
         id: 1,
@@ -1653,16 +1841,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 9000 Octa core ",
-      Display: "6.8″ (17.27 cm) 120Hz AMOLED ",
-      "Rear Camera": "64+13+2 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5160 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 4G",
-      OS: "Android v12 ",
-    },
   },
 
   {
@@ -1676,6 +1854,18 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 61999,
+    ram: 12,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 9000 Octa core ",
+      Display: "6.8″ (17.27 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+50+13 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "12 GB | 256 GB ",
+      Battery: "5160 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 4G",
+      OS: "Android v12 ",
+    },
     colors: [
       {
         id: 1,
@@ -1699,16 +1889,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 9000 Octa core ",
-      Display: "6.8″ (17.27 cm) 120Hz AMOLED ",
-      "Rear Camera": "50+50+13 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "12 GB | 256 GB ",
-      Battery: "5160 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 4G",
-      OS: "Android v12 ",
-    },
   },
 
   {
@@ -1722,6 +1902,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 15999,
+    ram: 6,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz IPS LCD ",
+      "Rear Camera": "108 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "6 GB | 128 GB ",
+      Battery: "5000 mAh | 18W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -1756,16 +1948,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-      Display: "6.67″ (16.94 cm) 120Hz IPS LCD ",
-      "Rear Camera": "108 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "6 GB | 128 GB ",
-      Battery: "5000 mAh | 18W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -1779,6 +1961,18 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 24999,
+    ram: 12,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 6080 Octa core ",
+      Display: "6.78″ (17.22 cm) 120Hz AMOLED ",
+      "Rear Camera": "108+2+0.08 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "12 GB | 256 GB ",
+      Battery: "6000 mAh | 70W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -1803,16 +1997,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6080 Octa core ",
-      Display: "6.78″ (17.22 cm) 120Hz AMOLED ",
-      "Rear Camera": "108+2+0.08 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "12 GB | 256 GB ",
-      Battery: "6000 mAh | 70W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -1826,6 +2010,18 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 11999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz IPS LCD ",
+      "Rear Camera": "48 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "5000 mAh | 18W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14",
+    },
     colors: [
       {
         id: 1,
@@ -1851,16 +2047,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-      Display: "6.67″ (16.94 cm) 120Hz IPS LCD ",
-      "Rear Camera": "48 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
-      Battery: "5000 mAh | 18W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14",
-    },
   },
   //MI Phones
   {
@@ -1876,6 +2062,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 13999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
+      Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",
+      "Rear Camera": "50+0.08 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "5000 mAh | 18W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13",
+    },
     colors: [
       {
         id: 1,
@@ -1914,16 +2112,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
-      Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",
-      "Rear Camera": "50+0.08 MP",
-      "Front Camera": "5 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
-      Battery: "5000 mAh | 18W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13",
-    },
   },
   {
     id: "MI2",
@@ -1938,6 +2126,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 15999,
+    ram: 6,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
+      Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",
+      "Rear Camera": "50+0.08 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "6 GB | 128 GB ",
+      Battery: "5000 mAh | 18W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13",
+    },
     colors: [
       {
         id: 1,
@@ -1976,16 +2176,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
-      Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",
-      "Rear Camera": "50+0.08 MP",
-      "Front Camera": "5 MP",
-      "RAM | Storage": "6 GB | 128 GB ",
-      Battery: "5000 mAh | 18W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13",
-    },
   },
 
   {
@@ -2001,6 +2191,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 22999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
+      Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",
+      "Rear Camera": "50+0.08 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5000 mAh | 18W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13",
+    },
     colors: [
       {
         id: 1,
@@ -2039,16 +2241,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
-      Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",
-      "Rear Camera": "50+0.08 MP",
-      "Front Camera": "5 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5000 mAh | 18W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13",
-    },
   },
 
   {
@@ -2064,6 +2256,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 20999,
+    ram: 6,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6080 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
+      "Rear Camera": "108+8+2 MP",
+      "Front Camera": "16 MP",
+      "RAM | Storage": "6 GB | 128 GB ",
+      Battery: "5000 mAh | 33W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13",
+    },
     colors: [
       {
         id: 1,
@@ -2112,16 +2316,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6080 Octa core ",
-      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
-      "Rear Camera": "108+8+2 MP",
-      "Front Camera": "16 MP",
-      "RAM | Storage": "6 GB | 128 GB ",
-      Battery: "5000 mAh | 33W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13",
-    },
   },
   {
     id: "MI5",
@@ -2136,6 +2330,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 24999,
+    ram: 12,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 6080 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
+      "Rear Camera": "108+8+2 MP",
+      "Front Camera": "16 MP",
+      "RAM | Storage": "12 GB | 256 GB ",
+      Battery: "5000 mAh | 33W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13",
+    },
     colors: [
       {
         id: 1,
@@ -2184,16 +2390,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6080 Octa core ",
-      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
-      "Rear Camera": "108+8+2 MP",
-      "Front Camera": "16 MP",
-      "RAM | Storage": "12 GB | 256 GB ",
-      Battery: "5000 mAh | 33W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13",
-    },
   },
   {
     id: "MI6",
@@ -2208,6 +2404,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 22999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 6080 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
+      "Rear Camera": "108+8+2 MP",
+      "Front Camera": "16 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5000 mAh | 33W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13",
+    },
     colors: [
       {
         id: 1,
@@ -2256,16 +2464,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6080 Octa core ",
-      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
-      "Rear Camera": "108+8+2 MP",
-      "Front Camera": "16 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5000 mAh | 33W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13",
-    },
   },
 
   {
@@ -2281,6 +2479,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 17999,
+    ram: 6,
+    storage: 128,
     specifications: {
       Processor: "Snapdragon 4 Gen 2 Octa core ",
       Display: "6.79″ (17.25 cm) 120Hz IPS LCD ",
@@ -2342,6 +2542,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 19999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "Snapdragon 4 Gen 2 Octa core ",
       Display: "6.79″ (17.25 cm) 120Hz IPS LCD ",
@@ -2404,6 +2606,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 33999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 7200 Ultra Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
@@ -2465,6 +2669,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 35999,
+    ram: 12,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 7200 Ultra Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
@@ -2526,6 +2732,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 37999,
+    ram: 12,
+    storage: 512,
     specifications: {
       Processor: "MediaTek Dimensity 7200 Ultra Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
@@ -2588,6 +2796,18 @@ export const ALLPHONES = [
     rating: 4.0,
     newArrival: true,
     mrp: 16990,
+    ram: 4,
+    storage: 64,
+    specifications: {
+      Processor: "MediaTek Helio G35 Octa core ",
+      Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
+      "Rear Camera": "13+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "4 GB | 64 GB ",
+      Battery: "5000 mAh | 33W Fast Charging ",
+      Network: "Dual SIM: 4G & 4G",
+      OS: "Android v12 ",
+    },
     colors: [
       {
         id: 1,
@@ -2606,16 +2826,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Helio G35 Octa core ",
-      Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
-      "Rear Camera": "13+2 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "4 GB | 64 GB ",
-      Battery: "5000 mAh | 33W Fast Charging ",
-      Network: "Dual SIM: 4G & 4G",
-      OS: "Android v12 ",
-    },
   },
 
   {
@@ -2630,6 +2840,18 @@ export const ALLPHONES = [
     rating: 3.5,
     newArrival: true,
     mrp: 12999,
+    ram: 3,
+    storage: 64,
+    specifications: {
+      Processor: "MediaTek Helio G35 Octa core ",
+      Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
+      "Rear Camera": "8 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "3 GB | 64 GB ",
+      Battery: "5000 mAh ",
+      Network: "Dual SIM: 4G & 4G",
+      OS: "Android v12",
+    },
     colors: [
       {
         id: 1,
@@ -2654,16 +2876,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Helio G35 Octa core ",
-      Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
-      "Rear Camera": "8 MP",
-      "Front Camera": "5 MP",
-      "RAM | Storage": "3 GB | 64 GB ",
-      Battery: "5000 mAh ",
-      Network: "Dual SIM: 4G & 4G",
-      OS: "Android v12",
-    },
   },
 
   {
@@ -2678,6 +2890,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 19999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Helio G35 Octa core ",
+      Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "5000 mAh | 33W Fast Charging ",
+      Network: "Dual SIM: 4G & 4G",
+      OS: "Android v12",
+    },
     colors: [
       {
         id: 1,
@@ -2702,16 +2926,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Helio G35 Octa core ",
-      Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
-      "Rear Camera": "50+2 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
-      Battery: "5000 mAh | 33W Fast Charging ",
-      Network: "Dual SIM: 4G & 4G",
-      OS: "Android v12",
-    },
   },
 
   {
@@ -2727,6 +2941,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 18999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz LCD ",
+      "Rear Camera": "32+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5100 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -2751,16 +2977,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-      Display: "6.67″ (16.94 cm) 120Hz LCD ",
-      "Rear Camera": "32+2 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5100 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "OPPO6",
@@ -2775,6 +2991,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 16999,
+    ram: 6,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz LCD ",
+      "Rear Camera": "32+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "6 GB | 128 GB ",
+      Battery: "5100 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -2799,16 +3027,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-      Display: "6.67″ (16.94 cm) 120Hz LCD ",
-      "Rear Camera": "32+2 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "6 GB | 128 GB ",
-      Battery: "5100 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -2824,6 +3042,18 @@ export const ALLPHONES = [
     rating: 4.4,
     newArrival: true,
     mrp: 53999,
+    ram: 12,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 7300 Energy Octa core ",
+      Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
+      "Rear Camera": "50+8+50 MP",
+      "Front Camera": "50 MP",
+      "RAM | Storage": "12 GB | 256 GB ",
+      Battery: "5000 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -2848,16 +3078,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 7300 Energy Octa core ",
-      Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
-      "Rear Camera": "50+8+50 MP",
-      "Front Camera": "50 MP",
-      "RAM | Storage": "12 GB | 256 GB ",
-      Battery: "5000 mAh | 80W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -2873,6 +3093,18 @@ export const ALLPHONES = [
     rating: 4.4,
     newArrival: true,
     mrp: 55999,
+    ram: 12,
+    storage: 512,
+    specifications: {
+      Processor: "MediaTek Dimensity 7300 Energy Octa core ",
+      Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
+      "Rear Camera": "50+8+50 MP",
+      "Front Camera": "50 MP",
+      "RAM | Storage": "12 GB | 512 GB ",
+      Battery: "5000 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -2897,16 +3129,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 7300 Energy Octa core ",
-      Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
-      "Rear Camera": "50+8+50 MP",
-      "Front Camera": "50 MP",
-      "RAM | Storage": "12 GB | 512 GB ",
-      Battery: "5000 mAh | 80W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "OPPO9",
@@ -2920,6 +3142,18 @@ export const ALLPHONES = [
     rating: 4.4,
     newArrival: true,
     mrp: 43999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 7300 Energy Octa core ",
+      Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
+      "Rear Camera": "50+8+2 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5000 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -2946,16 +3180,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 7300 Energy Octa core ",
-      Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
-      "Rear Camera": "50+8+2 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5000 mAh | 80W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -2971,6 +3195,18 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 34999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 7050 Octa core ",
+      Display: "6.7″ (17.02 cm) AMOLED ",
+      "Rear Camera": "64 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB| 256 GB ",
+      Battery: "5000 mAh Fast Charging ",
+      Network: "Single SIM: 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -2995,16 +3231,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 7050 Octa core ",
-      Display: "6.7″ (17.02 cm) AMOLED ",
-      "Rear Camera": "64 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "8 GB| 256 GB ",
-      Battery: "5000 mAh Fast Charging ",
-      Network: "Single SIM: 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "OPPO11",
@@ -3019,6 +3245,18 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 32999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 7050 Octa core ",
+      Display: "6.7″ (17.02 cm) AMOLED ",
+      "Rear Camera": "64 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB| 128 GB ",
+      Battery: "5000 mAh Fast Charging ",
+      Network: "Single SIM: 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -3043,16 +3281,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 7050 Octa core ",
-      Display: "6.7″ (17.02 cm) AMOLED ",
-      "Rear Camera": "64 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "8 GB| 128 GB ",
-      Battery: "5000 mAh Fast Charging ",
-      Network: "Single SIM: 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -3068,6 +3296,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 28999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core",
+      Display: "6.67″ (16.94 cm) 120Hz Flat OLED ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5000 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -3092,16 +3332,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core",
-      Display: "6.67″ (16.94 cm) 120Hz Flat OLED ",
-      "Rear Camera": "50+2 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5000 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "OPPO13",
@@ -3116,6 +3346,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 26999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core",
+      Display: "6.67″ (16.94 cm) 120Hz Flat OLED ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5000 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -3140,16 +3382,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core",
-      Display: "6.67″ (16.94 cm) 120Hz Flat OLED ",
-      "Rear Camera": "50+2 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "5000 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -3165,6 +3397,18 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 22999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz LCD ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5100 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -3200,16 +3444,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-      Display: "6.67″ (16.94 cm) 120Hz LCD ",
-      "Rear Camera": "50+2 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5100 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -3225,6 +3459,18 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 20999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz LCD ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5100 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -3260,16 +3506,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-      Display: "6.67″ (16.94 cm) 120Hz LCD ",
-      "Rear Camera": "50+2 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "5100 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -3285,6 +3521,18 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 15999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz LCD ",
+      "Rear Camera": "8 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "5100 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -3309,16 +3557,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-      Display: "6.67″ (16.94 cm) 120Hz LCD ",
-      "Rear Camera": "8 MP",
-      "Front Camera": "5 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
-      Battery: "5100 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -3334,6 +3572,18 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 14999,
+    ram: 4,
+    storage: 64,
+    specifications: {
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz LCD ",
+      "Rear Camera": "8 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "4 GB | 64 GB ",
+      Battery: "5100 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -3358,16 +3608,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-      Display: "6.67″ (16.94 cm) 120Hz LCD ",
-      "Rear Camera": "8 MP",
-      "Front Camera": "5 MP",
-      "RAM | Storage": "4 GB | 64 GB ",
-      Battery: "5100 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   //REALME PHONES
@@ -3383,6 +3623,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 10999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Processor: "Unisoc Octa core ",
       Display: "6.74″ (17.12 cm) 90Hz IPS LCD ",
@@ -3407,6 +3649,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 22999,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.72″ (17.07 cm) 120Hz IPS LCD ",
@@ -3431,6 +3675,8 @@ export const ALLPHONES = [
     rating: 4.3,
     newArrival: true,
     mrp: 20999,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6100 Plus Octa core ",
       Display: "6.72″ (17.07 cm) 120Hz IPS LCD ",
@@ -3457,6 +3703,8 @@ export const ALLPHONES = [
     rating: 4.7,
     newArrival: true,
     mrp: 19999,
+    ram: 6,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.7″ (17.02 cm) 90Hz Super AMOLED ",
@@ -3519,6 +3767,8 @@ export const ALLPHONES = [
     rating: 4.7,
     newArrival: true,
     mrp: 21499,
+    ram: 8,
+    storage: 128,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.7″ (17.02 cm) 90Hz Super AMOLED ",
@@ -3580,6 +3830,8 @@ export const ALLPHONES = [
     rating: 4.7,
     newArrival: true,
     mrp: 24499,
+    ram: 8,
+    storage: 256,
     specifications: {
       Processor: "MediaTek Dimensity 6300 Octa core ",
       Display: "6.7″ (17.02 cm) 90Hz Super AMOLED ",
@@ -3641,6 +3893,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 15999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
+      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
+      "Rear Camera": "50+5+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "6000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -3680,16 +3944,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
-      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
-      "Rear Camera": "50+5+2 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
-      Battery: "6000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -3705,6 +3959,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 16999,
+    ram: 6,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
+      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
+      "Rear Camera": "50+5+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "6 GB | 128 GB ",
+      Battery: "6000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -3744,16 +4010,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
-      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
-      "Rear Camera": "50+5+2 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "6 GB | 128 GB ",
-      Battery: "6000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "SAMSUNG6",
@@ -3768,6 +4024,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 17999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
+      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
+      "Rear Camera": "50+5+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "6000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -3806,16 +4074,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
-      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
-      "Rear Camera": "50+5+2 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "6000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -3831,6 +4089,18 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 10999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
+      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
+      "Rear Camera": "50+5+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -3870,16 +4140,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
-      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
-      "Rear Camera": "50+5+2 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "5000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "SAMSUNG8",
@@ -3894,6 +4154,18 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 19999,
+    ram: 6,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
+      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
+      "Rear Camera": "50+5+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "6 GB | 128 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -3933,16 +4205,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
-      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
-      "Rear Camera": "50+5+2 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "6 GB | 128 GB ",
-      Battery: "5000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "SAMSUNG9",
@@ -3957,6 +4219,18 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 24499,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
+      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
+      "Rear Camera": "50+5+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -3996,16 +4270,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
-      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
-      "Rear Camera": "50+5+2 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -4020,6 +4284,18 @@ export const ALLPHONES = [
     rating: 4.1,
     newArrival: true,
     mrp: 17999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Processor: "Samsung Exynos 1330 Octa core ",
+      Display: "6.6″ (16.76 cm) 90Hz PLS LCD ",
+      "Rear Camera": "50+2+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "6000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13 ",
+    },
     colors: [
       {
         id: 1,
@@ -4046,16 +4322,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 1330 Octa core ",
-      Display: "6.6″ (16.76 cm) 90Hz PLS LCD ",
-      "Rear Camera": "50+2+2 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
-      Battery: "6000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13 ",
-    },
   },
 
   {
@@ -4070,6 +4336,18 @@ export const ALLPHONES = [
     rating: 4,
     newArrival: true,
     mrp: 15499,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Processor: "Samsung Exynos 1330 Octa core ",
+      Display: "6.6″ (16.76 cm) 90Hz PLS LCD ",
+      "Rear Camera": "50+2+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "5000 mAh | 15W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13 ",
+    },
     colors: [
       {
         id: 1,
@@ -4108,16 +4386,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 1330 Octa core ",
-      Display: "6.6″ (16.76 cm) 90Hz PLS LCD ",
-      "Rear Camera": "50+2+2 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
-      Battery: "5000 mAh | 15W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13 ",
-    },
   },
 
   {
@@ -4132,6 +4400,18 @@ export const ALLPHONES = [
     rating: 4,
     newArrival: true,
     mrp: 12999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Processor: "Samsung Exynos 1330 Octa core ",
+      Display: "6.6″ (16.76 cm) 90Hz PLS LCD ",
+      "Rear Camera": "50+2+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "5000 mAh | 15W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13 ",
+    },
     colors: [
       {
         id: 1,
@@ -4167,16 +4447,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 1330 Octa core ",
-      Display: "6.6″ (16.76 cm) 90Hz PLS LCD ",
-      "Rear Camera": "50+2+2 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
-      Battery: "5000 mAh | 15W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13 ",
-    },
   },
 
   {
@@ -4192,6 +4462,8 @@ export const ALLPHONES = [
     newArrival: true,
     mrp: 11999,
 
+    ram: 4,
+    storage: 64,
     specifications: {
       Processor: "Samsung Exynos 1330 Octa core ",
       Display: "6.6″ (16.76 cm) 90Hz PLS LCD ",
@@ -4216,6 +4488,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 15999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Processor: "Snapdragon 680 Octa core ",
+      Display: "6.7″ (17.02 cm) 90Hz PLS LCD ",
+      "Rear Camera": "50+2+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 4G & 4G",
+      OS: "Android v13 ",
+    },
     colors: [
       {
         id: 1,
@@ -4233,16 +4517,6 @@ export const ALLPHONES = [
         images: [A05SLIGHTVIOLET1, A05SLIGHTVIOLET2, A05SLIGHTVIOLET3],
       },
     ],
-    specifications: {
-      Processor: "Snapdragon 680 Octa core ",
-      Display: "6.7″ (17.02 cm) 90Hz PLS LCD ",
-      "Rear Camera": "50+2+2 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
-      Battery: "5000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 4G & 4G",
-      OS: "Android v13 ",
-    },
   },
 
   {
@@ -4257,6 +4531,18 @@ export const ALLPHONES = [
     rating: 3.9,
     newArrival: true,
     mrp: 11499,
+    ram: 4,
+    storage: 64,
+    specifcatin: {
+      Processor: "MediaTek Helio G85 Octa core ",
+      Display: "6.7″ (17.02 cm) 60Hz PLS LCD ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "4 GB | 64 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 4G & 4G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -4295,16 +4581,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifcatin: {
-      Processor: "MediaTek Helio G85 Octa core ",
-      Display: "6.7″ (17.02 cm) 60Hz PLS LCD ",
-      "Rear Camera": "50+2 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "4 GB | 64 GB ",
-      Battery: "5000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 4G & 4G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -4319,6 +4595,18 @@ export const ALLPHONES = [
     rating: 3.8,
     newArrival: true,
     mrp: 15999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
+      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
+      "Rear Camera": "50+5+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "6000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -4357,16 +4645,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "MediaTek Dimensity 6100 Plus Octa core ",
-      Display: "6.5″ (16.51 cm) 90Hz Super AMOLED ",
-      "Rear Camera": "50+5+2 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
-      Battery: "6000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -4382,6 +4660,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 36999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "Samsung Exynos 1380 Octa core ",
+      Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
+      "Rear Camera": "50+8+5 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14",
+    },
     colors: [
       {
         id: 1,
@@ -4420,16 +4710,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 1380 Octa core ",
-      Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
-      "Rear Camera": "50+8+5 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14",
-    },
   },
   {
     id: "SAMSUNG18",
@@ -4444,6 +4724,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 36999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "Samsung Exynos 1380 Octa core ",
+      Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
+      "Rear Camera": "50+8+5 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14",
+    },
     colors: [
       {
         id: 1,
@@ -4482,16 +4774,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 1380 Octa core ",
-      Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
-      "Rear Camera": "50+8+5 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "5000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14",
-    },
   },
 
   {
@@ -4507,6 +4789,8 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 48999,
+    ram: 12,
+    storage: 256,
     specifications: {
       Processor: "Samsung Exynos 1480 Octa core ",
       Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
@@ -4558,6 +4842,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 42999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "Samsung Exynos 1480 Octa core ",
+      Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
+      "Rear Camera": "50+12+5 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -4584,16 +4880,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 1480 Octa core ",
-      Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
-      "Rear Camera": "50+12+5 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "5000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -4609,6 +4895,18 @@ export const ALLPHONES = [
     rating: 4.2,
     newArrival: true,
     mrp: 45999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "Samsung Exynos 1480 Octa core ",
+      Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
+      "Rear Camera": "50+12+5 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -4635,16 +4933,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 1480 Octa core ",
-      Display: "6.6″ (16.76 cm) 120Hz Super AMOLED ",
-      "Rear Camera": "50+12+5 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 
   {
@@ -4660,6 +4948,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 95999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "Snapdragon 8 Gen 2 Octa core ",
+      Display: "6.1″ (15.49 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "50+12+10 MP",
+      "Front Camera": "12 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "3900 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13",
+    },
     colors: [
       {
         id: 1,
@@ -4698,16 +4998,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Snapdragon 8 Gen 2 Octa core ",
-      Display: "6.1″ (15.49 cm) 120Hz Dynamic AMOLED 2x ",
-      "Rear Camera": "50+12+10 MP",
-      "Front Camera": "12 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "3900 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13",
-    },
   },
   {
     id: "SAMSUNG23",
@@ -4722,6 +5012,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 89999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "Snapdragon 8 Gen 2 Octa core ",
+      Display: "6.1″ (15.49 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "50+12+10 MP",
+      "Front Camera": "12 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "3900 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v13",
+    },
     colors: [
       {
         id: 1,
@@ -4760,16 +5062,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Snapdragon 8 Gen 2 Octa core ",
-      Display: "6.1″ (15.49 cm) 120Hz Dynamic AMOLED 2x ",
-      "Rear Camera": "50+12+10 MP",
-      "Front Camera": "12 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "3900 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13",
-    },
   },
   {
     id: "SAMSUNG24",
@@ -4784,6 +5076,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 74999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "Samsung Exynos 2400 Deca Core ",
+      Display: "6.2″ (15.75 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "50+12+10 MP",
+      "Front Camera": "12 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "4000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -4831,16 +5135,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 2400 Deca Core ",
-      Display: "6.2″ (15.75 cm) 120Hz Dynamic AMOLED 2x ",
-      "Rear Camera": "50+12+10 MP",
-      "Front Camera": "12 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "4000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "SAMSUNG25",
@@ -4855,6 +5149,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 79999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "Samsung Exynos 2400 Deca Core ",
+      Display: "6.2″ (15.75 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "50+12+10 MP",
+      "Front Camera": "12 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "4000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -4902,16 +5208,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 2400 Deca Core ",
-      Display: "6.2″ (15.75 cm) 120Hz Dynamic AMOLED 2x ",
-      "Rear Camera": "50+12+10 MP",
-      "Front Camera": "12 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "4000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "SAMSUNG26",
@@ -4926,6 +5222,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 89999,
+    ram: 8,
+    storage: 512,
+    specifications: {
+      Processor: "Samsung Exynos 2400 Deca Core ",
+      Display: "6.2″ (15.75 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "50+12+10 MP",
+      "Front Camera": "12 MP",
+      "RAM | Storage": "8 GB | 512 GB ",
+      Battery: "4000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -4974,16 +5282,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 2400 Deca Core ",
-      Display: "6.2″ (15.75 cm) 120Hz Dynamic AMOLED 2x ",
-      "Rear Camera": "50+12+10 MP",
-      "Front Camera": "12 MP",
-      "RAM | Storage": "8 GB | 512 GB ",
-      Battery: "4000 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "SAMSUNG27",
@@ -4998,6 +5296,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 99999,
+    ram: 12,
+    storage: 256,
+    specifications: {
+      Processor: "Samsung Exynos 2400 Deca Core ",
+      Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "50+12+10 MP",
+      "Front Camera": "12 MP",
+      "RAM | Storage": "12 GB | 256 GB ",
+      Battery: "4900 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -5023,16 +5333,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 2400 Deca Core ",
-      Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",
-      "Rear Camera": "50+12+10 MP",
-      "Front Camera": "12 MP",
-      "RAM | Storage": "12 GB | 256 GB ",
-      Battery: "4900 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "SAMSUNG28",
@@ -5047,6 +5347,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 119999,
+    ram: 12,
+    storage: 512,
+    specifications: {
+      Processor: "Samsung Exynos 2400 Deca Core ",
+      Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "50+12+10 MP",
+      "Front Camera": "12 MP",
+      "RAM | Storage": "12 GB | 512 GB ",
+      Battery: "4900 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -5072,16 +5384,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 2400 Deca Core ",
-      Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",
-      "Rear Camera": "50+12+10 MP",
-      "Front Camera": "12 MP",
-      "RAM | Storage": "12 GB | 512 GB ",
-      Battery: "4900 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "SAMSUNG29",
@@ -5096,6 +5398,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 134999,
+    ram: 12,
+    storage: 256,
+    specifications: {
+      Processor: "Snapdragon 8 Gen 3 Octa core ",
+      Display: "6.8″ (17.27 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "200+12+10+50 MP",
+      "Front Camera": "12 MP",
+      "RAM | Storage": "12 GB | 256 GB ",
+      Battery: "5000 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -5142,16 +5456,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Snapdragon 8 Gen 3 Octa core ",
-      Display: "6.8″ (17.27 cm) 120Hz Dynamic AMOLED 2x ",
-      "Rear Camera": "200+12+10+50 MP",
-      "Front Camera": "12 MP",
-      "RAM | Storage": "12 GB | 256 GB ",
-      Battery: "5000 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "SAMSUNG30",
@@ -5166,6 +5470,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 144999,
+    ram: 12,
+    storage: 512,
+    specifications: {
+      Processor: "Snapdragon 8 Gen 3 Octa core ",
+      Display: "6.8″ (17.27 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "200+12+10+50 MP",
+      "Front Camera": "12 MP",
+      "RAM | Storage": "12 GB | 512 GB ",
+      Battery: "5000 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -5212,16 +5528,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Snapdragon 8 Gen 3 Octa core ",
-      Display: "6.8″ (17.27 cm) 120Hz Dynamic AMOLED 2x ",
-      "Rear Camera": "200+12+10+50 MP",
-      "Front Camera": "12 MP",
-      "RAM | Storage": "12 GB | 512 GB ",
-      Battery: "5000 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "SAMSUNG31",
@@ -5236,6 +5542,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: true,
     mrp: 64999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "Samsung Exynos 2400e Deca Core ",
+      Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "50+12+8 MP",
+      "Front Camera": "10 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "4700 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -5274,16 +5592,6 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 2400e Deca Core ",
-      Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",
-      "Rear Camera": "50+12+8 MP",
-      "Front Camera": "10 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "4700 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
   {
     id: "SAMSUNG32",
@@ -5298,6 +5606,18 @@ export const ALLPHONES = [
     rating: 4.5,
     newArrival: false,
     mrp: 79999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "Samsung Exynos 2400e Deca Core ",
+      Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "50+12+8 MP",
+      "Front Camera": "10 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "4700 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
     colors: [
       {
         id: 1,
@@ -5336,15 +5656,5 @@ export const ALLPHONES = [
         ],
       },
     ],
-    specifications: {
-      Processor: "Samsung Exynos 2400e Deca Core ",
-      Display: "6.7″ (17.02 cm) 120Hz Dynamic AMOLED 2x ",
-      "Rear Camera": "50+12+8 MP",
-      "Front Camera": "10 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "4700 mAh | 25W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-    },
   },
 ];
