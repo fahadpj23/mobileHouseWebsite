@@ -51,10 +51,10 @@ body {
 }
 
 .carousel .thumb {
-  border: 2px solid #ddd; /* Add a border */
+  border: 2px solid #ddd;
   background-color: "#b1b1b1";
 }
 
 .carousel .thumb.selected {
-  border-color: #007bff; /* Highlight active thumbnail */
+  border-color: #007bff;
 }
