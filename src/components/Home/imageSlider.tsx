@@ -2,6 +2,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { MAINBANNER } from "constants/mainBanner";
 import { FC } from "react";
+import { Link } from "react-router-dom";
 
 interface props {
   bannerItems: any;
@@ -18,18 +19,24 @@ const ImageSlider: FC<props> = ({ bannerItems }) => {
         showArrows={false}
       >
         {bannerItems?.map((banner: any) => (
-          <div key={banner?.id} className="relative">
-            <img
-              src={banner?.image}
-              className="h-[45vW] md:h-[25vw] rounded-none md:rounded-xl "
-              alt="banner"
-            />
-            {banner?.link && (
-              <button className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 p-1 rounded-lg text-white text-[11px] absolute left-5 bottom-4">
-                {banner?.link?.title}
-              </button>
-            )}
-          </div>
+          <Link
+            to={banner?.name}
+            key={banner?.id}
+            style={{ margin: "3px 8px" }}
+          >
+            <div className="relative">
+              <img
+                src={banner?.image}
+                className="h-[45vW] md:h-[25vw] rounded-none md:rounded-xl "
+                alt="banner"
+              />
+              {banner?.link && (
+                <button className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 p-1 rounded-lg text-white text-[11px] absolute left-5 bottom-4">
+                  {banner?.link?.title}
+                </button>
+              )}
+            </div>
+          </Link>
         ))}
       </Carousel>
     </div>

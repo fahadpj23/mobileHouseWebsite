@@ -1,7 +1,6 @@
 import MI13C from "assets/mi/MI13C.jpg";
 import MINOTE13 from "assets/mi/MINOTE13.jpg";
 import MINOTE13PROPLUS from "assets/mi/MINOTE13PROPLUS.jpg";
-import OPPOA57 from "assets/oppo/OPPOA57.jpg";
 import OPPOA17K from "assets/oppo/OPPOA17K.jpg";
 import OPPOA77 from "assets/oppo/OPPOA77.jpg";
 import OPPOK12X from "assets/oppo/OPPOK12X.jpg";
@@ -123,16 +122,6 @@ import OPPOA17kBLUE2 from "assets/oppo/OPPOA17K/OPPOA17KNAVYBLUE/OPPOA17KNAVYBLU
 import OPPOA17kBLUE3 from "assets/oppo/OPPOA17K/OPPOA17KNAVYBLUE/OPPOA17KNAVYBLUE3.jpg";
 import OPPOA17kBLUE4 from "assets/oppo/OPPOA17K/OPPOA17KNAVYBLUE/OPPOA17KNAVYBLUE4.jpg";
 import OPPOA17kBLUE5 from "assets/oppo/OPPOA17K/OPPOA17KNAVYBLUE/OPPOA17KNAVYBLUE5.jpg";
-
-import OPPOA57BLACK1 from "assets/oppo/OPPOA57/OPPOA57GLOWINGBLACK/OPPOA57GLOWINGBLACK1.jpg";
-import OPPOA57BLACK2 from "assets/oppo/OPPOA57/OPPOA57GLOWINGBLACK/OPPOA57GLOWINGBLACK2.jpg";
-import OPPOA57BLACK3 from "assets/oppo/OPPOA57/OPPOA57GLOWINGBLACK/OPPOA57GLOWINGBLACK3.jpg";
-import OPPOA57BLACK4 from "assets/oppo/OPPOA57/OPPOA57GLOWINGBLACK/OPPOA57GLOWINGBLACK4.jpg";
-import OPPOA57GREEN1 from "assets/oppo/OPPOA57/OPPOA57GREEN/OPPOA57GREEN1.jpg";
-import OPPOA57GREEN2 from "assets/oppo/OPPOA57/OPPOA57GREEN/OPPOA57GREEN2.jpg";
-import OPPOA57GREEN3 from "assets/oppo/OPPOA57/OPPOA57GREEN/OPPOA57GREEN3.jpg";
-import OPPOA57GREEN4 from "assets/oppo/OPPOA57/OPPOA57GREEN/OPPOA57GREEN4.jpg";
-import OPPOA57GREEN5 from "assets/oppo/OPPOA57/OPPOA57GREEN/OPPOA57GREEN5.jpg";
 
 import OPPOA77BLUE1 from "assets/oppo/OPPOA77/OPPOA77SKYBLUE/OPPOA77SKYBLUE1.jpg";
 import OPPOA77BLUE2 from "assets/oppo/OPPOA77/OPPOA77SKYBLUE/OPPOA77SKYBLUE2.jpg";
@@ -2784,50 +2773,6 @@ export const ALLPHONES = [
   },
 
   //OPPO PHONES
-  {
-    id: "OPPO1",
-    name: "OPPO A57 4G 4/64 ",
-    brand: "OPPO",
-    image: OPPOA57,
-    launchDate: "27-05-2022",
-    salesPrice: 10999,
-    specialOffer: true,
-    trendingPhone: false,
-    rating: 4.0,
-    newArrival: true,
-    mrp: 16990,
-    ram: 4,
-    storage: 64,
-    specifications: {
-      Processor: "MediaTek Helio G35 Octa core ",
-      Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
-      "Rear Camera": "13+2 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "4 GB | 64 GB ",
-      Battery: "5000 mAh | 33W Fast Charging ",
-      Network: "Dual SIM: 4G & 4G",
-      OS: "Android v12 ",
-    },
-    colors: [
-      {
-        id: 1,
-        name: "GLOWING BLACK",
-        images: [OPPOA57BLACK1, OPPOA57BLACK2, OPPOA57BLACK3, OPPOA57BLACK4],
-      },
-      {
-        id: 2,
-        name: "GLOWING GREEN",
-        images: [
-          OPPOA57GREEN1,
-          OPPOA57GREEN2,
-          OPPOA57GREEN3,
-          OPPOA57GREEN4,
-          OPPOA57GREEN5,
-        ],
-      },
-    ],
-  },
-
   {
     id: "OPPO2",
     name: "OPPO A17K 4G 3/64 ",

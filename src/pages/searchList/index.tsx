@@ -1,14 +1,14 @@
-import { getSearchPhones } from "utils/getSearchPhones";
 import SingleProductCard from "components/commonComponents/SingleProductCard";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getPhoneVariants } from "utils/getPhoneVariants";
 
 const SearchList = () => {
   const { searchWord } = useParams();
   const [productList, setProductList] = useState<any>([]);
 
   useEffect(() => {
-    searchWord && setProductList(getSearchPhones(searchWord));
+    searchWord && setProductList(getPhoneVariants(searchWord));
   }, [searchWord]);
 
   return (
