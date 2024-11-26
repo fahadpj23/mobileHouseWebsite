@@ -33,7 +33,14 @@ const MultiCarousel: FC<props> = ({ listItems }) => {
 
   return (
     <div className="bg-white">
-      <Carousel responsive={responsive} infinite={true} arrows={false}>
+      <Carousel
+        responsive={responsive}
+        infinite={true}
+        arrows={false}
+        autoPlay={true}
+        autoPlaySpeed={2000}
+        transitionDuration={500}
+      >
         {listItems?.map((product: any) => (
           <div key={product?.name} style={{ margin: "0px 2px" }}>
             <SingleProductCard product={product} />
