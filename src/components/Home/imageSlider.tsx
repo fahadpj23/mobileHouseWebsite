@@ -9,7 +9,7 @@ interface props {
 }
 const ImageSlider: FC<props> = ({ bannerItems }) => {
   return (
-    <div className="h-[40vw] md:h-[30vw] mt-0 md:mt-3">
+    <div className="h-[45vw] md:h-[30vw] -mt-3 md:mt-3">
       <Carousel
         autoPlay={true}
         showThumbs={false}
@@ -27,7 +27,7 @@ const ImageSlider: FC<props> = ({ bannerItems }) => {
             <div className="relative">
               <img
                 src={banner?.image}
-                className="h-[40vw] md:h-[25vw] rounded-none md:rounded-xl "
+                className="h-[40vw] md:h-[25vw] rounded-none md:rounded-xl  "
                 alt="banner"
               />
               {banner?.link && (

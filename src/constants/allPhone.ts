@@ -3256,7 +3256,7 @@ export const ALLPHONES = [
     colors: [
       {
         id: 1,
-        name: "Emerald Green",
+        name: "Amber Orange",
         images: [
           OPPOF27AMBERORANGE1,
           OPPOF27AMBERORANGE2,
@@ -3306,7 +3306,7 @@ export const ALLPHONES = [
     colors: [
       {
         id: 1,
-        name: "Emerald Green",
+        name: "Amber Orange",
         images: [
           OPPOF27AMBERORANGE1,
           OPPOF27AMBERORANGE2,
@@ -5337,7 +5337,7 @@ export const ALLPHONES = [
     series: "S24ULTRA",
     image: SAMSUNGS24ULTRA5GTITANIUMGRAY1,
     launchDate: "17-01-2024",
-    salesPrice: 117999,
+    salesPrice: 109999,
     specialOffer: true,
     trendingPhone: false,
     rating: 4.5,
@@ -5409,7 +5409,7 @@ export const ALLPHONES = [
     series: "S24ULTRA",
     image: SAMSUNGS24ULTRA5GTITANIUMGRAY1,
     launchDate: "17-01-2024",
-    salesPrice: 127999,
+    salesPrice: 119999,
     specialOffer: true,
     trendingPhone: false,
     rating: 4.5,
@@ -5476,6 +5476,78 @@ export const ALLPHONES = [
   },
   {
     id: "SAMSUNG31",
+    name: "SAMSUNG S24 Ultra 5G 12/ 1TB",
+    brand: "SAMSUNG",
+    series: "S24ULTRA",
+    image: SAMSUNGS24ULTRA5GTITANIUMGRAY1,
+    launchDate: "17-01-2024",
+    salesPrice: 139999,
+    specialOffer: true,
+    trendingPhone: false,
+    rating: 4.5,
+    newArrival: true,
+    mrp: 144999,
+    ram: 12,
+    storage: 512,
+    specifications: {
+      Processor: "Snapdragon 8 Gen 3 Octa core ",
+      Display: "6.8″ (17.27 cm) 120Hz Dynamic AMOLED 2x ",
+      "Rear Camera": "200+12+10+50 MP",
+      "Front Camera": "12 MP",
+      "RAM | Storage": "12 GB | 1TB ",
+      Battery: "5000 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
+    colors: [
+      {
+        id: 1,
+        name: "Titanium Black",
+        images: [
+          SAMSUNGS24ULTRA5GTITANIUMBLACK1,
+          SAMSUNGS24ULTRA5GTITANIUMBLACK2,
+          SAMSUNGS24ULTRA5GTITANIUMBLACK3,
+          SAMSUNGS24ULTRA5GTITANIUMBLACK4,
+          SAMSUNGS24ULTRA5GTITANIUMBLACK5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Titanium Gray",
+        images: [
+          SAMSUNGS24ULTRA5GTITANIUMGRAY1,
+          SAMSUNGS24ULTRA5GTITANIUMGRAY2,
+          SAMSUNGS24ULTRA5GTITANIUMGRAY3,
+          SAMSUNGS24ULTRA5GTITANIUMGRAY4,
+          SAMSUNGS24ULTRA5GTITANIUMGRAY5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Titanium Violet",
+        images: [
+          SAMSUNGS24ULTRA5GTITANIUMVIOLET1,
+          SAMSUNGS24ULTRA5GTITANIUMVIOLET2,
+          SAMSUNGS24ULTRA5GTITANIUMVIOLET3,
+          SAMSUNGS24ULTRA5GTITANIUMVIOLET4,
+          SAMSUNGS24ULTRA5GTITANIUMVIOLET5,
+        ],
+      },
+      {
+        id: 4,
+        name: "Titanium Yellow",
+        images: [
+          SAMSUNGS24ULTRA5GTITANIUMYELLOW1,
+          SAMSUNGS24ULTRA5GTITANIUMYELLOW2,
+          SAMSUNGS24ULTRA5GTITANIUMYELLOW3,
+          SAMSUNGS24ULTRA5GTITANIUMYELLOW4,
+          SAMSUNGS24ULTRA5GTITANIUMYELLOW5,
+        ],
+      },
+    ],
+  },
+  {
+    id: "SAMSUNG32",
     name: "SAMSUNG S24 FE 5G 8/128",
     brand: "SAMSUNG",
     series: "S24FE",
@@ -5539,7 +5611,7 @@ export const ALLPHONES = [
     ],
   },
   {
-    id: "SAMSUNG32",
+    id: "SAMSUNG33",
     name: "SAMSUNG S24 FE 5G 8/256",
     brand: "SAMSUNG",
     series: "S24FE",
