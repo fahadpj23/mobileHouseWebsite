@@ -9,7 +9,7 @@ interface props {
 }
 const ImageSlider: FC<props> = ({ bannerItems }) => {
   return (
-    <div className="h-[45vw] md:h-[30vw] -mt-3 md:mt-3">
+    <div className="h-[50vw] md:h-[30vw] mt-3">
       <Carousel
         autoPlay={true}
         showThumbs={false}
@@ -19,15 +19,11 @@ const ImageSlider: FC<props> = ({ bannerItems }) => {
         showArrows={false}
       >
         {bannerItems?.map((banner: any) => (
-          <Link
-            to={banner?.name}
-            key={banner?.id}
-            style={{ margin: "3px 8px" }}
-          >
+          <Link to={banner?.name} key={banner?.id}>
             <div className="relative">
               <img
                 src={banner?.image}
-                className="h-[40vw] md:h-[25vw] rounded-none md:rounded-xl  "
+                className="h-[50vw] md:h-[25vw] rounded-none md:rounded-xl  "
                 alt="banner"
               />
               {banner?.link && (
