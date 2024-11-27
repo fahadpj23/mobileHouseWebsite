@@ -9,6 +9,7 @@ import { useScreenSize } from "hooks/useScreenSize";
 import ProductImageSlider from "components/commonComponents/productImageSlider";
 import { getPhoneVariants } from "utils/getPhoneVariants";
 import { toPascalCase } from "utils/pascalCaseConvert";
+import { getProductImage } from "utils/getProductImages";
 
 const SingleItem = () => {
   const { productId } = useParams();
@@ -25,13 +26,17 @@ const SingleItem = () => {
 
   useEffect(() => {
     if (product) {
-      product?.colors && setProductImages(product?.colors[0]);
-      setDisplayImage(
-        product?.colors ? product?.colors[0]?.images[0] : product?.image
-      );
+      const prdouctColors = getProductImage(product?.id);
+      if (prdouctColors?.length) {
+        setProductImages(prdouctColors[0]);
+        setDisplayImage(prdouctColors[0]?.images[0]);
+      } else {
+      }
+      product?.colors && setProductImages(product?.image);
+      setDisplayImage(product?.image);
     }
   }, [product]);
-
+  console.log(getProductImage(product?.id));
   useEffect(() => {
     product?.series && setPhoneVariants(getPhoneVariants(product?.series));
   }, [product]);

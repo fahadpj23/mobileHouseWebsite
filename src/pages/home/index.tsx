@@ -9,6 +9,7 @@ import { MAINBANNER } from "constants/mainBanner";
 // import WhatsappAds from "components/Home/whatsappAds";
 import { getNewArrivalPhones } from "utils/getNewArrival";
 import AvailableEmi from "components/Home/availableEmi";
+import { ALLPHONES } from "constants/allPhone";
 const ProductMiniList = React.lazy(
   () => import("components/Home/productMiniList")
 );
