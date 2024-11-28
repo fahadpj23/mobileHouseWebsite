@@ -38,11 +38,11 @@ const SearchBar: FC<any> = ({ setSearchOpen }) => {
               key={phone?.id}
               className="flex items-center space-x-4"
             >
-              <div>
+              <div className="p-1">
                 <img
-                  src={phone?.image ?? phone?.colors[0]?.images[0]}
+                  src={phone?.image}
                   alt="phone Image"
-                  className=" w-10 h-10"
+                  className=" w-8 h-10"
                 />
               </div>
               <div className="text-xs">
@@ -53,7 +53,7 @@ const SearchBar: FC<any> = ({ setSearchOpen }) => {
           );
         })}
       </div>
-      <div className="p-2 fixed bottom-3 left-0 w-full">
+      <div className="p-2 fixed bottom-1 left-0 w-full">
         <button
           onClick={() => setSearchOpen(false)}
           className="border-2 border-blue-600 bg-white  text-blue-600 text-center p-2  w-full"

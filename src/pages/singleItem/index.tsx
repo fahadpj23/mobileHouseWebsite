@@ -16,6 +16,7 @@ const SingleItem = () => {
   const [product, setProduct] = useState<any>("");
   const [productImages, setProductImages] = useState<any>();
   const [displayImage, setDisplayImage] = useState<any>();
+  const [productColors, setProductColors] = useState<any>([]);
   const [phoneVariants, setPhoneVariants] = useState<any>([]);
   const [isLoading, setIsLoading] = useState<any>(true);
   const { isMobile } = useScreenSize();
@@ -26,17 +27,18 @@ const SingleItem = () => {
 
   useEffect(() => {
     if (product) {
-      const prdouctColors = getProductImage(product?.id);
-      if (prdouctColors?.length) {
-        setProductImages(prdouctColors[0]);
-        setDisplayImage(prdouctColors[0]?.images[0]);
+      const colors = getProductImage(product?.id);
+      if (colors?.length) {
+        setProductColors(colors);
+        setProductImages(colors[0]);
+        setDisplayImage(colors[0]?.images[0]);
       } else {
       }
       product?.colors && setProductImages(product?.image);
       setDisplayImage(product?.image);
     }
   }, [product]);
-  console.log(getProductImage(product?.id));
+
   useEffect(() => {
     product?.series && setPhoneVariants(getPhoneVariants(product?.series));
   }, [product]);
@@ -130,19 +132,12 @@ const SingleItem = () => {
               onClick={() => handleWhatapp(product)}
               className="fixed bottom-10 right-10 text-green-600 z-50 text-[40px] animate-bounce shadow-2xl "
             />
-            {/* <div className="flex items-center space-x-2 fixed bottom-10 right-10  z-50 animate-bounce bg-gray-100 p-2">
-              <RiWhatsappFill
-                onClick={() => handleWhatapp(product)}
-                className=" text-green-600 z-50 text-[40px]  shadow-2xl "
-              />
-              <h1 className="text-green-600 ">Whatsapp Now</h1>
-            </div> */}
 
             <div className="flex flex-col">
-              {product?.colors && (
+              {productColors?.length && (
                 <div>
                   <div className="flex space-x-6 ml-6 mt-6 ">
-                    {product?.colors?.map((color: any) => {
+                    {productColors?.map((color: any) => {
                       return (
                         <button
                           key={color?.images[0]}
