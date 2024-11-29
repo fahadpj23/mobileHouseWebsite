@@ -9,6 +9,7 @@ import { MAINBANNER } from "constants/mainBanner";
 // import WhatsappAds from "components/Home/whatsappAds";
 import { getNewArrivalPhones } from "utils/getNewArrival";
 import AvailableEmi from "components/Home/availableEmi";
+import HomeSkeleton from "components/skeleton/homeSkeleton";
 // import Footer from "components/Home/footer";
 const ProductMiniList = React.lazy(
   () => import("components/Home/productMiniList")
@@ -24,7 +25,7 @@ const HomePage = () => {
         <ImageSlider bannerItems={MAINBANNER} />
         <Brands />
         <AvailableEmi />
-        <Suspense fallback={<div></div>}>
+        <Suspense fallback={<HomeSkeleton />}>
           <div className="p-2 bg-white ">
             <ProductMiniList
               title="Special Offer"
