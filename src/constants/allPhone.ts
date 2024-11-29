@@ -57,6 +57,8 @@ import VIVOV40GANGESBLUE1 from "assets/vivo/VIVOV40/VIVOV40GANGESBLUE/VIVOV40GAN
 
 import VIVOV40LOTUSPURPLE1 from "assets/vivo/VIVOV40/VIVOV40LOTUSPURPLE/VIVOV40LOTUSPURPLE1.jpg";
 
+import VIVOY58HIMALAYANBLUE1 from "assets/vivo/VIVOY58/VIVOY58HIMALAYANBLUE/VIVOY58HIMALAYANBLUE1.jpg";
+
 import VIVOV40EMINTGREEN1 from "assets/vivo/VIVOV40E/VIVOV40EMINTGREEN/VIVOV40EMINTGREEN1.jpg";
 
 import VIVOV40EROYALBRONZE1 from "assets/vivo/VIVOV40E/VIVOV40EROYALBRONZE/VIVOV40EROYALBRONZE1.jpg";
@@ -260,7 +262,7 @@ export const ALLPHONES = [
     id: "VIVO6",
     name: "VIVO Y58 5G 8/128 ",
     brand: "VIVO",
-    image: VIVOV40EROYALBRONZE1,
+    image: VIVOY58HIMALAYANBLUE1,
     launchDate: "20-06-2024",
     salesPrice: 18499,
     specialOffer: false,
@@ -1345,7 +1347,7 @@ export const ALLPHONES = [
     series: "F275G",
     image: OPPOF27EMERALDGREEN1,
     launchDate: "20-08-2024",
-    salesPrice: 20999,
+    salesPrice: 22999,
     specialOffer: false,
     trendingPhone: false,
     rating: 4.2,
