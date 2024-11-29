@@ -21,13 +21,13 @@ const Footer = () => {
 
   return (
     <div className=" justify-between block md:flex  w-full relative  left-0 text-white">
-      <div className="w-full md:w-1/2 flex flex-col items-start md:items-center justify-center  bg-black p-3">
+      <div className="w-full md:w-1/2 flex flex-col space-y-1 md:space-y-0 space-x-0 md:space-x-1 items-start md:items-center justify-center  bg-black p-3">
         <div className="space-y-2">
           {companyDetails(
             "phone",
             `<h1 >
-            <span>8304830868</span><br>
-            <span>9072430483</span><br>
+            <span>8304830868</span><br><br>
+            <span>9072430483</span><br><br>
             
           </h1>`,
             "LocalPhone"
@@ -35,9 +35,9 @@ const Footer = () => {
           {companyDetails(
             "Location",
             `<h1>
-            <span>3way junction</span><br>
-            <span>P.o Peringottukara</span><br>
-            <span>Thrissur</span><br>
+            <span>3way junction</span><br><br>
+            <span>P.o Peringottukara</span><br><br>
+            <span>Thrissur</span><br><br>
             <span>680565</span>
             </h1>`,
             "LocationOn"

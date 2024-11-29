@@ -10,6 +10,7 @@ import { MAINBANNER } from "constants/mainBanner";
 import { getNewArrivalPhones } from "utils/getNewArrival";
 import AvailableEmi from "components/Home/availableEmi";
 import HomeSkeleton from "components/skeleton/homeSkeleton";
+// import OurServices from "@components/Home/ourServices";
 // import Footer from "components/Home/footer";
 const ProductMiniList = React.lazy(
   () => import("components/Home/productMiniList")
@@ -17,6 +18,7 @@ const ProductMiniList = React.lazy(
 const WhatsappAds = React.lazy(() => import("components/Home/whatsappAds"));
 const Banner = React.lazy(() => import("components/Home/banner"));
 const Footer = React.lazy(() => import("components/Home/footer"));
+const OurServices = React.lazy(() => import("components/Home/ourServices"));
 
 const HomePage = () => {
   return (
@@ -49,6 +51,7 @@ const HomePage = () => {
               link="/newArrival"
             />
           </div>
+          <OurServices />
           <Footer />
         </Suspense>
       </div>
