@@ -9,13 +9,13 @@ import { MAINBANNER } from "constants/mainBanner";
 // import WhatsappAds from "components/Home/whatsappAds";
 import { getNewArrivalPhones } from "utils/getNewArrival";
 import AvailableEmi from "components/Home/availableEmi";
-import { ALLPHONES } from "constants/allPhone";
-import Footer from "components/Home/footer";
+// import Footer from "components/Home/footer";
 const ProductMiniList = React.lazy(
   () => import("components/Home/productMiniList")
 );
 const WhatsappAds = React.lazy(() => import("components/Home/whatsappAds"));
 const Banner = React.lazy(() => import("components/Home/banner"));
+const Footer = React.lazy(() => import("components/Home/footer"));
 
 const HomePage = () => {
   return (
@@ -48,8 +48,8 @@ const HomePage = () => {
               link="/newArrival"
             />
           </div>
+          <Footer />
         </Suspense>
-        <Footer />
       </div>
     </div>
   );

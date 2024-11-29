@@ -1,4 +1,3 @@
-import mobileHouseLogo from "assets/mobileHouseLogo.png";
 import DynamicMuiIcon from "utils/dynamicMuiIcon";
 import SocialMediaItems from "constants/socialMediaItems";
 
@@ -22,7 +21,7 @@ const Footer = () => {
 
   return (
     <div className=" justify-between block md:flex  w-full relative  left-0 text-white">
-      <div className="w-full md:w-1/2 flex flex-col items-start md:items-center justify-center  bg-[#040637] p-3">
+      <div className="w-full md:w-1/2 flex flex-col items-start md:items-center justify-center  bg-black p-3">
         <div className="space-y-2">
           {companyDetails(
             "phone",
@@ -52,15 +51,16 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className="w-full md:w-1/2 ">
+      <a
+        className="w-full md:w-1/2 "
+        href="https://maps.app.goo.gl/fXMgtGiJXBZQ1Jh86?g_st=ac"
+        target="_blank"
+      >
         <iframe
-          className="w-full h-48 md:h-full"
+          className="w-full h-48 md:h-full pointer-events-none"
           src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=C48P+F5%20Peringottukara,%20Kerala,%20India+(Mobile%20House)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-        >
-          <a href="https://www.gps.ie/">gps systems</a>
-        </iframe>
-      </div>
-      <div></div>
+        ></iframe>
+      </a>
     </div>
   );
 };
