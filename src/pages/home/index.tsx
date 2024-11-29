@@ -10,6 +10,7 @@ import { MAINBANNER } from "constants/mainBanner";
 import { getNewArrivalPhones } from "utils/getNewArrival";
 import AvailableEmi from "components/Home/availableEmi";
 import { ALLPHONES } from "constants/allPhone";
+import Footer from "components/Home/footer";
 const ProductMiniList = React.lazy(
   () => import("components/Home/productMiniList")
 );
@@ -48,6 +49,7 @@ const HomePage = () => {
             />
           </div>
         </Suspense>
+        <Footer />
       </div>
     </div>
   );
