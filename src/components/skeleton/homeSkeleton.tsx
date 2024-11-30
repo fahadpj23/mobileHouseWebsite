@@ -3,7 +3,7 @@ import { useScreenSize } from "hooks/useScreenSize";
 const HomeSkeleton = () => {
   const { isMobile } = useScreenSize();
   return (
-    <div className=" grid grid-cols-2 md:grid-cols-5 gap-3">
+    <div className=" grid grid-cols-2 md:grid-cols-5 gap-3 items-center">
       {[...Array(isMobile ? 2 : 5)]?.map((item, key) => (
         <div
           key={key}
