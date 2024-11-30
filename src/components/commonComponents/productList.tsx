@@ -1,8 +1,10 @@
 import { FC, useEffect, useState } from "react";
-import { GiNetworkBars } from "react-icons/gi";
+import { BsSortDown } from "react-icons/bs";
+import { CiFilter } from "react-icons/ci";
 import SingleProductCard from "./SingleProductCard";
-import { CiDiscount1 } from "react-icons/ci";
 import { filterProducts } from "utils/filterProductList";
+import { GiNetworkBars } from "react-icons/gi";
+import { CiDiscount1 } from "react-icons/ci";
 import {
   Box,
   Drawer,
@@ -19,6 +21,7 @@ import { UrlReplace } from "utils/urlReplace";
 import { ProductListSort } from "utils/productListSort";
 import { useSearchParams } from "react-router-dom";
 import ProductListFilters from "./Filters";
+import DynamicMuiIcon from "utils/dynamicMuiIcon";
 
 const ProductList: FC<any> = ({ products }) => {
   const [searchParams] = useSearchParams();
@@ -34,7 +37,7 @@ const ProductList: FC<any> = ({ products }) => {
   const [sort, setSort] = useState(searchParams.get("sort") ?? "newest");
   const [isSortOpen, setSortIsOpen] = useState(false);
   const [isFilterOpen, setFilterIsOpen] = useState<boolean>(false);
-  console.log(filters);
+
   const filterAdd = (key: any, value: any) => {
     UrlReplace(key, value);
     setIsLoading(true);
@@ -61,9 +64,14 @@ const ProductList: FC<any> = ({ products }) => {
     UrlReplace("sort", sortValue);
   };
 
-  const addFilter = () => {
-    Object.entries(filters)?.map((filter: any) => {
-      UrlReplace(filter[0], filter[1]);
+  const addFilter = (selectedProductFilters: any) => {
+    Object.entries(selectedProductFilters)?.map((filter: any) => {
+      filter[1] && UrlReplace(filter[0], filter[1]);
+    });
+    setFilters({
+      ...filters,
+      ram: selectedProductFilters?.ram,
+      brand: selectedProductFilters?.brand,
     });
     setFilterIsOpen(false);
     setIsLoading(true);
@@ -122,9 +130,21 @@ const ProductList: FC<any> = ({ products }) => {
           <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
-      <div className="w-full flex justify-between">
-        <button onClick={() => setSortIsOpen(true)}>Sort</button>
-        <button onClick={() => setFilterIsOpen(true)}>Filters</button>
+      <div className="w-full flex justify-between   border-t border-b border-gray-300 py-2 my-2">
+        <button
+          className="flex justify-center w-1/2 border-r border-gray-300 items-center font-semibold space-x-1"
+          onClick={() => setSortIsOpen(true)}
+        >
+          <BsSortDown />
+          <h1>Sort</h1>
+        </button>
+        <button
+          className="flex justify-center w-1/2 items-center font-semibold space-x-1"
+          onClick={() => setFilterIsOpen(true)}
+        >
+          <CiFilter />
+          <h1>Filters</h1>
+        </button>
       </div>
       {productList?.length ? (
         <div>
@@ -139,7 +159,7 @@ const ProductList: FC<any> = ({ products }) => {
             />
           )}
           {/* {isMobile && ( */}
-          {/* <div className=" border-t border-b  border-gray-200 p-1 ">
+          <div className=" border-t border-b  border-gray-200 p-1 ">
             <div className="flex ml-3 space-x-3 mt-3 ">
               <button
                 onClick={() => {
@@ -172,7 +192,7 @@ const ProductList: FC<any> = ({ products }) => {
                 <h1 className="text-[10px]">Special Offer</h1>
               </button>
 
-              <FormControl size="small">
+              {/* <FormControl size="small">
                 <Select
                   id="sort-select"
                   sx={{ fontSize: "11px" }}
@@ -189,9 +209,9 @@ const ProductList: FC<any> = ({ products }) => {
                     price -- Low to High
                   </MenuItem>
                 </Select>
-              </FormControl>
+              </FormControl> */}
             </div>
-          </div> */}
+          </div>
           {/* )} */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-2 md:gap-5">
             {productList?.length &&

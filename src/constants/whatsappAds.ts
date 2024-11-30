@@ -1,8 +1,8 @@
-import whatsAppImage1 from "assets/whatsappAds/WhatsAppImage1.jpeg";
-import whatsAppImage2 from "assets/whatsappAds/WhatsAppImage2.jpeg";
-import whatsAppImage3 from "assets/whatsappAds/WhatsAppImage3.jpeg";
-import whatsAppImage4 from "assets/whatsappAds/WhatsAppImage4.jpeg";
-import whatsAppImage5 from "assets/whatsappAds/WhatsAppImage5.jpeg";
+import whatsAppImage1 from "assets/whatsappAds/whatsAppImage1.jpeg";
+import whatsAppImage2 from "assets/whatsappAds/whatsAppImage2.jpeg";
+import whatsAppImage3 from "assets/whatsappAds/whatsAppImage3.jpeg";
+import whatsAppImage4 from "assets/whatsappAds/whatsAppImage4.jpeg";
+import whatsAppImage5 from "assets/whatsappAds/whatsAppImage5.jpeg";
 
 export const WhatappAdsList = [
   {

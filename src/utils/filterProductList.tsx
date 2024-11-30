@@ -16,13 +16,13 @@ export const filterProducts = (products: any, filters: any) => {
     }
 
     if (
-      filters?.brand &&
+      filters?.brand?.length &&
       !filters.brand.includes(product.brand.toLowerCase())
     ) {
       return false;
     }
 
-    if (filters?.ram && !filters.ram?.includes(product.ram)) {
+    if (filters?.ram?.length && !filters.ram?.includes(product.ram)) {
       return false;
     }
 
