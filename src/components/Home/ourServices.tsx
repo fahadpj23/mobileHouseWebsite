@@ -7,24 +7,35 @@ const OurServices = () => {
       <img
         src={image}
         alt="service image"
-        className="rounded-2xl h-56 w-[23vw]"
+        className="rounded-2xl h-44 md:h-56 w-[80vw] md:w-[20vw]"
       />
       <h1 className="font-semibold text-xl">{title}</h1>
+      <h1 className="text-sm w-2/3 md:w-[14vw] text-gray-500 text-center">
+        {content}
+      </h1>
     </div>
   );
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center my-3">
       <h1 className="text-2xl font-semibold uppercase  my-4 text-white  bg-blue-400 p-2 tracking-wider">
         Our Services
       </h1>
-      <div className="flex space-x-14">
-        {services(COVERPRINTING, "customized mobile Cover Printing", "")}
+      <div className="block md:flex space-x-0 md:space-x-10 space-y-10 md:space-y-0">
+        {services(
+          COVERPRINTING,
+          "customized mobile Cover Printing",
+          " we have custom mobile covers for majority of smartphone models available at very low price"
+        )}
         {services(
           MOBILESERVICES,
           "Mobile Service",
-          "we provide all kinds of mobile services like display, Screen &  Battery, camera, speaker replacement,Software Upgrading"
+          "we provide all kinds of mobile services like display,  Battery,Software Upgrading, etc..."
         )}
-        {services(SIMACTIVATION, "Sim Activation", "")}
+        {services(
+          SIMACTIVATION,
+          "Sim Activation",
+          "Airtel,jio,vi,bsnl sim activation and porting available"
+        )}
       </div>
     </div>
   );

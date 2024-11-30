@@ -9,7 +9,7 @@ const Footer = () => {
           <DynamicMuiIcon iconName={icon} />
         </div>
         <div className="flex flex-col space-y-2">
-          <h1 className="uppercase text-white">{title}</h1>
+          <h1 className="uppercase text-white my-1">{title}</h1>
           <div
             className="text-gray-400 text-sm"
             dangerouslySetInnerHTML={{ __html: content }}
@@ -20,14 +20,14 @@ const Footer = () => {
   );
 
   return (
-    <div className=" justify-between block md:flex  w-full relative  left-0 text-white">
-      <div className="w-full md:w-1/2 flex flex-col space-y-1 md:space-y-0 space-x-0 md:space-x-1 items-start md:items-center justify-center  bg-black p-3">
+    <div className=" justify-between block md:flex  w-full relative  left-0 text-white p-1 md:p-3">
+      <div className="w-full md:w-1/2 flex flex-col space-y-3 md:space-y-0 space-x-0 md:space-x-1 items-start md:items-center justify-center  bg-black p-3">
         <div className="space-y-2">
           {companyDetails(
             "phone",
             `<h1 >
-            <span>8304830868</span><br><br>
-            <span>9072430483</span><br><br>
+            <span>+91 8304830868</span><br>
+            <span>+91 9072430483</span><br>
             
           </h1>`,
             "LocalPhone"
@@ -35,15 +35,14 @@ const Footer = () => {
           {companyDetails(
             "Location",
             `<h1>
-            <span>3way junction</span><br><br>
-            <span>P.o Peringottukara</span><br><br>
-            <span>Thrissur</span><br><br>
+            <span>3way junction</span><br>
+            <span>P.o Peringottukara,Thrissur</span><br>
             <span>680565</span>
             </h1>`,
             "LocationOn"
           )}
         </div>
-        <div className="flex space-x-4 mt-5 ml-6">
+        <div className="flex space-x-4 mt-5 ml-6 py-3 ">
           {SocialMediaItems?.map((item: any) => (
             <a key={item?.name} href={item?.link}>
               <DynamicMuiIcon key={item?.name} iconName={item.icon} />
