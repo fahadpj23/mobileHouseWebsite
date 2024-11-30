@@ -44,7 +44,7 @@ const DesktopSearch = () => {
                 className="flex items-center space-x-4"
                 onClick={() => handleSelect()}
               >
-                <div>
+                <div className="p-1">
                   <img
                     src={phone?.image ?? phone?.colors[0]?.images[0]}
                     alt="phone Image"
