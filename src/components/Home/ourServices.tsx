@@ -7,7 +7,7 @@ const OurServices = () => {
       <img
         src={image}
         alt="service image"
-        className="rounded-lg md:rounded-2xl h-44 md:h-56 w-[80vw] md:w-[20vw]"
+        className="rounded-lg md:rounded-2xl h-36 md:h-56 w-[80vw] md:w-[20vw]"
       />
       <h1 className="font-semibold text-base md:text-xl">{title}</h1>
       <h1 className="text-sm w-2/3 md:w-[14vw] text-gray-500 text-center">
