@@ -1,7 +1,8 @@
 import { Checkbox, Drawer, FormControlLabel, FormGroup } from "@mui/material";
 import { FC, useState } from "react";
 import { PHONEBRANDS } from "constants/phoneBrands";
-import { UrlReplace } from "utils/urlReplace";
+import Slider from "rc-slider";
+import "rc-slider/assets/index.css";
 
 interface props {
   isFilterOpen: Boolean;
@@ -45,6 +46,7 @@ const ProductListFilters: FC<props> = ({
     { name: "Ram", value: "ram" },
     { name: "storage", value: "storage" },
     { name: "network Type", value: "networkType" },
+    { name: "price", value: "price" },
   ];
 
   const handleFilter = (event: any, value: any) => {
@@ -93,6 +95,13 @@ const ProductListFilters: FC<props> = ({
     </div>
   );
 
+  const priceSlider = () => (
+    <div className="p-4 flex flex-col space-y-2">
+      <h1 className="font-semibold">PRICE</h1>
+      <Slider range defaultValue={[20, 50]} min={0} max={100} step={1} />
+    </div>
+  );
+
   return (
     <div>
       <Drawer
@@ -130,6 +139,8 @@ const ProductListFilters: FC<props> = ({
                     return checkBoxList(InternalStorageVariant);
                   case "networkType":
                     return checkBoxList(networkType);
+                  case "price":
+                    return priceSlider();
                   // case "rating":
                   //   return checkBoxList(starRating);
                   // default:

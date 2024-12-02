@@ -58,3 +58,16 @@ body {
 .carousel .thumb.selected {
   border-color: #007bff;
 }
+/* Rail (background track) */
+.rc-slider-rail {
+  background-color: #3777ab;
+  height: 8px;
+  border-radius: 4px;
+}
+
+/* Track (selected range) */
+.rc-slider-tracks {
+  background-color: #4caf50;
+  height: 8px;
+  border-radius: 4px;
+}
