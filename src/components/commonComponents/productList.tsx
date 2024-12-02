@@ -27,7 +27,9 @@ const ProductList: FC<any> = ({ products }) => {
   const [filters, setFilters] = useState<any>({
     connectivity: searchParams.get("connectivity") ?? "",
     specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
-    ram: searchParams.get("ram")?.split(",").map(Number) ?? [],
+    ram: searchParams.get("ram")
+      ? searchParams.get("ram")?.split(",").map(Number)
+      : [],
     brand: searchParams.get("brand")?.split(",") ?? [],
   });
   const { isMobile } = useScreenSize();
@@ -56,6 +58,19 @@ const ProductList: FC<any> = ({ products }) => {
         setIsLoading(false);
       }, 300);
   }, [isLoading]);
+
+  useEffect(() => {
+    setFilters({
+      connectivity: searchParams.get("connectivity") ?? "",
+      specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
+      ram: searchParams.get("ram")
+        ? searchParams.get("ram")?.split(",").map(Number)
+        : [],
+      brand: searchParams.get("brand")?.split(",") ?? [],
+    });
+    setIsLoading(true);
+  }, [searchParams]);
+  console.log(filters);
 
   const handleSort = (sortValue: string) => {
     setSortIsOpen(false);
