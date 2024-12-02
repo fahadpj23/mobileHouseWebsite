@@ -27,15 +27,24 @@ const ProductListFilters: FC<props> = ({
     { name: 12, value: 12 },
   ];
 
-  const starRating = [
-    { name: "4* Above", value: 4 },
-    { name: "3* Above", value: 3 },
+  const InternalStorageVariant = [
+    { name: "32 Gb", value: 32 },
+    { name: "64 Gb", value: 64 },
+    { name: "128 Gb", value: 128 },
+    { name: "512 Gb", value: 512 },
+    { name: "1 Tb", value: 1000 },
+  ];
+
+  const networkType = [
+    { name: "4G", value: "4G" },
+    { name: "5G", value: "5G" },
   ];
 
   const productFilters = [
     { name: "Brand", value: "brand" },
     { name: "Ram", value: "ram" },
-    // { name: "Rating", value: "rating" },
+    { name: "storage", value: "storage" },
+    { name: "network Type", value: "networkType" },
   ];
 
   const handleFilter = (event: any, value: any) => {
@@ -117,6 +126,10 @@ const ProductListFilters: FC<props> = ({
                     return checkBoxList(PHONEBRANDS);
                   case "ram":
                     return checkBoxList(RamVariant);
+                  case "storage":
+                    return checkBoxList(InternalStorageVariant);
+                  case "networkType":
+                    return checkBoxList(networkType);
                   // case "rating":
                   //   return checkBoxList(starRating);
                   // default:

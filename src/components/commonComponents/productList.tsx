@@ -20,15 +20,19 @@ import { UrlReplace } from "utils/urlReplace";
 import { ProductListSort } from "utils/productListSort";
 import { useSearchParams } from "react-router-dom";
 import ProductListFilters from "./Filters";
-import DynamicMuiIcon from "utils/dynamicMuiIcon";
 
 const ProductList: FC<any> = ({ products }) => {
   const [searchParams] = useSearchParams();
   const [filters, setFilters] = useState<any>({
-    connectivity: searchParams.get("connectivity") ?? "",
-    specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
+    networkType: searchParams.get("networkType")
+      ? searchParams.get("networkType")
+      : [],
+    // specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
     ram: searchParams.get("ram")
       ? searchParams.get("ram")?.split(",").map(Number)
+      : [],
+    storage: searchParams.get("storage")
+      ? searchParams.get("storage")?.split(",").map(Number)
       : [],
     brand: searchParams.get("brand")?.split(",") ?? [],
   });
@@ -61,16 +65,19 @@ const ProductList: FC<any> = ({ products }) => {
 
   useEffect(() => {
     setFilters({
-      connectivity: searchParams.get("connectivity") ?? "",
-      specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
+      networkType: searchParams.get("networkType")
+        ? searchParams.get("networkType")
+        : [],
       ram: searchParams.get("ram")
         ? searchParams.get("ram")?.split(",").map(Number)
+        : [],
+      storage: searchParams.get("storage")
+        ? searchParams.get("storage")?.split(",").map(Number)
         : [],
       brand: searchParams.get("brand")?.split(",") ?? [],
     });
     setIsLoading(true);
   }, [searchParams]);
-  console.log(filters);
 
   const handleSort = (sortValue: string) => {
     setSortIsOpen(false);
@@ -84,8 +91,10 @@ const ProductList: FC<any> = ({ products }) => {
     });
     setFilters({
       ...filters,
+      storage: selectedProductFilters?.storage,
       ram: selectedProductFilters?.ram,
       brand: selectedProductFilters?.brand,
+      networkType: selectedProductFilters?.networkType,
     });
     setFilterIsOpen(false);
     setIsLoading(true);
@@ -172,10 +181,10 @@ const ProductList: FC<any> = ({ products }) => {
             addFilter={addFilter}
           />
         )}
-
+        {/* 
         <div className=" border-t border-b  border-gray-200 p-1 ">
-          <div className="flex ml-3 space-x-3 mt-3 ">
-            <button
+          <div className="flex ml-3 space-x-3 mt-3 "> */}
+        {/* <button
               onClick={() => {
                 filters?.connectivity
                   ? filterAdd("connectivity", "")
@@ -189,8 +198,8 @@ const ProductList: FC<any> = ({ products }) => {
             >
               <GiNetworkBars className="text-blue-500 text-xl" />
               <h1 className="text-[10px]">5G</h1>
-            </button>
-            <button
+            </button> */}
+        {/* <button
               onClick={() => {
                 filters?.specialOffer
                   ? filterAdd("specialOffer", false)
@@ -204,9 +213,9 @@ const ProductList: FC<any> = ({ products }) => {
             >
               <CiDiscount1 className="text-green-500 text-xl" />
               <h1 className="text-[10px]">Special Offer</h1>
-            </button>
-          </div>
-        </div>
+            </button> */}
+        {/* </div>
+        </div> */}
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-2 md:gap-5">
           {productList?.length ? (
@@ -216,10 +225,10 @@ const ProductList: FC<any> = ({ products }) => {
               );
             })
           ) : (
-            <div className="w-full h-full flex items-center justify-center">
+            <div className="w-screen h-full flex items-center justify-center ">
               <img
                 src={NOPRODUCTIMAGE}
-                className="w-[90vw] md:w-[50vh] h-[50vh] "
+                className="w-[60vw] md:w-[40vh] h-[40vh] "
                 alt="nocproduct found"
               />
             </div>
