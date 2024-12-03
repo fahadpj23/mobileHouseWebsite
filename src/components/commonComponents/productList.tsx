@@ -24,9 +24,7 @@ import ProductListFilters from "./Filters";
 const ProductList: FC<any> = ({ products }) => {
   const [searchParams] = useSearchParams();
   const [filters, setFilters] = useState<any>({
-    network: searchParams.get("networkType")
-      ? searchParams.get("networkType")
-      : [],
+    network: searchParams.get("network") ? searchParams.get("network") : [],
     // specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
     ram: searchParams.get("ram")
       ? searchParams.get("ram")?.split(",").map(Number)
@@ -34,9 +32,15 @@ const ProductList: FC<any> = ({ products }) => {
     storage: searchParams.get("storage")
       ? searchParams.get("storage")?.split(",").map(Number)
       : [],
-    brand: searchParams.get("brand")?.split(",") ?? [],
-    priceMin: searchParams.get("priceMin") ?? 0,
-    priceMax: searchParams.get("priceMax") ?? 150000,
+    brand: searchParams.get("brand")
+      ? searchParams.get("brand")?.split(",")
+      : [],
+    priceMin: searchParams.get("priceMin")
+      ? Number(searchParams.get("priceMin"))
+      : 0,
+    priceMax: searchParams.get("priceMax")
+      ? Number(searchParams.get("priceMax"))
+      : 150000,
   });
   // const { isMobile } = useScreenSize();
   const [productList, setProductList] = useState(products);
@@ -67,18 +71,22 @@ const ProductList: FC<any> = ({ products }) => {
 
   useEffect(() => {
     setFilters({
-      network: searchParams.get("networkType")
-        ? searchParams.get("networkType")
-        : [],
+      network: searchParams.get("network") ? searchParams.get("network") : [],
       ram: searchParams.get("ram")
         ? searchParams.get("ram")?.split(",").map(Number)
         : [],
       storage: searchParams.get("storage")
         ? searchParams.get("storage")?.split(",").map(Number)
         : [],
-      brand: searchParams.get("brand")?.split(",") ?? [],
-      priceMin: searchParams.get("priceMin") ?? 0,
-      priceMax: searchParams.get("priceMax") ?? 150000,
+      brand: searchParams.get("brand")
+        ? searchParams.get("brand")?.split(",")
+        : [],
+      priceMin: searchParams.get("priceMin")
+        ? Number(searchParams.get("priceMin"))
+        : 0,
+      priceMax: searchParams.get("priceMax")
+        ? Number(searchParams.get("priceMax"))
+        : 150000,
     });
     setIsLoading(true);
   }, [searchParams]);
@@ -98,12 +106,14 @@ const ProductList: FC<any> = ({ products }) => {
       storage: selectedProductFilters?.storage,
       ram: selectedProductFilters?.ram,
       brand: selectedProductFilters?.brand,
-      networkType: selectedProductFilters?.networkType,
+      network: selectedProductFilters?.network,
+      priceMin: selectedProductFilters?.priceMin,
+      priceMax: selectedProductFilters?.priceMax,
     });
     setFilterIsOpen(false);
     setIsLoading(true);
   };
-
+  console.log(filters);
   useEffect(() => {
     setProductList(ProductListSort(productList, sort));
     setIsLoading(true);
