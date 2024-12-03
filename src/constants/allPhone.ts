@@ -1482,7 +1482,7 @@ export const ALLPHONES = [
     brand: "REALME",
     image: REALMEC63,
     launchDate: "31-05-2024",
-    salesPrice: 7799,
+    salesPrice: 8999,
     specialOffer: false,
     trendingPhone: false,
     rating: 4.3,
