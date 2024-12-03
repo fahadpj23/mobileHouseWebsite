@@ -3,24 +3,32 @@ import { FC, useState } from "react";
 import { PHONEBRANDS } from "constants/phoneBrands";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import { getHighestAndLowestPrice } from "utils/highestAndLowestValue";
 
 interface props {
   isFilterOpen: Boolean;
   setFilterIsOpen: any;
-  setFilters: any;
   filters: any;
   addFilter: any;
+  products: any;
 }
 const ProductListFilters: FC<props> = ({
   isFilterOpen,
   setFilterIsOpen,
-  setFilters,
   filters,
   addFilter,
+  products,
 }) => {
   const [selectedFilter, setSelectedFilter] = useState("brand");
+
   const [selectedProductFilters, setSelectedProductFilters] =
     useState<any>(filters);
+  const rangeSliderMinMax = getHighestAndLowestPrice(products);
+  const [price, setPrice] = useState({
+    min: rangeSliderMinMax?.lowest,
+    max: rangeSliderMinMax?.highest,
+  });
+
   const RamVariant = [
     { name: 4, value: 4 },
     { name: 6, value: 6 },
@@ -44,9 +52,9 @@ const ProductListFilters: FC<props> = ({
   const productFilters = [
     { name: "Brand", value: "brand" },
     { name: "Ram", value: "ram" },
-    { name: "storage", value: "storage" },
-    { name: "network Type", value: "networkType" },
-    { name: "price", value: "price" },
+    { name: "Storage", value: "storage" },
+    { name: "Network Type", value: "networkType" },
+    { name: "Price", value: "price" },
   ];
 
   const handleFilter = (event: any, value: any) => {
@@ -63,6 +71,13 @@ const ProductListFilters: FC<props> = ({
 
   const ApplyFilters = () => {
     addFilter(selectedProductFilters);
+  };
+
+  const handleChange = (value: any) => {
+    setPrice({
+      min: value[0],
+      max: value[1],
+    });
   };
 
   const checkBoxList = (list: any) => (
@@ -98,7 +113,19 @@ const ProductListFilters: FC<props> = ({
   const priceSlider = () => (
     <div className="p-4 flex flex-col space-y-2">
       <h1 className="font-semibold">PRICE</h1>
-      <Slider range defaultValue={[20, 50]} min={0} max={100} step={1} />
+      <Slider
+        range
+        defaultValue={[20, 50]}
+        min={rangeSliderMinMax?.lowest ?? 0}
+        max={rangeSliderMinMax?.highest ?? 200000}
+        step={1}
+        onChange={handleChange}
+        // value={20000}
+      />
+      <div className="flex justify-between">
+        <h1 className="border border-black p-1 text-xs">{price?.min}</h1>
+        <h1 className="border border-black p-1 text-xs">{price?.max}</h1>
+      </div>
     </div>
   );
 

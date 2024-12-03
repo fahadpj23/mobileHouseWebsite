@@ -13,9 +13,9 @@ import {
   FormControlLabel,
   Radio,
   RadioGroup,
-  Select,
+  // Select,
 } from "@mui/material";
-import { useScreenSize } from "hooks/useScreenSize";
+// import { useScreenSize } from "hooks/useScreenSize";
 import { UrlReplace } from "utils/urlReplace";
 import { ProductListSort } from "utils/productListSort";
 import { useSearchParams } from "react-router-dom";
@@ -36,18 +36,18 @@ const ProductList: FC<any> = ({ products }) => {
       : [],
     brand: searchParams.get("brand")?.split(",") ?? [],
   });
-  const { isMobile } = useScreenSize();
+  // const { isMobile } = useScreenSize();
   const [productList, setProductList] = useState(products);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [sort, setSort] = useState(searchParams.get("sort") ?? "newest");
   const [isSortOpen, setSortIsOpen] = useState(false);
   const [isFilterOpen, setFilterIsOpen] = useState<boolean>(false);
 
-  const filterAdd = (key: any, value: any) => {
-    UrlReplace(key, value);
-    setIsLoading(true);
-    setFilters({ ...filters, [key]: value });
-  };
+  // const filterAdd = (key: any, value: any) => {
+  //   UrlReplace(key, value);
+  //   setIsLoading(true);
+  //   setFilters({ ...filters, [key]: value });
+  // };
 
   useEffect(() => {
     if (products) {
@@ -176,9 +176,9 @@ const ProductList: FC<any> = ({ products }) => {
           <ProductListFilters
             isFilterOpen={isFilterOpen}
             setFilterIsOpen={setFilterIsOpen}
-            setFilters={setFilters}
             filters={filters}
             addFilter={addFilter}
+            products={products}
           />
         )}
         {/* 
