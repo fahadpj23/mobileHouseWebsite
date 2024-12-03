@@ -23,10 +23,10 @@ const ProductListFilters: FC<props> = ({
 
   const [selectedProductFilters, setSelectedProductFilters] =
     useState<any>(filters);
-  const rangeSliderMinMax = getHighestAndLowestPrice(products);
+  // const rangeSliderMinMax = getHighestAndLowestPrice(products);
   const [price, setPrice] = useState({
-    min: rangeSliderMinMax?.lowest,
-    max: rangeSliderMinMax?.highest,
+    min: filters?.priceMin ?? 0,
+    max: filters?.priceMax ?? 150000,
   });
 
   const RamVariant = [
@@ -53,7 +53,7 @@ const ProductListFilters: FC<props> = ({
     { name: "Brand", value: "brand" },
     { name: "Ram", value: "ram" },
     { name: "Storage", value: "storage" },
-    { name: "Network Type", value: "networkType" },
+    { name: "Network", value: "network" },
     { name: "Price", value: "price" },
   ];
 
@@ -77,6 +77,11 @@ const ProductListFilters: FC<props> = ({
     setPrice({
       min: value[0],
       max: value[1],
+    });
+    setSelectedProductFilters({
+      ...selectedProductFilters,
+      priceMin: value[0],
+      priceMax: value[1],
     });
   };
 
@@ -111,20 +116,23 @@ const ProductListFilters: FC<props> = ({
   );
 
   const priceSlider = () => (
-    <div className="p-4 flex flex-col space-y-2">
+    <div className="p-4 flex flex-col space-y-4">
       <h1 className="font-semibold">PRICE</h1>
-      <Slider
-        range
-        defaultValue={[20, 50]}
-        min={rangeSliderMinMax?.lowest ?? 0}
-        max={rangeSliderMinMax?.highest ?? 200000}
-        step={1}
-        onChange={handleChange}
-        // value={20000}
-      />
-      <div className="flex justify-between">
-        <h1 className="border border-black p-1 text-xs">{price?.min}</h1>
-        <h1 className="border border-black p-1 text-xs">{price?.max}</h1>
+      <div className="flex flex-col space-y-3">
+        <Slider
+          range
+          defaultValue={[
+            selectedProductFilters?.priceMin ?? 0,
+            selectedProductFilters?.priceMax ?? 150000,
+          ]}
+          min={0}
+          max={200000}
+          step={1}
+          onChange={handleChange}
+        />
+        <h1 className="font-serif ">
+          ₹ {price?.min} - ₹ {price?.max}
+        </h1>
       </div>
     </div>
   );
@@ -177,7 +185,7 @@ const ProductListFilters: FC<props> = ({
             </>
             <button
               onClick={ApplyFilters}
-              className="bg-orange-600 p-1 w-[60%] text-white absolute bottom-0 right-1"
+              className="bg-orange-600 p-1 w-[60%] text-white absolute bottom-1 right-1"
             >
               Apply
             </button>

@@ -24,7 +24,7 @@ import ProductListFilters from "./Filters";
 const ProductList: FC<any> = ({ products }) => {
   const [searchParams] = useSearchParams();
   const [filters, setFilters] = useState<any>({
-    networkType: searchParams.get("networkType")
+    network: searchParams.get("networkType")
       ? searchParams.get("networkType")
       : [],
     // specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
@@ -35,6 +35,8 @@ const ProductList: FC<any> = ({ products }) => {
       ? searchParams.get("storage")?.split(",").map(Number)
       : [],
     brand: searchParams.get("brand")?.split(",") ?? [],
+    priceMin: searchParams.get("priceMin") ?? 0,
+    priceMax: searchParams.get("priceMax") ?? 150000,
   });
   // const { isMobile } = useScreenSize();
   const [productList, setProductList] = useState(products);
@@ -65,7 +67,7 @@ const ProductList: FC<any> = ({ products }) => {
 
   useEffect(() => {
     setFilters({
-      networkType: searchParams.get("networkType")
+      network: searchParams.get("networkType")
         ? searchParams.get("networkType")
         : [],
       ram: searchParams.get("ram")
@@ -75,6 +77,8 @@ const ProductList: FC<any> = ({ products }) => {
         ? searchParams.get("storage")?.split(",").map(Number)
         : [],
       brand: searchParams.get("brand")?.split(",") ?? [],
+      priceMin: searchParams.get("priceMin") ?? 0,
+      priceMax: searchParams.get("priceMax") ?? 150000,
     });
     setIsLoading(true);
   }, [searchParams]);
