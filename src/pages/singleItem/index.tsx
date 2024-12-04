@@ -134,7 +134,7 @@ const SingleItem = () => {
             />
 
             <div className="flex flex-col">
-              {productColors?.length && (
+              {productColors?.length ? (
                 <div>
                   <div className="flex space-x-6 ml-6 mt-6 ">
                     {productColors?.map((color: any) => {
@@ -159,7 +159,7 @@ const SingleItem = () => {
                     })}
                   </div>
                 </div>
-              )}
+              ) : null}
               <div className="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-4 py-3 ml-2 mt-5 text-center">
                 {phoneVariants?.map((variant: any) => (
                   <Link

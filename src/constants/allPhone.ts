@@ -21,6 +21,12 @@ import REDMINOTE13PROPLUS5GFUSIONBLACK1 from "assets/mi/REDMINOTE13PROPLUS5G/RED
 
 //oppo import
 
+import OPPOFINDX8PROSPACEBLACK1 from "assets/oppo/OPPOFINDX8PRO/OPPOFINDX8PROSPACEBLACK/OPPOFINDX8PROSPACEBLACK1.jpeg";
+
+import OPPOFINDX8SPACEBLACK1 from "assets/oppo/OPPOFINDX8/OPPOFINDX8SPACEBLACK/OPPOFINDX8SPACEBLACK1.jpeg";
+
+import OPPOFINDX8STARGREY1 from "assets/oppo/OPPOFINDX8/OPPOFINDX8STARGREY/OPPOFINDX8STARGREY1.jpeg";
+
 import OPPOA17kGOLD1 from "assets/oppo/OPPOA17K/OPPOA17KGOLD/OPPOA17KGOLD1.jpg";
 
 import OPPOA77ORANGE1 from "assets/oppo/OPPOA77/OPPOA77SUNSETORANGE/OPPOA77SUNSETORANGE1.jpg";
@@ -1321,7 +1327,7 @@ export const ALLPHONES = [
     series: "F275G",
     image: OPPOF27AMBERORANGE1,
     launchDate: "20-08-2024",
-    salesPrice: 24999,
+    salesPrice: 22999,
     specialOffer: true,
     trendingPhone: true,
     rating: 4.2,
@@ -1347,7 +1353,7 @@ export const ALLPHONES = [
     series: "F275G",
     image: OPPOF27EMERALDGREEN1,
     launchDate: "20-08-2024",
-    salesPrice: 22999,
+    salesPrice: 20999,
     specialOffer: false,
     trendingPhone: false,
     rating: 4.2,
@@ -1472,6 +1478,87 @@ export const ALLPHONES = [
       Battery: "5100 mAh | 45W Fast Charging ",
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v14 ",
+    },
+  },
+
+  {
+    id: "OPPO18",
+    name: "OPPO Find X8 5G 12/256 ",
+    brand: "OPPO",
+    series: "OPPOFINDX8",
+    image: OPPOFINDX8SPACEBLACK1,
+    launchDate: "21-11-2024",
+    salesPrice: 69999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 4.7,
+    newArrival: true,
+    mrp: 79999,
+    ram: 12,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 9400 Octa core ",
+      Display: "6.59″ (16.74 cm) 120Hz ProXDR LTPO ",
+      "Rear Camera": "50+50+50 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "12 GB | 256 GB ",
+      Battery: "5630 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+    },
+  },
+
+  {
+    id: "OPPO19",
+    name: "OPPO Find X8 5G 16/512 ",
+    brand: "OPPO",
+    series: "OPPOFINDX8",
+    image: OPPOFINDX8STARGREY1,
+    launchDate: "21-11-2024",
+    salesPrice: 79999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 4.7,
+    newArrival: true,
+    mrp: 89999,
+    ram: 16,
+    storage: 512,
+    specifications: {
+      Processor: "MediaTek Dimensity 9400 Octa core ",
+      Display: "6.59″ (16.74 cm) 120Hz ProXDR LTPO ",
+      "Rear Camera": "50+50+50 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "16 GB | 512 GB ",
+      Battery: "5630 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+    },
+  },
+
+  {
+    id: "OPPO20",
+    name: "OPPO Find X8 PRO 5G 16/512 ",
+    brand: "OPPO",
+    series: "OPPOFINDX8PRO",
+    image: OPPOFINDX8PROSPACEBLACK1,
+    launchDate: "21-11-2024",
+    salesPrice: 99999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 4.7,
+    newArrival: true,
+    mrp: 109999,
+    ram: 16,
+    storage: 512,
+    specifications: {
+      Processor: "MediaTek Dimensity 9400 Octa core ",
+      Display: "6.78″ (17.22 cm) 120Hz ProXDR LTPO ",
+      "Rear Camera": "50+50+50+50 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "16 GB | 512 GB ",
+      Battery: "5910 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
     },
   },
 
