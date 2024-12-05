@@ -3,7 +3,7 @@ import { FC, useState } from "react";
 import { PHONEBRANDS } from "constants/phoneBrands";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
-import { getHighestAndLowestPrice } from "utils/highestAndLowestValue";
+import { getBrandFromList } from "utils/getBrandFromList";
 
 interface props {
   isFilterOpen: Boolean;
@@ -167,7 +167,7 @@ const ProductListFilters: FC<props> = ({
               {(() => {
                 switch (selectedFilter) {
                   case "brand":
-                    return checkBoxList(PHONEBRANDS);
+                    return checkBoxList(getBrandFromList(products));
                   case "ram":
                     return checkBoxList(RamVariant);
                   case "storage":

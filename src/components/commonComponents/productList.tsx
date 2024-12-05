@@ -113,7 +113,7 @@ const ProductList: FC<any> = ({ products }) => {
     setFilterIsOpen(false);
     setIsLoading(true);
   };
-  console.log(filters);
+
   useEffect(() => {
     setProductList(ProductListSort(productList, sort));
     setIsLoading(true);
