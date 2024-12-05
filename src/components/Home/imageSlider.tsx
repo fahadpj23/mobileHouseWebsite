@@ -1,6 +1,5 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { MAINBANNER } from "constants/mainBanner";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 

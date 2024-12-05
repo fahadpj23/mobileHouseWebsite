@@ -33,7 +33,11 @@ const WhatsappAds = () => {
         autoPlay={true}
       >
         {WhatappAdsList.map((item) => (
-          <Link to={item?.name} key={item?.id} style={{ margin: "3px 8px" }}>
+          <Link
+            to={`series/${item?.series}`}
+            key={item?.id}
+            style={{ margin: "3px 8px" }}
+          >
             <img
               src={item?.image}
               alt="phone Image"

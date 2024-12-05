@@ -1,17 +1,13 @@
 import React, { Suspense } from "react";
 import ImageSlider from "components/Home/imageSlider";
 import Brands from "components/Home/Brands";
-// import Banner from "components/Home/banner";
 import { getSpecialOfferPhones } from "utils/getSpecialOfferPhone";
 import { getTrendingPhones } from "utils/getTrendingPhones";
 import { MAINBANNER } from "constants/mainBanner";
-// import ProductMiniList from "components/Home/productMiniList";
-// import WhatsappAds from "components/Home/whatsappAds";
+
 import { getNewArrivalPhones } from "utils/getNewArrival";
 import AvailableEmi from "components/Home/availableEmi";
 import HomeSkeleton from "components/skeleton/homeSkeleton";
-// import OurServices from "@components/Home/ourServices";
-// import Footer from "components/Home/footer";
 const ProductMiniList = React.lazy(
   () => import("components/Home/productMiniList")
 );
