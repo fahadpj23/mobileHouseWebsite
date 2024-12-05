@@ -8,7 +8,7 @@ import MainLayout from "layout/mainLayout";
 // const Brand = React.lazy(() => import("pages/brand"));
 // const SingleItem = React.lazy(() => import("pages/singleItem"));
 // const TrendingPhones = React.lazy(() => import("pages/trendingPhone"));
-// const SearchList = React.lazy(() => import("pages/searchList"));
+// const SeriesList = React.lazy(() => import("pages/SeriesList"));
 // const SpecCreator = React.lazy(() => import("pages/specCreator"));
 import HomePage from "pages/home";
 import NewArrival from "pages/newArrival";
@@ -17,7 +17,7 @@ import Brand from "pages/brand";
 import SingleItem from "pages/singleItem";
 import TrendingPhones from "pages/trendingPhone";
 import SpecCreator from "pages/specCreator";
-import SearchList from "pages/searchList";
+import SeriesList from "pages/seriesList";
 import PageNotFound from "pages/404Page";
 const PageRoute = () => {
   return (
@@ -31,7 +31,7 @@ const PageRoute = () => {
             <Route index path="/specialOffer" element={<SpecialOffer />} />
             <Route index path="/trendingPhones" element={<TrendingPhones />} />
             <Route index path="brand/:brandName" element={<Brand />} />
-            <Route index path="/:searchWord" element={<SearchList />} />
+            <Route index path="series/:seriesList" element={<SeriesList />} />
             <Route path="*" element={<PageNotFound />} />
             <Route
               index

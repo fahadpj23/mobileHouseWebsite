@@ -6,21 +6,21 @@ export const MAINBANNER = [
   {
     id: 1,
     image: BANNER1,
-    name: "Y300",
+    series: ["OPPOFINDX8", "OPPOFINDX8PRO"],
   },
   {
     id: 2,
     image: BANNER2,
-    name: "A165G",
+    series: ["Y300"],
   },
   {
     id: 3,
     image: BANNER3,
-    name: "V40",
+    series: ["A165G"],
   },
   {
     id: 3,
     image: BANNER4,
-    name: "RENO12PRO",
+    series: ["V40", "V40e"],
   },
 ];

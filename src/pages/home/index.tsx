@@ -1,24 +1,20 @@
 import React, { Suspense } from "react";
 import ImageSlider from "components/Home/imageSlider";
 import Brands from "components/Home/Brands";
-// import Banner from "components/Home/banner";
 import { getSpecialOfferPhones } from "utils/getSpecialOfferPhone";
 import { getTrendingPhones } from "utils/getTrendingPhones";
 import { MAINBANNER } from "constants/mainBanner";
-// import ProductMiniList from "components/Home/productMiniList";
-// import WhatsappAds from "components/Home/whatsappAds";
+
 import { getNewArrivalPhones } from "utils/getNewArrival";
 import AvailableEmi from "components/Home/availableEmi";
 import HomeSkeleton from "components/skeleton/homeSkeleton";
-// import OurServices from "@components/Home/ourServices";
-// import Footer from "components/Home/footer";
 const ProductMiniList = React.lazy(
   () => import("components/Home/productMiniList")
 );
 const WhatsappAds = React.lazy(() => import("components/Home/whatsappAds"));
 const Banner = React.lazy(() => import("components/Home/banner"));
 const Footer = React.lazy(() => import("components/Home/footer"));
-const OurServices = React.lazy(() => import("components/Home/ourServices"));
+// const OurServices = React.lazy(() => import("components/Home/ourServices"));
 
 const HomePage = () => {
   return (
@@ -51,7 +47,7 @@ const HomePage = () => {
               link="/newArrival"
             />
           </div>
-          <OurServices />
+          {/* <OurServices /> */}
           <Footer />
         </Suspense>
       </div>

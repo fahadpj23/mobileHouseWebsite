@@ -172,7 +172,7 @@ const ProductListFilters: FC<props> = ({
                     return checkBoxList(RamVariant);
                   case "storage":
                     return checkBoxList(InternalStorageVariant);
-                  case "networkType":
+                  case "network":
                     return checkBoxList(networkType);
                   case "price":
                     return priceSlider();

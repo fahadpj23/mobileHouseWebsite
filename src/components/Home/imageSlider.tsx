@@ -1,6 +1,5 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { MAINBANNER } from "constants/mainBanner";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
@@ -19,7 +18,7 @@ const ImageSlider: FC<props> = ({ bannerItems }) => {
         showArrows={false}
       >
         {bannerItems?.map((banner: any) => (
-          <Link to={banner?.name} key={banner?.id}>
+          <Link to={`series/${banner?.series}`} key={banner?.id}>
             <div className="relative">
               <img
                 src={banner?.image}

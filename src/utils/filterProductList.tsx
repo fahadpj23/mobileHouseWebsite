@@ -20,7 +20,7 @@ export const filterProducts = (products: any, filters: any) => {
 
     if (
       filters?.network?.length &&
-      !filters.network?.includes(product.network)
+      !filters.network?.includes(product.networkType)
     ) {
       return false;
     }

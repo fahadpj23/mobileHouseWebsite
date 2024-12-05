@@ -1,15 +1,16 @@
+import { getMultiplePhoneSeries } from "utils/getMultiplePhoneSeries";
 import SingleProductCard from "components/commonComponents/SingleProductCard";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getPhoneVariants } from "utils/getPhoneVariants";
 
-const SearchList = () => {
-  const { searchWord } = useParams();
+const SeriesList = () => {
+  const { seriesList } = useParams();
   const [productList, setProductList] = useState<any>([]);
 
   useEffect(() => {
-    searchWord && setProductList(getPhoneVariants(searchWord));
-  }, [searchWord]);
+    seriesList &&
+      setProductList(getMultiplePhoneSeries(seriesList?.split(",")));
+  }, [seriesList]);
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-2 md:gap-5">
@@ -21,4 +22,4 @@ const SearchList = () => {
     </div>
   );
 };
-export default SearchList;
+export default SeriesList;
