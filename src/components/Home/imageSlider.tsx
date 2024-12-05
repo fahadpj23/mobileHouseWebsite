@@ -19,7 +19,7 @@ const ImageSlider: FC<props> = ({ bannerItems }) => {
         showArrows={false}
       >
         {bannerItems?.map((banner: any) => (
-          <Link to={banner?.name} key={banner?.id}>
+          <Link to={`series/${banner?.series}`} key={banner?.id}>
             <div className="relative">
               <img
                 src={banner?.image}
