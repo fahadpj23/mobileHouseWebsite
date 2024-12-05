@@ -14,7 +14,7 @@ const ProductMiniList = React.lazy(
 const WhatsappAds = React.lazy(() => import("components/Home/whatsappAds"));
 const Banner = React.lazy(() => import("components/Home/banner"));
 const Footer = React.lazy(() => import("components/Home/footer"));
-const OurServices = React.lazy(() => import("components/Home/ourServices"));
+// const OurServices = React.lazy(() => import("components/Home/ourServices"));
 
 const HomePage = () => {
   return (
@@ -47,7 +47,7 @@ const HomePage = () => {
               link="/newArrival"
             />
           </div>
-          <OurServices />
+          {/* <OurServices /> */}
           <Footer />
         </Suspense>
       </div>
