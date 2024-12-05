@@ -268,6 +268,7 @@ export const ALLPHONES = [
     id: "VIVO6",
     name: "VIVO Y58 5G 8/128 ",
     brand: "VIVO",
+    series: "Y58",
     image: VIVOY58HIMALAYANBLUE1,
     launchDate: "20-06-2024",
     salesPrice: 17499,
