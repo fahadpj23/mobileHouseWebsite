@@ -1,9 +1,6 @@
 export const filterProducts = (products: any, filters: any) => {
   return products.filter((product: any) => {
-    if (
-      filters?.brand?.length &&
-      !filters.brand.includes(product.brand.toLowerCase())
-    ) {
+    if (filters?.brand?.length && !filters.brand.includes(product.brand)) {
       return false;
     }
 

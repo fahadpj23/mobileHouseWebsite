@@ -3,8 +3,6 @@ import { BsSortDown } from "react-icons/bs";
 import { CiFilter } from "react-icons/ci";
 import SingleProductCard from "./SingleProductCard";
 import { filterProducts } from "utils/filterProductList";
-import { GiNetworkBars } from "react-icons/gi";
-import { CiDiscount1 } from "react-icons/ci";
 import NOPRODUCTIMAGE from "assets/noProduct.jpg";
 import {
   Box,
@@ -15,14 +13,16 @@ import {
   RadioGroup,
   // Select,
 } from "@mui/material";
-// import { useScreenSize } from "hooks/useScreenSize";
 import { UrlReplace } from "utils/urlReplace";
 import { ProductListSort } from "utils/productListSort";
 import { useSearchParams } from "react-router-dom";
 import ProductListFilters from "./Filters";
+import { useScreenSize } from "hooks/useScreenSize";
+import DesktopFilter from "./desktopFilters";
 
 const ProductList: FC<any> = ({ products }) => {
   const [searchParams] = useSearchParams();
+  const { isMobile } = useScreenSize();
   const [filters, setFilters] = useState<any>({
     network: searchParams.get("network") ? searchParams.get("network") : [],
     // specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
@@ -49,11 +49,11 @@ const ProductList: FC<any> = ({ products }) => {
   const [isSortOpen, setSortIsOpen] = useState(false);
   const [isFilterOpen, setFilterIsOpen] = useState<boolean>(false);
 
-  // const filterAdd = (key: any, value: any) => {
-  //   UrlReplace(key, value);
-  //   setIsLoading(true);
-  //   setFilters({ ...filters, [key]: value });
-  // };
+  const desktopFilterAdd = (key: any, value: any) => {
+    UrlReplace(key, value);
+    setIsLoading(true);
+    setFilters({ ...filters, [key]: value });
+  };
 
   useEffect(() => {
     if (products) {
@@ -167,23 +167,24 @@ const ProductList: FC<any> = ({ products }) => {
           <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
-      <div className="w-full flex justify-between   border-t border-b border-gray-300 py-2 my-2">
-        <button
-          className="flex justify-center w-1/2 border-r border-gray-300 items-center font-semibold space-x-1"
-          onClick={() => setSortIsOpen(true)}
-        >
-          <BsSortDown />
-          <h1>Sort</h1>
-        </button>
-        <button
-          className="flex justify-center w-1/2 items-center font-semibold space-x-1"
-          onClick={() => setFilterIsOpen(true)}
-        >
-          <CiFilter />
-          <h1>Filters</h1>
-        </button>
-      </div>
-
+      {isMobile && (
+        <div className="w-full flex justify-between   border-t border-b border-gray-300 py-2 my-2">
+          <button
+            className="flex justify-center w-1/2 border-r border-gray-300 items-center font-semibold space-x-1"
+            onClick={() => setSortIsOpen(true)}
+          >
+            <BsSortDown />
+            <h1>Sort</h1>
+          </button>
+          <button
+            className="flex justify-center w-1/2 items-center font-semibold space-x-1"
+            onClick={() => setFilterIsOpen(true)}
+          >
+            <CiFilter />
+            <h1>Filters</h1>
+          </button>
+        </div>
+      )}
       <div>
         {sortFilter()}
         {isFilterOpen && (
@@ -230,23 +231,34 @@ const ProductList: FC<any> = ({ products }) => {
             </button> */}
         {/* </div>
         </div> */}
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-2 md:gap-5">
-          {productList?.length ? (
-            productList?.map((product: any) => {
-              return (
-                <SingleProductCard product={product} key={product?.name} />
-              );
-            })
-          ) : (
-            <div className="w-screen h-full flex items-center justify-center ">
-              <img
-                src={NOPRODUCTIMAGE}
-                className="w-[60vw] md:w-[40vh] h-[40vh] "
-                alt="nocproduct found"
+        <div className="flex">
+          {!isMobile && (
+            <div>
+              <DesktopFilter
+                filters={filters}
+                desktopFilterAdd={desktopFilterAdd}
+                products={products}
+                setFilters={setFilters}
               />
             </div>
           )}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-2 md:gap-5">
+            {productList?.length ? (
+              productList?.map((product: any) => {
+                return (
+                  <SingleProductCard product={product} key={product?.name} />
+                );
+              })
+            ) : (
+              <div className="w-screen h-full flex items-center justify-center ">
+                <img
+                  src={NOPRODUCTIMAGE}
+                  className="w-[60vw] md:w-[40vh] h-[40vh] "
+                  alt="nocproduct found"
+                />
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
