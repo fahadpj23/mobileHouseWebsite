@@ -16,14 +16,12 @@ import SpecialOffer from "pages/specialOffer";
 import Brand from "pages/brand";
 import SingleItem from "pages/singleItem";
 import TrendingPhones from "pages/trendingPhone";
-import SpecCreator from "pages/specCreator";
 import SeriesList from "pages/seriesList";
 import PageNotFound from "pages/404Page";
 const PageRoute = () => {
   return (
     <div>
       <BrowserRouter>
-        {/* <Suspense fallback={<div></div>}> */}
         <MainLayout>
           <Routes>
             <Route index path="/" element={<HomePage />} />
@@ -32,16 +30,14 @@ const PageRoute = () => {
             <Route index path="/trendingPhones" element={<TrendingPhones />} />
             <Route index path="brand/:brandName" element={<Brand />} />
             <Route index path="series/:seriesList" element={<SeriesList />} />
-            <Route path="*" element={<PageNotFound />} />
             <Route
               index
               path="phone/:productId/:productName"
               element={<SingleItem />}
             />
-            <Route index path="specCreator" element={<SpecCreator />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </MainLayout>
-        {/* </Suspense> */}
       </BrowserRouter>
     </div>
   );

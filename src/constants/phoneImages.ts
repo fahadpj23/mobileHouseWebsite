@@ -1818,7 +1818,7 @@ export const PHONEIMAGE = [
 
       {
         id: 3,
-        name: "ORCHIDPINK1",
+        name: "ORCHID PINK",
         images: [
           REDMI135GORCHIDPINK1,
           REDMI135GORCHIDPINK2,
@@ -2546,7 +2546,7 @@ export const PHONEIMAGE = [
 
   //REALME PHONES
   {
-    id: "REALME1",
+    id: "SAMSUNG1",
 
     colors: [
       {

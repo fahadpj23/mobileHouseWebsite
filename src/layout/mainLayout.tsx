@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import mobileHouseLogo from "assets/mobileHouseLogo.png";
 import Naviagtion from "./navigation";
-import SocialMedia from "./socialMedia";
 import SideDrawar from "./sideDrawar";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { useState } from "react";
@@ -33,12 +32,8 @@ const MainLayout = ({ children }: any) => {
         ) : (
           <DesktopSearch />
         )}
-
         <Naviagtion />
-
-        {/* <SocialMedia /> */}
       </div>
-
       <main>{children}</main>
     </div>
   );
