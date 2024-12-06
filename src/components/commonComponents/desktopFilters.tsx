@@ -60,14 +60,14 @@ const DesktopFilter: FC<props> = ({
       priceMax: value[1],
     });
   };
-  console.log(filters);
+
   const priceSlider = () => (
     <div className="p-4 flex flex-col space-y-4">
       <h1 className="font-semibold">PRICE</h1>
       <div className="flex flex-col space-y-3">
         <Slider
           range
-          defaultValue={[100, 2000]}
+          defaultValue={[filters?.priceMin ?? 0, filters?.priceMax ?? 150000]}
           min={0}
           max={200000}
           step={1}
@@ -79,7 +79,7 @@ const DesktopFilter: FC<props> = ({
       </div>
     </div>
   );
-  console.log(filters);
+
   const filterListFetch = (filterName: string) => {
     switch (filterName) {
       case "brand":
@@ -95,16 +95,12 @@ const DesktopFilter: FC<props> = ({
 
   const filterDetails = (title: string, listName: any) => (
     <div>
-      <h1>{title}</h1>
+      <h1 className="uppercase font-semibold">{title}</h1>
       {listName === "price"
         ? priceSlider()
         : checkBoxList(listName, filterListFetch(listName))}
     </div>
   );
-
-  console.log(filterListFetch("brand"));
-
-  const handleFilter = () => {};
 
   return (
     <div>

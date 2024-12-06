@@ -196,44 +196,9 @@ const ProductList: FC<any> = ({ products }) => {
             products={products}
           />
         )}
-        {/* 
-        <div className=" border-t border-b  border-gray-200 p-1 ">
-          <div className="flex ml-3 space-x-3 mt-3 "> */}
-        {/* <button
-              onClick={() => {
-                filters?.connectivity
-                  ? filterAdd("connectivity", "")
-                  : filterAdd("connectivity", "5G");
-              }}
-              className={`flex space-x-1 justify-end items-center  w-12 p-1 rounded-sm ${
-                filters?.connectivity
-                  ? "border border-blue-600 bg-blue-100"
-                  : "border border-gray-400"
-              }`}
-            >
-              <GiNetworkBars className="text-blue-500 text-xl" />
-              <h1 className="text-[10px]">5G</h1>
-            </button> */}
-        {/* <button
-              onClick={() => {
-                filters?.specialOffer
-                  ? filterAdd("specialOffer", false)
-                  : filterAdd("specialOffer", true);
-              }}
-              className={`flex justify-center items-center  p-1 rounded-sm ${
-                filters?.specialOffer
-                  ? "border border-green-600 bg-green-100"
-                  : "border border-gray-400"
-              }`}
-            >
-              <CiDiscount1 className="text-green-500 text-xl" />
-              <h1 className="text-[10px]">Special Offer</h1>
-            </button> */}
-        {/* </div>
-        </div> */}
         <div className="flex">
           {!isMobile && (
-            <div>
+            <div className="w-[15vw] bg-gray-100 shadow-xl p-1 overflow-y-auto">
               <DesktopFilter
                 filters={filters}
                 desktopFilterAdd={desktopFilterAdd}
@@ -250,10 +215,10 @@ const ProductList: FC<any> = ({ products }) => {
                 );
               })
             ) : (
-              <div className="w-screen h-full flex items-center justify-center ">
+              <div className="w-screen md:w-auto  h-full flex  justify-center ">
                 <img
                   src={NOPRODUCTIMAGE}
-                  className="w-[60vw] md:w-[40vh] h-[40vh] "
+                  className="w-[80%] md:w-full  h-[40vh] "
                   alt="nocproduct found"
                 />
               </div>
