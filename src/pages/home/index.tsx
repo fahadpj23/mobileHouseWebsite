@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import ImageSlider from "components/Home/imageSlider";
-import Brands from "components/Home/Brands";
+import Brands from "components/Home/brands";
 import { getSpecialOfferPhones } from "utils/getSpecialOfferPhone";
 import { getTrendingPhones } from "utils/getTrendingPhones";
 import { MAINBANNER } from "constants/mainBanner";

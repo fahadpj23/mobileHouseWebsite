@@ -1,5 +1,4 @@
 import ProductList from "components/commonComponents/productList";
-import SingleProductCard from "components/commonComponents/SingleProductCard";
 import { getTrendingPhones } from "utils/getTrendingPhones";
 
 const TrendingPhones = () => {

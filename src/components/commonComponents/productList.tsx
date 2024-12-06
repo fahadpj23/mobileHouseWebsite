@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { BsSortDown } from "react-icons/bs";
 import { CiFilter } from "react-icons/ci";
-import SingleProductCard from "./SingleProductCard";
+import SingleProductCard from "./singleProductCard";
 import { filterProducts } from "utils/filterProductList";
 import NOPRODUCTIMAGE from "assets/noProduct.jpg";
 import {
@@ -16,7 +16,7 @@ import {
 import { UrlReplace } from "utils/urlReplace";
 import { ProductListSort } from "utils/productListSort";
 import { useSearchParams } from "react-router-dom";
-import ProductListFilters from "./Filters";
+import ProductListFilters from "./filters";
 import { useScreenSize } from "hooks/useScreenSize";
 import DesktopFilter from "./desktopFilters";
 

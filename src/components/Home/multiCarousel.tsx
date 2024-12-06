@@ -1,9 +1,7 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import SingleProductCard from "components/commonComponents/SingleProductCard";
-import { Link } from "react-router-dom";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import SingleProductCard from "components/commonComponents/singleProductCard";
 
 interface props {
   listItems: any;

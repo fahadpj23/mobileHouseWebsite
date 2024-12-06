@@ -1,6 +1,5 @@
-import SingleProductCard from "components/commonComponents/SingleProductCard";
+import SingleProductCard from "components/commonComponents/singleProductCard";
 import { FC } from "react";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { Link } from "react-router-dom";
 import MultiCarousel from "./multiCarousel";
 

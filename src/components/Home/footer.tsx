@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="flex flex-col space-y-2">
           <h1 className="uppercase text-white my-1">{title}</h1>
           <div
-            className=" text-sm"
+            className=" text-sm tracking-wider"
             dangerouslySetInnerHTML={{ __html: content }}
           ></div>
         </div>
