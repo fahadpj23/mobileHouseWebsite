@@ -25,7 +25,6 @@ const ProductList: FC<any> = ({ products }) => {
   const { isMobile } = useScreenSize();
   const [filters, setFilters] = useState<any>({
     network: searchParams.get("network") ? searchParams.get("network") : [],
-    // specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
     ram: searchParams.get("ram")
       ? searchParams.get("ram")?.split(",").map(Number)
       : [],
@@ -42,7 +41,6 @@ const ProductList: FC<any> = ({ products }) => {
       ? Number(searchParams.get("priceMax"))
       : 150000,
   });
-  // const { isMobile } = useScreenSize();
   const [productList, setProductList] = useState(products);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [sort, setSort] = useState(searchParams.get("sort") ?? "newest");
