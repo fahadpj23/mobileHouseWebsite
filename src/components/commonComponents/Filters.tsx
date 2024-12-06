@@ -26,7 +26,6 @@ const ProductListFilters: FC<props> = ({
   const [selectedFilter, setSelectedFilter] = useState("brand");
   const [selectedProductFilters, setSelectedProductFilters] =
     useState<any>(filters);
-  // const rangeSliderMinMax = getHighestAndLowestPrice(products);
   const [price, setPrice] = useState({
     min: filters?.priceMin ?? 0,
     max: filters?.priceMax ?? 150000,
@@ -121,7 +120,7 @@ const ProductListFilters: FC<props> = ({
           open={Boolean(isFilterOpen)}
           onClose={() => setFilterIsOpen(false)}
           PaperProps={{
-            sx: { height: "90vh" },
+            sx: { height: "85vh" },
           }}
         >
           <div className="flex h-full  ">
@@ -152,16 +151,12 @@ const ProductListFilters: FC<props> = ({
                       return checkBoxList(networkType);
                     case "price":
                       return priceSlider();
-                    // case "rating":
-                    //   return checkBoxList(starRating);
-                    // default:
-                    //   return <div style={{ color: "gray" }}>Default Message</div>;
                   }
                 })()}
               </>
               <button
                 onClick={ApplyFilters}
-                className="bg-orange-600 p-1 w-[60%] text-white absolute bottom-1 right-1"
+                className="bg-orange-600 p-1 w-[60%] text-white absolute bottom-2 right-1"
               >
                 Apply
               </button>
