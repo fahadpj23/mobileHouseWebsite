@@ -67,6 +67,7 @@ const Footer = () => {
           <img
             src={mobileHouseLogo}
             alt="banner"
+            loading="lazy"
             className="mt-3 md:mt-0 h-[40px] w-[180px] md:h-[60px] md:w-[250px]"
           />
         </div>

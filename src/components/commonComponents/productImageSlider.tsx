@@ -21,6 +21,7 @@ const ProductImageSlider: FC<any> = ({ productImages }) => {
                 src={image}
                 alt="product image"
                 key={image}
+                loading="lazy"
                 className="pb-8 max-h-[80vw] w-full object-contain"
               />
             ))}

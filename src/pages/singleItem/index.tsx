@@ -85,6 +85,7 @@ const SingleItem = () => {
                       alt={`${product?.name} Image `}
                       className="w-full h-full object-contain "
                       id="mainImage"
+                      loading="lazy"
                     />
                   </div>
                 )}
@@ -101,6 +102,7 @@ const SingleItem = () => {
                         <img
                           src={image}
                           alt={`productImage `}
+                          loading="lazy"
                           className="w-full h-full object-contain"
                         />
                       </button>
@@ -151,6 +153,7 @@ const SingleItem = () => {
                               src={color?.images[0]}
                               className="w-full h-full object-contain "
                               alt="phone image"
+                              loading="lazy"
                             />
                           </div>
                           <h1 className="text-[12px] md:text-[14px] font-semibold capitalize">

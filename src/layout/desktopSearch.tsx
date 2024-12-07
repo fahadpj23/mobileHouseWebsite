@@ -49,6 +49,7 @@ const DesktopSearch = () => {
                     src={phone?.image ?? phone?.colors[0]?.images[0]}
                     alt="phone Image"
                     className=" w-10 h-10"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-xs">

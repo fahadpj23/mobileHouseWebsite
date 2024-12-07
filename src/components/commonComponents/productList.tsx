@@ -220,6 +220,7 @@ const ProductList: FC<any> = ({ products }) => {
                   src={NOPRODUCTIMAGE}
                   className="w-[80%] md:w-full  h-[40vh] "
                   alt="nocproduct found"
+                  loading="lazy"
                 />
               </div>
             )}

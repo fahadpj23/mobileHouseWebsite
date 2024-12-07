@@ -24,6 +24,7 @@ const ImageSlider: FC<props> = ({ bannerItems }) => {
                 src={banner?.image}
                 className="h-[50vw] md:h-[25vw] rounded-none md:rounded-xl  "
                 alt="banner"
+                loading="lazy"
               />
               {banner?.link && (
                 <button className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 p-1 rounded-lg text-white text-[11px] absolute left-5 bottom-4">

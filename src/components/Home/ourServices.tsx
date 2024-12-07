@@ -6,6 +6,7 @@ const OurServices = () => {
     <div className="flex flex-col items-center space-y-3">
       <img
         src={image}
+        loading="lazy"
         alt="service image"
         className="rounded-lg md:rounded-2xl h-36 md:h-56 w-[80vw] md:w-[20vw]"
       />

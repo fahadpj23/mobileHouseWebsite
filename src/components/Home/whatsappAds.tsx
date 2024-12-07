@@ -41,6 +41,7 @@ const WhatsappAds = () => {
             <img
               src={item?.image}
               alt="phone Image"
+              loading="lazy"
               className="w-[93%] h-[60vw] md:h-[22vw]   object-fill"
             />
           </Link>

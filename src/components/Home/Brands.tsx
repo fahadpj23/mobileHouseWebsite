@@ -21,6 +21,7 @@ const Brands = () => {
                 <img
                   src={brand?.image}
                   alt="logo "
+                  loading="lazy"
                   className="hover:scale-110 duration-150 h-[35px] md:h-[50px] w-[90px] md:w-[150px]  bg-white shadow-md "
                 />
               </Link>

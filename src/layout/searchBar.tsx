@@ -42,6 +42,7 @@ const SearchBar: FC<any> = ({ setSearchOpen }) => {
                 <img
                   src={phone?.image}
                   alt="phone Image"
+                  loading="lazy"
                   className=" w-8 h-10"
                 />
               </div>

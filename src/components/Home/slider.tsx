@@ -87,6 +87,7 @@ const SliderList = () => {
             <img
               src={brand?.image}
               alt="logo "
+              loading="lazy"
               style={imageStyle}
               className="hover:scale-110 duration-150"
             />

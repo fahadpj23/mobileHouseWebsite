@@ -13,6 +13,7 @@ const AvailableEmi = () => {
             <div key={emi?.name} className="mr-3 md:mr-5">
               <img
                 src={emi?.image}
+                loading="lazy"
                 alt="emiLogo "
                 className=" w-[20vw] md:w-[8vw] h-[20px] md:h-[30px]  bg-white  "
               />
