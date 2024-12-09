@@ -18,7 +18,7 @@ const ProductImageSlider: FC<any> = ({ productImages }) => {
             selectedItem={0}
           >
             {productImages?.images?.map((image: any) => (
-              <div className="pb-8 h-[80vw] w-full ">
+              <div key={image} className="pb-8 h-[80vw] w-full ">
                 <LazyImage src={image} alt="Product Image" />
               </div>
             ))}

@@ -9,7 +9,11 @@ interface props {
 
 const LazyImage: FC<props> = ({ src, alt, fill = false }) => {
   return (
-    <LazyLoad offset={100} className="h-full w-full">
+    <LazyLoad
+      offset={100}
+      className="h-full w-full"
+      placeholder={<img src={src} alt={alt} />}
+    >
       <img
         src={src}
         alt={alt}
