@@ -2,6 +2,7 @@ import { Carousel } from "react-responsive-carousel";
 import { MINIBANNERS } from "constants/miniBannerItem";
 import ImageSlider from "./imageSlider";
 import { Link } from "react-router-dom";
+import LazyImage from "components/commonComponents/imageLazyLoading";
 const Banner = () => {
   return (
     <div>
@@ -13,12 +14,9 @@ const Banner = () => {
               key={banner?.id}
               style={{ margin: "3px 8px" }}
             >
-              <img
-                key={banner?.name}
-                src={banner?.image}
-                alt="banner"
-                className="w-full h-[30vh]"
-              />
+              <div key={banner?.name} className="w-full h-[30vh]">
+                <LazyImage src={banner?.image} alt="banner " />
+              </div>
             </Link>
           );
         })}

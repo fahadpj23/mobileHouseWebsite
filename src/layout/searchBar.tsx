@@ -3,6 +3,7 @@ import { Divider } from "@mui/material";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { ALLPHONES } from "constants/allPhone";
 import { Link } from "react-router-dom";
+import LazyImage from "components/commonComponents/imageLazyLoading";
 
 const SearchBar: FC<any> = ({ setSearchOpen }) => {
   const [searchData, setSearchData] = useState<any>([]);
@@ -39,12 +40,9 @@ const SearchBar: FC<any> = ({ setSearchOpen }) => {
               className="flex items-center space-x-4"
             >
               <div className="p-1">
-                <img
-                  src={phone?.image}
-                  alt="phone Image"
-                  loading="lazy"
-                  className=" w-8 h-10"
-                />
+                <div className="w-8 h-10">
+                  <LazyImage src={phone?.image} alt="phone Image" />
+                </div>
               </div>
               <div className="text-xs">
                 <h1>{phone?.name}</h1>

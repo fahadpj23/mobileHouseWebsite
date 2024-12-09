@@ -10,6 +10,7 @@ import ProductImageSlider from "components/commonComponents/productImageSlider";
 import { getPhoneVariants } from "utils/getPhoneVariants";
 import { toPascalCase } from "utils/pascalCaseConvert";
 import { getProductImage } from "utils/getProductImages";
+import LazyImage from "components/commonComponents/imageLazyLoading";
 
 const SingleItem = () => {
   const { productId } = useParams();
@@ -79,14 +80,13 @@ const SingleItem = () => {
                 {isMobile && !isLoading && productImages?.images?.length ? (
                   <ProductImageSlider productImages={productImages} />
                 ) : (
-                  <div className="w-[50vw] h-[85vw] md:w-[26vw] md:h-[25vw] flex justify-center items-center  ">
-                    <img
-                      src={displayImage}
-                      alt={`${product?.name} Image `}
-                      className="w-full h-full object-contain "
-                      id="mainImage"
-                      loading="lazy"
-                    />
+                  <div className="w-[20vw] h-[25vw] flex justify-center items-center   ">
+                    <div className="w-full h-full ">
+                      <LazyImage
+                        src={displayImage}
+                        alt={`${product?.name} Image `}
+                      />
+                    </div>
                   </div>
                 )}
               </div>
@@ -99,12 +99,9 @@ const SingleItem = () => {
                         onClick={() => setDisplayImage(image)}
                         className="p-1 border border-gray-300 rounded-md w-10 h-14 md:w-20 md:h-16 "
                       >
-                        <img
-                          src={image}
-                          alt={`productImage `}
-                          loading="lazy"
-                          className="w-full h-full object-contain"
-                        />
+                        <div className="w-full h-full object-contain">
+                          <LazyImage src={image} alt="phone image " />
+                        </div>
                       </button>
                     );
                   })}
@@ -149,12 +146,15 @@ const SingleItem = () => {
                           className=" flex flex-col items-center "
                         >
                           <div className="w-10 h-16 md:w-16 ">
-                            <img
-                              src={color?.images[0]}
-                              className="w-full h-full object-contain "
-                              alt="phone image"
-                              loading="lazy"
-                            />
+                            <div
+                              key={color?.images[0]?.name}
+                              className="w-full h-full object-contain"
+                            >
+                              <LazyImage
+                                src={color?.images[0]}
+                                alt="phone image "
+                              />
+                            </div>
                           </div>
                           <h1 className="text-[12px] md:text-[14px] font-semibold capitalize">
                             {color?.name && toPascalCase(color?.name)}

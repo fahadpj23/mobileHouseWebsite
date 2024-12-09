@@ -2,6 +2,7 @@ import { useState } from "react";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { ALLPHONES } from "constants/allPhone";
 import { Link } from "react-router-dom";
+import LazyImage from "components/commonComponents/imageLazyLoading";
 
 const DesktopSearch = () => {
   const [searchData, setSearchData] = useState<any>([]);
@@ -45,12 +46,12 @@ const DesktopSearch = () => {
                 onClick={() => handleSelect()}
               >
                 <div className="p-1">
-                  <img
-                    src={phone?.image ?? phone?.colors[0]?.images[0]}
-                    alt="phone Image"
-                    className=" w-10 h-10"
-                    loading="lazy"
-                  />
+                  <div className="w-10 h-10">
+                    <LazyImage
+                      src={phone?.image ?? phone?.colors[0]?.images[0]}
+                      alt="phone Image"
+                    />
+                  </div>
                 </div>
                 <div className="text-xs">
                   <h1>{phone?.name}</h1>

@@ -1,6 +1,7 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { FC } from "react";
+import LazyImage from "./imageLazyLoading";
 
 const ProductImageSlider: FC<any> = ({ productImages }) => {
   return (
@@ -17,13 +18,9 @@ const ProductImageSlider: FC<any> = ({ productImages }) => {
             selectedItem={0}
           >
             {productImages?.images?.map((image: any) => (
-              <img
-                src={image}
-                alt="product image"
-                key={image}
-                loading="lazy"
-                className="pb-8 max-h-[80vw] w-full object-contain"
-              />
+              <div className="pb-8 h-[80vw] w-full ">
+                <LazyImage src={image} alt="Product Image" />
+              </div>
             ))}
           </Carousel>
         </div>

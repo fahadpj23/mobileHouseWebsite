@@ -4,6 +4,7 @@ import { NAVIGATIONITEMS } from "constants/navigationItems";
 import { Link } from "react-router-dom";
 import { Divider } from "@mui/material";
 import mobileHouseLogo from "assets/mobileHouseLogo.png";
+import LazyImage from "components/commonComponents/imageLazyLoading";
 
 const Footer = () => {
   const companyDetails = (title: String, content: any, icon: any) => (
@@ -64,12 +65,9 @@ const Footer = () => {
         </div>
 
         <div className=" hidden md:flex">
-          <img
-            src={mobileHouseLogo}
-            alt="banner"
-            loading="lazy"
-            className="mt-3 md:mt-0 h-[40px] w-[180px] md:h-[60px] md:w-[250px]"
-          />
+          <div className="mt-3 md:mt-0 h-[40px] w-[180px] md:h-[60px] md:w-[250px]">
+            <LazyImage src={mobileHouseLogo} alt="banner" />
+          </div>
         </div>
 
         <div className=" space-y-3 hidden md:flex flex-col font-semibold">

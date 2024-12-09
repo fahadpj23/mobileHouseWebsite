@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import { PHONEBRANDS } from "constants/phoneBrands";
+import LazyImage from "components/commonComponents/imageLazyLoading";
 interface brandType {
   name: string;
   image: string;
@@ -84,13 +85,12 @@ const SliderList = () => {
       <Slider {...settingsSlider}>
         {PHONEBRANDS?.map((brand: brandType) => {
           return (
-            <img
-              src={brand?.image}
-              alt="logo "
-              loading="lazy"
-              style={imageStyle}
-              className="hover:scale-110 duration-150"
-            />
+            <div
+              key={brand?.name}
+              className="hover:scale-110 duration-150 w-full"
+            >
+              <LazyImage src={brand?.image} alt="banner " />
+            </div>
           );
         })}
       </Slider>

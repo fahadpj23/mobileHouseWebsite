@@ -1,6 +1,7 @@
 import Carousel from "react-multi-carousel";
 import { WhatappAdsList } from "constants/whatsappAds";
 import { Link } from "react-router-dom";
+import LazyImage from "components/commonComponents/imageLazyLoading";
 
 const WhatsappAds = () => {
   const responsive = {
@@ -38,12 +39,9 @@ const WhatsappAds = () => {
             key={item?.id}
             style={{ margin: "3px 8px" }}
           >
-            <img
-              src={item?.image}
-              alt="phone Image"
-              loading="lazy"
-              className="w-[93%] h-[60vw] md:h-[22vw]   object-fill"
-            />
+            <div className="w-[93%] h-[60vw] md:h-[22vw]   object-fill">
+              <LazyImage src={item?.image} alt="phone Image" />
+            </div>
           </Link>
         ))}
       </Carousel>

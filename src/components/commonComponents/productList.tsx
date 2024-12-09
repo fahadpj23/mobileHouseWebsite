@@ -19,6 +19,7 @@ import { useSearchParams } from "react-router-dom";
 import ProductListFilters from "./filters";
 import { useScreenSize } from "hooks/useScreenSize";
 import DesktopFilter from "./desktopFilters";
+import LazyImage from "./imageLazyLoading";
 
 const ProductList: FC<any> = ({ products }) => {
   const [searchParams] = useSearchParams();
@@ -216,12 +217,9 @@ const ProductList: FC<any> = ({ products }) => {
               })
             ) : (
               <div className="w-screen md:w-auto  h-full flex  justify-center ">
-                <img
-                  src={NOPRODUCTIMAGE}
-                  className="w-[80%] md:w-full  h-[40vh] "
-                  alt="nocproduct found"
-                  loading="lazy"
-                />
+                <div className="w-[80%] md:w-full  h-[40vh] ">
+                  <LazyImage src={NOPRODUCTIMAGE} alt="nocproduct found" />
+                </div>
               </div>
             )}
           </div>

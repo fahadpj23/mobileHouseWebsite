@@ -1,15 +1,13 @@
 import MOBILESERVICES from "assets/ourServices/mobileService.jpg";
 import SIMACTIVATION from "assets/ourServices/simActivation.jpg";
 import COVERPRINTING from "assets/ourServices/mobileCoverPrinting.jpg";
+import LazyImage from "components/commonComponents/imageLazyLoading";
 const OurServices = () => {
   const services = (image: any, title: string, content: string) => (
     <div className="flex flex-col items-center space-y-3">
-      <img
-        src={image}
-        loading="lazy"
-        alt="service image"
-        className="rounded-lg md:rounded-2xl h-36 md:h-56 w-[80vw] md:w-[20vw]"
-      />
+      <div className="rounded-lg md:rounded-2xl h-36 md:h-56 w-[80vw] md:w-[20vw]">
+        <LazyImage src={image} alt="service Image" />
+      </div>
       <h1 className="font-semibold text-base md:text-xl">{title}</h1>
       <h1 className="text-sm w-2/3 md:w-[14vw] text-gray-500 text-center">
         {content}

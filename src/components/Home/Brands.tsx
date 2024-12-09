@@ -1,3 +1,4 @@
+import LazyImage from "components/commonComponents/imageLazyLoading";
 import { PHONEBRANDS } from "constants/phoneBrands";
 import { Link } from "react-router-dom";
 
@@ -18,12 +19,9 @@ const Brands = () => {
                 to={`brand${brand?.link}`}
                 className=" flex items-center p-1  "
               >
-                <img
-                  src={brand?.image}
-                  alt="logo "
-                  loading="lazy"
-                  className="hover:scale-110 duration-150 h-[35px] md:h-[50px] w-[90px] md:w-[150px]  bg-white shadow-md "
-                />
+                <div className="hover:scale-110 duration-150 h-[35px] md:h-[50px] w-[90px] md:w-[150px]  bg-white shadow-md ">
+                  <LazyImage src={brand?.image} alt="logo " fill={true} />
+                </div>
               </Link>
             );
           })}
