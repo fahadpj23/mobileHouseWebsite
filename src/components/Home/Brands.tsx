@@ -11,7 +11,7 @@ const Brands = () => {
   return (
     <div>
       <div className="  w-full mb-3">
-        <div className="grid grid-cols-3 md:grid-cols-6 bg-grayBackground p-3 w-full gap-2 place-items-center ">
+        {/* <div className="grid grid-cols-3 md:grid-cols-6 bg-grayBackground p-3 w-full gap-2 place-items-center ">
           {PHONEBRANDS?.map((brand: brandType) => {
             return (
               <Link
@@ -25,6 +25,23 @@ const Brands = () => {
               </Link>
             );
           })}
+        </div> */}
+        <div className="w-screen md:w-full flex bg-grayBackground p-2 justify-center ">
+          <div className="flex overflow-x-auto scrollbar-hide space-x-2 md:space-x-4 ">
+            {PHONEBRANDS?.map((brand: brandType) => {
+              return (
+                <Link
+                  key={brand?.name}
+                  to={`brand${brand?.link}`}
+                  className=" flex items-center p-1  "
+                >
+                  <div className="hover:scale-110 duration-150 h-[30px] md:h-[45px] w-[70px] md:w-[140px]  bg-white shadow-md ">
+                    <LazyImage src={brand?.image} alt="logo " fill={true} />
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
