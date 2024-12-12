@@ -157,25 +157,17 @@ import TECNOSPARK30CAURORCLOUD1 from "assets/tecno/TECNOSPARK30C/TECNOSPARK30CAU
 
 //IQOO
 
-import IQOONEO9PROCONQUERORBLACK1 from "assets/iqoo/IQOONEO9PRO/IQOONEO9PROCONQUERORBLACK/IQOONEO9PROCONQUERORBLACK1.jpeg";
-
 import IQOONEO9PROFIERYRED1 from "assets/iqoo/IQOONEO9PRO/IQOONEO9PROFIERYRED/IQOONEO9PROFIERYRED1.jpeg";
 
-import IQOOZ9BRUSHEDGREEN1 from "assets/iqoo/IQOOZ9/IQOOZ9BRUSHEDGREEN/IQOOZ9BRUSHEDGREEN1.jpeg";
-
 import IQOOZ9GRAPHENEBLUE1 from "assets/iqoo/IQOOZ9/IQOOZ9GRAPHENEBLUE/IQOOZ9GRAPHENEBLUE1.jpeg";
-
-import IQOOZ9LITEAQUAFLOW1 from "assets/iqoo/IQOOZ9LITE/IQOOZ9LITEAQUAFLOW/IQOOZ9LITEAQUAFLOW1.jpeg";
 
 import IQOOZ9LITEMOCHABROWN1 from "assets/iqoo/IQOOZ9LITE/IQOOZ9LITEMOCHABROWN/IQOOZ9LITEMOCHABROWN1.jpg";
 
 import IQOOZ9SONYXGREEN1 from "assets/iqoo/IQOOZ9S/IQOOZ9SONYXGREEN/IQOOZ9SONYXGREEN1.jpeg";
 
-import IQOOZ9STITANIUMMATTE1 from "assets/iqoo/IQOOZ9S/IQOOZ9STITANIUMMATTE/IQOOZ9STITANIUMMATTE1.jpeg";
-
 import IQOOZ9XSTORMGREY1 from "assets/iqoo/IQOOZ9X/IQOOZ9XSTORMGREY/IQOOZ9XSTORMGREY1.jpeg";
 
-import IQOOZ9XTORNADOGREEN1 from "assets/iqoo/IQOOZ9X/IQOOZ9XTORNADOGREEN/IQOOZ9XTORNADOGREEN1.jpeg";
+import IQOOZ9SPROLUXEMARBLE3 from "assets/iqoo/IQOOZ9SPRO/IQOOZ9SPROLUXEMARBLE/IQOOZ9SPROLUXEMARBLE3.jpeg";
 
 export const ALLPHONES = [
   //VIVO PHONES
@@ -2617,7 +2609,7 @@ export const ALLPHONES = [
     id: "IQOO1",
     name: "IQOONEO9PRO 8/256",
     brand: "IQOO",
-    series: "NEO 9 PRO",
+    series: "NEO9PRO",
     image: IQOONEO9PROFIERYRED1,
     launchDate: "22-02-2024",
     networkType: "5G",
@@ -2944,6 +2936,90 @@ export const ALLPHONES = [
       "Front Camera": "8 MP",
       "RAM | Storage": "8 GB | 128 GB ",
       Battery: "6000 mAh | 44W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
+  },
+
+  {
+    id: "IQOO13",
+    name: "IQOO Z9S PRO 8/128",
+    brand: "IQOO",
+    series: "Z9SPRO",
+    image: IQOOZ9SPROLUXEMARBLE3,
+    launchDate: "21-08-2024",
+    networkType: "5G",
+    salesPrice: 24899,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 4.5,
+    newArrival: true,
+    mrp: 29999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "Snapdragon 7 Gen 3 Octa core ",
+      Display: "6.77″ (17.2 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+8 MP",
+      "Front Camera": "16 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5500 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
+  },
+
+  {
+    id: "IQOO14",
+    name: "IQOO Z9S PRO 8/256",
+    brand: "IQOO",
+    series: "Z9SPRO",
+    image: IQOOZ9SPROLUXEMARBLE3,
+    launchDate: "21-08-2024",
+    networkType: "5G",
+    salesPrice: 26899,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 4.5,
+    newArrival: true,
+    mrp: 31999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "Snapdragon 7 Gen 3 Octa core ",
+      Display: "6.77″ (17.2 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+8 MP",
+      "Front Camera": "16 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5500 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+    },
+  },
+
+  {
+    id: "IQOO15",
+    name: "IQOO Z9S PRO 12/256",
+    brand: "IQOO",
+    series: "Z9SPRO",
+    image: IQOOZ9SPROLUXEMARBLE3,
+    launchDate: "21-08-2024",
+    networkType: "5G",
+    salesPrice: 28899,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 4.5,
+    newArrival: true,
+    mrp: 33999,
+    ram: 12,
+    storage: 256,
+    specifications: {
+      Processor: "Snapdragon 7 Gen 3 Octa core ",
+      Display: "6.77″ (17.2 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+8 MP",
+      "Front Camera": "16 MP",
+      "RAM | Storage": "12 GB | 256 GB ",
+      Battery: "5500 mAh | 80W Fast Charging ",
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v14 ",
     },

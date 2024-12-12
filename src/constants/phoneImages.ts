@@ -782,6 +782,16 @@ import IQOOZ9XTORNADOGREEN3 from "assets/iqoo/IQOOZ9X/IQOOZ9XTORNADOGREEN/IQOOZ9
 import IQOOZ9XTORNADOGREEN4 from "assets/iqoo/IQOOZ9X/IQOOZ9XTORNADOGREEN/IQOOZ9XTORNADOGREEN4.jpeg";
 import IQOOZ9XTORNADOGREEN5 from "assets/iqoo/IQOOZ9X/IQOOZ9XTORNADOGREEN/IQOOZ9XTORNADOGREEN5.jpeg";
 
+import IQOOZ9SPROLUXEMARBLE1 from "assets/iqoo/IQOOZ9SPRO/IQOOZ9SPROLUXEMARBLE/IQOOZ9SPROLUXEMARBLE1.jpeg";
+import IQOOZ9SPROLUXEMARBLE2 from "assets/iqoo/IQOOZ9SPRO/IQOOZ9SPROLUXEMARBLE/IQOOZ9SPROLUXEMARBLE2.jpeg";
+import IQOOZ9SPROLUXEMARBLE3 from "assets/iqoo/IQOOZ9SPRO/IQOOZ9SPROLUXEMARBLE/IQOOZ9SPROLUXEMARBLE3.jpeg";
+import IQOOZ9SPROLUXEMARBLE4 from "assets/iqoo/IQOOZ9SPRO/IQOOZ9SPROLUXEMARBLE/IQOOZ9SPROLUXEMARBLE4.jpeg";
+import IQOOZ9SPROFLAMBOYANTORANGE1 from "assets/iqoo/IQOOZ9SPRO/IQOOZ9SPROFLAMBOYANTORANGE/IQOOZ9SPROFLAMBOYANTORANGE1.jpeg";
+import IQOOZ9SPROFLAMBOYANTORANGE2 from "assets/iqoo/IQOOZ9SPRO/IQOOZ9SPROFLAMBOYANTORANGE/IQOOZ9SPROFLAMBOYANTORANGE2.jpeg";
+import IQOOZ9SPROFLAMBOYANTORANGE3 from "assets/iqoo/IQOOZ9SPRO/IQOOZ9SPROFLAMBOYANTORANGE/IQOOZ9SPROFLAMBOYANTORANGE3.jpeg";
+import IQOOZ9SPROFLAMBOYANTORANGE4 from "assets/iqoo/IQOOZ9SPRO/IQOOZ9SPROFLAMBOYANTORANGE/IQOOZ9SPROFLAMBOYANTORANGE4.jpeg";
+import IQOOZ9SPROFLAMBOYANTORANGE5 from "assets/iqoo/IQOOZ9SPRO/IQOOZ9SPROFLAMBOYANTORANGE/IQOOZ9SPROFLAMBOYANTORANGE5.jpeg";
+
 export const PHONEIMAGE = [
   //VIVO PHONES
   {
@@ -4154,22 +4164,161 @@ export const PHONEIMAGE = [
     colors: [
       {
         id: 1,
-        name: "Sonyx Green",
+        name: "Storm Grey",
         images: [
-          IQOOZ9SONYXGREEN1,
-          IQOOZ9SONYXGREEN2,
-          IQOOZ9SONYXGREEN3,
-          IQOOZ9SONYXGREEN4,
+          IQOOZ9XSTORMGREY1,
+          IQOOZ9XSTORMGREY2,
+          IQOOZ9XSTORMGREY3,
+          IQOOZ9XSTORMGREY4,
+          IQOOZ9XSTORMGREY5,
         ],
       },
       {
         id: 2,
-        name: "Titanium Matte",
+        name: "Tornado Green",
         images: [
-          IQOOZ9STITANIUMMATTE1,
-          IQOOZ9STITANIUMMATTE2,
-          IQOOZ9STITANIUMMATTE3,
-          IQOOZ9STITANIUMMATTE4,
+          IQOOZ9XTORNADOGREEN1,
+          IQOOZ9XTORNADOGREEN2,
+          IQOOZ9XTORNADOGREEN3,
+          IQOOZ9XTORNADOGREEN4,
+          IQOOZ9XTORNADOGREEN5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "IQOO11",
+    colors: [
+      {
+        id: 1,
+        name: "Storm Grey",
+        images: [
+          IQOOZ9XSTORMGREY1,
+          IQOOZ9XSTORMGREY2,
+          IQOOZ9XSTORMGREY3,
+          IQOOZ9XSTORMGREY4,
+          IQOOZ9XSTORMGREY5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Tornado Green",
+        images: [
+          IQOOZ9XTORNADOGREEN1,
+          IQOOZ9XTORNADOGREEN2,
+          IQOOZ9XTORNADOGREEN3,
+          IQOOZ9XTORNADOGREEN4,
+          IQOOZ9XTORNADOGREEN5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "IQOO12",
+    colors: [
+      {
+        id: 1,
+        name: "Storm Grey",
+        images: [
+          IQOOZ9XSTORMGREY1,
+          IQOOZ9XSTORMGREY2,
+          IQOOZ9XSTORMGREY3,
+          IQOOZ9XSTORMGREY4,
+          IQOOZ9XSTORMGREY5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Tornado Green",
+        images: [
+          IQOOZ9XTORNADOGREEN1,
+          IQOOZ9XTORNADOGREEN2,
+          IQOOZ9XTORNADOGREEN3,
+          IQOOZ9XTORNADOGREEN4,
+          IQOOZ9XTORNADOGREEN5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "IQOO13",
+    colors: [
+      {
+        id: 1,
+        name: "Luxe Marble",
+        images: [
+          IQOOZ9SPROLUXEMARBLE1,
+          IQOOZ9SPROLUXEMARBLE2,
+          IQOOZ9SPROLUXEMARBLE3,
+          IQOOZ9SPROLUXEMARBLE4,
+        ],
+      },
+      {
+        id: 2,
+        name: "Flamboyant Orange",
+        images: [
+          IQOOZ9SPROFLAMBOYANTORANGE1,
+          IQOOZ9SPROFLAMBOYANTORANGE2,
+          IQOOZ9SPROFLAMBOYANTORANGE3,
+          IQOOZ9SPROFLAMBOYANTORANGE4,
+          IQOOZ9SPROFLAMBOYANTORANGE5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "IQOO14",
+    colors: [
+      {
+        id: 1,
+        name: "Luxe Marble",
+        images: [
+          IQOOZ9SPROLUXEMARBLE1,
+          IQOOZ9SPROLUXEMARBLE2,
+          IQOOZ9SPROLUXEMARBLE3,
+          IQOOZ9SPROLUXEMARBLE4,
+        ],
+      },
+      {
+        id: 2,
+        name: "Flamboyant Orange",
+        images: [
+          IQOOZ9SPROFLAMBOYANTORANGE1,
+          IQOOZ9SPROFLAMBOYANTORANGE2,
+          IQOOZ9SPROFLAMBOYANTORANGE3,
+          IQOOZ9SPROFLAMBOYANTORANGE4,
+          IQOOZ9SPROFLAMBOYANTORANGE5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "IQOO15",
+    colors: [
+      {
+        id: 1,
+        name: "Luxe Marble",
+        images: [
+          IQOOZ9SPROLUXEMARBLE1,
+          IQOOZ9SPROLUXEMARBLE2,
+          IQOOZ9SPROLUXEMARBLE3,
+          IQOOZ9SPROLUXEMARBLE4,
+        ],
+      },
+      {
+        id: 2,
+        name: "Flamboyant Orange",
+        images: [
+          IQOOZ9SPROFLAMBOYANTORANGE1,
+          IQOOZ9SPROFLAMBOYANTORANGE2,
+          IQOOZ9SPROFLAMBOYANTORANGE3,
+          IQOOZ9SPROFLAMBOYANTORANGE4,
+          IQOOZ9SPROFLAMBOYANTORANGE5,
         ],
       },
     ],

@@ -26,8 +26,8 @@ const Brands = () => {
             );
           })}
         </div> */}
-        <div className="w-screen md:w-full flex bg-grayBackground p-2 justify-center ">
-          <div className="flex overflow-x-auto scrollbar-hide space-x-2 md:space-x-4 ">
+        <div className="w-screen md:w-full flex bg-grayBackground p-2 justify-center overflow-x-auto scrollbar-hide  ">
+          <div className="flex space-x-2 md:space-x-4 ">
             {PHONEBRANDS?.map((brand: brandType) => {
               return (
                 <Link

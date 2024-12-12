@@ -24,14 +24,6 @@ const SingleProductCard: FC<props> = ({ product }) => {
               alt="Product Image"
             />
           </div>
-
-          {/* <img
-            // src={
-            //   product?.colors ? product?.colors[0]?.images[0] : product?.image
-            // }
-            // alt="phone Image"
-            className="w-[120px] h-[150px] md:w-[150px] md:h-[170px] object-contain"
-          /> */}
         </div>
         <div className="flex flex-col space-y-1">
           <h1 className="font-semibold  w-full text-[13px] md:text-base truncate">
