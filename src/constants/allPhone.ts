@@ -84,6 +84,8 @@ import VIVOY300PLUSSILKGREEN1 from "assets/vivo/VIVOY300PLUS/VIVOY300PLUSSILKGRE
 import Y28CRYSTALPURPLE1 from "assets/vivo/VIVOY28/Y28CRYSTALPURPLE/Y28CRYSTALPURPLE1.jpeg";
 import VIVOY200EBLACKDIAMOND1 from "assets/vivo/VIVOY200E/VIVOY200EBLACKDIAMOND/VIVOY200EBLACKDIAMOND1.jpg";
 
+import VIVOX200NATURALGREEN1 from "assets/vivo/VIVOX200/VIVOX200NATURALGREEN/VIVOX200NATURALGREEN1.jpeg";
+
 //samsung
 import SAMSUNGA165GGOLD1 from "assets/samsung/SASMSUNGA165G/SAMSUNGA165GGOLD/SAMSUNGA165GGOLD1.jpeg";
 
@@ -582,6 +584,62 @@ export const ALLPHONES = [
       Battery: "5000 mAh | 80W Fast Charging ",
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v14 ",
+    },
+  },
+
+  {
+    id: "VIVO17",
+    name: "VIVO X200 5G 12/256",
+    brand: "VIVO",
+    series: "VIVOX200",
+    image: VIVOX200NATURALGREEN1,
+    launchDate: "12-12-2024",
+    networkType: "5G",
+    salesPrice: 65999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 4.8,
+    newArrival: true,
+    mrp: 74999,
+    ram: 12,
+    storage: 256,
+    specifications: {
+      Processor: "MediaTek Dimensity 9400 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+50+50 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "12 GB | 256 GB ",
+      Battery: "5800 mAh | 90W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+    },
+  },
+
+  {
+    id: "VIVO18",
+    name: "VIVO X200 5G 16/512",
+    brand: "VIVO",
+    series: "VIVOX200",
+    image: VIVOX200NATURALGREEN1,
+    launchDate: "12-12-2024",
+    networkType: "5G",
+    salesPrice: 71999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 4.8,
+    newArrival: true,
+    mrp: 80999,
+    ram: 16,
+    storage: 512,
+    specifications: {
+      Processor: "MediaTek Dimensity 9400 Octa core ",
+      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+50+50 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "16 GB | 512 GB ",
+      Battery: "5800 mAh | 90W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
     },
   },
 
