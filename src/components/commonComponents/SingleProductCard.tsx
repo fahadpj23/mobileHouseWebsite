@@ -16,13 +16,8 @@ const SingleProductCard: FC<props> = ({ product }) => {
     <Link to={`/phone/${product?.id}/${encodeURIComponent(product?.name)}`}>
       <div className=" p-3 md:p-6 flex flex-col space-y-2  bg-white relative rounded-md">
         <div className="flex justify-center bg-grayBackground rounded-md shadow-md p-2">
-          <div className="w-[120px] h-[150px] md:w-[150px] md:h-[170px] object-contain">
-            <LazyImage
-              src={
-                product?.colors ? product?.colors[0]?.images[0] : product?.image
-              }
-              alt="Product Image"
-            />
+          <div className="w-full h-[150px]  md:h-[170px] object-contain">
+            <LazyImage src={product?.image} alt="Product Image" />
           </div>
         </div>
         <div className="flex flex-col space-y-1">

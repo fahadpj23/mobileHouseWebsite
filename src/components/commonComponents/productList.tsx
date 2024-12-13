@@ -164,7 +164,7 @@ const ProductList: FC<any> = ({ products }) => {
   return (
     <div className="mt-4">
       {isLoading && (
-        <div className="flex items-center justify-center min-h-screen fixed top-0 left-0 w-screen z-50 bg-white">
+        <div className="flex items-center justify-center min-h-screen fixed top-0 left-0 w-full z-50 bg-white">
           <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
@@ -208,7 +208,7 @@ const ProductList: FC<any> = ({ products }) => {
               />
             </div>
           )}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-2 md:gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap:2 md:gap-5   w-full justify-between">
             {productList?.length ? (
               productList?.map((product: any) => {
                 return (

@@ -30,7 +30,7 @@ const Footer = () => {
         <div className="  block space-y-3 md:space-y-0 space-x-0 md:space-x-1 items-start font-light  ">
           <div className="space-y-4">
             {companyDetails(
-              "phone",
+              "Phone",
               `<h1 >
             <span>+91 8304830868</span><br>
             <span>+91 9072430483</span><br>

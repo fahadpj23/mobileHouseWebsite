@@ -12,7 +12,13 @@ const LazyImage: FC<props> = ({ src, alt, fill = false }) => {
     <LazyLoad
       offset={100}
       className="h-full w-full"
-      placeholder={<img src={src} alt={alt} />}
+      placeholder={
+        <img
+          src={src}
+          alt={alt}
+          className={`${fill ? "object-fill" : "object-contain"} h-full w-full`}
+        />
+      }
     >
       <img
         src={src}
