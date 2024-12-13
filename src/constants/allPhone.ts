@@ -86,6 +86,8 @@ import VIVOY200EBLACKDIAMOND1 from "assets/vivo/VIVOY200E/VIVOY200EBLACKDIAMOND/
 
 import VIVOX200NATURALGREEN1 from "assets/vivo/VIVOX200/VIVOX200NATURALGREEN/VIVOX200NATURALGREEN1.jpeg";
 
+import VIVOX200PROTITANIUMGREY1 from "assets/vivo/VIVOX200PRO/VIVOX200TITANIUMGREY/VIVOX200PROTITANIUMGREY1.jpg";
+
 //samsung
 import SAMSUNGA165GGOLD1 from "assets/samsung/SASMSUNGA165G/SAMSUNGA165GGOLD/SAMSUNGA165GGOLD1.jpeg";
 
@@ -638,6 +640,34 @@ export const ALLPHONES = [
       "Front Camera": "32 MP",
       "RAM | Storage": "16 GB | 512 GB ",
       Battery: "5800 mAh | 90W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+    },
+  },
+
+  {
+    id: "VIVO19",
+    name: "VIVO X200 PRO 5G 16/512",
+    brand: "VIVO",
+    series: "VIVOX200PRO",
+    image: VIVOX200PROTITANIUMGREY1,
+    launchDate: "12-12-2024",
+    networkType: "5G",
+    salesPrice: 94999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 4.8,
+    newArrival: true,
+    mrp: 101999,
+    ram: 16,
+    storage: 512,
+    specifications: {
+      Processor: "MediaTek Dimensity 9400 Octa core ",
+      Display: "6.78″ (17.22 cm) 120Hz LTPO AMOLED ",
+      "Rear Camera": "50+50+200 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "16 GB | 512 GB ",
+      Battery: "6000 mAh | 90W Fast Charging ",
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v15 ",
     },

@@ -7,7 +7,7 @@ export const MAINBANNER = [
   {
     id: 1,
     image: BANNER1,
-    series: ["VIVOX200"],
+    series: ["VIVOX200", "VIVOX200PRO"],
   },
   {
     id: 2,
