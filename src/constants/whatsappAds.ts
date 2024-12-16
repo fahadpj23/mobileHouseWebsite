@@ -3,6 +3,7 @@ import whatsAppImage2 from "assets/whatsappAds/whatsAppImage2.jpeg";
 import whatsAppImage3 from "assets/whatsappAds/whatsAppImage3.jpeg";
 import whatsAppImage4 from "assets/whatsappAds/whatsAppImage4.jpeg";
 import whatsAppImage5 from "assets/whatsappAds/whatsAppImage5.jpeg";
+import whatsAppImage6 from "assets/whatsappAds/WhatsAppImage6.jpeg";
 
 export const WhatappAdsList = [
   {
@@ -30,5 +31,11 @@ export const WhatappAdsList = [
     id: 5,
     image: whatsAppImage5,
     series: ["A165G"],
+  },
+
+  {
+    id: 6,
+    image: whatsAppImage6,
+    series: ["MINOTE14, MINOTE14PRO, MINOTE14PROPLUS"],
   },
 ];

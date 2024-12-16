@@ -39,8 +39,8 @@ const WhatsappAds = () => {
             key={item?.id}
             style={{ margin: "3px 8px" }}
           >
-            <div className="w-[93%] h-[60vw] md:h-[22vw]   object-fill">
-              <LazyImage src={item?.image} alt="phone Image" />
+            <div className="w-[93%] h-[60vw] md:h-[22vw]  ">
+              <LazyImage src={item?.image} alt="phone Image" fill={true} />
             </div>
           </Link>
         ))}

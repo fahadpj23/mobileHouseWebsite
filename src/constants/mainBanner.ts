@@ -27,6 +27,6 @@ export const MAINBANNER = [
   {
     id: 5,
     image: BANNER5,
-    series: ["V40", "V40e"],
+    series: ["MINOTE14", "MINOTE14PRO", "MINOTE14PROPLUS"],
   },
 ];

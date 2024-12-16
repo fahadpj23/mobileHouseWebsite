@@ -28,7 +28,7 @@ const SingleProductCard: FC<props> = ({ product }) => {
             {Math.floor(DiscountPercentage)} %off
           </h1>
           <div className="flex space-x-3 items-center">
-            <h1 className="font-semibold text-[13px] md:text-md ">
+            <h1 className="font-bold tracking-wider text-[13px] md:text-md ">
               ₹{product.salesPrice}.00
             </h1>
             <h1 className="line-through text-[11px] md:text-[13px] text-gray-500">
