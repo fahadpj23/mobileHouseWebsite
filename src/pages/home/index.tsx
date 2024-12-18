@@ -10,6 +10,7 @@ import AvailableEmi from "components/Home/availableEmi";
 import HomeSkeleton from "components/skeleton/homeSkeleton";
 import { useScreenSize } from "hooks/useScreenSize";
 import PopupAds from "components/commonComponents/popupAds";
+import { removeDuplicateSeries } from "utils/removeDuplicateSeries";
 const ProductMiniList = React.lazy(
   () => import("components/Home/productMiniList")
 );
@@ -34,7 +35,10 @@ const HomePage = () => {
           <div className="p-2 bg-white ">
             <ProductMiniList
               title="new Arrival"
-              listItems={getNewArrivalPhones()?.slice(0, 7)}
+              listItems={removeDuplicateSeries(getNewArrivalPhones())?.slice(
+                0,
+                7
+              )}
               link="/newArrival"
             />
           </div>
@@ -42,7 +46,10 @@ const HomePage = () => {
           <div className="p-2 bg-white ">
             <ProductMiniList
               title="Trending Phones"
-              listItems={getTrendingPhones()?.slice(0, 7)}
+              listItems={removeDuplicateSeries(getTrendingPhones())?.slice(
+                0,
+                7
+              )}
               link="/trendingPhones"
             />
           </div>
@@ -50,7 +57,10 @@ const HomePage = () => {
           <div className="p-2 bg-white ">
             <ProductMiniList
               title="Special Offer"
-              listItems={getSpecialOfferPhones()?.slice(0, 7)}
+              listItems={removeDuplicateSeries(getSpecialOfferPhones())?.slice(
+                0,
+                7
+              )}
               link="/specialOffer"
             />
           </div>
