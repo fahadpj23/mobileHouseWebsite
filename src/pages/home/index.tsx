@@ -33,9 +33,9 @@ const HomePage = () => {
         <Suspense fallback={<HomeSkeleton />}>
           <div className="p-2 bg-white ">
             <ProductMiniList
-              title="Special Offer"
-              listItems={getSpecialOfferPhones()?.slice(0, 7)}
-              link="/specialOffer"
+              title="new Arrival"
+              listItems={getNewArrivalPhones()?.slice(0, 7)}
+              link="/newArrival"
             />
           </div>
           <WhatsappAds />
@@ -49,9 +49,9 @@ const HomePage = () => {
           <Banner />
           <div className="p-2 bg-white ">
             <ProductMiniList
-              title="new Arrival"
-              listItems={getNewArrivalPhones()?.slice(0, 7)}
-              link="/newArrival"
+              title="Special Offer"
+              listItems={getSpecialOfferPhones()?.slice(0, 7)}
+              link="/specialOffer"
             />
           </div>
           {/* <OurServices /> */}

@@ -65,6 +65,13 @@ const SingleItem = () => {
     }, 300);
   }, [isLoading]);
 
+  const handlePreOrder = () => {
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLScQbFBroPDJj6-9FSwM9bETZziMVYwh84JDgiMFzSy8PLoyLQ/viewform?usp=header",
+      "_blank"
+    );
+  };
+
   return (
     <div className="block md:flex items-center ">
       {isLoading && (
@@ -128,7 +135,16 @@ const SingleItem = () => {
                   {product && getDiscountPercentage(product)}% off
                 </h1>
               </div>
+              {product?.prebook && (
+                <button
+                  onClick={handlePreOrder}
+                  className="bg-orange-500 rounded-sm  text-white  text-sm my-2 p-1  w-fit "
+                >
+                  Prebook Now
+                </button>
+              )}
             </div>
+
             <RiWhatsappFill
               onClick={() => handleWhatapp(product)}
               className="fixed bottom-10 right-10 text-green-600 z-50 text-[40px] animate-bounce shadow-2xl "
@@ -184,6 +200,7 @@ const SingleItem = () => {
                   </Link>
                 ))}
               </div>
+
               {product?.specifications && (
                 <div className=" pb-3">
                   <div className="space-y-3 py-3">
