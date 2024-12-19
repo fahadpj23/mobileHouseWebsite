@@ -632,7 +632,7 @@ export const ALLPHONES = [
 
   {
     id: "VIVO17",
-    name: "VIVO X200 5G 12/256",
+    name: "VIVO X200 5G 12/512",
     brand: "VIVO",
     prebook: false,
     series: "VIVOX200",
@@ -646,13 +646,13 @@ export const ALLPHONES = [
     newArrival: true,
     mrp: 74999,
     ram: 12,
-    storage: 256,
+    storage: 512,
     specifications: {
       Processor: "MediaTek Dimensity 9400 Octa core ",
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
       "Rear Camera": "50+50+50 MP",
       "Front Camera": "32 MP",
-      "RAM | Storage": "12 GB | 256 GB ",
+      "RAM | Storage": "12 GB | 512 GB ",
       Battery: "5800 mAh | 90W Fast Charging ",
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v15 ",
