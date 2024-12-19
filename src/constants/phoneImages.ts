@@ -1046,10 +1046,94 @@ import MOTOROLAG64PEARLBLUE3 from "assets/motorola/MOTOROLAG64/MOTOROLAG64PEARLB
 import MOTOROLAG64PEARLBLUE4 from "assets/motorola/MOTOROLAG64/MOTOROLAG64PEARLBLUE/MOTOROLAG64PEARLBLUE4.jpeg";
 import MOTOROLAG64PEARLBLUE5 from "assets/motorola/MOTOROLAG64/MOTOROLAG64PEARLBLUE/MOTOROLAG64PEARLBLUE5.jpeg";
 
+import MOTOROLAEDGE50NEOPANTONELATTE1 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONELATTE/MOTOROLAEDGE50NEOPANTONELATTE1.jpeg";
+import MOTOROLAEDGE50NEOPANTONELATTE2 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONELATTE/MOTOROLAEDGE50NEOPANTONELATTE2.jpeg";
+import MOTOROLAEDGE50NEOPANTONELATTE3 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONELATTE/MOTOROLAEDGE50NEOPANTONELATTE3.jpeg";
+import MOTOROLAEDGE50NEOPANTONELATTE4 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONELATTE/MOTOROLAEDGE50NEOPANTONELATTE4.jpeg";
+import MOTOROLAEDGE50NEOPANTONELATTE5 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONELATTE/MOTOROLAEDGE50NEOPANTONELATTE5.jpeg";
+import MOTOROLAEDGE50NEONEUTICALBLUE1 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEONEUTICALBLUE/MOTOROLAEDGE50NEONEUTICALBLUE1.jpeg";
+import MOTOROLAEDGE50NEONEUTICALBLUE2 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEONEUTICALBLUE/MOTOROLAEDGE50NEONEUTICALBLUE1.jpeg";
+import MOTOROLAEDGE50NEONEUTICALBLUE3 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEONEUTICALBLUE/MOTOROLAEDGE50NEONEUTICALBLUE3.jpeg";
+import MOTOROLAEDGE50NEONEUTICALBLUE4 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEONEUTICALBLUE/MOTOROLAEDGE50NEONEUTICALBLUE4.jpeg";
+import MOTOROLAEDGE50NEONEUTICALBLUE5 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEONEUTICALBLUE/MOTOROLAEDGE50NEONEUTICALBLUE5.jpeg";
+import MOTOROLAEDGE50NEOPANTONEGRISAILLE1 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONEGRISAILLE/MOTOROLAEDGE50NEOPANTONEGRISAILLE1.jpeg";
+import MOTOROLAEDGE50NEOPANTONEGRISAILLE2 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONEGRISAILLE/MOTOROLAEDGE50NEOPANTONEGRISAILLE2.jpeg";
+import MOTOROLAEDGE50NEOPANTONEGRISAILLE3 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONEGRISAILLE/MOTOROLAEDGE50NEOPANTONEGRISAILLE3.jpeg";
+import MOTOROLAEDGE50NEOPANTONEGRISAILLE4 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONEGRISAILLE/MOTOROLAEDGE50NEOPANTONEGRISAILLE4.jpeg";
+import MOTOROLAEDGE50NEOPANTONEGRISAILLE5 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONEGRISAILLE/MOTOROLAEDGE50NEOPANTONEGRISAILLE5.jpeg";
+import MOTOROLAEDGE50NEOPANTONEPOINCIANA1 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONEPOINCIANA/MOTOROLAEDGE50NEOPANTONEPOINCIANA1.jpeg";
+import MOTOROLAEDGE50NEOPANTONEPOINCIANA2 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONEPOINCIANA/MOTOROLAEDGE50NEOPANTONEPOINCIANA2.jpeg";
+import MOTOROLAEDGE50NEOPANTONEPOINCIANA3 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONEPOINCIANA/MOTOROLAEDGE50NEOPANTONEPOINCIANA3.jpeg";
+import MOTOROLAEDGE50NEOPANTONEPOINCIANA4 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONEPOINCIANA/MOTOROLAEDGE50NEOPANTONEPOINCIANA4.jpeg";
+import MOTOROLAEDGE50NEOPANTONEPOINCIANA5 from "assets/motorola/MOTOROLAEDGE50NEO/MOTOROLAEDGE50NEOPANTONEPOINCIANA/MOTOROLAEDGE50NEOPANTONEPOINCIANA5.jpeg";
+
+import MOTOROLAEDGE50FUSIONFORESTGREEN1 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONFORESTGREEN/MOTOROLAEDGE50FUSIONFORESTGREEN1.jpeg";
+import MOTOROLAEDGE50FUSIONFORESTGREEN2 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONFORESTGREEN/MOTOROLAEDGE50FUSIONFORESTGREEN2.jpeg";
+import MOTOROLAEDGE50FUSIONFORESTGREEN3 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONFORESTGREEN/MOTOROLAEDGE50FUSIONFORESTGREEN3.jpeg";
+import MOTOROLAEDGE50FUSIONFORESTGREEN4 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONFORESTGREEN/MOTOROLAEDGE50FUSIONFORESTGREEN4.jpeg";
+import MOTOROLAEDGE50FUSIONFORESTGREEN5 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONFORESTGREEN/MOTOROLAEDGE50FUSIONFORESTGREEN5.jpeg";
+import MOTOROLAEDGE50FUSIONFORESTBLUE1 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONFORESTBLUE/MOTOROLAEDGE50FUSIONFORESTBLUE1.jpeg";
+import MOTOROLAEDGE50FUSIONFORESTBLUE2 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONFORESTBLUE/MOTOROLAEDGE50FUSIONFORESTBLUE2.jpeg";
+import MOTOROLAEDGE50FUSIONFORESTBLUE3 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONFORESTBLUE/MOTOROLAEDGE50FUSIONFORESTBLUE3.jpeg";
+import MOTOROLAEDGE50FUSIONFORESTBLUE4 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONFORESTBLUE/MOTOROLAEDGE50FUSIONFORESTBLUE4.jpeg";
+import MOTOROLAEDGE50FUSIONFORESTBLUE5 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONFORESTBLUE/MOTOROLAEDGE50FUSIONFORESTBLUE5.jpeg";
+import MOTOROLAEDGE50FUSIONHOTPINK1 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONHOTPINK/MOTOROLAEDGE50FUSIONHOTPINK1.jpeg";
+import MOTOROLAEDGE50FUSIONHOTPINK2 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONHOTPINK/MOTOROLAEDGE50FUSIONHOTPINK2.jpeg";
+import MOTOROLAEDGE50FUSIONHOTPINK3 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONHOTPINK/MOTOROLAEDGE50FUSIONHOTPINK3.jpeg";
+import MOTOROLAEDGE50FUSIONHOTPINK4 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONHOTPINK/MOTOROLAEDGE50FUSIONHOTPINK4.jpeg";
+import MOTOROLAEDGE50FUSIONHOTPINK5 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONHOTPINK/MOTOROLAEDGE50FUSIONHOTPINK5.jpeg";
+import MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE1 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE/MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE1.jpeg";
+import MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE2 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE/MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE2.jpeg";
+import MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE3 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE/MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE3.jpeg";
+import MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE4 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE/MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE4.jpeg";
+import MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE5 from "assets/motorola/MOTOROLAEDGE50FUSION/MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE/MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE5.jpeg";
+
+import MOTOROLAEDGE50PEACHFUZZ1 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50PEACHFUZZ/MOTOROLAEDGE50PEACHFUZZ1.jpeg";
+import MOTOROLAEDGE50PEACHFUZZ2 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50PEACHFUZZ/MOTOROLAEDGE50PEACHFUZZ2.jpeg";
+import MOTOROLAEDGE50PEACHFUZZ3 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50PEACHFUZZ/MOTOROLAEDGE50PEACHFUZZ3.jpeg";
+import MOTOROLAEDGE50PEACHFUZZ4 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50PEACHFUZZ/MOTOROLAEDGE50PEACHFUZZ4.jpeg";
+import MOTOROLAEDGE50PEACHFUZZ5 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50PEACHFUZZ/MOTOROLAEDGE50PEACHFUZZ5.jpeg";
+import MOTOROLAEDGE50JUNGLEGREEN1 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50JUNGLEGREEN/MOTOROLAEDGE50JUNGLEGREEN1.jpeg";
+import MOTOROLAEDGE50JUNGLEGREEN2 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50JUNGLEGREEN/MOTOROLAEDGE50JUNGLEGREEN2.jpeg";
+import MOTOROLAEDGE50JUNGLEGREEN3 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50JUNGLEGREEN/MOTOROLAEDGE50JUNGLEGREEN3.jpeg";
+import MOTOROLAEDGE50JUNGLEGREEN4 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50JUNGLEGREEN/MOTOROLAEDGE50JUNGLEGREEN4.jpeg";
+import MOTOROLAEDGE50JUNGLEGREEN5 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50JUNGLEGREEN/MOTOROLAEDGE50JUNGLEGREEN5.jpeg";
+import MOTOROLAEDGE50KOALAGREY1 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50KOALAGREY/MOTOROLAEDGE50KOALAGREY1.jpeg";
+import MOTOROLAEDGE50KOALAGREY2 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50KOALAGREY/MOTOROLAEDGE50KOALAGREY2.jpeg";
+import MOTOROLAEDGE50KOALAGREY3 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50KOALAGREY/MOTOROLAEDGE50KOALAGREY3.jpeg";
+import MOTOROLAEDGE50KOALAGREY4 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50KOALAGREY/MOTOROLAEDGE50KOALAGREY4.jpeg";
+import MOTOROLAEDGE50KOALAGREY5 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDGE50KOALAGREY/MOTOROLAEDGE50KOALAGREY5.jpeg";
+
+import MOTOROLAEDGE50PROCANEELBAY1 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROCANEELBAY/MOTOROLAEDGE50PROCANEELBAY1.jpeg";
+import MOTOROLAEDGE50PROCANEELBAY2 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROCANEELBAY/MOTOROLAEDGE50PROCANEELBAY2.jpeg";
+import MOTOROLAEDGE50PROCANEELBAY3 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROCANEELBAY/MOTOROLAEDGE50PROCANEELBAY3.jpeg";
+import MOTOROLAEDGE50PROCANEELBAY4 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROCANEELBAY/MOTOROLAEDGE50PROCANEELBAY4.jpeg";
+import MOTOROLAEDGE50PROCANEELBAY5 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROCANEELBAY/MOTOROLAEDGE50PROCANEELBAY5.jpeg";
+import MOTOROLAEDGE50PROBLACKBEAUTY1 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROBLACKBEAUTY/MOTOROLAEDGE50PROBLACKBEAUTY1.jpeg";
+import MOTOROLAEDGE50PROBLACKBEAUTY2 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROBLACKBEAUTY/MOTOROLAEDGE50PROBLACKBEAUTY2.jpeg";
+import MOTOROLAEDGE50PROBLACKBEAUTY3 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROBLACKBEAUTY/MOTOROLAEDGE50PROBLACKBEAUTY3.jpeg";
+import MOTOROLAEDGE50PROBLACKBEAUTY4 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROBLACKBEAUTY/MOTOROLAEDGE50PROBLACKBEAUTY4.jpeg";
+import MOTOROLAEDGE50PROBLACKBEAUTY5 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROBLACKBEAUTY/MOTOROLAEDGE50PROBLACKBEAUTY5.jpeg";
+import MOTOROLAEDGE50PROLUXELAVENDER1 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROLUXELAVENDER/MOTOROLAEDGE50PROLUXELAVENDER1.jpeg";
+import MOTOROLAEDGE50PROLUXELAVENDER2 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROLUXELAVENDER/MOTOROLAEDGE50PROLUXELAVENDER2.jpeg";
+import MOTOROLAEDGE50PROLUXELAVENDER3 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROLUXELAVENDER/MOTOROLAEDGE50PROLUXELAVENDER3.jpeg";
+import MOTOROLAEDGE50PROLUXELAVENDER4 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROLUXELAVENDER/MOTOROLAEDGE50PROLUXELAVENDER4.jpeg";
+import MOTOROLAEDGE50PROLUXELAVENDER5 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROLUXELAVENDER/MOTOROLAEDGE50PROLUXELAVENDER5.jpeg";
+import MOTOROLAEDGE50PROMOONLIGHTPEARL1 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROMOONLIGHTPEARL/MOTOROLAEDGE50PROMOONLIGHTPEARL1.jpeg";
+import MOTOROLAEDGE50PROMOONLIGHTPEARL2 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROMOONLIGHTPEARL/MOTOROLAEDGE50PROMOONLIGHTPEARL2.jpeg";
+import MOTOROLAEDGE50PROMOONLIGHTPEARL3 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROMOONLIGHTPEARL/MOTOROLAEDGE50PROMOONLIGHTPEARL3.jpeg";
+import MOTOROLAEDGE50PROMOONLIGHTPEARL4 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROMOONLIGHTPEARL/MOTOROLAEDGE50PROMOONLIGHTPEARL4.jpeg";
+import MOTOROLAEDGE50PROMOONLIGHTPEARL5 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROMOONLIGHTPEARL/MOTOROLAEDGE50PROMOONLIGHTPEARL5.jpeg";
+import MOTOROLAEDGE50PROVANILACREAM1 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROVANILACREAM/MOTOROLAEDGE50PROVANILACREAM1.jpeg";
+import MOTOROLAEDGE50PROVANILACREAM2 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROVANILACREAM/MOTOROLAEDGE50PROVANILACREAM2.jpeg";
+import MOTOROLAEDGE50PROVANILACREAM3 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROVANILACREAM/MOTOROLAEDGE50PROVANILACREAM3.jpeg";
+import MOTOROLAEDGE50PROVANILACREAM4 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROVANILACREAM/MOTOROLAEDGE50PROVANILACREAM4.jpeg";
+import MOTOROLAEDGE50PROVANILACREAM5 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROVANILACREAM/MOTOROLAEDGE50PROVANILACREAM5.jpeg";
+
 export const PHONEIMAGE = [
   //VIVO PHONES
   {
-    id: "VIVO1",
+    id: ["VIVO1", "VIVO2"],
 
     colors: [
       {
@@ -1091,49 +1175,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "VIVO2",
-
-    colors: [
-      {
-        id: 1,
-        name: "Ganges Blue",
-        images: [
-          VIVOV40GANGESBLUE1,
-          VIVOV40GANGESBLUE2,
-          VIVOV40GANGESBLUE3,
-          VIVOV40GANGESBLUE4,
-          VIVOV40GANGESBLUE5,
-          VIVOV40GANGESBLUE6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Lotus Purple",
-        images: [
-          VIVOV40LOTUSPURPLE1,
-          VIVOV40LOTUSPURPLE2,
-          VIVOV40LOTUSPURPLE3,
-          VIVOV40LOTUSPURPLE4,
-          VIVOV40LOTUSPURPLE5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Titanium grey",
-        images: [
-          VIVOV40TITANIUMGREY1,
-          VIVOV40TITANIUMGREY2,
-          VIVOV40TITANIUMGREY3,
-          VIVOV40TITANIUMGREY4,
-          VIVOV40TITANIUMGREY5,
-          VIVOV40TITANIUMGREY6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "VIVO3",
+    id: ["VIVO3", "VIVO4"],
 
     colors: [
       {
@@ -1162,36 +1204,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "VIVO4",
-
-    colors: [
-      {
-        id: 1,
-        name: "Royal Bronze",
-        images: [
-          VIVOV40EROYALBRONZE1,
-          VIVOV40EROYALBRONZE2,
-          VIVOV40EROYALBRONZE3,
-          VIVOV40EROYALBRONZE4,
-          VIVOV40EROYALBRONZE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Mint Green",
-        images: [
-          VIVOV40EMINTGREEN1,
-          VIVOV40EMINTGREEN2,
-          VIVOV40EMINTGREEN3,
-          VIVOV40EMINTGREEN4,
-          VIVOV40EMINTGREEN5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "VIVO5",
+    id: ["VIVO5"],
 
     colors: [
       {
@@ -1222,7 +1235,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "VIVO6",
+    id: ["VIVO6"],
 
     colors: [
       {
@@ -1251,7 +1264,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "VIVO7",
+    id: ["VIVO7"],
 
     colors: [
       {
@@ -1281,7 +1294,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "VIVO8",
+    id: ["VIVO8", "VIVO9", "VIVO10"],
 
     colors: [
       {
@@ -1310,65 +1323,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "VIVO9",
-
-    colors: [
-      {
-        id: 1,
-        name: "Vintage Red",
-        images: [
-          VIVOY28SVINTAGERED1,
-          VIVOY28SVINTAGERED2,
-          VIVOY28SVINTAGERED3,
-          VIVOY28SVINTAGERED4,
-          VIVOY28SVINTAGERED5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Twinkle Purple",
-        images: [
-          VIVOY28STWINKLINGPURPLE1,
-          VIVOY28STWINKLINGPURPLE2,
-          VIVOY28STWINKLINGPURPLE3,
-          VIVOY28STWINKLINGPURPLE4,
-          VIVOY28STWINKLINGPURPLE5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "VIVO10",
-
-    colors: [
-      {
-        id: 1,
-        name: "Twinkle Purple",
-        images: [
-          VIVOY28STWINKLINGPURPLE1,
-          VIVOY28STWINKLINGPURPLE2,
-          VIVOY28STWINKLINGPURPLE3,
-          VIVOY28STWINKLINGPURPLE4,
-          VIVOY28STWINKLINGPURPLE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Vintage Red",
-        images: [
-          VIVOY28SVINTAGERED1,
-          VIVOY28SVINTAGERED2,
-          VIVOY28SVINTAGERED3,
-          VIVOY28SVINTAGERED4,
-          VIVOY28SVINTAGERED5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "VIVO11",
+    id: ["VIVO11"],
 
     colors: [
       {
@@ -1396,35 +1351,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "VIVO12",
-
-    colors: [
-      {
-        id: 1,
-        name: "Breeze Green",
-        images: [
-          VIVOY28EBREEZEGREEN1,
-          VIVOY28EBREEZEGREEN2,
-          VIVOY28EBREEZEGREEN3,
-          VIVOY28EBREEZEGREEN4,
-          VIVOY28EBREEZEGREEN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Vintage Red",
-        images: [
-          VIVOY28EVINTAGERED1,
-          VIVOY28EVINTAGERED2,
-          VIVOY28EVINTAGERED3,
-          VIVOY28EVINTAGERED4,
-          VIVOY28EVINTAGERED5,
-        ],
-      },
-    ],
-  },
-  {
-    id: "VIVO13",
+    id: ["VIVO12", "VIVO13"],
 
     colors: [
       {
@@ -1453,7 +1380,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "VIVO14",
+    id: ["VIVO14"],
 
     colors: [
       {
@@ -1471,7 +1398,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "VIVO15",
+    id: ["VIVO15", "VIVO16"],
 
     colors: [
       {
@@ -1511,47 +1438,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "VIVO16",
-
-    colors: [
-      {
-        id: 1,
-        name: "MERALD GREEN",
-        images: [
-          VIVOY3005GEMERALDGREEN1,
-          VIVOY3005GEMERALDGREEN2,
-          VIVOY3005GEMERALDGREEN3,
-          VIVOY3005GEMERALDGREEN4,
-          VIVOY3005GEMERALDGREEN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "PHANTOM PURPLE",
-        images: [
-          VIVOY3005GPHANTOMPURPLE1,
-          VIVOY3005GPHANTOMPURPLE2,
-          VIVOY3005GPHANTOMPURPLE3,
-          VIVOY3005GPHANTOMPURPLE4,
-          VIVOY3005GPHANTOMPURPLE5,
-        ],
-      },
-      {
-        id: 3,
-        name: "TITANIUM SILVER",
-        images: [
-          VIVOY3005GTITANIUMSILVER1,
-          VIVOY3005GTITANIUMSILVER2,
-          VIVOY3005GTITANIUMSILVER3,
-          VIVOY3005GTITANIUMSILVER4,
-          VIVOY3005GTITANIUMSILVER5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "VIVO17",
+    id: ["VIVO17", "VIVO18"],
 
     colors: [
       {
@@ -1582,38 +1469,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "VIVO18",
-
-    colors: [
-      {
-        id: 1,
-        name: "Natural Green",
-        images: [
-          VIVOX200NATURALGREEN1,
-          VIVOX200NATURALGREEN2,
-          VIVOX200NATURALGREEN3,
-          VIVOX200NATURALGREEN4,
-          VIVOX200NATURALGREEN5,
-          VIVOX200NATURALGREEN6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Cosmos Black",
-        images: [
-          VIVOX200COSMOSBLACK1,
-          VIVOX200COSMOSBLACK2,
-          VIVOX200COSMOSBLACK3,
-          VIVOX200COSMOSBLACK4,
-          VIVOX200COSMOSBLACK5,
-          VIVOX200COSMOSBLACK6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "VIVO19",
+    id: ["VIVO19"],
 
     colors: [
       {
@@ -1645,7 +1501,7 @@ export const PHONEIMAGE = [
 
   //tecno
   {
-    id: "TECNO1",
+    id: ["TECNO1"],
 
     colors: [
       {
@@ -1674,7 +1530,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "TECNO2",
+    id: ["TECNO2"],
 
     colors: [
       {
@@ -1702,7 +1558,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "TECNO3",
+    id: ["TECNO3"],
 
     colors: [
       {
@@ -1731,7 +1587,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "TECNO4",
+    id: ["TECNO4"],
 
     colors: [
       {
@@ -1760,7 +1616,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "TECNO5",
+    id: ["TECNO5"],
 
     colors: [
       {
@@ -1787,7 +1643,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "TECNO6",
+    id: ["TECNO6"],
 
     colors: [
       {
@@ -1815,7 +1671,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "TECNO7",
+    id: ["TECNO7"],
 
     colors: [
       {
@@ -1854,7 +1710,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "TECNO8",
+    id: ["TECNO8"],
 
     colors: [
       {
@@ -1883,7 +1739,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "TECNO9",
+    id: ["TECNO9"],
 
     colors: [
       {
@@ -1913,49 +1769,7 @@ export const PHONEIMAGE = [
   },
   //MI Phones
   {
-    id: "MI1",
-
-    colors: [
-      {
-        id: 1,
-        name: "Starlight Black",
-        images: [
-          REDMI13CBLACK1,
-          REDMI13CBLACK2,
-          REDMI13CBLACK3,
-          REDMI13CBLACK4,
-          REDMI13CBLACK5,
-          REDMI13CBLACK6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Starlight Green",
-        images: [
-          REDMI13CGREEN1,
-          REDMI13CGREEN2,
-          REDMI13CGREEN3,
-          REDMI13CGREEN4,
-          REDMI13CGREEN5,
-          REDMI13CGREEN6,
-        ],
-      },
-      {
-        id: 3,
-        name: "Starlight Silver",
-        images: [
-          REDMI13CSILVER1,
-          REDMI13CSILVER2,
-          REDMI13CSILVER3,
-          REDMI13CSILVER4,
-          REDMI13CSILVER5,
-          REDMI13CSILVER6,
-        ],
-      },
-    ],
-  },
-  {
-    id: "MI2",
+    id: ["MI1", "MI2", "MI3"],
 
     colors: [
       {
@@ -1998,154 +1812,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "MI3",
-
-    colors: [
-      {
-        id: 1,
-        name: "Starlight Black",
-        images: [
-          REDMI13CBLACK1,
-          REDMI13CBLACK2,
-          REDMI13CBLACK3,
-          REDMI13CBLACK4,
-          REDMI13CBLACK5,
-          REDMI13CBLACK6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Starlight Green",
-        images: [
-          REDMI13CGREEN1,
-          REDMI13CGREEN2,
-          REDMI13CGREEN3,
-          REDMI13CGREEN4,
-          REDMI13CGREEN5,
-          REDMI13CGREEN6,
-        ],
-      },
-      {
-        id: 3,
-        name: "Starlight Silver",
-        images: [
-          REDMI13CSILVER1,
-          REDMI13CSILVER2,
-          REDMI13CSILVER3,
-          REDMI13CSILVER4,
-          REDMI13CSILVER5,
-          REDMI13CSILVER6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "MI4",
-
-    colors: [
-      {
-        id: 1,
-        name: "Arctic White",
-        images: [
-          REDMINOTE13WHITE1,
-          REDMINOTE13WHITE2,
-          REDMINOTE13WHITE3,
-          REDMINOTE13WHITE4,
-          REDMINOTE13WHITE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Chromatic Purple",
-        images: [
-          REDMINOTE13PURPLE1,
-          REDMINOTE13PURPLE2,
-          REDMINOTE13PURPLE3,
-          REDMINOTE13PURPLE4,
-          REDMINOTE13PURPLE5,
-          REDMINOTE13PURPLE6,
-        ],
-      },
-      {
-        id: 3,
-        name: "Prism Gold",
-        images: [
-          REDMINOTE13GOLD1,
-          REDMINOTE13GOLD2,
-          REDMINOTE13GOLD3,
-          REDMINOTE13GOLD4,
-          REDMINOTE13GOLD5,
-          REDMINOTE13GOLD6,
-        ],
-      },
-      {
-        id: 4,
-        name: "Stealth Black",
-        images: [
-          REDMINOTE13BLACK1,
-          REDMINOTE13BLACK2,
-          REDMINOTE13BLACK3,
-          REDMINOTE13BLACK4,
-          REDMINOTE13BLACK5,
-        ],
-      },
-    ],
-  },
-  {
-    id: "MI5",
-
-    colors: [
-      {
-        id: 1,
-        name: "Arctic White",
-        images: [
-          REDMINOTE13WHITE1,
-          REDMINOTE13WHITE2,
-          REDMINOTE13WHITE3,
-          REDMINOTE13WHITE4,
-          REDMINOTE13WHITE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Chromatic Purple",
-        images: [
-          REDMINOTE13PURPLE1,
-          REDMINOTE13PURPLE2,
-          REDMINOTE13PURPLE3,
-          REDMINOTE13PURPLE4,
-          REDMINOTE13PURPLE5,
-          REDMINOTE13PURPLE6,
-        ],
-      },
-      {
-        id: 3,
-        name: "Prism Gold",
-        images: [
-          REDMINOTE13GOLD1,
-          REDMINOTE13GOLD2,
-          REDMINOTE13GOLD3,
-          REDMINOTE13GOLD4,
-          REDMINOTE13GOLD5,
-          REDMINOTE13GOLD6,
-        ],
-      },
-      {
-        id: 4,
-        name: "Stealth Black",
-        images: [
-          REDMINOTE13BLACK1,
-          REDMINOTE13BLACK2,
-          REDMINOTE13BLACK3,
-          REDMINOTE13BLACK4,
-          REDMINOTE13BLACK5,
-        ],
-      },
-    ],
-  },
-  {
-    id: "MI6",
+    id: ["MI4", "MI5", "MI6"],
 
     colors: [
       {
@@ -2198,7 +1865,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "MI7",
+    id: ["MI7", "MI8"],
 
     colors: [
       {
@@ -2238,132 +1905,9 @@ export const PHONEIMAGE = [
       },
     ],
   },
-  {
-    id: "MI8",
-
-    colors: [
-      {
-        id: 1,
-        name: "black diamond",
-        images: [
-          REDMI135GBLACKDIAMOND1,
-          REDMI135GBLACKDIAMOND2,
-          REDMI135GBLACKDIAMOND3,
-          REDMI135GBLACKDIAMOND4,
-          REDMI135GBLACKDIAMOND5,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "HAWAIIAN BLUE",
-        images: [
-          REDMI135GHAWAIIANBLUE1,
-          REDMI135GHAWAIIANBLUE2,
-          REDMI135GHAWAIIANBLUE3,
-          REDMI135GHAWAIIANBLUE4,
-          REDMI135GHAWAIIANBLUE5,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "ORCHIDPINK1",
-        images: [
-          REDMI135GORCHIDPINK1,
-          REDMI135GORCHIDPINK2,
-          REDMI135GORCHIDPINK3,
-          REDMI135GORCHIDPINK4,
-          REDMI135GORCHIDPINK5,
-        ],
-      },
-    ],
-  },
 
   {
-    id: "MI9",
-
-    colors: [
-      {
-        id: 1,
-        name: "Fusion Black",
-        images: [
-          REDMINOTE13PROPLUS5GFUSIONBLACK1,
-          REDMINOTE13PROPLUS5GFUSIONBLACK2,
-          REDMINOTE13PROPLUS5GFUSIONBLACK3,
-          REDMINOTE13PROPLUS5GFUSIONBLACK4,
-          REDMINOTE13PROPLUS5GFUSIONBLACK5,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Fusion Purple",
-        images: [
-          REDMINOTE13PROPLUS5GFUSIONPURPLE1,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE2,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE3,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE4,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE5,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Fusion White",
-        images: [
-          REDMINOTE13PROPLUS5GFUSIONWHITE1,
-          REDMINOTE13PROPLUS5GFUSIONWHITE2,
-          REDMINOTE13PROPLUS5GFUSIONWHITE3,
-          REDMINOTE13PROPLUS5GFUSIONWHITE4,
-          REDMINOTE13PROPLUS5GFUSIONWHITE5,
-        ],
-      },
-    ],
-  },
-  {
-    id: "MI10",
-
-    colors: [
-      {
-        id: 1,
-        name: "Fusion Black",
-        images: [
-          REDMINOTE13PROPLUS5GFUSIONBLACK1,
-          REDMINOTE13PROPLUS5GFUSIONBLACK2,
-          REDMINOTE13PROPLUS5GFUSIONBLACK3,
-          REDMINOTE13PROPLUS5GFUSIONBLACK4,
-          REDMINOTE13PROPLUS5GFUSIONBLACK5,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Fusion Purple",
-        images: [
-          REDMINOTE13PROPLUS5GFUSIONPURPLE1,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE2,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE3,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE4,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE5,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Fusion White",
-        images: [
-          REDMINOTE13PROPLUS5GFUSIONWHITE1,
-          REDMINOTE13PROPLUS5GFUSIONWHITE2,
-          REDMINOTE13PROPLUS5GFUSIONWHITE3,
-          REDMINOTE13PROPLUS5GFUSIONWHITE4,
-          REDMINOTE13PROPLUS5GFUSIONWHITE5,
-        ],
-      },
-    ],
-  },
-  {
-    id: "MI11",
+    id: ["MI9", "MI10", "MI11"],
 
     colors: [
       {
@@ -2405,7 +1949,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "MI12",
+    id: ["MI12", "MI13", "MI14"],
 
     colors: [
       {
@@ -2450,97 +1994,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "MI13",
-
-    colors: [
-      {
-        id: 1,
-        name: "Mystique White",
-        images: [
-          REDMINOTE14MYSTIQUEWHITE1,
-          REDMINOTE14MYSTIQUEWHITE2,
-          REDMINOTE14MYSTIQUEWHITE3,
-          REDMINOTE14MYSTIQUEWHITE4,
-          REDMINOTE14MYSTIQUEWHITE5,
-          REDMINOTE14MYSTIQUEWHITE6,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Phantom Purple",
-        images: [
-          REDMINOTE14PHANTOMPURPLE1,
-          REDMINOTE14PHANTOMPURPLE2,
-          REDMINOTE14PHANTOMPURPLE3,
-          REDMINOTE14PHANTOMPURPLE4,
-          REDMINOTE14PHANTOMPURPLE5,
-          REDMINOTE14PHANTOMPURPLE6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Titan Black",
-        images: [
-          REDMINOTE14TITANBLACK1,
-          REDMINOTE14TITANBLACK2,
-          REDMINOTE14TITANBLACK3,
-          REDMINOTE14TITANBLACK4,
-          REDMINOTE14TITANBLACK5,
-          REDMINOTE14TITANBLACK6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "MI14",
-
-    colors: [
-      {
-        id: 1,
-        name: "Mystique White",
-        images: [
-          REDMINOTE14MYSTIQUEWHITE1,
-          REDMINOTE14MYSTIQUEWHITE2,
-          REDMINOTE14MYSTIQUEWHITE3,
-          REDMINOTE14MYSTIQUEWHITE4,
-          REDMINOTE14MYSTIQUEWHITE5,
-          REDMINOTE14MYSTIQUEWHITE6,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Phantom Purple",
-        images: [
-          REDMINOTE14PHANTOMPURPLE1,
-          REDMINOTE14PHANTOMPURPLE2,
-          REDMINOTE14PHANTOMPURPLE3,
-          REDMINOTE14PHANTOMPURPLE4,
-          REDMINOTE14PHANTOMPURPLE5,
-          REDMINOTE14PHANTOMPURPLE6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Titan Black",
-        images: [
-          REDMINOTE14TITANBLACK1,
-          REDMINOTE14TITANBLACK2,
-          REDMINOTE14TITANBLACK3,
-          REDMINOTE14TITANBLACK4,
-          REDMINOTE14TITANBLACK5,
-          REDMINOTE14TITANBLACK6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "MI15",
+    id: ["MI15", "MI16"],
 
     colors: [
       {
@@ -2585,142 +2039,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "MI16",
-
-    colors: [
-      {
-        id: 1,
-        name: "Ivy Green",
-        images: [
-          REDMINOTE14PROIVYGREEN1,
-          REDMINOTE14PROIVYGREEN2,
-          REDMINOTE14PROIVYGREEN3,
-          REDMINOTE14PROIVYGREEN4,
-          REDMINOTE14PROIVYGREEN5,
-          REDMINOTE14PROIVYGREEN6,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Phantom Purple",
-        images: [
-          REDMINOTE14PROPHANTOMPURPLE1,
-          REDMINOTE14PROPHANTOMPURPLE2,
-          REDMINOTE14PROPHANTOMPURPLE3,
-          REDMINOTE14PROPHANTOMPURPLE4,
-          REDMINOTE14PROPHANTOMPURPLE5,
-          REDMINOTE14PROPHANTOMPURPLE6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Titan Black",
-        images: [
-          REDMINOTE14PROTITANBLACK1,
-          REDMINOTE14PROTITANBLACK2,
-          REDMINOTE14PROTITANBLACK3,
-          REDMINOTE14PROTITANBLACK4,
-          REDMINOTE14PROTITANBLACK5,
-          REDMINOTE14PROTITANBLACK6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "MI17",
-
-    colors: [
-      {
-        id: 1,
-        name: "Spectre Blue",
-        images: [
-          REDMINOTE14PROPLUSSPECTREBLUE1,
-          REDMINOTE14PROPLUSSPECTREBLUE2,
-          REDMINOTE14PROPLUSSPECTREBLUE3,
-          REDMINOTE14PROPLUSSPECTREBLUE4,
-          REDMINOTE14PROPLUSSPECTREBLUE5,
-          REDMINOTE14PROPLUSSPECTREBLUE6,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Phantom Purple",
-        images: [
-          REDMINOTE14PROPLUSPHANTOMPURPLE1,
-          REDMINOTE14PROPLUSPHANTOMPURPLE2,
-          REDMINOTE14PROPLUSPHANTOMPURPLE3,
-          REDMINOTE14PROPLUSPHANTOMPURPLE4,
-          REDMINOTE14PROPLUSPHANTOMPURPLE5,
-          REDMINOTE14PROPLUSPHANTOMPURPLE6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Titan Black",
-        images: [
-          REDMINOTE14PROPLUSTITANBLACK1,
-          REDMINOTE14PROPLUSTITANBLACK2,
-          REDMINOTE14PROPLUSTITANBLACK3,
-          REDMINOTE14PROPLUSTITANBLACK4,
-          REDMINOTE14PROPLUSTITANBLACK5,
-          REDMINOTE14PROPLUSTITANBLACK6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "MI18",
-
-    colors: [
-      {
-        id: 1,
-        name: "Spectre Blue",
-        images: [
-          REDMINOTE14PROPLUSSPECTREBLUE1,
-          REDMINOTE14PROPLUSSPECTREBLUE2,
-          REDMINOTE14PROPLUSSPECTREBLUE3,
-          REDMINOTE14PROPLUSSPECTREBLUE4,
-          REDMINOTE14PROPLUSSPECTREBLUE5,
-          REDMINOTE14PROPLUSSPECTREBLUE6,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Phantom Purple",
-        images: [
-          REDMINOTE14PROPLUSPHANTOMPURPLE1,
-          REDMINOTE14PROPLUSPHANTOMPURPLE2,
-          REDMINOTE14PROPLUSPHANTOMPURPLE3,
-          REDMINOTE14PROPLUSPHANTOMPURPLE4,
-          REDMINOTE14PROPLUSPHANTOMPURPLE5,
-          REDMINOTE14PROPLUSPHANTOMPURPLE6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Titan Black",
-        images: [
-          REDMINOTE14PROPLUSTITANBLACK1,
-          REDMINOTE14PROPLUSTITANBLACK2,
-          REDMINOTE14PROPLUSTITANBLACK3,
-          REDMINOTE14PROPLUSTITANBLACK4,
-          REDMINOTE14PROPLUSTITANBLACK5,
-          REDMINOTE14PROPLUSTITANBLACK6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "MI19",
+    id: ["MI17", "MI18", "MI19"],
 
     colors: [
       {
@@ -2766,7 +2085,7 @@ export const PHONEIMAGE = [
 
   //OPPO PHONES
   {
-    id: "OPPO2",
+    id: ["OPPO2"],
 
     colors: [
       {
@@ -2795,7 +2114,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "OPPO3",
+    id: ["OPPO3"],
 
     colors: [
       {
@@ -2824,35 +2143,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "OPPO5",
-
-    colors: [
-      {
-        id: 1,
-        name: "BREEZE BLUE",
-        images: [
-          OPPOK12XBLUE1,
-          OPPOK12XBLUE2,
-          OPPOK12XBLUE3,
-          OPPOK12XBLUE4,
-          OPPOK12XBLUE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "MIDNIGHT VOILET",
-        images: [
-          OPPOK12XVOILET1,
-          OPPOK12XVOILET2,
-          OPPOK12XVOILET3,
-          OPPOK12XVOILET4,
-          OPPOK12XVOILET5,
-        ],
-      },
-    ],
-  },
-  {
-    id: "OPPO6",
+    id: ["OPPO5", "OPPO6"],
 
     colors: [
       {
@@ -2881,7 +2172,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "OPPO7",
+    id: ["OPPO7", "OPPO8"],
 
     colors: [
       {
@@ -2910,35 +2201,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "OPPO8",
-
-    colors: [
-      {
-        id: 1,
-        name: "SPACE BROWN",
-        images: [
-          OPPORENO12PROBROWN1,
-          OPPORENO12PROBROWN2,
-          OPPORENO12PROBROWN3,
-          OPPORENO12PROBROWN4,
-          OPPORENO12PROBROWN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "SUNSET GOLD",
-        images: [
-          OPPORENO12PROGOLD1,
-          OPPORENO12PROGOLD2,
-          OPPORENO12PROGOLD3,
-          OPPORENO12PROGOLD4,
-          OPPORENO12PROGOLD5,
-        ],
-      },
-    ],
-  },
-  {
-    id: "OPPO9",
+    id: ["OPPO9"],
 
     colors: [
       {
@@ -2969,35 +2232,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "OPPO10",
-
-    colors: [
-      {
-        id: 1,
-        name: "Midnight Navy",
-        images: [
-          OPPOF27PROPLUSMIDNIGHTNAVY1,
-          OPPOF27PROPLUSMIDNIGHTNAVY2,
-          OPPOF27PROPLUSMIDNIGHTNAVY3,
-          OPPOF27PROPLUSMIDNIGHTNAVY4,
-          OPPOF27PROPLUSMIDNIGHTNAVY5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Dusk Pink",
-        images: [
-          OPPOF27PROPLUSDUSKPINK1,
-          OPPOF27PROPLUSDUSKPINK2,
-          OPPOF27PROPLUSDUSKPINK3,
-          OPPOF27PROPLUSDUSKPINK4,
-          OPPOF27PROPLUSDUSKPINK5,
-        ],
-      },
-    ],
-  },
-  {
-    id: "OPPO11",
+    id: ["OPPO10", "OPPO11"],
 
     colors: [
       {
@@ -3026,35 +2261,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "OPPO12",
-
-    colors: [
-      {
-        id: 1,
-        name: "Amber Orange",
-        images: [
-          OPPOF27AMBERORANGE1,
-          OPPOF27AMBERORANGE2,
-          OPPOF27AMBERORANGE3,
-          OPPOF27AMBERORANGE4,
-          OPPOF27AMBERORANGE5,
-        ],
-      },
-      {
-        id: 2,
-        name: " Emerlad Green",
-        images: [
-          OPPOF27EMERALDGREEN1,
-          OPPOF27EMERALDGREEN2,
-          OPPOF27EMERALDGREEN3,
-          OPPOF27EMERALDGREEN4,
-          OPPOF27EMERALDGREEN5,
-        ],
-      },
-    ],
-  },
-  {
-    id: "OPPO13",
+    id: ["OPPO12", "OPPO13"],
 
     colors: [
       {
@@ -3083,7 +2290,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "OPPO14",
+    id: ["OPPO14", "OPPO15"],
 
     colors: [
       {
@@ -3108,62 +2315,11 @@ export const PHONEIMAGE = [
           OPPOA3PROSTARRYBLACK5,
         ],
       },
-      {
-        id: 3,
-        name: "Starlight White",
-        images: [
-          OPPOA3XSTARLIGHTWHITE1,
-          OPPOA3XSTARLIGHTWHITE2,
-          OPPOA3XSTARLIGHTWHITE3,
-          OPPOA3XSTARLIGHTWHITE4,
-          OPPOA3XSTARLIGHTWHITE5,
-        ],
-      },
     ],
   },
 
   {
-    id: "OPPO15",
-
-    colors: [
-      {
-        id: 1,
-        name: "Moonlight Purple",
-        images: [
-          OPPOA3PROMOONLIGHTPURPLE1,
-          OPPOA3PROMOONLIGHTPURPLE2,
-          OPPOA3PROMOONLIGHTPURPLE3,
-          OPPOA3PROMOONLIGHTPURPLE4,
-          OPPOA3PROMOONLIGHTPURPLE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Starry Black",
-        images: [
-          OPPOA3PROSTARRYBLACK1,
-          OPPOA3PROSTARRYBLACK2,
-          OPPOA3PROSTARRYBLACK3,
-          OPPOA3PROSTARRYBLACK4,
-          OPPOA3PROSTARRYBLACK5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Starlight White",
-        images: [
-          OPPOA3XSTARLIGHTWHITE1,
-          OPPOA3XSTARLIGHTWHITE2,
-          OPPOA3XSTARLIGHTWHITE3,
-          OPPOA3XSTARLIGHTWHITE4,
-          OPPOA3XSTARLIGHTWHITE5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "OPPO16",
+    id: ["OPPO16"],
 
     colors: [
       {
@@ -3192,7 +2348,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "OPPO17",
+    id: ["OPPO17"],
 
     colors: [
       {
@@ -3221,7 +2377,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "OPPO18",
+    id: ["OPPO18", "OPPO19"],
 
     colors: [
       {
@@ -3252,38 +2408,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "OPPO19",
-
-    colors: [
-      {
-        id: 1,
-        name: "Space Black",
-        images: [
-          OPPOFINDX8SPACEBLACK1,
-          OPPOFINDX8SPACEBLACK2,
-          OPPOFINDX8SPACEBLACK3,
-          OPPOFINDX8SPACEBLACK4,
-          OPPOFINDX8SPACEBLACK5,
-          OPPOFINDX8SPACEBLACK6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Star Grey",
-        images: [
-          OPPOFINDX8STARGREY1,
-          OPPOFINDX8STARGREY2,
-          OPPOFINDX8STARGREY3,
-          OPPOFINDX8STARGREY4,
-          OPPOFINDX8STARGREY5,
-          OPPOFINDX8STARGREY6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "OPPO20",
+    id: ["OPPO20"],
 
     colors: [
       {
@@ -3316,7 +2441,7 @@ export const PHONEIMAGE = [
   //REALME PHONES
 
   {
-    id: "REALME1",
+    id: ["REALME1", "REALME2"],
 
     colors: [
       {
@@ -3346,37 +2471,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "REALME2",
-
-    colors: [
-      {
-        id: 1,
-        name: "Jade Green",
-        images: [
-          REALMEC63JADEGREEN1,
-          REALMEC63JADEGREEN2,
-          REALMEC63JADEGREEN3,
-          REALMEC63JADEGREEN4,
-          REALMEC63JADEGREEN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Leather Blue",
-        images: [
-          REALMEC63LEATHERBLUE1,
-          REALMEC63LEATHERBLUE2,
-          REALMEC63LEATHERBLUE3,
-          REALMEC63LEATHERBLUE4,
-          REALMEC63LEATHERBLUE5,
-          REALMEC63LEATHERBLUE6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "REALME3",
+    id: ["REALME3"],
 
     colors: [
       {
@@ -3405,7 +2500,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "REALME4",
+    id: ["REALME4"],
 
     colors: [
       {
@@ -3434,7 +2529,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "REALME5",
+    id: ["REALME5", "REALME6"],
 
     colors: [
       {
@@ -3463,7 +2558,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "REALME6",
+    id: ["REALME7"],
 
     colors: [
       {
@@ -3492,36 +2587,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "REALME7",
-
-    colors: [
-      {
-        id: 1,
-        name: "Feather Green",
-        images: [
-          REALMEC65FEATHERGREEN1,
-          REALMEC65FEATHERGREEN2,
-          REALMEC65FEATHERGREEN3,
-          REALMEC65FEATHERGREEN4,
-          REALMEC65FEATHERGREEN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Glowing Black",
-        images: [
-          REALMEC65GLOWINGBLACK1,
-          REALMEC65GLOWINGBLACK2,
-          REALMEC65GLOWINGBLACK3,
-          REALMEC65GLOWINGBLACK4,
-          REALMEC65GLOWINGBLACK5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "REALME8",
+    id: ["REALME8", "REALME9"],
 
     colors: [
       {
@@ -3550,36 +2616,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "REALME9",
-
-    colors: [
-      {
-        id: 1,
-        name: "Sunny Oasis",
-        images: [
-          REALMEC67SUNNYOASIS1,
-          REALMEC67SUNNYOASIS2,
-          REALMEC67SUNNYOASIS3,
-          REALMEC67SUNNYOASIS4,
-          REALMEC67SUNNYOASIS5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Dark Purple",
-        images: [
-          REALMEC67DARKPURPLE1,
-          REALMEC67DARKPURPLE2,
-          REALMEC67DARKPURPLE3,
-          REALMEC67DARKPURPLE4,
-          REALMEC67DARKPURPLE5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "REALME10",
+    id: ["REALME10", "REALME11"],
 
     colors: [
       {
@@ -3608,36 +2645,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "REALME11",
-
-    colors: [
-      {
-        id: 1,
-        name: "Navigator Beige",
-        images: [
-          REALME12PLUSNAVIGATORBEIGE1,
-          REALME12PLUSNAVIGATORBEIGE2,
-          REALME12PLUSNAVIGATORBEIGE3,
-          REALME12PLUSNAVIGATORBEIGE4,
-          REALME12PLUSNAVIGATORBEIGE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Pioneer Green",
-        images: [
-          REALME12PLUSPIONEERGREEN1,
-          REALME12PLUSPIONEERGREEN2,
-          REALME12PLUSPIONEERGREEN3,
-          REALME12PLUSPIONEERGREEN4,
-          REALME12PLUSPIONEERGREEN5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "REALME12",
+    id: ["REALME12", "REALME13", "REALME14"],
 
     colors: [
       {
@@ -3677,87 +2685,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "REALME13",
-
-    colors: [
-      {
-        id: 1,
-        name: "Monet Purple",
-        images: [
-          REALME13PROPLUSMONETPURPLE1,
-          REALME13PROPLUSMONETPURPLE2,
-          REALME13PROPLUSMONETPURPLE3,
-          REALME13PROPLUSMONETPURPLE4,
-          REALME13PROPLUSMONETPURPLE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Monet Gold",
-        images: [
-          REALME13PROPLUSMONETGOLD1,
-          REALME13PROPLUSMONETGOLD2,
-          REALME13PROPLUSMONETGOLD3,
-          REALME13PROPLUSMONETGOLD4,
-          REALME13PROPLUSMONETGOLD5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Emerald Green",
-        images: [
-          REALME13PROPLUSEMERALDGREEN1,
-          REALME13PROPLUSEMERALDGREEN2,
-          REALME13PROPLUSEMERALDGREEN3,
-          REALME13PROPLUSEMERALDGREEN4,
-          REALME13PROPLUSEMERALDGREEN5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "REALME14",
-
-    colors: [
-      {
-        id: 1,
-        name: "Monet Purple",
-        images: [
-          REALME13PROPLUSMONETPURPLE1,
-          REALME13PROPLUSMONETPURPLE2,
-          REALME13PROPLUSMONETPURPLE3,
-          REALME13PROPLUSMONETPURPLE4,
-          REALME13PROPLUSMONETPURPLE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Monet Gold",
-        images: [
-          REALME13PROPLUSMONETGOLD1,
-          REALME13PROPLUSMONETGOLD2,
-          REALME13PROPLUSMONETGOLD3,
-          REALME13PROPLUSMONETGOLD4,
-          REALME13PROPLUSMONETGOLD5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Emerald Green",
-        images: [
-          REALME13PROPLUSEMERALDGREEN1,
-          REALME13PROPLUSEMERALDGREEN2,
-          REALME13PROPLUSEMERALDGREEN3,
-          REALME13PROPLUSEMERALDGREEN4,
-          REALME13PROPLUSEMERALDGREEN5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "REALME15",
+    id: ["REALME15", "REALME16", "REALME17"],
 
     colors: [
       {
@@ -3797,167 +2725,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "REALME16",
-
-    colors: [
-      {
-        id: 1,
-        name: "Emerald Green",
-        images: [
-          REALME13PROEMERALDGREEN1,
-          REALME13PROEMERALDGREEN2,
-          REALME13PROEMERALDGREEN3,
-          REALME13PROEMERALDGREEN4,
-          REALME13PROEMERALDGREEN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Monet Gold",
-        images: [
-          REALME13PROMONETGOLD1,
-          REALME13PROMONETGOLD2,
-          REALME13PROMONETGOLD3,
-          REALME13PROMONETGOLD4,
-          REALME13PROMONETGOLD5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Monet Purple",
-        images: [
-          REALME13PROMONETPURPLE1,
-          REALME13PROMONETPURPLE2,
-          REALME13PROMONETPURPLE3,
-          REALME13PROMONETPURPLE4,
-          REALME13PROMONETPURPLE5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "REALME17",
-
-    colors: [
-      {
-        id: 1,
-        name: "Emerald Green",
-        images: [
-          REALME13PROEMERALDGREEN1,
-          REALME13PROEMERALDGREEN2,
-          REALME13PROEMERALDGREEN3,
-          REALME13PROEMERALDGREEN4,
-          REALME13PROEMERALDGREEN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Monet Gold",
-        images: [
-          REALME13PROMONETGOLD1,
-          REALME13PROMONETGOLD2,
-          REALME13PROMONETGOLD3,
-          REALME13PROMONETGOLD4,
-          REALME13PROMONETGOLD5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Monet Purple",
-        images: [
-          REALME13PROMONETPURPLE1,
-          REALME13PROMONETPURPLE2,
-          REALME13PROMONETPURPLE3,
-          REALME13PROMONETPURPLE4,
-          REALME13PROMONETPURPLE5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "REALME18",
-
-    colors: [
-      {
-        id: 1,
-        name: "Victory Gold",
-        images: [
-          REALME13PLUSVICTORYGOLD1,
-          REALME13PLUSVICTORYGOLD2,
-          REALME13PLUSVICTORYGOLD3,
-          REALME13PLUSVICTORYGOLD4,
-          REALME13PLUSVICTORYGOLD5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Speed Green",
-        images: [
-          REALME13PLUSSPEEDGREEN1,
-          REALME13PLUSSPEEDGREEN2,
-          REALME13PLUSSPEEDGREEN3,
-          REALME13PLUSSPEEDGREEN4,
-          REALME13PLUSSPEEDGREEN5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Dark Purple",
-        images: [
-          REALME13PLUSDARKPURPLE1,
-          REALME13PLUSDARKPURPLE2,
-          REALME13PLUSDARKPURPLE3,
-          REALME13PLUSDARKPURPLE4,
-          REALME13PLUSDARKPURPLE5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "REALME19",
-
-    colors: [
-      {
-        id: 1,
-        name: "Victory Gold",
-        images: [
-          REALME13PLUSVICTORYGOLD1,
-          REALME13PLUSVICTORYGOLD2,
-          REALME13PLUSVICTORYGOLD3,
-          REALME13PLUSVICTORYGOLD4,
-          REALME13PLUSVICTORYGOLD5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Speed Green",
-        images: [
-          REALME13PLUSSPEEDGREEN1,
-          REALME13PLUSSPEEDGREEN2,
-          REALME13PLUSSPEEDGREEN3,
-          REALME13PLUSSPEEDGREEN4,
-          REALME13PLUSSPEEDGREEN5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Dark Purple",
-        images: [
-          REALME13PLUSDARKPURPLE1,
-          REALME13PLUSDARKPURPLE2,
-          REALME13PLUSDARKPURPLE3,
-          REALME13PLUSDARKPURPLE4,
-          REALME13PLUSDARKPURPLE5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "REALME20",
+    id: ["REALME18", "REALME19", "REALME20"],
 
     colors: [
       {
@@ -3998,7 +2766,7 @@ export const PHONEIMAGE = [
 
   //SAMSUNG PHONES
   {
-    id: "SAMSUNG1",
+    id: ["SAMSUNG1", "SAMSUNG2", "SAMSUNG3"],
 
     colors: [
       {
@@ -4039,89 +2807,9 @@ export const PHONEIMAGE = [
       },
     ],
   },
-  {
-    id: "SAMSUNG2",
-    colors: [
-      {
-        id: 1,
-        name: "Light Green",
-        images: [
-          SASMSUNGA165GLIGHTGREEN1,
-          SASMSUNGA165GLIGHTGREEN2,
-          SASMSUNGA165GLIGHTGREEN3,
-          SASMSUNGA165GLIGHTGREEN4,
-          SASMSUNGA165GLIGHTGREEN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Blue Black",
-        images: [
-          SASMSUNGA165GBLUEBLACK1,
-          SASMSUNGA165GBLUEBLACK2,
-          SASMSUNGA165GBLUEBLACK3,
-          SASMSUNGA165GBLUEBLACK4,
-          SASMSUNGA165GBLUEBLACK5,
-        ],
-      },
 
-      {
-        id: 3,
-        name: "gold",
-        images: [
-          SAMSUNGA165GGOLD1,
-          SAMSUNGA165GGOLD2,
-          SAMSUNGA165GGOLD3,
-          SAMSUNGA165GGOLD4,
-          SAMSUNGA165GGOLD5,
-          SAMSUNGA165GGOLD6,
-        ],
-      },
-    ],
-  },
   {
-    id: "SAMSUNG3",
-
-    colors: [
-      {
-        id: 1,
-        name: "gold",
-        images: [
-          SAMSUNGA165GGOLD1,
-          SAMSUNGA165GGOLD2,
-          SAMSUNGA165GGOLD3,
-          SAMSUNGA165GGOLD4,
-          SAMSUNGA165GGOLD5,
-          SAMSUNGA165GGOLD6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Blue Black",
-        images: [
-          SASMSUNGA165GBLUEBLACK1,
-          SASMSUNGA165GBLUEBLACK2,
-          SASMSUNGA165GBLUEBLACK3,
-          SASMSUNGA165GBLUEBLACK4,
-          SASMSUNGA165GBLUEBLACK5,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Light Green",
-        images: [
-          SASMSUNGA165GLIGHTGREEN1,
-          SASMSUNGA165GLIGHTGREEN2,
-          SASMSUNGA165GLIGHTGREEN3,
-          SASMSUNGA165GLIGHTGREEN4,
-          SASMSUNGA165GLIGHTGREEN5,
-        ],
-      },
-    ],
-  },
-  {
-    id: "SAMSUNG4",
+    id: ["SAMSUNG4", "SAMSUNG5", "SAMSUNG6"],
 
     colors: [
       {
@@ -4165,179 +2853,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "SAMSUNG5",
-
-    colors: [
-      {
-        id: 1,
-        name: "Groovy Violet",
-        images: [
-          SAMSUNGF15GROOVYVIOLET1,
-          SAMSUNGF15GROOVYVIOLET2,
-          SAMSUNGF15GROOVYVIOLET3,
-          SAMSUNGF15GROOVYVIOLET4,
-          SAMSUNGF15GROOVYVIOLET5,
-          SAMSUNGF15GROOVYVIOLET6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Ash Black",
-        images: [
-          SAMSUNGF15ASHBLACK1,
-          SAMSUNGF15ASHBLACK2,
-          SAMSUNGF15ASHBLACK3,
-          SAMSUNGF15ASHBLACK4,
-          SAMSUNGF15ASHBLACK5,
-          SAMSUNGF15ASHBLACK6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Jazzy Green",
-        images: [
-          SAMSUNGF15JAZZYGREEN1,
-          SAMSUNGF15JAZZYGREEN2,
-          SAMSUNGF15JAZZYGREEN3,
-          SAMSUNGF15JAZZYGREEN4,
-          SAMSUNGF15JAZZYGREEN5,
-          SAMSUNGF15JAZZYGREEN6,
-        ],
-      },
-    ],
-  },
-  {
-    id: "SAMSUNG6",
-
-    colors: [
-      {
-        id: 1,
-        name: "Jazzy Green",
-        images: [
-          SAMSUNGF15JAZZYGREEN1,
-          SAMSUNGF15JAZZYGREEN2,
-          SAMSUNGF15JAZZYGREEN3,
-          SAMSUNGF15JAZZYGREEN4,
-          SAMSUNGF15JAZZYGREEN5,
-          SAMSUNGF15JAZZYGREEN6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Ash Black",
-        images: [
-          SAMSUNGF15ASHBLACK1,
-          SAMSUNGF15ASHBLACK2,
-          SAMSUNGF15ASHBLACK3,
-          SAMSUNGF15ASHBLACK4,
-          SAMSUNGF15ASHBLACK5,
-          SAMSUNGF15ASHBLACK6,
-        ],
-      },
-      {
-        id: 3,
-        name: "Groovy Violet",
-        images: [
-          SAMSUNGF15GROOVYVIOLET1,
-          SAMSUNGF15GROOVYVIOLET2,
-          SAMSUNGF15GROOVYVIOLET3,
-          SAMSUNGF15GROOVYVIOLET4,
-          SAMSUNGF15GROOVYVIOLET5,
-          SAMSUNGF15GROOVYVIOLET6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "SAMSUNG7",
-
-    colors: [
-      {
-        id: 1,
-        name: "BLUE",
-        images: [
-          SAMSUNGA15BLUE1,
-          SAMSUNGA15BLUE2,
-          SAMSUNGA15BLUE3,
-          SAMSUNGA15BLUE4,
-          SAMSUNGA15BLUE5,
-          SAMSUNGA15BLUE6,
-        ],
-      },
-      {
-        id: 2,
-        name: "BLUEBLACK",
-        images: [
-          SAMSUNGA15BLUEBLACK1,
-          SAMSUNGA15BLUEBLACK2,
-          SAMSUNGA15BLUEBLACK3,
-          SAMSUNGA15BLUEBLACK4,
-          SAMSUNGA15BLUEBLACK5,
-          SAMSUNGA15BLUEBLACK6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "LIGHTBLUE",
-        images: [
-          SAMSUNGA15LIGHTBLUE1,
-          SAMSUNGA15LIGHTBLUE2,
-          SAMSUNGA15LIGHTBLUE3,
-          SAMSUNGA15LIGHTBLUE4,
-          SAMSUNGA15LIGHTBLUE5,
-          SAMSUNGA15LIGHTBLUE6,
-        ],
-      },
-    ],
-  },
-  {
-    id: "SAMSUNG8",
-
-    colors: [
-      {
-        id: 1,
-        name: "BLUE",
-        images: [
-          SAMSUNGA15BLUE1,
-          SAMSUNGA15BLUE2,
-          SAMSUNGA15BLUE3,
-          SAMSUNGA15BLUE4,
-          SAMSUNGA15BLUE5,
-          SAMSUNGA15BLUE6,
-        ],
-      },
-      {
-        id: 2,
-        name: "BLUEBLACK",
-        images: [
-          SAMSUNGA15BLUEBLACK1,
-          SAMSUNGA15BLUEBLACK2,
-          SAMSUNGA15BLUEBLACK3,
-          SAMSUNGA15BLUEBLACK4,
-          SAMSUNGA15BLUEBLACK5,
-          SAMSUNGA15BLUEBLACK6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "LIGHTBLUE",
-        images: [
-          SAMSUNGA15LIGHTBLUE1,
-          SAMSUNGA15LIGHTBLUE2,
-          SAMSUNGA15LIGHTBLUE3,
-          SAMSUNGA15LIGHTBLUE4,
-          SAMSUNGA15LIGHTBLUE5,
-          SAMSUNGA15LIGHTBLUE6,
-        ],
-      },
-    ],
-  },
-  {
-    id: "SAMSUNG9",
+    id: ["SAMSUNG7", "SAMSUNG8", "SAMSUNG9"],
 
     colors: [
       {
@@ -4381,7 +2897,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "SAMSUNG10",
+    id: ["SAMSUNG10"],
 
     colors: [
       {
@@ -4412,7 +2928,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "SAMSUNG11",
+    id: ["SAMSUNG11", "SAMSUNG12"],
 
     colors: [
       {
@@ -4455,47 +2971,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "SAMSUNG12",
-
-    colors: [
-      {
-        id: 1,
-        name: "BLACK",
-        images: [
-          SAMSUNGA144GBLACK1,
-          SAMSUNGA144GBLACK2,
-          SAMSUNGA144GBLACK3,
-          SAMSUNGA144GBLACK4,
-          SAMSUNGA144GBLACK5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Light Green",
-        images: [
-          SAMSUNGA144GLIGHTGREEN1,
-          SAMSUNGA144GLIGHTGREEN2,
-          SAMSUNGA144GLIGHTGREEN3,
-          SAMSUNGA144GLIGHTGREEN4,
-          SAMSUNGA144GLIGHTGREEN5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Silver",
-        images: [
-          SAMSUNGA144GSILVER1,
-          SAMSUNGA144GSILVER2,
-          SAMSUNGA144GSILVER3,
-          SAMSUNGA144GSILVER4,
-          SAMSUNGA144GSILVER5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "SAMSUNG13",
+    id: ["SAMSUNG13"],
 
     colors: [
       {
@@ -4517,7 +2993,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "SAMSUNG15",
+    id: ["SAMSUNG15"],
 
     colors: [
       {
@@ -4560,7 +3036,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "SAMSUNG16",
+    id: ["SAMSUNG16"],
 
     colors: [
       {
@@ -4603,49 +3079,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "SAMSUNG17",
-
-    colors: [
-      {
-        id: 1,
-        name: " AWESOME ICEBLUE",
-        images: [
-          SAMSUNGA35AWESOMEICEBLUE1,
-          SAMSUNGA35AWESOMEICEBLUE2,
-          SAMSUNGA35AWESOMEICEBLUE3,
-          SAMSUNGA35AWESOMEICEBLUE4,
-          SAMSUNGA35AWESOMEICEBLUE5,
-          SAMSUNGA35AWESOMEICEBLUE6,
-        ],
-      },
-      {
-        id: 2,
-        name: "AWESOME LILAC",
-        images: [
-          SAMSUNGA35AWESOMELILAC1,
-          SAMSUNGA35AWESOMELILAC2,
-          SAMSUNGA35AWESOMELILAC3,
-          SAMSUNGA35AWESOMELILAC4,
-          SAMSUNGA35AWESOMELILAC5,
-          SAMSUNGA35AWESOMELILAC6,
-        ],
-      },
-      {
-        id: 3,
-        name: "AWESOM ENAVY",
-        images: [
-          SAMSUNGA35AWESOMENAVY1,
-          SAMSUNGA35AWESOMENAVY2,
-          SAMSUNGA35AWESOMENAVY3,
-          SAMSUNGA35AWESOMENAVY4,
-          SAMSUNGA35AWESOMENAVY5,
-          SAMSUNGA35AWESOMENAVY6,
-        ],
-      },
-    ],
-  },
-  {
-    id: "SAMSUNG18",
+    id: ["SAMSUNG17", "SAMSUNG18"],
 
     colors: [
       {
@@ -4688,7 +3122,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "SAMSUNG19",
+    id: ["SAMSUNG19", "SAMSUNG20", "SAMSUNG21"],
 
     colors: [
       {
@@ -4719,69 +3153,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "SAMSUNG20",
-
-    colors: [
-      {
-        id: 1,
-        name: " AWESOME NAVY",
-        images: [
-          SAMSUNGA55AWESOMENAVY1,
-          SAMSUNGA55AWESOMENAVY2,
-          SAMSUNGA55AWESOMENAVY3,
-          SAMSUNGA55AWESOMENAVY4,
-          SAMSUNGA55AWESOMENAVY5,
-          SAMSUNGA55AWESOMENAVY6,
-        ],
-      },
-      {
-        id: 2,
-        name: "BLUE",
-        images: [
-          SAMSUNGA55BLUE1,
-          SAMSUNGA55BLUE2,
-          SAMSUNGA55BLUE3,
-          SAMSUNGA55BLUE4,
-          SAMSUNGA55BLUE5,
-          SAMSUNGA55BLUE6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "SAMSUNG21",
-
-    colors: [
-      {
-        id: 1,
-        name: " AWESOME NAVY",
-        images: [
-          SAMSUNGA55AWESOMENAVY1,
-          SAMSUNGA55AWESOMENAVY2,
-          SAMSUNGA55AWESOMENAVY3,
-          SAMSUNGA55AWESOMENAVY4,
-          SAMSUNGA55AWESOMENAVY5,
-          SAMSUNGA55AWESOMENAVY6,
-        ],
-      },
-      {
-        id: 2,
-        name: "BLUE",
-        images: [
-          SAMSUNGA55BLUE1,
-          SAMSUNGA55BLUE2,
-          SAMSUNGA55BLUE3,
-          SAMSUNGA55BLUE4,
-          SAMSUNGA55BLUE5,
-          SAMSUNGA55BLUE6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "SAMSUNG22",
+    id: ["SAMSUNG22", "SAMSUNG23"],
 
     colors: [
       {
@@ -4822,50 +3194,9 @@ export const PHONEIMAGE = [
       },
     ],
   },
-  {
-    id: "SAMSUNG23",
 
-    colors: [
-      {
-        id: 1,
-        name: "CREAM",
-        images: [
-          SAMSUNGS23CREAM1,
-          SAMSUNGS23CREAM2,
-          SAMSUNGS23CREAM3,
-          SAMSUNGS23CREAM4,
-          SAMSUNGS23CREAM5,
-          SAMSUNGS23CREAM6,
-        ],
-      },
-      {
-        id: 2,
-        name: "LAVENDER",
-        images: [
-          SAMSUNGS23LAVENDER1,
-          SAMSUNGS23LAVENDER2,
-          SAMSUNGS23LAVENDER3,
-          SAMSUNGS23LAVENDER4,
-          SAMSUNGS23LAVENDER5,
-          SAMSUNGS23LAVENDER6,
-        ],
-      },
-      {
-        id: 3,
-        name: "PHANTOM BLACK",
-        images: [
-          SAMSUNGS23PHANTOMBLACK1,
-          SAMSUNGS23PHANTOMBLACK2,
-          SAMSUNGS23PHANTOMBLACK3,
-          SAMSUNGS23PHANTOMBLACK4,
-          SAMSUNGS23PHANTOMBLACK5,
-          SAMSUNGS23PHANTOMBLACK6,
-        ],
-      },
-    ],
-  },
   {
-    id: "SAMSUNG24",
+    id: ["SAMSUNG24", "SAMSUNG25", "SAMSUNG26"],
 
     colors: [
       {
@@ -4915,110 +3246,9 @@ export const PHONEIMAGE = [
       },
     ],
   },
-  {
-    id: "SAMSUNG25",
-    colors: [
-      {
-        id: 1,
-        name: "Gamber Yellow",
-        images: [
-          SAMSUNGS245GAMBERYELLOW1,
-          SAMSUNGS245GAMBERYELLOW2,
-          SAMSUNGS245GAMBERYELLOW3,
-          SAMSUNGS245GAMBERYELLOW4,
-          SAMSUNGS245GAMBERYELLOW5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Cobal Violet",
-        images: [
-          SAMSUNGS24COBALTVIOLET1,
-          SAMSUNGS24COBALTVIOLET2,
-          SAMSUNGS24COBALTVIOLET3,
-          SAMSUNGS24COBALTVIOLET4,
-          SAMSUNGS24COBALTVIOLET5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Marble Gray",
-        images: [
-          SAMSUNGS245GMARBLEGRAY1,
-          SAMSUNGS245GMARBLEGRAY2,
-          SAMSUNGS245GMARBLEGRAY3,
-          SAMSUNGS245GMARBLEGRAY4,
-          SAMSUNGS245GMARBLEGRAY5,
-          SAMSUNGS245GMARBLEGRAY6,
-        ],
-      },
-      {
-        id: 4,
-        name: "Ony Black",
-        images: [
-          SAMSUNGS245GONYXBLACK1,
-          SAMSUNGS245GONYXBLACK2,
-          SAMSUNGS245GONYXBLACK3,
-          SAMSUNGS245GONYXBLACK4,
-          SAMSUNGS245GONYXBLACK5,
-        ],
-      },
-    ],
-  },
-  {
-    id: "SAMSUNG26",
 
-    colors: [
-      {
-        id: 1,
-        name: "Marble Gray",
-        images: [
-          SAMSUNGS245GMARBLEGRAY1,
-          SAMSUNGS245GMARBLEGRAY2,
-          SAMSUNGS245GMARBLEGRAY3,
-          SAMSUNGS245GMARBLEGRAY4,
-          SAMSUNGS245GMARBLEGRAY5,
-          SAMSUNGS245GMARBLEGRAY6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Cobal Violet",
-        images: [
-          SAMSUNGS24COBALTVIOLET1,
-          SAMSUNGS24COBALTVIOLET2,
-          SAMSUNGS24COBALTVIOLET3,
-          SAMSUNGS24COBALTVIOLET4,
-          SAMSUNGS24COBALTVIOLET5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Gamber Yellow",
-        images: [
-          SAMSUNGS245GAMBERYELLOW1,
-          SAMSUNGS245GAMBERYELLOW2,
-          SAMSUNGS245GAMBERYELLOW3,
-          SAMSUNGS245GAMBERYELLOW4,
-          SAMSUNGS245GAMBERYELLOW5,
-        ],
-      },
-
-      {
-        id: 4,
-        name: "Ony Black",
-        images: [
-          SAMSUNGS245GONYXBLACK1,
-          SAMSUNGS245GONYXBLACK2,
-          SAMSUNGS245GONYXBLACK3,
-          SAMSUNGS245GONYXBLACK4,
-          SAMSUNGS245GONYXBLACK5,
-        ],
-      },
-    ],
-  },
   {
-    id: "SAMSUNG27",
+    id: ["SAMSUNG27", "SAMSUNG28"],
 
     colors: [
       {
@@ -5046,37 +3276,9 @@ export const PHONEIMAGE = [
       },
     ],
   },
-  {
-    id: "SAMSUNG28",
 
-    colors: [
-      {
-        id: 1,
-        name: " Cobalt Violet",
-        images: [
-          SAMSUNGS24PLUS5GCOBALTVIOLET1,
-          SAMSUNGS24PLUS5GCOBALTVIOLET2,
-          SAMSUNGS24PLUS5GCOBALTVIOLET3,
-          SAMSUNGS24PLUS5GCOBALTVIOLET4,
-          SAMSUNGS24PLUS5GCOBALTVIOLET5,
-          SAMSUNGS24PLUS5GCOBALTVIOLET6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Onyx Black",
-        images: [
-          SAMSUNGS24PLUS5GONYXBLACK1,
-          SAMSUNGS24PLUS5GONYXBLACK2,
-          SAMSUNGS24PLUS5GONYXBLACK3,
-          SAMSUNGS24PLUS5GONYXBLACK4,
-          SAMSUNGS24PLUS5GONYXBLACK5,
-        ],
-      },
-    ],
-  },
   {
-    id: "SAMSUNG29",
+    id: ["SAMSUNG29", "SAMSUNG30", "SAMSUNG31"],
 
     colors: [
       {
@@ -5125,150 +3327,10 @@ export const PHONEIMAGE = [
       },
     ],
   },
-  {
-    id: "SAMSUNG30",
 
-    colors: [
-      {
-        id: 1,
-        name: "Titanium Black",
-        images: [
-          SAMSUNGS24ULTRA5GTITANIUMBLACK1,
-          SAMSUNGS24ULTRA5GTITANIUMBLACK2,
-          SAMSUNGS24ULTRA5GTITANIUMBLACK3,
-          SAMSUNGS24ULTRA5GTITANIUMBLACK4,
-          SAMSUNGS24ULTRA5GTITANIUMBLACK5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Titanium Gray",
-        images: [
-          SAMSUNGS24ULTRA5GTITANIUMGRAY1,
-          SAMSUNGS24ULTRA5GTITANIUMGRAY2,
-          SAMSUNGS24ULTRA5GTITANIUMGRAY3,
-          SAMSUNGS24ULTRA5GTITANIUMGRAY4,
-          SAMSUNGS24ULTRA5GTITANIUMGRAY5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Titanium Violet",
-        images: [
-          SAMSUNGS24ULTRA5GTITANIUMVIOLET1,
-          SAMSUNGS24ULTRA5GTITANIUMVIOLET2,
-          SAMSUNGS24ULTRA5GTITANIUMVIOLET3,
-          SAMSUNGS24ULTRA5GTITANIUMVIOLET4,
-          SAMSUNGS24ULTRA5GTITANIUMVIOLET5,
-        ],
-      },
-      {
-        id: 4,
-        name: "Titanium Yellow",
-        images: [
-          SAMSUNGS24ULTRA5GTITANIUMYELLOW1,
-          SAMSUNGS24ULTRA5GTITANIUMYELLOW2,
-          SAMSUNGS24ULTRA5GTITANIUMYELLOW3,
-          SAMSUNGS24ULTRA5GTITANIUMYELLOW4,
-          SAMSUNGS24ULTRA5GTITANIUMYELLOW5,
-        ],
-      },
-    ],
-  },
   {
-    id: "SAMSUNG31",
+    id: ["SAMSUNG32", "SAMSUNG33"],
 
-    colors: [
-      {
-        id: 1,
-        name: "Titanium Black",
-        images: [
-          SAMSUNGS24ULTRA5GTITANIUMBLACK1,
-          SAMSUNGS24ULTRA5GTITANIUMBLACK2,
-          SAMSUNGS24ULTRA5GTITANIUMBLACK3,
-          SAMSUNGS24ULTRA5GTITANIUMBLACK4,
-          SAMSUNGS24ULTRA5GTITANIUMBLACK5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Titanium Gray",
-        images: [
-          SAMSUNGS24ULTRA5GTITANIUMGRAY1,
-          SAMSUNGS24ULTRA5GTITANIUMGRAY2,
-          SAMSUNGS24ULTRA5GTITANIUMGRAY3,
-          SAMSUNGS24ULTRA5GTITANIUMGRAY4,
-          SAMSUNGS24ULTRA5GTITANIUMGRAY5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Titanium Violet",
-        images: [
-          SAMSUNGS24ULTRA5GTITANIUMVIOLET1,
-          SAMSUNGS24ULTRA5GTITANIUMVIOLET2,
-          SAMSUNGS24ULTRA5GTITANIUMVIOLET3,
-          SAMSUNGS24ULTRA5GTITANIUMVIOLET4,
-          SAMSUNGS24ULTRA5GTITANIUMVIOLET5,
-        ],
-      },
-      {
-        id: 4,
-        name: "Titanium Yellow",
-        images: [
-          SAMSUNGS24ULTRA5GTITANIUMYELLOW1,
-          SAMSUNGS24ULTRA5GTITANIUMYELLOW2,
-          SAMSUNGS24ULTRA5GTITANIUMYELLOW3,
-          SAMSUNGS24ULTRA5GTITANIUMYELLOW4,
-          SAMSUNGS24ULTRA5GTITANIUMYELLOW5,
-        ],
-      },
-    ],
-  },
-  {
-    id: "SAMSUNG32",
-
-    colors: [
-      {
-        id: 1,
-        name: "Blue",
-        images: [
-          SAMSUNGS24FE5GBLUE1,
-          SAMSUNGS24FE5GBLUE2,
-          SAMSUNGS24FE5GBLUE3,
-          SAMSUNGS24FE5GBLUE4,
-          SAMSUNGS24FE5GBLUE5,
-          SAMSUNGS24FE5GBLUE6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Graphite",
-        images: [
-          SAMSUNGS24FE5GGRAPHITE1,
-          SAMSUNGS24FE5GGRAPHITE2,
-          SAMSUNGS24FE5GGRAPHITE3,
-          SAMSUNGS24FE5GGRAPHITE4,
-          SAMSUNGS24FE5GGRAPHITE5,
-          SAMSUNGS24FE5GGRAPHITE6,
-        ],
-      },
-      {
-        id: 3,
-        name: "Mint",
-        images: [
-          SAMSUNGS24FE5GMINT1,
-          SAMSUNGS24FE5GMINT2,
-          SAMSUNGS24FE5GMINT3,
-          SAMSUNGS24FE5GMINT4,
-          SAMSUNGS24FE5GMINT5,
-          SAMSUNGS24FE5GMINT6,
-        ],
-      },
-    ],
-  },
-  {
-    id: "SAMSUNG33",
     colors: [
       {
         id: 1,
@@ -5311,7 +3373,7 @@ export const PHONEIMAGE = [
 
   // IQoo
   {
-    id: "IQOO1",
+    id: ["IQOO1"],
     colors: [
       {
         id: 1,
@@ -5338,7 +3400,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "IQOO2",
+    id: ["IQOO2"],
     colors: [
       {
         id: 1,
@@ -5365,7 +3427,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "IQOO3",
+    id: ["IQOO3"],
     colors: [
       {
         id: 1,
@@ -5391,7 +3453,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "IQOO4",
+    id: ["IQOO4"],
     colors: [
       {
         id: 1,
@@ -5417,34 +3479,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "IQOO5",
-    colors: [
-      {
-        id: 1,
-        name: "Mocha Brown",
-        images: [
-          IQOOZ9LITEMOCHABROWN1,
-          IQOOZ9LITEMOCHABROWN2,
-          IQOOZ9LITEMOCHABROWN3,
-          IQOOZ9LITEMOCHABROWN4,
-          IQOOZ9LITEMOCHABROWN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Aqua Flow",
-        images: [
-          IQOOZ9LITEAQUAFLOW1,
-          IQOOZ9LITEAQUAFLOW2,
-          IQOOZ9LITEAQUAFLOW3,
-          IQOOZ9LITEAQUAFLOW4,
-          IQOOZ9LITEAQUAFLOW5,
-        ],
-      },
-    ],
-  },
-  {
-    id: "IQOO6",
+    id: ["IQOO5", "IQOO6"],
     colors: [
       {
         id: 1,
@@ -5472,7 +3507,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "IQOO7",
+    id: ["IQOO7"],
     colors: [
       {
         id: 1,
@@ -5498,7 +3533,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "IQOO8",
+    id: "[IQOO8]",
     colors: [
       {
         id: 1,
@@ -5524,7 +3559,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "IQOO9",
+    id: ["IQOO9"],
     colors: [
       {
         id: 1,
@@ -5550,7 +3585,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "IQOO10",
+    id: ["IQOO10", "IQOO11", "IQOO12"],
     colors: [
       {
         id: 1,
@@ -5578,63 +3613,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "IQOO11",
-    colors: [
-      {
-        id: 1,
-        name: "Storm Grey",
-        images: [
-          IQOOZ9XSTORMGREY1,
-          IQOOZ9XSTORMGREY2,
-          IQOOZ9XSTORMGREY3,
-          IQOOZ9XSTORMGREY4,
-          IQOOZ9XSTORMGREY5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Tornado Green",
-        images: [
-          IQOOZ9XTORNADOGREEN1,
-          IQOOZ9XTORNADOGREEN2,
-          IQOOZ9XTORNADOGREEN3,
-          IQOOZ9XTORNADOGREEN4,
-          IQOOZ9XTORNADOGREEN5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "IQOO12",
-    colors: [
-      {
-        id: 1,
-        name: "Storm Grey",
-        images: [
-          IQOOZ9XSTORMGREY1,
-          IQOOZ9XSTORMGREY2,
-          IQOOZ9XSTORMGREY3,
-          IQOOZ9XSTORMGREY4,
-          IQOOZ9XSTORMGREY5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Tornado Green",
-        images: [
-          IQOOZ9XTORNADOGREEN1,
-          IQOOZ9XTORNADOGREEN2,
-          IQOOZ9XTORNADOGREEN3,
-          IQOOZ9XTORNADOGREEN4,
-          IQOOZ9XTORNADOGREEN5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "IQOO13",
+    id: ["IQOO13"],
     colors: [
       {
         id: 1,
@@ -5661,7 +3640,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "IQOO14",
+    id: ["IQOO14"],
     colors: [
       {
         id: 1,
@@ -5688,7 +3667,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "IQOO15",
+    id: ["IQOO15"],
     colors: [
       {
         id: 1,
@@ -5717,7 +3696,7 @@ export const PHONEIMAGE = [
   //Motorola
 
   {
-    id: "MOTOROLA1",
+    id: ["MOTOROLA1", "MOTOROLA2"],
     colors: [
       {
         id: 1,
@@ -5753,43 +3732,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "MOTOROLA2",
-    colors: [
-      {
-        id: 1,
-        name: "Viva Magenta",
-        images: [
-          MOTOROLAG45VIVAMAGENTA1,
-          MOTOROLAG45VIVAMAGENTA2,
-          MOTOROLAG45VIVAMAGENTA3,
-          MOTOROLAG45VIVAMAGENTA4,
-        ],
-      },
-      {
-        id: 2,
-        name: "Brilliant Blue",
-        images: [
-          MOTOROLAG45BRILLIANTBLUE1,
-          MOTOROLAG45BRILLIANTBLUE2,
-          MOTOROLAG45BRILLIANTBLUE3,
-          MOTOROLAG45BRILLIANTBLUE4,
-        ],
-      },
-      {
-        id: 3,
-        name: "Brilliant Green",
-        images: [
-          MOTOROLAG45BRILLIANTGREEN1,
-          MOTOROLAG45BRILLIANTGREEN2,
-          MOTOROLAG45BRILLIANTGREEN3,
-          MOTOROLAG45BRILLIANTGREEN4,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: "MOTOROLA3",
+    id: ["MOTOROLA3"],
     colors: [
       {
         id: 1,
@@ -5839,7 +3782,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "MOTOROLA4",
+    id: ["MOTOROLA4"],
     colors: [
       {
         id: 1,
@@ -5889,7 +3832,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: "MOTOROLA5",
+    id: ["MOTOROLA5"],
     colors: [
       {
         id: 1,
@@ -5922,6 +3865,206 @@ export const PHONEIMAGE = [
           MOTOROLAG64PEARLBLUE3,
           MOTOROLAG64PEARLBLUE4,
           MOTOROLAG64PEARLBLUE5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["MOTOROLA6"],
+    colors: [
+      {
+        id: 1,
+        name: "Pantone Latte",
+        images: [
+          MOTOROLAEDGE50NEOPANTONELATTE1,
+          MOTOROLAEDGE50NEOPANTONELATTE2,
+          MOTOROLAEDGE50NEOPANTONELATTE3,
+          MOTOROLAEDGE50NEOPANTONELATTE4,
+          MOTOROLAEDGE50NEOPANTONELATTE5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Neutical Blue",
+        images: [
+          MOTOROLAEDGE50NEONEUTICALBLUE1,
+          MOTOROLAEDGE50NEONEUTICALBLUE2,
+          MOTOROLAEDGE50NEONEUTICALBLUE3,
+          MOTOROLAEDGE50NEONEUTICALBLUE4,
+          MOTOROLAEDGE50NEONEUTICALBLUE5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Pantone Grisaille",
+        images: [
+          MOTOROLAEDGE50NEOPANTONEGRISAILLE1,
+          MOTOROLAEDGE50NEOPANTONEGRISAILLE2,
+          MOTOROLAEDGE50NEOPANTONEGRISAILLE3,
+          MOTOROLAEDGE50NEOPANTONEGRISAILLE4,
+          MOTOROLAEDGE50NEOPANTONEGRISAILLE5,
+        ],
+      },
+      {
+        id: 4,
+        name: "Pantone Poinciana",
+        images: [
+          MOTOROLAEDGE50NEOPANTONEPOINCIANA1,
+          MOTOROLAEDGE50NEOPANTONEPOINCIANA2,
+          MOTOROLAEDGE50NEOPANTONEPOINCIANA3,
+          MOTOROLAEDGE50NEOPANTONEPOINCIANA4,
+          MOTOROLAEDGE50NEOPANTONEPOINCIANA5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["MOTOROLA7"],
+    colors: [
+      {
+        id: 1,
+        name: "Forest Green",
+        images: [
+          MOTOROLAEDGE50FUSIONFORESTGREEN1,
+          MOTOROLAEDGE50FUSIONFORESTGREEN2,
+          MOTOROLAEDGE50FUSIONFORESTGREEN3,
+          MOTOROLAEDGE50FUSIONFORESTGREEN4,
+          MOTOROLAEDGE50FUSIONFORESTGREEN5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Forest Blue",
+        images: [
+          MOTOROLAEDGE50FUSIONFORESTBLUE1,
+          MOTOROLAEDGE50FUSIONFORESTBLUE2,
+          MOTOROLAEDGE50FUSIONFORESTBLUE3,
+          MOTOROLAEDGE50FUSIONFORESTBLUE4,
+          MOTOROLAEDGE50FUSIONFORESTBLUE5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Hot Pink",
+        images: [
+          MOTOROLAEDGE50FUSIONHOTPINK1,
+          MOTOROLAEDGE50FUSIONHOTPINK2,
+          MOTOROLAEDGE50FUSIONHOTPINK3,
+          MOTOROLAEDGE50FUSIONHOTPINK4,
+          MOTOROLAEDGE50FUSIONHOTPINK5,
+        ],
+      },
+      {
+        id: 4,
+        name: "Marshamallow Blue",
+        images: [
+          MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE1,
+          MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE2,
+          MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE3,
+          MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE4,
+          MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["MOTOROLA8"],
+    colors: [
+      {
+        id: 1,
+        name: "Peach Fuzz",
+        images: [
+          MOTOROLAEDGE50PEACHFUZZ1,
+          MOTOROLAEDGE50PEACHFUZZ2,
+          MOTOROLAEDGE50PEACHFUZZ3,
+          MOTOROLAEDGE50PEACHFUZZ4,
+          MOTOROLAEDGE50PEACHFUZZ5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Jungle Green",
+        images: [
+          MOTOROLAEDGE50JUNGLEGREEN1,
+          MOTOROLAEDGE50JUNGLEGREEN2,
+          MOTOROLAEDGE50JUNGLEGREEN3,
+          MOTOROLAEDGE50JUNGLEGREEN4,
+          MOTOROLAEDGE50JUNGLEGREEN5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Koala Grey",
+        images: [
+          MOTOROLAEDGE50KOALAGREY1,
+          MOTOROLAEDGE50KOALAGREY2,
+          MOTOROLAEDGE50KOALAGREY3,
+          MOTOROLAEDGE50KOALAGREY4,
+          MOTOROLAEDGE50KOALAGREY5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["MOTOROLA9"],
+    colors: [
+      {
+        id: 1,
+        name: " Caneel Bay",
+        images: [
+          MOTOROLAEDGE50PROCANEELBAY1,
+          MOTOROLAEDGE50PROCANEELBAY2,
+          MOTOROLAEDGE50PROCANEELBAY3,
+          MOTOROLAEDGE50PROCANEELBAY4,
+          MOTOROLAEDGE50PROCANEELBAY5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Black Beauty",
+        images: [
+          MOTOROLAEDGE50PROBLACKBEAUTY1,
+          MOTOROLAEDGE50PROBLACKBEAUTY2,
+          MOTOROLAEDGE50PROBLACKBEAUTY3,
+          MOTOROLAEDGE50PROBLACKBEAUTY4,
+          MOTOROLAEDGE50PROBLACKBEAUTY5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Luxe Lavender",
+        images: [
+          MOTOROLAEDGE50PROLUXELAVENDER1,
+          MOTOROLAEDGE50PROLUXELAVENDER2,
+          MOTOROLAEDGE50PROLUXELAVENDER3,
+          MOTOROLAEDGE50PROLUXELAVENDER4,
+          MOTOROLAEDGE50PROLUXELAVENDER5,
+        ],
+      },
+      {
+        id: 4,
+        name: "Moonlight Pearl",
+        images: [
+          MOTOROLAEDGE50PROMOONLIGHTPEARL1,
+          MOTOROLAEDGE50PROMOONLIGHTPEARL2,
+          MOTOROLAEDGE50PROMOONLIGHTPEARL3,
+          MOTOROLAEDGE50PROMOONLIGHTPEARL4,
+          MOTOROLAEDGE50PROMOONLIGHTPEARL5,
+        ],
+      },
+      {
+        id: 5,
+        name: "Vanila Cream",
+        images: [
+          MOTOROLAEDGE50PROVANILACREAM1,
+          MOTOROLAEDGE50PROVANILACREAM2,
+          MOTOROLAEDGE50PROVANILACREAM3,
+          MOTOROLAEDGE50PROVANILACREAM4,
+          MOTOROLAEDGE50PROVANILACREAM5,
         ],
       },
     ],
