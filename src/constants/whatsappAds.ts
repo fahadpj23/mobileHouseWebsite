@@ -1,15 +1,14 @@
 import whatsAppImage1 from "assets/whatsappAds/whatsAppImage1.jpeg";
 import whatsAppImage2 from "assets/whatsappAds/whatsAppImage2.jpeg";
 import whatsAppImage3 from "assets/whatsappAds/whatsAppImage3.jpeg";
-import whatsAppImage4 from "assets/whatsappAds/whatsAppImage4.jpeg";
+import whatsAppImage4 from "assets/whatsappAds/WhatsAppImage4.jpeg";
 import whatsAppImage5 from "assets/whatsappAds/whatsAppImage5.jpeg";
-import whatsAppImage6 from "assets/whatsappAds/WhatsAppImage6.jpeg";
 
 export const WhatappAdsList = [
   {
     id: 1,
     image: whatsAppImage1,
-    series: ["Y300"],
+    series: ["REALME14X"],
   },
   {
     id: 2,
@@ -20,22 +19,17 @@ export const WhatappAdsList = [
   {
     id: 3,
     image: whatsAppImage3,
-    series: ["F275G"],
-  },
-  {
-    id: 4,
-    image: whatsAppImage4,
-    series: ["Y58"],
-  },
-  {
-    id: 5,
-    image: whatsAppImage5,
     series: ["A165G"],
   },
 
   {
-    id: 6,
-    image: whatsAppImage6,
+    id: 4,
+    image: whatsAppImage4,
     series: ["MINOTE14, MINOTE14PRO, MINOTE14PROPLUS"],
+  },
+  {
+    id: 5,
+    image: whatsAppImage5,
+    series: ["Y300"],
   },
 ];

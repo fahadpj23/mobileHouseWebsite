@@ -3,6 +3,7 @@ import BANNER2 from "assets/mainBanner/banner2.jpg";
 import BANNER3 from "assets/mainBanner/banner3.jpg";
 import BANNER4 from "assets/mainBanner/banner4.jpg";
 import BANNER5 from "assets/mainBanner/banner5.jpg";
+
 export const MAINBANNER = [
   {
     id: 1,
@@ -19,14 +20,15 @@ export const MAINBANNER = [
     image: BANNER3,
     series: ["A165G"],
   },
+
   {
     id: 4,
     image: BANNER4,
-    series: ["Y300"],
+    series: ["MINOTE14", "MINOTE14PRO", "MINOTE14PROPLUS"],
   },
   {
     id: 5,
     image: BANNER5,
-    series: ["MINOTE14", "MINOTE14PRO", "MINOTE14PROPLUS"],
+    series: ["REALME14X"],
   },
 ];

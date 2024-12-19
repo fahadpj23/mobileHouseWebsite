@@ -18,6 +18,8 @@ import REALME13PLUSVICTORYGOLD1 from "assets/realme/REALME13PLUS/REALME13PLUSVIC
 
 import REALMEC65FEATHERGREEN1 from "assets/realme/REALMEC65/REALMEC65FEATHERGREEN/REALMEC65FEATHERGREEN1.jpeg";
 
+import REALME14XJEWELRED1 from "assets/realme/REALME14XJEWELRED/REALME14XJEWELRED1.jpeg";
+
 //mi
 import REDMI13CBLACK1 from "assets/mi/REDMI13C/StarlightBlack/redmi13cBlack1.jpg";
 
@@ -2625,6 +2627,64 @@ export const ALLPHONES = [
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v14 ",
       Processor: "MediaTek Dimensity 7300 Energy Octa core ",
+    },
+  },
+
+  {
+    id: "REALME21",
+    name: "REALME 14X 6/128",
+    brand: "REALME",
+    prebook: false,
+    series: "REALME14X",
+    image: REALME14XJEWELRED1,
+    launchDate: "18-12-2024",
+    networkType: "5G",
+    salesPrice: 14999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 3.5,
+    newArrival: true,
+    mrp: 16999,
+    ram: 6,
+    storage: 128,
+    specifications: {
+      Display: "6.67″ (16.94 cm) 120Hz IPS LCD ",
+      "Rear Camera": "50 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "6 GB | 128 GB ",
+      Battery: "6000 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+    },
+  },
+
+  {
+    id: "REALME22",
+    name: "REALME 14X 8/128",
+    brand: "REALME",
+    prebook: false,
+    series: "REALME14X",
+    image: REALME14XJEWELRED1,
+    launchDate: "18-12-2024",
+    networkType: "5G",
+    salesPrice: 15999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 3.5,
+    newArrival: true,
+    mrp: 17999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Display: "6.67″ (16.94 cm) 120Hz IPS LCD ",
+      "Rear Camera": "50 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "6000 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+      Processor: "MediaTek Dimensity 6300 Octa core ",
     },
   },
 
