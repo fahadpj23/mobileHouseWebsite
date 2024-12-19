@@ -1769,49 +1769,7 @@ export const PHONEIMAGE = [
   },
   //MI Phones
   {
-    id: ["MI1"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Starlight Black",
-        images: [
-          REDMI13CBLACK1,
-          REDMI13CBLACK2,
-          REDMI13CBLACK3,
-          REDMI13CBLACK4,
-          REDMI13CBLACK5,
-          REDMI13CBLACK6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Starlight Green",
-        images: [
-          REDMI13CGREEN1,
-          REDMI13CGREEN2,
-          REDMI13CGREEN3,
-          REDMI13CGREEN4,
-          REDMI13CGREEN5,
-          REDMI13CGREEN6,
-        ],
-      },
-      {
-        id: 3,
-        name: "Starlight Silver",
-        images: [
-          REDMI13CSILVER1,
-          REDMI13CSILVER2,
-          REDMI13CSILVER3,
-          REDMI13CSILVER4,
-          REDMI13CSILVER5,
-          REDMI13CSILVER6,
-        ],
-      },
-    ],
-  },
-  {
-    id: ["MI2"],
+    id: ["MI1", "MI2", "MI3"],
 
     colors: [
       {
@@ -1854,154 +1812,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["MI3"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Starlight Black",
-        images: [
-          REDMI13CBLACK1,
-          REDMI13CBLACK2,
-          REDMI13CBLACK3,
-          REDMI13CBLACK4,
-          REDMI13CBLACK5,
-          REDMI13CBLACK6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Starlight Green",
-        images: [
-          REDMI13CGREEN1,
-          REDMI13CGREEN2,
-          REDMI13CGREEN3,
-          REDMI13CGREEN4,
-          REDMI13CGREEN5,
-          REDMI13CGREEN6,
-        ],
-      },
-      {
-        id: 3,
-        name: "Starlight Silver",
-        images: [
-          REDMI13CSILVER1,
-          REDMI13CSILVER2,
-          REDMI13CSILVER3,
-          REDMI13CSILVER4,
-          REDMI13CSILVER5,
-          REDMI13CSILVER6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["MI4"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Arctic White",
-        images: [
-          REDMINOTE13WHITE1,
-          REDMINOTE13WHITE2,
-          REDMINOTE13WHITE3,
-          REDMINOTE13WHITE4,
-          REDMINOTE13WHITE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Chromatic Purple",
-        images: [
-          REDMINOTE13PURPLE1,
-          REDMINOTE13PURPLE2,
-          REDMINOTE13PURPLE3,
-          REDMINOTE13PURPLE4,
-          REDMINOTE13PURPLE5,
-          REDMINOTE13PURPLE6,
-        ],
-      },
-      {
-        id: 3,
-        name: "Prism Gold",
-        images: [
-          REDMINOTE13GOLD1,
-          REDMINOTE13GOLD2,
-          REDMINOTE13GOLD3,
-          REDMINOTE13GOLD4,
-          REDMINOTE13GOLD5,
-          REDMINOTE13GOLD6,
-        ],
-      },
-      {
-        id: 4,
-        name: "Stealth Black",
-        images: [
-          REDMINOTE13BLACK1,
-          REDMINOTE13BLACK2,
-          REDMINOTE13BLACK3,
-          REDMINOTE13BLACK4,
-          REDMINOTE13BLACK5,
-        ],
-      },
-    ],
-  },
-  {
-    id: ["MI5"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Arctic White",
-        images: [
-          REDMINOTE13WHITE1,
-          REDMINOTE13WHITE2,
-          REDMINOTE13WHITE3,
-          REDMINOTE13WHITE4,
-          REDMINOTE13WHITE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Chromatic Purple",
-        images: [
-          REDMINOTE13PURPLE1,
-          REDMINOTE13PURPLE2,
-          REDMINOTE13PURPLE3,
-          REDMINOTE13PURPLE4,
-          REDMINOTE13PURPLE5,
-          REDMINOTE13PURPLE6,
-        ],
-      },
-      {
-        id: 3,
-        name: "Prism Gold",
-        images: [
-          REDMINOTE13GOLD1,
-          REDMINOTE13GOLD2,
-          REDMINOTE13GOLD3,
-          REDMINOTE13GOLD4,
-          REDMINOTE13GOLD5,
-          REDMINOTE13GOLD6,
-        ],
-      },
-      {
-        id: 4,
-        name: "Stealth Black",
-        images: [
-          REDMINOTE13BLACK1,
-          REDMINOTE13BLACK2,
-          REDMINOTE13BLACK3,
-          REDMINOTE13BLACK4,
-          REDMINOTE13BLACK5,
-        ],
-      },
-    ],
-  },
-  {
-    id: ["MI6"],
+    id: ["MI4", "MI5", "MI6"],
 
     colors: [
       {
@@ -2054,7 +1865,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["MI7"],
+    id: ["MI7", "MI8"],
 
     colors: [
       {
@@ -2094,132 +1905,9 @@ export const PHONEIMAGE = [
       },
     ],
   },
-  {
-    id: ["MI8"],
-
-    colors: [
-      {
-        id: 1,
-        name: "black diamond",
-        images: [
-          REDMI135GBLACKDIAMOND1,
-          REDMI135GBLACKDIAMOND2,
-          REDMI135GBLACKDIAMOND3,
-          REDMI135GBLACKDIAMOND4,
-          REDMI135GBLACKDIAMOND5,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "HAWAIIAN BLUE",
-        images: [
-          REDMI135GHAWAIIANBLUE1,
-          REDMI135GHAWAIIANBLUE2,
-          REDMI135GHAWAIIANBLUE3,
-          REDMI135GHAWAIIANBLUE4,
-          REDMI135GHAWAIIANBLUE5,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "ORCHIDPINK1",
-        images: [
-          REDMI135GORCHIDPINK1,
-          REDMI135GORCHIDPINK2,
-          REDMI135GORCHIDPINK3,
-          REDMI135GORCHIDPINK4,
-          REDMI135GORCHIDPINK5,
-        ],
-      },
-    ],
-  },
 
   {
-    id: ["MI9"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Fusion Black",
-        images: [
-          REDMINOTE13PROPLUS5GFUSIONBLACK1,
-          REDMINOTE13PROPLUS5GFUSIONBLACK2,
-          REDMINOTE13PROPLUS5GFUSIONBLACK3,
-          REDMINOTE13PROPLUS5GFUSIONBLACK4,
-          REDMINOTE13PROPLUS5GFUSIONBLACK5,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Fusion Purple",
-        images: [
-          REDMINOTE13PROPLUS5GFUSIONPURPLE1,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE2,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE3,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE4,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE5,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Fusion White",
-        images: [
-          REDMINOTE13PROPLUS5GFUSIONWHITE1,
-          REDMINOTE13PROPLUS5GFUSIONWHITE2,
-          REDMINOTE13PROPLUS5GFUSIONWHITE3,
-          REDMINOTE13PROPLUS5GFUSIONWHITE4,
-          REDMINOTE13PROPLUS5GFUSIONWHITE5,
-        ],
-      },
-    ],
-  },
-  {
-    id: ["MI10"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Fusion Black",
-        images: [
-          REDMINOTE13PROPLUS5GFUSIONBLACK1,
-          REDMINOTE13PROPLUS5GFUSIONBLACK2,
-          REDMINOTE13PROPLUS5GFUSIONBLACK3,
-          REDMINOTE13PROPLUS5GFUSIONBLACK4,
-          REDMINOTE13PROPLUS5GFUSIONBLACK5,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Fusion Purple",
-        images: [
-          REDMINOTE13PROPLUS5GFUSIONPURPLE1,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE2,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE3,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE4,
-          REDMINOTE13PROPLUS5GFUSIONPURPLE5,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Fusion White",
-        images: [
-          REDMINOTE13PROPLUS5GFUSIONWHITE1,
-          REDMINOTE13PROPLUS5GFUSIONWHITE2,
-          REDMINOTE13PROPLUS5GFUSIONWHITE3,
-          REDMINOTE13PROPLUS5GFUSIONWHITE4,
-          REDMINOTE13PROPLUS5GFUSIONWHITE5,
-        ],
-      },
-    ],
-  },
-  {
-    id: ["MI11"],
+    id: ["MI9", "MI10", "MI11"],
 
     colors: [
       {
@@ -2261,7 +1949,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["MI12"],
+    id: ["MI12", "MI13", "MI14"],
 
     colors: [
       {
@@ -2306,97 +1994,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["MI13"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Mystique White",
-        images: [
-          REDMINOTE14MYSTIQUEWHITE1,
-          REDMINOTE14MYSTIQUEWHITE2,
-          REDMINOTE14MYSTIQUEWHITE3,
-          REDMINOTE14MYSTIQUEWHITE4,
-          REDMINOTE14MYSTIQUEWHITE5,
-          REDMINOTE14MYSTIQUEWHITE6,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Phantom Purple",
-        images: [
-          REDMINOTE14PHANTOMPURPLE1,
-          REDMINOTE14PHANTOMPURPLE2,
-          REDMINOTE14PHANTOMPURPLE3,
-          REDMINOTE14PHANTOMPURPLE4,
-          REDMINOTE14PHANTOMPURPLE5,
-          REDMINOTE14PHANTOMPURPLE6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Titan Black",
-        images: [
-          REDMINOTE14TITANBLACK1,
-          REDMINOTE14TITANBLACK2,
-          REDMINOTE14TITANBLACK3,
-          REDMINOTE14TITANBLACK4,
-          REDMINOTE14TITANBLACK5,
-          REDMINOTE14TITANBLACK6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["MI14"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Mystique White",
-        images: [
-          REDMINOTE14MYSTIQUEWHITE1,
-          REDMINOTE14MYSTIQUEWHITE2,
-          REDMINOTE14MYSTIQUEWHITE3,
-          REDMINOTE14MYSTIQUEWHITE4,
-          REDMINOTE14MYSTIQUEWHITE5,
-          REDMINOTE14MYSTIQUEWHITE6,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Phantom Purple",
-        images: [
-          REDMINOTE14PHANTOMPURPLE1,
-          REDMINOTE14PHANTOMPURPLE2,
-          REDMINOTE14PHANTOMPURPLE3,
-          REDMINOTE14PHANTOMPURPLE4,
-          REDMINOTE14PHANTOMPURPLE5,
-          REDMINOTE14PHANTOMPURPLE6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Titan Black",
-        images: [
-          REDMINOTE14TITANBLACK1,
-          REDMINOTE14TITANBLACK2,
-          REDMINOTE14TITANBLACK3,
-          REDMINOTE14TITANBLACK4,
-          REDMINOTE14TITANBLACK5,
-          REDMINOTE14TITANBLACK6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["MI15"],
+    id: ["MI15", "MI16"],
 
     colors: [
       {
@@ -2441,142 +2039,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["MI16"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Ivy Green",
-        images: [
-          REDMINOTE14PROIVYGREEN1,
-          REDMINOTE14PROIVYGREEN2,
-          REDMINOTE14PROIVYGREEN3,
-          REDMINOTE14PROIVYGREEN4,
-          REDMINOTE14PROIVYGREEN5,
-          REDMINOTE14PROIVYGREEN6,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Phantom Purple",
-        images: [
-          REDMINOTE14PROPHANTOMPURPLE1,
-          REDMINOTE14PROPHANTOMPURPLE2,
-          REDMINOTE14PROPHANTOMPURPLE3,
-          REDMINOTE14PROPHANTOMPURPLE4,
-          REDMINOTE14PROPHANTOMPURPLE5,
-          REDMINOTE14PROPHANTOMPURPLE6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Titan Black",
-        images: [
-          REDMINOTE14PROTITANBLACK1,
-          REDMINOTE14PROTITANBLACK2,
-          REDMINOTE14PROTITANBLACK3,
-          REDMINOTE14PROTITANBLACK4,
-          REDMINOTE14PROTITANBLACK5,
-          REDMINOTE14PROTITANBLACK6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["MI17"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Spectre Blue",
-        images: [
-          REDMINOTE14PROPLUSSPECTREBLUE1,
-          REDMINOTE14PROPLUSSPECTREBLUE2,
-          REDMINOTE14PROPLUSSPECTREBLUE3,
-          REDMINOTE14PROPLUSSPECTREBLUE4,
-          REDMINOTE14PROPLUSSPECTREBLUE5,
-          REDMINOTE14PROPLUSSPECTREBLUE6,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Phantom Purple",
-        images: [
-          REDMINOTE14PROPLUSPHANTOMPURPLE1,
-          REDMINOTE14PROPLUSPHANTOMPURPLE2,
-          REDMINOTE14PROPLUSPHANTOMPURPLE3,
-          REDMINOTE14PROPLUSPHANTOMPURPLE4,
-          REDMINOTE14PROPLUSPHANTOMPURPLE5,
-          REDMINOTE14PROPLUSPHANTOMPURPLE6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Titan Black",
-        images: [
-          REDMINOTE14PROPLUSTITANBLACK1,
-          REDMINOTE14PROPLUSTITANBLACK2,
-          REDMINOTE14PROPLUSTITANBLACK3,
-          REDMINOTE14PROPLUSTITANBLACK4,
-          REDMINOTE14PROPLUSTITANBLACK5,
-          REDMINOTE14PROPLUSTITANBLACK6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["MI18"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Spectre Blue",
-        images: [
-          REDMINOTE14PROPLUSSPECTREBLUE1,
-          REDMINOTE14PROPLUSSPECTREBLUE2,
-          REDMINOTE14PROPLUSSPECTREBLUE3,
-          REDMINOTE14PROPLUSSPECTREBLUE4,
-          REDMINOTE14PROPLUSSPECTREBLUE5,
-          REDMINOTE14PROPLUSSPECTREBLUE6,
-        ],
-      },
-
-      {
-        id: 2,
-        name: "Phantom Purple",
-        images: [
-          REDMINOTE14PROPLUSPHANTOMPURPLE1,
-          REDMINOTE14PROPLUSPHANTOMPURPLE2,
-          REDMINOTE14PROPLUSPHANTOMPURPLE3,
-          REDMINOTE14PROPLUSPHANTOMPURPLE4,
-          REDMINOTE14PROPLUSPHANTOMPURPLE5,
-          REDMINOTE14PROPLUSPHANTOMPURPLE6,
-        ],
-      },
-
-      {
-        id: 3,
-        name: "Titan Black",
-        images: [
-          REDMINOTE14PROPLUSTITANBLACK1,
-          REDMINOTE14PROPLUSTITANBLACK2,
-          REDMINOTE14PROPLUSTITANBLACK3,
-          REDMINOTE14PROPLUSTITANBLACK4,
-          REDMINOTE14PROPLUSTITANBLACK5,
-          REDMINOTE14PROPLUSTITANBLACK6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["MI19"],
+    id: ["MI17", "MI18", "MI19"],
 
     colors: [
       {
@@ -2680,35 +2143,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["OPPO5"],
-
-    colors: [
-      {
-        id: 1,
-        name: "BREEZE BLUE",
-        images: [
-          OPPOK12XBLUE1,
-          OPPOK12XBLUE2,
-          OPPOK12XBLUE3,
-          OPPOK12XBLUE4,
-          OPPOK12XBLUE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "MIDNIGHT VOILET",
-        images: [
-          OPPOK12XVOILET1,
-          OPPOK12XVOILET2,
-          OPPOK12XVOILET3,
-          OPPOK12XVOILET4,
-          OPPOK12XVOILET5,
-        ],
-      },
-    ],
-  },
-  {
-    id: ["OPPO6"],
+    id: ["OPPO5", "OPPO6"],
 
     colors: [
       {
@@ -2737,7 +2172,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["OPPO7"],
+    id: ["OPPO7", "OPPO8"],
 
     colors: [
       {
@@ -2765,34 +2200,6 @@ export const PHONEIMAGE = [
     ],
   },
 
-  {
-    id: ["OPPO8"],
-
-    colors: [
-      {
-        id: 1,
-        name: "SPACE BROWN",
-        images: [
-          OPPORENO12PROBROWN1,
-          OPPORENO12PROBROWN2,
-          OPPORENO12PROBROWN3,
-          OPPORENO12PROBROWN4,
-          OPPORENO12PROBROWN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "SUNSET GOLD",
-        images: [
-          OPPORENO12PROGOLD1,
-          OPPORENO12PROGOLD2,
-          OPPORENO12PROGOLD3,
-          OPPORENO12PROGOLD4,
-          OPPORENO12PROGOLD5,
-        ],
-      },
-    ],
-  },
   {
     id: ["OPPO9"],
 
@@ -2825,35 +2232,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["OPPO10"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Midnight Navy",
-        images: [
-          OPPOF27PROPLUSMIDNIGHTNAVY1,
-          OPPOF27PROPLUSMIDNIGHTNAVY2,
-          OPPOF27PROPLUSMIDNIGHTNAVY3,
-          OPPOF27PROPLUSMIDNIGHTNAVY4,
-          OPPOF27PROPLUSMIDNIGHTNAVY5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Dusk Pink",
-        images: [
-          OPPOF27PROPLUSDUSKPINK1,
-          OPPOF27PROPLUSDUSKPINK2,
-          OPPOF27PROPLUSDUSKPINK3,
-          OPPOF27PROPLUSDUSKPINK4,
-          OPPOF27PROPLUSDUSKPINK5,
-        ],
-      },
-    ],
-  },
-  {
-    id: ["OPPO11"],
+    id: ["OPPO10", "OPPO11"],
 
     colors: [
       {
@@ -2882,35 +2261,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["OPPO12"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Amber Orange",
-        images: [
-          OPPOF27AMBERORANGE1,
-          OPPOF27AMBERORANGE2,
-          OPPOF27AMBERORANGE3,
-          OPPOF27AMBERORANGE4,
-          OPPOF27AMBERORANGE5,
-        ],
-      },
-      {
-        id: 2,
-        name: " Emerlad Green",
-        images: [
-          OPPOF27EMERALDGREEN1,
-          OPPOF27EMERALDGREEN2,
-          OPPOF27EMERALDGREEN3,
-          OPPOF27EMERALDGREEN4,
-          OPPOF27EMERALDGREEN5,
-        ],
-      },
-    ],
-  },
-  {
-    id: ["OPPO13"],
+    id: ["OPPO12", "OPPO13"],
 
     colors: [
       {
@@ -2939,7 +2290,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["OPPO14"],
+    id: ["OPPO14", "OPPO15"],
 
     colors: [
       {
@@ -2962,57 +2313,6 @@ export const PHONEIMAGE = [
           OPPOA3PROSTARRYBLACK3,
           OPPOA3PROSTARRYBLACK4,
           OPPOA3PROSTARRYBLACK5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Starlight White",
-        images: [
-          OPPOA3XSTARLIGHTWHITE1,
-          OPPOA3XSTARLIGHTWHITE2,
-          OPPOA3XSTARLIGHTWHITE3,
-          OPPOA3XSTARLIGHTWHITE4,
-          OPPOA3XSTARLIGHTWHITE5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["OPPO15"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Moonlight Purple",
-        images: [
-          OPPOA3PROMOONLIGHTPURPLE1,
-          OPPOA3PROMOONLIGHTPURPLE2,
-          OPPOA3PROMOONLIGHTPURPLE3,
-          OPPOA3PROMOONLIGHTPURPLE4,
-          OPPOA3PROMOONLIGHTPURPLE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Starry Black",
-        images: [
-          OPPOA3PROSTARRYBLACK1,
-          OPPOA3PROSTARRYBLACK2,
-          OPPOA3PROSTARRYBLACK3,
-          OPPOA3PROSTARRYBLACK4,
-          OPPOA3PROSTARRYBLACK5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Starlight White",
-        images: [
-          OPPOA3XSTARLIGHTWHITE1,
-          OPPOA3XSTARLIGHTWHITE2,
-          OPPOA3XSTARLIGHTWHITE3,
-          OPPOA3XSTARLIGHTWHITE4,
-          OPPOA3XSTARLIGHTWHITE5,
         ],
       },
     ],
@@ -3077,38 +2377,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["OPPO18"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Space Black",
-        images: [
-          OPPOFINDX8SPACEBLACK1,
-          OPPOFINDX8SPACEBLACK2,
-          OPPOFINDX8SPACEBLACK3,
-          OPPOFINDX8SPACEBLACK4,
-          OPPOFINDX8SPACEBLACK5,
-          OPPOFINDX8SPACEBLACK6,
-        ],
-      },
-      {
-        id: 2,
-        name: "Star Grey",
-        images: [
-          OPPOFINDX8STARGREY1,
-          OPPOFINDX8STARGREY2,
-          OPPOFINDX8STARGREY3,
-          OPPOFINDX8STARGREY4,
-          OPPOFINDX8STARGREY5,
-          OPPOFINDX8STARGREY6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["OPPO19"],
+    id: ["OPPO18", "OPPO19"],
 
     colors: [
       {
@@ -3172,37 +2441,7 @@ export const PHONEIMAGE = [
   //REALME PHONES
 
   {
-    id: ["REALME1"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Jade Green",
-        images: [
-          REALMEC63JADEGREEN1,
-          REALMEC63JADEGREEN2,
-          REALMEC63JADEGREEN3,
-          REALMEC63JADEGREEN4,
-          REALMEC63JADEGREEN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Leather Blue",
-        images: [
-          REALMEC63LEATHERBLUE1,
-          REALMEC63LEATHERBLUE2,
-          REALMEC63LEATHERBLUE3,
-          REALMEC63LEATHERBLUE4,
-          REALMEC63LEATHERBLUE5,
-          REALMEC63LEATHERBLUE6,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["REALME2"],
+    id: ["REALME1", "REALME2"],
 
     colors: [
       {
@@ -3290,36 +2529,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["REALME5"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Feather Green",
-        images: [
-          REALMEC65FEATHERGREEN1,
-          REALMEC65FEATHERGREEN2,
-          REALMEC65FEATHERGREEN3,
-          REALMEC65FEATHERGREEN4,
-          REALMEC65FEATHERGREEN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Glowing Black",
-        images: [
-          REALMEC65GLOWINGBLACK1,
-          REALMEC65GLOWINGBLACK2,
-          REALMEC65GLOWINGBLACK3,
-          REALMEC65GLOWINGBLACK4,
-          REALMEC65GLOWINGBLACK5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["REALME6"],
+    id: ["REALME5", "REALME6"],
 
     colors: [
       {
@@ -3377,7 +2587,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["REALME8"],
+    id: ["REALME8", "REALME9"],
 
     colors: [
       {
@@ -3406,36 +2616,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["REALME9"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Sunny Oasis",
-        images: [
-          REALMEC67SUNNYOASIS1,
-          REALMEC67SUNNYOASIS2,
-          REALMEC67SUNNYOASIS3,
-          REALMEC67SUNNYOASIS4,
-          REALMEC67SUNNYOASIS5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Dark Purple",
-        images: [
-          REALMEC67DARKPURPLE1,
-          REALMEC67DARKPURPLE2,
-          REALMEC67DARKPURPLE3,
-          REALMEC67DARKPURPLE4,
-          REALMEC67DARKPURPLE5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["REALME10"],
+    id: ["REALME10", "REALME11"],
 
     colors: [
       {
@@ -3464,36 +2645,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["REALME11"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Navigator Beige",
-        images: [
-          REALME12PLUSNAVIGATORBEIGE1,
-          REALME12PLUSNAVIGATORBEIGE2,
-          REALME12PLUSNAVIGATORBEIGE3,
-          REALME12PLUSNAVIGATORBEIGE4,
-          REALME12PLUSNAVIGATORBEIGE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Pioneer Green",
-        images: [
-          REALME12PLUSPIONEERGREEN1,
-          REALME12PLUSPIONEERGREEN2,
-          REALME12PLUSPIONEERGREEN3,
-          REALME12PLUSPIONEERGREEN4,
-          REALME12PLUSPIONEERGREEN5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["REALME12"],
+    id: ["REALME12", "REALME13", "REALME14"],
 
     colors: [
       {
@@ -3533,87 +2685,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["REALME13"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Monet Purple",
-        images: [
-          REALME13PROPLUSMONETPURPLE1,
-          REALME13PROPLUSMONETPURPLE2,
-          REALME13PROPLUSMONETPURPLE3,
-          REALME13PROPLUSMONETPURPLE4,
-          REALME13PROPLUSMONETPURPLE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Monet Gold",
-        images: [
-          REALME13PROPLUSMONETGOLD1,
-          REALME13PROPLUSMONETGOLD2,
-          REALME13PROPLUSMONETGOLD3,
-          REALME13PROPLUSMONETGOLD4,
-          REALME13PROPLUSMONETGOLD5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Emerald Green",
-        images: [
-          REALME13PROPLUSEMERALDGREEN1,
-          REALME13PROPLUSEMERALDGREEN2,
-          REALME13PROPLUSEMERALDGREEN3,
-          REALME13PROPLUSEMERALDGREEN4,
-          REALME13PROPLUSEMERALDGREEN5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["REALME14"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Monet Purple",
-        images: [
-          REALME13PROPLUSMONETPURPLE1,
-          REALME13PROPLUSMONETPURPLE2,
-          REALME13PROPLUSMONETPURPLE3,
-          REALME13PROPLUSMONETPURPLE4,
-          REALME13PROPLUSMONETPURPLE5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Monet Gold",
-        images: [
-          REALME13PROPLUSMONETGOLD1,
-          REALME13PROPLUSMONETGOLD2,
-          REALME13PROPLUSMONETGOLD3,
-          REALME13PROPLUSMONETGOLD4,
-          REALME13PROPLUSMONETGOLD5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Emerald Green",
-        images: [
-          REALME13PROPLUSEMERALDGREEN1,
-          REALME13PROPLUSEMERALDGREEN2,
-          REALME13PROPLUSEMERALDGREEN3,
-          REALME13PROPLUSEMERALDGREEN4,
-          REALME13PROPLUSEMERALDGREEN5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["REALME15"],
+    id: ["REALME15", "REALME16", "REALME17"],
 
     colors: [
       {
@@ -3653,167 +2725,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["REALME16"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Emerald Green",
-        images: [
-          REALME13PROEMERALDGREEN1,
-          REALME13PROEMERALDGREEN2,
-          REALME13PROEMERALDGREEN3,
-          REALME13PROEMERALDGREEN4,
-          REALME13PROEMERALDGREEN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Monet Gold",
-        images: [
-          REALME13PROMONETGOLD1,
-          REALME13PROMONETGOLD2,
-          REALME13PROMONETGOLD3,
-          REALME13PROMONETGOLD4,
-          REALME13PROMONETGOLD5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Monet Purple",
-        images: [
-          REALME13PROMONETPURPLE1,
-          REALME13PROMONETPURPLE2,
-          REALME13PROMONETPURPLE3,
-          REALME13PROMONETPURPLE4,
-          REALME13PROMONETPURPLE5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["REALME17"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Emerald Green",
-        images: [
-          REALME13PROEMERALDGREEN1,
-          REALME13PROEMERALDGREEN2,
-          REALME13PROEMERALDGREEN3,
-          REALME13PROEMERALDGREEN4,
-          REALME13PROEMERALDGREEN5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Monet Gold",
-        images: [
-          REALME13PROMONETGOLD1,
-          REALME13PROMONETGOLD2,
-          REALME13PROMONETGOLD3,
-          REALME13PROMONETGOLD4,
-          REALME13PROMONETGOLD5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Monet Purple",
-        images: [
-          REALME13PROMONETPURPLE1,
-          REALME13PROMONETPURPLE2,
-          REALME13PROMONETPURPLE3,
-          REALME13PROMONETPURPLE4,
-          REALME13PROMONETPURPLE5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["REALME18"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Victory Gold",
-        images: [
-          REALME13PLUSVICTORYGOLD1,
-          REALME13PLUSVICTORYGOLD2,
-          REALME13PLUSVICTORYGOLD3,
-          REALME13PLUSVICTORYGOLD4,
-          REALME13PLUSVICTORYGOLD5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Speed Green",
-        images: [
-          REALME13PLUSSPEEDGREEN1,
-          REALME13PLUSSPEEDGREEN2,
-          REALME13PLUSSPEEDGREEN3,
-          REALME13PLUSSPEEDGREEN4,
-          REALME13PLUSSPEEDGREEN5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Dark Purple",
-        images: [
-          REALME13PLUSDARKPURPLE1,
-          REALME13PLUSDARKPURPLE2,
-          REALME13PLUSDARKPURPLE3,
-          REALME13PLUSDARKPURPLE4,
-          REALME13PLUSDARKPURPLE5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["REALME19"],
-
-    colors: [
-      {
-        id: 1,
-        name: "Victory Gold",
-        images: [
-          REALME13PLUSVICTORYGOLD1,
-          REALME13PLUSVICTORYGOLD2,
-          REALME13PLUSVICTORYGOLD3,
-          REALME13PLUSVICTORYGOLD4,
-          REALME13PLUSVICTORYGOLD5,
-        ],
-      },
-      {
-        id: 2,
-        name: "Speed Green",
-        images: [
-          REALME13PLUSSPEEDGREEN1,
-          REALME13PLUSSPEEDGREEN2,
-          REALME13PLUSSPEEDGREEN3,
-          REALME13PLUSSPEEDGREEN4,
-          REALME13PLUSSPEEDGREEN5,
-        ],
-      },
-      {
-        id: 3,
-        name: "Dark Purple",
-        images: [
-          REALME13PLUSDARKPURPLE1,
-          REALME13PLUSDARKPURPLE2,
-          REALME13PLUSDARKPURPLE3,
-          REALME13PLUSDARKPURPLE4,
-          REALME13PLUSDARKPURPLE5,
-        ],
-      },
-    ],
-  },
-
-  {
-    id: ["REALME20"],
+    id: ["REALME18", "REALME19", "REALME20"],
 
     colors: [
       {
@@ -3853,2133 +2765,1308 @@ export const PHONEIMAGE = [
   },
 
   //SAMSUNG PHONES
-  // {
-  //   id: "SAMSUNG1",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Blue Black",
-  //       images: [
-  //         SASMSUNGA165GBLUEBLACK1,
-  //         SASMSUNGA165GBLUEBLACK2,
-  //         SASMSUNGA165GBLUEBLACK3,
-  //         SASMSUNGA165GBLUEBLACK4,
-  //         SASMSUNGA165GBLUEBLACK5,
-  //       ],
-  //     },
-
-  //     {
-  //       id: 2,
-  //       name: "Light Green",
-  //       images: [
-  //         SASMSUNGA165GLIGHTGREEN1,
-  //         SASMSUNGA165GLIGHTGREEN2,
-  //         SASMSUNGA165GLIGHTGREEN3,
-  //         SASMSUNGA165GLIGHTGREEN4,
-  //         SASMSUNGA165GLIGHTGREEN5,
-  //       ],
-  //     },
-
-  //     {
-  //       id: 3,
-  //       name: "gold",
-  //       images: [
-  //         SAMSUNGA165GGOLD1,
-  //         SAMSUNGA165GGOLD2,
-  //         SAMSUNGA165GGOLD3,
-  //         SAMSUNGA165GGOLD4,
-  //         SAMSUNGA165GGOLD5,
-  //         SAMSUNGA165GGOLD6,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG2",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Light Green",
-  //       images: [
-  //         SASMSUNGA165GLIGHTGREEN1,
-  //         SASMSUNGA165GLIGHTGREEN2,
-  //         SASMSUNGA165GLIGHTGREEN3,
-  //         SASMSUNGA165GLIGHTGREEN4,
-  //         SASMSUNGA165GLIGHTGREEN5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Blue Black",
-  //       images: [
-  //         SASMSUNGA165GBLUEBLACK1,
-  //         SASMSUNGA165GBLUEBLACK2,
-  //         SASMSUNGA165GBLUEBLACK3,
-  //         SASMSUNGA165GBLUEBLACK4,
-  //         SASMSUNGA165GBLUEBLACK5,
-  //       ],
-  //     },
-
-  //     {
-  //       id: 3,
-  //       name: "gold",
-  //       images: [
-  //         SAMSUNGA165GGOLD1,
-  //         SAMSUNGA165GGOLD2,
-  //         SAMSUNGA165GGOLD3,
-  //         SAMSUNGA165GGOLD4,
-  //         SAMSUNGA165GGOLD5,
-  //         SAMSUNGA165GGOLD6,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG3",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "gold",
-  //       images: [
-  //         SAMSUNGA165GGOLD1,
-  //         SAMSUNGA165GGOLD2,
-  //         SAMSUNGA165GGOLD3,
-  //         SAMSUNGA165GGOLD4,
-  //         SAMSUNGA165GGOLD5,
-  //         SAMSUNGA165GGOLD6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Blue Black",
-  //       images: [
-  //         SASMSUNGA165GBLUEBLACK1,
-  //         SASMSUNGA165GBLUEBLACK2,
-  //         SASMSUNGA165GBLUEBLACK3,
-  //         SASMSUNGA165GBLUEBLACK4,
-  //         SASMSUNGA165GBLUEBLACK5,
-  //       ],
-  //     },
-
-  //     {
-  //       id: 3,
-  //       name: "Light Green",
-  //       images: [
-  //         SASMSUNGA165GLIGHTGREEN1,
-  //         SASMSUNGA165GLIGHTGREEN2,
-  //         SASMSUNGA165GLIGHTGREEN3,
-  //         SASMSUNGA165GLIGHTGREEN4,
-  //         SASMSUNGA165GLIGHTGREEN5,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG4",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Ash Black",
-  //       images: [
-  //         SAMSUNGF15ASHBLACK1,
-  //         SAMSUNGF15ASHBLACK2,
-  //         SAMSUNGF15ASHBLACK3,
-  //         SAMSUNGF15ASHBLACK4,
-  //         SAMSUNGF15ASHBLACK5,
-  //         SAMSUNGF15ASHBLACK6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Groovy Violet",
-  //       images: [
-  //         SAMSUNGF15GROOVYVIOLET1,
-  //         SAMSUNGF15GROOVYVIOLET2,
-  //         SAMSUNGF15GROOVYVIOLET3,
-  //         SAMSUNGF15GROOVYVIOLET4,
-  //         SAMSUNGF15GROOVYVIOLET5,
-  //         SAMSUNGF15GROOVYVIOLET6,
-  //       ],
-  //     },
-
-  //     {
-  //       id: 3,
-  //       name: "Jazzy Green",
-  //       images: [
-  //         SAMSUNGF15JAZZYGREEN1,
-  //         SAMSUNGF15JAZZYGREEN2,
-  //         SAMSUNGF15JAZZYGREEN3,
-  //         SAMSUNGF15JAZZYGREEN4,
-  //         SAMSUNGF15JAZZYGREEN5,
-  //         SAMSUNGF15JAZZYGREEN6,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "SAMSUNG5",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Groovy Violet",
-  //       images: [
-  //         SAMSUNGF15GROOVYVIOLET1,
-  //         SAMSUNGF15GROOVYVIOLET2,
-  //         SAMSUNGF15GROOVYVIOLET3,
-  //         SAMSUNGF15GROOVYVIOLET4,
-  //         SAMSUNGF15GROOVYVIOLET5,
-  //         SAMSUNGF15GROOVYVIOLET6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Ash Black",
-  //       images: [
-  //         SAMSUNGF15ASHBLACK1,
-  //         SAMSUNGF15ASHBLACK2,
-  //         SAMSUNGF15ASHBLACK3,
-  //         SAMSUNGF15ASHBLACK4,
-  //         SAMSUNGF15ASHBLACK5,
-  //         SAMSUNGF15ASHBLACK6,
-  //       ],
-  //     },
-
-  //     {
-  //       id: 3,
-  //       name: "Jazzy Green",
-  //       images: [
-  //         SAMSUNGF15JAZZYGREEN1,
-  //         SAMSUNGF15JAZZYGREEN2,
-  //         SAMSUNGF15JAZZYGREEN3,
-  //         SAMSUNGF15JAZZYGREEN4,
-  //         SAMSUNGF15JAZZYGREEN5,
-  //         SAMSUNGF15JAZZYGREEN6,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG6",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Jazzy Green",
-  //       images: [
-  //         SAMSUNGF15JAZZYGREEN1,
-  //         SAMSUNGF15JAZZYGREEN2,
-  //         SAMSUNGF15JAZZYGREEN3,
-  //         SAMSUNGF15JAZZYGREEN4,
-  //         SAMSUNGF15JAZZYGREEN5,
-  //         SAMSUNGF15JAZZYGREEN6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Ash Black",
-  //       images: [
-  //         SAMSUNGF15ASHBLACK1,
-  //         SAMSUNGF15ASHBLACK2,
-  //         SAMSUNGF15ASHBLACK3,
-  //         SAMSUNGF15ASHBLACK4,
-  //         SAMSUNGF15ASHBLACK5,
-  //         SAMSUNGF15ASHBLACK6,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Groovy Violet",
-  //       images: [
-  //         SAMSUNGF15GROOVYVIOLET1,
-  //         SAMSUNGF15GROOVYVIOLET2,
-  //         SAMSUNGF15GROOVYVIOLET3,
-  //         SAMSUNGF15GROOVYVIOLET4,
-  //         SAMSUNGF15GROOVYVIOLET5,
-  //         SAMSUNGF15GROOVYVIOLET6,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "SAMSUNG7",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "BLUE",
-  //       images: [
-  //         SAMSUNGA15BLUE1,
-  //         SAMSUNGA15BLUE2,
-  //         SAMSUNGA15BLUE3,
-  //         SAMSUNGA15BLUE4,
-  //         SAMSUNGA15BLUE5,
-  //         SAMSUNGA15BLUE6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "BLUEBLACK",
-  //       images: [
-  //         SAMSUNGA15BLUEBLACK1,
-  //         SAMSUNGA15BLUEBLACK2,
-  //         SAMSUNGA15BLUEBLACK3,
-  //         SAMSUNGA15BLUEBLACK4,
-  //         SAMSUNGA15BLUEBLACK5,
-  //         SAMSUNGA15BLUEBLACK6,
-  //       ],
-  //     },
-
-  //     {
-  //       id: 3,
-  //       name: "LIGHTBLUE",
-  //       images: [
-  //         SAMSUNGA15LIGHTBLUE1,
-  //         SAMSUNGA15LIGHTBLUE2,
-  //         SAMSUNGA15LIGHTBLUE3,
-  //         SAMSUNGA15LIGHTBLUE4,
-  //         SAMSUNGA15LIGHTBLUE5,
-  //         SAMSUNGA15LIGHTBLUE6,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG8",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "BLUE",
-  //       images: [
-  //         SAMSUNGA15BLUE1,
-  //         SAMSUNGA15BLUE2,
-  //         SAMSUNGA15BLUE3,
-  //         SAMSUNGA15BLUE4,
-  //         SAMSUNGA15BLUE5,
-  //         SAMSUNGA15BLUE6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "BLUEBLACK",
-  //       images: [
-  //         SAMSUNGA15BLUEBLACK1,
-  //         SAMSUNGA15BLUEBLACK2,
-  //         SAMSUNGA15BLUEBLACK3,
-  //         SAMSUNGA15BLUEBLACK4,
-  //         SAMSUNGA15BLUEBLACK5,
-  //         SAMSUNGA15BLUEBLACK6,
-  //       ],
-  //     },
-
-  //     {
-  //       id: 3,
-  //       name: "LIGHTBLUE",
-  //       images: [
-  //         SAMSUNGA15LIGHTBLUE1,
-  //         SAMSUNGA15LIGHTBLUE2,
-  //         SAMSUNGA15LIGHTBLUE3,
-  //         SAMSUNGA15LIGHTBLUE4,
-  //         SAMSUNGA15LIGHTBLUE5,
-  //         SAMSUNGA15LIGHTBLUE6,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG9",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "BLUE",
-  //       images: [
-  //         SAMSUNGA15BLUE1,
-  //         SAMSUNGA15BLUE2,
-  //         SAMSUNGA15BLUE3,
-  //         SAMSUNGA15BLUE4,
-  //         SAMSUNGA15BLUE5,
-  //         SAMSUNGA15BLUE6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "BLUEBLACK",
-  //       images: [
-  //         SAMSUNGA15BLUEBLACK1,
-  //         SAMSUNGA15BLUEBLACK2,
-  //         SAMSUNGA15BLUEBLACK3,
-  //         SAMSUNGA15BLUEBLACK4,
-  //         SAMSUNGA15BLUEBLACK5,
-  //         SAMSUNGA15BLUEBLACK6,
-  //       ],
-  //     },
-
-  //     {
-  //       id: 3,
-  //       name: "LIGHTBLUE",
-  //       images: [
-  //         SAMSUNGA15LIGHTBLUE1,
-  //         SAMSUNGA15LIGHTBLUE2,
-  //         SAMSUNGA15LIGHTBLUE3,
-  //         SAMSUNGA15LIGHTBLUE4,
-  //         SAMSUNGA15LIGHTBLUE5,
-  //         SAMSUNGA15LIGHTBLUE6,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "SAMSUNG10",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "ARCTIC BLUEE",
-  //       images: [
-  //         SAMSUNGM14ARCTICBLUE1,
-  //         SAMSUNGM14ARCTICBLUE2,
-  //         SAMSUNGM14ARCTICBLUE3,
-  //         SAMSUNGM14ARCTICBLUE4,
-  //         SAMSUNGM14ARCTICBLUE5,
-  //         SAMSUNGM14ARCTICBLUE6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "SPPHIRE BLUE",
-  //       images: [
-  //         SAMSUNGM14SPPHIREBLUE1,
-  //         SAMSUNGM14SPPHIREBLUE2,
-  //         SAMSUNGM14SPPHIREBLUE3,
-  //         SAMSUNGM14SPPHIREBLUE4,
-  //         SAMSUNGM14SPPHIREBLUE5,
-  //         SAMSUNGM14SPPHIREBLUE6,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "SAMSUNG11",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "BLACK",
-  //       images: [
-  //         SAMSUNGA145GBLACK1,
-  //         SAMSUNGA145GBLACK2,
-  //         SAMSUNGA145GBLACK3,
-  //         SAMSUNGA145GBLACK4,
-  //         SAMSUNGA145GBLACK5,
-  //         SAMSUNGA145GBLACK6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "DARK RED",
-  //       images: [
-  //         SAMSUNGA145GDARKRED1,
-  //         SAMSUNGA145GDARKRED2,
-  //         SAMSUNGA145GDARKRED3,
-  //         SAMSUNGA145GDARKRED4,
-  //         SAMSUNGA145GDARKRED5,
-  //         SAMSUNGA145GDARKRED6,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "LIGHT GREEN",
-  //       images: [
-  //         SAMSUNGA145GLIGHTGREEN1,
-  //         SAMSUNGA145GLIGHTGREEN2,
-  //         SAMSUNGA145GLIGHTGREEN3,
-  //         SAMSUNGA145GLIGHTGREEN4,
-  //         SAMSUNGA145GLIGHTGREEN5,
-  //         SAMSUNGA145GLIGHTGREEN6,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "SAMSUNG12",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "BLACK",
-  //       images: [
-  //         SAMSUNGA144GBLACK1,
-  //         SAMSUNGA144GBLACK2,
-  //         SAMSUNGA144GBLACK3,
-  //         SAMSUNGA144GBLACK4,
-  //         SAMSUNGA144GBLACK5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Light Green",
-  //       images: [
-  //         SAMSUNGA144GLIGHTGREEN1,
-  //         SAMSUNGA144GLIGHTGREEN2,
-  //         SAMSUNGA144GLIGHTGREEN3,
-  //         SAMSUNGA144GLIGHTGREEN4,
-  //         SAMSUNGA144GLIGHTGREEN5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Silver",
-  //       images: [
-  //         SAMSUNGA144GSILVER1,
-  //         SAMSUNGA144GSILVER2,
-  //         SAMSUNGA144GSILVER3,
-  //         SAMSUNGA144GSILVER4,
-  //         SAMSUNGA144GSILVER5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "SAMSUNG13",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "BLACK",
-  //       images: [A05SBLACK1, A05SBLACK2, A05SBLACK3],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "LIGHT GREEN",
-  //       images: [A05SLIGHTGREEN1, A05SLIGHTGREEN2, A05SLIGHTGREEN3],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "LIGHT VIOLET",
-  //       images: [A05SLIGHTVIOLET1, A05SLIGHTVIOLET2, A05SLIGHTVIOLET3],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "SAMSUNG15",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "BLACK",
-  //       images: [
-  //         SAMSUNGA06BLACK1,
-  //         SAMSUNGA06BLACK2,
-  //         SAMSUNGA06BLACK3,
-  //         SAMSUNGA06BLACK4,
-  //         SAMSUNGA06BLACK5,
-  //         SAMSUNGA06BLACK6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "GOLD",
-  //       images: [
-  //         SAMSUNGA06GOLD1,
-  //         SAMSUNGA06GOLD2,
-  //         SAMSUNGA06GOLD3,
-  //         SAMSUNGA06GOLD4,
-  //         SAMSUNGA06GOLD5,
-  //         SAMSUNGA06GOLD6,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "LIGHT BLUE",
-  //       images: [
-  //         SAMSUNGA06LIGHTBLUE1,
-  //         SAMSUNGA06LIGHTBLUE2,
-  //         SAMSUNGA06LIGHTBLUE3,
-  //         SAMSUNGA06LIGHTBLUE4,
-  //         SAMSUNGA06LIGHTBLUE5,
-  //         SAMSUNGA06LIGHTBLUE6,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "SAMSUNG16",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: " BLUE TOPAZ",
-  //       images: [
-  //         SAMSUNGM15BLUETOPAZ1,
-  //         SAMSUNGM15BLUETOPAZ2,
-  //         SAMSUNGM15BLUETOPAZ3,
-  //         SAMSUNGM15BLUETOPAZ4,
-  //         SAMSUNGM15BLUETOPAZ5,
-  //         SAMSUNGM15BLUETOPAZ6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "CELESTIAL BLUE",
-  //       images: [
-  //         SAMSUNGM15CELESTIALBLUE1,
-  //         SAMSUNGM15CELESTIALBLUE2,
-  //         SAMSUNGM15CELESTIALBLUE3,
-  //         SAMSUNGM15CELESTIALBLUE4,
-  //         SAMSUNGM15CELESTIALBLUE5,
-  //         SAMSUNGM15CELESTIALBLUE6,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "STONE GREY",
-  //       images: [
-  //         SAMSUNGM15STONEGREY1,
-  //         SAMSUNGM15STONEGREY2,
-  //         SAMSUNGM15STONEGREY3,
-  //         SAMSUNGM15STONEGREY4,
-  //         SAMSUNGM15STONEGREY5,
-  //         SAMSUNGM15STONEGREY6,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "SAMSUNG17",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: " AWESOME ICEBLUE",
-  //       images: [
-  //         SAMSUNGA35AWESOMEICEBLUE1,
-  //         SAMSUNGA35AWESOMEICEBLUE2,
-  //         SAMSUNGA35AWESOMEICEBLUE3,
-  //         SAMSUNGA35AWESOMEICEBLUE4,
-  //         SAMSUNGA35AWESOMEICEBLUE5,
-  //         SAMSUNGA35AWESOMEICEBLUE6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "AWESOME LILAC",
-  //       images: [
-  //         SAMSUNGA35AWESOMELILAC1,
-  //         SAMSUNGA35AWESOMELILAC2,
-  //         SAMSUNGA35AWESOMELILAC3,
-  //         SAMSUNGA35AWESOMELILAC4,
-  //         SAMSUNGA35AWESOMELILAC5,
-  //         SAMSUNGA35AWESOMELILAC6,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "AWESOM ENAVY",
-  //       images: [
-  //         SAMSUNGA35AWESOMENAVY1,
-  //         SAMSUNGA35AWESOMENAVY2,
-  //         SAMSUNGA35AWESOMENAVY3,
-  //         SAMSUNGA35AWESOMENAVY4,
-  //         SAMSUNGA35AWESOMENAVY5,
-  //         SAMSUNGA35AWESOMENAVY6,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG18",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: " AWESOME ICEBLUE",
-  //       images: [
-  //         SAMSUNGA35AWESOMEICEBLUE1,
-  //         SAMSUNGA35AWESOMEICEBLUE2,
-  //         SAMSUNGA35AWESOMEICEBLUE3,
-  //         SAMSUNGA35AWESOMEICEBLUE4,
-  //         SAMSUNGA35AWESOMEICEBLUE5,
-  //         SAMSUNGA35AWESOMEICEBLUE6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "AWESOME LILAC",
-  //       images: [
-  //         SAMSUNGA35AWESOMELILAC1,
-  //         SAMSUNGA35AWESOMELILAC2,
-  //         SAMSUNGA35AWESOMELILAC3,
-  //         SAMSUNGA35AWESOMELILAC4,
-  //         SAMSUNGA35AWESOMELILAC5,
-  //         SAMSUNGA35AWESOMELILAC6,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "AWESOM ENAVY",
-  //       images: [
-  //         SAMSUNGA35AWESOMENAVY1,
-  //         SAMSUNGA35AWESOMENAVY2,
-  //         SAMSUNGA35AWESOMENAVY3,
-  //         SAMSUNGA35AWESOMENAVY4,
-  //         SAMSUNGA35AWESOMENAVY5,
-  //         SAMSUNGA35AWESOMENAVY6,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "SAMSUNG19",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: " AWESOME NAVY",
-  //       images: [
-  //         SAMSUNGA55AWESOMENAVY1,
-  //         SAMSUNGA55AWESOMENAVY2,
-  //         SAMSUNGA55AWESOMENAVY3,
-  //         SAMSUNGA55AWESOMENAVY4,
-  //         SAMSUNGA55AWESOMENAVY5,
-  //         SAMSUNGA55AWESOMENAVY6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "BLUE",
-  //       images: [
-  //         SAMSUNGA55BLUE1,
-  //         SAMSUNGA55BLUE2,
-  //         SAMSUNGA55BLUE3,
-  //         SAMSUNGA55BLUE4,
-  //         SAMSUNGA55BLUE5,
-  //         SAMSUNGA55BLUE6,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "SAMSUNG20",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: " AWESOME NAVY",
-  //       images: [
-  //         SAMSUNGA55AWESOMENAVY1,
-  //         SAMSUNGA55AWESOMENAVY2,
-  //         SAMSUNGA55AWESOMENAVY3,
-  //         SAMSUNGA55AWESOMENAVY4,
-  //         SAMSUNGA55AWESOMENAVY5,
-  //         SAMSUNGA55AWESOMENAVY6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "BLUE",
-  //       images: [
-  //         SAMSUNGA55BLUE1,
-  //         SAMSUNGA55BLUE2,
-  //         SAMSUNGA55BLUE3,
-  //         SAMSUNGA55BLUE4,
-  //         SAMSUNGA55BLUE5,
-  //         SAMSUNGA55BLUE6,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "SAMSUNG21",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: " AWESOME NAVY",
-  //       images: [
-  //         SAMSUNGA55AWESOMENAVY1,
-  //         SAMSUNGA55AWESOMENAVY2,
-  //         SAMSUNGA55AWESOMENAVY3,
-  //         SAMSUNGA55AWESOMENAVY4,
-  //         SAMSUNGA55AWESOMENAVY5,
-  //         SAMSUNGA55AWESOMENAVY6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "BLUE",
-  //       images: [
-  //         SAMSUNGA55BLUE1,
-  //         SAMSUNGA55BLUE2,
-  //         SAMSUNGA55BLUE3,
-  //         SAMSUNGA55BLUE4,
-  //         SAMSUNGA55BLUE5,
-  //         SAMSUNGA55BLUE6,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "SAMSUNG22",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "CREAM",
-  //       images: [
-  //         SAMSUNGS23CREAM1,
-  //         SAMSUNGS23CREAM2,
-  //         SAMSUNGS23CREAM3,
-  //         SAMSUNGS23CREAM4,
-  //         SAMSUNGS23CREAM5,
-  //         SAMSUNGS23CREAM6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "LAVENDER",
-  //       images: [
-  //         SAMSUNGS23LAVENDER1,
-  //         SAMSUNGS23LAVENDER2,
-  //         SAMSUNGS23LAVENDER3,
-  //         SAMSUNGS23LAVENDER4,
-  //         SAMSUNGS23LAVENDER5,
-  //         SAMSUNGS23LAVENDER6,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "PHANTOM BLACK",
-  //       images: [
-  //         SAMSUNGS23PHANTOMBLACK1,
-  //         SAMSUNGS23PHANTOMBLACK2,
-  //         SAMSUNGS23PHANTOMBLACK3,
-  //         SAMSUNGS23PHANTOMBLACK4,
-  //         SAMSUNGS23PHANTOMBLACK5,
-  //         SAMSUNGS23PHANTOMBLACK6,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG23",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "CREAM",
-  //       images: [
-  //         SAMSUNGS23CREAM1,
-  //         SAMSUNGS23CREAM2,
-  //         SAMSUNGS23CREAM3,
-  //         SAMSUNGS23CREAM4,
-  //         SAMSUNGS23CREAM5,
-  //         SAMSUNGS23CREAM6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "LAVENDER",
-  //       images: [
-  //         SAMSUNGS23LAVENDER1,
-  //         SAMSUNGS23LAVENDER2,
-  //         SAMSUNGS23LAVENDER3,
-  //         SAMSUNGS23LAVENDER4,
-  //         SAMSUNGS23LAVENDER5,
-  //         SAMSUNGS23LAVENDER6,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "PHANTOM BLACK",
-  //       images: [
-  //         SAMSUNGS23PHANTOMBLACK1,
-  //         SAMSUNGS23PHANTOMBLACK2,
-  //         SAMSUNGS23PHANTOMBLACK3,
-  //         SAMSUNGS23PHANTOMBLACK4,
-  //         SAMSUNGS23PHANTOMBLACK5,
-  //         SAMSUNGS23PHANTOMBLACK6,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG24",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Cobal Violet",
-  //       images: [
-  //         SAMSUNGS24COBALTVIOLET1,
-  //         SAMSUNGS24COBALTVIOLET2,
-  //         SAMSUNGS24COBALTVIOLET3,
-  //         SAMSUNGS24COBALTVIOLET4,
-  //         SAMSUNGS24COBALTVIOLET5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Gamber Yellow",
-  //       images: [
-  //         SAMSUNGS245GAMBERYELLOW1,
-  //         SAMSUNGS245GAMBERYELLOW2,
-  //         SAMSUNGS245GAMBERYELLOW3,
-  //         SAMSUNGS245GAMBERYELLOW4,
-  //         SAMSUNGS245GAMBERYELLOW5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Marble Gray",
-  //       images: [
-  //         SAMSUNGS245GMARBLEGRAY1,
-  //         SAMSUNGS245GMARBLEGRAY2,
-  //         SAMSUNGS245GMARBLEGRAY3,
-  //         SAMSUNGS245GMARBLEGRAY4,
-  //         SAMSUNGS245GMARBLEGRAY5,
-  //         SAMSUNGS245GMARBLEGRAY6,
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Ony Black",
-  //       images: [
-  //         SAMSUNGS245GONYXBLACK1,
-  //         SAMSUNGS245GONYXBLACK2,
-  //         SAMSUNGS245GONYXBLACK3,
-  //         SAMSUNGS245GONYXBLACK4,
-  //         SAMSUNGS245GONYXBLACK5,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG25",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Gamber Yellow",
-  //       images: [
-  //         SAMSUNGS245GAMBERYELLOW1,
-  //         SAMSUNGS245GAMBERYELLOW2,
-  //         SAMSUNGS245GAMBERYELLOW3,
-  //         SAMSUNGS245GAMBERYELLOW4,
-  //         SAMSUNGS245GAMBERYELLOW5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Cobal Violet",
-  //       images: [
-  //         SAMSUNGS24COBALTVIOLET1,
-  //         SAMSUNGS24COBALTVIOLET2,
-  //         SAMSUNGS24COBALTVIOLET3,
-  //         SAMSUNGS24COBALTVIOLET4,
-  //         SAMSUNGS24COBALTVIOLET5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Marble Gray",
-  //       images: [
-  //         SAMSUNGS245GMARBLEGRAY1,
-  //         SAMSUNGS245GMARBLEGRAY2,
-  //         SAMSUNGS245GMARBLEGRAY3,
-  //         SAMSUNGS245GMARBLEGRAY4,
-  //         SAMSUNGS245GMARBLEGRAY5,
-  //         SAMSUNGS245GMARBLEGRAY6,
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Ony Black",
-  //       images: [
-  //         SAMSUNGS245GONYXBLACK1,
-  //         SAMSUNGS245GONYXBLACK2,
-  //         SAMSUNGS245GONYXBLACK3,
-  //         SAMSUNGS245GONYXBLACK4,
-  //         SAMSUNGS245GONYXBLACK5,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG26",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Marble Gray",
-  //       images: [
-  //         SAMSUNGS245GMARBLEGRAY1,
-  //         SAMSUNGS245GMARBLEGRAY2,
-  //         SAMSUNGS245GMARBLEGRAY3,
-  //         SAMSUNGS245GMARBLEGRAY4,
-  //         SAMSUNGS245GMARBLEGRAY5,
-  //         SAMSUNGS245GMARBLEGRAY6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Cobal Violet",
-  //       images: [
-  //         SAMSUNGS24COBALTVIOLET1,
-  //         SAMSUNGS24COBALTVIOLET2,
-  //         SAMSUNGS24COBALTVIOLET3,
-  //         SAMSUNGS24COBALTVIOLET4,
-  //         SAMSUNGS24COBALTVIOLET5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Gamber Yellow",
-  //       images: [
-  //         SAMSUNGS245GAMBERYELLOW1,
-  //         SAMSUNGS245GAMBERYELLOW2,
-  //         SAMSUNGS245GAMBERYELLOW3,
-  //         SAMSUNGS245GAMBERYELLOW4,
-  //         SAMSUNGS245GAMBERYELLOW5,
-  //       ],
-  //     },
-
-  //     {
-  //       id: 4,
-  //       name: "Ony Black",
-  //       images: [
-  //         SAMSUNGS245GONYXBLACK1,
-  //         SAMSUNGS245GONYXBLACK2,
-  //         SAMSUNGS245GONYXBLACK3,
-  //         SAMSUNGS245GONYXBLACK4,
-  //         SAMSUNGS245GONYXBLACK5,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG27",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: " Cobalt Violet",
-  //       images: [
-  //         SAMSUNGS24PLUS5GCOBALTVIOLET1,
-  //         SAMSUNGS24PLUS5GCOBALTVIOLET2,
-  //         SAMSUNGS24PLUS5GCOBALTVIOLET3,
-  //         SAMSUNGS24PLUS5GCOBALTVIOLET4,
-  //         SAMSUNGS24PLUS5GCOBALTVIOLET5,
-  //         SAMSUNGS24PLUS5GCOBALTVIOLET6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Onyx Black",
-  //       images: [
-  //         SAMSUNGS24PLUS5GONYXBLACK1,
-  //         SAMSUNGS24PLUS5GONYXBLACK2,
-  //         SAMSUNGS24PLUS5GONYXBLACK3,
-  //         SAMSUNGS24PLUS5GONYXBLACK4,
-  //         SAMSUNGS24PLUS5GONYXBLACK5,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG28",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: " Cobalt Violet",
-  //       images: [
-  //         SAMSUNGS24PLUS5GCOBALTVIOLET1,
-  //         SAMSUNGS24PLUS5GCOBALTVIOLET2,
-  //         SAMSUNGS24PLUS5GCOBALTVIOLET3,
-  //         SAMSUNGS24PLUS5GCOBALTVIOLET4,
-  //         SAMSUNGS24PLUS5GCOBALTVIOLET5,
-  //         SAMSUNGS24PLUS5GCOBALTVIOLET6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Onyx Black",
-  //       images: [
-  //         SAMSUNGS24PLUS5GONYXBLACK1,
-  //         SAMSUNGS24PLUS5GONYXBLACK2,
-  //         SAMSUNGS24PLUS5GONYXBLACK3,
-  //         SAMSUNGS24PLUS5GONYXBLACK4,
-  //         SAMSUNGS24PLUS5GONYXBLACK5,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG29",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Titanium Black",
-  //       images: [
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK1,
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK2,
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK3,
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK4,
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Titanium Gray",
-  //       images: [
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY1,
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY2,
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY3,
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY4,
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Titanium Violet",
-  //       images: [
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET1,
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET2,
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET3,
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET4,
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET5,
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Titanium Yellow",
-  //       images: [
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW1,
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW2,
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW3,
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW4,
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW5,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG30",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Titanium Black",
-  //       images: [
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK1,
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK2,
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK3,
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK4,
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Titanium Gray",
-  //       images: [
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY1,
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY2,
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY3,
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY4,
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Titanium Violet",
-  //       images: [
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET1,
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET2,
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET3,
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET4,
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET5,
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Titanium Yellow",
-  //       images: [
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW1,
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW2,
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW3,
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW4,
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW5,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG31",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Titanium Black",
-  //       images: [
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK1,
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK2,
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK3,
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK4,
-  //         SAMSUNGS24ULTRA5GTITANIUMBLACK5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Titanium Gray",
-  //       images: [
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY1,
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY2,
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY3,
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY4,
-  //         SAMSUNGS24ULTRA5GTITANIUMGRAY5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Titanium Violet",
-  //       images: [
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET1,
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET2,
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET3,
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET4,
-  //         SAMSUNGS24ULTRA5GTITANIUMVIOLET5,
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Titanium Yellow",
-  //       images: [
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW1,
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW2,
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW3,
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW4,
-  //         SAMSUNGS24ULTRA5GTITANIUMYELLOW5,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG32",
-
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Blue",
-  //       images: [
-  //         SAMSUNGS24FE5GBLUE1,
-  //         SAMSUNGS24FE5GBLUE2,
-  //         SAMSUNGS24FE5GBLUE3,
-  //         SAMSUNGS24FE5GBLUE4,
-  //         SAMSUNGS24FE5GBLUE5,
-  //         SAMSUNGS24FE5GBLUE6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Graphite",
-  //       images: [
-  //         SAMSUNGS24FE5GGRAPHITE1,
-  //         SAMSUNGS24FE5GGRAPHITE2,
-  //         SAMSUNGS24FE5GGRAPHITE3,
-  //         SAMSUNGS24FE5GGRAPHITE4,
-  //         SAMSUNGS24FE5GGRAPHITE5,
-  //         SAMSUNGS24FE5GGRAPHITE6,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Mint",
-  //       images: [
-  //         SAMSUNGS24FE5GMINT1,
-  //         SAMSUNGS24FE5GMINT2,
-  //         SAMSUNGS24FE5GMINT3,
-  //         SAMSUNGS24FE5GMINT4,
-  //         SAMSUNGS24FE5GMINT5,
-  //         SAMSUNGS24FE5GMINT6,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "SAMSUNG33",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Blue",
-  //       images: [
-  //         SAMSUNGS24FE5GBLUE1,
-  //         SAMSUNGS24FE5GBLUE2,
-  //         SAMSUNGS24FE5GBLUE3,
-  //         SAMSUNGS24FE5GBLUE4,
-  //         SAMSUNGS24FE5GBLUE5,
-  //         SAMSUNGS24FE5GBLUE6,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Graphite",
-  //       images: [
-  //         SAMSUNGS24FE5GGRAPHITE1,
-  //         SAMSUNGS24FE5GGRAPHITE2,
-  //         SAMSUNGS24FE5GGRAPHITE3,
-  //         SAMSUNGS24FE5GGRAPHITE4,
-  //         SAMSUNGS24FE5GGRAPHITE5,
-  //         SAMSUNGS24FE5GGRAPHITE6,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Mint",
-  //       images: [
-  //         SAMSUNGS24FE5GMINT1,
-  //         SAMSUNGS24FE5GMINT2,
-  //         SAMSUNGS24FE5GMINT3,
-  //         SAMSUNGS24FE5GMINT4,
-  //         SAMSUNGS24FE5GMINT5,
-  //         SAMSUNGS24FE5GMINT6,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // // IQoo
-  // {
-  //   id: "IQOO1",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Fiery Red",
-  //       images: [
-  //         IQOONEO9PROFIERYRED1,
-  //         IQOONEO9PROFIERYRED2,
-  //         IQOONEO9PROFIERYRED3,
-  //         IQOONEO9PROFIERYRED4,
-  //         IQOONEO9PROFIERYRED5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Conqueror Black",
-  //       images: [
-  //         IQOONEO9PROCONQUERORBLACK1,
-  //         IQOONEO9PROCONQUERORBLACK2,
-  //         IQOONEO9PROCONQUERORBLACK3,
-  //         IQOONEO9PROCONQUERORBLACK4,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "IQOO2",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Fiery Red",
-  //       images: [
-  //         IQOONEO9PROFIERYRED1,
-  //         IQOONEO9PROFIERYRED2,
-  //         IQOONEO9PROFIERYRED3,
-  //         IQOONEO9PROFIERYRED4,
-  //         IQOONEO9PROFIERYRED5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Conqueror Black",
-  //       images: [
-  //         IQOONEO9PROCONQUERORBLACK1,
-  //         IQOONEO9PROCONQUERORBLACK2,
-  //         IQOONEO9PROCONQUERORBLACK3,
-  //         IQOONEO9PROCONQUERORBLACK4,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "IQOO3",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Graphene Blue",
-  //       images: [
-  //         IQOOZ9GRAPHENEBLUE1,
-  //         IQOOZ9GRAPHENEBLUE2,
-  //         IQOOZ9GRAPHENEBLUE3,
-  //         IQOOZ9GRAPHENEBLUE4,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Brushed Green",
-  //       images: [
-  //         IQOOZ9BRUSHEDGREEN1,
-  //         IQOOZ9BRUSHEDGREEN2,
-  //         IQOOZ9BRUSHEDGREEN3,
-  //         IQOOZ9BRUSHEDGREEN4,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "IQOO4",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Graphene Blue",
-  //       images: [
-  //         IQOOZ9GRAPHENEBLUE1,
-  //         IQOOZ9GRAPHENEBLUE2,
-  //         IQOOZ9GRAPHENEBLUE3,
-  //         IQOOZ9GRAPHENEBLUE4,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Brushed Green",
-  //       images: [
-  //         IQOOZ9BRUSHEDGREEN1,
-  //         IQOOZ9BRUSHEDGREEN2,
-  //         IQOOZ9BRUSHEDGREEN3,
-  //         IQOOZ9BRUSHEDGREEN4,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "IQOO5",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Mocha Brown",
-  //       images: [
-  //         IQOOZ9LITEMOCHABROWN1,
-  //         IQOOZ9LITEMOCHABROWN2,
-  //         IQOOZ9LITEMOCHABROWN3,
-  //         IQOOZ9LITEMOCHABROWN4,
-  //         IQOOZ9LITEMOCHABROWN5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Aqua Flow",
-  //       images: [
-  //         IQOOZ9LITEAQUAFLOW1,
-  //         IQOOZ9LITEAQUAFLOW2,
-  //         IQOOZ9LITEAQUAFLOW3,
-  //         IQOOZ9LITEAQUAFLOW4,
-  //         IQOOZ9LITEAQUAFLOW5,
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "IQOO6",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Mocha Brown",
-  //       images: [
-  //         IQOOZ9LITEMOCHABROWN1,
-  //         IQOOZ9LITEMOCHABROWN2,
-  //         IQOOZ9LITEMOCHABROWN3,
-  //         IQOOZ9LITEMOCHABROWN4,
-  //         IQOOZ9LITEMOCHABROWN5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Aqua Flow",
-  //       images: [
-  //         IQOOZ9LITEAQUAFLOW1,
-  //         IQOOZ9LITEAQUAFLOW2,
-  //         IQOOZ9LITEAQUAFLOW3,
-  //         IQOOZ9LITEAQUAFLOW4,
-  //         IQOOZ9LITEAQUAFLOW5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "IQOO7",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Sonyx Green",
-  //       images: [
-  //         IQOOZ9SONYXGREEN1,
-  //         IQOOZ9SONYXGREEN2,
-  //         IQOOZ9SONYXGREEN3,
-  //         IQOOZ9SONYXGREEN4,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Titanium Matte",
-  //       images: [
-  //         IQOOZ9STITANIUMMATTE1,
-  //         IQOOZ9STITANIUMMATTE2,
-  //         IQOOZ9STITANIUMMATTE3,
-  //         IQOOZ9STITANIUMMATTE4,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "IQOO8",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Sonyx Green",
-  //       images: [
-  //         IQOOZ9SONYXGREEN1,
-  //         IQOOZ9SONYXGREEN2,
-  //         IQOOZ9SONYXGREEN3,
-  //         IQOOZ9SONYXGREEN4,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Titanium Matte",
-  //       images: [
-  //         IQOOZ9STITANIUMMATTE1,
-  //         IQOOZ9STITANIUMMATTE2,
-  //         IQOOZ9STITANIUMMATTE3,
-  //         IQOOZ9STITANIUMMATTE4,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "IQOO9",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Sonyx Green",
-  //       images: [
-  //         IQOOZ9SONYXGREEN1,
-  //         IQOOZ9SONYXGREEN2,
-  //         IQOOZ9SONYXGREEN3,
-  //         IQOOZ9SONYXGREEN4,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Titanium Matte",
-  //       images: [
-  //         IQOOZ9STITANIUMMATTE1,
-  //         IQOOZ9STITANIUMMATTE2,
-  //         IQOOZ9STITANIUMMATTE3,
-  //         IQOOZ9STITANIUMMATTE4,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "IQOO10",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Storm Grey",
-  //       images: [
-  //         IQOOZ9XSTORMGREY1,
-  //         IQOOZ9XSTORMGREY2,
-  //         IQOOZ9XSTORMGREY3,
-  //         IQOOZ9XSTORMGREY4,
-  //         IQOOZ9XSTORMGREY5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Tornado Green",
-  //       images: [
-  //         IQOOZ9XTORNADOGREEN1,
-  //         IQOOZ9XTORNADOGREEN2,
-  //         IQOOZ9XTORNADOGREEN3,
-  //         IQOOZ9XTORNADOGREEN4,
-  //         IQOOZ9XTORNADOGREEN5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "IQOO11",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Storm Grey",
-  //       images: [
-  //         IQOOZ9XSTORMGREY1,
-  //         IQOOZ9XSTORMGREY2,
-  //         IQOOZ9XSTORMGREY3,
-  //         IQOOZ9XSTORMGREY4,
-  //         IQOOZ9XSTORMGREY5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Tornado Green",
-  //       images: [
-  //         IQOOZ9XTORNADOGREEN1,
-  //         IQOOZ9XTORNADOGREEN2,
-  //         IQOOZ9XTORNADOGREEN3,
-  //         IQOOZ9XTORNADOGREEN4,
-  //         IQOOZ9XTORNADOGREEN5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "IQOO12",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Storm Grey",
-  //       images: [
-  //         IQOOZ9XSTORMGREY1,
-  //         IQOOZ9XSTORMGREY2,
-  //         IQOOZ9XSTORMGREY3,
-  //         IQOOZ9XSTORMGREY4,
-  //         IQOOZ9XSTORMGREY5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Tornado Green",
-  //       images: [
-  //         IQOOZ9XTORNADOGREEN1,
-  //         IQOOZ9XTORNADOGREEN2,
-  //         IQOOZ9XTORNADOGREEN3,
-  //         IQOOZ9XTORNADOGREEN4,
-  //         IQOOZ9XTORNADOGREEN5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "IQOO13",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Luxe Marble",
-  //       images: [
-  //         IQOOZ9SPROLUXEMARBLE1,
-  //         IQOOZ9SPROLUXEMARBLE2,
-  //         IQOOZ9SPROLUXEMARBLE3,
-  //         IQOOZ9SPROLUXEMARBLE4,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Flamboyant Orange",
-  //       images: [
-  //         IQOOZ9SPROFLAMBOYANTORANGE1,
-  //         IQOOZ9SPROFLAMBOYANTORANGE2,
-  //         IQOOZ9SPROFLAMBOYANTORANGE3,
-  //         IQOOZ9SPROFLAMBOYANTORANGE4,
-  //         IQOOZ9SPROFLAMBOYANTORANGE5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "IQOO14",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Luxe Marble",
-  //       images: [
-  //         IQOOZ9SPROLUXEMARBLE1,
-  //         IQOOZ9SPROLUXEMARBLE2,
-  //         IQOOZ9SPROLUXEMARBLE3,
-  //         IQOOZ9SPROLUXEMARBLE4,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Flamboyant Orange",
-  //       images: [
-  //         IQOOZ9SPROFLAMBOYANTORANGE1,
-  //         IQOOZ9SPROFLAMBOYANTORANGE2,
-  //         IQOOZ9SPROFLAMBOYANTORANGE3,
-  //         IQOOZ9SPROFLAMBOYANTORANGE4,
-  //         IQOOZ9SPROFLAMBOYANTORANGE5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "IQOO15",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Luxe Marble",
-  //       images: [
-  //         IQOOZ9SPROLUXEMARBLE1,
-  //         IQOOZ9SPROLUXEMARBLE2,
-  //         IQOOZ9SPROLUXEMARBLE3,
-  //         IQOOZ9SPROLUXEMARBLE4,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Flamboyant Orange",
-  //       images: [
-  //         IQOOZ9SPROFLAMBOYANTORANGE1,
-  //         IQOOZ9SPROFLAMBOYANTORANGE2,
-  //         IQOOZ9SPROFLAMBOYANTORANGE3,
-  //         IQOOZ9SPROFLAMBOYANTORANGE4,
-  //         IQOOZ9SPROFLAMBOYANTORANGE5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // //Motorola
-
-  // {
-  //   id: "MOTOROLA1",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Viva Magenta",
-  //       images: [
-  //         MOTOROLAG45VIVAMAGENTA1,
-  //         MOTOROLAG45VIVAMAGENTA2,
-  //         MOTOROLAG45VIVAMAGENTA3,
-  //         MOTOROLAG45VIVAMAGENTA4,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Brilliant Blue",
-  //       images: [
-  //         MOTOROLAG45BRILLIANTBLUE1,
-  //         MOTOROLAG45BRILLIANTBLUE2,
-  //         MOTOROLAG45BRILLIANTBLUE3,
-  //         MOTOROLAG45BRILLIANTBLUE4,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Brilliant Green",
-  //       images: [
-  //         MOTOROLAG45BRILLIANTGREEN1,
-  //         MOTOROLAG45BRILLIANTGREEN2,
-  //         MOTOROLAG45BRILLIANTGREEN3,
-  //         MOTOROLAG45BRILLIANTGREEN4,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "MOTOROLA2",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Viva Magenta",
-  //       images: [
-  //         MOTOROLAG45VIVAMAGENTA1,
-  //         MOTOROLAG45VIVAMAGENTA2,
-  //         MOTOROLAG45VIVAMAGENTA3,
-  //         MOTOROLAG45VIVAMAGENTA4,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Brilliant Blue",
-  //       images: [
-  //         MOTOROLAG45BRILLIANTBLUE1,
-  //         MOTOROLAG45BRILLIANTBLUE2,
-  //         MOTOROLAG45BRILLIANTBLUE3,
-  //         MOTOROLAG45BRILLIANTBLUE4,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Brilliant Green",
-  //       images: [
-  //         MOTOROLAG45BRILLIANTGREEN1,
-  //         MOTOROLAG45BRILLIANTGREEN2,
-  //         MOTOROLAG45BRILLIANTGREEN3,
-  //         MOTOROLAG45BRILLIANTGREEN4,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "MOTOROLA3",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Cobalt Blue",
-  //       images: [
-  //         MOTOROLAG85COBALTBLUE1,
-  //         MOTOROLAG85COBALTBLUE2,
-  //         MOTOROLAG85COBALTBLUE3,
-  //         MOTOROLAG85COBALTBLUE4,
-  //         MOTOROLAG85COBALTBLUE5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Olive Green",
-  //       images: [
-  //         MOTOROLAG85OLIVEGREEN1,
-  //         MOTOROLAG85OLIVEGREEN2,
-  //         MOTOROLAG85OLIVEGREEN3,
-  //         MOTOROLAG85OLIVEGREEN4,
-  //         MOTOROLAG85OLIVEGREEN5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Urban Grey",
-  //       images: [
-  //         MOTOROLAG85URBANGREY1,
-  //         MOTOROLAG85URBANGREY2,
-  //         MOTOROLAG85URBANGREY3,
-  //         MOTOROLAG85URBANGREY4,
-  //         MOTOROLAG85URBANGREY5,
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Viva Magenta",
-  //       images: [
-  //         MOTOROLAG85VIVAMAGENTA1,
-  //         MOTOROLAG85VIVAMAGENTA2,
-  //         MOTOROLAG85VIVAMAGENTA3,
-  //         MOTOROLAG85VIVAMAGENTA4,
-  //         MOTOROLAG85VIVAMAGENTA5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "MOTOROLA4",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Cobalt Blue",
-  //       images: [
-  //         MOTOROLAG85COBALTBLUE1,
-  //         MOTOROLAG85COBALTBLUE2,
-  //         MOTOROLAG85COBALTBLUE3,
-  //         MOTOROLAG85COBALTBLUE4,
-  //         MOTOROLAG85COBALTBLUE5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Olive Green",
-  //       images: [
-  //         MOTOROLAG85OLIVEGREEN1,
-  //         MOTOROLAG85OLIVEGREEN2,
-  //         MOTOROLAG85OLIVEGREEN3,
-  //         MOTOROLAG85OLIVEGREEN4,
-  //         MOTOROLAG85OLIVEGREEN5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Urban Grey",
-  //       images: [
-  //         MOTOROLAG85URBANGREY1,
-  //         MOTOROLAG85URBANGREY2,
-  //         MOTOROLAG85URBANGREY3,
-  //         MOTOROLAG85URBANGREY4,
-  //         MOTOROLAG85URBANGREY5,
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Viva Magenta",
-  //       images: [
-  //         MOTOROLAG85VIVAMAGENTA1,
-  //         MOTOROLAG85VIVAMAGENTA2,
-  //         MOTOROLAG85VIVAMAGENTA3,
-  //         MOTOROLAG85VIVAMAGENTA4,
-  //         MOTOROLAG85VIVAMAGENTA5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "MOTOROLA5",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Ice Lilac",
-  //       images: [
-  //         MOTOROLAG64ICELILAC1,
-  //         MOTOROLAG64ICELILAC2,
-  //         MOTOROLAG64ICELILAC3,
-  //         MOTOROLAG64ICELILAC4,
-  //         MOTOROLAG64ICELILAC5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Mint Green",
-  //       images: [
-  //         MOTOROLAG64MINTGREEN1,
-  //         MOTOROLAG64MINTGREEN2,
-  //         MOTOROLAG64MINTGREEN3,
-  //         MOTOROLAG64MINTGREEN4,
-  //         MOTOROLAG64MINTGREEN5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Pearl Blue",
-  //       images: [
-  //         MOTOROLAG64PEARLBLUE1,
-  //         MOTOROLAG64PEARLBLUE2,
-  //         MOTOROLAG64PEARLBLUE3,
-  //         MOTOROLAG64PEARLBLUE4,
-  //         MOTOROLAG64PEARLBLUE5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "MOTOROLA6",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Pantone Latte",
-  //       images: [
-  //         MOTOROLAEDGE50NEOPANTONELATTE1,
-  //         MOTOROLAEDGE50NEOPANTONELATTE2,
-  //         MOTOROLAEDGE50NEOPANTONELATTE3,
-  //         MOTOROLAEDGE50NEOPANTONELATTE4,
-  //         MOTOROLAEDGE50NEOPANTONELATTE5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Neutical Blue",
-  //       images: [
-  //         MOTOROLAEDGE50NEONEUTICALBLUE1,
-  //         MOTOROLAEDGE50NEONEUTICALBLUE2,
-  //         MOTOROLAEDGE50NEONEUTICALBLUE3,
-  //         MOTOROLAEDGE50NEONEUTICALBLUE4,
-  //         MOTOROLAEDGE50NEONEUTICALBLUE5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Pantone Grisaille",
-  //       images: [
-  //         MOTOROLAEDGE50NEOPANTONEGRISAILLE1,
-  //         MOTOROLAEDGE50NEOPANTONEGRISAILLE2,
-  //         MOTOROLAEDGE50NEOPANTONEGRISAILLE3,
-  //         MOTOROLAEDGE50NEOPANTONEGRISAILLE4,
-  //         MOTOROLAEDGE50NEOPANTONEGRISAILLE5,
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Pantone Poinciana",
-  //       images: [
-  //         MOTOROLAEDGE50NEOPANTONEPOINCIANA1,
-  //         MOTOROLAEDGE50NEOPANTONEPOINCIANA2,
-  //         MOTOROLAEDGE50NEOPANTONEPOINCIANA3,
-  //         MOTOROLAEDGE50NEOPANTONEPOINCIANA4,
-  //         MOTOROLAEDGE50NEOPANTONEPOINCIANA5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "MOTOROLA7",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Forest Green",
-  //       images: [
-  //         MOTOROLAEDGE50FUSIONFORESTGREEN1,
-  //         MOTOROLAEDGE50FUSIONFORESTGREEN2,
-  //         MOTOROLAEDGE50FUSIONFORESTGREEN3,
-  //         MOTOROLAEDGE50FUSIONFORESTGREEN4,
-  //         MOTOROLAEDGE50FUSIONFORESTGREEN5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Forest Blue",
-  //       images: [
-  //         MOTOROLAEDGE50FUSIONFORESTBLUE1,
-  //         MOTOROLAEDGE50FUSIONFORESTBLUE2,
-  //         MOTOROLAEDGE50FUSIONFORESTBLUE3,
-  //         MOTOROLAEDGE50FUSIONFORESTBLUE4,
-  //         MOTOROLAEDGE50FUSIONFORESTBLUE5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Hot Pink",
-  //       images: [
-  //         MOTOROLAEDGE50FUSIONHOTPINK1,
-  //         MOTOROLAEDGE50FUSIONHOTPINK2,
-  //         MOTOROLAEDGE50FUSIONHOTPINK3,
-  //         MOTOROLAEDGE50FUSIONHOTPINK4,
-  //         MOTOROLAEDGE50FUSIONHOTPINK5,
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Marshamallow Blue",
-  //       images: [
-  //         MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE1,
-  //         MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE2,
-  //         MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE3,
-  //         MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE4,
-  //         MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "MOTOROLA8",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: "Peach Fuzz",
-  //       images: [
-  //         MOTOROLAEDGE50PEACHFUZZ1,
-  //         MOTOROLAEDGE50PEACHFUZZ2,
-  //         MOTOROLAEDGE50PEACHFUZZ3,
-  //         MOTOROLAEDGE50PEACHFUZZ4,
-  //         MOTOROLAEDGE50PEACHFUZZ5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Jungle Green",
-  //       images: [
-  //         MOTOROLAEDGE50JUNGLEGREEN1,
-  //         MOTOROLAEDGE50JUNGLEGREEN2,
-  //         MOTOROLAEDGE50JUNGLEGREEN3,
-  //         MOTOROLAEDGE50JUNGLEGREEN4,
-  //         MOTOROLAEDGE50JUNGLEGREEN5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Koala Grey",
-  //       images: [
-  //         MOTOROLAEDGE50KOALAGREY1,
-  //         MOTOROLAEDGE50KOALAGREY2,
-  //         MOTOROLAEDGE50KOALAGREY3,
-  //         MOTOROLAEDGE50KOALAGREY4,
-  //         MOTOROLAEDGE50KOALAGREY5,
-  //       ],
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: "MOTOROLA9",
-  //   colors: [
-  //     {
-  //       id: 1,
-  //       name: " Caneel Bay",
-  //       images: [
-  //         MOTOROLAEDGE50PROCANEELBAY1,
-  //         MOTOROLAEDGE50PROCANEELBAY2,
-  //         MOTOROLAEDGE50PROCANEELBAY3,
-  //         MOTOROLAEDGE50PROCANEELBAY4,
-  //         MOTOROLAEDGE50PROCANEELBAY5,
-  //       ],
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Black Beauty",
-  //       images: [
-  //         MOTOROLAEDGE50PROBLACKBEAUTY1,
-  //         MOTOROLAEDGE50PROBLACKBEAUTY2,
-  //         MOTOROLAEDGE50PROBLACKBEAUTY3,
-  //         MOTOROLAEDGE50PROBLACKBEAUTY4,
-  //         MOTOROLAEDGE50PROBLACKBEAUTY5,
-  //       ],
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Luxe Lavender",
-  //       images: [
-  //         MOTOROLAEDGE50PROLUXELAVENDER1,
-  //         MOTOROLAEDGE50PROLUXELAVENDER2,
-  //         MOTOROLAEDGE50PROLUXELAVENDER3,
-  //         MOTOROLAEDGE50PROLUXELAVENDER4,
-  //         MOTOROLAEDGE50PROLUXELAVENDER5,
-  //       ],
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Moonlight Pearl",
-  //       images: [
-  //         MOTOROLAEDGE50PROMOONLIGHTPEARL1,
-  //         MOTOROLAEDGE50PROMOONLIGHTPEARL2,
-  //         MOTOROLAEDGE50PROMOONLIGHTPEARL3,
-  //         MOTOROLAEDGE50PROMOONLIGHTPEARL4,
-  //         MOTOROLAEDGE50PROMOONLIGHTPEARL5,
-  //       ],
-  //     },
-  //     {
-  //       id: 5,
-  //       name: "Vanila Cream",
-  //       images: [
-  //         MOTOROLAEDGE50PROVANILACREAM1,
-  //         MOTOROLAEDGE50PROVANILACREAM2,
-  //         MOTOROLAEDGE50PROVANILACREAM3,
-  //         MOTOROLAEDGE50PROVANILACREAM4,
-  //         MOTOROLAEDGE50PROVANILACREAM5,
-  //       ],
-  //     },
-  //   ],
-  // },
+  {
+    id: ["SAMSUNG1", "SAMSUNG2", "SAMSUNG3"],
+
+    colors: [
+      {
+        id: 1,
+        name: "Blue Black",
+        images: [
+          SASMSUNGA165GBLUEBLACK1,
+          SASMSUNGA165GBLUEBLACK2,
+          SASMSUNGA165GBLUEBLACK3,
+          SASMSUNGA165GBLUEBLACK4,
+          SASMSUNGA165GBLUEBLACK5,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "Light Green",
+        images: [
+          SASMSUNGA165GLIGHTGREEN1,
+          SASMSUNGA165GLIGHTGREEN2,
+          SASMSUNGA165GLIGHTGREEN3,
+          SASMSUNGA165GLIGHTGREEN4,
+          SASMSUNGA165GLIGHTGREEN5,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "gold",
+        images: [
+          SAMSUNGA165GGOLD1,
+          SAMSUNGA165GGOLD2,
+          SAMSUNGA165GGOLD3,
+          SAMSUNGA165GGOLD4,
+          SAMSUNGA165GGOLD5,
+          SAMSUNGA165GGOLD6,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG4", "SAMSUNG5", "SAMSUNG6"],
+
+    colors: [
+      {
+        id: 1,
+        name: "Ash Black",
+        images: [
+          SAMSUNGF15ASHBLACK1,
+          SAMSUNGF15ASHBLACK2,
+          SAMSUNGF15ASHBLACK3,
+          SAMSUNGF15ASHBLACK4,
+          SAMSUNGF15ASHBLACK5,
+          SAMSUNGF15ASHBLACK6,
+        ],
+      },
+      {
+        id: 2,
+        name: "Groovy Violet",
+        images: [
+          SAMSUNGF15GROOVYVIOLET1,
+          SAMSUNGF15GROOVYVIOLET2,
+          SAMSUNGF15GROOVYVIOLET3,
+          SAMSUNGF15GROOVYVIOLET4,
+          SAMSUNGF15GROOVYVIOLET5,
+          SAMSUNGF15GROOVYVIOLET6,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "Jazzy Green",
+        images: [
+          SAMSUNGF15JAZZYGREEN1,
+          SAMSUNGF15JAZZYGREEN2,
+          SAMSUNGF15JAZZYGREEN3,
+          SAMSUNGF15JAZZYGREEN4,
+          SAMSUNGF15JAZZYGREEN5,
+          SAMSUNGF15JAZZYGREEN6,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG7", "SAMSUNG8", "SAMSUNG9"],
+
+    colors: [
+      {
+        id: 1,
+        name: "BLUE",
+        images: [
+          SAMSUNGA15BLUE1,
+          SAMSUNGA15BLUE2,
+          SAMSUNGA15BLUE3,
+          SAMSUNGA15BLUE4,
+          SAMSUNGA15BLUE5,
+          SAMSUNGA15BLUE6,
+        ],
+      },
+      {
+        id: 2,
+        name: "BLUEBLACK",
+        images: [
+          SAMSUNGA15BLUEBLACK1,
+          SAMSUNGA15BLUEBLACK2,
+          SAMSUNGA15BLUEBLACK3,
+          SAMSUNGA15BLUEBLACK4,
+          SAMSUNGA15BLUEBLACK5,
+          SAMSUNGA15BLUEBLACK6,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "LIGHTBLUE",
+        images: [
+          SAMSUNGA15LIGHTBLUE1,
+          SAMSUNGA15LIGHTBLUE2,
+          SAMSUNGA15LIGHTBLUE3,
+          SAMSUNGA15LIGHTBLUE4,
+          SAMSUNGA15LIGHTBLUE5,
+          SAMSUNGA15LIGHTBLUE6,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG10"],
+
+    colors: [
+      {
+        id: 1,
+        name: "ARCTIC BLUEE",
+        images: [
+          SAMSUNGM14ARCTICBLUE1,
+          SAMSUNGM14ARCTICBLUE2,
+          SAMSUNGM14ARCTICBLUE3,
+          SAMSUNGM14ARCTICBLUE4,
+          SAMSUNGM14ARCTICBLUE5,
+          SAMSUNGM14ARCTICBLUE6,
+        ],
+      },
+      {
+        id: 2,
+        name: "SPPHIRE BLUE",
+        images: [
+          SAMSUNGM14SPPHIREBLUE1,
+          SAMSUNGM14SPPHIREBLUE2,
+          SAMSUNGM14SPPHIREBLUE3,
+          SAMSUNGM14SPPHIREBLUE4,
+          SAMSUNGM14SPPHIREBLUE5,
+          SAMSUNGM14SPPHIREBLUE6,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG11", "SAMSUNG12"],
+
+    colors: [
+      {
+        id: 1,
+        name: "BLACK",
+        images: [
+          SAMSUNGA145GBLACK1,
+          SAMSUNGA145GBLACK2,
+          SAMSUNGA145GBLACK3,
+          SAMSUNGA145GBLACK4,
+          SAMSUNGA145GBLACK5,
+          SAMSUNGA145GBLACK6,
+        ],
+      },
+      {
+        id: 2,
+        name: "DARK RED",
+        images: [
+          SAMSUNGA145GDARKRED1,
+          SAMSUNGA145GDARKRED2,
+          SAMSUNGA145GDARKRED3,
+          SAMSUNGA145GDARKRED4,
+          SAMSUNGA145GDARKRED5,
+          SAMSUNGA145GDARKRED6,
+        ],
+      },
+      {
+        id: 3,
+        name: "LIGHT GREEN",
+        images: [
+          SAMSUNGA145GLIGHTGREEN1,
+          SAMSUNGA145GLIGHTGREEN2,
+          SAMSUNGA145GLIGHTGREEN3,
+          SAMSUNGA145GLIGHTGREEN4,
+          SAMSUNGA145GLIGHTGREEN5,
+          SAMSUNGA145GLIGHTGREEN6,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG13"],
+
+    colors: [
+      {
+        id: 1,
+        name: "BLACK",
+        images: [A05SBLACK1, A05SBLACK2, A05SBLACK3],
+      },
+      {
+        id: 2,
+        name: "LIGHT GREEN",
+        images: [A05SLIGHTGREEN1, A05SLIGHTGREEN2, A05SLIGHTGREEN3],
+      },
+      {
+        id: 3,
+        name: "LIGHT VIOLET",
+        images: [A05SLIGHTVIOLET1, A05SLIGHTVIOLET2, A05SLIGHTVIOLET3],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG15"],
+
+    colors: [
+      {
+        id: 1,
+        name: "BLACK",
+        images: [
+          SAMSUNGA06BLACK1,
+          SAMSUNGA06BLACK2,
+          SAMSUNGA06BLACK3,
+          SAMSUNGA06BLACK4,
+          SAMSUNGA06BLACK5,
+          SAMSUNGA06BLACK6,
+        ],
+      },
+      {
+        id: 2,
+        name: "GOLD",
+        images: [
+          SAMSUNGA06GOLD1,
+          SAMSUNGA06GOLD2,
+          SAMSUNGA06GOLD3,
+          SAMSUNGA06GOLD4,
+          SAMSUNGA06GOLD5,
+          SAMSUNGA06GOLD6,
+        ],
+      },
+      {
+        id: 3,
+        name: "LIGHT BLUE",
+        images: [
+          SAMSUNGA06LIGHTBLUE1,
+          SAMSUNGA06LIGHTBLUE2,
+          SAMSUNGA06LIGHTBLUE3,
+          SAMSUNGA06LIGHTBLUE4,
+          SAMSUNGA06LIGHTBLUE5,
+          SAMSUNGA06LIGHTBLUE6,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG16"],
+
+    colors: [
+      {
+        id: 1,
+        name: " BLUE TOPAZ",
+        images: [
+          SAMSUNGM15BLUETOPAZ1,
+          SAMSUNGM15BLUETOPAZ2,
+          SAMSUNGM15BLUETOPAZ3,
+          SAMSUNGM15BLUETOPAZ4,
+          SAMSUNGM15BLUETOPAZ5,
+          SAMSUNGM15BLUETOPAZ6,
+        ],
+      },
+      {
+        id: 2,
+        name: "CELESTIAL BLUE",
+        images: [
+          SAMSUNGM15CELESTIALBLUE1,
+          SAMSUNGM15CELESTIALBLUE2,
+          SAMSUNGM15CELESTIALBLUE3,
+          SAMSUNGM15CELESTIALBLUE4,
+          SAMSUNGM15CELESTIALBLUE5,
+          SAMSUNGM15CELESTIALBLUE6,
+        ],
+      },
+      {
+        id: 3,
+        name: "STONE GREY",
+        images: [
+          SAMSUNGM15STONEGREY1,
+          SAMSUNGM15STONEGREY2,
+          SAMSUNGM15STONEGREY3,
+          SAMSUNGM15STONEGREY4,
+          SAMSUNGM15STONEGREY5,
+          SAMSUNGM15STONEGREY6,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG17", "SAMSUNG18"],
+
+    colors: [
+      {
+        id: 1,
+        name: " AWESOME ICEBLUE",
+        images: [
+          SAMSUNGA35AWESOMEICEBLUE1,
+          SAMSUNGA35AWESOMEICEBLUE2,
+          SAMSUNGA35AWESOMEICEBLUE3,
+          SAMSUNGA35AWESOMEICEBLUE4,
+          SAMSUNGA35AWESOMEICEBLUE5,
+          SAMSUNGA35AWESOMEICEBLUE6,
+        ],
+      },
+      {
+        id: 2,
+        name: "AWESOME LILAC",
+        images: [
+          SAMSUNGA35AWESOMELILAC1,
+          SAMSUNGA35AWESOMELILAC2,
+          SAMSUNGA35AWESOMELILAC3,
+          SAMSUNGA35AWESOMELILAC4,
+          SAMSUNGA35AWESOMELILAC5,
+          SAMSUNGA35AWESOMELILAC6,
+        ],
+      },
+      {
+        id: 3,
+        name: "AWESOM ENAVY",
+        images: [
+          SAMSUNGA35AWESOMENAVY1,
+          SAMSUNGA35AWESOMENAVY2,
+          SAMSUNGA35AWESOMENAVY3,
+          SAMSUNGA35AWESOMENAVY4,
+          SAMSUNGA35AWESOMENAVY5,
+          SAMSUNGA35AWESOMENAVY6,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG19", "SAMSUNG20", "SAMSUNG21"],
+
+    colors: [
+      {
+        id: 1,
+        name: " AWESOME NAVY",
+        images: [
+          SAMSUNGA55AWESOMENAVY1,
+          SAMSUNGA55AWESOMENAVY2,
+          SAMSUNGA55AWESOMENAVY3,
+          SAMSUNGA55AWESOMENAVY4,
+          SAMSUNGA55AWESOMENAVY5,
+          SAMSUNGA55AWESOMENAVY6,
+        ],
+      },
+      {
+        id: 2,
+        name: "BLUE",
+        images: [
+          SAMSUNGA55BLUE1,
+          SAMSUNGA55BLUE2,
+          SAMSUNGA55BLUE3,
+          SAMSUNGA55BLUE4,
+          SAMSUNGA55BLUE5,
+          SAMSUNGA55BLUE6,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG22", "SAMSUNG23"],
+
+    colors: [
+      {
+        id: 1,
+        name: "CREAM",
+        images: [
+          SAMSUNGS23CREAM1,
+          SAMSUNGS23CREAM2,
+          SAMSUNGS23CREAM3,
+          SAMSUNGS23CREAM4,
+          SAMSUNGS23CREAM5,
+          SAMSUNGS23CREAM6,
+        ],
+      },
+      {
+        id: 2,
+        name: "LAVENDER",
+        images: [
+          SAMSUNGS23LAVENDER1,
+          SAMSUNGS23LAVENDER2,
+          SAMSUNGS23LAVENDER3,
+          SAMSUNGS23LAVENDER4,
+          SAMSUNGS23LAVENDER5,
+          SAMSUNGS23LAVENDER6,
+        ],
+      },
+      {
+        id: 3,
+        name: "PHANTOM BLACK",
+        images: [
+          SAMSUNGS23PHANTOMBLACK1,
+          SAMSUNGS23PHANTOMBLACK2,
+          SAMSUNGS23PHANTOMBLACK3,
+          SAMSUNGS23PHANTOMBLACK4,
+          SAMSUNGS23PHANTOMBLACK5,
+          SAMSUNGS23PHANTOMBLACK6,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG24", "SAMSUNG25", "SAMSUNG26"],
+
+    colors: [
+      {
+        id: 1,
+        name: "Cobal Violet",
+        images: [
+          SAMSUNGS24COBALTVIOLET1,
+          SAMSUNGS24COBALTVIOLET2,
+          SAMSUNGS24COBALTVIOLET3,
+          SAMSUNGS24COBALTVIOLET4,
+          SAMSUNGS24COBALTVIOLET5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Gamber Yellow",
+        images: [
+          SAMSUNGS245GAMBERYELLOW1,
+          SAMSUNGS245GAMBERYELLOW2,
+          SAMSUNGS245GAMBERYELLOW3,
+          SAMSUNGS245GAMBERYELLOW4,
+          SAMSUNGS245GAMBERYELLOW5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Marble Gray",
+        images: [
+          SAMSUNGS245GMARBLEGRAY1,
+          SAMSUNGS245GMARBLEGRAY2,
+          SAMSUNGS245GMARBLEGRAY3,
+          SAMSUNGS245GMARBLEGRAY4,
+          SAMSUNGS245GMARBLEGRAY5,
+          SAMSUNGS245GMARBLEGRAY6,
+        ],
+      },
+      {
+        id: 4,
+        name: "Ony Black",
+        images: [
+          SAMSUNGS245GONYXBLACK1,
+          SAMSUNGS245GONYXBLACK2,
+          SAMSUNGS245GONYXBLACK3,
+          SAMSUNGS245GONYXBLACK4,
+          SAMSUNGS245GONYXBLACK5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG27", "SAMSUNG28"],
+
+    colors: [
+      {
+        id: 1,
+        name: " Cobalt Violet",
+        images: [
+          SAMSUNGS24PLUS5GCOBALTVIOLET1,
+          SAMSUNGS24PLUS5GCOBALTVIOLET2,
+          SAMSUNGS24PLUS5GCOBALTVIOLET3,
+          SAMSUNGS24PLUS5GCOBALTVIOLET4,
+          SAMSUNGS24PLUS5GCOBALTVIOLET5,
+          SAMSUNGS24PLUS5GCOBALTVIOLET6,
+        ],
+      },
+      {
+        id: 2,
+        name: "Onyx Black",
+        images: [
+          SAMSUNGS24PLUS5GONYXBLACK1,
+          SAMSUNGS24PLUS5GONYXBLACK2,
+          SAMSUNGS24PLUS5GONYXBLACK3,
+          SAMSUNGS24PLUS5GONYXBLACK4,
+          SAMSUNGS24PLUS5GONYXBLACK5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG29", "SAMSUNG30", "SAMSUNG31"],
+
+    colors: [
+      {
+        id: 1,
+        name: "Titanium Black",
+        images: [
+          SAMSUNGS24ULTRA5GTITANIUMBLACK1,
+          SAMSUNGS24ULTRA5GTITANIUMBLACK2,
+          SAMSUNGS24ULTRA5GTITANIUMBLACK3,
+          SAMSUNGS24ULTRA5GTITANIUMBLACK4,
+          SAMSUNGS24ULTRA5GTITANIUMBLACK5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Titanium Gray",
+        images: [
+          SAMSUNGS24ULTRA5GTITANIUMGRAY1,
+          SAMSUNGS24ULTRA5GTITANIUMGRAY2,
+          SAMSUNGS24ULTRA5GTITANIUMGRAY3,
+          SAMSUNGS24ULTRA5GTITANIUMGRAY4,
+          SAMSUNGS24ULTRA5GTITANIUMGRAY5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Titanium Violet",
+        images: [
+          SAMSUNGS24ULTRA5GTITANIUMVIOLET1,
+          SAMSUNGS24ULTRA5GTITANIUMVIOLET2,
+          SAMSUNGS24ULTRA5GTITANIUMVIOLET3,
+          SAMSUNGS24ULTRA5GTITANIUMVIOLET4,
+          SAMSUNGS24ULTRA5GTITANIUMVIOLET5,
+        ],
+      },
+      {
+        id: 4,
+        name: "Titanium Yellow",
+        images: [
+          SAMSUNGS24ULTRA5GTITANIUMYELLOW1,
+          SAMSUNGS24ULTRA5GTITANIUMYELLOW2,
+          SAMSUNGS24ULTRA5GTITANIUMYELLOW3,
+          SAMSUNGS24ULTRA5GTITANIUMYELLOW4,
+          SAMSUNGS24ULTRA5GTITANIUMYELLOW5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["SAMSUNG32", "SAMSUNG33"],
+
+    colors: [
+      {
+        id: 1,
+        name: "Blue",
+        images: [
+          SAMSUNGS24FE5GBLUE1,
+          SAMSUNGS24FE5GBLUE2,
+          SAMSUNGS24FE5GBLUE3,
+          SAMSUNGS24FE5GBLUE4,
+          SAMSUNGS24FE5GBLUE5,
+          SAMSUNGS24FE5GBLUE6,
+        ],
+      },
+      {
+        id: 2,
+        name: "Graphite",
+        images: [
+          SAMSUNGS24FE5GGRAPHITE1,
+          SAMSUNGS24FE5GGRAPHITE2,
+          SAMSUNGS24FE5GGRAPHITE3,
+          SAMSUNGS24FE5GGRAPHITE4,
+          SAMSUNGS24FE5GGRAPHITE5,
+          SAMSUNGS24FE5GGRAPHITE6,
+        ],
+      },
+      {
+        id: 3,
+        name: "Mint",
+        images: [
+          SAMSUNGS24FE5GMINT1,
+          SAMSUNGS24FE5GMINT2,
+          SAMSUNGS24FE5GMINT3,
+          SAMSUNGS24FE5GMINT4,
+          SAMSUNGS24FE5GMINT5,
+          SAMSUNGS24FE5GMINT6,
+        ],
+      },
+    ],
+  },
+
+  // IQoo
+  {
+    id: ["IQOO1"],
+    colors: [
+      {
+        id: 1,
+        name: "Fiery Red",
+        images: [
+          IQOONEO9PROFIERYRED1,
+          IQOONEO9PROFIERYRED2,
+          IQOONEO9PROFIERYRED3,
+          IQOONEO9PROFIERYRED4,
+          IQOONEO9PROFIERYRED5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Conqueror Black",
+        images: [
+          IQOONEO9PROCONQUERORBLACK1,
+          IQOONEO9PROCONQUERORBLACK2,
+          IQOONEO9PROCONQUERORBLACK3,
+          IQOONEO9PROCONQUERORBLACK4,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["IQOO2"],
+    colors: [
+      {
+        id: 1,
+        name: "Fiery Red",
+        images: [
+          IQOONEO9PROFIERYRED1,
+          IQOONEO9PROFIERYRED2,
+          IQOONEO9PROFIERYRED3,
+          IQOONEO9PROFIERYRED4,
+          IQOONEO9PROFIERYRED5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Conqueror Black",
+        images: [
+          IQOONEO9PROCONQUERORBLACK1,
+          IQOONEO9PROCONQUERORBLACK2,
+          IQOONEO9PROCONQUERORBLACK3,
+          IQOONEO9PROCONQUERORBLACK4,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["IQOO3"],
+    colors: [
+      {
+        id: 1,
+        name: "Graphene Blue",
+        images: [
+          IQOOZ9GRAPHENEBLUE1,
+          IQOOZ9GRAPHENEBLUE2,
+          IQOOZ9GRAPHENEBLUE3,
+          IQOOZ9GRAPHENEBLUE4,
+        ],
+      },
+      {
+        id: 2,
+        name: "Brushed Green",
+        images: [
+          IQOOZ9BRUSHEDGREEN1,
+          IQOOZ9BRUSHEDGREEN2,
+          IQOOZ9BRUSHEDGREEN3,
+          IQOOZ9BRUSHEDGREEN4,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["IQOO4"],
+    colors: [
+      {
+        id: 1,
+        name: "Graphene Blue",
+        images: [
+          IQOOZ9GRAPHENEBLUE1,
+          IQOOZ9GRAPHENEBLUE2,
+          IQOOZ9GRAPHENEBLUE3,
+          IQOOZ9GRAPHENEBLUE4,
+        ],
+      },
+      {
+        id: 2,
+        name: "Brushed Green",
+        images: [
+          IQOOZ9BRUSHEDGREEN1,
+          IQOOZ9BRUSHEDGREEN2,
+          IQOOZ9BRUSHEDGREEN3,
+          IQOOZ9BRUSHEDGREEN4,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["IQOO5", "IQOO6"],
+    colors: [
+      {
+        id: 1,
+        name: "Mocha Brown",
+        images: [
+          IQOOZ9LITEMOCHABROWN1,
+          IQOOZ9LITEMOCHABROWN2,
+          IQOOZ9LITEMOCHABROWN3,
+          IQOOZ9LITEMOCHABROWN4,
+          IQOOZ9LITEMOCHABROWN5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Aqua Flow",
+        images: [
+          IQOOZ9LITEAQUAFLOW1,
+          IQOOZ9LITEAQUAFLOW2,
+          IQOOZ9LITEAQUAFLOW3,
+          IQOOZ9LITEAQUAFLOW4,
+          IQOOZ9LITEAQUAFLOW5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["IQOO7"],
+    colors: [
+      {
+        id: 1,
+        name: "Sonyx Green",
+        images: [
+          IQOOZ9SONYXGREEN1,
+          IQOOZ9SONYXGREEN2,
+          IQOOZ9SONYXGREEN3,
+          IQOOZ9SONYXGREEN4,
+        ],
+      },
+      {
+        id: 2,
+        name: "Titanium Matte",
+        images: [
+          IQOOZ9STITANIUMMATTE1,
+          IQOOZ9STITANIUMMATTE2,
+          IQOOZ9STITANIUMMATTE3,
+          IQOOZ9STITANIUMMATTE4,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "[IQOO8]",
+    colors: [
+      {
+        id: 1,
+        name: "Sonyx Green",
+        images: [
+          IQOOZ9SONYXGREEN1,
+          IQOOZ9SONYXGREEN2,
+          IQOOZ9SONYXGREEN3,
+          IQOOZ9SONYXGREEN4,
+        ],
+      },
+      {
+        id: 2,
+        name: "Titanium Matte",
+        images: [
+          IQOOZ9STITANIUMMATTE1,
+          IQOOZ9STITANIUMMATTE2,
+          IQOOZ9STITANIUMMATTE3,
+          IQOOZ9STITANIUMMATTE4,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["IQOO9"],
+    colors: [
+      {
+        id: 1,
+        name: "Sonyx Green",
+        images: [
+          IQOOZ9SONYXGREEN1,
+          IQOOZ9SONYXGREEN2,
+          IQOOZ9SONYXGREEN3,
+          IQOOZ9SONYXGREEN4,
+        ],
+      },
+      {
+        id: 2,
+        name: "Titanium Matte",
+        images: [
+          IQOOZ9STITANIUMMATTE1,
+          IQOOZ9STITANIUMMATTE2,
+          IQOOZ9STITANIUMMATTE3,
+          IQOOZ9STITANIUMMATTE4,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["IQOO10", "IQOO11", "IQOO12"],
+    colors: [
+      {
+        id: 1,
+        name: "Storm Grey",
+        images: [
+          IQOOZ9XSTORMGREY1,
+          IQOOZ9XSTORMGREY2,
+          IQOOZ9XSTORMGREY3,
+          IQOOZ9XSTORMGREY4,
+          IQOOZ9XSTORMGREY5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Tornado Green",
+        images: [
+          IQOOZ9XTORNADOGREEN1,
+          IQOOZ9XTORNADOGREEN2,
+          IQOOZ9XTORNADOGREEN3,
+          IQOOZ9XTORNADOGREEN4,
+          IQOOZ9XTORNADOGREEN5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["IQOO13"],
+    colors: [
+      {
+        id: 1,
+        name: "Luxe Marble",
+        images: [
+          IQOOZ9SPROLUXEMARBLE1,
+          IQOOZ9SPROLUXEMARBLE2,
+          IQOOZ9SPROLUXEMARBLE3,
+          IQOOZ9SPROLUXEMARBLE4,
+        ],
+      },
+      {
+        id: 2,
+        name: "Flamboyant Orange",
+        images: [
+          IQOOZ9SPROFLAMBOYANTORANGE1,
+          IQOOZ9SPROFLAMBOYANTORANGE2,
+          IQOOZ9SPROFLAMBOYANTORANGE3,
+          IQOOZ9SPROFLAMBOYANTORANGE4,
+          IQOOZ9SPROFLAMBOYANTORANGE5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["IQOO14"],
+    colors: [
+      {
+        id: 1,
+        name: "Luxe Marble",
+        images: [
+          IQOOZ9SPROLUXEMARBLE1,
+          IQOOZ9SPROLUXEMARBLE2,
+          IQOOZ9SPROLUXEMARBLE3,
+          IQOOZ9SPROLUXEMARBLE4,
+        ],
+      },
+      {
+        id: 2,
+        name: "Flamboyant Orange",
+        images: [
+          IQOOZ9SPROFLAMBOYANTORANGE1,
+          IQOOZ9SPROFLAMBOYANTORANGE2,
+          IQOOZ9SPROFLAMBOYANTORANGE3,
+          IQOOZ9SPROFLAMBOYANTORANGE4,
+          IQOOZ9SPROFLAMBOYANTORANGE5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["IQOO15"],
+    colors: [
+      {
+        id: 1,
+        name: "Luxe Marble",
+        images: [
+          IQOOZ9SPROLUXEMARBLE1,
+          IQOOZ9SPROLUXEMARBLE2,
+          IQOOZ9SPROLUXEMARBLE3,
+          IQOOZ9SPROLUXEMARBLE4,
+        ],
+      },
+      {
+        id: 2,
+        name: "Flamboyant Orange",
+        images: [
+          IQOOZ9SPROFLAMBOYANTORANGE1,
+          IQOOZ9SPROFLAMBOYANTORANGE2,
+          IQOOZ9SPROFLAMBOYANTORANGE3,
+          IQOOZ9SPROFLAMBOYANTORANGE4,
+          IQOOZ9SPROFLAMBOYANTORANGE5,
+        ],
+      },
+    ],
+  },
+
+  //Motorola
+
+  {
+    id: ["MOTOROLA1", "MOTOROLA2"],
+    colors: [
+      {
+        id: 1,
+        name: "Viva Magenta",
+        images: [
+          MOTOROLAG45VIVAMAGENTA1,
+          MOTOROLAG45VIVAMAGENTA2,
+          MOTOROLAG45VIVAMAGENTA3,
+          MOTOROLAG45VIVAMAGENTA4,
+        ],
+      },
+      {
+        id: 2,
+        name: "Brilliant Blue",
+        images: [
+          MOTOROLAG45BRILLIANTBLUE1,
+          MOTOROLAG45BRILLIANTBLUE2,
+          MOTOROLAG45BRILLIANTBLUE3,
+          MOTOROLAG45BRILLIANTBLUE4,
+        ],
+      },
+      {
+        id: 3,
+        name: "Brilliant Green",
+        images: [
+          MOTOROLAG45BRILLIANTGREEN1,
+          MOTOROLAG45BRILLIANTGREEN2,
+          MOTOROLAG45BRILLIANTGREEN3,
+          MOTOROLAG45BRILLIANTGREEN4,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["MOTOROLA3"],
+    colors: [
+      {
+        id: 1,
+        name: "Cobalt Blue",
+        images: [
+          MOTOROLAG85COBALTBLUE1,
+          MOTOROLAG85COBALTBLUE2,
+          MOTOROLAG85COBALTBLUE3,
+          MOTOROLAG85COBALTBLUE4,
+          MOTOROLAG85COBALTBLUE5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Olive Green",
+        images: [
+          MOTOROLAG85OLIVEGREEN1,
+          MOTOROLAG85OLIVEGREEN2,
+          MOTOROLAG85OLIVEGREEN3,
+          MOTOROLAG85OLIVEGREEN4,
+          MOTOROLAG85OLIVEGREEN5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Urban Grey",
+        images: [
+          MOTOROLAG85URBANGREY1,
+          MOTOROLAG85URBANGREY2,
+          MOTOROLAG85URBANGREY3,
+          MOTOROLAG85URBANGREY4,
+          MOTOROLAG85URBANGREY5,
+        ],
+      },
+      {
+        id: 4,
+        name: "Viva Magenta",
+        images: [
+          MOTOROLAG85VIVAMAGENTA1,
+          MOTOROLAG85VIVAMAGENTA2,
+          MOTOROLAG85VIVAMAGENTA3,
+          MOTOROLAG85VIVAMAGENTA4,
+          MOTOROLAG85VIVAMAGENTA5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["MOTOROLA4"],
+    colors: [
+      {
+        id: 1,
+        name: "Cobalt Blue",
+        images: [
+          MOTOROLAG85COBALTBLUE1,
+          MOTOROLAG85COBALTBLUE2,
+          MOTOROLAG85COBALTBLUE3,
+          MOTOROLAG85COBALTBLUE4,
+          MOTOROLAG85COBALTBLUE5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Olive Green",
+        images: [
+          MOTOROLAG85OLIVEGREEN1,
+          MOTOROLAG85OLIVEGREEN2,
+          MOTOROLAG85OLIVEGREEN3,
+          MOTOROLAG85OLIVEGREEN4,
+          MOTOROLAG85OLIVEGREEN5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Urban Grey",
+        images: [
+          MOTOROLAG85URBANGREY1,
+          MOTOROLAG85URBANGREY2,
+          MOTOROLAG85URBANGREY3,
+          MOTOROLAG85URBANGREY4,
+          MOTOROLAG85URBANGREY5,
+        ],
+      },
+      {
+        id: 4,
+        name: "Viva Magenta",
+        images: [
+          MOTOROLAG85VIVAMAGENTA1,
+          MOTOROLAG85VIVAMAGENTA2,
+          MOTOROLAG85VIVAMAGENTA3,
+          MOTOROLAG85VIVAMAGENTA4,
+          MOTOROLAG85VIVAMAGENTA5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["MOTOROLA5"],
+    colors: [
+      {
+        id: 1,
+        name: "Ice Lilac",
+        images: [
+          MOTOROLAG64ICELILAC1,
+          MOTOROLAG64ICELILAC2,
+          MOTOROLAG64ICELILAC3,
+          MOTOROLAG64ICELILAC4,
+          MOTOROLAG64ICELILAC5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Mint Green",
+        images: [
+          MOTOROLAG64MINTGREEN1,
+          MOTOROLAG64MINTGREEN2,
+          MOTOROLAG64MINTGREEN3,
+          MOTOROLAG64MINTGREEN4,
+          MOTOROLAG64MINTGREEN5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Pearl Blue",
+        images: [
+          MOTOROLAG64PEARLBLUE1,
+          MOTOROLAG64PEARLBLUE2,
+          MOTOROLAG64PEARLBLUE3,
+          MOTOROLAG64PEARLBLUE4,
+          MOTOROLAG64PEARLBLUE5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["MOTOROLA6"],
+    colors: [
+      {
+        id: 1,
+        name: "Pantone Latte",
+        images: [
+          MOTOROLAEDGE50NEOPANTONELATTE1,
+          MOTOROLAEDGE50NEOPANTONELATTE2,
+          MOTOROLAEDGE50NEOPANTONELATTE3,
+          MOTOROLAEDGE50NEOPANTONELATTE4,
+          MOTOROLAEDGE50NEOPANTONELATTE5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Neutical Blue",
+        images: [
+          MOTOROLAEDGE50NEONEUTICALBLUE1,
+          MOTOROLAEDGE50NEONEUTICALBLUE2,
+          MOTOROLAEDGE50NEONEUTICALBLUE3,
+          MOTOROLAEDGE50NEONEUTICALBLUE4,
+          MOTOROLAEDGE50NEONEUTICALBLUE5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Pantone Grisaille",
+        images: [
+          MOTOROLAEDGE50NEOPANTONEGRISAILLE1,
+          MOTOROLAEDGE50NEOPANTONEGRISAILLE2,
+          MOTOROLAEDGE50NEOPANTONEGRISAILLE3,
+          MOTOROLAEDGE50NEOPANTONEGRISAILLE4,
+          MOTOROLAEDGE50NEOPANTONEGRISAILLE5,
+        ],
+      },
+      {
+        id: 4,
+        name: "Pantone Poinciana",
+        images: [
+          MOTOROLAEDGE50NEOPANTONEPOINCIANA1,
+          MOTOROLAEDGE50NEOPANTONEPOINCIANA2,
+          MOTOROLAEDGE50NEOPANTONEPOINCIANA3,
+          MOTOROLAEDGE50NEOPANTONEPOINCIANA4,
+          MOTOROLAEDGE50NEOPANTONEPOINCIANA5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["MOTOROLA7"],
+    colors: [
+      {
+        id: 1,
+        name: "Forest Green",
+        images: [
+          MOTOROLAEDGE50FUSIONFORESTGREEN1,
+          MOTOROLAEDGE50FUSIONFORESTGREEN2,
+          MOTOROLAEDGE50FUSIONFORESTGREEN3,
+          MOTOROLAEDGE50FUSIONFORESTGREEN4,
+          MOTOROLAEDGE50FUSIONFORESTGREEN5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Forest Blue",
+        images: [
+          MOTOROLAEDGE50FUSIONFORESTBLUE1,
+          MOTOROLAEDGE50FUSIONFORESTBLUE2,
+          MOTOROLAEDGE50FUSIONFORESTBLUE3,
+          MOTOROLAEDGE50FUSIONFORESTBLUE4,
+          MOTOROLAEDGE50FUSIONFORESTBLUE5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Hot Pink",
+        images: [
+          MOTOROLAEDGE50FUSIONHOTPINK1,
+          MOTOROLAEDGE50FUSIONHOTPINK2,
+          MOTOROLAEDGE50FUSIONHOTPINK3,
+          MOTOROLAEDGE50FUSIONHOTPINK4,
+          MOTOROLAEDGE50FUSIONHOTPINK5,
+        ],
+      },
+      {
+        id: 4,
+        name: "Marshamallow Blue",
+        images: [
+          MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE1,
+          MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE2,
+          MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE3,
+          MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE4,
+          MOTOROLAEDGE50FUSIONMARSHAMALLOWBLUE5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["MOTOROLA8"],
+    colors: [
+      {
+        id: 1,
+        name: "Peach Fuzz",
+        images: [
+          MOTOROLAEDGE50PEACHFUZZ1,
+          MOTOROLAEDGE50PEACHFUZZ2,
+          MOTOROLAEDGE50PEACHFUZZ3,
+          MOTOROLAEDGE50PEACHFUZZ4,
+          MOTOROLAEDGE50PEACHFUZZ5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Jungle Green",
+        images: [
+          MOTOROLAEDGE50JUNGLEGREEN1,
+          MOTOROLAEDGE50JUNGLEGREEN2,
+          MOTOROLAEDGE50JUNGLEGREEN3,
+          MOTOROLAEDGE50JUNGLEGREEN4,
+          MOTOROLAEDGE50JUNGLEGREEN5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Koala Grey",
+        images: [
+          MOTOROLAEDGE50KOALAGREY1,
+          MOTOROLAEDGE50KOALAGREY2,
+          MOTOROLAEDGE50KOALAGREY3,
+          MOTOROLAEDGE50KOALAGREY4,
+          MOTOROLAEDGE50KOALAGREY5,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: ["MOTOROLA9"],
+    colors: [
+      {
+        id: 1,
+        name: " Caneel Bay",
+        images: [
+          MOTOROLAEDGE50PROCANEELBAY1,
+          MOTOROLAEDGE50PROCANEELBAY2,
+          MOTOROLAEDGE50PROCANEELBAY3,
+          MOTOROLAEDGE50PROCANEELBAY4,
+          MOTOROLAEDGE50PROCANEELBAY5,
+        ],
+      },
+      {
+        id: 2,
+        name: "Black Beauty",
+        images: [
+          MOTOROLAEDGE50PROBLACKBEAUTY1,
+          MOTOROLAEDGE50PROBLACKBEAUTY2,
+          MOTOROLAEDGE50PROBLACKBEAUTY3,
+          MOTOROLAEDGE50PROBLACKBEAUTY4,
+          MOTOROLAEDGE50PROBLACKBEAUTY5,
+        ],
+      },
+      {
+        id: 3,
+        name: "Luxe Lavender",
+        images: [
+          MOTOROLAEDGE50PROLUXELAVENDER1,
+          MOTOROLAEDGE50PROLUXELAVENDER2,
+          MOTOROLAEDGE50PROLUXELAVENDER3,
+          MOTOROLAEDGE50PROLUXELAVENDER4,
+          MOTOROLAEDGE50PROLUXELAVENDER5,
+        ],
+      },
+      {
+        id: 4,
+        name: "Moonlight Pearl",
+        images: [
+          MOTOROLAEDGE50PROMOONLIGHTPEARL1,
+          MOTOROLAEDGE50PROMOONLIGHTPEARL2,
+          MOTOROLAEDGE50PROMOONLIGHTPEARL3,
+          MOTOROLAEDGE50PROMOONLIGHTPEARL4,
+          MOTOROLAEDGE50PROMOONLIGHTPEARL5,
+        ],
+      },
+      {
+        id: 5,
+        name: "Vanila Cream",
+        images: [
+          MOTOROLAEDGE50PROVANILACREAM1,
+          MOTOROLAEDGE50PROVANILACREAM2,
+          MOTOROLAEDGE50PROVANILACREAM3,
+          MOTOROLAEDGE50PROVANILACREAM4,
+          MOTOROLAEDGE50PROVANILACREAM5,
+        ],
+      },
+    ],
+  },
 ];
