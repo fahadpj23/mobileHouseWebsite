@@ -20,7 +20,7 @@ const Brands = () => {
                   to={`brand${brand?.link}`}
                   className=" flex items-center p-1  "
                 >
-                  <div className="hover:scale-110 duration-150 h-[35px] md:h-[45px] w-[75px] md:w-[140px]  bg-white shadow-md ">
+                  <div className="hover:scale-110 duration-150 h-[35px] md:h-[45px] w-[75px] md:w-[110px]  bg-white shadow-md ">
                     <LazyImage src={brand?.image} alt="logo " fill={true} />
                   </div>
                 </Link>

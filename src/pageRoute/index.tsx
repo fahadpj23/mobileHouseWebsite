@@ -25,18 +25,20 @@ const PageRoute = () => {
       <BrowserRouter>
         <MainLayout>
           <Routes>
-            <Route index path="/" element={<HomePage />} />
-            <Route path="/newArrival" element={<NewArrival />} />
-            <Route path="/specialOffer" element={<SpecialOffer />} />
-            <Route path="/trendingPhones" element={<TrendingPhones />} />
-            <Route path="brand/:brandName" element={<Brand />} />
-            <Route path="series/:seriesList" element={<SeriesList />} />
-            <Route path="specCreator" element={<SpecCreator />} />
-            <Route
-              path="phone/:productId/:productName"
-              element={<SingleItem />}
-            />
-            <Route path="*" element={<PageNotFound />} />
+            <Route path="/">
+              <Route index element={<HomePage />} />
+              <Route path="/newArrival" element={<NewArrival />} />
+              <Route path="/specialOffer" element={<SpecialOffer />} />
+              <Route path="/trendingPhones" element={<TrendingPhones />} />
+              <Route path="brand/:brandName" element={<Brand />} />
+              <Route path="series/:seriesList" element={<SeriesList />} />
+              <Route path="specCreator" element={<SpecCreator />} />
+              <Route
+                path="phone/:productId/:productName"
+                element={<SingleItem />}
+              />
+              <Route path="*" element={<PageNotFound />} />
+            </Route>
           </Routes>
         </MainLayout>
       </BrowserRouter>

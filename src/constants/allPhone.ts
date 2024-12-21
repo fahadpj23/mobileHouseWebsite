@@ -213,6 +213,12 @@ import MOTOROLAEDGE50PEACHFUZZ1 from "assets/motorola/MOTOROLAEDGE50/MOTOROLAEDG
 
 import MOTOROLAEDGE50PROCANEELBAY1 from "assets/motorola/MOTOROLAEDGE50PRO/MOTOROLAEDGE50PROCANEELBAY/MOTOROLAEDGE50PROCANEELBAY1.jpeg";
 
+//Poco
+
+import POCOC75SILVERSTARDUST1 from "assets/poco/POCOC75/POCOC75SILVERSTARDUST/POCOC75SILVERSTARDUST1.jpeg";
+
+import POCOM7PROLAVENDERFROST1 from "assets/poco/POCOM7PRO/POCOM7PROLAVENDERFROST/POCOM7PROLAVENDERFROST1.jpeg";
+
 export const ALLPHONES = [
   //VIVO PHONES
   {
@@ -4205,7 +4211,7 @@ export const ALLPHONES = [
     image: MOTOROLAEDGE50NEOPANTONELATTE1,
     launchDate: "16-09-2024",
     networkType: "5G",
-    salesPrice: 20400,
+    salesPrice: 20899,
     specialOffer: false,
     trendingPhone: false,
     rating: 4.4,
@@ -4309,6 +4315,95 @@ export const ALLPHONES = [
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v14 ",
       Processor: "Snapdragon 7 Gen 3 Octa core ",
+    },
+  },
+
+  //POCO
+
+  {
+    id: "POCO1",
+    name: "POCO C75 4/64",
+    brand: "POCO",
+    prebook: false,
+    series: "C75",
+    image: POCOC75SILVERSTARDUST1,
+    launchDate: "19-12-2024",
+    networkType: "5G",
+    salesPrice: 7999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 4.0,
+    newArrival: true,
+    mrp: 10999,
+    ram: 4,
+    storage: 64,
+    specifications: {
+      Display: "6.88″ (17.48 cm) 120Hz IPS LCD ",
+      "Rear Camera": "50 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "4 GB | 64 GB ",
+      Battery: "5160 mAh | 18W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+      Processor: "Snapdragon 4s Gen 2 Octa core ",
+    },
+  },
+
+  {
+    id: "POCO2",
+    name: "POCO M7 PRO 6/128",
+    brand: "POCO",
+    prebook: false,
+    series: "M7PRO",
+    image: POCOM7PROLAVENDERFROST1,
+    launchDate: "20-12-2024",
+    networkType: "5G",
+    salesPrice: 13999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 4.3,
+    newArrival: true,
+    mrp: 18999,
+    ram: 6,
+    storage: 128,
+    specifications: {
+      Display: "6.67″ (16.94 cm) 120Hz G-OLED ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "20 MP",
+      "RAM | Storage": "6 GB | 128 GB ",
+      Battery: "5110 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+      Processor: "MediaTek Dimensity 7025 Ultra Octa core ",
+    },
+  },
+
+  {
+    id: "POCO3",
+    name: "POCO M7 PRO 8/256",
+    brand: "POCO",
+    prebook: false,
+    series: "M7PRO",
+    image: POCOM7PROLAVENDERFROST1,
+    launchDate: "20-12-2024",
+    networkType: "5G",
+    salesPrice: 16999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 4.3,
+    newArrival: true,
+    mrp: 20999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Display: "6.67″ (16.94 cm) 120Hz G-OLED ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "20 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5110 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+      Processor: "MediaTek Dimensity 7025 Ultra Octa core ",
     },
   },
 ];

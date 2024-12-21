@@ -6,6 +6,7 @@ import MILOGO from "assets/brands/miLogo.png";
 import TECNOLOGO from "assets/brands/tecnoLogo.png";
 import IQOO from "assets/brands/IQOO.jpg";
 import MOTOLOGO from "assets/brands/motoLogo.png";
+import POCOLOGO from "assets/brands/pocoLogo.png";
 
 export const PHONEBRANDS = [
   { name: "VIVO", image: VIVOLOGO, link: "/vivo", value: "vivo" },
@@ -16,4 +17,5 @@ export const PHONEBRANDS = [
   { name: "TECNO", image: TECNOLOGO, link: "/tecno", value: "tecno" },
   { name: "IQOO", image: IQOO, link: "/iqoo", value: "iq00" },
   { name: "MOTOROLA", image: MOTOLOGO, link: "/motorola", value: "motorola" },
+  { name: "POCO", image: POCOLOGO, link: "/poco", value: "poco" },
 ];
