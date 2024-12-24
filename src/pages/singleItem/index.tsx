@@ -87,7 +87,7 @@ const SingleItem = () => {
                 {isMobile && !isLoading && productImages?.images?.length ? (
                   <ProductImageSlider productImages={productImages} />
                 ) : (
-                  <div className="w-[20vw] h-[25vw] flex justify-center items-center   ">
+                  <div className="w-[80vw] h-[50vh] md:w-[30vw] md:h-[30vw] flex justify-center items-center   ">
                     <div className="w-full h-full ">
                       <LazyImage
                         src={displayImage}

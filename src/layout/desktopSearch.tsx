@@ -35,7 +35,7 @@ const DesktopSearch = () => {
         />
         <SearchOutlinedIcon sx={{ color: "#808080" }} />
       </div>
-      {searchValue && searchData?.length && (
+      {searchValue && searchData?.length ? (
         <div className="absolute -left-3 top-12 flex flex-col space-y-4 overflow-y-auto bg-gray-100 ml-3 max-h-[30vw] w-full z-20 p-2 shadow-xl">
           {searchData?.map((phone: any) => {
             return (
@@ -61,7 +61,7 @@ const DesktopSearch = () => {
             );
           })}
         </div>
-      )}
+      ) : null}
     </div>
   );
 };

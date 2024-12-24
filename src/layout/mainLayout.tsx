@@ -8,6 +8,7 @@ import SearchBar from "./searchBar";
 import { useScreenSize } from "hooks/useScreenSize";
 import DesktopSearch from "./desktopSearch";
 import LazyImage from "components/commonComponents/imageLazyLoading";
+import { Link } from "react-router-dom";
 
 const MainLayout = ({ children }: any) => {
   const navigate = useNavigate();
@@ -18,12 +19,12 @@ const MainLayout = ({ children }: any) => {
       <div className=" flex  justify-between w-full items-center">
         <SideDrawar />
 
-        <div
+        <Link
+          to="/"
           className="mt-3 md:mt-0 h-[40px] w-[180px] md:h-[60px] md:w-[250px]"
-          onClick={() => navigate("/")}
         >
           <LazyImage src={mobileHouseLogo} alt="banner" />
-        </div>
+        </Link>
         {isMobile ? (
           <div className="block md:hidden ">
             <button onClick={() => setSearchOpen(true)}>
