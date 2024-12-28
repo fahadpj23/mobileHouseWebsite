@@ -11,6 +11,8 @@ import HomeSkeleton from "components/skeleton/homeSkeleton";
 import { useScreenSize } from "hooks/useScreenSize";
 import PopupAds from "components/commonComponents/popupAds";
 import { removeDuplicateSeries } from "utils/removeDuplicateSeries";
+import ProductType from "components/Home/productType";
+
 const ProductMiniList = React.lazy(
   () => import("components/Home/productMiniList")
 );
@@ -30,9 +32,11 @@ const HomePage = () => {
         <ImageSlider bannerItems={MAINBANNER} />
 
         <Brands />
+        <ProductType />
         <AvailableEmi />
+        <WhatsappAds />
         <Suspense fallback={<HomeSkeleton />}>
-          <div className="p-2 bg-white ">
+          {/* <div className="p-2 bg-white ">
             <ProductMiniList
               title="new Arrival"
               listItems={removeDuplicateSeries(getNewArrivalPhones())?.slice(
@@ -41,9 +45,8 @@ const HomePage = () => {
               )}
               link="/newArrival"
             />
-          </div>
-          <WhatsappAds />
-          <div className="p-2 bg-white ">
+          </div> */}
+          {/* <div className="p-2 bg-white ">
             <ProductMiniList
               title="Trending Phones"
               listItems={removeDuplicateSeries(getTrendingPhones())?.slice(
@@ -52,9 +55,9 @@ const HomePage = () => {
               )}
               link="/trendingPhones"
             />
-          </div>
+          </div> */}
           <Banner />
-          <div className="p-2 bg-white ">
+          {/* <div className="p-2 bg-white ">
             <ProductMiniList
               title="Special Offer"
               listItems={removeDuplicateSeries(getSpecialOfferPhones())?.slice(
@@ -63,7 +66,7 @@ const HomePage = () => {
               )}
               link="/specialOffer"
             />
-          </div>
+          </div> */}
           {/* <OurServices /> */}
           <Footer />
         </Suspense>
