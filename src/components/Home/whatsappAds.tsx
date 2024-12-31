@@ -26,13 +26,14 @@ const WhatsappAds = () => {
   };
 
   return (
-    <div className="p-2">
+    <div className="p-2 ">
       <Carousel
         responsive={responsive}
         infinite={true}
         arrows={false}
         autoPlay={true}
       >
+        {/* <div className="grid grid-cols-6"> */}
         {WhatappAdsList.map((item) => (
           <Link
             to={`series/${item?.series}`}
@@ -44,6 +45,7 @@ const WhatsappAds = () => {
             </div>
           </Link>
         ))}
+        {/* </div> */}
       </Carousel>
     </div>
   );

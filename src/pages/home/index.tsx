@@ -34,8 +34,11 @@ const HomePage = () => {
         <Brands />
         <ProductType />
         <AvailableEmi />
-        <WhatsappAds />
         <Suspense fallback={<HomeSkeleton />}>
+          <div>
+            <WhatsappAds />
+          </div>
+
           {/* <div className="p-2 bg-white ">
             <ProductMiniList
               title="new Arrival"
