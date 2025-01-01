@@ -11,6 +11,7 @@ import HomeSkeleton from "components/skeleton/homeSkeleton";
 import { useScreenSize } from "hooks/useScreenSize";
 import PopupAds from "components/commonComponents/popupAds";
 import { removeDuplicateSeries } from "utils/removeDuplicateSeries";
+import LazyLoad from "components/commonComponents/lazyLoad";
 const ProductMiniList = React.lazy(
   () => import("components/Home/productMiniList")
 );
@@ -26,12 +27,12 @@ const HomePage = () => {
     <div className="w-screen flex justify-center pb-6 ">
       <div className=" w-full md:w-11/12 flex flex-col space-y-6">
         {isMobile && !hasSeenPopup && <PopupAds />}
-
         <ImageSlider bannerItems={MAINBANNER} />
-
         <Brands />
         <AvailableEmi />
-        <Suspense fallback={<HomeSkeleton />}>
+        <h1>Scroll down to load the component</h1>
+        <div style={{ height: "100vh" }} /> {/* Spacer */}
+        <LazyLoad>
           <div className="p-2 bg-white ">
             <ProductMiniList
               title="new Arrival"
@@ -66,7 +67,7 @@ const HomePage = () => {
           </div>
           {/* <OurServices /> */}
           <Footer />
-        </Suspense>
+        </LazyLoad>
       </div>
     </div>
   );
