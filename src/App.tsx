@@ -1,10 +1,13 @@
+import { ProductProvider } from "context/productContext";
 import "./App.css";
 import PageRoute from "./pageRoute";
 
 function App() {
   return (
     <div>
-      <PageRoute />
+      <ProductProvider>
+        <PageRoute />
+      </ProductProvider>
     </div>
   );
 }
