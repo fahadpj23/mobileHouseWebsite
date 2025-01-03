@@ -15,9 +15,9 @@ const filterLastSixMonths = (items: any) => {
   });
 };
 
-export const getNewArrivalPhones = () => {
-  const newArrivalPhones = filterLastSixMonths(ALLPHONES);
-  const products = newArrivalPhones.sort((a: any, b: any) => {
+export const getNewArrivalPhones = (products: any) => {
+  const newArrivalPhones = filterLastSixMonths(products);
+  const newArrivalProducts = newArrivalPhones.sort((a: any, b: any) => {
     const [dayA, monthA, yearA] = a.launchDate.split("-").map(Number);
     const [dayB, monthB, yearB] = b.launchDate.split("-").map(Number);
 
@@ -26,5 +26,5 @@ export const getNewArrivalPhones = () => {
 
     return dateB - dateA;
   });
-  return products;
+  return newArrivalProducts;
 };

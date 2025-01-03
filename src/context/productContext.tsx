@@ -1,5 +1,15 @@
+import { getNewArrivalPhones } from "utils/getNewArrival";
 import app from "constants/firebaseCofig";
-import { get, getDatabase, ref } from "firebase/database";
+
+import {
+  endAt,
+  equalTo,
+  get,
+  getDatabase,
+  orderByChild,
+  query,
+  ref,
+} from "firebase/database";
 import React, { createContext, useState, ReactNode, useEffect } from "react";
 
 // Define a Product type
@@ -31,21 +41,37 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({
 }) => {
   const [products, setProducts] = useState<Product[]>([]);
 
-  const fetchProduct = async () => {
+  const fetchSpecialOfferProduct = async () => {
     const db = getDatabase(app);
     const dbRef = ref(db, "products");
-    const snapshot = await get(dbRef);
+    const dbquery = query(dbRef, orderByChild("specialOffer"), equalTo(true));
+    const snapshot = await get(dbquery);
+
     if (snapshot.exists()) {
-      console.log(Object.values(snapshot.val()));
       setProducts(Object.values(snapshot.val()));
     } else {
       alert("error");
     }
   };
+
+  const fetchNewArrivalProduct = async () => {
+    const db = getDatabase(app);
+    const dbquery = ref(db, "products");
+    const snapshot = await get(dbquery);
+
+    if (snapshot.exists()) {
+      const products = Object.values(snapshot.val());
+      products?.length ? setProducts(getNewArrivalPhones(products)) : [];
+      console.log(getNewArrivalPhones(products));
+    } else {
+      alert("error");
+    }
+  };
+
   useEffect(() => {
-    fetchProduct();
+    fetchNewArrivalProduct();
   }, []);
-  console.log("Dsd");
+
   return (
     <ProductContext.Provider value={{ products }}>
       {children}
