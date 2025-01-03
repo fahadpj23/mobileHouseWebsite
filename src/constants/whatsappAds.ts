@@ -13,13 +13,12 @@ export const WhatappAdsList = [
   {
     id: 2,
     image: whatsAppImage2,
-    series: ["F155G"],
+    series: ["F27PRO+"],
   },
-
   {
     id: 3,
     image: whatsAppImage3,
-    series: ["A165G"],
+    series: ["V40e"],
   },
 
   {

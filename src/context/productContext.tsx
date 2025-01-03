@@ -22,11 +22,15 @@ export interface Product {
 // Define the context type
 interface ProductContextType {
   products: Product[];
+  fetchSpecialOfferProduct: any;
+  fetchNewArrivalProduct: any;
 }
 
 // Create a default context value
 const defaultContext: ProductContextType = {
   products: [],
+  fetchSpecialOfferProduct: [],
+  fetchNewArrivalProduct: [],
 };
 
 // Create the context
@@ -39,7 +43,7 @@ interface ProductProviderProps {
 export const ProductProvider: React.FC<ProductProviderProps> = ({
   children,
 }) => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<any>([]);
 
   const fetchSpecialOfferProduct = async () => {
     const db = getDatabase(app);
@@ -60,20 +64,34 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({
     const snapshot = await get(dbquery);
 
     if (snapshot.exists()) {
-      const products = Object.values(snapshot.val());
-      products?.length ? setProducts(getNewArrivalPhones(products)) : [];
-      console.log(getNewArrivalPhones(products));
+      const data = Object.values(snapshot.val());
+      console.log(data);
+      // console.log(Array(data)?.length ? getNewArrivalPhones(data) : "Dsd");
+    } else {
+      alert("error");
+    }
+  };
+
+  const fetchAllProduct = async () => {
+    const db = getDatabase(app);
+    const dbquery = ref(db, "products");
+    const snapshot = await get(dbquery);
+
+    if (snapshot.exists()) {
+      setProducts(Object.values(snapshot.val()));
     } else {
       alert("error");
     }
   };
 
   useEffect(() => {
-    fetchNewArrivalProduct();
+    fetchAllProduct();
   }, []);
 
   return (
-    <ProductContext.Provider value={{ products }}>
+    <ProductContext.Provider
+      value={{ products, fetchSpecialOfferProduct, fetchNewArrivalProduct }}
+    >
       {children}
     </ProductContext.Provider>
   );

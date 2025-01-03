@@ -11,6 +11,7 @@ import HomeSkeleton from "components/skeleton/homeSkeleton";
 import { useScreenSize } from "hooks/useScreenSize";
 import PopupAds from "components/commonComponents/popupAds";
 import { removeDuplicateSeries } from "utils/removeDuplicateSeries";
+import { FetchAllPhone } from "constants/fetchAllPhone";
 const ProductMiniList = React.lazy(
   () => import("components/Home/productMiniList")
 );
@@ -21,7 +22,6 @@ const Footer = React.lazy(() => import("components/Home/footer"));
 const HomePage = () => {
   const { isMobile } = useScreenSize();
   const hasSeenPopup = localStorage.getItem("hasSeenPopup");
-
   return (
     <div className="w-screen flex justify-center pb-6 ">
       <div className=" w-full md:w-11/12 flex flex-col space-y-6">

@@ -10,12 +10,14 @@ const DesktopSearch = () => {
 
   const handleSearch = (search: any) => {
     setSearchValue(search);
-    const filteredData = ALLPHONES.filter((phone) =>
-      phone.name
-        .toLowerCase()
-        .replace(/\s+/g, "")
-        .includes(search.toLowerCase().replace(/\s+/g, ""))
-    );
+    const filteredData =
+      Array.isArray(ALLPHONES) &&
+      ALLPHONES.filter((phone) =>
+        phone.name
+          .toLowerCase()
+          .replace(/\s+/g, "")
+          .includes(search.toLowerCase().replace(/\s+/g, ""))
+      );
     setSearchData(filteredData);
   };
 
