@@ -675,7 +675,7 @@ export const ALLPHONES = [
 
   {
     id: "VIVO17",
-    name: "VIVO X200 5G 12/512",
+    name: "VIVO X200 5G 12/256",
     brand: "VIVO",
     prebook: false,
     series: "VIVOX200",
