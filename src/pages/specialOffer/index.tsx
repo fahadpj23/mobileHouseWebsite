@@ -1,12 +1,13 @@
 import { getSpecialOfferPhones } from "utils/getSpecialOfferPhone";
 import ProductList from "components/commonComponents/productList";
+import { useFetchSpecialProducts } from "hooks/useFetchSpecialOfferProduct";
 
 const SpecialOffer = () => {
-  const specialOfferPhones = getSpecialOfferPhones();
+  const { specialOfferProducts } = useFetchSpecialProducts();
   return (
     <div>
-      {specialOfferPhones?.length ? (
-        <ProductList products={specialOfferPhones} />
+      {Array.isArray(specialOfferProducts) ? (
+        <ProductList products={specialOfferProducts} />
       ) : null}
     </div>
   );

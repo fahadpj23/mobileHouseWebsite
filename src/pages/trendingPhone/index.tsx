@@ -1,12 +1,13 @@
+import { useFetchTrendingProducts } from "hooks/useFetchTrendingPhone";
 import ProductList from "components/commonComponents/productList";
 import { getTrendingPhones } from "utils/getTrendingPhones";
 
 const TrendingPhones = () => {
-  const trendingPhones = getTrendingPhones();
+  const { trendingProducts } = useFetchTrendingProducts();
   return (
     <div>
-      {trendingPhones?.length ? (
-        <ProductList products={trendingPhones} />
+      {Array.isArray(trendingProducts) ? (
+        <ProductList products={trendingProducts} />
       ) : null}
     </div>
   );

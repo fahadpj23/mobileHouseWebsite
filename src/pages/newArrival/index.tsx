@@ -1,11 +1,14 @@
 import { getNewArrivalPhones } from "utils/getNewArrival";
 import ProductList from "components/commonComponents/productList";
+import { useFetchNewArrival } from "hooks/useFetchNewArrival";
 
 const NewArrival = () => {
-  const newArrivals = getNewArrivalPhones();
+  const { newArrivalProducts }: any = useFetchNewArrival();
   return (
     <div>
-      {newArrivals?.length ? <ProductList products={newArrivals} /> : null}
+      {Array.isArray(newArrivalProducts) ? (
+        <ProductList products={newArrivalProducts} />
+      ) : null}{" "}
     </div>
   );
 };
