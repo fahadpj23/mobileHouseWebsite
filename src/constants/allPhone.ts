@@ -79,6 +79,8 @@ import OPPOA3PROMOONLIGHTPURPLE1 from "assets/oppo/OPPOA3PRO/OPPOA3PROMOONLIGHTP
 
 import OPPOA3PROSTARRYBLACK1 from "assets/oppo/OPPOA3PRO/OPPOA3PROSTARRYBLACK/OPPOA3PROSTARRYBLACK1.jpg";
 
+import RENO135GLUMINOUSWHITE1 from "assets/oppo/RENO13/RENO135GIVORYWHITE/RENO135GIVORYWHITE1.png";
+
 //vivo
 
 import VIVOY3005GPHANTOMPURPLE1 from "assets/vivo/VIVOY3005G/VIVOY3005GPHANTOMPURPLE/VIVOY3005GPHANTOMPURPLE1.jpg";
@@ -2170,6 +2172,31 @@ export const ALLPHONES = [
     },
   },
 
+  // {
+  //   id: "OPPO21",
+  //   name: "OPPO RENO 13 ",
+  //   brand: "OPPO",
+  //   image: RENO135GLUMINOUSWHITE1,
+  //   launchDate: "09-01-2025",
+  //   networkType: "5G",
+  //   specialOffer: false,
+  //   trendingPhone: false,
+  //   rating: 4.7,
+  //   newArrival: true,
+  //   ram: "",
+  //   storage: "128",
+  //   specifications: {
+  //     Processor: "MediaTek Dimensity 8350 Octa core ",
+  //     Display: "6.59″ (16.74 cm) 120Hz AMOLED ",
+  //     "Rear Camera": "50+8 MP",
+  //     "Front Camera": "50 MP",
+  //     // "RAM | Storage": "8 GB | 128 GB ",
+  //     Battery: "5600 mAh | 80W Fast Charging ",
+  //     Network: "Dual SIM: 5G & 5G",
+  //     OS: "Android v15 ",
+  //   },
+  // },
+
   //REALME PHONES
   {
     id: "REALME1",
@@ -2294,7 +2321,7 @@ export const ALLPHONES = [
     image: REALMEC65FEATHERGREEN1,
     launchDate: "26-04-2024",
     networkType: "5G",
-    salesPrice: 11499,
+    salesPrice: 10999,
     specialOffer: false,
     trendingPhone: false,
     rating: 4.4,
@@ -2323,7 +2350,7 @@ export const ALLPHONES = [
     image: REALMEC65FEATHERGREEN1,
     launchDate: "26-04-2024",
     networkType: "5G",
-    salesPrice: 12499,
+    salesPrice: 11999,
     specialOffer: false,
     trendingPhone: false,
     rating: 4.4,
@@ -2352,7 +2379,7 @@ export const ALLPHONES = [
     image: REALMEC65FEATHERGREEN1,
     launchDate: "26-04-2024",
     networkType: "5G",
-    salesPrice: 13999,
+    salesPrice: 12999,
     specialOffer: false,
     trendingPhone: false,
     rating: 4.4,
@@ -2816,7 +2843,7 @@ export const ALLPHONES = [
     series: "A165G",
     image: SAMSUNGA165GGOLD1,
     launchDate: "07-10-2024",
-    salesPrice: 16499,
+    salesPrice: 15499,
     specialOffer: false,
     trendingPhone: true,
     rating: 4.7,
@@ -2843,7 +2870,7 @@ export const ALLPHONES = [
     series: "A165G",
     image: SASMSUNGA165GBLUEBLACK1,
     launchDate: "07-10-2024",
-    salesPrice: 17999,
+    salesPrice: 16999,
     specialOffer: true,
     trendingPhone: false,
     rating: 4.7,
@@ -2870,7 +2897,7 @@ export const ALLPHONES = [
     series: "A165G",
     image: SAMSUNGA165GGOLD1,
     launchDate: "07-10-2024",
-    salesPrice: 20999,
+    salesPrice: 19999,
     specialOffer: false,
     trendingPhone: false,
     rating: 4.7,
