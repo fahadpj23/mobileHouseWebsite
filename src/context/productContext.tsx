@@ -82,7 +82,6 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({
 
     if (snapshot.exists()) {
       setNewArrivalproducts(Object.values(snapshot.val()));
-      // console.log(Array(data)?.length ? getNewArrivalPhones(data) : "Dsd");
     } else {
       alert("error");
     }

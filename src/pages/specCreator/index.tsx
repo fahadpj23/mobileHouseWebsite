@@ -92,13 +92,7 @@ function SpecCreator() {
       alert("error");
     }
   };
-  // useEffect(() => {
-  //   data?.length &&
-  //     data?.flat()?.map((item, key) => {
-  //       // console.log(item);
-  //     });
-  // }, [data]);
-  console.log(data);
+
   return (
     <div>
       <h1>WRITE/HOMEPAGE</h1>

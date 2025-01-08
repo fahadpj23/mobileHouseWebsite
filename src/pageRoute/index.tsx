@@ -19,6 +19,7 @@ import TrendingPhones from "pages/trendingPhone";
 import SeriesList from "pages/seriesList";
 import PageNotFound from "pages/404Page";
 import SpecCreator from "pages/specCreator";
+import PhonePriceUpdate from "pages/phonePriceUpdate";
 const PageRoute = () => {
   return (
     <div>
@@ -33,6 +34,7 @@ const PageRoute = () => {
               <Route path="brand/:brandName" element={<Brand />} />
               <Route path="series/:seriesList" element={<SeriesList />} />
               <Route path="specCreator" element={<SpecCreator />} />
+              <Route path="phonePriceUpdate" element={<PhonePriceUpdate />} />
               <Route
                 path="phone/:productId/:productName"
                 element={<SingleItem />}
