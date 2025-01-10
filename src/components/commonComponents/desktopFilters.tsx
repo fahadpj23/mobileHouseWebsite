@@ -105,7 +105,11 @@ const DesktopFilter: FC<props> = ({
   return (
     <div>
       {productFilters?.map((filter: any) => {
-        return <div>{filterDetails(filter?.name, filter?.value)}</div>;
+        return (
+          <div key={filter?.name}>
+            {filterDetails(filter?.name, filter?.value)}
+          </div>
+        );
       })}
     </div>
   );
