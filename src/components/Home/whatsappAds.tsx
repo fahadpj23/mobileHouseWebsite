@@ -33,17 +33,23 @@ const WhatsappAds = () => {
         arrows={false}
         autoPlay={true}
       >
-        {WhatappAdsList.map((item) => (
-          <Link
-            to={`series/${item?.series}`}
-            key={item?.id}
-            style={{ margin: "3px 8px" }}
-          >
-            <div className="w-[93%] h-[60vw] md:h-[22vw]  ">
+        {WhatappAdsList.map((item) =>
+          item?.series ? (
+            <Link
+              to={`series/${item?.series}`}
+              key={item?.id}
+              style={{ margin: "3px 8px" }}
+            >
+              <div className="w-[93%] h-[60vw] md:h-[22vw]  ">
+                <LazyImage src={item?.image} alt="phone Image" fill={true} />
+              </div>
+            </Link>
+          ) : (
+            <div key={item?.id} className="w-[93%] h-[60vw] md:h-[22vw]  ">
               <LazyImage src={item?.image} alt="phone Image" fill={true} />
             </div>
-          </Link>
-        ))}
+          )
+        )}
       </Carousel>
     </div>
   );

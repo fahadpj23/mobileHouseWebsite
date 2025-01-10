@@ -4,15 +4,15 @@ const PhonePriceUpdate = () => {
   const updateProductPrice = async () => {
     try {
       const db = getDatabase(app);
-      const productRef = ref(db, `products/VIVO19`); // Assuming "products" is your main node
-      const productSnap = await get(productRef);
-
-      if (productSnap.exists()) {
-        console.log("Product Data:", productSnap.val());
-        return productSnap.val();
-      } else {
-        console.log("No such product found!");
-      }
+      const productRef = ref(db, `products/VIVO1`); // Assuming 'products' is the node
+      update(productRef, { salesPrice: 30000 })
+        .then(() => {
+          alert("Product price updated successfully!");
+        })
+        .catch((error) => {
+          console.error("Error updating product:", error);
+          alert("Failed to update product price.");
+        });
     } catch (error) {
       console.error("Error fetching product:", error);
     }
