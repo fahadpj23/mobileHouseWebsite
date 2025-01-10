@@ -10,6 +10,7 @@ export const MAINBANNER = [
   {
     id: 1,
     image: BANNER1,
+    series: ["RENO13,RENO13PRO"],
   },
   {
     id: 2,
