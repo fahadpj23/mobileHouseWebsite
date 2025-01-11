@@ -117,7 +117,7 @@ import VIVOX200NATURALGREEN1 from "assets/vivo/VIVOX200/VIVOX200NATURALGREEN/VIV
 
 import VIVOX200PROTITANIUMGREY1 from "assets/vivo/VIVOX200PRO/VIVOX200TITANIUMGREY/VIVOX200PROTITANIUMGREY1.jpg";
 
-import VIVOY295GDIAMONDBLACK1 from "assets/vivo/VIVOY29/VIVOY295GDIAMONDBLACK/VIVOY295GDIAMONDBLACK1.jpg";
+import VIVOY295GGLACIERBLUE1 from "assets/vivo/VIVOY29/VIVOY295GGLACIERBLUE/VIVOY295GGLACIERBLUE1.jpeg";
 
 //samsung
 import SAMSUNGA165GGOLD1 from "assets/samsung/SASMSUNGA165G/SAMSUNGA165GGOLD/SAMSUNGA165GGOLD1.jpeg";
@@ -127,12 +127,6 @@ import SASMSUNGA165GBLUEBLACK1 from "assets/samsung/SASMSUNGA165G/SASMSUNGA165GB
 import A05SBLACK1 from "assets/samsung/A05S/A05SBLACK/A05SBLACK1.jpeg";
 
 import SAMSUNGA06BLACK1 from "assets/samsung/SAMSUNGA06/SAMSUNGA06BLACK/SAMSUNGA06BLACK1.jpg";
-
-import SAMSUNGA15BLUE1 from "assets/samsung/SAMSUNGA15/SAMSUNGA15BLUE/SAMSUNGA15BLUE1.jpg";
-
-import SAMSUNGA15BLUEBLACK1 from "assets/samsung/SAMSUNGA15/SAMSUNGA15BLUEBLACK/SAMSUNGA15BLUEBLACK1.jpg";
-
-import SAMSUNGA15LIGHTBLUE1 from "assets/samsung/SAMSUNGA15/SAMSUNGA15LIGHTBLUE/SAMSUNGA15LIGHTBLUE1.jpg";
 
 import SAMSUNGA35AWESOMEICEBLUE1 from "assets/samsung/SAMSUNGA35/SAMSUNGA35AWESOMEICEBLUE/SAMSUNGA35AWESOMEICEBLUE1.jpg";
 
@@ -762,29 +756,28 @@ export const ALLPHONES = [
       Processor: "MediaTek Dimensity 9400 Octa core ",
     },
   },
-
   {
     id: "VIVO20",
-    name: "VIVO Y29 5G 8/256",
+    name: "VIVO Y29 5G 4/128",
     brand: "VIVO",
     prebook: false,
     series: "VIVOY29",
-    image: VIVOY295GDIAMONDBLACK1,
+    image: VIVOY295GGLACIERBLUE1,
     launchDate: "24-12-2024",
     networkType: "5G",
-    salesPrice: 18999,
+    salesPrice: 13999,
     specialOffer: false,
     trendingPhone: false,
     rating: 4.1,
     newArrival: true,
-    mrp: 22999,
-    ram: 8,
-    storage: 256,
+    mrp: 17999,
+    ram: 4,
+    storage: 128,
     specifications: {
       Display: "6.68″ IPS LCD, 90Hz  ",
       "Rear Camera": "50 MP",
       "Front Camera": "8 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
+      "RAM | Storage": "4 GB | 128 GB ",
       Battery: "5500 mAh | 44W Fast Charging ",
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v15 ",
@@ -793,39 +786,11 @@ export const ALLPHONES = [
   },
   {
     id: "VIVO21",
-    name: "VIVO Y29 5G 8/128",
-    brand: "VIVO",
-    prebook: false,
-    series: "VIVOY29",
-    image: VIVOY295GDIAMONDBLACK1,
-    launchDate: "24-12-2024",
-    networkType: "5G",
-    salesPrice: 16999,
-    specialOffer: false,
-    trendingPhone: false,
-    rating: 4.1,
-    newArrival: true,
-    mrp: 20999,
-    ram: 8,
-    storage: 128,
-    specifications: {
-      Display: "6.68″ IPS LCD, 90Hz  ",
-      "Rear Camera": "50 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "5500 mAh | 44W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v15 ",
-      Processor: "Mediatek Dimensity 6300 (6 nm) ",
-    },
-  },
-  {
-    id: "VIVO22",
     name: "VIVO Y29 5G 6/128",
     brand: "VIVO",
     prebook: false,
     series: "VIVOY29",
-    image: VIVOY295GDIAMONDBLACK1,
+    image: VIVOY295GGLACIERBLUE1,
     launchDate: "24-12-2024",
     networkType: "5G",
     salesPrice: 15499,
@@ -848,27 +813,55 @@ export const ALLPHONES = [
     },
   },
   {
-    id: "VIVO23",
-    name: "VIVO Y29 5G 4/128",
+    id: "VIVO22",
+    name: "VIVO Y29 5G 8/128",
     brand: "VIVO",
     prebook: false,
     series: "VIVOY29",
-    image: VIVOY295GDIAMONDBLACK1,
+    image: VIVOY295GGLACIERBLUE1,
     launchDate: "24-12-2024",
     networkType: "5G",
-    salesPrice: 13999,
+    salesPrice: 16999,
     specialOffer: false,
     trendingPhone: false,
     rating: 4.1,
     newArrival: true,
-    mrp: 17999,
-    ram: 4,
+    mrp: 20999,
+    ram: 8,
     storage: 128,
     specifications: {
       Display: "6.68″ IPS LCD, 90Hz  ",
       "Rear Camera": "50 MP",
       "Front Camera": "8 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5500 mAh | 44W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "Mediatek Dimensity 6300 (6 nm) ",
+    },
+  },
+  {
+    id: "VIVO23",
+    name: "VIVO Y29 5G 8/256",
+    brand: "VIVO",
+    prebook: false,
+    series: "VIVOY29",
+    image: VIVOY295GGLACIERBLUE1,
+    launchDate: "24-12-2024",
+    networkType: "5G",
+    salesPrice: 18999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 4.1,
+    newArrival: true,
+    mrp: 22999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Display: "6.68″ IPS LCD, 90Hz  ",
+      "Rear Camera": "50 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
       Battery: "5500 mAh | 44W Fast Charging ",
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v15 ",

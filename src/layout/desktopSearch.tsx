@@ -7,7 +7,7 @@ import LazyImage from "components/commonComponents/imageLazyLoading";
 const DesktopSearch = () => {
   const [searchData, setSearchData] = useState<any>([]);
   const [searchValue, setSearchValue] = useState<string>("");
-  const [showSearchResult, setShowSearchResult] = useState<boolean>(false);
+  // const [showSearchResult, setShowSearchResult] = useState<boolean>(false);
   const location = useLocation();
 
   const handleSearch = (search: any) => {
@@ -18,7 +18,7 @@ const DesktopSearch = () => {
         .replace(/\s+/g, "")
         .includes(search.toLowerCase().replace(/\s+/g, ""))
     );
-    setSearchData(filteredData.slice(10));
+    setSearchData(filteredData);
   };
 
   const handleSelect = () => {
@@ -26,14 +26,14 @@ const DesktopSearch = () => {
     setSearchValue("");
   };
 
-  const handleOutSideClick = () => {
-    setShowSearchResult(false);
-    setSearchValue("");
-  };
+  // const handleOutSideClick = () => {
+  //   setShowSearchResult(false);
+  //   setSearchValue("");
+  // };
 
-  useEffect(() => {
-    setShowSearchResult(false);
-  }, [location]);
+  // useEffect(() => {
+  //   setShowSearchResult(false);
+  // }, [location]);
 
   return (
     <div className="relative">
@@ -43,13 +43,11 @@ const DesktopSearch = () => {
           placeholder="search here"
           className="focus:outline-none"
           onChange={(e) => handleSearch(e.target.value)}
-          onClick={() => setShowSearchResult(true)}
-          onBlurCapture={handleOutSideClick}
         />
         <SearchOutlinedIcon sx={{ color: "#808080" }} />
       </div>
-      {showSearchResult && searchValue && searchData?.length ? (
-        <div className="absolute -left-3 top-12 flex flex-col space-y-4 overflow-y-auto bg-gray-100 ml-3 max-h-[30vw] w-full z-20 p-2 shadow-xl">
+      {searchValue && searchData?.length ? (
+        <div className="absolute -left-3 top-12 flex flex-col space-y-4 overflow-y-auto bg-gray-100 ml-3 max-h-[30vw] w-full z-50 p-2 shadow-xl">
           {searchData?.map((phone: any) => {
             return (
               <Link
