@@ -118,7 +118,7 @@ const SingleItem = () => {
           <div className=" w-full md:w-1/2 mt-0 md:mt-20 ">
             <div className="space-y-2 ml-3 md:ml-6">
               <h1 className="font-semibold truncate w-full text-[15px] md:text-base flex items-center space-x-1">
-                <span>{product?.name} </span>
+                <span>{product?.name && toPascalCase(product?.name)} </span>
                 <span>
                   {productImages?.name && toPascalCase(productImages?.name)}
                 </span>
