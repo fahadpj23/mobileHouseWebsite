@@ -34,7 +34,7 @@ const HomePage = () => {
         <Suspense fallback={<HomeSkeleton />}>
           <div className="p-2 bg-white ">
             <ProductMiniList
-              title="new Arrival"
+              title="New Arrival"
               listItems={removeDuplicateSeries(getNewArrivalPhones())?.slice(
                 0,
                 7

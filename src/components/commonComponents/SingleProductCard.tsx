@@ -2,6 +2,7 @@ import { Rating } from "@mui/material";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import LazyImage from "./imageLazyLoading";
+import { toPascalCase } from "utils/pascalCaseConvert";
 
 interface props {
   product: any;
@@ -21,17 +22,17 @@ const SingleProductCard: FC<props> = ({ product }) => {
           </div>
         </div>
         <div className="flex flex-col space-y-1">
-          <h1 className="font-semibold  w-full text-[13px] md:text-base truncate">
-            {product?.name}
+          <h1 className="  w-full text-[12px] md:text-[15px] font-medium ">
+            {product?.name && toPascalCase(product?.name)}
           </h1>
           <h1 className="absolute top-3 right-3 bg-blue-500 text-white rounded p-1  text-[10px] md:text-base">
             {Math.floor(DiscountPercentage)} %off
           </h1>
           <div className="flex space-x-3 items-center">
-            <h1 className="font-semibold tracking-wider text-[14px] md:text-lg ">
+            <h1 className="font-bold tracking-wider text-[13px] md:text-[15px] ">
               ₹{product.salesPrice}.00
             </h1>
-            <h1 className="line-through text-[11px] md:text-[13px] text-gray-500">
+            <h1 className="line-through text-[12px] md:text-[13px] text-gray-600">
               ₹{product.mrp}
             </h1>
           </div>

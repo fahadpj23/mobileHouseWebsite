@@ -2354,7 +2354,7 @@ export const ALLPHONES = [
       Display: "6.83″ (17.35 cm) 120Hz AMOLED ",
       "Rear Camera": "50+8+50 MP",
       "Front Camera": "50 MP",
-      "RAM | Storage": "12 GB | 256 GB ",
+      "RAM | Storage": "12 GB | 512 GB ",
       Battery: "5800 mAh | 80W Fast Charging ",
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v15 ",
