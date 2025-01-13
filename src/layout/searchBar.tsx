@@ -4,6 +4,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { ALLPHONES } from "constants/allPhone";
 import { Link } from "react-router-dom";
 import LazyImage from "components/commonComponents/imageLazyLoading";
+import { toPascalCase } from "utils/pascalCaseConvert";
 
 const SearchBar: FC<any> = ({ setSearchOpen }) => {
   const [searchData, setSearchData] = useState<any>([]);
@@ -44,9 +45,11 @@ const SearchBar: FC<any> = ({ setSearchOpen }) => {
                   <LazyImage src={phone?.image} alt="phone Image" />
                 </div>
               </div>
-              <div className="text-xs">
-                <h1>{phone?.name}</h1>
-                <h1 className="text-green-600">₹{phone?.salesPrice}</h1>
+              <div className="text-xs space-y-1">
+                <h1>{phone?.name && toPascalCase(phone?.name)}</h1>
+                <h1 className="text-green-600 tracking-wide">
+                  ₹{phone?.salesPrice}
+                </h1>
               </div>
             </Link>
           );

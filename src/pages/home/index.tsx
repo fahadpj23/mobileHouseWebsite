@@ -24,7 +24,7 @@ const HomePage = () => {
 
   return (
     <div className="w-screen flex justify-center pb-6 ">
-      <div className=" w-full md:w-11/12 flex flex-col space-y-6">
+      <div className=" w-full md:w-11/12 flex flex-col space-y-2 md:space-y-6">
         {isMobile && !hasSeenPopup && <PopupAds />}
 
         <ImageSlider bannerItems={MAINBANNER} />
