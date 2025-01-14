@@ -1,6 +1,7 @@
-import { getBrandPhones } from "utils/getBrandPhone";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
+import { getBrandPhones } from "utils/getBrandPhone";
 import ProductList from "components/commonComponents/productList";
 
 const Brand = () => {

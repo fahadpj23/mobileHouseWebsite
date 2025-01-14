@@ -1,15 +1,7 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { Suspense } from "react";
-import MainLayout from "layout/mainLayout";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-// const HomePage = React.lazy(() => import("pages/home"));
-// const NewArrival = React.lazy(() => import("pages/newArrival"));
-// const SpecialOffer = React.lazy(() => import("pages/specialOffer"));
-// const Brand = React.lazy(() => import("pages/brand"));
-// const SingleItem = React.lazy(() => import("pages/singleItem"));
-// const TrendingPhones = React.lazy(() => import("pages/trendingPhone"));
-// const SeriesList = React.lazy(() => import("pages/SeriesList"));
-// const SpecCreator = React.lazy(() => import("pages/specCreator"));
+import MainLayout from "layout/mainLayout";
 import HomePage from "pages/home";
 import NewArrival from "pages/newArrival";
 import SpecialOffer from "pages/specialOffer";
@@ -19,6 +11,7 @@ import TrendingPhones from "pages/trendingPhone";
 import SeriesList from "pages/seriesList";
 import PageNotFound from "pages/404Page";
 import SpecCreator from "pages/specCreator";
+
 const PageRoute = () => {
   return (
     <div>

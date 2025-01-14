@@ -1,8 +1,10 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import { List, ListItem, SwipeableDrawer } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
+
 import { NAVIGATIONITEMS } from "constants/navigationItems";
-import { Link } from "react-router-dom";
 import SocialMediaItems from "constants/socialMediaItems";
 import DynamicMuiIcon from "utils/dynamicMuiIcon";
 
@@ -47,7 +49,7 @@ const SideDrawar = () => {
                 ))}
               </div>
               <div className="mt-5 space-y-3">
-                {NAVIGATIONITEMS.map((navigation, index) => (
+                {NAVIGATIONITEMS.map((navigation) => (
                   <ListItem key={navigation.title}>
                     <Link
                       className="w-full flex space-x-4 items-center "

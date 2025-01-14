@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import { ALLPHONES } from "constants/allPhone";
 import { Link, useLocation } from "react-router-dom";
+
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+
+import { ALLPHONES } from "constants/allPhone";
 import LazyImage from "components/commonComponents/imageLazyLoading";
 
 const DesktopSearch = () => {
   const [searchData, setSearchData] = useState<any>([]);
   const [searchValue, setSearchValue] = useState<string>("");
-  // const [showSearchResult, setShowSearchResult] = useState<boolean>(false);
-  const location = useLocation();
 
   const handleSearch = (search: any) => {
     setSearchValue(search);
@@ -25,15 +25,6 @@ const DesktopSearch = () => {
     setSearchData([]);
     setSearchValue("");
   };
-
-  // const handleOutSideClick = () => {
-  //   setShowSearchResult(false);
-  //   setSearchValue("");
-  // };
-
-  // useEffect(() => {
-  //   setShowSearchResult(false);
-  // }, [location]);
 
   return (
     <div className="relative">
