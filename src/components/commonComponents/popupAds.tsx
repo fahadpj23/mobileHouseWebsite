@@ -1,11 +1,11 @@
+import { useState } from "react";
+import { Carousel } from "react-responsive-carousel";
+import { Link } from "react-router-dom";
+import CloseIcon from "@mui/icons-material/Close";
 import { Dialog, IconButton } from "@mui/material";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 import { POPUPADSITEM } from "constants/popUpAds";
 import LazyImage from "./imageLazyLoading";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import CloseIcon from "@mui/icons-material/Close";
 
 const PopupAds = () => {
   const [showPopUp, setShowPopUp] = useState<boolean>(true);
