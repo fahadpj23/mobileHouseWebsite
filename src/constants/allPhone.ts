@@ -94,8 +94,6 @@ import VIVOV40GANGESBLUE1 from "assets/vivo/VIVOV40/VIVOV40GANGESBLUE/VIVOV40GAN
 
 import VIVOV40LOTUSPURPLE1 from "assets/vivo/VIVOV40/VIVOV40LOTUSPURPLE/VIVOV40LOTUSPURPLE1.jpg";
 
-import VIVOY58HIMALAYANBLUE1 from "assets/vivo/VIVOY58/VIVOY58HIMALAYANBLUE/VIVOY58HIMALAYANBLUE1.jpg";
-
 import VIVOV40EMINTGREEN1 from "assets/vivo/VIVOV40E/VIVOV40EMINTGREEN/VIVOV40EMINTGREEN1.jpg";
 
 import VIVOY18IPACEBLACK1 from "assets/vivo/VIVOY18I/PEACEBLACK/VIVOY18IPACEBLACK1.jpg";
@@ -353,34 +351,6 @@ export const ALLPHONES = [
       "Front Camera": "16 MP",
       "RAM | Storage": "8 GB | 128 GB ",
       Battery: "5000 mAh | 44W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-      Processor: "Snapdragon 4 Gen 2 Octa core ",
-    },
-  },
-
-  {
-    id: "VIVO6",
-    name: "VIVO Y58 5G 8/128 ",
-    brand: "VIVO",
-    prebook: false,
-    series: "Y58",
-    image: VIVOY58HIMALAYANBLUE1,
-    launchDate: "20-06-2024",
-    salesPrice: 17499,
-    specialOffer: true,
-    trendingPhone: false,
-    rating: 4.4,
-    newArrival: false,
-    mrp: 23999,
-    ram: 8,
-    storage: 128,
-    specifications: {
-      Display: "6.72″ (17.07 cm) 120Hz LCD ",
-      "Rear Camera": "50+2 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "6000 mAh | 44W Fast Charging ",
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v14 ",
       Processor: "Snapdragon 4 Gen 2 Octa core ",
