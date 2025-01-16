@@ -5,11 +5,15 @@ import { IoHomeOutline } from "react-icons/io5";
 
 export const NAVIGATIONITEMS = [
   { title: "Home", link: "/", icon: <IoHomeOutline /> },
-  { title: "New Arrival", link: "newArrival", icon: <GrAnnounce /> },
+  { title: "New Arrival", link: "phones/newArrival", icon: <GrAnnounce /> },
   {
     title: "Special Offer",
-    link: "specialOffer",
+    link: "phones/specialOffer",
     icon: <RiDiscountPercentLine />,
   },
-  { title: "Trending Phone", link: "trendingPhones", icon: <FaArrowTrendUp /> },
+  {
+    title: "Trending Phone",
+    link: "phones/trendingPhones",
+    icon: <FaArrowTrendUp />,
+  },
 ];

@@ -7,7 +7,7 @@ const parseDate = (dateString: any) => {
 
 const filterLastSixMonths = (items: any) => {
   const sixMonthsAgo = new Date();
-  sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 5);
+  sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 4);
 
   return items.filter((item: any) => {
     const itemDate = item.launchDate && parseDate(item.launchDate);

@@ -23,10 +23,9 @@ import LazyImage from "./imageLazyLoading";
 
 const ProductList: FC<any> = ({ products }) => {
   const [searchParams] = useSearchParams();
-  const { isMobile } = useScreenSize();
-  const [filters, setFilters] = useState<any>({
+
+  const filterInitialValue = {
     network: searchParams.get("network") ? searchParams.get("network") : [],
-    // specialOffer: searchParams.get("specialOffer") == "true" ? true : false,
     ram: searchParams.get("ram")
       ? searchParams.get("ram")?.split(",").map(Number)
       : [],
@@ -42,8 +41,9 @@ const ProductList: FC<any> = ({ products }) => {
     priceMax: searchParams.get("priceMax")
       ? Number(searchParams.get("priceMax"))
       : 150000,
-  });
-  // const { isMobile } = useScreenSize();
+  };
+  const { isMobile } = useScreenSize();
+  const [filters, setFilters] = useState<any>(filterInitialValue);
   const [productList, setProductList] = useState(products);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [sort, setSort] = useState(searchParams.get("sort") ?? "newest");
@@ -69,6 +69,12 @@ const ProductList: FC<any> = ({ products }) => {
         setIsLoading(false);
       }, 300);
   }, [isLoading]);
+
+  useEffect(() => {
+    setProductList(products);
+    setIsLoading(true);
+    setFilters(filterInitialValue);
+  }, [products]);
 
   useEffect(() => {
     setFilters({
