@@ -1,10 +1,7 @@
 import BANNER1 from "assets/mainBanner/banner1.jpg";
 import BANNER2 from "assets/mainBanner/banner2.jpg";
-import BANNER3 from "assets/mainBanner/banner3.jpg";
-import BANNER4 from "assets/mainBanner/banner4.jpg";
-import BANNER5 from "assets/mainBanner/banner5.jpg";
-import BANNER6 from "assets/mainBanner/banner6.jpg";
-import BANNER7 from "assets/mainBanner/banner7.png";
+import BANNER3 from "assets/mainBanner/banner3.jpeg";
+import BANNER4 from "assets/mainBanner/banner4.png";
 
 export const MAINBANNER = [
   {
@@ -20,27 +17,12 @@ export const MAINBANNER = [
   {
     id: 3,
     image: BANNER3,
-    series: ["OPPOFINDX8", "OPPOFINDX8PRO"],
+    series: ["REALME14PRO", "REALME14PROPLUS"],
   },
 
   {
     id: 4,
     image: BANNER4,
-    series: ["MINOTE14", "MINOTE14PRO", "MINOTE14PROPLUS"],
-  },
-  {
-    id: 5,
-    image: BANNER5,
-    series: ["REALME14X"],
-  },
-  {
-    id: 6,
-    image: BANNER6,
-    series: ["VIVOY29"],
-  },
-  {
-    id: 7,
-    image: BANNER7,
     series: ["MI14C"],
   },
 ];
