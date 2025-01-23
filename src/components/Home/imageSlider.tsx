@@ -31,11 +31,8 @@ const ImageSlider: FC<props> = ({ bannerItems }) => {
               </div>
             </Link>
           ) : (
-            <div className="relative">
-              <div
-                key={banner?.name}
-                className="h-[50vw] md:h-[25vw] w-full  rounded-none md:rounded-xl  "
-              >
+            <div key={banner?.id} className="relative">
+              <div className="h-[50vw] md:h-[25vw] w-full  rounded-none md:rounded-xl  ">
                 <LazyImage src={banner?.image} alt="banner" fill={true} />
               </div>
             </div>
