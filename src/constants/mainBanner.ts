@@ -8,11 +8,12 @@ export const MAINBANNER = [
   {
     id: 1,
     image: BANNER5,
+    series: ["S25", "S25ULTRA", "S25PLUS"],
   },
   {
     id: 2,
     image: BANNER1,
-    series: ["RENO13,RENO13PRO"],
+    series: ["RENO13", "RENO13PRO"],
   },
   {
     id: 3,
