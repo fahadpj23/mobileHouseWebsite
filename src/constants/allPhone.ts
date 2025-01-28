@@ -64,12 +64,6 @@ import OPPOK12XBLUE1 from "assets/oppo/OPPOK12X/OPPOK12XBREEZEBLUE/OPPOK12XBREEZ
 
 import OPPOK12XVOILET1 from "assets/oppo/OPPOK12X/OPPOK12XMIDNIGHTVOILET/OPPOK12XMIDNIGHTVOILET1.jpg";
 
-import OPPORENO12BROWN1 from "assets/oppo/OPPORENO12/OPPORENO12MATTEBROWN/OPPORENO12MATTEBROWN1.jpg";
-
-import OPPORENO12PROBROWN1 from "assets/oppo/OPPORENO12PRO/OPPORENO12PROSPACEBROWN/OPPORENO12PROSPACEBROWN1.jpg";
-
-import OPPORENO12PROGOLD1 from "assets/oppo/OPPORENO12PRO/OPPORENO12PROSUNSETGOLD/OPPORENO12PROSUNSETGOLD1.jpg";
-
 import OPPOF27PROPLUSDUSKPINK1 from "assets/oppo/OPPOF27PROPLUS/OPPOF27PROPLUSDUSKPINK/OPPOF27PROPLUSDUSKPINK1.jpg";
 
 import OPPOF27PROPLUSMIDNIGHTNAVY1 from "assets/oppo/OPPOF27PROPLUS/OPPOF27PROPLUSMIDNIGHTNAVY/OPPOF27PROPLUSMIDNIGHTNAVY1.jpg";
@@ -145,8 +139,6 @@ import SAMSUNGF15JAZZYGREEN1 from "assets/samsung/SAMSUNGF15/SAMSUNGF15JAZZYGREE
 
 import SAMSUNGM14SPPHIREBLUE1 from "assets/samsung/SAMSUNGM14/SAMSUNGM14SPPHIREBLUE/SAMSUNGM14SPPHIREBLUE1.jpg";
 
-import SAMSUNGM15BLUETOPAZ1 from "assets/samsung/SAMSUNGM15/SAMSUNGM15BLUETOPAZ/SAMSUNGM15BLUETOPAZ1.jpg";
-
 import SAMSUNGS245GMARBLEGRAY1 from "assets/samsung/SAMSUNGS245G/SAMSUNGS245GMARBLEGRAY/SAMSUNGS245GMARBLEGRAY1.jpg";
 
 import SAMSUNGS24PLUS5GCOBALTVIOLET1 from "assets/samsung/SAMSUNGS24PLUS5G/SAMSUNGS24PLUS5GCOBALTVIOLET/SAMSUNGS24PLUS5GCOBALTVIOLET1.jpeg";
@@ -156,8 +148,6 @@ import SAMSUNGS24ULTRA5GTITANIUMGRAY1 from "assets/samsung/SAMSUNGS24ULTRA5G/SAM
 import SAMSUNGS24FE5GBLUE1 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GBLUE/SAMSUNGS24FE5GBLUE1.jpg";
 
 import SAMSUNGS24FE5GGRAPHITE1 from "assets/samsung/SAMSUNGS24FE5G/SAMSUNGS24FE5GGRAPHITE/SAMSUNGS24FE5GGRAPHITE1.jpg";
-
-import SAMSUNGA144GLIGHTGREEN1 from "assets/samsung/SAMSUNGA144G/SAMSUNGA144GLIGHTGREEN/SAMSUNGA144GLIGHTGREEN1.jpg";
 
 import SAMSUNGS25ICYBLUE1 from "assets/samsung/SAMSUNGS25/SAMSUNGS25ICYBLUE/SAMSUNGS25ICYBLUE1.jpeg";
 
@@ -1718,90 +1708,6 @@ export const ALLPHONES = [
   },
 
   {
-    id: "OPPO7",
-    name: "OPPO RENO12 PRO 5G 12/256 ",
-    brand: "OPPO",
-    prebook: false,
-    series: "RENO12PRO",
-    image: OPPORENO12PROBROWN1,
-    launchDate: "18-06-2024",
-    networkType: "5G",
-    salesPrice: 36999,
-    specialOffer: false,
-    trendingPhone: false,
-    rating: 4.4,
-    newArrival: true,
-    mrp: 53999,
-    ram: 12,
-    storage: 256,
-    specifications: {
-      Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
-      "Rear Camera": "50+8+50 MP",
-      "Front Camera": "50 MP",
-      "RAM | Storage": "12 GB | 256 GB ",
-      Battery: "5000 mAh | 80W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-      Processor: "MediaTek Dimensity 7300 Energy Octa core ",
-    },
-  },
-
-  {
-    id: "OPPO8",
-    name: "OPPO RENO12 PRO 5G 12/512 ",
-    brand: "OPPO",
-    prebook: false,
-    series: "RENO12PRO",
-    image: OPPORENO12PROGOLD1,
-    launchDate: "18-06-2024",
-    networkType: "5G",
-    salesPrice: 40999,
-    specialOffer: false,
-    trendingPhone: false,
-    rating: 4.4,
-    newArrival: true,
-    mrp: 55999,
-    ram: 12,
-    storage: 512,
-    specifications: {
-      Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
-      "Rear Camera": "50+8+50 MP",
-      "Front Camera": "50 MP",
-      "RAM | Storage": "12 GB | 512 GB ",
-      Battery: "5000 mAh | 80W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-      Processor: "MediaTek Dimensity 7300 Energy Octa core ",
-    },
-  },
-  {
-    id: "OPPO9",
-    name: "OPPO RENO12 5G 8/256 ",
-    brand: "OPPO",
-    image: OPPORENO12BROWN1,
-    launchDate: "18-06-2024",
-    networkType: "5G",
-    salesPrice: 32999,
-    specialOffer: false,
-    trendingPhone: true,
-    rating: 4.4,
-    newArrival: true,
-    mrp: 43999,
-    ram: 8,
-    storage: 256,
-    specifications: {
-      Display: "6.7″ (17.02 cm) 120Hz Flexible AMOLED ",
-      "Rear Camera": "50+8+2 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5000 mAh | 80W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-      Processor: "MediaTek Dimensity 7300 Energy Octa core ",
-    },
-  },
-
-  {
     id: "OPPO10",
     name: "OPPO F27PRO+ 5G 8/256 ",
     brand: "OPPO",
@@ -3240,33 +3146,6 @@ export const ALLPHONES = [
     rating: 4,
     newArrival: true,
     mrp: 15499,
-    ram: 4,
-    storage: 128,
-    specifications: {
-      Display: "6.6″ (16.76 cm) 90Hz PLS LCD ",
-      "Rear Camera": "50+2+2 MP",
-      "Front Camera": "13 MP",
-      "RAM | Storage": "4 GB | 128 GB ",
-      Battery: "5000 mAh | 15W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v13 ",
-      Processor: "Samsung Exynos 1330 Octa core ",
-    },
-  },
-
-  {
-    id: "SAMSUNG12",
-    name: "SAMSUNG A14 4G 4/128",
-    brand: "SAMSUNG",
-    image: SAMSUNGA144GLIGHTGREEN1,
-    launchDate: "28-02-2023",
-    networkType: "4G",
-    salesPrice: 10999,
-    specialOffer: false,
-    trendingPhone: false,
-    rating: 4,
-    newArrival: true,
-    mrp: 12999,
     ram: 4,
     storage: 128,
     specifications: {
