@@ -14,7 +14,7 @@ export const WhatappAdsList = [
   {
     id: 2,
     image: whatsAppImage1,
-    series: ["REALME14X"],
+    series: ["OPPOA3"],
   },
   {
     id: 3,
