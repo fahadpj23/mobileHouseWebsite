@@ -90,6 +90,8 @@ import RENO135GIVORYWHITE1 from "assets/oppo/RENO13/RENO135GIVORYWHITE/RENO135GI
 
 import RENO13PROMISTLAVENDER1 from "assets/oppo/RENO13PRO/RENO13PROMISTLAVENDER/RENO13PROMISTLAVENDER1.jpeg";
 
+import OPPOA3OCEANBLUE1 from "assets/oppo/OPPOA3/OPPOA3OCEANBLUE/OPPOA3OCEANBLUE1.jpeg";
+
 //vivo
 
 import VIVOY3005GPHANTOMPURPLE1 from "assets/vivo/VIVOY3005G/VIVOY3005GPHANTOMPURPLE/VIVOY3005GPHANTOMPURPLE1.jpg";
@@ -2220,6 +2222,33 @@ export const ALLPHONES = [
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v15 ",
       Processor: "MediaTek Dimensity 8350 Octa core ",
+    },
+  },
+  {
+    id: "OPPO25",
+    name: "OPPO  A3 6/128",
+    brand: "OPPO",
+    prebook: false,
+    series: "OPPOA3",
+    image: OPPOA3OCEANBLUE1,
+    launchDate: "19-08-2024",
+    salesPrice: 14999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 4.1,
+    newArrival: false,
+    mrp: 19999,
+    ram: 6,
+    storage: 128,
+    specifications: {
+      Display: "6.67″ (16.94 cm) 120Hz LCD ",
+      "Rear Camera": "50 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "6 GB | 128 GB ",
+      Battery: "5100 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v14 ",
+      Processor: "MediaTek Dimensity 6300 Octa core ",
     },
   },
 
