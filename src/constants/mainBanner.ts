@@ -1,8 +1,8 @@
-import BANNER1 from "assets/mainBanner/banner1.jpg";
-import BANNER2 from "assets/mainBanner/banner2.jpg";
-import BANNER3 from "assets/mainBanner/banner3.jpeg";
-import BANNER4 from "assets/mainBanner/banner4.png";
-import BANNER5 from "assets/mainBanner/banner5.png";
+import BANNER1 from "assets/mainBanner/banner1.webp";
+import BANNER2 from "assets/mainBanner/banner2.webp";
+import BANNER3 from "assets/mainBanner/banner3.webp";
+import BANNER4 from "assets/mainBanner/banner4.webp";
+import BANNER5 from "assets/mainBanner/banner5.webp";
 
 export const MAINBANNER = [
   {

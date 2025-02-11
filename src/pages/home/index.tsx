@@ -11,12 +11,19 @@ import HomeSkeleton from "components/skeleton/homeSkeleton";
 import { useScreenSize } from "hooks/useScreenSize";
 import PopupAds from "components/commonComponents/popupAds";
 import { removeDuplicateSeries } from "utils/removeDuplicateSeries";
-const ProductMiniList = React.lazy(
-  () => import("components/Home/productMiniList")
-);
-const WhatsappAds = React.lazy(() => import("components/Home/whatsappAds"));
-const Banner = React.lazy(() => import("components/Home/banner"));
-const Footer = React.lazy(() => import("components/Home/footer"));
+import LazyLoad from "components/ScrollLoad";
+
+// const ProductMiniList = React.lazy(
+//   () => import("components/Home/productMiniList")
+// );
+// const WhatsappAds = React.lazy(() => import("components/Home/whatsappAds"));
+// const Banner = React.lazy(() => import("components/Home/banner"));
+// const Footer = React.lazy(() => import("components/Home/footer"));
+
+import ProductMiniList from "components/Home/productMiniList";
+import WhatsappAds from "components/Home/whatsappAds";
+import Banner from "components/Home/banner";
+import Footer from "components/Home/footer";
 
 const HomePage = () => {
   const { isMobile } = useScreenSize();
@@ -31,42 +38,50 @@ const HomePage = () => {
 
         <Brands />
         <AvailableEmi />
-        <Suspense fallback={<HomeSkeleton />}>
-          <div className="p-2 bg-white ">
-            <ProductMiniList
-              title="New Arrival"
-              listItems={removeDuplicateSeries(getNewArrivalPhones())?.slice(
-                0,
-                7
-              )}
-              link="/newArrival"
-            />
+        {/* <Suspense fallback={<HomeSkeleton />}> */}
+        <div className="p-2 bg-white ">
+          <ProductMiniList
+            title="New Arrival"
+            listItems={removeDuplicateSeries(getNewArrivalPhones())?.slice(
+              0,
+              7
+            )}
+            link="/newArrival"
+          />
+        </div>
+        <LazyLoad>
+          <div>
+            <WhatsappAds />
+            <div className="p-2 bg-white ">
+              <ProductMiniList
+                title="Trending Phones"
+                listItems={removeDuplicateSeries(getTrendingPhones())?.slice(
+                  0,
+                  7
+                )}
+                link="/trendingPhones"
+              />
+            </div>
           </div>
-          <WhatsappAds />
-          <div className="p-2 bg-white ">
-            <ProductMiniList
-              title="Trending Phones"
-              listItems={removeDuplicateSeries(getTrendingPhones())?.slice(
-                0,
-                7
-              )}
-              link="/trendingPhones"
-            />
+        </LazyLoad>
+        <LazyLoad>
+          <div>
+            <Banner />
+            <div className="p-2 bg-white ">
+              <ProductMiniList
+                title="Special Offer"
+                listItems={removeDuplicateSeries(
+                  getSpecialOfferPhones()
+                )?.slice(0, 7)}
+                link="/specialOffer"
+              />
+            </div>
+            {/* <OurServices /> */}
+            <Footer />
           </div>
-          <Banner />
-          <div className="p-2 bg-white ">
-            <ProductMiniList
-              title="Special Offer"
-              listItems={removeDuplicateSeries(getSpecialOfferPhones())?.slice(
-                0,
-                7
-              )}
-              link="/specialOffer"
-            />
-          </div>
-          {/* <OurServices /> */}
-          <Footer />
-        </Suspense>
+        </LazyLoad>
+
+        {/* </Suspense> */}
       </div>
     </div>
   );

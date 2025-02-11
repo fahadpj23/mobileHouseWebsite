@@ -1,12 +1,12 @@
-import VIVOLOGO from "assets/brands/vivoLogo.png";
-import OPPOLOGO from "assets/brands/oppoLogo.png";
-import SAMSUNGLOGO from "assets/brands/samsungLogo.png";
-import REALMELOGO from "assets/brands/realmeLogo.png";
-import MILOGO from "assets/brands/miLogo.png";
-import TECNOLOGO from "assets/brands/tecnoLogo.png";
-import IQOO from "assets/brands/IQOO.jpg";
-import MOTOLOGO from "assets/brands/motoLogo.png";
-import POCOLOGO from "assets/brands/pocoLogo.png";
+import VIVOLOGO from "assets/brands/vivoLogo.webp";
+import OPPOLOGO from "assets/brands/oppoLogo.webp";
+import SAMSUNGLOGO from "assets/brands/samsungLogo.webp";
+import REALMELOGO from "assets/brands/realmeLogo.webp";
+import MILOGO from "assets/brands/miLogo.webp";
+import TECNOLOGO from "assets/brands/tecnoLogo.webp";
+import IQOO from "assets/brands/IQOO.webp";
+import MOTOLOGO from "assets/brands/motoLogo.webp";
+import POCOLOGO from "assets/brands/pocoLogo.webp";
 
 export const PHONEBRANDS = [
   { name: "VIVO", image: VIVOLOGO, link: "/vivo", value: "vivo" },
