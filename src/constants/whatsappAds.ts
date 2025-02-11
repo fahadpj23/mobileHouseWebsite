@@ -4,8 +4,9 @@ import whatsAppImage2 from "assets/whatsappAds/whatsAppImage2.jpeg";
 import whatsAppImage3 from "assets/whatsappAds/whatsAppImage3.jpeg";
 import whatsAppImage4 from "assets/whatsappAds/whatsAppImage4.jpeg";
 import whatsAppImage5 from "assets/whatsappAds/whatsAppImage5.jpeg";
+import { WHATSAPPADSMODEL } from "model/whatsappAdsModel";
 
-export const WhatappAdsList = [
+export const WhatappAdsList: WHATSAPPADSMODEL[] = [
   {
     id: 6,
     image: whatsAppImage6,

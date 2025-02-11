@@ -1,13 +1,13 @@
-import { Carousel } from "react-responsive-carousel";
+import { Link } from "react-router-dom";
 import { MINIBANNERS } from "constants/miniBannerItem";
 import ImageSlider from "./imageSlider";
-import { Link } from "react-router-dom";
 import LazyImage from "components/commonComponents/imageLazyLoading";
+import { MINIBANNERMODEL } from "model/miniBannerModel";
 const Banner = () => {
   return (
     <div>
       <div className="hidden justify-between space-x-5  md:flex">
-        {MINIBANNERS?.map((banner: any) => {
+        {MINIBANNERS?.map((banner: MINIBANNERMODEL) => {
           return (
             <Link
               to={`series/${banner?.series}`}

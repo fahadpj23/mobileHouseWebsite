@@ -3,9 +3,10 @@ import { FC } from "react";
 import { Link } from "react-router-dom";
 import LazyImage from "./imageLazyLoading";
 import { toPascalCase } from "utils/pascalCaseConvert";
+import { PHONEMODEL } from "model/phoneModel";
 
 interface props {
-  product: any;
+  product: PHONEMODEL;
 }
 const SingleProductCard: FC<props> = ({ product }) => {
   const DiscountPercentage =

@@ -7,8 +7,9 @@ import PINELABSLOGO from "assets/availableEmi/pinelabsLogo.webp";
 import SAMSUNGFINANCELOGO from "assets/availableEmi/samungFinanceLogo.webp";
 import TVSLOGO from "assets/availableEmi/tvsLogo.webp";
 import HDBLOGO from "assets/availableEmi/hdbLogo.webp";
+import { AVAILABLEEMIMODEL } from "model/availableEmiModel";
 
-export const AvailableEmiItems = [
+export const AvailableEmiItems: AVAILABLEEMIMODEL[] = [
   {
     id: 1,
     name: "bajajFinance",

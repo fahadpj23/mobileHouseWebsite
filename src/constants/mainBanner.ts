@@ -1,10 +1,11 @@
+import { MAINBANNERMODEL } from "model/mainBannerModel";
 import BANNER1 from "assets/mainBanner/banner1.webp";
 import BANNER2 from "assets/mainBanner/banner2.webp";
 import BANNER3 from "assets/mainBanner/banner3.webp";
 import BANNER4 from "assets/mainBanner/banner4.webp";
 import BANNER5 from "assets/mainBanner/banner5.webp";
 
-export const MAINBANNER = [
+export const MAINBANNER: MAINBANNERMODEL[] = [
   {
     id: 1,
     image: BANNER5,

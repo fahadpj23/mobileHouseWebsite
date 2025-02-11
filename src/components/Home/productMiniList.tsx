@@ -2,10 +2,11 @@ import SingleProductCard from "components/commonComponents/singleProductCard";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import MultiCarousel from "./multiCarousel";
+import { PHONEMODEL } from "model/phoneModel";
 
 interface props {
   title: string;
-  listItems: any;
+  listItems: PHONEMODEL[];
   link: string;
 }
 const ProductMiniList: FC<props> = ({ title, listItems, link }) => {
@@ -20,7 +21,7 @@ const ProductMiniList: FC<props> = ({ title, listItems, link }) => {
         </div>
       </div>
       <div className=" hidden sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-5 items-center">
-        {listItems?.slice(0, 5).map((product: any) => (
+        {listItems?.slice(0, 5).map((product: PHONEMODEL) => (
           <SingleProductCard key={product?.name} product={product} />
         ))}
       </div>

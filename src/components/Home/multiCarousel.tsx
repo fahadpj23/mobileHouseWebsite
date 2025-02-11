@@ -2,9 +2,9 @@ import { FC } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import SingleProductCard from "components/commonComponents/singleProductCard";
-
+import { PHONEMODEL } from "model/phoneModel";
 interface props {
-  listItems: any;
+  listItems: PHONEMODEL[];
 }
 const MultiCarousel: FC<props> = ({ listItems }) => {
   const responsive = {
@@ -32,7 +32,7 @@ const MultiCarousel: FC<props> = ({ listItems }) => {
   return (
     <div className="bg-white">
       <Carousel responsive={responsive} infinite={true} arrows={false}>
-        {listItems?.map((product: any) => (
+        {listItems?.map((product: PHONEMODEL) => (
           <div key={product?.name} style={{ margin: "0px 2px" }}>
             <SingleProductCard product={product} />
           </div>
