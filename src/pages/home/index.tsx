@@ -34,7 +34,7 @@ const HomePage = () => {
   return (
     <div className="w-screen flex justify-center pb-6 ">
       <div className=" w-full md:w-11/12 flex flex-col space-y-2 md:space-y-6">
-        {isMobile && !hasSeenPopup && <PopupAds />}
+        {/* {isMobile && !hasSeenPopup && <PopupAds />} */}
 
         <ImageSlider bannerItems={MAINBANNER} />
 
@@ -52,14 +52,13 @@ const HomePage = () => {
           />
         </div>
         <LazyLoad>
-          <LazyLoad>
-            <div className="flex flex-col space-y-6">
-              <Upcoming />
-              <NewArrival />
-            </div>
-          </LazyLoad>
+          <div className="flex flex-col space-y-6">
+            <Upcoming />
+            <NewArrival />
+          </div>
+        </LazyLoad>
+        <LazyLoad>
           <div>
-            <WhatsappAds />
             <div className="p-2 bg-white ">
               <ProductMiniList
                 title="Trending Phones"
@@ -70,11 +69,11 @@ const HomePage = () => {
                 link="/trendingPhones"
               />
             </div>
+            <WhatsappAds />
           </div>
         </LazyLoad>
         <LazyLoad>
           <div>
-            <Banner />
             <div className="p-2 bg-white ">
               <ProductMiniList
                 title="Special Offer"
