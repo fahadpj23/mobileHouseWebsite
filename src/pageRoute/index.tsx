@@ -8,9 +8,20 @@ import SeriesList from "pages/seriesList";
 import PageNotFound from "pages/404Page";
 import SpecCreator from "pages/specCreator";
 import Phones from "pages/phones";
+import { useEffect, useState } from "react";
+import SplashScreen from "components/splashScreen";
 
 const PageRoute = () => {
-  return (
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  }, []);
+  return isLoading ? (
+    <SplashScreen />
+  ) : (
     <div>
       <BrowserRouter>
         <MainLayout>
