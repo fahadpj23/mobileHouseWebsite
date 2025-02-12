@@ -3108,7 +3108,7 @@ export const ALLPHONES = [
 
   {
     id: "SAMSUNG10",
-    name: "SAMSUNG M14 4G 4/128",
+    name: "SAMSUNG M14 4G 4/64",
     brand: "SAMSUNG",
     image: SAMSUNGM14SPPHIREBLUE1,
     launchDate: "07-03-2024",

@@ -1,5 +1,5 @@
 import { getMultiplePhoneSeries } from "utils/getMultiplePhoneSeries";
-import SingleProductCard from "@components/commonComponents/singleProductCard";
+import SingleProductCard from "components/commonComponents/singleProductCard";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 

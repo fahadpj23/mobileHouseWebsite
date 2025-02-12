@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import SingleProductCard from "@components/commonComponents/singleProductCard";
+import SingleProductCard from "components/commonComponents/singleProductCard";
 import { PHONEMODEL } from "model/phoneModel";
 interface props {
   listItems: PHONEMODEL[];

@@ -24,6 +24,8 @@ import ProductMiniList from "components/Home/productMiniList";
 import WhatsappAds from "components/Home/whatsappAds";
 import Banner from "components/Home/banner";
 import Footer from "components/Home/footer";
+import Upcoming from "components/Home/upcoming";
+import NewArrival from "components/Home/newArrival";
 
 const HomePage = () => {
   const { isMobile } = useScreenSize();
@@ -50,6 +52,12 @@ const HomePage = () => {
           />
         </div>
         <LazyLoad>
+          <LazyLoad>
+            <div className="flex flex-col space-y-6">
+              <Upcoming />
+              <NewArrival />
+            </div>
+          </LazyLoad>
           <div>
             <WhatsappAds />
             <div className="p-2 bg-white ">

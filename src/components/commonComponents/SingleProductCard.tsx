@@ -23,7 +23,7 @@ const SingleProductCard: FC<props> = ({ product }) => {
           </div>
         </div>
         <div className="flex flex-col space-y-1">
-          <h1 className="  w-full text-[12px] md:text-[15px] font-medium ">
+          <h1 className="  w-full text-[12px] md:text-[15px] font-medium truncate">
             {product?.name && toPascalCase(product?.name)}
           </h1>
           <h1 className="absolute top-3 right-3 bg-blue-500 text-white rounded p-1  text-[10px] md:text-base">
