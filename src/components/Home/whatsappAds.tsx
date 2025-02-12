@@ -36,12 +36,12 @@ const WhatsappAds = () => {
           {WhatappAdsList.map((item: WHATSAPPADSMODEL) =>
             item?.series ? (
               <Link to={`series/${item?.series}`} key={item?.id}>
-                <div className="w-full h-[50vh]  ">
+                <div className="w-[98%] h-[50vh]  ">
                   <LazyImage src={item?.image} alt="phone Image" fill={true} />
                 </div>
               </Link>
             ) : (
-              <div key={item?.id} className="w-full h-[50vh]  ">
+              <div key={item?.id} className="w-[98%] h-[50vh]  ">
                 <LazyImage src={item?.image} alt="phone Image" fill={true} />
               </div>
             )

@@ -7,17 +7,21 @@ export const NEWARRIVALITEMS: LAUNCHITEMSMODEL[] = [
   {
     id: 1,
     image: BANNER1,
+    series: ["S25", "S25ULTRA", "S25PLUS"],
   },
   {
     id: 2,
     image: BANNER2,
+    series: ["RENO13", "RENO13PRO"],
   },
   {
     id: 3,
     image: BANNER3,
+    series: ["VIVOX200", "VIVOX200PRO"],
   },
   {
     id: 4,
     image: BANNER4,
+    series: ["REALME14PRO", "REALME14PROPLUS"],
   },
 ];

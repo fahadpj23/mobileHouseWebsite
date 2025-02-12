@@ -8,7 +8,7 @@ import { WHATSAPPADSMODEL } from "model/whatsappAdsModel";
 
 export const WhatappAdsList: WHATSAPPADSMODEL[] = [
   {
-    id: 6,
+    id: 1,
     image: whatsAppImage6,
     series: ["RENO13", "RENO13PRO"],
   },
