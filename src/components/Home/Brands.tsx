@@ -41,15 +41,15 @@ const Brands = () => {
       onClick={onClick}
       style={{
         position: "absolute",
-        right: "10px",
+        right: "15px",
         top: "50%",
         transform: "translateY(-50%)",
         backgroundColor: "rgba(0, 0, 0, 0.3)",
         color: "white",
         border: "none",
         borderRadius: "50%",
-        width: "30px",
-        height: "30px",
+        width: "35px",
+        height: "35px",
         cursor: "pointer",
         display: "flex",
         alignItems: "center",
@@ -81,7 +81,7 @@ const Brands = () => {
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 4.5,
-      slidesToSlide: 3,
+      slidesToSlide: 1,
     },
   };
 
@@ -110,6 +110,11 @@ const Brands = () => {
         responsive={responsive}
         infinite={true}
         arrows={true}
+        autoPlay={true}
+        autoPlaySpeed={3000}
+        keyBoardControl={true}
+        customTransition="all 1s ease-in-out"
+        transitionDuration={1000}
         customLeftArrow={<></>}
         customRightArrow={<CustomRightArrow />}
       >

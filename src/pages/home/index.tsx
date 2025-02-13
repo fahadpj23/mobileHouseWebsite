@@ -33,7 +33,7 @@ const HomePage = () => {
 
   return (
     <div className="w-screen flex justify-center pb-6 ">
-      <div className=" w-full md:w-11/12 flex flex-col space-y-2 md:space-y-6">
+      <div className=" w-full md:w-11/12 flex flex-col space-y-4 md:space-y-6">
         {/* {isMobile && !hasSeenPopup && <PopupAds />} */}
 
         <ImageSlider bannerItems={MAINBANNER} />
@@ -52,25 +52,25 @@ const HomePage = () => {
           />
         </div>
         <LazyLoad>
-          <div className="flex flex-col space-y-6">
-            <Upcoming />
-            <NewArrival />
+          <Upcoming />
+        </LazyLoad>
+        <LazyLoad>
+          <NewArrival />
+        </LazyLoad>
+        <LazyLoad>
+          <div className="p-2 bg-white ">
+            <ProductMiniList
+              title="Trending Phones"
+              listItems={removeDuplicateSeries(getTrendingPhones())?.slice(
+                0,
+                7
+              )}
+              link="/trendingPhones"
+            />
           </div>
         </LazyLoad>
         <LazyLoad>
-          <div>
-            <div className="p-2 bg-white ">
-              <ProductMiniList
-                title="Trending Phones"
-                listItems={removeDuplicateSeries(getTrendingPhones())?.slice(
-                  0,
-                  7
-                )}
-                link="/trendingPhones"
-              />
-            </div>
-            <WhatsappAds />
-          </div>
+          <WhatsappAds />
         </LazyLoad>
         <LazyLoad>
           <div>
