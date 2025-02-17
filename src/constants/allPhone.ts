@@ -737,7 +737,7 @@ export const ALLPHONES = [
     trendingPhone: false,
     rating: 4.7,
     newArrival: true,
-    mrp: 37999,
+    mrp: 39999,
     ram: 8,
     storage: 128,
     specifications: {
@@ -765,7 +765,7 @@ export const ALLPHONES = [
     trendingPhone: false,
     rating: 4.7,
     newArrival: true,
-    mrp: 40999,
+    mrp: 42999,
     ram: 8,
     storage: 256,
     specifications: {
@@ -793,7 +793,7 @@ export const ALLPHONES = [
     trendingPhone: false,
     rating: 4.7,
     newArrival: true,
-    mrp: 43999,
+    mrp: 48999,
     ram: 12,
     storage: 512,
     specifications: {
