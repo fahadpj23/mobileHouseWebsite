@@ -88,6 +88,10 @@ import OPPOA3OCEANBLUE1 from "assets/oppo/OPPOA3/OPPOA3OCEANBLUE/OPPOA3OCEANBLUE
 
 //vivo
 
+import VIVOY18GEMGREEN1 from "assets/vivo/VIVOY18/VIVOY18GEMGREEN/VIVOY18GEMGREEN1.jpeg";
+
+import VIVOY18TSPACEBLACK from "assets/vivo/VIVOY18T/VIVOY18TSPACEBLACK/VIVOY18TSPACEBLACK1.jpeg";
+
 import VIVOY3005GPHANTOMPURPLE1 from "assets/vivo/VIVOY3005G/VIVOY3005GPHANTOMPURPLE/VIVOY3005GPHANTOMPURPLE1.jpg";
 
 import VIVOV40GANGESBLUE1 from "assets/vivo/VIVOV40/VIVOV40GANGESBLUE/VIVOV40GANGESBLUE1.jpg";
@@ -116,6 +120,8 @@ import VIVOV50ROSERED from "assets/vivo/VIVOV50/VIVOV5OROSERED/VIVOV50ROSERED1.j
 
 //samsung
 import SAMSUNGA165GGOLD1 from "assets/samsung/SASMSUNGA165G/SAMSUNGA165GGOLD/SAMSUNGA165GGOLD1.jpeg";
+
+import SAMSUNGF05TWILIGHTBLUE1 from "assets/samsung/SAMSUNGF05/SAMSUNGF05TWILIGHTBLUE/SAMSUNGF05TWILIGHTBLUE1.jpeg";
 
 import SASMSUNGA165GBLUEBLACK1 from "assets/samsung/SASMSUNGA165G/SASMSUNGA165GBLUEBLACK/SASMSUNGA165GBLUEBLACK1.jpeg";
 
@@ -215,6 +221,92 @@ import POCOM7PROLAVENDERFROST1 from "assets/poco/POCOM7PRO/POCOM7PROLAVENDERFROS
 
 export const ALLPHONES = [
   //VIVO PHONES
+  {
+    id: "VIVOY181",
+    name: "VIVO Y18 4/64 ",
+    brand: "VIVO",
+    prebook: false,
+    series: "Y18",
+    image: VIVOY18GEMGREEN1,
+    launchDate: "03-05-2024",
+    networkType: "4G",
+    salesPrice: 7999,
+    specialOffer: true,
+    trendingPhone: false,
+    rating: 3.8,
+    newArrival: true,
+    mrp: 13999,
+    ram: 4,
+    storage: 64,
+    specifications: {
+      Display: "6.56″ (16.66 cm) 90Hz LCD ",
+      "Rear Camera": "50+0.08 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "4 GB | 64 GB ",
+      Battery: "5000 mAh | 15W Fast Charging ",
+      Network: "Dual SIM: 4G & 4G",
+      OS: "Android v14 ",
+      Processor: "MediaTek Helio G85 Octa core ",
+    },
+  },
+
+  {
+    id: "VIVOY182",
+    name: "VIVO Y18 4/128 ",
+    brand: "VIVO",
+    prebook: false,
+    series: "Y18",
+    image: VIVOY18GEMGREEN1,
+    launchDate: "03-05-2024",
+    networkType: "4G",
+    salesPrice: 8499,
+    specialOffer: true,
+    trendingPhone: false,
+    rating: 3.8,
+    newArrival: true,
+    mrp: 14999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Display: "6.56″ (16.66 cm) 90Hz LCD ",
+      "Rear Camera": "50+0.08 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "4 GB | 64 GB ",
+      Battery: "5000 mAh | 15W Fast Charging ",
+      Network: "Dual SIM: 4G & 4G",
+      OS: "Android v14 ",
+      Processor: "MediaTek Helio G85 Octa core ",
+    },
+  },
+
+  {
+    id: "VIVOY18T1",
+    name: "VIVO Y18T 4/128 ",
+    brand: "VIVO",
+    prebook: false,
+    series: "Y18T",
+    image: VIVOY18TSPACEBLACK,
+    launchDate: "12-11-2024",
+    networkType: "4G",
+    salesPrice: 8499,
+    specialOffer: true,
+    trendingPhone: false,
+    rating: 3.8,
+    newArrival: true,
+    mrp: 13999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Display: "6.56″ (16.66 cm) 90Hz LCD ",
+      "Rear Camera": "50+0.08 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "5000 mAh | 15W Fast Charging ",
+      Network: "Dual SIM: 4G & 4G",
+      OS: "Android v14 ",
+      Processor: "Unisoc Octa core ",
+    },
+  },
   {
     id: "VIVO1",
     name: "VIVO v40 5G 8/256 ",
@@ -805,6 +897,32 @@ export const ALLPHONES = [
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v15 ",
       Processor: "Snapdragon 7 Gen 3 Octa core ",
+    },
+  },
+  {
+    id: "VIVO27",
+    name: "VIVO Y18 4G 4/64 ",
+    brand: "VIVO",
+    image: VIVOY18IPACEBLACK1,
+    launchDate: "23-08-2024",
+    networkType: "4G",
+    salesPrice: 7999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 4.1,
+    newArrival: false,
+    mrp: 11999,
+    ram: 4,
+    storage: 64,
+    specifications: {
+      Display: " 6.56-inch (720x1612) 90Hz ",
+      "Rear Camera": "13MP + 0.08MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "4 GB | 64 GB ",
+      Battery: "5000 mAh  ",
+      Network: "Dual SIM: 4G & 4G",
+      OS: "Android 14 ",
+      Processor: " Unisoc T612 octa-core ",
     },
   },
 
@@ -3951,6 +4069,35 @@ export const ALLPHONES = [
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v15 ",
       Processor: "Snapdragon 8 Elite Octa core ",
+    },
+  },
+
+  {
+    id: "SAMSUNG41",
+    name: "SAMSUNG F05 4/64",
+    brand: "SAMSUNG",
+    prebook: false,
+    series: "SAMSUNGF05",
+    image: SAMSUNGF05TWILIGHTBLUE1,
+    launchDate: "20-09-2024",
+    networkType: "4G",
+    salesPrice: 7999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 4.5,
+    newArrival: false,
+    mrp: 9999,
+    ram: 4,
+    storage: 64,
+    specifications: {
+      Display: "6.7″ (17.02 cm) 60Hz PLS LCD ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "4 GB | 64 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 4G & 4G",
+      OS: "Android v14 ",
+      Processor: "MediaTek Helio G85 Octa core ",
     },
   },
 
