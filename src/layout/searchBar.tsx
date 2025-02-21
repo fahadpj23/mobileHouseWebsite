@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { CiSearch } from "react-icons/ci";
 import { Divider } from "@mui/material";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
@@ -10,15 +10,17 @@ import { toPascalCase } from "utils/pascalCaseConvert";
 
 const SearchBar: FC<any> = ({ setSearchOpen }) => {
   const [searchData, setSearchData] = useState<any>([]);
+  const [searchValue, setSearchValue] = useState<string>("");
 
   const handleSearch = (search: any) => {
+    setSearchValue(search);
     const filteredData = ALLPHONES.filter((phone) =>
       phone.name
         .toLowerCase()
         .replace(/\s+/g, "")
         .includes(search.toLowerCase().replace(/\s+/g, ""))
     );
-    setSearchData(filteredData);
+    Array.isArray(filteredData) && setSearchData(filteredData.splice(0, 5));
   };
 
   return (
@@ -56,6 +58,16 @@ const SearchBar: FC<any> = ({ setSearchOpen }) => {
             </Link>
           );
         })}
+        {searchValue && (
+          <Link
+            to={`/Phones/${encodeURIComponent(searchValue)}`}
+            className="flex space-x-2 p-2 items-center"
+            onClick={() => setSearchOpen(false)}
+          >
+            <CiSearch className="mt-1" />
+            <h1>{searchValue}</h1>
+          </Link>
+        )}
       </div>
       <div className="p-2 fixed bottom-1 left-0 w-full">
         <button
