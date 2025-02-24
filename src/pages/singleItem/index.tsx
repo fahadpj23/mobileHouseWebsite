@@ -1,4 +1,5 @@
 import { Divider } from "@mui/material";
+import { FaShare } from "react-icons/fa";
 import { getSpecificationIcon } from "utils/getSpecificationIcon";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -134,6 +135,10 @@ const SingleItem = () => {
                 <h1 className=" text-[#11a453] text-[18px] rounded p-1 font-semibold  text-sm md:text-base">
                   {product && getDiscountPercentage(product)}% off
                 </h1>
+                <FaShare
+                  className="text-blue-500"
+                  onClick={() => handleWhatapp(product)}
+                />
               </div>
               {product?.prebook && (
                 <button

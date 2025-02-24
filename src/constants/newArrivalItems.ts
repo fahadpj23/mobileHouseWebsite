@@ -3,7 +3,13 @@ import BANNER1 from "assets/newArrival/banner1.webp";
 import BANNER2 from "assets/newArrival/banner2.webp";
 import BANNER3 from "assets/newArrival/banner3.webp";
 import BANNER4 from "assets/newArrival/banner4.webp";
+import BANNER5 from "assets/newArrival/banner5.webp";
 export const NEWARRIVALITEMS: LAUNCHITEMSMODEL[] = [
+  {
+    id: 5,
+    image: BANNER5,
+    series: ["VIVOV50"],
+  },
   {
     id: 1,
     image: BANNER1,
