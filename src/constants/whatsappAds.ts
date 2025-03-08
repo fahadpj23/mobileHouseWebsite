@@ -14,14 +14,15 @@ export const WhatappAdsList: WHATSAPPADSMODEL[] = [
   },
   {
     id: 2,
+    image: whatsAppImage2,
+    series: ["A065G"],
+  },
+  {
+    id: 2,
     image: whatsAppImage1,
     series: ["OPPOA3"],
   },
-  {
-    id: 3,
-    image: whatsAppImage2,
-    series: ["F27PRO+"],
-  },
+
   {
     id: 4,
     image: whatsAppImage3,

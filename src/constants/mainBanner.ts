@@ -7,15 +7,16 @@ import BANNER5 from "assets/mainBanner/banner5.webp";
 
 export const MAINBANNER: MAINBANNERMODEL[] = [
   {
+    id: 2,
+    image: BANNER1,
+    series: ["SAMSUNGA36", "SAMSUNGA56"],
+  },
+  {
     id: 1,
     image: BANNER5,
     series: ["S25", "S25ULTRA", "S25PLUS"],
   },
-  {
-    id: 2,
-    image: BANNER1,
-    series: ["RENO13", "RENO13PRO"],
-  },
+
   {
     id: 3,
     image: BANNER2,
@@ -30,6 +31,6 @@ export const MAINBANNER: MAINBANNERMODEL[] = [
   {
     id: 5,
     image: BANNER4,
-    series: ["MI14C"],
+    series: ["RENO13", "RENO13PRO"],
   },
 ];
