@@ -4,6 +4,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import LazyImage from "components/commonComponents/imageLazyLoading";
 import { PHONEBRANDS } from "constants/phoneBrands";
 import { Link } from "react-router-dom";
+import "react-multi-carousel/lib/styles.css";
 
 interface brandType {
   name: string;

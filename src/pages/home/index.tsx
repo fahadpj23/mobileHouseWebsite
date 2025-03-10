@@ -83,7 +83,7 @@ const HomePage = () => {
                 link="/specialOffer"
               />
             </div>
-            {/* <OurServices /> */}
+
             <Footer />
           </div>
         </LazyLoad>
