@@ -12,13 +12,15 @@ const PlaceOrder: FC<any> = ({ setProductAdd }) => {
     address: "",
   });
   //product add
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    // const db = getFirestore(app);
-    const dbRef = ref(database, "products");
+  const handleSubmit = () => {
+    const dbRef = ref(database, "order");
 
     const userData = {
       id: Date.now(),
+      name: shippingDetails?.name,
+      phone: shippingDetails?.phone,
+      email: shippingDetails?.email,
+      address: shippingDetails?.address,
     };
 
     // Add data to the database
@@ -50,7 +52,7 @@ const PlaceOrder: FC<any> = ({ setProductAdd }) => {
         <div className="flex flex-col items-center">
           <div className="w-10/12 p-5 space-y-4 mt-5">
             <h1 className="text-lg font-semibold">Shipping Address</h1>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-4">
               {inputBox("name", "text", "enter Your name")}
               {inputBox("phone", "number", "enter Your phone number")}
               {inputBox("email", "text", "enter Your email")}
@@ -66,6 +68,12 @@ const PlaceOrder: FC<any> = ({ setProductAdd }) => {
                 rows={4}
                 className="w-full border border-gray-400 rounded-sm p-2 text-sm"
               />
+              <button
+                onClick={handleSubmit}
+                className="bg-green-500 text-white p-2"
+              >
+                place order
+              </button>
             </div>
           </div>
         </div>
