@@ -16,6 +16,9 @@ const PlaceOrder: FC<any> = ({ setProductAdd }) => {
     phone: "",
     email: "",
     address: "",
+    pincode: "",
+    city: "",
+    state: "",
   });
 
   const handleSubmit = () => {
@@ -27,13 +30,18 @@ const PlaceOrder: FC<any> = ({ setProductAdd }) => {
       phone: shippingDetails?.phone,
       email: shippingDetails?.email,
       address: shippingDetails?.address,
+      pincode: shippingDetails?.pincode,
+      city: shippingDetails?.city,
+      state: shippingDetails?.state,
+      productId: productDetails?.id,
+      productName: productDetails?.name,
+      productSalesPrice: productDetails?.salesPrice,
     };
 
     // Add data to the database
     push(dbRef, userData)
       .then(() => {
         console.log("Data added successfully!");
-        setProductAdd(false);
       })
       .catch((error) => {
         console.error("Error adding data: ", error);
@@ -120,7 +128,7 @@ const PlaceOrder: FC<any> = ({ setProductAdd }) => {
             <span>{productDetails?.salesPrice}.00</span>
           </h1>
           <h1 className="flex w-full justify-between text-xs md:text-sm">
-            <span>Shipping Charge</span>
+            <span>Shipping </span>
             <span>Free</span>
           </h1>
           <h1 className="flex w-full justify-between font-semibold">
