@@ -22,7 +22,10 @@ const PageRoute = () => {
               <Route path="series/:seriesList" element={<SeriesList />} />
               <Route path="specCreator" element={<SpecCreator />} />
               <Route path="Phones/:phoneType" element={<Phones />} />
-              <Route path="phone/placeOrder" element={<PlaceOrder />} />
+              <Route
+                path="phone/placeOrder/:productId"
+                element={<PlaceOrder />}
+              />
               <Route
                 path="phone/:productId/:productName"
                 element={<SingleItem />}

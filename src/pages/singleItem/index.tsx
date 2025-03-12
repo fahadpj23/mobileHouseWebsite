@@ -154,7 +154,10 @@ const SingleItem = () => {
               onClick={() => handleWhatapp(product)}
               className="fixed bottom-10 right-10 text-green-600 z-50 text-[40px] animate-bounce shadow-2xl "
             />
-            <Link className="bg-red-500 text-white" to={`/phone/placeOrder`}>
+            <Link
+              className="bg-red-500 text-white"
+              to={`/phone/placeOrder/${product?.id}`}
+            >
               order now
             </Link>
             <div className="flex flex-col">
