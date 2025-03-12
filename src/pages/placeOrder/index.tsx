@@ -52,13 +52,13 @@ const PlaceOrder: FC<any> = ({ setProductAdd }) => {
       id={name}
       type={type}
       placeholder={placeholder}
-      className="w-full border border-gray-400 rounded-sm p-2 text-sm rounded-sm"
+      className="w-full border border-gray-400 p-2 text-sm rounded-sm"
     />
   );
 
   return (
-    <div className="flex flex-col-reverse md:flex mt-6 p-5 ">
-      <div className="w-full md:w-5/12 ">
+    <div className="flex flex-col-reverse md:flex-row-reverse  mt-6 p-5 ">
+      <div className="w-full md:w-10/12 ">
         <div className="flex flex-col items-center w-full">
           <div className="w-full md:w-10/12 space-y-4 mt-5">
             <h1 className="text-lg font-semibold">Shipping Address</h1>
@@ -76,48 +76,50 @@ const PlaceOrder: FC<any> = ({ setProductAdd }) => {
                 }
                 placeholder=" address"
                 rows={4}
-                className="w-full border border-gray-400 rounded-sm p-2 text-sm rounded-sm"
+                className="w-full border border-gray-400  p-2 text-sm rounded-sm"
               />
               {inputBox("pincode", "number", " pincode")}
               {inputBox("city", "text", " city")}
               {inputBox("state", "text", " state")}
               <button
                 onClick={handleSubmit}
-                className="bg-green-500 text-white p-2"
+                className="bg-green-600 text-white p-2"
               >
-                place order
+                Place order
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full bg-gray-100 p-2 space-y-5">
-        <h1 className="font-semibold text-lg">Your Order</h1>
-        <div className="flex space-x-2">
-          <div className="w-auto h-[20vw] md:h-[20vw]  ">
-            <LazyImage
-              src={productDetails?.image}
-              alt="phone Image"
-              fill={true}
-            />
-          </div>
-          <div className="flex flex-col space-y-1 ">
-            <h1 className="font-semibold  text-sm">
-              {productDetails?.name && toPascalCase(productDetails?.name)}
-            </h1>
-            <h1 className="flex space-x-5 items-center  text-xs">
-              <span className="font-semibold">
-                ₹{productDetails?.salesPrice}.00
-              </span>
-            </h1>
+      <div className="w-full md:w-4/12 bg-gray-100 p-2 md:p-5 space-y-5 flex flex-col justify-between">
+        <div className="space-y-2">
+          <h1 className="font-semibold text-lg">Your Order</h1>
+          <div className="flex space-x-2">
+            <div className="w-auto h-[20vw] md:h-[7vw]  ">
+              <LazyImage
+                src={productDetails?.image}
+                alt="phone Image"
+                fill={true}
+              />
+            </div>
+            <div className="flex flex-col space-y-1 ">
+              <h1 className="font-semibold  text-sm">
+                {productDetails?.name && toPascalCase(productDetails?.name)}
+              </h1>
+              <h1 className="flex space-x-5 items-center  text-xs">
+                <span className="font-semibold">
+                  ₹{productDetails?.salesPrice}.00
+                </span>
+              </h1>
+            </div>
           </div>
         </div>
         <div className="space-y-2">
-          <h1 className="flex w-full justify-between text-xs">
+          <h1 className="flex w-full justify-between text-xs md:text-sm">
             <span>Subtotal</span>
             <span>{productDetails?.salesPrice}.00</span>
           </h1>
-          <h1 className="flex w-full justify-between text-xs">
+          <h1 className="flex w-full justify-between text-xs md:text-sm">
             <span>Shipping Charge</span>
             <span>Free</span>
           </h1>
