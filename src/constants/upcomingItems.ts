@@ -4,5 +4,6 @@ export const UPCOMINGITEMS: LAUNCHITEMSMODEL[] = [
   {
     id: 7,
     image: UPCOMING1,
+    series: ["F29"],
   },
 ];
