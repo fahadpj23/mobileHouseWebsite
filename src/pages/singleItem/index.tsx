@@ -12,6 +12,7 @@ import { getPhoneVariants } from "utils/getPhoneVariants";
 import { toPascalCase } from "utils/pascalCaseConvert";
 import { getProductImage } from "utils/getProductImages";
 import LazyImage from "components/commonComponents/imageLazyLoading";
+import { Helmet } from "react-helmet";
 
 const SingleItem = () => {
   const { productId } = useParams();
@@ -20,6 +21,7 @@ const SingleItem = () => {
   const [displayImage, setDisplayImage] = useState<any>();
   const [productColors, setProductColors] = useState<any>([]);
   const [phoneVariants, setPhoneVariants] = useState<any>([]);
+  const [imageUrl, setImageUrl] = useState<any>("");
   const [isLoading, setIsLoading] = useState<any>(true);
   const { isMobile } = useScreenSize();
 
@@ -37,6 +39,7 @@ const SingleItem = () => {
       } else {
       }
       product?.colors && setProductImages(product?.image);
+      setImageUrl(`data:image/jpeg;base64,${btoa(product?.image)}`);
       setDisplayImage(product?.image);
     }
   }, [product]);
@@ -75,6 +78,13 @@ const SingleItem = () => {
 
   return (
     <div className="block md:flex items-center ">
+      <Helmet>
+        <title>{product?.name}</title>
+        <meta property="og:title" content={product?.name} />
+        <meta property="og:description" content={product?.name} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:url" content={window.location.href} />
+      </Helmet>
       {isLoading && (
         <div className="flex items-center justify-center min-h-screen fixed top-0 left-0 w-screen z-50 bg-white">
           <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
