@@ -6,7 +6,21 @@ import BANNER4 from "assets/newArrival/banner4.webp";
 import BANNER5 from "assets/newArrival/banner5.webp";
 import BANNER6 from "assets/newArrival/banner6.webp";
 import BANNER7 from "assets/newArrival/banner7.webp";
+import BANNER8 from "assets/newArrival/banner8.webp";
+import BANNER9 from "assets/newArrival/banner9.webp";
+
 export const NEWARRIVALITEMS: LAUNCHITEMSMODEL[] = [
+  {
+    id: 9,
+    image: BANNER9,
+    series: ["Y39"],
+  },
+  {
+    id: 8,
+    image: BANNER8,
+    series: ["F29"],
+  },
+
   {
     id: 7,
     image: BANNER7,

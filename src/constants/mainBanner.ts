@@ -4,12 +4,18 @@ import BANNER2 from "assets/mainBanner/banner2.webp";
 import BANNER3 from "assets/mainBanner/banner3.webp";
 import BANNER4 from "assets/mainBanner/banner4.webp";
 import BANNER5 from "assets/mainBanner/banner5.webp";
+import BANNER6 from "assets/mainBanner/banner6.webp";
 
 export const MAINBANNER: MAINBANNERMODEL[] = [
   {
     id: 2,
     image: BANNER1,
     series: ["SAMSUNGA36", "SAMSUNGA56"],
+  },
+  {
+    id: 9,
+    image: BANNER6,
+    series: ["F29"],
   },
   {
     id: 1,

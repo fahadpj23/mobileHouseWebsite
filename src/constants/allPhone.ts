@@ -82,6 +82,8 @@ import OPPOA3OCEANBLUE1 from "assets/oppo/OPPOA3/OPPOA3OCEANBLUE/OPPOA3OCEANBLUE
 
 //vivo
 
+import VIVOY39GALAXYPURPLE1 from "assets/vivo/VIVOY39/VIVOY39GALAXYPURPLE/VIVOY39GALAXYPURPLE1.webp";
+
 import VIVOY18GEMGREEN1 from "assets/vivo/VIVOY18/VIVOY18GEMGREEN/VIVOY18GEMGREEN1.jpeg";
 
 import VIVOY18TSPACEBLACK from "assets/vivo/VIVOY18T/VIVOY18TSPACEBLACK/VIVOY18TSPACEBLACK1.jpeg";
@@ -222,6 +224,64 @@ import POCOM7PROLAVENDERFROST1 from "assets/poco/POCOM7PRO/POCOM7PROLAVENDERFROS
 
 export const ALLPHONES = [
   //VIVO PHONES
+
+  {
+    id: "VIVOY391",
+    name: "VIVO Y39 8/128 ",
+    brand: "VIVO",
+    prebook: false,
+    series: "Y39",
+    image: VIVOY39GALAXYPURPLE1,
+    launchDate: "26-03-2025",
+    networkType: "5G",
+    salesPrice: 16999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 3.8,
+    newArrival: true,
+    mrp: 21999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Processor: "Snapdragon 4 Gen 2 Octa core ",
+      Display: "6.68″ (16.97 cm) 120Hz LCD ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "6500 mAh | 44W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+    },
+  },
+  {
+    id: "VIVOY392",
+    name: "VIVO Y39 8/256 ",
+    brand: "VIVO",
+    prebook: false,
+    series: "Y39",
+    image: VIVOY39GALAXYPURPLE1,
+    launchDate: "26-03-2025",
+    networkType: "5G",
+    salesPrice: 18999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 3.8,
+    newArrival: true,
+    mrp: 23999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Processor: "Snapdragon 4 Gen 2 Octa core ",
+      Display: "6.68″ (16.97 cm) 120Hz LCD ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "6500 mAh | 44W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+    },
+  },
+
   {
     id: "VIVOY181",
     name: "VIVO Y18 4/64 ",
