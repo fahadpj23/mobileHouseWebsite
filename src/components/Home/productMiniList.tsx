@@ -1,7 +1,6 @@
 import SingleProductCard from "components/commonComponents/singleProductCard";
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import MultiCarousel from "./multiCarousel";
 import { PHONEMODEL } from "model/phoneModel";
 
 interface props {

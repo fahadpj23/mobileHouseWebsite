@@ -15,7 +15,7 @@ export const MAINBANNER: MAINBANNERMODEL[] = [
   {
     id: 9,
     image: BANNER6,
-    series: ["F29"],
+    series: ["F29", "F29PRO"],
   },
   {
     id: 1,

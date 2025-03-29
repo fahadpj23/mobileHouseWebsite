@@ -116,6 +116,8 @@ import VIVOV50ROSERED from "assets/vivo/VIVOV50/VIVOV5OROSERED/VIVOV50ROSERED1.j
 
 //samsung
 
+import SAMSUNGA26AWESOMEMINT1 from "assets/samsung/SAMSUNGA26/SAMSUNGA26AWESOMEMINT/SAMSUNGA26AWESOMEMINT1.jpeg";
+
 import SAMSUNGA56AWESOMEOLIVE1 from "assets/samsung/SAMSUNGA56/SAMSUNGA56AWESOMEOLIVE/SAMSUNGA56AWESOMEOLIVE1.jpg";
 
 import SAMSUNGA36AWESOMELAVENDER1 from "assets/samsung/SAMSUNGA36/SAMSUNGA36AWESOMELAVENDER/SAMSUNGA36AWESOMELAVENDER1.jpg";
@@ -1975,7 +1977,7 @@ export const ALLPHONES = [
     id: "OPPOF29PRO1",
     name: "OPPO F29 PRO 5G 8/128 ",
     brand: "OPPO",
-    series: "F29",
+    series: "F29PRO",
     image: OPPOF29PROMARBLEWHITE1,
     launchDate: "20-03-2025",
     networkType: "5G",
@@ -2002,7 +2004,7 @@ export const ALLPHONES = [
     id: "OPPOF29PRO2",
     name: "OPPO F29 PRO 5G 8/256 ",
     brand: "OPPO",
-    series: "F29",
+    series: "F29PRO",
     image: OPPOF29PROMARBLEWHITE1,
     launchDate: "20-03-2025",
     networkType: "5G",
@@ -2029,7 +2031,7 @@ export const ALLPHONES = [
     id: "OPPOF29PRO3",
     name: "OPPO F29 PRO 5G 12/256 ",
     brand: "OPPO",
-    series: "F29",
+    series: "F29PRO",
     image: OPPOF29PROMARBLEWHITE1,
     launchDate: "20-03-2025",
     networkType: "5G",
@@ -3255,6 +3257,60 @@ export const ALLPHONES = [
 
   //SAMSUNG PHONES
 
+  {
+    id: "SAMSUNGA261",
+    name: "SAMSUNG A26 5G 8/128",
+    brand: "SAMSUNG",
+    prebook: false,
+    series: "SAMSUNGA26",
+    image: SAMSUNGA26AWESOMEMINT1,
+    launchDate: "24-03-2025",
+    salesPrice: 24999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 4.1,
+    newArrival: true,
+    mrp: 27999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Display: "6.7″ (17.02 cm) 120Hz Super AMOLED ",
+      "Rear Camera": "50+8+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "Samsung Exynos 1380 Octa core ",
+    },
+  },
+  {
+    id: "SAMSUNGA262",
+    name: "SAMSUNG A26 5G 8/256",
+    brand: "SAMSUNG",
+    prebook: false,
+    series: "SAMSUNGA26",
+    image: SAMSUNGA26AWESOMEMINT1,
+    launchDate: "24-03-2025",
+    salesPrice: 27999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 4.1,
+    newArrival: true,
+    mrp: 30999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Display: "6.7″ (17.02 cm) 120Hz Super AMOLED ",
+      "Rear Camera": "50+8+2 MP",
+      "Front Camera": "13 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5000 mAh | 25W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "Samsung Exynos 1380 Octa core ",
+    },
+  },
   {
     id: "SAMSUNGA361",
     name: "SAMSUNG A36 5G 8/128",

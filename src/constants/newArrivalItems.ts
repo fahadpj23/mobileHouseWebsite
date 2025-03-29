@@ -18,7 +18,7 @@ export const NEWARRIVALITEMS: LAUNCHITEMSMODEL[] = [
   {
     id: 8,
     image: BANNER8,
-    series: ["F29"],
+    series: ["F29", "F29PRO"],
   },
 
   {
