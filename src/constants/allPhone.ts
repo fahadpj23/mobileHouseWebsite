@@ -54,8 +54,6 @@ import OPPOF29GLACIERBLUE1 from "assets/oppo/OPPOF29/OPPOF29GLACIERBLUE/OPPOF29G
 
 import OPPOF29PROMARBLEWHITE1 from "assets/oppo/OPPOF29PRO/OPPOF29PROMARBLEWHITE/OPPOF29PROMARBLEWHITE1.jpg";
 
-import OPPOA17kGOLD1 from "assets/oppo/OPPOA17K/OPPOA17KGOLD/OPPOA17KGOLD1.jpg";
-
 import OPPOA77ORANGE1 from "assets/oppo/OPPOA77/OPPOA77SUNSETORANGE/OPPOA77SUNSETORANGE1.jpg";
 
 import OPPOK12XBLUE1 from "assets/oppo/OPPOK12X/OPPOK12XBREEZEBLUE/OPPOK12XBREEZEBLUE1.jpg";
@@ -82,13 +80,13 @@ import OPPOA3OCEANBLUE1 from "assets/oppo/OPPOA3/OPPOA3OCEANBLUE/OPPOA3OCEANBLUE
 
 //vivo
 
+import VIVOY3005GPHANTOMPURPLE1 from "assets/vivo/VIVOY3005G/VIVOY3005GPHANTOMPURPLE/VIVOY3005GPHANTOMPURPLE1.jpg";
+
 import VIVOY39GALAXYPURPLE1 from "assets/vivo/VIVOY39/VIVOY39GALAXYPURPLE/VIVOY39GALAXYPURPLE1.webp";
 
 import VIVOY18GEMGREEN1 from "assets/vivo/VIVOY18/VIVOY18GEMGREEN/VIVOY18GEMGREEN1.jpeg";
 
 import VIVOY18TSPACEBLACK from "assets/vivo/VIVOY18T/VIVOY18TSPACEBLACK/VIVOY18TSPACEBLACK1.jpeg";
-
-import VIVOY3005GPHANTOMPURPLE1 from "assets/vivo/VIVOY3005G/VIVOY3005GPHANTOMPURPLE/VIVOY3005GPHANTOMPURPLE1.jpg";
 
 import VIVOV40GANGESBLUE1 from "assets/vivo/VIVOV40/VIVOV40GANGESBLUE/VIVOV40GANGESBLUE1.jpg";
 
@@ -101,8 +99,6 @@ import VIVOY18IPACEBLACK1 from "assets/vivo/VIVOY18I/PEACEBLACK/VIVOY18IPACEBLAC
 import VIVOY28EBREEZEGREEN1 from "assets/vivo/VIVOY28E/VIVOY28EBREEZEGREEN/VIVOY28EBREEZEGREEN1.jpg";
 
 import VIVOY28EVINTAGERED1 from "assets/vivo/VIVOY28E/VIVOY28EVINTAGERED/VIVOY28EVINTAGERED1.jpg";
-
-import VIVOY300PLUSSILKGREEN1 from "assets/vivo/VIVOY300PLUS/VIVOY300PLUSSILKGREEN/VIVOY300PLUSSILKGREEN1.jpg";
 
 import VIVOY200EBLACKDIAMOND1 from "assets/vivo/VIVOY200E/VIVOY200EBLACKDIAMOND/VIVOY200EBLACKDIAMOND1.jpg";
 
@@ -229,7 +225,7 @@ export const ALLPHONES = [
 
   {
     id: "VIVOY391",
-    name: "VIVO Y39 8/128 ",
+    name: "VIVO Y39 5G 8/128 ",
     brand: "VIVO",
     prebook: false,
     series: "Y39",
@@ -257,7 +253,7 @@ export const ALLPHONES = [
   },
   {
     id: "VIVOY392",
-    name: "VIVO Y39 8/256 ",
+    name: "VIVO Y39 5G 8/256 ",
     brand: "VIVO",
     prebook: false,
     series: "Y39",
@@ -286,7 +282,7 @@ export const ALLPHONES = [
 
   {
     id: "VIVOY181",
-    name: "VIVO Y18 4/64 ",
+    name: "VIVO Y18 4G 4/64 ",
     brand: "VIVO",
     prebook: false,
     series: "Y18",
@@ -315,7 +311,7 @@ export const ALLPHONES = [
 
   {
     id: "VIVOY182",
-    name: "VIVO Y18 4/128 ",
+    name: "VIVO Y18 4G 4/128 ",
     brand: "VIVO",
     prebook: false,
     series: "Y18",
@@ -344,7 +340,7 @@ export const ALLPHONES = [
 
   {
     id: "VIVOY18T1",
-    name: "VIVO Y18T 4/128 ",
+    name: "VIVO Y18T 4G 4/128 ",
     brand: "VIVO",
     prebook: false,
     series: "Y18T",
@@ -508,33 +504,6 @@ export const ALLPHONES = [
       Network: "Dual SIM: 5G & 5G",
       OS: "Android v14 ",
       Processor: "Snapdragon 4 Gen 2 Octa core ",
-    },
-  },
-
-  {
-    id: "VIVO7",
-    name: "VIVO Y300 PLUS 5G 8/128 ",
-    brand: "VIVO",
-    image: VIVOY300PLUSSILKGREEN1,
-    launchDate: "16-10-2024",
-    networkType: "5G",
-    salesPrice: 23999,
-    specialOffer: false,
-    trendingPhone: true,
-    rating: 4.7,
-    newArrival: true,
-    mrp: 29999,
-    ram: 8,
-    storage: 128,
-    specifications: {
-      Display: "6.78″ (17.22 cm) 120Hz AMOLED ",
-      "Rear Camera": "50+2 MP",
-      "Front Camera": "32 MP",
-      "RAM | Storage": "8 GB | 128 GB ",
-      Battery: "5000 mAh | 44W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14",
-      Processor: "Snapdragon 695 Octa core ",
     },
   },
 
@@ -752,7 +721,7 @@ export const ALLPHONES = [
     newArrival: true,
     mrp: 74999,
     ram: 12,
-    storage: 512,
+    storage: 256,
     specifications: {
       Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
       "Rear Camera": "50+50+50 MP",
@@ -936,7 +905,7 @@ export const ALLPHONES = [
   },
   {
     id: "VIVO24",
-    name: "VIVO V50 8/128",
+    name: "VIVO V50 5G 8/128",
     brand: "VIVO",
     prebook: false,
     series: "VIVOV50",
@@ -964,7 +933,7 @@ export const ALLPHONES = [
   },
   {
     id: "VIVO25",
-    name: "VIVO V50 8/256",
+    name: "VIVO V50 5G 8/256",
     brand: "VIVO",
     prebook: false,
     series: "VIVOV50",
@@ -992,7 +961,7 @@ export const ALLPHONES = [
   },
   {
     id: "VIVO26",
-    name: "VIVO V50 12/512",
+    name: "VIVO V50 5G 12/512",
     brand: "VIVO",
     prebook: false,
     series: "VIVOV50",
@@ -1048,7 +1017,7 @@ export const ALLPHONES = [
   //tecno
   {
     id: "TECNO1",
-    name: "TECNO CAMON 20",
+    name: "TECNO CAMON 20 4G",
     image: TECNOCAMON20ARTEDITION1,
     brand: "TECNO",
     launchDate: "09-05-2023",
@@ -1075,7 +1044,7 @@ export const ALLPHONES = [
 
   {
     id: "TECNO2",
-    name: "TECNO CAMON 20 PRO",
+    name: "TECNO CAMON 20 PRO 5G",
     brand: "TECNO",
     image: TECNOCAMON20PROSERENITYBLUE1,
     launchDate: "09-05-2023",
@@ -1102,7 +1071,7 @@ export const ALLPHONES = [
 
   {
     id: "TECNO3",
-    name: "TECNO CAMON 30",
+    name: "TECNO CAMON 30 5G",
     brand: "TECNO",
     image: TECNOCAMON30BASALTICDARK1,
     launchDate: "02-04-2024",
@@ -1129,7 +1098,7 @@ export const ALLPHONES = [
 
   {
     id: "TECNO4",
-    name: "TECNO CAMON 30 PREMIER",
+    name: "TECNO CAMON 30 PREMIER 5G",
     brand: "TECNO",
     launchDate: "15-11-2024",
     networkType: "5G",
@@ -1156,7 +1125,7 @@ export const ALLPHONES = [
 
   {
     id: "TECNO5",
-    name: "TECNO PHANTOM X2",
+    name: "TECNO PHANTOM X2 5G",
     brand: "TECNO",
     launchDate: "09-01-2023",
     networkType: "5G",
@@ -1183,7 +1152,7 @@ export const ALLPHONES = [
 
   {
     id: "TECNO6",
-    name: "TECNO PHANTOM X2 PRO",
+    name: "TECNO PHANTOM X2 PRO 5G",
     brand: "TECNO",
     launchDate: "17-01-2023",
     networkType: "5G",
@@ -1210,7 +1179,7 @@ export const ALLPHONES = [
 
   {
     id: "TECNO7",
-    name: "TECNO POVA 6 NEO",
+    name: "TECNO POVA 6 NEO 5G",
     brand: "TECNO",
     launchDate: "04-04-2024",
     networkType: "5G",
@@ -1237,7 +1206,7 @@ export const ALLPHONES = [
 
   {
     id: "TECNO8",
-    name: "TECNO POVA 6 PRO",
+    name: "TECNO POVA 6 PRO 5G",
     brand: "TECNO",
     launchDate: "26-02-2024",
     networkType: "5G",
@@ -2056,33 +2025,6 @@ export const ALLPHONES = [
   },
 
   {
-    id: "OPPO2",
-    name: "OPPO A17K 4G 3/64 ",
-    brand: "OPPO",
-    image: OPPOA17kGOLD1,
-    launchDate: "13-10-2022",
-    networkType: "4G",
-    salesPrice: 8499,
-    specialOffer: false,
-    trendingPhone: false,
-    rating: 3.5,
-    newArrival: true,
-    mrp: 12999,
-    ram: 3,
-    storage: 64,
-    specifications: {
-      Display: "6.56″ (16.66 cm) 60Hz IPS LCD ",
-      "Rear Camera": "8 MP",
-      "Front Camera": "5 MP",
-      "RAM | Storage": "3 GB | 64 GB ",
-      Battery: "5000 mAh ",
-      Network: "Dual SIM: 4G & 4G",
-      OS: "Android v12",
-      Processor: "MediaTek Helio G35 Octa core ",
-    },
-  },
-
-  {
     id: "OPPO3",
     name: "OPPO A77 4G 4/128 ",
     brand: "OPPO",
@@ -2338,7 +2280,7 @@ export const ALLPHONES = [
 
   {
     id: "OPPO21",
-    name: "OPPO RENO 13 8/128 ",
+    name: "OPPO RENO 13 5G 8/128 ",
     brand: "OPPO",
     series: "RENO13",
     image: RENO135GIVORYWHITE1,
@@ -2366,7 +2308,7 @@ export const ALLPHONES = [
 
   {
     id: "OPPO22",
-    name: "OPPO RENO 13 8/256 ",
+    name: "OPPO RENO 13 5G 8/256 ",
     brand: "OPPO",
     series: "RENO13",
     image: RENO135GLUMINOUSWHITE1,
@@ -2394,8 +2336,9 @@ export const ALLPHONES = [
 
   {
     id: "OPPO23",
-    name: "OPPO  RENO 13 PRO 12/256",
+    name: "OPPO  RENO 13 PRO 5G 12/256",
     brand: "OPPO",
+    networkType: "5G",
     prebook: false,
     series: "RENO13PRO",
     image: RENO13PROMISTLAVENDER1,
@@ -2422,10 +2365,11 @@ export const ALLPHONES = [
 
   {
     id: "OPPO24",
-    name: "OPPO  RENO 13 PRO 12/512",
+    name: "OPPO  RENO 13 PRO 5G 12/512",
     brand: "OPPO",
     prebook: false,
     series: "RENO13PRO",
+    networkType: "5G",
     image: RENO13PROMISTLAVENDER1,
     launchDate: "09-01-2025",
     salesPrice: 54999,
@@ -2449,13 +2393,14 @@ export const ALLPHONES = [
   },
   {
     id: "OPPO25",
-    name: "OPPO  A3 6/128",
+    name: "OPPO A3 5G 6/128",
     brand: "OPPO",
     prebook: false,
     series: "OPPOA3",
     image: OPPOA3OCEANBLUE1,
     launchDate: "19-08-2024",
     salesPrice: 14999,
+    networkType: "5G",
     specialOffer: false,
     trendingPhone: false,
     rating: 4.1,
@@ -2482,10 +2427,12 @@ export const ALLPHONES = [
     brand: "REALME",
     prebook: false,
     series: "REALMEC63",
+
     image: REALMEC63JADEGREEN1,
     launchDate: "31-05-2024",
     salesPrice: 8499,
     specialOffer: false,
+    networkType: "4G",
     trendingPhone: false,
     rating: 4.3,
     newArrival: false,
@@ -2513,6 +2460,7 @@ export const ALLPHONES = [
     image: REALMEC63JADEGREEN1,
     launchDate: "31-05-2024",
     salesPrice: 8999,
+    networkType: "4G",
     specialOffer: false,
     trendingPhone: false,
     rating: 4.3,
@@ -2592,7 +2540,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME5",
-    name: "REALME C65 4/128",
+    name: "REALME C65 5G 4/128",
     brand: "REALME",
     prebook: false,
     series: "REALMEC65",
@@ -2621,7 +2569,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME6",
-    name: "REALME C65 6/128",
+    name: "REALME C65 5G 6/128",
     brand: "REALME",
     prebook: false,
     series: "REALMEC65",
@@ -2650,7 +2598,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME7",
-    name: "REALME C65 8/128",
+    name: "REALME C65 5G 8/128",
     brand: "REALME",
     prebook: false,
     series: "REALMEC65",
@@ -2679,7 +2627,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME8",
-    name: "REALME C67 4/128",
+    name: "REALME C67 5G 4/128",
     brand: "REALME",
     prebook: false,
     series: "REALMEC67",
@@ -2708,7 +2656,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME9",
-    name: "REALME C67 6/128",
+    name: "REALME C67 5G 6/128",
     brand: "REALME",
     prebook: false,
     series: "REALMEC67",
@@ -2737,7 +2685,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME10",
-    name: "REALME 12 PLUS 8/128",
+    name: "REALME 12 PLUS 5G 8/128",
     brand: "REALME",
     prebook: false,
     series: "REALME12PLUS",
@@ -2766,7 +2714,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME11",
-    name: "REALME 12 PLUS 8/256",
+    name: "REALME 12 PLUS 5G 8/256",
     brand: "REALME",
     prebook: false,
     series: "REALME12PLUS",
@@ -2795,7 +2743,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME12",
-    name: "REALME 13 PRO PLUS 8/256",
+    name: "REALME 13 PRO PLUS 5G 8/256",
     brand: "REALME",
     prebook: false,
     series: "REALME13PROPLUS",
@@ -2824,7 +2772,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME13",
-    name: "REALME 13 PRO PLUS 12/256",
+    name: "REALME 13 PRO PLUS 5G 12/256",
     brand: "REALME",
     prebook: false,
     series: "REALME13PROPLUS",
@@ -2853,7 +2801,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME14",
-    name: "REALME 13 PRO PLUS 12/512",
+    name: "REALME 13 PRO PLUS 5G 12/512",
     brand: "REALME",
     prebook: false,
     series: "REALME13PROPLUS",
@@ -2882,7 +2830,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME15",
-    name: "REALME 13 PRO 8/128",
+    name: "REALME 13 PRO 5G 8/128",
     brand: "REALME",
     prebook: false,
     series: "REALME13PRO",
@@ -2911,7 +2859,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME16",
-    name: "REALME 13 PRO 8/256",
+    name: "REALME 13 PRO 5G 8/256",
     brand: "REALME",
     prebook: false,
     series: "REALME13PRO",
@@ -2940,7 +2888,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME17",
-    name: "REALME 13 PRO 12/512",
+    name: "REALME 13 PRO 5G 12/512",
     brand: "REALME",
     prebook: false,
     series: "REALME13PRO",
@@ -2969,7 +2917,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME18",
-    name: "REALME 13 PLUS 8/128",
+    name: "REALME 13 PLUS 5G 8/128",
     brand: "REALME",
     prebook: false,
     series: "REALME13PLUS",
@@ -2998,7 +2946,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME19",
-    name: "REALME 13 PLUS 8/256",
+    name: "REALME 13 PLUS 5G 8/256",
     brand: "REALME",
     prebook: false,
     series: "REALME13PLUS",
@@ -3027,7 +2975,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME20",
-    name: "REALME 13 PLUS 12/256",
+    name: "REALME 13 PLUS 5G 12/256",
     brand: "REALME",
     prebook: false,
     series: "REALME13PLUS",
@@ -3056,7 +3004,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME21",
-    name: "REALME 14X 6/128",
+    name: "REALME 14X 5G 6/128",
     brand: "REALME",
     prebook: false,
     series: "REALME14X",
@@ -3085,7 +3033,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME22",
-    name: "REALME 14X 8/128",
+    name: "REALME 14X 5G 8/128",
     brand: "REALME",
     prebook: false,
     series: "REALME14X",
@@ -3114,7 +3062,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME23",
-    name: "REALME 14 PRO 8/128",
+    name: "REALME 14 PRO 5G 8/128",
     brand: "REALME",
     prebook: false,
     series: "REALME14PRO",
@@ -3143,7 +3091,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME24",
-    name: "REALME 14 PRO 8/256",
+    name: "REALME 14 PRO 5G 8/256",
     brand: "REALME",
     prebook: false,
     series: "REALME14PRO",
@@ -3172,7 +3120,7 @@ export const ALLPHONES = [
 
   {
     id: "REALME25",
-    name: "REALME 14 PRO PLUS 8/128",
+    name: "REALME 14 PRO PLUS 5G 8/128",
     brand: "REALME",
     prebook: false,
     series: "REALME14PROPLUS",
@@ -3200,7 +3148,7 @@ export const ALLPHONES = [
   },
   {
     id: "REALME26",
-    name: "REALME 14 PRO PLUS 8/256",
+    name: "REALME 14 PRO PLUS 5G 8/256",
     brand: "REALME",
     prebook: false,
     series: "REALME14PROPLUS",
@@ -3228,7 +3176,7 @@ export const ALLPHONES = [
   },
   {
     id: "REALME27",
-    name: "REALME 14 PRO PLUS 12/256",
+    name: "REALME 14 PRO PLUS 5G 12/256",
     brand: "REALME",
     prebook: false,
     series: "REALME14PROPLUS",
@@ -4091,7 +4039,7 @@ export const ALLPHONES = [
   },
   {
     id: "SAMSUNG27",
-    name: "SAMSUNG s24 plus 12/256",
+    name: "SAMSUNG s24 plus 5G 12/256",
     brand: "SAMSUNG",
     prebook: false,
     series: "S24PLUS",
@@ -4119,7 +4067,7 @@ export const ALLPHONES = [
   },
   {
     id: "SAMSUNG28",
-    name: "SAMSUNG s24 plus 12/512",
+    name: "SAMSUNG s24 plus 5G 12/512",
     brand: "SAMSUNG",
     prebook: false,
     series: "S24PLUS",
@@ -4489,7 +4437,7 @@ export const ALLPHONES = [
 
   {
     id: "SAMSUNG41",
-    name: "SAMSUNG F05 4/64",
+    name: "SAMSUNG F05 4G 4/64",
     brand: "SAMSUNG",
     prebook: false,
     series: "SAMSUNGF05",
@@ -4520,7 +4468,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO1",
-    name: "IQOONEO9PRO 8/256",
+    name: "IQOO NEO 9 PRO 5G 8/256",
     brand: "IQOO",
     prebook: false,
     series: "NEO9PRO",
@@ -4549,7 +4497,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO2",
-    name: "IQOO NEO 9 PRO  12/256",
+    name: "IQOO NEO 9 PRO 5G 12/256",
     brand: "IQOO",
     prebook: false,
     series: "NEO9PRO",
@@ -4578,7 +4526,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO3",
-    name: "IQOO Z9 8/128",
+    name: "IQOO Z9 5G 8/128",
     brand: "IQOO",
     prebook: false,
     series: "Z9",
@@ -4607,7 +4555,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO4",
-    name: "IQOO Z9 8/256",
+    name: "IQOO Z9 5G 8/256",
     brand: "IQOO",
     prebook: false,
     series: "Z9",
@@ -4636,7 +4584,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO5",
-    name: "IQOO Z9 LITE 4/128",
+    name: "IQOO Z9 LITE 5G 4/128",
     brand: "IQOO",
     prebook: false,
     series: "Z9LITE",
@@ -4665,7 +4613,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO6",
-    name: "IQOO Z9 LITE 6/128",
+    name: "IQOO Z9 LITE 5G 6/128",
     brand: "IQOO",
     prebook: false,
     series: "Z9LITE",
@@ -4694,7 +4642,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO7",
-    name: "IQOO Z9 S 8/128",
+    name: "IQOO Z9S 5G 8/128",
     brand: "IQOO",
     prebook: false,
     series: "Z9S",
@@ -4723,7 +4671,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO8",
-    name: "IQOO Z9 S 8/256 ",
+    name: "IQOO Z9S 5G 8/256 ",
     brand: "IQOO",
     prebook: false,
     series: "Z9S",
@@ -4752,7 +4700,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO9",
-    name: "IQOO Z9 S 12/256 ",
+    name: "IQOO Z9S 5G 12/256 ",
     brand: "IQOO",
     prebook: false,
     series: "Z9S",
@@ -4781,7 +4729,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO10",
-    name: "IQOO Z9 X 4/128",
+    name: "IQOO Z9X 5G 4/128",
     brand: "IQOO",
     prebook: false,
     series: "Z9x",
@@ -4810,7 +4758,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO11",
-    name: "IQOO Z9 X 6/128",
+    name: "IQOO Z9X 5G 6/128",
     brand: "IQOO",
     prebook: false,
     series: "Z9x",
@@ -4839,7 +4787,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO12",
-    name: "IQOO Z9 X 8/128",
+    name: "IQOO Z9X 5G 8/128",
     brand: "IQOO",
     prebook: false,
     series: "Z9x",
@@ -4868,7 +4816,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO13",
-    name: "IQOO Z9S PRO 8/128",
+    name: "IQOO Z9S PRO 5G 8/128",
     brand: "IQOO",
     prebook: false,
     series: "Z9SPRO",
@@ -4897,7 +4845,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO14",
-    name: "IQOO Z9S PRO 8/256",
+    name: "IQOO Z9S PRO 5G 8/256",
     brand: "IQOO",
     prebook: false,
     series: "Z9SPRO",
@@ -4926,7 +4874,7 @@ export const ALLPHONES = [
 
   {
     id: "IQOO15",
-    name: "IQOO Z9S PRO 12/256",
+    name: "IQOO Z9S PRO 5G 12/256",
     brand: "IQOO",
     prebook: false,
     series: "Z9SPRO",
@@ -4957,7 +4905,7 @@ export const ALLPHONES = [
 
   {
     id: "MOTOROLA1",
-    name: "MOTOROLAG45 4/128",
+    name: "MOTOROLA G45 5G 4/128",
     brand: "MOTOROLA",
     prebook: false,
     series: "G45",
@@ -4986,7 +4934,7 @@ export const ALLPHONES = [
 
   {
     id: "MOTOROLA2",
-    name: "MOTOROLAG45 8/128",
+    name: "MOTOROLA G45 5G 8/128",
     brand: "MOTOROLA",
     prebook: false,
     series: "G45",
@@ -5015,7 +4963,7 @@ export const ALLPHONES = [
 
   {
     id: "MOTOROLA3",
-    name: "MOTOROLAG85 8/128",
+    name: "MOTOROLA G85 5G 8/128",
     brand: "MOTOROLA",
     prebook: false,
     series: "G85",
@@ -5044,7 +4992,7 @@ export const ALLPHONES = [
 
   {
     id: "MOTOROLA4",
-    name: "MOTOROLAG85 12/256",
+    name: "MOTOROLA G85 5G 12/256",
     brand: "MOTOROLA",
     prebook: false,
     series: "G85",
@@ -5073,7 +5021,7 @@ export const ALLPHONES = [
 
   {
     id: "MOTOROLA5",
-    name: "MOTOROLAG64 12/256",
+    name: "MOTOROLA G64 5G 12/256",
     brand: "MOTOROLA",
     prebook: false,
     series: "G64",
@@ -5102,7 +5050,7 @@ export const ALLPHONES = [
 
   {
     id: "MOTOROLA6",
-    name: "MOTOROLA EDGE 50 NEO 8/256",
+    name: "MOTOROLA EDGE 50 NEO 5G 8/256",
     brand: "MOTOROLA",
     prebook: false,
     series: "EDGE50NEO",
@@ -5131,7 +5079,7 @@ export const ALLPHONES = [
 
   {
     id: "MOTOROLA7",
-    name: "MOTOROLA EDGE 50 FUSION 12/256",
+    name: "MOTOROLA EDGE 50 FUSION 5G 12/256",
     brand: "MOTOROLA",
     prebook: false,
     series: "EDGE50FUSION",
@@ -5160,7 +5108,7 @@ export const ALLPHONES = [
 
   {
     id: "MOTOROLA8",
-    name: "MOTOROLA EDGE 50  8/256",
+    name: "MOTOROLA EDGE 50 5G  8/256",
     brand: "MOTOROLA",
     prebook: false,
     series: "EDGE50",
@@ -5189,7 +5137,7 @@ export const ALLPHONES = [
 
   {
     id: "MOTOROLA9",
-    name: "MOTOROLA EDGE 50 PRO  12/256",
+    name: "MOTOROLA EDGE 50 PRO 5G 12/256",
     brand: "MOTOROLA",
     prebook: false,
     series: "EDGE50PRO",
@@ -5220,7 +5168,7 @@ export const ALLPHONES = [
 
   {
     id: "POCO1",
-    name: "POCO C75 4/64",
+    name: "POCO C75 5G 4/64",
     brand: "POCO",
     prebook: false,
     series: "C75",
@@ -5249,7 +5197,7 @@ export const ALLPHONES = [
 
   {
     id: "POCO2",
-    name: "POCO M7 PRO 6/128",
+    name: "POCO M7 PRO 5G 6/128",
     brand: "POCO",
     prebook: false,
     series: "M7PRO",
@@ -5278,7 +5226,7 @@ export const ALLPHONES = [
 
   {
     id: "POCO3",
-    name: "POCO M7 PRO 8/256",
+    name: "POCO M7 PRO 5G 8/256",
     brand: "POCO",
     prebook: false,
     series: "M7PRO",
