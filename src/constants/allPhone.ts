@@ -80,6 +80,8 @@ import OPPOA3OCEANBLUE1 from "assets/oppo/OPPOA3/OPPOA3OCEANBLUE/OPPOA3OCEANBLUE
 
 //vivo
 
+import VIVOV50EPEARLWHITE1 from "assets/vivo/VIVOV50E/VIVOV50EPEARLWHITE/VIVOV50EPEARLWHITE1.jpeg";
+
 import VIVOY3005GPHANTOMPURPLE1 from "assets/vivo/VIVOY3005G/VIVOY3005GPHANTOMPURPLE/VIVOY3005GPHANTOMPURPLE1.jpg";
 
 import VIVOY39GALAXYPURPLE1 from "assets/vivo/VIVOY39/VIVOY39GALAXYPURPLE/VIVOY39GALAXYPURPLE1.webp";
@@ -222,6 +224,63 @@ import POCOM7PROLAVENDERFROST1 from "assets/poco/POCOM7PRO/POCOM7PROLAVENDERFROS
 
 export const ALLPHONES = [
   //VIVO PHONES
+
+  {
+    id: "VIVOV50E1",
+    name: "VIVO V50E 5G 8/128 ",
+    brand: "VIVO",
+    prebook: false,
+    series: "V50E",
+    image: VIVOV50EPEARLWHITE1,
+    launchDate: "10-04-2025",
+    networkType: "5G",
+    salesPrice: 28999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 4.5,
+    newArrival: true,
+    mrp: 33999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Display: "6.77″ (17.2 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+8 MP",
+      "Front Camera": "50 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5600 mAh | 90W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "MediaTek Dimensity 7300 Octa core ",
+    },
+  },
+  {
+    id: "VIVOV50E2",
+    name: "VIVO V50E 5G 8/256 ",
+    brand: "VIVO",
+    prebook: false,
+    series: "V50E",
+    image: VIVOV50EPEARLWHITE1,
+    launchDate: "10-04-2025",
+    networkType: "5G",
+    salesPrice: 30999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 4.5,
+    newArrival: true,
+    mrp: 35999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Display: "6.77″ (17.2 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+8 MP",
+      "Front Camera": "50 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5600 mAh | 90W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "MediaTek Dimensity 7300 Octa core ",
+    },
+  },
 
   {
     id: "VIVOY391",
@@ -3267,7 +3326,7 @@ export const ALLPHONES = [
     series: "SAMSUNGA36",
     image: SAMSUNGA36AWESOMELAVENDER1,
     launchDate: "02-03-2025",
-    salesPrice: 32999,
+    salesPrice: 30999,
     specialOffer: false,
     trendingPhone: true,
     rating: 4.1,
@@ -3294,7 +3353,7 @@ export const ALLPHONES = [
     series: "SAMSUNGA36",
     image: SAMSUNGA36AWESOMELAVENDER1,
     launchDate: "02-03-2025",
-    salesPrice: 35999,
+    salesPrice: 33999,
     specialOffer: false,
     trendingPhone: true,
     rating: 4.1,
@@ -3321,7 +3380,7 @@ export const ALLPHONES = [
     series: "SAMSUNGA36",
     image: SAMSUNGA36AWESOMELAVENDER1,
     launchDate: "02-03-2025",
-    salesPrice: 38999,
+    salesPrice: 36999,
     specialOffer: false,
     trendingPhone: true,
     rating: 4.1,

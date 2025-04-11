@@ -1,3 +1,8 @@
 import { LAUNCHITEMSMODEL } from "model/launchItemsMode";
-
-export const UPCOMINGITEMS: LAUNCHITEMSMODEL[] = [];
+// import UPCOMING1 from "assets/upcoming/upcoming1.webp";
+export const UPCOMINGITEMS: LAUNCHITEMSMODEL[] = [
+  // {
+  //   id: 9,
+  //   image: UPCOMING1,
+  // },
+];
