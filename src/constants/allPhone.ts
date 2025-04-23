@@ -48,7 +48,10 @@ import REDMINOTE14PROIVYGREEN1 from "assets/mi/REDMINOTE14PRO/REDMINOTE14PROIVYG
 import REDMINOTE14PROPLUSSPECTREBLUE1 from "assets/mi/REDMINOTE14PROPLUS/REDMINOTE14PROPLUSSPECTREBLUE/REDMINOTE14PROSPECTREBLUE1.jpeg";
 
 import REDMI14CSTARLIGHTBLUE1 from "assets/mi/REDMI14C/REDMI14CSTARLIGHTBLUE/REDMI14CSTARLIGHTBLUE1.jpeg";
+
 //oppo import
+
+import OPPOA5PROFEATHERBLUE1 from "assets/oppo/OPPOA5PRO/OPPOA5PROFEATHERBLUE/OPPOA5PROFEATHERBLUE1.jpg";
 
 import OPPOF29GLACIERBLUE1 from "assets/oppo/OPPOF29/OPPOF29GLACIERBLUE/OPPOF29GLACIERBLUE1.jpg";
 
@@ -79,6 +82,8 @@ import RENO13PROMISTLAVENDER1 from "assets/oppo/RENO13PRO/RENO13PROMISTLAVENDER/
 import OPPOA3OCEANBLUE1 from "assets/oppo/OPPOA3/OPPOA3OCEANBLUE/OPPOA3OCEANBLUE1.jpeg";
 
 //vivo
+
+import VIVOY19EMAJESTICGREEN1 from "assets/vivo/VIVOY19E/VIVOY19EMAJESTICGREEN/VIVOY19EMAJESTICGREEN1.jpeg";
 
 import VIVOV50EPEARLWHITE1 from "assets/vivo/VIVOV50E/VIVOV50EPEARLWHITE/VIVOV50EPEARLWHITE1.jpeg";
 
@@ -224,6 +229,35 @@ import POCOM7PROLAVENDERFROST1 from "assets/poco/POCOM7PRO/POCOM7PROLAVENDERFROS
 
 export const ALLPHONES = [
   //VIVO PHONES
+
+  {
+    id: "VIVOY19E1",
+    name: "VIVO Y19E 4G 4/64 ",
+    brand: "VIVO",
+    prebook: false,
+    series: "Y19E",
+    image: VIVOY19EMAJESTICGREEN1,
+    launchDate: "20-03-2025",
+    networkType: "5G",
+    salesPrice: 7999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 3.5,
+    newArrival: true,
+    mrp: 11999,
+    ram: 4,
+    storage: 64,
+    specifications: {
+      Display: "6.74″ (17.12 cm) 90Hz LCD ",
+      "Rear Camera": "13+0.08 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "4 GB | 64 GB ",
+      Battery: "5500 mAh | 15W Fast Charging ",
+      Network: "Dual SIM: 4G & 4G",
+      OS: "Android v14 ",
+      Processor: "Unisoc Octa core ",
+    },
+  },
 
   {
     id: "VIVOV50E1",
@@ -1948,6 +1982,62 @@ export const ALLPHONES = [
 
   //OPPO PHONES
   {
+    id: "OPPOA5PRO1",
+    name: "OPPO A5 PRO 5G 8/128 ",
+    series: "OPPOA5PRO",
+    brand: "OPPO",
+    image: OPPOA5PROFEATHERBLUE1,
+    launchDate: "22-04-2025",
+    networkType: "5G",
+    salesPrice: 17999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 3.5,
+    newArrival: true,
+    mrp: 20999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Display: "6.67″ (16.94 cm) 120Hz LCD ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5800 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+    },
+  },
+
+  {
+    id: "OPPOA5PRO2",
+    name: "OPPO A5 PRO 5G 8/256 ",
+    series: "OPPOA5PRO",
+    brand: "OPPO",
+    image: OPPOA5PROFEATHERBLUE1,
+    launchDate: "22-04-2025",
+    networkType: "5G",
+    salesPrice: 19999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 3.5,
+    newArrival: true,
+    mrp: 22999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Display: "6.67″ (16.94 cm) 120Hz LCD ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "8 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5800 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+    },
+  },
+
+  {
     id: "OPPOF291",
     name: "OPPO F29 5G 8/128 ",
     series: "F29",
@@ -1958,7 +2048,7 @@ export const ALLPHONES = [
     salesPrice: 23999,
     specialOffer: false,
     trendingPhone: true,
-    rating: 3.5,
+    rating: 4.5,
     newArrival: true,
     mrp: 28999,
     ram: 8,
@@ -1985,7 +2075,7 @@ export const ALLPHONES = [
     salesPrice: 25999,
     specialOffer: false,
     trendingPhone: true,
-    rating: 3.5,
+    rating: 4.5,
     newArrival: true,
     mrp: 30999,
     ram: 8,
@@ -2012,7 +2102,7 @@ export const ALLPHONES = [
     salesPrice: 27999,
     specialOffer: false,
     trendingPhone: true,
-    rating: 3.5,
+    rating: 4.5,
     newArrival: true,
     mrp: 31999,
     ram: 8,
@@ -2039,7 +2129,7 @@ export const ALLPHONES = [
     salesPrice: 29999,
     specialOffer: false,
     trendingPhone: true,
-    rating: 3.5,
+    rating: 4.5,
     newArrival: true,
     mrp: 34999,
     ram: 8,
@@ -2066,7 +2156,7 @@ export const ALLPHONES = [
     salesPrice: 31999,
     specialOffer: false,
     trendingPhone: true,
-    rating: 3.5,
+    rating: 4.5,
     newArrival: true,
     mrp: 35999,
     ram: 12,
@@ -3408,7 +3498,7 @@ export const ALLPHONES = [
     series: "SAMSUNGA56",
     image: SAMSUNGA56AWESOMEOLIVE1,
     launchDate: "02-03-2025",
-    salesPrice: 41999,
+    salesPrice: 38999,
     specialOffer: false,
     trendingPhone: true,
     rating: 4.1,
@@ -3435,7 +3525,7 @@ export const ALLPHONES = [
     series: "SAMSUNGA56",
     image: SAMSUNGA56AWESOMEOLIVE1,
     launchDate: "02-03-2025",
-    salesPrice: 44999,
+    salesPrice: 41999,
     specialOffer: false,
     trendingPhone: true,
     rating: 4.1,
@@ -3462,7 +3552,7 @@ export const ALLPHONES = [
     series: "SAMSUNGA56",
     image: SAMSUNGA56AWESOMEOLIVE1,
     launchDate: "02-03-2025",
-    salesPrice: 47999,
+    salesPrice: 44999,
     specialOffer: false,
     trendingPhone: true,
     rating: 4.1,
