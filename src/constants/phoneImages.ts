@@ -2727,7 +2727,7 @@ export const PHONEIMAGE = [
   },
 
   {
-    id: ["OPPO21", "OPPO22"],
+    id: ["OPPO21", "OPPO22", "OPPORENO131"],
 
     colors: [
       {
