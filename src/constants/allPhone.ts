@@ -85,6 +85,8 @@ import OPPOA3OCEANBLUE1 from "assets/oppo/OPPOA3/OPPOA3OCEANBLUE/OPPOA3OCEANBLUE
 
 import VIVOY19EMAJESTICGREEN1 from "assets/vivo/VIVOY19E/VIVOY19EMAJESTICGREEN/VIVOY19EMAJESTICGREEN1.jpeg";
 
+import VIVOY195GMAJESTICGREEN1 from "assets/vivo/VIVOY19/VIVOY195GMAJESTICGREEN/VIVOY195GMAJESTICGREEN1.jpeg";
+
 import VIVOV50EPEARLWHITE1 from "assets/vivo/VIVOV50E/VIVOV50EPEARLWHITE/VIVOV50EPEARLWHITE1.jpeg";
 
 import VIVOY3005GPHANTOMPURPLE1 from "assets/vivo/VIVOY3005G/VIVOY3005GPHANTOMPURPLE/VIVOY3005GPHANTOMPURPLE1.jpg";
@@ -235,6 +237,93 @@ export const ALLPHONES = [
   //VIVO PHONES
 
   {
+    id: "VIVOY191",
+    name: "VIVO Y19 5G 4/64 ",
+    brand: "VIVO",
+    prebook: false,
+    series: "Y19",
+    image: VIVOY195GMAJESTICGREEN1,
+    launchDate: "01-05-2025",
+    networkType: "5G",
+    salesPrice: 10499,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 3.5,
+    newArrival: true,
+    mrp: 13499,
+    ram: 4,
+    storage: 64,
+    specifications: {
+      Display: "6.74″ (17.12 cm) 90Hz LCD ",
+      "Rear Camera": "13+0.08 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "4 GB | 64 GB ",
+      Battery: "5500 mAh | 15W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+    },
+  },
+
+  {
+    id: "VIVOY192",
+    name: "VIVO Y19 5G 4/128 ",
+    brand: "VIVO",
+    prebook: false,
+    series: "Y19",
+    image: VIVOY195GMAJESTICGREEN1,
+    launchDate: "01-05-2025",
+    networkType: "5G",
+    salesPrice: 11499,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 3.5,
+    newArrival: true,
+    mrp: 14499,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Display: "6.74″ (17.12 cm) 90Hz LCD ",
+      "Rear Camera": "13+0.08 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "5500 mAh | 15W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+    },
+  },
+
+  {
+    id: "VIVOY193",
+    name: "VIVO Y19 5G 6/128 ",
+    brand: "VIVO",
+    prebook: false,
+    series: "Y19",
+    image: VIVOY195GMAJESTICGREEN1,
+    launchDate: "01-05-2025",
+    networkType: "5G",
+    salesPrice: 12999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 3.5,
+    newArrival: true,
+    mrp: 15999,
+    ram: 6,
+    storage: 128,
+    specifications: {
+      Display: "6.74″ (17.12 cm) 90Hz LCD ",
+      "Rear Camera": "13+0.08 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "6 GB | 128 GB ",
+      Battery: "5500 mAh | 15W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+    },
+  },
+
+  {
     id: "VIVOY19E1",
     name: "VIVO Y19E 4G 4/64 ",
     brand: "VIVO",
@@ -242,7 +331,7 @@ export const ALLPHONES = [
     series: "Y19E",
     image: VIVOY19EMAJESTICGREEN1,
     launchDate: "20-03-2025",
-    networkType: "5G",
+    networkType: "4G",
     salesPrice: 7999,
     specialOffer: false,
     trendingPhone: false,
@@ -2579,7 +2668,7 @@ export const ALLPHONES = [
     series: "OPPOA3",
     image: OPPOA3OCEANBLUE1,
     launchDate: "19-08-2024",
-    salesPrice: 14999,
+    salesPrice: 13999,
     networkType: "5G",
     specialOffer: false,
     trendingPhone: false,
