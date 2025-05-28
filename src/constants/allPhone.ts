@@ -51,6 +51,8 @@ import REDMI14CSTARLIGHTBLUE1 from "assets/mi/REDMI14C/REDMI14CSTARLIGHTBLUE/RED
 
 //oppo import
 
+import OPPOK13ICYPURPLE1 from "assets/oppo/OPPOK13/OPPOK13ICYPURPLE/OPPOK13ICYPURPLE1.jpeg";
+
 import OPPOA5PROFEATHERBLUE1 from "assets/oppo/OPPOA5PRO/OPPOA5PROFEATHERBLUE/OPPOA5PROFEATHERBLUE1.jpg";
 
 import OPPOF29GLACIERBLUE1 from "assets/oppo/OPPOF29/OPPOF29GLACIERBLUE/OPPOF29GLACIERBLUE1.jpg";
@@ -58,10 +60,6 @@ import OPPOF29GLACIERBLUE1 from "assets/oppo/OPPOF29/OPPOF29GLACIERBLUE/OPPOF29G
 import OPPOF29PROMARBLEWHITE1 from "assets/oppo/OPPOF29PRO/OPPOF29PROMARBLEWHITE/OPPOF29PROMARBLEWHITE1.jpg";
 
 import OPPOA77ORANGE1 from "assets/oppo/OPPOA77/OPPOA77SUNSETORANGE/OPPOA77SUNSETORANGE1.jpg";
-
-import OPPOK12XBLUE1 from "assets/oppo/OPPOK12X/OPPOK12XBREEZEBLUE/OPPOK12XBREEZEBLUE1.jpg";
-
-import OPPOK12XVOILET1 from "assets/oppo/OPPOK12X/OPPOK12XMIDNIGHTVOILET/OPPOK12XMIDNIGHTVOILET1.jpg";
 
 import OPPOA3XSPARKLEBLACK1 from "assets/oppo/OPPOA3X/OPPOA3XSPARKLEBLACK/OPPOA3XSPARKLEBLACK1.jpg";
 
@@ -2074,6 +2072,62 @@ export const ALLPHONES = [
   },
 
   //OPPO PHONES
+
+  {
+    id: "OPPOK131",
+    name: "OPPO K13 5G 8/128 ",
+    series: "OPPOK13",
+    brand: "OPPO",
+    image: OPPOK13ICYPURPLE1,
+    launchDate: "25-04-2025",
+    networkType: "5G",
+    salesPrice: 17999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 3.5,
+    newArrival: true,
+    mrp: 20999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "16 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "7000 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "Snapdragon 6 Gen 4 Octa core ",
+    },
+  },
+  {
+    id: "OPPOK132",
+    name: "OPPO K13 5G 8/256 ",
+    series: "OPPOK13",
+    brand: "OPPO",
+    image: OPPOK13ICYPURPLE1,
+    launchDate: "25-04-2025",
+    networkType: "5G",
+    salesPrice: 19999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 3.5,
+    newArrival: true,
+    mrp: 22999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Display: "6.67″ (16.94 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "16 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "7000 mAh | 80W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "Snapdragon 6 Gen 4 Octa core ",
+    },
+  },
+
   {
     id: "OPPOA5PRO1",
     name: "OPPO A5 PRO 5G 8/128 ",
@@ -2290,63 +2344,6 @@ export const ALLPHONES = [
       Network: "Dual SIM: 4G & 4G",
       OS: "Android v12",
       Processor: "MediaTek Helio G35 Octa core ",
-    },
-  },
-
-  {
-    id: "OPPO5",
-    name: "OPPO K12X 5G 8/256 ",
-    brand: "OPPO",
-    prebook: false,
-    series: "K12X",
-    image: OPPOK12XVOILET1,
-    launchDate: "29-07-2024",
-    networkType: "5G",
-    salesPrice: 15999,
-    specialOffer: true,
-    trendingPhone: false,
-    rating: 4.5,
-    newArrival: true,
-    mrp: 18999,
-    ram: 8,
-    storage: 256,
-    specifications: {
-      Display: "6.67″ (16.94 cm) 120Hz LCD ",
-      "Rear Camera": "32+2 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "8 GB | 256 GB ",
-      Battery: "5100 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-      Processor: "MediaTek Dimensity 6300 Octa core ",
-    },
-  },
-  {
-    id: "OPPO6",
-    name: "OPPO K12X 5G 6/128 ",
-    brand: "OPPO",
-    prebook: false,
-    series: "K12X",
-    image: OPPOK12XBLUE1,
-    launchDate: "29-07-2024",
-    networkType: "5G",
-    salesPrice: 12999,
-    specialOffer: false,
-    trendingPhone: false,
-    rating: 4.5,
-    newArrival: true,
-    mrp: 16999,
-    ram: 6,
-    storage: 128,
-    specifications: {
-      Display: "6.67″ (16.94 cm) 120Hz LCD ",
-      "Rear Camera": "32+2 MP",
-      "Front Camera": "8 MP",
-      "RAM | Storage": "6 GB | 128 GB ",
-      Battery: "5100 mAh | 45W Fast Charging ",
-      Network: "Dual SIM: 5G & 5G",
-      OS: "Android v14 ",
-      Processor: "MediaTek Dimensity 6300 Octa core ",
     },
   },
 
