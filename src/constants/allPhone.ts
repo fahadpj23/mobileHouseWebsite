@@ -49,7 +49,9 @@ import REDMINOTE14PROPLUSSPECTREBLUE1 from "assets/mi/REDMINOTE14PROPLUS/REDMINO
 
 import REDMI14CSTARLIGHTBLUE1 from "assets/mi/REDMI14C/REDMI14CSTARLIGHTBLUE/REDMI14CSTARLIGHTBLUE1.jpeg";
 
-//oppo import
+//oppo
+
+import OPPOA5XLASERWHITE1 from "assets/oppo/OPPOA5X/OPPOA5XLASERWHITE/OPPOA5XLASERWHITE1.jpeg";
 
 import OPPOK13ICYPURPLE1 from "assets/oppo/OPPOK13/OPPOK13ICYPURPLE/OPPOK13ICYPURPLE1.jpeg";
 
@@ -2073,6 +2075,33 @@ export const ALLPHONES = [
 
   //OPPO PHONES
 
+  {
+    id: "OPPOA5X1",
+    name: "OPPO A5X 5G 4/128 ",
+    series: "OPP0A5X",
+    brand: "OPPO",
+    image: OPPOA5XLASERWHITE1,
+    launchDate: "25-05-2025",
+    networkType: "5G",
+    salesPrice: 13999,
+    specialOffer: false,
+    trendingPhone: false,
+    rating: 3.8,
+    newArrival: true,
+    mrp: 17999,
+    ram: 4,
+    storage: 128,
+    specifications: {
+      Display: "6.67″ (16.94 cm) 120Hz LCD ",
+      "Rear Camera": "32 MP",
+      "Front Camera": "5 MP",
+      "RAM | Storage": "4 GB | 128 GB ",
+      Battery: "6000 mAh | 45W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "MediaTek Dimensity 6300 Octa core ",
+    },
+  },
   {
     id: "OPPOK131",
     name: "OPPO K13 5G 8/128 ",
