@@ -14,23 +14,26 @@ const PageRoute = () => {
   return (
     <div>
       <BrowserRouter>
-        <MainLayout>
-          <Routes>
-            <Route path="/">
-              <Route index element={<HomePage />} />
-              <Route path="brand/:brandName" element={<Brand />} />
-              <Route path="series/:seriesList" element={<SeriesList />} />
-              <Route path="specCreator" element={<SpecCreator />} />
-              <Route path="Phones/:phoneType" element={<Phones />} />
-              <Route path="admin/:products" element={<Products />} />
-              <Route
-                path="phone/:productId/:productName"
-                element={<SingleItem />}
-              />
-              <Route path="*" element={<PageNotFound />} />
-            </Route>
-          </Routes>
-        </MainLayout>
+        {/* website Routes */}
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="brand/:brandName" element={<Brand />} />
+            <Route path="series/:seriesList" element={<SeriesList />} />
+            <Route path="specCreator" element={<SpecCreator />} />
+            <Route path="Phones/:phoneType" element={<Phones />} />
+            <Route
+              path="phone/:productId/:productName"
+              element={<SingleItem />}
+            />
+            <Route path="*" element={<PageNotFound />} />
+          </Route>
+
+          {/* Admin Routes */}
+          <Route>
+            <Route path="admin/products" element={<Products />} />
+          </Route>
+        </Routes>
       </BrowserRouter>
     </div>
   );
