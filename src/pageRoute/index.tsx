@@ -8,7 +8,7 @@ import SeriesList from "pages/seriesList";
 import PageNotFound from "pages/404Page";
 import SpecCreator from "pages/specCreator";
 import Phones from "pages/phones";
-import { useEffect, useState } from "react";
+import Products from "pages/adminPanel/products";
 
 const PageRoute = () => {
   return (
@@ -22,6 +22,7 @@ const PageRoute = () => {
               <Route path="series/:seriesList" element={<SeriesList />} />
               <Route path="specCreator" element={<SpecCreator />} />
               <Route path="Phones/:phoneType" element={<Phones />} />
+              <Route path="admin/:products" element={<Products />} />
               <Route
                 path="phone/:productId/:productName"
                 element={<SingleItem />}
