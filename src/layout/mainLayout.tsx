@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
@@ -37,7 +38,9 @@ const MainLayout = ({ children }: any) => {
         )}
         <Naviagtion />
       </div>
-      <main>{children}</main>
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
 };

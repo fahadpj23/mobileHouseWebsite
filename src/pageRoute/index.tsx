@@ -16,8 +16,8 @@ const PageRoute = () => {
       <BrowserRouter>
         {/* website Routes */}
         <Routes>
-          <Route path="/" element={<MainLayout />}>
-            <Route index element={<HomePage />} />
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<HomePage />} />
             <Route path="brand/:brandName" element={<Brand />} />
             <Route path="series/:seriesList" element={<SeriesList />} />
             <Route path="specCreator" element={<SpecCreator />} />

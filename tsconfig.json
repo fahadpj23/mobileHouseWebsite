@@ -24,7 +24,9 @@
       "@components/*": ["./components/*"],
       "@asset/*": ["./asset/*"],
       "@utils/*": ["./utils/*"],
-      "@slice/*": ["./slice/*"],
+      "@slice/*": ["./store/*"],
+      "@types/*": ["./types/*"],
+      "@services/*": ["./services/*"],
       "@context/*": ["./context/*"],
       "@hooks/*": ["./hooks/*"]
     }
