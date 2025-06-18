@@ -1,7 +1,7 @@
 import { Divider } from "@mui/material";
 import { FaShare } from "react-icons/fa";
 import { getSpecificationIcon } from "utils/getSpecificationIcon";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getProductDetails } from "utils/getProductDetails";
 import { getDiscountPercentage } from "utils/getDiscountPercentage";
@@ -149,11 +149,12 @@ const SingleItem = () => {
                 </button>
               )}
             </div>
-
-            <RiWhatsappFill
-              onClick={() => handleWhatapp(product)}
-              className="fixed bottom-10 right-10 text-green-600 z-50 text-[40px] animate-bounce shadow-2xl "
-            />
+            <div>
+              <RiWhatsappFill
+                onClick={() => handleWhatapp(product)}
+                className="fixed bottom-10 right-10 text-green-600 z-50 text-[40px] animate-bounce shadow-2xl "
+              />
+            </div>
 
             <div className="flex flex-col">
               {productColors?.length ? (

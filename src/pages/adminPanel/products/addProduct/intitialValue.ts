@@ -1,0 +1,17 @@
+export const initialValues = {
+  productName: "",
+  brand: "",
+  ram: "",
+  storage: "",
+  price: false,
+  mrp: "",
+  series: [],
+  networkType: "",
+  category: "1",
+  display: "",
+  frontCamera: "",
+  rearCamera: "",
+  os: "",
+  processor: "",
+  battery: "",
+};

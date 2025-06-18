@@ -22,7 +22,6 @@ const AddProduct = () => {
     processor: "f",
     battery: "54",
   });
-  const [file, setFile] = useState<File | null>(null);
 
   const submitForm = async () => {
     // 1. Create a FormData object
@@ -33,7 +32,7 @@ const AddProduct = () => {
     for (const key in formData) {
       productData.append(key, formData[key]);
     }
-    productData.append("file", file);
+    // productData.append("file", file);
     // eslint-disable-next-line react-hooks/rules-of-hooks
     try {
       // 3. Send the POST request using fetch
@@ -44,18 +43,13 @@ const AddProduct = () => {
       console.log(false);
     }
   };
-  const handleFileChange = (e: any) => {
-    if (e.target.files?.[0]) {
-      setFile(e.target.files[0]);
-    }
-  };
 
   return (
     <div className="flex space-x-3">
       <button onClick={submitForm} className="bg-red-500">
         form submit
       </button>
-      <input type="file" onChange={handleFileChange} required />
+      <form></form>
     </div>
   );
 };
