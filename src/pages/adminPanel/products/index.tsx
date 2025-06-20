@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
-import { fetchProducts } from "store/slice/products/productSlice";
+import { addproducts, fetchProducts } from "store/slice/products/productSlice";
 import { useEffect } from "react";
 import { initialValues } from "./addProduct/intitialValue";
 import TableData from "../AdminComponents/table";
@@ -16,11 +16,15 @@ const Products = () => {
   }, []);
 
   const handleSubmit = (values: typeof initialValues) => {
-    console.log("Form submitted:", values);
-    // Handle form submission here
+    const formData = new FormData();
+    formData.append("name", values.productName);
+    formData.append("mrp", values.mrp);
+    values.images.forEach((image) => {
+      formData.append("images", image);
+    });
+    dispatch(addproducts(formData));
   };
 
-  console.log(Array.isArray(entities) && entities[3]);
   return (
     <div>
       <h1>products</h1>

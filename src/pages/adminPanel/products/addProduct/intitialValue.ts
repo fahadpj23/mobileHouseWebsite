@@ -14,4 +14,5 @@ export const initialValues = {
   os: "",
   processor: "",
   battery: "",
+  images: [],
 };

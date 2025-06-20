@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { CloudUpload, InsertDriveFile, Close } from "@mui/icons-material";
+
 import {
   Formik,
   Form,
@@ -26,6 +28,8 @@ import {
   IconButton,
   Box,
 } from "@mui/material";
+
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { AddCircleOutline, RemoveCircleOutline } from "@mui/icons-material";
 
 // Define types for our form
@@ -40,6 +44,7 @@ interface FormField {
     | "select"
     | "checkbox"
     | "radio"
+    | "file"
     | "array";
   options?: { value: string | number; label: string }[];
   required?: boolean;
@@ -61,6 +66,15 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
   validationSchema,
   onSubmit,
 }) => {
+  const [file, setFile] = useState<File | null>(null);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      setFile(e.target.files[0]);
+    }
+  };
+
+  //form  dynamic rendering
   const renderFormField = (
     field: FormField,
     formik: FormikProps<FormikValues>
@@ -173,6 +187,109 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
             )}
           </FieldArray>
         );
+      case "file":
+        return (
+          <FormControl fullWidth margin="normal" error={error}>
+            <InputLabel shrink>{label}</InputLabel>
+            <Box mt={2}>
+              <input
+                accept="image/*" // Adjust accepted file types as needed
+                style={{ display: "none" }}
+                id={`${name}-file-input`}
+                multiple
+                type="file"
+                onChange={(event) => {
+                  const files = event.currentTarget.files;
+                  if (files) {
+                    const newFiles = Array.from(files);
+                    const existingFiles = formik.values[name] || [];
+                    formik.setFieldValue(name, [...existingFiles, ...newFiles]);
+                  }
+                }}
+              />
+              <label htmlFor={`${name}-file-input`}>
+                <Button
+                  variant="outlined"
+                  component="span"
+                  startIcon={<CloudUpload />}
+                >
+                  Upload Files
+                </Button>
+              </label>
+            </Box>
+
+            {formik.values[name]?.length > 0 && (
+              <Box mt={2}>
+                <Grid container spacing={2}>
+                  {formik.values[name].map((file: File, index: number) => (
+                    <Grid item xs={12} sm={6} md={4} key={index}>
+                      <Paper
+                        elevation={2}
+                        style={{ padding: "8px", position: "relative" }}
+                      >
+                        {file.type.startsWith("image/") ? (
+                          <img
+                            src={URL.createObjectURL(file)}
+                            alt={file.name}
+                            style={{
+                              width: "100%",
+                              height: "150px",
+                              objectFit: "cover",
+                              borderRadius: "4px",
+                            }}
+                          />
+                        ) : (
+                          <Box
+                            style={{
+                              width: "100%",
+                              height: "150px",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              backgroundColor: "#f5f5f5",
+                            }}
+                          >
+                            <InsertDriveFile
+                              style={{ fontSize: 48, color: "#757575" }}
+                            />
+                          </Box>
+                        )}
+                        <Typography
+                          variant="body2"
+                          style={{
+                            marginTop: "8px",
+                            whiteSpace: "nowrap",
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                          }}
+                        >
+                          {file.name}
+                        </Typography>
+                        <IconButton
+                          style={{
+                            position: "absolute",
+                            top: 4,
+                            right: 4,
+                            backgroundColor: "rgba(255,255,255,0.7)",
+                          }}
+                          size="small"
+                          onClick={() => {
+                            const updatedFiles = [...formik.values[name]];
+                            updatedFiles.splice(index, 1);
+                            formik.setFieldValue(name, updatedFiles);
+                          }}
+                        >
+                          <Close fontSize="small" />
+                        </IconButton>
+                      </Paper>
+                    </Grid>
+                  ))}
+                </Grid>
+              </Box>
+            )}
+            {error && <FormHelperText>{helperText}</FormHelperText>}
+          </FormControl>
+        );
       default:
         return null;
     }
@@ -203,7 +320,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
               type="submit"
               variant="contained"
               color="primary"
-              disabled={formik.isSubmitting}
+              // disabled={formik.isSubmitting}
               size="large"
             >
               Submit

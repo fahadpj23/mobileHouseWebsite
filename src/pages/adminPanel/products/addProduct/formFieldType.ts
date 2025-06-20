@@ -11,6 +11,7 @@ export interface ProductFormField {
     | "select"
     | "checkbox"
     | "radio"
+    | "file"
     | "array";
   options?: { value: string | number; label: string }[];
   required?: boolean;

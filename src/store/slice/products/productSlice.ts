@@ -27,7 +27,11 @@ export const fetchProducts = createAsyncThunk(
 export const addproducts = createAsyncThunk(
   "products/addProduct",
   async (data: any) => {
-    const response = await axiosInstance.post(`products/`, data);
+    const response = await axiosInstance.post(`products/`, data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
   }
 );
 

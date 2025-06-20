@@ -128,4 +128,11 @@ export const formFields: ProductFormField[] = [
     required: true,
     validation: Yup.string().required("Battery is required"),
   },
+  {
+    name: "images",
+    label: "images",
+    type: "file",
+    required: true,
+    validation: Yup.string().required("image is required"),
+  },
 ];
