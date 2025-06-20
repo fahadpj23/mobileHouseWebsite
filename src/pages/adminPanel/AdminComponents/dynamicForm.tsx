@@ -97,6 +97,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
             name={name}
             label={label}
             type={type}
+            size="small"
             fullWidth
             margin="normal"
             variant="outlined"
@@ -107,7 +108,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
         );
       case "select":
         return (
-          <FormControl fullWidth margin="normal" error={error}>
+          <FormControl fullWidth margin="normal" error={error} size="small">
             <InputLabel>{label}</InputLabel>
             <Field as={Select} name={name} label={label} required={required}>
               {options.map((option) => (
@@ -303,12 +304,12 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
     >
       {(formik) => (
         <Form>
-          <Grid container spacing={2}>
+          <Grid container spacing={3}>
             {formFields.map((field) => (
               <Grid
                 item
                 xs={12}
-                sm={field.type === "array" ? 12 : 6}
+                sm={field.type === "array" ? 12 : 4}
                 key={field.name}
               >
                 {renderFormField(field, formik)}
