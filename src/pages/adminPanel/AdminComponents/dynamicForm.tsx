@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CloudUpload, InsertDriveFile, Close } from "@mui/icons-material";
 
 import {
@@ -56,7 +56,6 @@ interface DynamicFormProps {
   formFields: FormField[];
   initialValues: FormikValues;
   validationSchema: Yup.ObjectSchema<any>;
-  // onSubmit: (values: FormikValues) => void;
   onSubmit: any;
 }
 
@@ -81,6 +80,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
   ) => {
     const { name, label, type, options = [], required = false } = field;
     const error = formik.touched[name] && Boolean(formik.errors[name]);
+    console.log(formik);
     const helperText =
       formik.touched[name] && formik.errors[name]
         ? String(formik.errors[name])
@@ -222,38 +222,53 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
             {formik.values[name]?.length > 0 && (
               <Box mt={2}>
                 <Grid container spacing={2}>
-                  {formik.values[name].map((file: File, index: number) => (
+                  {formik.values[name].map((file: any, index: number) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
                       <Paper
                         elevation={2}
                         style={{ padding: "8px", position: "relative" }}
                       >
-                        {file.type.startsWith("image/") ? (
-                          <img
-                            src={URL.createObjectURL(file)}
-                            alt={file.name}
-                            style={{
-                              width: "100%",
-                              height: "150px",
-                              objectFit: "cover",
-                              borderRadius: "4px",
-                            }}
-                          />
-                        ) : (
-                          <Box
-                            style={{
-                              width: "100%",
-                              height: "150px",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              backgroundColor: "#f5f5f5",
-                            }}
-                          >
-                            <InsertDriveFile
-                              style={{ fontSize: 48, color: "#757575" }}
+                        {file?.type ? (
+                          file.type.startsWith("image/") ? (
+                            <img
+                              src={URL.createObjectURL(file)}
+                              alt={file.name}
+                              style={{
+                                width: "100%",
+                                height: "150px",
+                                objectFit: "cover",
+                                borderRadius: "4px",
+                              }}
                             />
-                          </Box>
+                          ) : (
+                            <Box
+                              style={{
+                                width: "100%",
+                                height: "150px",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                backgroundColor: "#f5f5f5",
+                              }}
+                            >
+                              <InsertDriveFile
+                                style={{ fontSize: 48, color: "#757575" }}
+                              />
+                            </Box>
+                          )
+                        ) : (
+                          <div>
+                            <img
+                              src={`http://localhost:9000${file?.imageUrl}`}
+                              alt={file.name}
+                              style={{
+                                width: "100%",
+                                height: "150px",
+                                objectFit: "cover",
+                                borderRadius: "4px",
+                              }}
+                            />
+                          </div>
                         )}
                         <Typography
                           variant="body2"

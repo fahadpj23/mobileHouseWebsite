@@ -29,7 +29,9 @@
       "@types/*": ["./types/*"],
       "@services/*": ["./services/*"],
       "@context/*": ["./context/*"],
-      "@hooks/*": ["./hooks/*"]
+      "@hooks/*": ["./hooks/*"],
+      "@adminPanel/*": ["./adminPanel/*"],
+      "@adminComponent/*": ["./adminPanel/adminComponent/*"]
     }
   },
   "include": ["src"]

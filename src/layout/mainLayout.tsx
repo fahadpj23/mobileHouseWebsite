@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import { NAVIGATIONITEMS } from "constants/navigationItems";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 import mobileHouseLogo from "assets/mobileHouseLogo.png";
@@ -19,7 +19,9 @@ const MainLayout = ({ children }: any) => {
   return (
     <div className="p-1 md:p-5">
       <div className=" flex  justify-between w-full items-center">
-        <SideDrawar />
+        <div className=" block md:hidden ml-2 ">
+          <SideDrawar NAVIGATIONITEMS={NAVIGATIONITEMS} />
+        </div>
         <Link
           to="/"
           className="mt-3 md:mt-0 h-[40px] w-[180px] md:h-[60px] md:w-[250px]"

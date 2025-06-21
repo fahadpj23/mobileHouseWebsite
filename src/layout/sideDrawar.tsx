@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { List, ListItem, SwipeableDrawer } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
-import { NAVIGATIONITEMS } from "constants/navigationItems";
 import SocialMediaItems from "constants/socialMediaItems";
 import DynamicMuiIcon from "utils/dynamicMuiIcon";
 
-const SideDrawar = () => {
+interface props {
+  NAVIGATIONITEMS: any;
+}
+
+const SideDrawar: FC<props> = ({ NAVIGATIONITEMS }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = (open: any) => (event: any) => {
@@ -23,8 +26,8 @@ const SideDrawar = () => {
   };
 
   return (
-    <div className=" block md:hidden ml-2 ">
-      <button onClick={toggleDrawer(true)}>
+    <>
+      <button className="ml-0 md:ml-4" onClick={toggleDrawer(true)}>
         <MenuIcon />
       </button>
       <SwipeableDrawer
@@ -49,7 +52,7 @@ const SideDrawar = () => {
                 ))}
               </div>
               <div className="mt-5 space-y-3">
-                {NAVIGATIONITEMS.map((navigation) => (
+                {NAVIGATIONITEMS.map((navigation: any) => (
                   <ListItem key={navigation.title}>
                     <Link
                       className="w-full flex space-x-4 items-center "
@@ -67,7 +70,7 @@ const SideDrawar = () => {
           </List>
         </div>
       </SwipeableDrawer>
-    </div>
+    </>
   );
 };
 export default SideDrawar;

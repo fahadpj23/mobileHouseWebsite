@@ -1,7 +1,7 @@
 export const ProductTableHead = [
   {
     title: "Product Name",
-    key: "name",
+    key: "productName",
   },
   {
     title: "Brand",

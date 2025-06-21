@@ -1,17 +1,26 @@
-import { FC, useEffect, useState } from "react";
-import { formFields } from "../addProduct/formFields";
-import { validationSchema } from "../addProduct/validationSchema";
-import { initialValues } from "../addProduct/intitialValue";
-import { useAppDispatch } from "hooks/useRedux";
+import { FC } from "react";
+
 import { addproducts } from "store/slice/products/productSlice";
-import DynamicForm from "../../AdminComponents/dynamicForm";
+
+import { useAppDispatch } from "hooks/useRedux";
+import DynamicForm from "../../adminComponents/dynamicForm";
 import { Modal } from "@mui/material";
 
 interface props {
   handleAddButton: any;
   isAddModalOpen: boolean;
+
+  formFields?: any;
+  validationSchema?: any;
+  initialValues?: any;
 }
-const AddProduct: FC<props> = ({ handleAddButton, isAddModalOpen }) => {
+const AddProduct: FC<props> = ({
+  handleAddButton,
+  isAddModalOpen,
+  formFields,
+  validationSchema,
+  initialValues,
+}) => {
   const dispatch = useAppDispatch();
 
   const handleSubmit = (values: typeof initialValues) => {
@@ -31,7 +40,7 @@ const AddProduct: FC<props> = ({ handleAddButton, isAddModalOpen }) => {
     formData.append("battery", values?.battery);
     formData.append("os", values.os);
     formData.append("processor", values.processor);
-    values.images.forEach((image) => {
+    values.images.forEach((image: any) => {
       formData.append("images", image);
     });
     dispatch(addproducts(formData));

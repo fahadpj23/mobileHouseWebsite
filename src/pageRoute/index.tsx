@@ -9,6 +9,7 @@ import PageNotFound from "pages/404Page";
 import SpecCreator from "pages/specCreator";
 import Phones from "pages/phones";
 import Products from "pages/adminPanel/products";
+import AdminMainLayout from "layout/adminLayout";
 
 const PageRoute = () => {
   return (
@@ -30,7 +31,7 @@ const PageRoute = () => {
           </Route>
 
           {/* Admin Routes */}
-          <Route>
+          <Route element={<AdminMainLayout />}>
             <Route path="admin/products" element={<Products />} />
           </Route>
         </Routes>
