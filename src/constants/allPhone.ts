@@ -2141,7 +2141,7 @@ export const ALLPHONES = [
     image: OPPOA5XLASERWHITE1,
     launchDate: "25-05-2025",
     networkType: "5G",
-    salesPrice: 13999,
+    salesPrice: 12999,
     specialOffer: false,
     trendingPhone: false,
     rating: 3.8,
