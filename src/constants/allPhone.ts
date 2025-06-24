@@ -83,6 +83,8 @@ import OPPOA3OCEANBLUE1 from "assets/oppo/OPPOA3/OPPOA3OCEANBLUE/OPPOA3OCEANBLUE
 
 //vivo
 
+import VIVOY400PRO5GNEBULAPURPLE1 from "assets/vivo/VIVOY400PRO/VIVOY400PRO5GNEBULAPURPLE/VIVOY400PRO5GNEBULAPURPLE1.jpeg";
+
 import VIVOY19EMAJESTICGREEN1 from "assets/vivo/VIVOY19E/VIVOY19EMAJESTICGREEN/VIVOY19EMAJESTICGREEN1.jpeg";
 
 import VIVOY195GMAJESTICGREEN1 from "assets/vivo/VIVOY19/VIVOY195GMAJESTICGREEN/VIVOY195GMAJESTICGREEN1.jpeg";
@@ -236,6 +238,62 @@ import POCOM7PROLAVENDERFROST1 from "assets/poco/POCOM7PRO/POCOM7PROLAVENDERFROS
 export const ALLPHONES = [
   //VIVO PHONES
 
+  {
+    id: "VIVOY400PRO1",
+    name: "VIVO Y400 PRO 8/128",
+    brand: "VIVO",
+    prebook: false,
+    series: "VIVOY400PRO",
+    image: VIVOY400PRO5GNEBULAPURPLE1,
+    launchDate: "20-06-2025",
+    networkType: "5G",
+    salesPrice: 24999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 4.5,
+    newArrival: true,
+    mrp: 29999,
+    ram: 8,
+    storage: 128,
+    specifications: {
+      Display: "6.77″ (17.2 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB | 128 GB ",
+      Battery: "5500 mAh | 90W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "MediaTek Dimensity 7300 Octa core ",
+    },
+  },
+  {
+    id: "VIVOY400PRO2",
+    name: "VIVO Y400 PRO 8/256",
+    brand: "VIVO",
+    prebook: false,
+    series: "VIVOY400PRO",
+    image: VIVOY400PRO5GNEBULAPURPLE1,
+    launchDate: "20-06-2025",
+    networkType: "5G",
+    salesPrice: 26999,
+    specialOffer: false,
+    trendingPhone: true,
+    rating: 4.5,
+    newArrival: true,
+    mrp: 31999,
+    ram: 8,
+    storage: 256,
+    specifications: {
+      Display: "6.77″ (17.2 cm) 120Hz AMOLED ",
+      "Rear Camera": "50+2 MP",
+      "Front Camera": "32 MP",
+      "RAM | Storage": "8 GB | 256 GB ",
+      Battery: "5500 mAh | 90W Fast Charging ",
+      Network: "Dual SIM: 5G & 5G",
+      OS: "Android v15 ",
+      Processor: "MediaTek Dimensity 7300 Octa core ",
+    },
+  },
   {
     id: "VIVOY191",
     name: "VIVO Y19 5G 4/64 ",
