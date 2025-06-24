@@ -30,8 +30,8 @@
       "@services/*": ["./services/*"],
       "@context/*": ["./context/*"],
       "@hooks/*": ["./hooks/*"],
-      "@adminPanel/*": ["./adminPanel/*"],
-      "@adminComponent/*": ["./adminPanel/adminComponent/*"]
+      "@adminPanel/*": ["./components/adminPanel/*"],
+      "@adminComponent/*": ["./components/adminPanel/adminComponent/*"]
     }
   },
   "include": ["src"]

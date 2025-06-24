@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CloudUpload, InsertDriveFile, Close } from "@mui/icons-material";
+import CloseIcon from "@mui/icons-material/Close";
 
 import {
   Formik,
@@ -27,6 +28,7 @@ import {
   Typography,
   IconButton,
   Box,
+  Modal,
 } from "@mui/material";
 
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
@@ -57,6 +59,8 @@ interface DynamicFormProps {
   initialValues: FormikValues;
   validationSchema: Yup.ObjectSchema<any>;
   onSubmit: any;
+  handleAddButton: any;
+  isAddModalOpen: any;
 }
 
 const DynamicForm: React.FC<DynamicFormProps> = ({
@@ -64,6 +68,8 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
   initialValues,
   validationSchema,
   onSubmit,
+  handleAddButton,
+  isAddModalOpen,
 }) => {
   const [file, setFile] = useState<File | null>(null);
 
@@ -312,39 +318,53 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={onSubmit}
+    <Modal
+      className="flex space-x-3 w-screen h-screen items-center justify-center"
+      open={isAddModalOpen}
+      onClose={handleAddButton}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
     >
-      {(formik) => (
-        <Form>
-          <Grid container spacing={3}>
-            {formFields.map((field) => (
-              <Grid
-                item
-                xs={12}
-                sm={field.type === "array" ? 12 : 4}
-                key={field.name}
-              >
-                {renderFormField(field, formik)}
+      <div className="  bg-white p-4 h-[90%] md:h-[80%] w-[90%] md:w-[80%] overflow-y-auto relative">
+        <button onClick={handleAddButton} className="absolute top-2 right-2">
+          <CloseIcon />
+        </button>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={onSubmit}
+        >
+          {(formik) => (
+            <Form>
+              <div className="mt-5"></div>
+              <Grid container spacing={3}>
+                {formFields.map((field) => (
+                  <Grid
+                    item
+                    xs={12}
+                    sm={field.type === "array" ? 12 : 4}
+                    key={field.name}
+                  >
+                    {renderFormField(field, formik)}
+                  </Grid>
+                ))}
               </Grid>
-            ))}
-          </Grid>
-          <Box marginTop={3}>
-            <Button
-              type="submit"
-              variant="contained"
-              color="primary"
-              // disabled={formik.isSubmitting}
-              size="large"
-            >
-              Submit
-            </Button>
-          </Box>
-        </Form>
-      )}
-    </Formik>
+              <Box marginTop={3}>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  // disabled={formik.isSubmitting}
+                  size="large"
+                >
+                  Submit
+                </Button>
+              </Box>
+            </Form>
+          )}
+        </Formik>
+      </div>
+    </Modal>
   );
 };
 

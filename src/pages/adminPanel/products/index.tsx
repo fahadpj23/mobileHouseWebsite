@@ -5,19 +5,17 @@ import {
 } from "store/slice/products/productSlice";
 import { useEffect, useState } from "react";
 
-import TableData from "../adminComponents/table";
-import { formFields } from "./addProduct/formFields";
-import { validationSchema } from "./addProduct/validationSchema";
-import { initialValues } from "./addProduct/intitialValue";
-import { ProductTableHead } from "../tableHead/products";
-import Header from "../adminComponents/header";
-import AddProduct from "./addProduct/addProduct";
+import TableData from "components/adminComponents/table";
+import { formFields } from "components/adminComponents/addProduct/formFields";
+import { validationSchema } from "components/adminComponents/addProduct/validationSchema";
+import { initialValues } from "components/adminComponents/addProduct/intitialValue";
+import { ProductTableHead } from "constants/admin/tableHead/products";
+import Header from "components/adminComponents/header";
+import AddProduct from "components/adminComponents/addProduct";
 
 const Products = () => {
   const dispatch = useAppDispatch();
-  const { entities, loading, entity } = useAppSelector(
-    (state) => state.user.products
-  );
+  const { entities, entity } = useAppSelector((state) => state.user.products);
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
   const [values, setValues] = useState<any>(initialValues);
   const [isEdit, setIsEdit] = useState<boolean>(false);
@@ -27,7 +25,7 @@ const Products = () => {
     dispatch(fetchProducts());
   }, []);
 
-  const handleAddButton = () => setIsAddModalOpen(true);
+  const handleAddButton = () => setIsAddModalOpen(!isAddModalOpen);
 
   const handleEdit = (id: number) => {
     setEditId(id);

@@ -1,10 +1,8 @@
 import { FC } from "react";
 
 import { addproducts } from "store/slice/products/productSlice";
-
 import { useAppDispatch } from "hooks/useRedux";
-import DynamicForm from "../../adminComponents/dynamicForm";
-import { Modal } from "@mui/material";
+import DynamicForm from "../dynamicForm";
 
 interface props {
   handleAddButton: any;
@@ -47,22 +45,15 @@ const AddProduct: FC<props> = ({
   };
 
   return (
-    <div className="flex space-x-3">
-      <Modal
-        open={isAddModalOpen}
-        onClose={handleAddButton}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <div className="bg-white p-2 h-screen w-screen overflow-y-auto">
-          <DynamicForm
-            formFields={formFields}
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            onSubmit={handleSubmit}
-          />
-        </div>
-      </Modal>
+    <div>
+      <DynamicForm
+        formFields={formFields}
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+        handleAddButton={handleAddButton}
+        isAddModalOpen={isAddModalOpen}
+      />
     </div>
   );
 };

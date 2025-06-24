@@ -31,7 +31,9 @@ const TableData: FC<props> = ({ TableHead, TableData, handleEdit }) => {
           <tr>
             <td className="border-black text-left p-2">{key + 1}</td>
             {TableHead?.map((head: any) => (
-              <td className="border-black text-left p-2">{data[head?.key]}</td>
+              <td key={head?.key} className="border-black text-left p-2">
+                {data[head?.key]}
+              </td>
             ))}
             <td className="flex space-x-2 border-black text-left p-2">
               <RemoveRedEyeIcon />
