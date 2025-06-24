@@ -1,4 +1,66 @@
+import { useAppDispatch, useAppSelector } from "hooks/useRedux";
+// import {
+//   fetchBanner,
+//   getProductById,
+// } from "store/slice/Banner/Bannerlice";
+// import { useEffect, useState } from "react";
+
+import TableData from "components/adminComponents/table";
+import { formFields } from "components/adminComponents/addBanner/formFields";
+import { validationSchema } from "components/adminComponents/addBanner/validationSchema";
+import { initialValues } from "components/adminComponents/addBanner/initialValue";
+// import { ProductTableHead } from "constants/admin/tableHead/Banner";
+import Header from "components/adminComponents/header";
+import AddProduct from "components/adminComponents/addBanner";
+import { useEffect, useState } from "react";
+
 const Banner = () => {
-  return <div>Banner</div>;
+  const dispatch = useAppDispatch();
+  //   const { entities, entity } = useAppSelector((state) => state.user.Banner);
+  const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
+  const [values, setValues] = useState<any>(initialValues);
+  const [isEdit, setIsEdit] = useState<boolean>(false);
+  //   const [editId, setEditId] = useState<number>(0);
+
+  //   useEffect(() => {
+  //     dispatch(fetchBanner());
+  //   }, []);
+
+  const handleAddButton = () => setIsAddModalOpen(!isAddModalOpen);
+
+  //   const handleEdit = (id: number) => {
+  //     setEditId(id);
+  //     // dispatch(getProductById(id));
+  //   };
+
+  //   useEffect(() => {
+  //     if (entity !== null && entity?.id) {
+  //       setValues(entity);
+  //       setIsEdit(true);
+  //     } else setValues(initialValues);
+  //   }, [entity]);
+  //   console.log(values);
+  return (
+    <div>
+      <Header title="Banner" handleAddButton={handleAddButton} />
+
+      {/* {Array.isArray(entities) && (
+        <TableData
+          TableHead={ProductTableHead}
+          TableData={entities}
+          handleEdit={handleEdit}
+        />
+      )} */}
+      {(isAddModalOpen || isEdit) && (
+        <AddProduct
+          handleAddButton={handleAddButton}
+          isAddModalOpen={isAddModalOpen || isEdit}
+          formFields={formFields}
+          validationSchema={validationSchema}
+          initialValues={values}
+        />
+      )}
+    </div>
+  );
 };
 export default Banner;
