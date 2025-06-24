@@ -10,6 +10,10 @@ import SpecCreator from "pages/specCreator";
 import Phones from "pages/phones";
 import Products from "pages/adminPanel/products";
 import AdminMainLayout from "layout/adminLayout";
+import Banner from "pages/adminPanel/banner";
+import WhatsappAds from "pages/adminPanel/whatsappAds";
+import JustLaunched from "pages/adminPanel/justLaunched";
+import NewArrival from "pages/adminPanel/newArrival";
 
 const PageRoute = () => {
   return (
@@ -33,6 +37,10 @@ const PageRoute = () => {
           {/* Admin Routes */}
           <Route element={<AdminMainLayout />}>
             <Route path="admin/products" element={<Products />} />
+            <Route path="admin/newArrival" element={<NewArrival />} />
+            <Route path="admin/justLaunched" element={<JustLaunched />} />
+            <Route path="admin/whatsappAds" element={<WhatsappAds />} />
+            <Route path="admin/Banner" element={<Banner />} />
           </Route>
         </Routes>
       </BrowserRouter>
