@@ -32,7 +32,22 @@ const TableData: FC<props> = ({ TableHead, TableData, handleEdit }) => {
             <td className="border-black text-left p-2">{key + 1}</td>
             {TableHead?.map((head: any) => (
               <td key={head?.key} className="border-black text-left p-2">
-                {data[head?.key]}
+                {head.key === "imageUrl" ? (
+                  <div>
+                    <img
+                      src={`http://localhost:9000${data[head?.key]}`}
+                      alt={data[head?.key]}
+                      style={{
+                        width: "100%",
+                        height: "80px",
+                        objectFit: "fill",
+                        borderRadius: "4px",
+                      }}
+                    />
+                  </div>
+                ) : (
+                  data[head?.key]
+                )}
               </td>
             ))}
             <td className="flex space-x-2 border-black text-left p-2">
