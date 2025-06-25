@@ -13,6 +13,7 @@ import { initialValues } from "components/adminComponents/addBanner/initialValue
 import Header from "components/adminComponents/header";
 import AddBanner from "components/adminComponents/addBanner";
 import { useEffect, useState } from "react";
+import { fetchBanners } from "store/slice/bannerSlice";
 
 const Banner = () => {
   const dispatch = useAppDispatch();
@@ -22,9 +23,9 @@ const Banner = () => {
   const [isEdit, setIsEdit] = useState<boolean>(false);
   //   const [editId, setEditId] = useState<number>(0);
 
-  //   useEffect(() => {
-  //     dispatch(fetchBanner());
-  //   }, []);
+  useEffect(() => {
+    dispatch(fetchBanners());
+  }, []);
 
   const handleAddButton = () => setIsAddModalOpen(!isAddModalOpen);
 

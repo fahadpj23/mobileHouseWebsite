@@ -23,27 +23,24 @@ const initialState: UserState = {
 };
 
 // Async thunk to fetch Banners data
-export const fetchBanners = createAsyncThunk(
-  "banners/fetchBanner",
-  async () => {
-    const response = await axiosInstance.get(`banners/`);
-    return response.data;
-  }
-);
+export const fetchBanners = createAsyncThunk("banner/fetchBanner", async () => {
+  const response = await axiosInstance.get(`banner/`);
+  return response.data;
+});
 
 export const getBannerById = createAsyncThunk(
-  "banners/getBannerById",
+  "banner/getBannerById",
   async (id: number) => {
-    const response = await axiosInstance.get(`banners/${id}`);
+    const response = await axiosInstance.get(`banner/${id}`);
     return response.data;
   }
 );
 
 export const addBanners = createAsyncThunk(
-  "banners/addBanner",
+  "banner/addBanner",
   async (data: any) => {
     console.log("FD");
-    const response = await axiosInstance.post(`banners/`, data, {
+    const response = await axiosInstance.post(`banner/`, data, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
