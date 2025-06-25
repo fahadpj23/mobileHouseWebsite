@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { addproducts } from "store/slice/products/productSlice";
+import { addproducts } from "store/slice/productSlice";
 import { useAppDispatch } from "hooks/useRedux";
 import DynamicForm from "../dynamicForm";
 

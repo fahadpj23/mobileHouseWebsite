@@ -11,11 +11,8 @@ import { validationSchema } from "components/adminComponents/addWhatsappAds/vali
 import { initialValues } from "components/adminComponents/addWhatsappAds/initialValue";
 // import { ProductTableHead } from "constants/admin/tableHead/WhatsappAds";
 import Header from "components/adminComponents/header";
-import AddProduct from "components/adminComponents/addWhatsappAds";
 import { useEffect, useState } from "react";
 import AddWhatsappAds from "components/adminComponents/addWhatsappAds";
-// import WhatsappAds from "@components/Home/whatsappAds";
-// import WhatsappAds from "@components/Home/WhatsappAds";
 
 const WhatsappAds = () => {
   const dispatch = useAppDispatch();

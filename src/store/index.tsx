@@ -1,5 +1,9 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { productReducer } from "store/slice/products/productSlice";
+import { productReducer } from "./slice/productSlice";
+import { BannerReducer } from "./slice/bannerSlice";
+import { justLaunchedReducer } from "./slice/justLaunchedSlice";
+import { newArrivalReducer } from "./slice/newArrivalSlice";
+import { whatsappAdsReducer } from "./slice/whatsappAdsSlice";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // Local storage for persistence
 
@@ -12,6 +16,10 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   products: productReducer,
+  banner: BannerReducer,
+  justLaunched: justLaunchedReducer,
+  newArrival: newArrivalReducer,
+  whatsappAds: whatsappAdsReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

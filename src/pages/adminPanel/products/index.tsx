@@ -1,8 +1,5 @@
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
-import {
-  fetchProducts,
-  getProductById,
-} from "store/slice/products/productSlice";
+import { fetchProducts, getProductById } from "store/slice/productSlice";
 import { useEffect, useState } from "react";
 
 import TableData from "components/adminComponents/table";

@@ -11,7 +11,7 @@ import { validationSchema } from "components/adminComponents/addBanner/validatio
 import { initialValues } from "components/adminComponents/addBanner/initialValue";
 // import { ProductTableHead } from "constants/admin/tableHead/Banner";
 import Header from "components/adminComponents/header";
-import AddProduct from "components/adminComponents/addBanner";
+import AddBanner from "components/adminComponents/addBanner";
 import { useEffect, useState } from "react";
 
 const Banner = () => {
@@ -52,7 +52,7 @@ const Banner = () => {
         />
       )} */}
       {(isAddModalOpen || isEdit) && (
-        <AddProduct
+        <AddBanner
           handleAddButton={handleAddButton}
           isAddModalOpen={isAddModalOpen || isEdit}
           formFields={formFields}

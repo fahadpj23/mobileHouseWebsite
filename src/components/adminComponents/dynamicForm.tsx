@@ -86,7 +86,6 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
   ) => {
     const { name, label, type, options = [], required = false } = field;
     const error = formik.touched[name] && Boolean(formik.errors[name]);
-    console.log(formik);
     const helperText =
       formik.touched[name] && formik.errors[name]
         ? String(formik.errors[name])
