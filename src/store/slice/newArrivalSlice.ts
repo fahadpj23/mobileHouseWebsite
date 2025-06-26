@@ -42,7 +42,7 @@ export const getNewArrivalById = createAsyncThunk(
 export const addNewArrivals = createAsyncThunk(
   "newArrivals/addNewArrival",
   async (data: any) => {
-    const response = await axiosInstance.post(`newArrivals/`, data, {
+    const response = await axiosInstance.post(`newArrival/`, data, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
