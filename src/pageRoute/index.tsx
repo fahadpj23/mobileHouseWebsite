@@ -14,6 +14,7 @@ import Banner from "pages/adminPanel/banner";
 import WhatsappAds from "pages/adminPanel/whatsappAds";
 import JustLaunched from "pages/adminPanel/justLaunched";
 import NewArrival from "pages/adminPanel/newArrival";
+import Series from "pages/adminPanel/phoneSeries";
 
 const PageRoute = () => {
   return (
@@ -40,7 +41,8 @@ const PageRoute = () => {
             <Route path="admin/newArrival" element={<NewArrival />} />
             <Route path="admin/justLaunched" element={<JustLaunched />} />
             <Route path="admin/whatsappAds" element={<WhatsappAds />} />
-            <Route path="admin/Banner" element={<Banner />} />
+            <Route path="admin/banner" element={<Banner />} />
+            <Route path="admin/series" element={<Series />} />
           </Route>
         </Routes>
       </BrowserRouter>

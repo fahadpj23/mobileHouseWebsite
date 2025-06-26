@@ -15,4 +15,9 @@ export const ADMINNAVIGATIONITEMS: NAVIGATIONITEMMODEL[] = [
     link: "/admin/whatsappAds",
     icon: <IoHomeOutline />,
   },
+  {
+    title: "series",
+    link: "/admin/series",
+    icon: <IoHomeOutline />,
+  },
 ];
