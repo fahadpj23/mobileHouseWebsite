@@ -33,6 +33,9 @@ import {
 
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { AddCircleOutline, RemoveCircleOutline } from "@mui/icons-material";
+import axios from "axios";
+import { useAppDispatch, useAppSelector } from "hooks/useRedux";
+import { fetchSeries } from "store/slice/seriesSlice";
 
 // Define types for our form
 interface FormField {
@@ -72,12 +75,24 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
   isAddModalOpen,
 }) => {
   const [file, setFile] = useState<File | null>(null);
+  const [series, setSeries] = useState<any>(null);
+  const dispatch = useAppDispatch();
+  const { entities, entity } = useAppSelector((state) => state.user.series);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      setFile(e.target.files[0]);
-    }
-  };
+  useEffect(() => {
+    dispatch(fetchSeries());
+  }, []);
+
+  useEffect(() => {
+    const newArray =
+      Array.isArray(entities) &&
+      entities.map((series: any) => ({
+        value: series.id,
+        label: series.seriesName,
+      }));
+
+    setSeries(newArray);
+  }, [entities]);
 
   //form  dynamic rendering
   const renderFormField = (
@@ -116,11 +131,18 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
           <FormControl fullWidth margin="normal" error={error} size="small">
             <InputLabel>{label}</InputLabel>
             <Field as={Select} name={name} label={label} required={required}>
-              {options.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
+              {name === "series"
+                ? series &&
+                  series.map((option: any) => (
+                    <MenuItem key={option.value} value={option.value}>
+                      {option.label}
+                    </MenuItem>
+                  ))
+                : options.map((option) => (
+                    <MenuItem key={option.value} value={option.value}>
+                      {option.label}
+                    </MenuItem>
+                  ))}
             </Field>
             {error && <FormHelperText>{helperText}</FormHelperText>}
           </FormControl>

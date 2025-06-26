@@ -9,4 +9,12 @@ export const formFields: BannerFormField[] = [
     required: true,
     validation: Yup.string().required("image is required"),
   },
+  {
+    name: "series",
+    label: "Series",
+    type: "select",
+    required: true,
+    options: [],
+    validation: Yup.string().required("series is required"),
+  },
 ];

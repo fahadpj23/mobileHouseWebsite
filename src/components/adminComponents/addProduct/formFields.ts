@@ -68,12 +68,20 @@ export const formFields: ProductFormField[] = [
     required: true,
     validation: Yup.string().required("mrp is required"),
   },
+  // {
+  //   name: "series",
+  //   label: "Series",
+  //   type: "text",
+  //   required: true,
+  //   validation: Yup.string().required("series is required"),
+  // },
   {
     name: "series",
     label: "Series",
-    type: "text",
+    type: "select",
     required: true,
-    validation: Yup.string().required("series is required"),
+    options: [],
+    validation: Yup.string().required("networkType is required"),
   },
   {
     name: "networkType",
