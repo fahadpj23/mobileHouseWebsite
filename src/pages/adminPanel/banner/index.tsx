@@ -14,10 +14,14 @@ import Header from "components/adminComponents/header";
 import AddBanner from "components/adminComponents/addBanner";
 import { useEffect, useState } from "react";
 import { fetchBanners } from "store/slice/bannerSlice";
+import { showToast } from "utils/toast";
+import { ToastContainer } from "react-toastify";
 
 const Banner = () => {
   const dispatch = useAppDispatch();
-  const { entities, entity } = useAppSelector((state) => state.user.banner);
+  const { entities, entity, successMessage } = useAppSelector(
+    (state) => state.user.banner
+  );
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
   const [values, setValues] = useState<any>(initialValues);
   const [isEdit, setIsEdit] = useState<boolean>(false);
@@ -41,8 +45,18 @@ const Banner = () => {
   //     } else setValues(initialValues);
   //   }, [entity]);
   //   console.log(values);
+
+  useEffect(() => {
+    if (successMessage) {
+      showToast();
+      handleAddButton();
+      dispatch(fetchBanners());
+    }
+  }, [successMessage]);
+
   return (
     <div>
+      <ToastContainer />
       <Header title="Banner" handleAddButton={handleAddButton} />
 
       {Array.isArray(entities) && (

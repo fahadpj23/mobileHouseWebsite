@@ -14,11 +14,15 @@ import { useEffect, useState } from "react";
 import AddNewArrival from "components/adminComponents/addNewArrival";
 import { NewArrivalTableHead } from "constants/admin/tableHead/newArrival";
 import { fetchNewArrivals } from "store/slice/newArrivalSlice";
+import { showToast } from "utils/toast";
+import { ToastContainer } from "react-toastify";
 // import NewArrival from "@components/Home/newArrival";
 
 const NewArrival = () => {
   const dispatch = useAppDispatch();
-  const { entities, entity } = useAppSelector((state) => state.user.newArrival);
+  const { entities, entity, successMessage } = useAppSelector(
+    (state) => state.user.newArrival
+  );
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
   const [values, setValues] = useState<any>(initialValues);
   const [isEdit, setIsEdit] = useState<boolean>(false);
@@ -42,8 +46,16 @@ const NewArrival = () => {
   //     } else setValues(initialValues);
   //   }, [entity]);
   //   console.log(values);
+  useEffect(() => {
+    if (successMessage) {
+      handleAddButton();
+      showToast();
+      dispatch(fetchNewArrivals());
+    }
+  }, [successMessage]);
   return (
     <div>
+      <ToastContainer />
       <Header title="NewArrival" handleAddButton={handleAddButton} />
 
       {Array.isArray(entities) && (

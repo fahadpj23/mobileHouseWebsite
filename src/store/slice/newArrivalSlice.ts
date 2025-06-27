@@ -26,23 +26,23 @@ const initialState: UserState = {
 
 // Async thunk to fetch NewArrivals data
 export const fetchNewArrivals = createAsyncThunk(
-  "newArrivals/fetchNewArrival",
+  "newArrival/fetchNewArrival",
   async () => {
-    const response = await axiosInstance.get(`newArrivals/`);
+    const response = await axiosInstance.get(`newArrival/`);
     return response.data;
   }
 );
 
 export const getNewArrivalById = createAsyncThunk(
-  "newArrivals/getNewArrivalById",
+  "newArrival/getNewArrivalById",
   async (id: number) => {
-    const response = await axiosInstance.get(`newArrivals/${id}`);
+    const response = await axiosInstance.get(`newArrival/${id}`);
     return response.data;
   }
 );
 
 export const addNewArrivals = createAsyncThunk(
-  "newArrivals/addNewArrival",
+  "newArrival/addNewArrival",
   async (data: any) => {
     const response = await axiosInstance.post(`newArrival/`, data, {
       headers: {

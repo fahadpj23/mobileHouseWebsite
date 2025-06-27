@@ -28,7 +28,7 @@ const initialState: UserState = {
 export const fetchwhatsappAds = createAsyncThunk(
   "whatsappAds/fetchwhatsappAds",
   async () => {
-    const response = await axiosInstance.get(`products/`);
+    const response = await axiosInstance.get(`whatsappAds/`);
     return response.data;
   }
 );

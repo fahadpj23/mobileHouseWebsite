@@ -8,10 +8,12 @@ import { useEffect, useState } from "react";
 import AddWhatsappAds from "components/adminComponents/addWhatsappAds";
 import { whatsappAdsTableHead } from "constants/admin/tableHead/whatsappAds";
 import { fetchwhatsappAds } from "store/slice/whatsappAdsSlice";
+import { showToast } from "utils/toast";
+import { ToastContainer } from "react-toastify";
 
 const WhatsappAds = () => {
   const dispatch = useAppDispatch();
-  const { entities, entity } = useAppSelector(
+  const { entities, entity, successMessage } = useAppSelector(
     (state) => state.user.whatsappAds
   );
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
@@ -37,8 +39,18 @@ const WhatsappAds = () => {
   //     } else setValues(initialValues);
   //   }, [entity]);
   //   console.log(values);
+
+  useEffect(() => {
+    if (successMessage) {
+      handleAddButton();
+      showToast();
+      dispatch(fetchwhatsappAds());
+    }
+  }, [successMessage]);
+
   return (
     <div>
+      <ToastContainer />
       <Header title="WhatsappAds" handleAddButton={handleAddButton} />
 
       {Array.isArray(entities) && (

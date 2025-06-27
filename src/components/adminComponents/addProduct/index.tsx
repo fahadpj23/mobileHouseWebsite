@@ -1,7 +1,7 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 
-import { addproducts, fetchProducts } from "store/slice/productSlice";
-import { useAppDispatch, useAppSelector } from "hooks/useRedux";
+import { addproducts } from "store/slice/productSlice";
+import { useAppDispatch } from "hooks/useRedux";
 import DynamicForm from "../dynamicForm";
 
 interface props {
@@ -20,7 +20,6 @@ const AddProduct: FC<props> = ({
   initialValues,
 }) => {
   const dispatch = useAppDispatch();
-  const { successMessage } = useAppSelector((state) => state.user.products);
   const handleSubmit = (values: typeof initialValues) => {
     const formData = new FormData();
     formData.append("productName", values.productName);
@@ -43,13 +42,6 @@ const AddProduct: FC<props> = ({
     });
     dispatch(addproducts(formData));
   };
-
-  useEffect(() => {
-    if (successMessage) {
-      dispatch(fetchProducts());
-      handleAddButton();
-    }
-  }, [successMessage]);
 
   return (
     <div>

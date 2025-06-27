@@ -1,6 +1,10 @@
 export const BannerTableHead = [
   {
-    imageUrl: "imageUrl",
+    title: "Image",
     key: "imageUrl",
+  },
+  {
+    title: "series",
+    key: "series",
   },
 ];

@@ -1,9 +1,9 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 
 // import { AddBanners } from "store/slice/products/productSlice";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import DynamicForm from "../dynamicForm";
-import { addNewArrivals, fetchNewArrivals } from "store/slice/newArrivalSlice";
+import { addNewArrivals } from "store/slice/newArrivalSlice";
 
 interface props {
   handleAddButton: any;
@@ -30,13 +30,6 @@ const AddBanner: FC<props> = ({
     });
     dispatch(addNewArrivals(formData));
   };
-
-  useEffect(() => {
-    if (successMessage) {
-      dispatch(fetchNewArrivals());
-      handleAddButton();
-    }
-  }, [successMessage]);
 
   return (
     <div>

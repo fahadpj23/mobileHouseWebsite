@@ -14,10 +14,14 @@ import Header from "components/adminComponents/header";
 import AddSeries from "components/adminComponents/addSeries";
 import { useEffect, useState } from "react";
 import { fetchSeries } from "store/slice/seriesSlice";
+import { showToast } from "utils/toast";
+import { ToastContainer } from "react-toastify";
 
 const Series = () => {
   const dispatch = useAppDispatch();
-  const { entities, entity } = useAppSelector((state) => state.user.series);
+  const { entities, entity, successMessage } = useAppSelector(
+    (state) => state.user.series
+  );
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
   const [values, setValues] = useState<any>(initialValues);
   const [isEdit, setIsEdit] = useState<boolean>(false);
@@ -41,8 +45,16 @@ const Series = () => {
   //     } else setValues(initialValues);
   //   }, [entity]);
   //   console.log(values);
+  useEffect(() => {
+    if (successMessage) {
+      handleAddButton();
+      showToast();
+      dispatch(fetchSeries());
+    }
+  }, [successMessage]);
   return (
     <div>
+      <ToastContainer />
       <Header title="Series" handleAddButton={handleAddButton} />
 
       {Array.isArray(entities) && (

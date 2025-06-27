@@ -40,7 +40,7 @@ const TableData: FC<props> = ({ TableHead, TableData, handleEdit }) => {
                       style={{
                         width: "100%",
                         height: "80px",
-                        objectFit: "fill",
+                        objectFit: "contain",
                         borderRadius: "4px",
                       }}
                     />

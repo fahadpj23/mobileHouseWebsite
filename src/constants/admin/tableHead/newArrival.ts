@@ -1,6 +1,10 @@
 export const NewArrivalTableHead = [
   {
-    imageUrl: "imageUrl",
+    title: "Image",
     key: "imageUrl",
+  },
+  {
+    title: "series",
+    key: "series",
   },
 ];

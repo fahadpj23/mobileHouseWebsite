@@ -8,10 +8,12 @@ import { useEffect, useState } from "react";
 import AddJustLaunched from "components/adminComponents/addJustLaunched";
 import { fetchJustLaunched } from "store/slice/justLaunchedSlice";
 import { JustLaunchedTableHead } from "constants/admin/tableHead/justLaunched";
+import { showToast } from "utils/toast";
+import { ToastContainer } from "react-toastify";
 
 const JustLaunched = () => {
   const dispatch = useAppDispatch();
-  const { entities, entity } = useAppSelector(
+  const { entities, entity, successMessage } = useAppSelector(
     (state) => state.user.justLaunched
   );
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
@@ -37,8 +39,16 @@ const JustLaunched = () => {
   //     } else setValues(initialValues);
   //   }, [entity]);
   //   console.log(values);
+  useEffect(() => {
+    if (successMessage) {
+      handleAddButton();
+      showToast();
+      dispatch(fetchJustLaunched());
+    }
+  }, [successMessage]);
   return (
     <div>
+      <ToastContainer />
       <Header title="JustLaunched" handleAddButton={handleAddButton} />
 
       {Array.isArray(entities) && (

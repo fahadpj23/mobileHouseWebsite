@@ -4,6 +4,8 @@ import { FC, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import DynamicForm from "../dynamicForm";
 import { addBanners, fetchBanners } from "store/slice/bannerSlice";
+import { ToastContainer } from "react-toastify";
+import { showToast } from "utils/toast";
 
 interface props {
   handleAddButton: any;
@@ -21,23 +23,15 @@ const AddBanner: FC<props> = ({
   initialValues,
 }) => {
   const dispatch = useAppDispatch();
-  const { successMessage } = useAppSelector((state) => state.user.banner);
   const handleSubmit = (values: typeof initialValues) => {
     const formData = new FormData();
-
+    formData.append("series", values.series);
     values.images.forEach((image: any) => {
       formData.append("images", image);
     });
 
     dispatch(addBanners(formData));
   };
-
-  useEffect(() => {
-    if (successMessage) {
-      dispatch(fetchBanners());
-      handleAddButton();
-    }
-  }, [successMessage]);
 
   return (
     <div>
