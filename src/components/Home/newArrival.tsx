@@ -1,9 +1,21 @@
+import { useAppDispatch, useAppSelector } from "hooks/useRedux";
+import { fetchNewArrivals } from "store/slice/newArrivalSlice";
 import LaunchBanner from "components/commonComponents/launchBanner";
 import { NEWARRIVALITEMS } from "constants/newArrivalItems";
+import { useEffect } from "react";
 
 const NewArrival = () => {
-  return NEWARRIVALITEMS?.length ? (
-    <LaunchBanner title="Upcoming" BannerItems={NEWARRIVALITEMS} />
+  const dispatch = useAppDispatch();
+  const { entities: newArrival } = useAppSelector(
+    (state) => state.user.upcoming
+  );
+
+  useEffect(() => {
+    dispatch(fetchNewArrivals());
+  }, []);
+
+  return newArrival?.length ? (
+    <LaunchBanner title="New Arrivals" BannerItems={newArrival} />
   ) : null;
 };
 export default NewArrival;

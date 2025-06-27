@@ -4,8 +4,21 @@ import { WhatappAdsList } from "constants/whatsappAds";
 import LazyImage from "components/commonComponents/imageLazyLoading";
 import { WHATSAPPADSMODEL } from "model/whatsappAdsModel";
 import { useScreenSize } from "hooks/useScreenSize";
+import { useAppDispatch, useAppSelector } from "hooks/useRedux";
+import { fetchwhatsappAds } from "store/slice/whatsappAdsSlice";
+import { useEffect } from "react";
+import ServerLazyImage from "components/commonComponents/serverImageLazyLoading";
 
 const WhatsappAds = () => {
+  const dispatch = useAppDispatch();
+  const { entities: whatsappAds } = useAppSelector(
+    (state) => state.user.whatsappAds
+  );
+
+  useEffect(() => {
+    dispatch(fetchwhatsappAds());
+  }, []);
+
   const { isMobile } = useScreenSize();
 
   const responsive = {
@@ -33,19 +46,28 @@ const WhatsappAds = () => {
     <div className="p-2">
       {isMobile ? (
         <div>
-          {WhatappAdsList.map((item: WHATSAPPADSMODEL) =>
-            item?.series ? (
-              <Link to={`series/${item?.series}`} key={item?.id}>
-                <div className="w-[98%] h-[50vh]  ">
-                  <LazyImage src={item?.image} alt="phone Image" fill={true} />
+          {whatsappAds?.length &&
+            whatsappAds.map((item: any) =>
+              item?.series ? (
+                <Link to={`series/${item?.series}`} key={item?.id}>
+                  <div className="w-[98%] h-[50vh]  ">
+                    <ServerLazyImage
+                      src={item?.imageUrl}
+                      alt="phone Image"
+                      fill={true}
+                    />
+                  </div>
+                </Link>
+              ) : (
+                <div key={item?.id} className="w-[98%] h-[50vh]  ">
+                  <ServerLazyImage
+                    src={item?.imageUrl}
+                    alt="phone Image"
+                    fill={true}
+                  />
                 </div>
-              </Link>
-            ) : (
-              <div key={item?.id} className="w-[98%] h-[50vh]  ">
-                <LazyImage src={item?.image} alt="phone Image" fill={true} />
-              </div>
-            )
-          )}
+              )
+            )}
         </div>
       ) : (
         <Carousel
@@ -54,23 +76,32 @@ const WhatsappAds = () => {
           arrows={false}
           autoPlay={true}
         >
-          {WhatappAdsList.map((item: WHATSAPPADSMODEL) =>
-            item?.series ? (
-              <Link
-                to={`series/${item?.series}`}
-                key={item?.id}
-                style={{ margin: "3px 8px" }}
-              >
-                <div className="w-[93%] h-[60vw] md:h-[22vw]  ">
-                  <LazyImage src={item?.image} alt="phone Image" fill={true} />
+          {whatsappAds?.length &&
+            whatsappAds.map((item: any) =>
+              item?.series ? (
+                <Link
+                  to={`series/${item?.series}`}
+                  key={item?.id}
+                  style={{ margin: "3px 8px" }}
+                >
+                  <div className="w-[93%] h-[60vw] md:h-[22vw]  ">
+                    <ServerLazyImage
+                      src={item?.imageUrl}
+                      alt="phone Image"
+                      fill={true}
+                    />
+                  </div>
+                </Link>
+              ) : (
+                <div key={item?.id} className="w-[93%] h-[60vw] md:h-[22vw]  ">
+                  <ServerLazyImage
+                    src={item?.imageUrl}
+                    alt="phone Image"
+                    fill={true}
+                  />
                 </div>
-              </Link>
-            ) : (
-              <div key={item?.id} className="w-[93%] h-[60vw] md:h-[22vw]  ">
-                <LazyImage src={item?.image} alt="phone Image" fill={true} />
-              </div>
-            )
-          )}
+              )
+            )}
         </Carousel>
       )}
     </div>
