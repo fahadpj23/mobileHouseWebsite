@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import ImageSlider from "components/Home/imageSlider";
 import Brands from "components/Home/Brands";
 import { getSpecialOfferPhones } from "utils/getSpecialOfferPhone";
@@ -26,17 +26,24 @@ import Banner from "components/Home/banner";
 import Footer from "components/Home/footer";
 import Upcoming from "components/Home/upcoming";
 import NewArrival from "components/Home/newArrival";
+import { useAppDispatch, useAppSelector } from "hooks/useRedux";
+import { fetchBanners } from "store/slice/bannerSlice";
 
 const HomePage = () => {
+  const dispatch = useAppDispatch();
+  const { entities: banners } = useAppSelector((state) => state.user.banner);
   const { isMobile } = useScreenSize();
   const hasSeenPopup = localStorage.getItem("hasSeenPopup");
+
+  useEffect(() => {
+    dispatch(fetchBanners());
+  }, []);
+  console.log(banners);
 
   return (
     <div className="w-screen flex justify-center pb-6 ">
       <div className=" w-full md:w-11/12 flex flex-col space-y-4 md:space-y-6">
-        {/* {isMobile && !hasSeenPopup && <PopupAds />} */}
-
-        <ImageSlider bannerItems={MAINBANNER} />
+        <ImageSlider bannerItems={banners} />
 
         <Brands />
         <AvailableEmi />

@@ -6,8 +6,8 @@ export const ADMINNAVIGATIONITEMS: NAVIGATIONITEMMODEL[] = [
   { title: " Banner", link: "/admin/Banner", icon: <IoHomeOutline /> },
   { title: "New Arrival", link: "/admin/newArrival", icon: <IoHomeOutline /> },
   {
-    title: "Just Launched",
-    link: "/admin/justLaunched",
+    title: "Upcoming",
+    link: "/admin/upcoming",
     icon: <IoHomeOutline />,
   },
   {

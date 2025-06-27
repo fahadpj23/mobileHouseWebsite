@@ -3,7 +3,7 @@ import { FC } from "react";
 // import { AddBanners } from "store/slice/products/productSlice";
 import { useAppDispatch } from "hooks/useRedux";
 import DynamicForm from "../dynamicForm";
-import { addJustLaunched } from "store/slice/justLaunchedSlice";
+import { addUpcoming } from "store/slice/upcomingSlice";
 
 interface props {
   handleAddButton: any;
@@ -26,7 +26,7 @@ const AddBanner: FC<props> = ({
     values.images.forEach((image: any) => {
       formData.append("images", image);
     });
-    dispatch(addJustLaunched(formData));
+    dispatch(addUpcoming(formData));
   };
 
   return (

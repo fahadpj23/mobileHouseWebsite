@@ -2,8 +2,8 @@ import { FC } from "react";
 import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import LazyImage from "components/commonComponents/imageLazyLoading";
 import { MAINBANNERMODEL } from "model/mainBannerModel";
+import ServerLazyImage from "components/commonComponents/serverImageLazyLoading";
 
 interface props {
   bannerItems: MAINBANNERMODEL[];
@@ -19,19 +19,27 @@ const ImageSlider: FC<props> = ({ bannerItems }) => {
         showStatus={false}
         showArrows={false}
       >
-        {bannerItems?.map((banner: MAINBANNERMODEL) =>
+        {bannerItems?.map((banner: any) =>
           banner?.series ? (
             <Link to={`series/${banner?.series}`} key={banner?.id}>
               <div className="relative">
                 <div className="h-[50vw] md:h-[25vw] w-full  rounded-none md:rounded-xl  ">
-                  <LazyImage src={banner?.image} alt="banner" fill={true} />
+                  <ServerLazyImage
+                    src={banner?.imageUrl}
+                    alt="banner"
+                    fill={true}
+                  />
                 </div>
               </div>
             </Link>
           ) : (
             <div key={banner?.id} className="relative">
               <div className="h-[50vw] md:h-[25vw] w-full  rounded-none md:rounded-xl  ">
-                <LazyImage src={banner?.image} alt="banner" fill={true} />
+                <ServerLazyImage
+                  src={banner?.imageUrl}
+                  alt="banner"
+                  fill={true}
+                />
               </div>
             </div>
           )

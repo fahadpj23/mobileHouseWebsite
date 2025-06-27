@@ -12,7 +12,7 @@ import Products from "pages/adminPanel/products";
 import AdminMainLayout from "layout/adminLayout";
 import Banner from "pages/adminPanel/banner";
 import WhatsappAds from "pages/adminPanel/whatsappAds";
-import JustLaunched from "pages/adminPanel/justLaunched";
+import Upcoming from "pages/adminPanel/upcoming";
 import NewArrival from "pages/adminPanel/newArrival";
 import Series from "pages/adminPanel/phoneSeries";
 
@@ -39,7 +39,7 @@ const PageRoute = () => {
           <Route element={<AdminMainLayout />}>
             <Route path="admin/products" element={<Products />} />
             <Route path="admin/newArrival" element={<NewArrival />} />
-            <Route path="admin/justLaunched" element={<JustLaunched />} />
+            <Route path="admin/upcoming" element={<Upcoming />} />
             <Route path="admin/whatsappAds" element={<WhatsappAds />} />
             <Route path="admin/banner" element={<Banner />} />
             <Route path="admin/series" element={<Series />} />

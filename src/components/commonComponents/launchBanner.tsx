@@ -2,10 +2,11 @@ import { LAUNCHITEMSMODEL } from "model/launchItemsMode";
 import { FC } from "react";
 import LazyImage from "./imageLazyLoading";
 import { Link } from "react-router-dom";
+import ServerLazyImage from "./serverImageLazyLoading";
 
 interface props {
   title: string;
-  BannerItems: LAUNCHITEMSMODEL[];
+  BannerItems: any[];
 }
 const LaunchBanner: FC<props> = ({ title, BannerItems }) => {
   return (
@@ -14,16 +15,24 @@ const LaunchBanner: FC<props> = ({ title, BannerItems }) => {
         {title}
       </h1>
       <div className="flex flex-col  w-full">
-        {BannerItems?.map((banner: LAUNCHITEMSMODEL) =>
+        {BannerItems?.map((banner: any) =>
           banner?.series ? (
             <Link to={`series/${banner?.series}`} key={banner?.id}>
               <div className="w-full h-[45vw] md:h-[22vw]  ">
-                <LazyImage src={banner?.image} alt="phone Image" fill={true} />
+                <ServerLazyImage
+                  src={banner?.image}
+                  alt="phone Image"
+                  fill={true}
+                />
               </div>
             </Link>
           ) : (
             <div key={banner?.id} className="w-full h-[45vw] md:h-[22vw]  ">
-              <LazyImage src={banner?.image} alt="phone Image" fill={true} />
+              <ServerLazyImage
+                src={banner?.image}
+                alt="phone Image"
+                fill={true}
+              />
             </div>
           )
         )}

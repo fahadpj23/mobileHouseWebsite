@@ -24,27 +24,27 @@ const initialState: UserState = {
   successMessage: "",
 };
 
-// Async thunk to fetch JustLaunched data
-export const fetchJustLaunched = createAsyncThunk(
-  "justLaunched/fetchJustLaunched",
+// Async thunk to fetch Upcoming data
+export const fetchUpcoming = createAsyncThunk(
+  "upcoming/fetchUpcoming",
   async () => {
-    const response = await axiosInstance.get(`JustLaunched/`);
+    const response = await axiosInstance.get(`Upcoming/`);
     return response.data;
   }
 );
 
-export const getJustLaunchedById = createAsyncThunk(
-  "justLaunched/getJustLaunchedById",
+export const getUpcomingById = createAsyncThunk(
+  "Upcoming/getUpcomingById",
   async (id: number) => {
-    const response = await axiosInstance.get(`JustLaunched/${id}`);
+    const response = await axiosInstance.get(`Upcoming/${id}`);
     return response.data;
   }
 );
 
-export const addJustLaunched = createAsyncThunk(
-  "justLaunched/addJustLaunched",
+export const addUpcoming = createAsyncThunk(
+  "Upcoming/addUpcoming",
   async (data: any) => {
-    const response = await axiosInstance.post(`JustLaunched/`, data, {
+    const response = await axiosInstance.post(`Upcoming/`, data, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -53,37 +53,34 @@ export const addJustLaunched = createAsyncThunk(
 );
 
 // Create slice
-const justLaunchedlice = createSlice({
-  name: "justLaunched",
+const upcominglice = createSlice({
+  name: "upcoming",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
 
+      .addCase(fetchUpcoming.fulfilled, (state, action: PayloadAction<any>) => {
+        state.loading = false;
+        state.entities = action.payload;
+      })
       .addCase(
-        fetchJustLaunched.fulfilled,
-        (state, action: PayloadAction<any>) => {
-          state.loading = false;
-          state.entities = action.payload;
-        }
-      )
-      .addCase(
-        getJustLaunchedById.fulfilled,
+        getUpcomingById.fulfilled,
         (state, action: PayloadAction<any>) => {
           state.loading = false;
           state.entity = action.payload;
         }
       )
-      .addCase(fetchJustLaunched.rejected, (state, action) => {
+      .addCase(fetchUpcoming.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message || "Something went wrong";
       })
-      .addCase(addJustLaunched.fulfilled, (state, action) => {
+      .addCase(addUpcoming.fulfilled, (state, action) => {
         state.loading = false;
         state.successMessage = "added SuccessFully";
       })
       .addMatcher(
-        isPending(fetchJustLaunched, getJustLaunchedById, addJustLaunched),
+        isPending(fetchUpcoming, getUpcomingById, addUpcoming),
         (state, action) => {
           state.loading = true;
           state.error = null;
@@ -93,4 +90,4 @@ const justLaunchedlice = createSlice({
 });
 
 // Export the reducer
-export const justLaunchedReducer = justLaunchedlice.reducer;
+export const upcomingReducer = upcominglice.reducer;

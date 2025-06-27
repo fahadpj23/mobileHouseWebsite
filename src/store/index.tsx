@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { productReducer } from "./slice/productSlice";
 import { BannerReducer } from "./slice/bannerSlice";
-import { justLaunchedReducer } from "./slice/justLaunchedSlice";
+import { upcomingReducer } from "./slice/upcomingSlice";
 import { newArrivalReducer } from "./slice/newArrivalSlice";
 import { whatsappAdsReducer } from "./slice/whatsappAdsSlice";
 import { seriesReducer } from "./slice/seriesSlice";
@@ -18,7 +18,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   products: productReducer,
   banner: BannerReducer,
-  justLaunched: justLaunchedReducer,
+  upcoming: upcomingReducer,
   newArrival: newArrivalReducer,
   whatsappAds: whatsappAdsReducer,
   series: seriesReducer,

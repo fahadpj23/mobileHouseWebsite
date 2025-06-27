@@ -1,20 +1,20 @@
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import TableData from "components/adminComponents/table";
-import { formFields } from "components/adminComponents/addJustLaunched/formFields";
-import { validationSchema } from "components/adminComponents/addJustLaunched/validationSchema";
-import { initialValues } from "components/adminComponents/addJustLaunched/initialValue";
+import { formFields } from "components/adminComponents/addUpcoming/formFields";
+import { validationSchema } from "components/adminComponents/addUpcoming/validationSchema";
+import { initialValues } from "components/adminComponents/addUpcoming/initialValue";
 import Header from "components/adminComponents/header";
 import { useEffect, useState } from "react";
-import AddJustLaunched from "components/adminComponents/addJustLaunched";
-import { fetchJustLaunched } from "store/slice/justLaunchedSlice";
-import { JustLaunchedTableHead } from "constants/admin/tableHead/justLaunched";
+import AddUpcoming from "components/adminComponents/addUpcoming";
+import { fetchUpcoming } from "store/slice/upcomingSlice";
+import { UpcomingTableHead } from "constants/admin/tableHead/upcoming";
 import { showToast } from "utils/toast";
 import { ToastContainer } from "react-toastify";
 
-const JustLaunched = () => {
+const Upcoming = () => {
   const dispatch = useAppDispatch();
   const { entities, entity, successMessage } = useAppSelector(
-    (state) => state.user.justLaunched
+    (state) => state.user.upcoming
   );
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
   const [values, setValues] = useState<any>(initialValues);
@@ -22,7 +22,7 @@ const JustLaunched = () => {
   const [editId, setEditId] = useState<number>(0);
 
   useEffect(() => {
-    dispatch(fetchJustLaunched());
+    dispatch(fetchUpcoming());
   }, []);
 
   const handleAddButton = () => setIsAddModalOpen(!isAddModalOpen);
@@ -43,23 +43,23 @@ const JustLaunched = () => {
     if (successMessage) {
       handleAddButton();
       showToast();
-      dispatch(fetchJustLaunched());
+      dispatch(fetchUpcoming());
     }
   }, [successMessage]);
   return (
     <div>
       <ToastContainer />
-      <Header title="JustLaunched" handleAddButton={handleAddButton} />
+      <Header title="Upcoming" handleAddButton={handleAddButton} />
 
       {Array.isArray(entities) && (
         <TableData
-          TableHead={JustLaunchedTableHead}
+          TableHead={UpcomingTableHead}
           TableData={entities}
           handleEdit={handleEdit}
         />
       )}
       {(isAddModalOpen || isEdit) && (
-        <AddJustLaunched
+        <AddUpcoming
           handleAddButton={handleAddButton}
           isAddModalOpen={isAddModalOpen || isEdit}
           formFields={formFields}
@@ -70,4 +70,4 @@ const JustLaunched = () => {
     </div>
   );
 };
-export default JustLaunched;
+export default Upcoming;

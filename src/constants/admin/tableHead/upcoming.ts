@@ -1,4 +1,4 @@
-export const JustLaunchedTableHead = [
+export const UpcomingTableHead = [
   {
     title: "Image",
     key: "imageUrl",
