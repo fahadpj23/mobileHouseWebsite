@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 
 // import { AddBanners } from "store/slice/products/productSlice";
-import { useAppDispatch } from "hooks/useRedux";
+import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import DynamicForm from "../dynamicForm";
-import { addBanners } from "store/slice/bannerSlice";
+import { addBanners, fetchBanners } from "store/slice/bannerSlice";
 
 interface props {
   handleAddButton: any;
@@ -21,9 +21,8 @@ const AddBanner: FC<props> = ({
   initialValues,
 }) => {
   const dispatch = useAppDispatch();
-
+  const { successMessage } = useAppSelector((state) => state.user.banner);
   const handleSubmit = (values: typeof initialValues) => {
-    console.log("Fd");
     const formData = new FormData();
 
     values.images.forEach((image: any) => {
@@ -32,6 +31,13 @@ const AddBanner: FC<props> = ({
 
     dispatch(addBanners(formData));
   };
+
+  useEffect(() => {
+    if (successMessage) {
+      dispatch(fetchBanners());
+      handleAddButton();
+    }
+  }, [successMessage]);
 
   return (
     <div>

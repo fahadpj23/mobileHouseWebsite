@@ -1,37 +1,34 @@
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
-// import {
-//   fetchWhatsappAds,
-//   getProductById,
-// } from "store/slice/WhatsappAds/WhatsappAdslice";
-// import { useEffect, useState } from "react";
-
 import TableData from "components/adminComponents/table";
 import { formFields } from "components/adminComponents/addWhatsappAds/formFields";
 import { validationSchema } from "components/adminComponents/addWhatsappAds/validationSchema";
 import { initialValues } from "components/adminComponents/addWhatsappAds/initialValue";
-// import { ProductTableHead } from "constants/admin/tableHead/WhatsappAds";
 import Header from "components/adminComponents/header";
 import { useEffect, useState } from "react";
 import AddWhatsappAds from "components/adminComponents/addWhatsappAds";
+import { whatsappAdsTableHead } from "constants/admin/tableHead/whatsappAds";
+import { fetchwhatsappAds } from "store/slice/whatsappAdsSlice";
 
 const WhatsappAds = () => {
   const dispatch = useAppDispatch();
-  //   const { entities, entity } = useAppSelector((state) => state.user.WhatsappAds);
+  const { entities, entity } = useAppSelector(
+    (state) => state.user.whatsappAds
+  );
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
   const [values, setValues] = useState<any>(initialValues);
   const [isEdit, setIsEdit] = useState<boolean>(false);
-  //   const [editId, setEditId] = useState<number>(0);
+  const [editId, setEditId] = useState<number>(0);
 
-  //   useEffect(() => {
-  //     dispatch(fetchWhatsappAds());
-  //   }, []);
+  useEffect(() => {
+    dispatch(fetchwhatsappAds());
+  }, []);
 
   const handleAddButton = () => setIsAddModalOpen(!isAddModalOpen);
 
-  //   const handleEdit = (id: number) => {
-  //     setEditId(id);
-  //     // dispatch(getProductById(id));
-  //   };
+  const handleEdit = (id: number) => {
+    setEditId(id);
+    // dispatch(getProductById(id));
+  };
 
   //   useEffect(() => {
   //     if (entity !== null && entity?.id) {
@@ -44,13 +41,13 @@ const WhatsappAds = () => {
     <div>
       <Header title="WhatsappAds" handleAddButton={handleAddButton} />
 
-      {/* {Array.isArray(entities) && (
+      {Array.isArray(entities) && (
         <TableData
-          TableHead={ProductTableHead}
+          TableHead={whatsappAdsTableHead}
           TableData={entities}
           handleEdit={handleEdit}
         />
-      )} */}
+      )}
       {(isAddModalOpen || isEdit) && (
         <AddWhatsappAds
           handleAddButton={handleAddButton}

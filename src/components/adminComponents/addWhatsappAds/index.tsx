@@ -1,8 +1,8 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 
-import { useAppDispatch } from "hooks/useRedux";
+import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import DynamicForm from "../dynamicForm";
-import { addwhatsappAds } from "store/slice/whatsappAdsSlice";
+import { addwhatsappAds, fetchwhatsappAds } from "store/slice/whatsappAdsSlice";
 
 interface props {
   handleAddButton: any;
@@ -20,7 +20,7 @@ const AddBanner: FC<props> = ({
   initialValues,
 }) => {
   const dispatch = useAppDispatch();
-
+  const { successMessage } = useAppSelector((state) => state.user.whatsappAds);
   const handleSubmit = (values: typeof initialValues) => {
     const formData = new FormData();
     formData.append("series", values.series);
@@ -29,6 +29,13 @@ const AddBanner: FC<props> = ({
     });
     dispatch(addwhatsappAds(formData));
   };
+
+  useEffect(() => {
+    if (successMessage) {
+      dispatch(fetchwhatsappAds());
+      handleAddButton();
+    }
+  }, [successMessage]);
 
   return (
     <div>

@@ -12,6 +12,7 @@ interface UserState {
   entities: any | null; // Type based on your API response
   error: string | null;
   entity: any;
+  successMessage: string;
 }
 
 // Initial state
@@ -20,6 +21,7 @@ const initialState: UserState = {
   entities: null,
   error: null,
   entity: null,
+  successMessage: "",
 };
 
 // Async thunk to fetch Series data
@@ -62,6 +64,10 @@ const seriesSlice = createSlice({
       .addCase(getseriesById.fulfilled, (state, action: PayloadAction<any>) => {
         state.loading = false;
         state.entity = action.payload;
+      })
+      .addCase(addSeries.fulfilled, (state, action) => {
+        state.loading = false;
+        state.successMessage = "added SuccessFully";
       })
       .addCase(fetchSeries.rejected, (state, action) => {
         state.loading = false;

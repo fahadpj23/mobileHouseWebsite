@@ -12,6 +12,7 @@ interface UserState {
   entities: any | null; // Type based on your API response
   error: string | null;
   entity: any;
+  successMessage: string;
 }
 
 // Initial state
@@ -20,6 +21,7 @@ const initialState: UserState = {
   entities: null,
   error: null,
   entity: null,
+  successMessage: "",
 };
 
 // Async thunk to fetch products data
@@ -75,6 +77,10 @@ const whatsappAdsSlice = createSlice({
       .addCase(fetchwhatsappAds.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message || "Something went wrong";
+      })
+      .addCase(addwhatsappAds.fulfilled, (state, action) => {
+        state.loading = false;
+        state.successMessage = "added SuccessFully";
       })
       .addMatcher(
         isPending(fetchwhatsappAds, getwhatsappAdsById, addwhatsappAds),
