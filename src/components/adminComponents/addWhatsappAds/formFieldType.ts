@@ -12,6 +12,7 @@ export interface BannerFormField {
     | "checkbox"
     | "radio"
     | "file"
+    | "date"
     | "array";
   options?: { value: string | number; label: string }[];
   required?: boolean;

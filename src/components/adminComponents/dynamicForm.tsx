@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { CloudUpload, InsertDriveFile, Close } from "@mui/icons-material";
 import CloseIcon from "@mui/icons-material/Close";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { format, parseISO } from "date-fns";
 
 import {
   Formik,
@@ -50,6 +54,7 @@ interface FormField {
     | "checkbox"
     | "radio"
     | "file"
+    | "date"
     | "array";
   options?: { value: string | number; label: string }[];
   required?: boolean;
@@ -93,6 +98,20 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
 
     setSeries(newArray);
   }, [entities]);
+
+  const formatDateForDisplay = (dateString: string) => {
+    if (!dateString) return "";
+    try {
+      return format(parseISO(dateString), "yyyy-MM-dd");
+    } catch (e) {
+      return dateString;
+    }
+  };
+
+  // Format date for backend (ISO string)
+  const formatDateForBackend = (date: Date | null) => {
+    return date ? format(date, "yyyy-MM-dd") : null;
+  };
 
   //form  dynamic rendering
   const renderFormField = (
@@ -170,6 +189,28 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
             </Field>
             {error && <FormHelperText>{helperText}</FormHelperText>}
           </FormControl>
+        );
+      case "date":
+        return (
+          <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <DatePicker
+              label={label}
+              value={formik.values[name] ? new Date(formik.values[name]) : null}
+              onChange={(date: any) => {
+                formik.setFieldValue(name, formatDateForBackend(date));
+              }}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  fullWidth
+                  margin="normal"
+                  size="small"
+                  error={error}
+                  helperText={helperText}
+                />
+              )}
+            />
+          </LocalizationProvider>
         );
       case "array":
         return (

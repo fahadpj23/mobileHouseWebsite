@@ -63,6 +63,7 @@ const productSlice = createSlice({
       .addCase(fetchProducts.fulfilled, (state, action: PayloadAction<any>) => {
         state.loading = false;
         state.entities = action.payload;
+        state.successMessage = "";
       })
       .addCase(
         getProductById.fulfilled,

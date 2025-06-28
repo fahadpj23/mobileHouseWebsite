@@ -15,6 +15,6 @@ export const formFields: BannerFormField[] = [
     type: "select",
     required: true,
     options: [],
-    validation: Yup.string().required("networkType is required"),
+    validation: Yup.string().required("series is required"),
   },
 ];

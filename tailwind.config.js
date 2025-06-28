@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}", // For React and TypeScript
+    "./src/**/*.{js,ts,jsx,tsx,js}", // For React and TypeScript
   ],
   theme: {
     extend: {

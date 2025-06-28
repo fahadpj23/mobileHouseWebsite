@@ -1,4 +1,4 @@
-import { RiDiscountPercentLine } from "react-icons/ri";
+// import { RiDiscountPercentLine } from "react-icons/ri";
 import { GrAnnounce } from "react-icons/gr";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { IoHomeOutline } from "react-icons/io5";
@@ -10,7 +10,7 @@ export const NAVIGATIONITEMS: NAVIGATIONITEMMODEL[] = [
   {
     title: "Special Offer",
     link: "phones/specialOffer",
-    icon: <RiDiscountPercentLine />,
+    icon: <GrAnnounce />,
   },
   {
     title: "Trending Phone",
