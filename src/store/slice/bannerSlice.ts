@@ -38,6 +38,14 @@ export const getBannerById = createAsyncThunk(
   }
 );
 
+export const deleteBanner = createAsyncThunk(
+  "banner/getBannerById",
+  async (id: number) => {
+    const response = await axiosInstance.delete(`banner/${id}`);
+    return response.data;
+  }
+);
+
 export const addBanners = createAsyncThunk(
   "banner/addBanner",
   async (data: any) => {

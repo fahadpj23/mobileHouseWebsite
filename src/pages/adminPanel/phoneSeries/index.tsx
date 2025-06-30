@@ -13,7 +13,7 @@ import { SeriesTableHead } from "constants/admin/tableHead/series";
 import Header from "components/adminComponents/header";
 import AddSeries from "components/adminComponents/addSeries";
 import { useEffect, useState } from "react";
-import { fetchSeries } from "store/slice/seriesSlice";
+import { deleteSeries, fetchSeries } from "store/slice/seriesSlice";
 import { showToast } from "utils/toast";
 import { ToastContainer } from "react-toastify";
 
@@ -52,6 +52,11 @@ const Series = () => {
       dispatch(fetchSeries());
     }
   }, [successMessage]);
+
+  const handleDelete = (id: number) => {
+    dispatch(deleteSeries(id));
+  };
+
   return (
     <div>
       <ToastContainer />
@@ -62,6 +67,7 @@ const Series = () => {
           TableHead={SeriesTableHead}
           TableData={entities}
           handleEdit={handleEdit}
+          handleDelete={handleDelete}
         />
       )}
       {(isAddModalOpen || isEdit) && (

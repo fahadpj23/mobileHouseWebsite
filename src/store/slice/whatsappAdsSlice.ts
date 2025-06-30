@@ -52,6 +52,14 @@ export const addwhatsappAds = createAsyncThunk(
   }
 );
 
+export const deleteWhatsappAds = createAsyncThunk(
+  "whatsappAds/getwhatsappAdsById",
+  async (id: number) => {
+    const response = await axiosInstance.delete(`whatsappAds/${id}`);
+    return response.data;
+  }
+);
+
 // Create slice
 const whatsappAdsSlice = createSlice({
   name: "whatsappAds",

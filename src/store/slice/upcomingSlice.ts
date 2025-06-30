@@ -52,6 +52,14 @@ export const addUpcoming = createAsyncThunk(
   }
 );
 
+export const deleteUpcoming = createAsyncThunk(
+  "Upcoming/getUpcomingById",
+  async (id: number) => {
+    const response = await axiosInstance.delete(`Upcoming/${id}`);
+    return response.data;
+  }
+);
+
 // Create slice
 const upcominglice = createSlice({
   name: "upcoming",

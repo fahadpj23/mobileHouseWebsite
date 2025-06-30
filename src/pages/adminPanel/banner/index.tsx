@@ -13,7 +13,7 @@ import { BannerTableHead } from "constants/admin/tableHead/banner";
 import Header from "components/adminComponents/header";
 import AddBanner from "components/adminComponents/addBanner";
 import { useEffect, useState } from "react";
-import { fetchBanners } from "store/slice/bannerSlice";
+import { deleteBanner, fetchBanners } from "store/slice/bannerSlice";
 import { showToast } from "utils/toast";
 import { ToastContainer } from "react-toastify";
 
@@ -36,6 +36,11 @@ const Banner = () => {
   const handleEdit = (id: number) => {
     setEditId(id);
     //   dispatch(getProductById(id));
+  };
+
+  const handleDelete = (id: number) => {
+    console.log("FD");
+    dispatch(deleteBanner(id));
   };
 
   //   useEffect(() => {
@@ -64,6 +69,7 @@ const Banner = () => {
           TableHead={BannerTableHead}
           TableData={entities}
           handleEdit={handleEdit}
+          handleDelete={handleDelete}
         />
       )}
       {(isAddModalOpen || isEdit) && (

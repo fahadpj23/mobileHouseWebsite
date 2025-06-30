@@ -32,6 +32,7 @@ const AddProduct: FC<props> = ({
     formData.append("networkType", values.networkType);
     formData.append("category", values.category);
     formData.append("display", values.display);
+    formData.append("rating", values.rating);
     formData.append("frontCamera", values.frontCamera);
     formData.append("launchDate", values.launchDate);
     formData.append("color", values.color);

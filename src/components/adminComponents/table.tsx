@@ -8,8 +8,14 @@ interface props {
   TableHead: any;
   TableData: any;
   handleEdit: any;
+  handleDelete: any;
 }
-const TableData: FC<props> = ({ TableHead, TableData, handleEdit }) => {
+const TableData: FC<props> = ({
+  TableHead,
+  TableData,
+  handleEdit,
+  handleDelete,
+}) => {
   return (
     <table className="w-full border-collapse [&_tr:nth-child(odd)]:bg-gray-100">
       <thead>
@@ -55,7 +61,9 @@ const TableData: FC<props> = ({ TableHead, TableData, handleEdit }) => {
               <button onClick={() => handleEdit(data?.id)}>
                 <EditIcon />
               </button>
-              <DeleteIcon />
+              <button onClick={() => handleDelete(data?.id)}>
+                <DeleteIcon />
+              </button>
             </td>
           </tr>
         </tbody>

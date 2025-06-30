@@ -13,7 +13,10 @@ import Header from "components/adminComponents/header";
 import { useEffect, useState } from "react";
 import AddNewArrival from "components/adminComponents/addNewArrival";
 import { NewArrivalTableHead } from "constants/admin/tableHead/newArrival";
-import { fetchNewArrivals } from "store/slice/newArrivalSlice";
+import {
+  deleteNewArrival,
+  fetchNewArrivals,
+} from "store/slice/newArrivalSlice";
 import { showToast } from "utils/toast";
 import { ToastContainer } from "react-toastify";
 // import NewArrival from "@components/Home/newArrival";
@@ -37,6 +40,10 @@ const NewArrival = () => {
   const handleEdit = (id: number) => {
     setEditId(id);
     // dispatch(getProductById(id));
+  };
+
+  const handleDelete = (id: number) => {
+    dispatch(deleteNewArrival(id));
   };
 
   //   useEffect(() => {
@@ -63,6 +70,7 @@ const NewArrival = () => {
           TableHead={NewArrivalTableHead}
           TableData={entities}
           handleEdit={handleEdit}
+          handleDelete={handleDelete}
         />
       )}
       {(isAddModalOpen || isEdit) && (

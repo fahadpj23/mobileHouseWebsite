@@ -1,5 +1,9 @@
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
-import { fetchProducts, getProductById } from "store/slice/productSlice";
+import {
+  deleteProduct,
+  fetchProducts,
+  getProductById,
+} from "store/slice/productSlice";
 import { useEffect, useState } from "react";
 
 import TableData from "components/adminComponents/table";
@@ -40,13 +44,17 @@ const Products = () => {
     dispatch(getProductById(id));
   };
 
+  const handleDelete = (id: number) => {
+    dispatch(deleteProduct(id));
+  };
+
   useEffect(() => {
     if (entity !== null && entity?.id) {
       setValues(entity);
       setIsEdit(true);
     } else setValues(initialValues);
   }, [entity]);
-  console.log(values);
+
   return (
     <div>
       <ToastContainer />
@@ -57,6 +65,7 @@ const Products = () => {
           TableHead={ProductTableHead}
           TableData={entities}
           handleEdit={handleEdit}
+          handleDelete={handleDelete}
         />
       )}
       {(isAddModalOpen || isEdit) && (

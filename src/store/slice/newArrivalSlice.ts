@@ -41,6 +41,14 @@ export const getNewArrivalById = createAsyncThunk(
   }
 );
 
+export const deleteNewArrival = createAsyncThunk(
+  "newArrival/getNewArrivalById",
+  async (id: number) => {
+    const response = await axiosInstance.delete(`newArrival/${id}`);
+    return response.data;
+  }
+);
+
 export const addNewArrivals = createAsyncThunk(
   "newArrival/addNewArrival",
   async (data: any) => {

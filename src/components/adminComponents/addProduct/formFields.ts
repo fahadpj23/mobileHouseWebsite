@@ -62,6 +62,13 @@ export const formFields: ProductFormField[] = [
     validation: Yup.string().required("price is required"),
   },
   {
+    name: "rating",
+    label: "Rating",
+    type: "number",
+    required: true,
+    validation: Yup.string().required("Rating is required"),
+  },
+  {
     name: "mrp",
     label: "Mrp",
     type: "number",

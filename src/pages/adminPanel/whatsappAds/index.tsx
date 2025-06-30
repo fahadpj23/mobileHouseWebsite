@@ -7,7 +7,10 @@ import Header from "components/adminComponents/header";
 import { useEffect, useState } from "react";
 import AddWhatsappAds from "components/adminComponents/addWhatsappAds";
 import { whatsappAdsTableHead } from "constants/admin/tableHead/whatsappAds";
-import { fetchwhatsappAds } from "store/slice/whatsappAdsSlice";
+import {
+  deleteWhatsappAds,
+  fetchwhatsappAds,
+} from "store/slice/whatsappAdsSlice";
 import { showToast } from "utils/toast";
 import { ToastContainer } from "react-toastify";
 
@@ -48,6 +51,9 @@ const WhatsappAds = () => {
     }
   }, [successMessage]);
 
+  const handleDelete = (id: number) => {
+    dispatch(deleteWhatsappAds(id));
+  };
   return (
     <div>
       <ToastContainer />
@@ -58,6 +64,7 @@ const WhatsappAds = () => {
           TableHead={whatsappAdsTableHead}
           TableData={entities}
           handleEdit={handleEdit}
+          handleDelete={handleDelete}
         />
       )}
       {(isAddModalOpen || isEdit) && (

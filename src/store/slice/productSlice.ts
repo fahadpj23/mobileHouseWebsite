@@ -41,6 +41,14 @@ export const getProductById = createAsyncThunk(
   }
 );
 
+export const deleteProduct = createAsyncThunk(
+  "products/getProductById",
+  async (id: number) => {
+    const response = await axiosInstance.delete(`products/${id}`);
+    return response.data;
+  }
+);
+
 export const addproducts = createAsyncThunk(
   "products/addProduct",
   async (data: any) => {

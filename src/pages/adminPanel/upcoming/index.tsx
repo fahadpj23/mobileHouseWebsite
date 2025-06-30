@@ -6,7 +6,7 @@ import { initialValues } from "components/adminComponents/addUpcoming/initialVal
 import Header from "components/adminComponents/header";
 import { useEffect, useState } from "react";
 import AddUpcoming from "components/adminComponents/addUpcoming";
-import { fetchUpcoming } from "store/slice/upcomingSlice";
+import { deleteUpcoming, fetchUpcoming } from "store/slice/upcomingSlice";
 import { UpcomingTableHead } from "constants/admin/tableHead/upcoming";
 import { showToast } from "utils/toast";
 import { ToastContainer } from "react-toastify";
@@ -30,6 +30,10 @@ const Upcoming = () => {
   const handleEdit = (id: number) => {
     setEditId(id);
     // dispatch(getProductById(id));
+  };
+
+  const handleDelete = (id: number) => {
+    dispatch(deleteUpcoming(id));
   };
 
   //   useEffect(() => {
@@ -56,6 +60,7 @@ const Upcoming = () => {
           TableHead={UpcomingTableHead}
           TableData={entities}
           handleEdit={handleEdit}
+          handleDelete={handleDelete}
         />
       )}
       {(isAddModalOpen || isEdit) && (
