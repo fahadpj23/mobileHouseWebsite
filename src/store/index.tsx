@@ -5,6 +5,7 @@ import { upcomingReducer } from "./slice/upcomingSlice";
 import { newArrivalReducer } from "./slice/newArrivalSlice";
 import { whatsappAdsReducer } from "./slice/whatsappAdsSlice";
 import { seriesReducer } from "./slice/seriesSlice";
+import { authReducer } from "./slice/authSlice";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // Local storage for persistence
 
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
   newArrival: newArrivalReducer,
   whatsappAds: whatsappAdsReducer,
   series: seriesReducer,
+  auth: authReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

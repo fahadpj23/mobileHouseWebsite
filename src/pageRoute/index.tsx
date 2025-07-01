@@ -15,6 +15,9 @@ import WhatsappAds from "pages/adminPanel/whatsappAds";
 import Upcoming from "pages/adminPanel/upcoming";
 import NewArrival from "pages/adminPanel/newArrival";
 import Series from "pages/adminPanel/phoneSeries";
+import Login from "pages/login";
+import ProtectedRoute from "components/protectedRoute";
+import { AuthRedirect } from "components/authRedirect";
 
 const PageRoute = () => {
   return (
@@ -34,15 +37,19 @@ const PageRoute = () => {
             />
             <Route path="*" element={<PageNotFound />} />
           </Route>
-
+          <Route element={<AuthRedirect />}>
+            <Route path="login" element={<Login />} />
+          </Route>
           {/* Admin Routes */}
-          <Route element={<AdminMainLayout />}>
-            <Route path="admin/products" element={<Products />} />
-            <Route path="admin/newArrival" element={<NewArrival />} />
-            <Route path="admin/upcoming" element={<Upcoming />} />
-            <Route path="admin/whatsappAds" element={<WhatsappAds />} />
-            <Route path="admin/banner" element={<Banner />} />
-            <Route path="admin/series" element={<Series />} />
+          <Route element={<ProtectedRoute />}>
+            <Route element={<AdminMainLayout />}>
+              <Route path="admin/products" element={<Products />} />
+              <Route path="admin/newArrival" element={<NewArrival />} />
+              <Route path="admin/upcoming" element={<Upcoming />} />
+              <Route path="admin/whatsappAds" element={<WhatsappAds />} />
+              <Route path="admin/banner" element={<Banner />} />
+              <Route path="admin/series" element={<Series />} />
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>

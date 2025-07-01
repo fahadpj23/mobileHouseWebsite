@@ -61,7 +61,7 @@ export const deleteUpcoming = createAsyncThunk(
 );
 
 // Create slice
-const upcominglice = createSlice({
+const upcomingSlice = createSlice({
   name: "upcoming",
   initialState,
   reducers: {},
@@ -98,4 +98,4 @@ const upcominglice = createSlice({
 });
 
 // Export the reducer
-export const upcomingReducer = upcominglice.reducer;
+export const upcomingReducer = upcomingSlice.reducer;
