@@ -1,7 +1,7 @@
 export const whatsappAdsTableHead = [
   {
     title: "Image",
-    key: "imageUrl",
+    key: "image",
   },
   {
     title: "series",

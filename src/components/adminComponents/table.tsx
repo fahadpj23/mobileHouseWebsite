@@ -38,7 +38,7 @@ const TableData: FC<props> = ({
             <td className="border-black text-left p-2">{key + 1}</td>
             {TableHead?.map((head: any) => (
               <td key={head?.key} className="border-black text-left p-2">
-                {head.key === "imageUrl" ? (
+                {head.key === "image" ? (
                   <div>
                     <img
                       src={`http://localhost:9000${data[head?.key]}`}

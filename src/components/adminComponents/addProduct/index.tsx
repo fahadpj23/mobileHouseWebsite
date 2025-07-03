@@ -22,6 +22,7 @@ const AddProduct: FC<props> = ({
   const dispatch = useAppDispatch();
   const handleSubmit = (values: typeof initialValues) => {
     const formData = new FormData();
+    console.log(values);
     formData.append("productName", values.productName);
     formData.append("brand", values.brand);
     formData.append("ram", values.ram);

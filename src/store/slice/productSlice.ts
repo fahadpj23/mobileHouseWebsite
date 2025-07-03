@@ -3,6 +3,7 @@ import {
   createAsyncThunk,
   PayloadAction,
   isPending,
+  isFulfilled,
 } from "@reduxjs/toolkit";
 import axiosInstance from "services/api";
 
@@ -49,6 +50,13 @@ export const deleteProduct = createAsyncThunk(
   }
 );
 
+export const getProductByBrand = createAsyncThunk(
+  "products/getProductByBrand",
+  async (brand: string) => {
+    const response = await axiosInstance.get(`products/brand/${brand}`);
+    return response.data;
+  }
+);
 export const addproducts = createAsyncThunk(
   "products/addProduct",
   async (data: any) => {
@@ -68,11 +76,6 @@ const productSlice = createSlice({
   extraReducers: (builder) => {
     builder
 
-      .addCase(fetchProducts.fulfilled, (state, action: PayloadAction<any>) => {
-        state.loading = false;
-        state.entities = action.payload;
-        state.successMessage = "";
-      })
       .addCase(
         getProductById.fulfilled,
         (state, action: PayloadAction<any>) => {
@@ -89,10 +92,23 @@ const productSlice = createSlice({
         state.successMessage = "added SuccessFully";
       })
       .addMatcher(
-        isPending(fetchProducts, getProductById, addproducts),
+        isPending(
+          fetchProducts,
+          getProductById,
+          addproducts,
+          getProductByBrand
+        ),
         (state, action) => {
           state.loading = true;
           state.error = null;
+        }
+      )
+      .addMatcher(
+        isFulfilled(fetchProducts, getProductByBrand),
+        (state, action: PayloadAction<any>) => {
+          state.loading = false;
+          state.entities = action.payload;
+          state.successMessage = "";
         }
       );
   },

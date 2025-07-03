@@ -1,7 +1,7 @@
 export const UpcomingTableHead = [
   {
     title: "Image",
-    key: "imageUrl",
+    key: "image",
   },
   {
     title: "series",

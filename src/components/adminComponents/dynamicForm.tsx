@@ -55,9 +55,11 @@ interface FormField {
     | "radio"
     | "file"
     | "date"
+    | "subForm"
     | "array";
   options?: { value: string | number; label: string }[];
   required?: boolean;
+  subForm?: any;
   validation?: Yup.AnySchema;
   fields?: FormField[]; // For array type fields
 }
@@ -81,6 +83,8 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
 }) => {
   const [file, setFile] = useState<File | null>(null);
   const [series, setSeries] = useState<any>(null);
+  const [newItemValue, setNewItemValue] = useState<any>("");
+  const [image, setImage] = useState<any>("");
   const dispatch = useAppDispatch();
   const { entities, entity } = useAppSelector((state) => state.user.series);
 
@@ -111,6 +115,11 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
   // Format date for backend (ISO string)
   const formatDateForBackend = (date: Date | null) => {
     return date ? format(date, "yyyy-MM-dd") : null;
+  };
+
+  const handleAddSubform = (subForm: any) => {
+    subForm.push(subForm);
+    console.log(subForm);
   };
 
   //form  dynamic rendering
@@ -207,53 +216,325 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                   size="small"
                   error={error}
                   helperText={helperText}
+                  inputProps={{
+                    ...params.inputProps,
+                    readOnly: true, // This disables manual typing
+                  }}
                 />
               )}
             />
           </LocalizationProvider>
         );
+
+      case "subForm":
+        return (
+          <FieldArray name={name}>
+            {({ push, remove }) => {
+              // Define options for RAM and Storage
+              const ramOptions = ["2", "4", "6", "8", "12", "16", "32"];
+              const storageOptions = ["32", "64", "128", "256", "512", "1024"];
+
+              const handleAddItem = () => {
+                push({
+                  variants: [
+                    {
+                      ram: "",
+                      storage: "",
+                      price: "",
+                      mrp: "",
+                    },
+                  ],
+                });
+              };
+
+              const handleAddVariant = (arrayIndex: number) => {
+                let updatedItems: any = [...formik.values[name]];
+                updatedItems.push({
+                  variants: [
+                    {
+                      ram: "",
+                      storage: "",
+                      price: "",
+                      mrp: "",
+                    },
+                  ],
+                });
+                formik.setFieldValue(name, updatedItems);
+                setNewItemValue("");
+              };
+
+              const handleRemoveVariant = (
+                arrayIndex: number,
+                variantIndex: number
+              ) => {
+                const updatedItems = [...formik.values[name]];
+                updatedItems[arrayIndex].variants.splice(variantIndex, 1);
+                formik.setFieldValue(name, updatedItems);
+              };
+
+              return (
+                <Box marginY={2}>
+                  <Typography variant="h6">{label}</Typography>
+
+                  <Button
+                    variant="outlined"
+                    onClick={() =>
+                      handleAddVariant(formik.values[name]?.length)
+                    }
+                    startIcon={<AddCircleOutline />}
+                    sx={{ mb: 2 }}
+                  >
+                    Add Variant
+                  </Button>
+
+                  {formik.values[name]?.map((item: any, itemIndex: number) => (
+                    <Paper
+                      key={itemIndex}
+                      elevation={2}
+                      style={{ padding: "16px", margin: "8px 0" }}
+                    >
+                      {item.variants?.map(
+                        (variant: any, variantIndex: number) => (
+                          <Paper
+                            key={variantIndex}
+                            elevation={1}
+                            style={{ padding: "16px", margin: "8px 0" }}
+                          >
+                            <div className="flex justify-between items-center mb-2">
+                              <IconButton
+                                onClick={() => remove(itemIndex)}
+                                color="error"
+                              >
+                                <RemoveCircleOutline />
+                              </IconButton>
+                            </div>
+
+                            <Grid container spacing={2}>
+                              <Grid item xs={12} sm={6} md={3}>
+                                <FormControl fullWidth size="small">
+                                  <InputLabel>RAM (GB)</InputLabel>
+                                  <Select
+                                    value={variant.ram}
+                                    label="RAM (GB)"
+                                    onChange={(e) => {
+                                      const updatedItems = [
+                                        ...formik.values[name],
+                                      ];
+                                      updatedItems[itemIndex].variants[
+                                        variantIndex
+                                      ].ram = e.target.value;
+                                      formik.setFieldValue(name, updatedItems);
+                                    }}
+                                  >
+                                    {ramOptions.map((option) => (
+                                      <MenuItem key={option} value={option}>
+                                        {option} GB
+                                      </MenuItem>
+                                    ))}
+                                  </Select>
+                                </FormControl>
+                              </Grid>
+                              <Grid item xs={12} sm={6} md={3}>
+                                <FormControl fullWidth size="small">
+                                  <InputLabel>Storage (GB)</InputLabel>
+                                  <Select
+                                    value={variant.storage}
+                                    label="Storage (GB)"
+                                    onChange={(e) => {
+                                      const updatedItems = [
+                                        ...formik.values[name],
+                                      ];
+                                      updatedItems[itemIndex].variants[
+                                        variantIndex
+                                      ].storage = e.target.value;
+                                      formik.setFieldValue(name, updatedItems);
+                                    }}
+                                  >
+                                    {storageOptions.map((option) => (
+                                      <MenuItem key={option} value={option}>
+                                        {option} GB
+                                      </MenuItem>
+                                    ))}
+                                  </Select>
+                                </FormControl>
+                              </Grid>
+                              <Grid item xs={12} sm={6} md={3}>
+                                <TextField
+                                  label="Price"
+                                  type="number"
+                                  value={variant.price}
+                                  onChange={(e) => {
+                                    const updatedItems = [
+                                      ...formik.values[name],
+                                    ];
+                                    updatedItems[itemIndex].variants[
+                                      variantIndex
+                                    ].price = e.target.value;
+                                    formik.setFieldValue(name, updatedItems);
+                                  }}
+                                  size="small"
+                                  fullWidth
+                                />
+                              </Grid>
+                              <Grid item xs={12} sm={6} md={3}>
+                                <TextField
+                                  label="MRP"
+                                  type="number"
+                                  value={variant.mrp}
+                                  onChange={(e) => {
+                                    const updatedItems = [
+                                      ...formik.values[name],
+                                    ];
+                                    updatedItems[itemIndex].variants[
+                                      variantIndex
+                                    ].mrp = e.target.value;
+                                    formik.setFieldValue(name, updatedItems);
+                                  }}
+                                  size="small"
+                                  fullWidth
+                                />
+                              </Grid>
+                            </Grid>
+                          </Paper>
+                        )
+                      )}
+                    </Paper>
+                  ))}
+                </Box>
+              );
+            }}
+          </FieldArray>
+        );
       case "array":
         return (
           <FieldArray name={name}>
-            {({ push, remove }) => (
-              <Box marginY={2}>
-                <Typography variant="h6">{label}</Typography>
-                {formik.values[name]?.map((item: any, index: number) => (
-                  <Paper
-                    key={index}
-                    elevation={2}
-                    style={{ padding: "16px", margin: "8px 0" }}
-                  >
-                    <Grid container spacing={2}>
-                      {field.fields?.map((subField) => (
-                        <Grid item xs={12} sm={6} key={subField.name}>
-                          {renderFormField(
-                            {
-                              ...subField,
-                              name: `${name}.${index}.${subField.name}`,
-                            },
-                            formik
-                          )}
-                        </Grid>
-                      ))}
-                      <Grid item xs={12}>
+            {({ push, remove }) => {
+              const handleAddItem = () => {
+                if (newItemValue.trim()) {
+                  push({ color: newItemValue.trim(), images: [] });
+                  setNewItemValue("");
+                }
+              };
+
+              return (
+                <Box marginY={2}>
+                  <Typography variant="h6">{label}</Typography>
+
+                  <Box display="flex" gap={2} mb={2}>
+                    <TextField
+                      fullWidth
+                      variant="outlined"
+                      size="small"
+                      value={newItemValue}
+                      onChange={(e) => setNewItemValue(e.target.value)}
+                      onKeyPress={(e) => e.key === "Enter" && handleAddItem()}
+                      label={`Add new ${label.toLowerCase()}`}
+                    />
+                    <Button
+                      variant="contained"
+                      onClick={handleAddItem}
+                      disabled={!newItemValue.trim()}
+                    >
+                      Add
+                    </Button>
+                  </Box>
+
+                  {formik.values[name]?.map((item: any, index: number) => (
+                    <Paper
+                      key={index}
+                      elevation={2}
+                      style={{ padding: "16px", margin: "8px 0" }}
+                    >
+                      <div className="flex space-x-2 items-center">
+                        <h1>{item?.color}</h1>
                         <IconButton onClick={() => remove(index)} color="error">
                           <RemoveCircleOutline />
                         </IconButton>
-                      </Grid>
-                    </Grid>
-                  </Paper>
-                ))}
-                <Button
-                  startIcon={<AddCircleOutline />}
-                  onClick={() => push({})}
-                  variant="outlined"
-                  color="primary"
-                >
-                  Add {label}
-                </Button>
-              </Box>
-            )}
+                      </div>
+
+                      {/* File Input (Hidden) */}
+                      <input
+                        accept="image/*"
+                        style={{ display: "none" }}
+                        id={`${name}-file-input-${index}`} // Unique ID per item
+                        multiple
+                        type="file"
+                        onChange={(event) => {
+                          const files = event.currentTarget.files;
+                          if (files) {
+                            const newFiles = Array.from(files);
+                            console.log(index); // ✅ Now logs correct index
+                            const updatedItems = [...formik.values[name]];
+                            updatedItems[index] = {
+                              ...updatedItems[index],
+                              images: [
+                                ...(updatedItems[index].images || []),
+                                ...newFiles,
+                              ],
+                            };
+                            formik.setFieldValue(name, updatedItems);
+                          }
+                        }}
+                      />
+
+                      {/* Preview Uploaded Images */}
+                      <div>
+                        {item?.images?.map((file: any, fileIndex: number) =>
+                          file.type.startsWith("image/") ? (
+                            <img
+                              key={fileIndex}
+                              src={URL.createObjectURL(file)}
+                              alt={file.name}
+                              style={{
+                                width: "100%",
+                                height: "150px",
+                                objectFit: "cover",
+                                borderRadius: "4px",
+                              }}
+                            />
+                          ) : (
+                            <Box
+                              key={fileIndex}
+                              style={{
+                                width: "100%",
+                                height: "150px",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                backgroundColor: "#f5f5f5",
+                              }}
+                            >
+                              <InsertDriveFile
+                                style={{ fontSize: 48, color: "#757575" }}
+                              />
+                            </Box>
+                          )
+                        )}
+                      </div>
+
+                      {/* Upload Button (Now Linked to Correct Input) */}
+                      <FormControl fullWidth margin="normal" error={error}>
+                        <InputLabel shrink>{label}</InputLabel>
+                        <Box mt={2}>
+                          <label htmlFor={`${name}-file-input-${index}`}>
+                            {" "}
+                            {/* Matches input ID */}
+                            <Button
+                              variant="outlined"
+                              component="span"
+                              startIcon={<CloudUpload />}
+                            >
+                              Upload Files
+                            </Button>
+                          </label>
+                        </Box>
+                        {error && <FormHelperText>{helperText}</FormHelperText>}
+                      </FormControl>
+                    </Paper>
+                  ))}
+                </Box>
+              );
+            }}
           </FieldArray>
         );
       case "file":
@@ -327,7 +608,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                         ) : (
                           <div>
                             <img
-                              src={`http://localhost:9000${file?.imageUrl}`}
+                              src={`http://localhost:9000${file?.image}`}
                               alt={file.name}
                               style={{
                                 width: "100%",
@@ -404,7 +685,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                   <Grid
                     item
                     xs={12}
-                    sm={field.type === "array" ? 12 : 4}
+                    sm={["array", "subForm"].includes(field.type) ? 12 : 4}
                     key={field.name}
                   >
                     {renderFormField(field, formik)}

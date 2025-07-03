@@ -11,8 +11,8 @@ export const initialValues = {
   display: "",
   frontCamera: "",
   rearCamera: "",
+  variants: [],
   os: "",
   processor: "",
   battery: "",
-  images: [],
 };

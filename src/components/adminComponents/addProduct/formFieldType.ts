@@ -13,9 +13,11 @@ export interface ProductFormField {
     | "radio"
     | "file"
     | "date"
+    | "subForm"
     | "array";
   options?: { value: string | number; label: string }[];
   required?: boolean;
   validation?: Yup.AnySchema;
+  subForm?: any;
   fields?: ProductFormField[]; // For array type fields
 }

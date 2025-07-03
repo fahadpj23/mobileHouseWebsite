@@ -28,39 +28,7 @@ export const formFields: ProductFormField[] = [
     ],
     validation: Yup.string().required("brand name is required"),
   },
-  {
-    name: "ram",
-    label: "Ram",
-    type: "select",
-    options: [
-      { value: "2", label: "2" },
-      { value: "4", label: "4" },
-      { value: "8", label: "8" },
-      { value: "12", label: "12" },
-      { value: "16", label: "16" },
-    ],
-    validation: Yup.string().required("ram is required"),
-  },
-  {
-    name: "storage",
-    label: "Storage",
-    type: "select",
-    options: [
-      { value: "64", label: "64" },
-      { value: "128", label: "128" },
-      { value: "256", label: "256" },
-      { value: "512", label: "512" },
-      { value: "1Tb", label: "1TB" },
-    ],
-    validation: Yup.string().required("storage is required"),
-  },
-  {
-    name: "price",
-    label: "Price",
-    type: "number",
-    required: true,
-    validation: Yup.string().required("price is required"),
-  },
+
   {
     name: "rating",
     label: "Rating",
@@ -68,20 +36,7 @@ export const formFields: ProductFormField[] = [
     required: true,
     validation: Yup.string().required("Rating is required"),
   },
-  {
-    name: "mrp",
-    label: "Mrp",
-    type: "number",
-    required: true,
-    validation: Yup.string().required("mrp is required"),
-  },
-  // {
-  //   name: "series",
-  //   label: "Series",
-  //   type: "text",
-  //   required: true,
-  //   validation: Yup.string().required("series is required"),
-  // },
+
   {
     name: "series",
     label: "Series",
@@ -118,7 +73,56 @@ export const formFields: ProductFormField[] = [
   {
     name: "color",
     label: "color",
-    type: "text",
+    type: "array",
+    required: true,
+    validation: Yup.string().required("Product name is required"),
+  },
+  {
+    name: "variants",
+    label: "variants",
+    type: "subForm",
+    subForm: [
+      {
+        name: "ram",
+        label: "Ram",
+        type: "select",
+        options: [
+          { value: "2", label: "2" },
+          { value: "4", label: "4" },
+          { value: "8", label: "8" },
+          { value: "12", label: "12" },
+          { value: "16", label: "16" },
+        ],
+        validation: Yup.string().required("ram is required"),
+      },
+      {
+        name: "storage",
+        label: "Storage",
+        type: "select",
+        options: [
+          { value: "64", label: "64" },
+          { value: "128", label: "128" },
+          { value: "256", label: "256" },
+          { value: "512", label: "512" },
+          { value: "1Tb", label: "1TB" },
+        ],
+        validation: Yup.string().required("storage is required"),
+      },
+      {
+        name: "price",
+        label: "Price",
+        type: "number",
+        required: true,
+        validation: Yup.string().required("price is required"),
+      },
+      {
+        name: "mrp",
+        label: "Mrp",
+        type: "number",
+        required: true,
+        validation: Yup.string().required("mrp is required"),
+      },
+    ],
     required: true,
     validation: Yup.string().required("Product name is required"),
   },
@@ -141,7 +145,7 @@ export const formFields: ProductFormField[] = [
     label: "Os",
     type: "text",
     required: true,
-    validation: Yup.string().required("anddroid Version is required"),
+    validation: Yup.string().required("android Version is required"),
   },
   {
     name: "processor",
@@ -156,12 +160,5 @@ export const formFields: ProductFormField[] = [
     type: "text",
     required: true,
     validation: Yup.string().required("Battery is required"),
-  },
-  {
-    name: "images",
-    label: "images",
-    type: "file",
-    required: true,
-    validation: Yup.string().required("image is required"),
   },
 ];

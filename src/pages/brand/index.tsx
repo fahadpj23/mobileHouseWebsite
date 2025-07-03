@@ -3,19 +3,22 @@ import { useParams } from "react-router-dom";
 
 import { getBrandPhones } from "utils/getBrandPhone";
 import ProductList from "components/commonComponents/productList";
+import { useAppDispatch, useAppSelector } from "hooks/useRedux";
+import { getProductByBrand } from "store/slice/productSlice";
 
 const Brand = () => {
   const { brandName } = useParams();
+  const dispatch = useAppDispatch();
+  const { entities } = useAppSelector((state) => state.user.products);
   const [phoneList, setPhoneList] = useState<any>([]);
   useEffect(() => {
-    brandName && setPhoneList(getBrandPhones(brandName));
+    brandName && dispatch(getProductByBrand(brandName));
+    // brandName && setPhoneList(getBrandPhones(brandName));
   }, [brandName]);
 
   return (
     <div>
-      <div>
-        {phoneList?.length ? <ProductList products={phoneList} /> : null}
-      </div>
+      <div>{entities?.length ? <ProductList products={entities} /> : null}</div>
     </div>
   );
 };
