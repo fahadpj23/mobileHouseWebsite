@@ -234,30 +234,13 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
               const ramOptions = ["2", "4", "6", "8", "12", "16", "32"];
               const storageOptions = ["32", "64", "128", "256", "512", "1024"];
 
-              const handleAddItem = () => {
-                push({
-                  variants: [
-                    {
-                      ram: "",
-                      storage: "",
-                      price: "",
-                      mrp: "",
-                    },
-                  ],
-                });
-              };
-
               const handleAddVariant = (arrayIndex: number) => {
                 let updatedItems: any = [...formik.values[name]];
                 updatedItems.push({
-                  variants: [
-                    {
-                      ram: "",
-                      storage: "",
-                      price: "",
-                      mrp: "",
-                    },
-                  ],
+                  ram: "",
+                  storage: "",
+                  price: "",
+                  mrp: "",
                 });
                 formik.setFieldValue(name, updatedItems);
                 setNewItemValue("");
@@ -287,119 +270,98 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                     Add Variant
                   </Button>
 
-                  {formik.values[name]?.map((item: any, itemIndex: number) => (
-                    <Paper
-                      key={itemIndex}
-                      elevation={2}
-                      style={{ padding: "16px", margin: "8px 0" }}
-                    >
-                      {item.variants?.map(
-                        (variant: any, variantIndex: number) => (
-                          <Paper
-                            key={variantIndex}
-                            elevation={1}
-                            style={{ padding: "16px", margin: "8px 0" }}
+                  {formik.values[name]?.map(
+                    (variant: any, variantIndex: number) => (
+                      <Paper
+                        key={variantIndex}
+                        elevation={1}
+                        style={{ padding: "16px", margin: "8px 0" }}
+                      >
+                        <div className="flex justify-between items-center mb-2">
+                          <IconButton
+                            onClick={() => remove(variantIndex)}
+                            color="error"
                           >
-                            <div className="flex justify-between items-center mb-2">
-                              <IconButton
-                                onClick={() => remove(itemIndex)}
-                                color="error"
-                              >
-                                <RemoveCircleOutline />
-                              </IconButton>
-                            </div>
+                            <RemoveCircleOutline />
+                          </IconButton>
+                        </div>
 
-                            <Grid container spacing={2}>
-                              <Grid item xs={12} sm={6} md={3}>
-                                <FormControl fullWidth size="small">
-                                  <InputLabel>RAM (GB)</InputLabel>
-                                  <Select
-                                    value={variant.ram}
-                                    label="RAM (GB)"
-                                    onChange={(e) => {
-                                      const updatedItems = [
-                                        ...formik.values[name],
-                                      ];
-                                      updatedItems[itemIndex].variants[
-                                        variantIndex
-                                      ].ram = e.target.value;
-                                      formik.setFieldValue(name, updatedItems);
-                                    }}
-                                  >
-                                    {ramOptions.map((option) => (
-                                      <MenuItem key={option} value={option}>
-                                        {option} GB
-                                      </MenuItem>
-                                    ))}
-                                  </Select>
-                                </FormControl>
-                              </Grid>
-                              <Grid item xs={12} sm={6} md={3}>
-                                <FormControl fullWidth size="small">
-                                  <InputLabel>Storage (GB)</InputLabel>
-                                  <Select
-                                    value={variant.storage}
-                                    label="Storage (GB)"
-                                    onChange={(e) => {
-                                      const updatedItems = [
-                                        ...formik.values[name],
-                                      ];
-                                      updatedItems[itemIndex].variants[
-                                        variantIndex
-                                      ].storage = e.target.value;
-                                      formik.setFieldValue(name, updatedItems);
-                                    }}
-                                  >
-                                    {storageOptions.map((option) => (
-                                      <MenuItem key={option} value={option}>
-                                        {option} GB
-                                      </MenuItem>
-                                    ))}
-                                  </Select>
-                                </FormControl>
-                              </Grid>
-                              <Grid item xs={12} sm={6} md={3}>
-                                <TextField
-                                  label="Price"
-                                  type="number"
-                                  value={variant.price}
-                                  onChange={(e) => {
-                                    const updatedItems = [
-                                      ...formik.values[name],
-                                    ];
-                                    updatedItems[itemIndex].variants[
-                                      variantIndex
-                                    ].price = e.target.value;
-                                    formik.setFieldValue(name, updatedItems);
-                                  }}
-                                  size="small"
-                                  fullWidth
-                                />
-                              </Grid>
-                              <Grid item xs={12} sm={6} md={3}>
-                                <TextField
-                                  label="MRP"
-                                  type="number"
-                                  value={variant.mrp}
-                                  onChange={(e) => {
-                                    const updatedItems = [
-                                      ...formik.values[name],
-                                    ];
-                                    updatedItems[itemIndex].variants[
-                                      variantIndex
-                                    ].mrp = e.target.value;
-                                    formik.setFieldValue(name, updatedItems);
-                                  }}
-                                  size="small"
-                                  fullWidth
-                                />
-                              </Grid>
-                            </Grid>
-                          </Paper>
-                        )
-                      )}
-                    </Paper>
-                  ))}
+                        <Grid container spacing={2}>
+                          <Grid item xs={12} sm={6} md={3}>
+                            <FormControl fullWidth size="small">
+                              <InputLabel>RAM (GB)</InputLabel>
+                              <Select
+                                value={variant.ram}
+                                label="RAM (GB)"
+                                onChange={(e) => {
+                                  const updatedItems = [...formik.values[name]];
+                                  updatedItems[variantIndex].ram =
+                                    e.target.value;
+                                  formik.setFieldValue(name, updatedItems);
+                                }}
+                              >
+                                {ramOptions.map((option) => (
+                                  <MenuItem key={option} value={option}>
+                                    {option} GB
+                                  </MenuItem>
+                                ))}
+                              </Select>
+                            </FormControl>
+                          </Grid>
+                          <Grid item xs={12} sm={6} md={3}>
+                            <FormControl fullWidth size="small">
+                              <InputLabel>Storage (GB)</InputLabel>
+                              <Select
+                                value={variant.storage}
+                                label="Storage (GB)"
+                                onChange={(e) => {
+                                  const updatedItems = [...formik.values[name]];
+                                  updatedItems[variantIndex].storage =
+                                    e.target.value;
+                                  formik.setFieldValue(name, updatedItems);
+                                }}
+                              >
+                                {storageOptions.map((option) => (
+                                  <MenuItem key={option} value={option}>
+                                    {option} GB
+                                  </MenuItem>
+                                ))}
+                              </Select>
+                            </FormControl>
+                          </Grid>
+                          <Grid item xs={12} sm={6} md={3}>
+                            <TextField
+                              label="Price"
+                              type="number"
+                              value={variant.price}
+                              onChange={(e) => {
+                                const updatedItems = [...formik.values[name]];
+                                updatedItems[variantIndex].price =
+                                  e.target.value;
+                                formik.setFieldValue(name, updatedItems);
+                              }}
+                              size="small"
+                              fullWidth
+                            />
+                          </Grid>
+                          <Grid item xs={12} sm={6} md={3}>
+                            <TextField
+                              label="MRP"
+                              type="number"
+                              value={variant.mrp}
+                              onChange={(e) => {
+                                const updatedItems = [...formik.values[name]];
+                                updatedItems[variantIndex].mrp = e.target.value;
+                                formik.setFieldValue(name, updatedItems);
+                              }}
+                              size="small"
+                              fullWidth
+                            />
+                          </Grid>
+                        </Grid>
+                      </Paper>
+                    )
+                  )}
                 </Box>
               );
             }}

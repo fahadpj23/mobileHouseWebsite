@@ -21,14 +21,11 @@ const AddProduct: FC<props> = ({
 }) => {
   const dispatch = useAppDispatch();
   const handleSubmit = (values: typeof initialValues) => {
-    const formData = new FormData();
     console.log(values);
+    const formData = new FormData();
     formData.append("productName", values.productName);
     formData.append("brand", values.brand);
-    formData.append("ram", values.ram);
-    formData.append("storage", values.storage);
-    formData.append("price", values.price);
-    formData.append("mrp", values.mrp);
+    formData.append("variants", JSON.stringify(values.variants));
     formData.append("series", values.series);
     formData.append("networkType", values.networkType);
     formData.append("category", values.category);
@@ -36,14 +33,20 @@ const AddProduct: FC<props> = ({
     formData.append("rating", values.rating);
     formData.append("frontCamera", values.frontCamera);
     formData.append("launchDate", values.launchDate);
-    formData.append("color", values.color);
+    formData.append("colors", JSON.stringify(values.color));
     formData.append("rearCamera", values.rearCamera);
     formData.append("battery", values?.battery);
     formData.append("os", values.os);
     formData.append("processor", values.processor);
-    values.images.forEach((image: any) => {
-      formData.append("images", image);
+    values?.color?.map((color: any) => {
+      color?.images?.map((colorDetails: any) => {
+        formData.append("images", colorDetails);
+      });
     });
+    // values.color.images.forEach(imageFile => {
+    //   formData.append('images', imageFile);
+    // });
+
     dispatch(addproducts(formData));
   };
 
