@@ -259,17 +259,6 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                 <Box marginY={2}>
                   <Typography variant="h6">{label}</Typography>
 
-                  <Button
-                    variant="outlined"
-                    onClick={() =>
-                      handleAddVariant(formik.values[name]?.length)
-                    }
-                    startIcon={<AddCircleOutline />}
-                    sx={{ mb: 2 }}
-                  >
-                    Add Variant
-                  </Button>
-
                   {formik.values[name]?.map(
                     (variant: any, variantIndex: number) => (
                       <Paper
@@ -362,6 +351,16 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                       </Paper>
                     )
                   )}
+                  <Button
+                    variant="outlined"
+                    onClick={() =>
+                      handleAddVariant(formik.values[name]?.length)
+                    }
+                    startIcon={<AddCircleOutline />}
+                    sx={{ mb: 2 }}
+                  >
+                    Add Variant
+                  </Button>
                 </Box>
               );
             }}
@@ -381,25 +380,6 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
               return (
                 <Box marginY={2}>
                   <Typography variant="h6">{label}</Typography>
-
-                  <Box display="flex" gap={2} mb={2}>
-                    <TextField
-                      fullWidth
-                      variant="outlined"
-                      size="small"
-                      value={newItemValue}
-                      onChange={(e) => setNewItemValue(e.target.value)}
-                      onKeyPress={(e) => e.key === "Enter" && handleAddItem()}
-                      label={`Add new ${label.toLowerCase()}`}
-                    />
-                    <Button
-                      variant="contained"
-                      onClick={handleAddItem}
-                      disabled={!newItemValue.trim()}
-                    >
-                      Add
-                    </Button>
-                  </Box>
 
                   {formik.values[name]?.map((item: any, index: number) => (
                     <Paper
@@ -494,6 +474,24 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                       </FormControl>
                     </Paper>
                   ))}
+                  <Box display="flex" gap={2} mb={2}>
+                    <TextField
+                      fullWidth
+                      variant="outlined"
+                      size="small"
+                      value={newItemValue}
+                      onChange={(e) => setNewItemValue(e.target.value)}
+                      onKeyPress={(e) => e.key === "Enter" && handleAddItem()}
+                      label={`Add new ${label.toLowerCase()}`}
+                    />
+                    <Button
+                      variant="contained"
+                      onClick={handleAddItem}
+                      disabled={!newItemValue.trim()}
+                    >
+                      Add
+                    </Button>
+                  </Box>
                 </Box>
               );
             }}

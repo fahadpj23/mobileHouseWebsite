@@ -29,13 +29,13 @@ const Products = () => {
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);
-  useEffect(() => {
-    if (successMessage) {
-      handleAddButton();
-      showToast();
-      dispatch(fetchProducts());
-    }
-  }, [successMessage]);
+  // useEffect(() => {
+  //   if (successMessage) {
+  //     handleAddButton();
+  //     showToast();
+  //     dispatch(fetchProducts());
+  //   }
+  // }, [successMessage]);
 
   const handleAddButton = () => setIsAddModalOpen(!isAddModalOpen);
 
