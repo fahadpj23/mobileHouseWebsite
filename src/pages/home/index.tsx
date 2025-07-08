@@ -1,16 +1,10 @@
 import React, { useEffect } from "react";
 import ImageSlider from "components/Home/imageSlider";
 import Brands from "components/Home/Brands";
-import { getSpecialOfferPhones } from "utils/getSpecialOfferPhone";
-import { getTrendingPhones } from "utils/getTrendingPhones";
-import { getNewArrivalPhones } from "utils/getNewArrival";
 import AvailableEmi from "components/Home/availableEmi";
-import { removeDuplicateSeries } from "utils/removeDuplicateSeries";
 import LazyLoad from "components/ScrollLoad";
-
 import ProductMiniList from "components/Home/productMiniList";
 import WhatsappAds from "components/Home/whatsappAds";
-import Banner from "components/Home/banner";
 import Footer from "components/Home/footer";
 import Upcoming from "components/Home/upcoming";
 import NewArrival from "components/Home/newArrival";

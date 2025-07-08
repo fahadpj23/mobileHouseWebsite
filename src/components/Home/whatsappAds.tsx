@@ -48,11 +48,11 @@ const WhatsappAds = () => {
         <div>
           {whatsappAds?.length &&
             whatsappAds.map((item: any) =>
-              item?.series ? (
+              item?.seriesId ? (
                 <Link to={`series/${item?.series}`} key={item?.id}>
                   <div className="w-[98%] h-[50vh]  ">
                     <ServerLazyImage
-                      src={item?.imageU}
+                      src={item?.image}
                       alt="phone Image"
                       fill={true}
                     />

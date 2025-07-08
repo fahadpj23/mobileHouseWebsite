@@ -22,7 +22,7 @@ const AddBanner: FC<props> = ({
   const dispatch = useAppDispatch();
   const handleSubmit = (values: typeof initialValues) => {
     const formData = new FormData();
-    formData.append("series", values.series);
+    formData.append("seriesId", values.seriesId);
     values.images.forEach((image: any) => {
       formData.append("images", image);
     });
