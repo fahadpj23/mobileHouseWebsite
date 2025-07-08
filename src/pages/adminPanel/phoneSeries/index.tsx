@@ -31,7 +31,7 @@ const Series = () => {
     dispatch(fetchSeries());
   }, []);
   console.log(entities);
-  const handleAddButton = () => setIsAddModalOpen(!isAddModalOpen);
+  const handleForm = () => setIsAddModalOpen(!isAddModalOpen);
 
   const handleEdit = (id: number) => {
     setEditId(id);
@@ -47,7 +47,7 @@ const Series = () => {
   //   console.log(values);
   useEffect(() => {
     if (successMessage) {
-      handleAddButton();
+      handleForm();
       showToast();
       dispatch(fetchSeries());
     }
@@ -60,7 +60,7 @@ const Series = () => {
   return (
     <div>
       <ToastContainer />
-      <Header title="Series" handleAddButton={handleAddButton} />
+      <Header title="Series" handleForm={handleForm} />
 
       {Array.isArray(entities) && (
         <TableData
@@ -72,7 +72,7 @@ const Series = () => {
       )}
       {(isAddModalOpen || isEdit) && (
         <AddSeries
-          handleAddButton={handleAddButton}
+          handleForm={handleForm}
           isAddModalOpen={isAddModalOpen || isEdit}
           formFields={formFields}
           validationSchema={validationSchema}

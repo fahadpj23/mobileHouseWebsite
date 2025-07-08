@@ -38,7 +38,7 @@ export const formFields: ProductFormField[] = [
   },
 
   {
-    name: "series",
+    name: "seriesId",
     label: "Series",
     type: "select",
     required: true,
@@ -157,7 +157,7 @@ export const formFields: ProductFormField[] = [
     validation: Yup.string().required("Product name is required"),
   },
   {
-    name: "color",
+    name: "colors",
     label: "color",
     type: "array",
     required: true,

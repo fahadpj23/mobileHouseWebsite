@@ -14,6 +14,9 @@ interface UserState {
   error: string | null;
   entity: any;
   successMessage: string;
+  newArrival: any;
+  specialOffer: any;
+  trendingPhone: any;
 }
 
 // Initial state
@@ -23,6 +26,9 @@ const initialState: UserState = {
   error: null,
   entity: null,
   successMessage: "",
+  newArrival: [],
+  specialOffer: [],
+  trendingPhone: [],
 };
 
 // Async thunk to fetch products data
@@ -30,6 +36,29 @@ export const fetchProducts = createAsyncThunk(
   "products/fetchProduct",
   async () => {
     const response = await axiosInstance.get(`products/`);
+    return response.data;
+  }
+);
+
+export const getNewArrival = createAsyncThunk(
+  "products/getNewArrival",
+  async () => {
+    const response = await axiosInstance.get(`products/newArrival`);
+    return response.data;
+  }
+);
+
+export const getSpecialOffer = createAsyncThunk(
+  "products/getSpecialOffer",
+  async () => {
+    const response = await axiosInstance.get(`products/specialOffer`);
+    return response.data;
+  }
+);
+export const getTrendingPhone = createAsyncThunk(
+  "products/getTrendingPhone",
+  async () => {
+    const response = await axiosInstance.get(`products/trendingPhone`);
     return response.data;
   }
 );
@@ -68,6 +97,18 @@ export const addproducts = createAsyncThunk(
   }
 );
 
+export const editProduct = createAsyncThunk(
+  "products/editProduct",
+  async ({ data, editId }: { data: any; editId: number }) => {
+    const response = await axiosInstance.put(`products/${editId}`, data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+    return response.data; // Don't forget to return the data
+  }
+);
+
 // Create slice
 const productSlice = createSlice({
   name: "products",
@@ -83,6 +124,24 @@ const productSlice = createSlice({
           state.entity = action.payload;
         }
       )
+      .addCase(
+        getSpecialOffer.fulfilled,
+        (state, action: PayloadAction<any>) => {
+          state.loading = false;
+          state.specialOffer = action.payload;
+        }
+      )
+      .addCase(
+        getTrendingPhone.fulfilled,
+        (state, action: PayloadAction<any>) => {
+          state.loading = false;
+          state.trendingPhone = action.payload;
+        }
+      )
+      .addCase(getNewArrival.fulfilled, (state, action: PayloadAction<any>) => {
+        state.loading = false;
+        state.newArrival = action.payload;
+      })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message || "Something went wrong";
@@ -95,6 +154,7 @@ const productSlice = createSlice({
         isPending(
           fetchProducts,
           getProductById,
+          editProduct,
           addproducts,
           getProductByBrand
         ),

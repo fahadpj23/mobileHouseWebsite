@@ -31,7 +31,7 @@ const Banner = () => {
     dispatch(fetchBanners());
   }, []);
   console.log(entities);
-  const handleAddButton = () => setIsAddModalOpen(!isAddModalOpen);
+  const handleForm = () => setIsAddModalOpen(!isAddModalOpen);
 
   const handleEdit = (id: number) => {
     setEditId(id);
@@ -54,7 +54,7 @@ const Banner = () => {
   useEffect(() => {
     if (successMessage) {
       showToast();
-      handleAddButton();
+      handleForm();
       dispatch(fetchBanners());
     }
   }, [successMessage]);
@@ -62,7 +62,7 @@ const Banner = () => {
   return (
     <div>
       <ToastContainer />
-      <Header title="Banner" handleAddButton={handleAddButton} />
+      <Header title="Banner" handleForm={handleForm} />
 
       {Array.isArray(entities) && (
         <TableData
@@ -74,7 +74,7 @@ const Banner = () => {
       )}
       {(isAddModalOpen || isEdit) && (
         <AddBanner
-          handleAddButton={handleAddButton}
+          handleForm={handleForm}
           isAddModalOpen={isAddModalOpen || isEdit}
           formFields={formFields}
           validationSchema={validationSchema}

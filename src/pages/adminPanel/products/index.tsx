@@ -29,15 +29,15 @@ const Products = () => {
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);
-  // useEffect(() => {
-  //   if (successMessage) {
-  //     handleAddButton();
-  //     showToast();
-  //     dispatch(fetchProducts());
-  //   }
-  // }, [successMessage]);
+  useEffect(() => {
+    if (successMessage) {
+      handleForm();
+      showToast();
+      dispatch(fetchProducts());
+    }
+  }, [successMessage]);
 
-  const handleAddButton = () => setIsAddModalOpen(!isAddModalOpen);
+  const handleForm = () => setIsAddModalOpen(!isAddModalOpen);
 
   const handleEdit = (id: number) => {
     setEditId(id);
@@ -58,7 +58,7 @@ const Products = () => {
   return (
     <div>
       <ToastContainer />
-      <Header title="Product" handleAddButton={handleAddButton} />
+      <Header title="Product" handleForm={handleForm} />
 
       {Array.isArray(entities) && (
         <TableData
@@ -70,11 +70,12 @@ const Products = () => {
       )}
       {(isAddModalOpen || isEdit) && (
         <AddProduct
-          handleAddButton={handleAddButton}
+          handleForm={handleForm}
           isAddModalOpen={isAddModalOpen || isEdit}
           formFields={formFields}
           validationSchema={validationSchema}
           initialValues={values}
+          editId={editId}
         />
       )}
     </div>

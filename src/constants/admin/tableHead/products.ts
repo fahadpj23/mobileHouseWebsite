@@ -7,20 +7,4 @@ export const ProductTableHead = [
     title: "Brand",
     key: "brand",
   },
-  {
-    title: "Ram",
-    key: "ram",
-  },
-  {
-    title: "Storage",
-    key: "storage",
-  },
-  {
-    title: "Price",
-    key: "price",
-  },
-  {
-    title: "Mrp",
-    key: "mrp",
-  },
 ];

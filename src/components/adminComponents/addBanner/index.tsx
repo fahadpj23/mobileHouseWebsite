@@ -8,7 +8,7 @@ import { ToastContainer } from "react-toastify";
 import { showToast } from "utils/toast";
 
 interface props {
-  handleAddButton: any;
+  handleForm: any;
   isAddModalOpen: boolean;
 
   formFields?: any;
@@ -16,7 +16,7 @@ interface props {
   initialValues?: any;
 }
 const AddBanner: FC<props> = ({
-  handleAddButton,
+  handleForm,
   isAddModalOpen,
   formFields,
   validationSchema,
@@ -40,7 +40,7 @@ const AddBanner: FC<props> = ({
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
-        handleAddButton={handleAddButton}
+        handleForm={handleForm}
         isAddModalOpen={isAddModalOpen}
       />
     </div>

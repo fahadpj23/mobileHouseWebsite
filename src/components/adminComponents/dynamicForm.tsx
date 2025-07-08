@@ -69,7 +69,7 @@ interface DynamicFormProps {
   initialValues: FormikValues;
   validationSchema: Yup.ObjectSchema<any>;
   onSubmit: any;
-  handleAddButton: any;
+  handleForm: any;
   isAddModalOpen: any;
 }
 
@@ -78,7 +78,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
   initialValues,
   validationSchema,
   onSubmit,
-  handleAddButton,
+  handleForm,
   isAddModalOpen,
 }) => {
   const [file, setFile] = useState<File | null>(null);
@@ -103,23 +103,9 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
     setSeries(newArray);
   }, [entities]);
 
-  const formatDateForDisplay = (dateString: string) => {
-    if (!dateString) return "";
-    try {
-      return format(parseISO(dateString), "yyyy-MM-dd");
-    } catch (e) {
-      return dateString;
-    }
-  };
-
   // Format date for backend (ISO string)
   const formatDateForBackend = (date: Date | null) => {
     return date ? format(date, "yyyy-MM-dd") : null;
-  };
-
-  const handleAddSubform = (subForm: any) => {
-    subForm.push(subForm);
-    console.log(subForm);
   };
 
   //form  dynamic rendering
@@ -127,6 +113,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
     field: FormField,
     formik: FormikProps<FormikValues>
   ) => {
+    console.log(formik?.values);
     const { name, label, type, options = [], required = false } = field;
     const error = formik.touched[name] && Boolean(formik.errors[name]);
     const helperText =
@@ -159,7 +146,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
           <FormControl fullWidth margin="normal" error={error} size="small">
             <InputLabel>{label}</InputLabel>
             <Field as={Select} name={name} label={label} required={required}>
-              {name === "series"
+              {name === "seriesId"
                 ? series &&
                   series.map((option: any) => (
                     <MenuItem key={option.value} value={option.value}>
@@ -218,7 +205,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                   helperText={helperText}
                   inputProps={{
                     ...params.inputProps,
-                    readOnly: true, // This disables manual typing
+                    readOnly: true,
                   }}
                 />
               )}
@@ -372,7 +359,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
             {({ push, remove }) => {
               const handleAddItem = () => {
                 if (newItemValue.trim()) {
-                  push({ color: newItemValue.trim(), images: [] });
+                  push({ name: newItemValue.trim(), images: [] });
                   setNewItemValue("");
                 }
               };
@@ -405,7 +392,6 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                           const files = event.currentTarget.files;
                           if (files) {
                             const newFiles = Array.from(files);
-                            console.log(index); // ✅ Now logs correct index
                             const updatedItems = [...formik.values[name]];
                             updatedItems[index] = {
                               ...updatedItems[index],
@@ -421,35 +407,54 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
 
                       {/* Preview Uploaded Images */}
                       <div>
-                        {item?.images?.map((file: any, fileIndex: number) =>
-                          file.type.startsWith("image/") ? (
-                            <img
-                              key={fileIndex}
-                              src={URL.createObjectURL(file)}
-                              alt={file.name}
-                              style={{
-                                width: "100%",
-                                height: "150px",
-                                objectFit: "cover",
-                                borderRadius: "4px",
-                              }}
-                            />
-                          ) : (
-                            <Box
-                              key={fileIndex}
-                              style={{
-                                width: "100%",
-                                height: "150px",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                backgroundColor: "#f5f5f5",
-                              }}
-                            >
-                              <InsertDriveFile
-                                style={{ fontSize: 48, color: "#757575" }}
+                        {item?.id ? (
+                          <div className="space-y-2">
+                            {item?.images?.map(
+                              (file: any, fileIndex: number) => (
+                                <img
+                                  src={`http://localhost:9000${file?.image}`}
+                                  alt={file.name}
+                                  style={{
+                                    width: "100%",
+                                    height: "150px",
+                                    objectFit: "contain",
+                                    borderRadius: "4px",
+                                  }}
+                                />
+                              )
+                            )}
+                          </div>
+                        ) : (
+                          item?.images?.map((file: any, fileIndex: number) =>
+                            file.type.startsWith("image/") ? (
+                              <img
+                                key={fileIndex}
+                                src={URL.createObjectURL(file)}
+                                alt={file.name}
+                                style={{
+                                  width: "100%",
+                                  height: "150px",
+                                  objectFit: "cover",
+                                  borderRadius: "4px",
+                                }}
                               />
-                            </Box>
+                            ) : (
+                              <Box
+                                key={fileIndex}
+                                style={{
+                                  width: "100%",
+                                  height: "150px",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  backgroundColor: "#f5f5f5",
+                                }}
+                              >
+                                <InsertDriveFile
+                                  style={{ fontSize: 48, color: "#757575" }}
+                                />
+                              </Box>
+                            )
                           )
                         )}
                       </div>
@@ -624,12 +629,15 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
     <Modal
       className="flex space-x-3 w-screen h-screen items-center justify-center"
       open={isAddModalOpen}
-      onClose={handleAddButton}
+      onClose={handleForm}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
       <div className="  bg-white p-4 h-[90%] md:h-[80%] w-[90%] md:w-[80%] overflow-y-auto relative">
-        <button onClick={handleAddButton} className="absolute top-2 right-2">
+        <button
+          onClick={() => handleForm()}
+          className="absolute top-2 right-2 z-50"
+        >
           <CloseIcon />
         </button>
         <Formik
@@ -640,6 +648,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
           {(formik) => (
             <Form>
               <div className="mt-5"></div>
+
               <Grid container spacing={3}>
                 {formFields.map((field) => (
                   <Grid

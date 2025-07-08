@@ -6,20 +6,25 @@ import { toPascalCase } from "utils/pascalCaseConvert";
 import { PHONEMODEL } from "model/phoneModel";
 
 interface props {
-  product: PHONEMODEL;
+  product: any;
 }
 const SingleProductCard: FC<props> = ({ product }) => {
   const DiscountPercentage =
     ((product.mrp - product.salesPrice) /
       ((product.mrp + product.salesPrice) / 2)) *
     100;
-
+  console.log(product?.colors[0]);
   return (
-    <Link to={`/phone/${product?.id}/${encodeURIComponent(product?.name)}`}>
+    <Link
+      to={`/phone/${product?.id}/${encodeURIComponent(product?.productName)}`}
+    >
       <div className=" p-3 md:p-6 flex flex-col space-y-2  bg-white relative rounded-md">
         <div className="flex justify-center bg-grayBackground rounded-md shadow-md p-2">
           <div className="w-full h-[150px]  md:h-[170px] object-contain">
-            <LazyImage src={product?.image} alt="Product Image" />
+            <LazyImage
+              src={`http://localhost:9000${product?.colors[0]?.images[0]?.image}`}
+              alt="Product Image"
+            />
           </div>
         </div>
         <div className="flex flex-col space-y-1">

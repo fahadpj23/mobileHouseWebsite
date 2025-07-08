@@ -7,7 +7,7 @@ export const validationSchema = Yup.object().shape({
   // storage: Yup.string().required("storage is required"),
   // price: Yup.string().required("price is required"),
   // mrp: Yup.string().required("mrp is required"),
-  series: Yup.string().required("series is required"),
+  seriesId: Yup.string().required("series is required"),
   networkType: Yup.string().required("networkType is required"),
   display: Yup.string().required("display is required"),
   frontCamera: Yup.string().required("frontCamera is required"),

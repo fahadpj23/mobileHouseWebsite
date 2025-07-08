@@ -35,7 +35,7 @@ const NewArrival = () => {
     dispatch(fetchNewArrivals());
   }, []);
 
-  const handleAddButton = () => setIsAddModalOpen(!isAddModalOpen);
+  const handleForm = () => setIsAddModalOpen(!isAddModalOpen);
 
   const handleEdit = (id: number) => {
     setEditId(id);
@@ -55,7 +55,7 @@ const NewArrival = () => {
   //   console.log(values);
   useEffect(() => {
     if (successMessage) {
-      handleAddButton();
+      handleForm();
       showToast();
       dispatch(fetchNewArrivals());
     }
@@ -63,7 +63,7 @@ const NewArrival = () => {
   return (
     <div>
       <ToastContainer />
-      <Header title="NewArrival" handleAddButton={handleAddButton} />
+      <Header title="NewArrival" handleForm={handleForm} />
 
       {Array.isArray(entities) && (
         <TableData
@@ -75,7 +75,7 @@ const NewArrival = () => {
       )}
       {(isAddModalOpen || isEdit) && (
         <AddNewArrival
-          handleAddButton={handleAddButton}
+          handleForm={handleForm}
           isAddModalOpen={isAddModalOpen || isEdit}
           formFields={formFields}
           validationSchema={validationSchema}

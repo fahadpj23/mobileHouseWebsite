@@ -6,7 +6,7 @@ import DynamicForm from "../dynamicForm";
 import { addSeries } from "store/slice/seriesSlice";
 
 interface props {
-  handleAddButton: any;
+  handleForm: any;
   isAddModalOpen: boolean;
 
   formFields?: any;
@@ -14,7 +14,7 @@ interface props {
   initialValues?: any;
 }
 const AddSeries: FC<props> = ({
-  handleAddButton,
+  handleForm,
   isAddModalOpen,
   formFields,
   validationSchema,
@@ -35,7 +35,7 @@ const AddSeries: FC<props> = ({
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
-        handleAddButton={handleAddButton}
+        handleForm={handleForm}
         isAddModalOpen={isAddModalOpen}
       />
     </div>

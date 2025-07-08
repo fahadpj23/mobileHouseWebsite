@@ -28,7 +28,7 @@ const WhatsappAds = () => {
     dispatch(fetchwhatsappAds());
   }, []);
 
-  const handleAddButton = () => setIsAddModalOpen(!isAddModalOpen);
+  const handleForm = () => setIsAddModalOpen(!isAddModalOpen);
 
   const handleEdit = (id: number) => {
     setEditId(id);
@@ -45,7 +45,7 @@ const WhatsappAds = () => {
 
   useEffect(() => {
     if (successMessage) {
-      handleAddButton();
+      handleForm();
       showToast();
       dispatch(fetchwhatsappAds());
     }
@@ -57,7 +57,7 @@ const WhatsappAds = () => {
   return (
     <div>
       <ToastContainer />
-      <Header title="WhatsappAds" handleAddButton={handleAddButton} />
+      <Header title="WhatsappAds" handleForm={handleForm} />
 
       {Array.isArray(entities) && (
         <TableData
@@ -69,7 +69,7 @@ const WhatsappAds = () => {
       )}
       {(isAddModalOpen || isEdit) && (
         <AddWhatsappAds
-          handleAddButton={handleAddButton}
+          handleForm={handleForm}
           isAddModalOpen={isAddModalOpen || isEdit}
           formFields={formFields}
           validationSchema={validationSchema}

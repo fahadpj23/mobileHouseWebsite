@@ -6,14 +6,14 @@ import DynamicForm from "../dynamicForm";
 import { addUpcoming } from "store/slice/upcomingSlice";
 
 interface props {
-  handleAddButton: any;
+  handleForm: any;
   isAddModalOpen: boolean;
   formFields?: any;
   validationSchema?: any;
   initialValues?: any;
 }
 const AddBanner: FC<props> = ({
-  handleAddButton,
+  handleForm,
   isAddModalOpen,
   formFields,
   validationSchema,
@@ -36,7 +36,7 @@ const AddBanner: FC<props> = ({
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
-        handleAddButton={handleAddButton}
+        handleForm={handleForm}
         isAddModalOpen={isAddModalOpen}
       />
     </div>
