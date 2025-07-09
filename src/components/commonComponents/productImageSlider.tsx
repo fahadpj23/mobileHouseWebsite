@@ -15,17 +15,17 @@ const ProductImageSlider: FC<any> = ({ productImages }) => {
     autoplay: true,
     autoplaySpeed: 3000,
   };
-
+  console.log(productImages);
   return (
     <div className="w-[70vw] flex items-center justify-center pb-5">
       <div className="w-full h-full">
         <Slider {...settings}>
-          {productImages?.map((src: any, index: number) => (
-            <div key={index}>
+          {productImages?.map((image: any, index: number) => (
+            <div key={image?.id}>
               <Zoom>
                 <img
                   className=" h-[80vw] w-full object-contain "
-                  src={`http://localhost:9000${src}`}
+                  src={`http://localhost:9000${image?.image}`}
                   alt="Product "
                 />
               </Zoom>

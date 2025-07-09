@@ -78,14 +78,14 @@ export const getProductById = createAsyncThunk(
 );
 export const getProductVariants = createAsyncThunk(
   "products/getProductVariants",
-  async ({ productId }: any) => {
+  async (productId: any) => {
     const response = await axiosInstance.get(`products/${productId}/variants`);
     return response.data;
   }
 );
 export const getProductColors = createAsyncThunk(
   "products/getProductColors",
-  async ({ productId }: any) => {
+  async (productId: any) => {
     console.log(productId);
     const response = await axiosInstance.get(`products/${productId}/colors`);
     return response.data;

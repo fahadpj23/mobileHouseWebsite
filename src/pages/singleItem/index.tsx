@@ -1,15 +1,14 @@
 import { Divider } from "@mui/material";
 import { FaShare } from "react-icons/fa";
 import { getSpecificationIcon } from "utils/getSpecificationIcon";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getDiscountPercentage } from "utils/getDiscountPercentage";
 import { RiWhatsappFill } from "react-icons/ri";
 import { useScreenSize } from "hooks/useScreenSize";
 import ProductImageSlider from "components/commonComponents/productImageSlider";
 import { toPascalCase } from "utils/pascalCaseConvert";
-import { getProductImage } from "utils/getProductImages";
-import LazyImage from "components/commonComponents/imageLazyLoading";
+
 import {
   getProductById,
   getProductColors,
@@ -20,16 +19,17 @@ import ServerLazyImage from "components/commonComponents/serverImageLazyLoading"
 
 const SingleItem = () => {
   const { productId, productVariantId, productColorId } = useParams();
-  const [variantId, setVariantId] = useState(productVariantId);
-  const [colorId, setColorId] = useState(productColorId);
+  const navigate = useNavigate();
 
   const dispatch = useAppDispatch();
   const { entity, colors, variants } = useAppSelector(
     (state) => state.user.products
   );
   const [product, setProduct] = useState<any>(entity);
+  const [colorId, setColorId] = useState<any>(productColorId);
+  const [variantId, setVariantId] = useState<any>(productVariantId);
   const [productColors, setProductColors] = useState<any>(colors ?? []);
-  const [phoneVariants, setPhoneVariants] = useState<any>(variants ?? []);
+  const [productVariants, setProductVariants] = useState<any>(variants ?? []);
   const [isLoading, setIsLoading] = useState<any>(true);
   const { isMobile } = useScreenSize();
 
@@ -51,25 +51,25 @@ const SingleItem = () => {
     entity && setProduct(entity);
   }, [entity]);
 
-  // useEffect(() => {
-  //   if (product) {
-  //     const colors = getProductImage(product?.id);
-  //     if (colors?.length) {
-  //       setProductColors(colors);
-  //       setProductImages(colors[0]);
-  //       setDisplayImage(colors[0]?.images[0]);
-  //     } else {
-  //     }
-  //     product?.colors && setProductImages(product?.image);
-  //     setDisplayImage(product?.image);
-  //   }
-  // }, [product]);
+  useEffect(() => {
+    colors && setProductColors(colors);
+  }, [colors]);
 
-  // const handleColor = (color: any) => {
-  //   setIsLoading(true);
-  //   setProductImages(color);
-  //   setDisplayImage(color?.images[0]);
-  // };
+  useEffect(() => {
+    if (productId && variantId && colorId) {
+      dispatch(
+        getProductById({
+          id: +productId,
+          productVariantId: +variantId,
+          productColorId: +colorId,
+        })
+      );
+    }
+  }, [colorId, variantId, productId]);
+
+  useEffect(() => {
+    variants && setProductVariants(variants);
+  }, [variants]);
 
   const handleWhatapp = (product: any) => {
     const phoneNumber = "8304830868";
@@ -93,6 +93,26 @@ const SingleItem = () => {
     );
   };
 
+  const handleColor = (id: number) => {
+    setIsLoading(true);
+    setColorId(id);
+    navigate(
+      `/phone/${product?.id}/${
+        product?.variants[0]?.id
+      }/${id} /${encodeURIComponent(product?.productName)}`
+    );
+  };
+
+  const handleVariant = (id: number) => {
+    setIsLoading(true);
+    setVariantId(id);
+    navigate(
+      `/phone/${productId}/${colorId}/${variantId} /${encodeURIComponent(
+        product?.productName
+      )}`
+    );
+  };
+
   return (
     <div className="block md:flex items-center ">
       {isLoading && (
@@ -104,9 +124,11 @@ const SingleItem = () => {
         <>
           <div className="flex justify-center w-full md:w-1/2 ">
             <div className=" flex flex-col justify-center items-center ">
-              <div className=" p-3 w-screen mb-3 flex justify-center">
+              <div className=" p-3 w-screen mb-3 flex justify-center ">
                 {isMobile && !isLoading && colors?.length ? (
-                  <ProductImageSlider productImages={product?.colors?.images} />
+                  <ProductImageSlider
+                    productImages={product?.colors[0]?.images}
+                  />
                 ) : (
                   <div className="w-[80vw] h-[50vh] md:w-[30vw] md:h-[30vw] flex justify-center items-center   ">
                     <div className="w-full h-full ">
@@ -118,30 +140,34 @@ const SingleItem = () => {
                   </div>
                 )}
               </div>
-              {/* <div className="flex space-x-3 justify-center w-full ">
+              <div className="flex space-x-3 justify-center w-full ">
                 {!isMobile &&
-                  product?.colors?.map((image: any) => {
+                  product?.colors[0]?.images?.map((image: any) => {
                     return (
                       <button
                         key={image}
-                        onClick={() => setDisplayImage(image)}
                         className="p-1 border border-gray-300 rounded-md w-10 h-14 md:w-20 md:h-16 "
                       >
                         <div className="w-full h-full object-contain">
-                          <LazyImage src={image} alt="phone image " />
+                          <ServerLazyImage
+                            src={image?.image}
+                            alt="phone image "
+                          />
                         </div>
                       </button>
                     );
                   })}
-              </div> */}
+              </div>
             </div>
           </div>
-          <div className=" w-full md:w-1/2 mt-0 md:mt-20 ">
+          <div className=" w-full md:w-1/2 mt-0 md:mt-10 ">
             <div className="space-y-2 ml-3 md:ml-6">
               <h1 className="font-semibold truncate w-full text-[15px] md:text-base flex items-center space-x-1">
                 <span>
                   {product?.productName && toPascalCase(product?.productName)}
                 </span>
+                <span>{product?.variants[0].ram}/</span>
+                <span>{product?.variants[0].storage}</span>
                 <span>
                   {product?.colors[0]?.name &&
                     toPascalCase(product?.colors[0]?.name)}
@@ -185,23 +211,23 @@ const SingleItem = () => {
             </div>
 
             <div className="flex flex-col">
-              {productColors?.length ? (
+              {productColors.length ? (
                 <div>
                   <div className="flex space-x-6 ml-6 mt-6 ">
-                    {product?.colors?.images?.map((color: any) => {
+                    {productColors?.map((color: any) => {
                       return (
                         <button
                           key={color?.id}
-                          // onClick={() => handleColor(color)}
+                          onClick={() => handleColor(color?.id)}
                           className=" flex flex-col items-center "
                         >
                           <div className="w-10 h-16 md:w-16 ">
                             <div
-                              key={color?.image}
+                              key={color?.images[0]?.image}
                               className="w-full h-full object-contain"
                             >
                               <ServerLazyImage
-                                src={color?.images}
+                                src={color?.images[0]?.image}
                                 alt="phone image "
                               />
                             </div>
@@ -216,22 +242,18 @@ const SingleItem = () => {
                 </div>
               ) : null}
               <div className="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-4 py-3 ml-2 mt-5 text-center">
-                {phoneVariants?.map((variant: any) => (
-                  <Link
-                    onClick={() => setIsLoading(true)}
-                    replace
+                {productVariants?.map((variant: any) => (
+                  <button
                     key={variant?.id}
-                    to={`/phone/${variant?.id}/${encodeURIComponent(
-                      variant?.name
-                    )}`}
+                    onClick={() => handleVariant(variant?.id)}
                     className={`p-1 border ${
                       product?.id === variant?.id
                         ? "border-2 border-blue-500"
                         : "border border-gray-400"
                     } text-[12px] rounded-xs`}
                   >
-                    {variant?.specifications?.["RAM | Storage"]}
-                  </Link>
+                    {`${variant?.ram}GB | ${variant?.storage}GB`}
+                  </button>
                 ))}
               </div>
 
