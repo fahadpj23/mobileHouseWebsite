@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
-import { ALLPHONES } from "constants/allPhone";
 import LazyImage from "components/commonComponents/imageLazyLoading";
 
 const DesktopSearch = () => {
@@ -12,13 +11,6 @@ const DesktopSearch = () => {
 
   const handleSearch = (search: any) => {
     setSearchValue(search);
-    const filteredData = ALLPHONES.filter((phone) =>
-      phone.name
-        .toLowerCase()
-        .replace(/\s+/g, "")
-        .includes(search.toLowerCase().replace(/\s+/g, ""))
-    );
-    Array.isArray(filteredData) && setSearchData(filteredData.splice(0, 5));
   };
 
   const handleSelect = () => {

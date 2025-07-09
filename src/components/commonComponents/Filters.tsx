@@ -3,7 +3,7 @@ import { FC, useState } from "react";
 import { PHONEBRANDS } from "constants/phoneBrands";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
-import { getBrandFromList } from "utils/getBrandFromList";
+
 import { productFilters } from "constants/filter/productFilters";
 import { RamVariant } from "constants/filter/ramVariant";
 import { InternalStorageVariant } from "constants/filter/internalStorage";
@@ -142,7 +142,7 @@ const ProductListFilters: FC<props> = ({
                 {(() => {
                   switch (selectedFilter) {
                     case "brand":
-                      return checkBoxList(getBrandFromList(products));
+                      return checkBoxList(products);
                     case "ram":
                       return checkBoxList(RamVariant);
                     case "storage":

@@ -1,7 +1,6 @@
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { fetchNewArrivals } from "store/slice/newArrivalSlice";
 import LaunchBanner from "components/commonComponents/launchBanner";
-import { NEWARRIVALITEMS } from "constants/newArrivalItems";
 import { useEffect } from "react";
 
 const NewArrival = () => {

@@ -14,7 +14,7 @@ import {
   // Select,
 } from "@mui/material";
 import { UrlReplace } from "utils/urlReplace";
-import { ProductListSort } from "utils/productListSort";
+
 import { useSearchParams } from "react-router-dom";
 import ProductListFilters from "./filters";
 import { useScreenSize } from "hooks/useScreenSize";
@@ -122,7 +122,6 @@ const ProductList: FC<any> = ({ products }) => {
   };
 
   useEffect(() => {
-    setProductList(ProductListSort(productList, sort));
     setIsLoading(true);
   }, [sort]);
 

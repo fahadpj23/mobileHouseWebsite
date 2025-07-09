@@ -16,7 +16,9 @@ const SingleProductCard: FC<props> = ({ product }) => {
 
   return (
     <Link
-      to={`/phone/${product?.id}/${encodeURIComponent(product?.productName)}`}
+      to={`/phone/${product?.id}/${product?.variants[0]?.id}/${
+        product?.colors[0]?.id
+      } /${encodeURIComponent(product?.productName)}`}
     >
       <div className=" p-3 md:p-6 flex flex-col space-y-2  bg-white relative rounded-md">
         <div className="flex justify-center bg-grayBackground rounded-md shadow-md p-2">

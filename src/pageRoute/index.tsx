@@ -32,7 +32,7 @@ const PageRoute = () => {
             <Route path="specCreator" element={<SpecCreator />} />
             <Route path="Phones/:phoneType" element={<Phones />} />
             <Route
-              path="phone/:productId/:productName"
+              path="phone/:productId/:productVariantId/:productColorId/:productName"
               element={<SingleItem />}
             />
             <Route path="*" element={<PageNotFound />} />

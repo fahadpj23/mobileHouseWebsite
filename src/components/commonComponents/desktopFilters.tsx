@@ -4,7 +4,7 @@ import { InternalStorageVariant } from "constants/filter/internalStorage";
 import { networkType } from "constants/filter/networkType";
 import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
 import { FC } from "react";
-import { getBrandFromList } from "utils/getBrandFromList";
+
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
@@ -83,7 +83,7 @@ const DesktopFilter: FC<props> = ({
   const filterListFetch = (filterName: string) => {
     switch (filterName) {
       case "brand":
-        return getBrandFromList(products);
+        return products;
       case "ram":
         return RamVariant;
       case "storage":

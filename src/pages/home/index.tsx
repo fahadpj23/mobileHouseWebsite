@@ -41,7 +41,7 @@ const HomePage = () => {
         <div className="p-2 bg-white ">
           <ProductMiniList
             title="New Arrival"
-            listItems={newArrival.slice(0, 7)}
+            listItems={Array.isArray(newArrival) ? newArrival.slice(0, 7) : []}
             link="/newArrival"
           />
         </div>
@@ -55,7 +55,9 @@ const HomePage = () => {
           <div className="p-2 bg-white ">
             <ProductMiniList
               title="Trending Phones"
-              listItems={trendingPhone?.slice(0, 7)}
+              listItems={
+                Array.isArray(trendingPhone) ? trendingPhone.slice(0, 7) : []
+              }
               link="/trendingPhones"
             />
           </div>
@@ -68,7 +70,9 @@ const HomePage = () => {
             <div className="p-2 bg-white ">
               <ProductMiniList
                 title="Special Offer"
-                listItems={specialOffer?.slice(0, 7)}
+                listItems={
+                  Array.isArray(specialOffer) ? specialOffer.slice(0, 7) : []
+                }
                 link="/specialOffer"
               />
             </div>

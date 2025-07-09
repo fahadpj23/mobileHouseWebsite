@@ -4,7 +4,6 @@ import { CiSearch } from "react-icons/ci";
 import { Divider } from "@mui/material";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
-import { ALLPHONES } from "constants/allPhone";
 import LazyImage from "components/commonComponents/imageLazyLoading";
 import { toPascalCase } from "utils/pascalCaseConvert";
 
@@ -14,13 +13,6 @@ const SearchBar: FC<any> = ({ setSearchOpen }) => {
 
   const handleSearch = (search: any) => {
     setSearchValue(search);
-    const filteredData = ALLPHONES.filter((phone) =>
-      phone.name
-        .toLowerCase()
-        .replace(/\s+/g, "")
-        .includes(search.toLowerCase().replace(/\s+/g, ""))
-    );
-    Array.isArray(filteredData) && setSearchData(filteredData.splice(0, 5));
   };
 
   return (

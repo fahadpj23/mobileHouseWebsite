@@ -17,6 +17,8 @@ interface UserState {
   newArrival: any;
   specialOffer: any;
   trendingPhone: any;
+  colors: any;
+  variants: any;
 }
 
 // Initial state
@@ -29,6 +31,8 @@ const initialState: UserState = {
   newArrival: [],
   specialOffer: [],
   trendingPhone: [],
+  colors: [],
+  variants: [],
 };
 
 // Async thunk to fetch products data
@@ -65,8 +69,25 @@ export const getTrendingPhone = createAsyncThunk(
 
 export const getProductById = createAsyncThunk(
   "products/getProductById",
-  async (id: number) => {
-    const response = await axiosInstance.get(`products/${id}`);
+  async ({ id, productVariantId, productColorId }: any) => {
+    const response = await axiosInstance.get(
+      `products/${id}/${productVariantId}/${productColorId}`
+    );
+    return response.data;
+  }
+);
+export const getProductVariants = createAsyncThunk(
+  "products/getProductVariants",
+  async ({ productId }: any) => {
+    const response = await axiosInstance.get(`products/${productId}/variants`);
+    return response.data;
+  }
+);
+export const getProductColors = createAsyncThunk(
+  "products/getProductColors",
+  async ({ productId }: any) => {
+    console.log(productId);
+    const response = await axiosInstance.get(`products/${productId}/colors`);
     return response.data;
   }
 );
@@ -132,6 +153,20 @@ const productSlice = createSlice({
         }
       )
       .addCase(
+        getProductColors.fulfilled,
+        (state, action: PayloadAction<any>) => {
+          state.loading = false;
+          state.colors = action.payload;
+        }
+      )
+      .addCase(
+        getProductVariants.fulfilled,
+        (state, action: PayloadAction<any>) => {
+          state.loading = false;
+          state.variants = action.payload;
+        }
+      )
+      .addCase(
         getTrendingPhone.fulfilled,
         (state, action: PayloadAction<any>) => {
           state.loading = false;
@@ -156,7 +191,9 @@ const productSlice = createSlice({
           getProductById,
           editProduct,
           addproducts,
-          getProductByBrand
+          getProductByBrand,
+          getProductVariants,
+          getProductColors
         ),
         (state, action) => {
           state.loading = true;

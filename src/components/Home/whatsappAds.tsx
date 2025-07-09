@@ -46,7 +46,7 @@ const WhatsappAds = () => {
     <div className="p-2">
       {isMobile ? (
         <div>
-          {whatsappAds?.length &&
+          {Array.isArray(whatsappAds) &&
             whatsappAds.map((item: any) =>
               item?.seriesId ? (
                 <Link to={`series/${item?.series}`} key={item?.id}>

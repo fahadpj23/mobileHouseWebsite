@@ -3,53 +3,73 @@ import { FaShare } from "react-icons/fa";
 import { getSpecificationIcon } from "utils/getSpecificationIcon";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getProductDetails } from "utils/getProductDetails";
 import { getDiscountPercentage } from "utils/getDiscountPercentage";
 import { RiWhatsappFill } from "react-icons/ri";
 import { useScreenSize } from "hooks/useScreenSize";
 import ProductImageSlider from "components/commonComponents/productImageSlider";
-import { getPhoneVariants } from "utils/getPhoneVariants";
 import { toPascalCase } from "utils/pascalCaseConvert";
 import { getProductImage } from "utils/getProductImages";
 import LazyImage from "components/commonComponents/imageLazyLoading";
+import {
+  getProductById,
+  getProductColors,
+  getProductVariants,
+} from "store/slice/productSlice";
+import { useAppDispatch, useAppSelector } from "hooks/useRedux";
+import ServerLazyImage from "components/commonComponents/serverImageLazyLoading";
 
 const SingleItem = () => {
-  const { productId } = useParams();
-  const [product, setProduct] = useState<any>("");
-  const [productImages, setProductImages] = useState<any>();
-  const [displayImage, setDisplayImage] = useState<any>();
-  const [productColors, setProductColors] = useState<any>([]);
-  const [phoneVariants, setPhoneVariants] = useState<any>([]);
+  const { productId, productVariantId, productColorId } = useParams();
+  const [variantId, setVariantId] = useState(productVariantId);
+  const [colorId, setColorId] = useState(productColorId);
+
+  const dispatch = useAppDispatch();
+  const { entity, colors, variants } = useAppSelector(
+    (state) => state.user.products
+  );
+  const [product, setProduct] = useState<any>(entity);
+  const [productColors, setProductColors] = useState<any>(colors ?? []);
+  const [phoneVariants, setPhoneVariants] = useState<any>(variants ?? []);
   const [isLoading, setIsLoading] = useState<any>(true);
   const { isMobile } = useScreenSize();
 
   useEffect(() => {
-    productId && setProduct(getProductDetails(productId));
+    if (productId && productVariantId && productColorId) {
+      dispatch(
+        getProductById({
+          id: +productId,
+          productVariantId: +productVariantId,
+          productColorId: +productColorId,
+        })
+      );
+      dispatch(getProductVariants(productId));
+      dispatch(getProductColors(productId));
+    }
   }, [productId]);
 
   useEffect(() => {
-    if (product) {
-      const colors = getProductImage(product?.id);
-      if (colors?.length) {
-        setProductColors(colors);
-        setProductImages(colors[0]);
-        setDisplayImage(colors[0]?.images[0]);
-      } else {
-      }
-      product?.colors && setProductImages(product?.image);
-      setDisplayImage(product?.image);
-    }
-  }, [product]);
+    entity && setProduct(entity);
+  }, [entity]);
 
-  useEffect(() => {
-    product?.series && setPhoneVariants(getPhoneVariants(product?.series));
-  }, [product]);
+  // useEffect(() => {
+  //   if (product) {
+  //     const colors = getProductImage(product?.id);
+  //     if (colors?.length) {
+  //       setProductColors(colors);
+  //       setProductImages(colors[0]);
+  //       setDisplayImage(colors[0]?.images[0]);
+  //     } else {
+  //     }
+  //     product?.colors && setProductImages(product?.image);
+  //     setDisplayImage(product?.image);
+  //   }
+  // }, [product]);
 
-  const handleColor = (color: any) => {
-    setIsLoading(true);
-    setProductImages(color);
-    setDisplayImage(color?.images[0]);
-  };
+  // const handleColor = (color: any) => {
+  //   setIsLoading(true);
+  //   setProductImages(color);
+  //   setDisplayImage(color?.images[0]);
+  // };
 
   const handleWhatapp = (product: any) => {
     const phoneNumber = "8304830868";
@@ -85,22 +105,22 @@ const SingleItem = () => {
           <div className="flex justify-center w-full md:w-1/2 ">
             <div className=" flex flex-col justify-center items-center ">
               <div className=" p-3 w-screen mb-3 flex justify-center">
-                {isMobile && !isLoading && productImages?.images?.length ? (
-                  <ProductImageSlider productImages={productImages} />
+                {isMobile && !isLoading && colors?.length ? (
+                  <ProductImageSlider productImages={product?.colors?.images} />
                 ) : (
                   <div className="w-[80vw] h-[50vh] md:w-[30vw] md:h-[30vw] flex justify-center items-center   ">
                     <div className="w-full h-full ">
-                      <LazyImage
-                        src={displayImage}
+                      <ServerLazyImage
+                        src={product?.colors[0].images[0]?.image}
                         alt={`${product?.name} Image `}
                       />
                     </div>
                   </div>
                 )}
               </div>
-              <div className="flex space-x-3 justify-center w-full ">
+              {/* <div className="flex space-x-3 justify-center w-full ">
                 {!isMobile &&
-                  productImages?.images?.map((image: any) => {
+                  product?.colors?.map((image: any) => {
                     return (
                       <button
                         key={image}
@@ -113,27 +133,35 @@ const SingleItem = () => {
                       </button>
                     );
                   })}
-              </div>
+              </div> */}
             </div>
           </div>
           <div className=" w-full md:w-1/2 mt-0 md:mt-20 ">
             <div className="space-y-2 ml-3 md:ml-6">
               <h1 className="font-semibold truncate w-full text-[15px] md:text-base flex items-center space-x-1">
-                <span>{product?.name && toPascalCase(product?.name)} </span>
                 <span>
-                  {productImages?.name && toPascalCase(productImages?.name)}
+                  {product?.productName && toPascalCase(product?.productName)}
+                </span>
+                <span>
+                  {product?.colors[0]?.name &&
+                    toPascalCase(product?.colors[0]?.name)}
                 </span>
               </h1>
               <div className="flex items-center space-x-2 text-base">
                 <h1 className="font-semibold   tracking-wide text-[16px]">
-                  ₹{product.salesPrice}.00
+                  ₹{product.variants[0].price}.00
                 </h1>
 
                 <h1 className="line-through text-gray-500 text-xs">
-                  MRP: ₹{product.mrp}
+                  MRP: ₹{product.variants[0].mrp}
                 </h1>
                 <h1 className=" text-[#11a453] text-[18px] rounded p-1 font-semibold  text-sm md:text-base">
-                  {product && getDiscountPercentage(product)}% off
+                  {product &&
+                    getDiscountPercentage(
+                      product.variants[0].price,
+                      product.variants[0].mrp
+                    )}
+                  % off
                 </h1>
                 <FaShare
                   className="text-blue-500"
@@ -160,20 +188,20 @@ const SingleItem = () => {
               {productColors?.length ? (
                 <div>
                   <div className="flex space-x-6 ml-6 mt-6 ">
-                    {productColors?.map((color: any) => {
+                    {product?.colors?.images?.map((color: any) => {
                       return (
                         <button
-                          key={color?.images[0]}
-                          onClick={() => handleColor(color)}
+                          key={color?.id}
+                          // onClick={() => handleColor(color)}
                           className=" flex flex-col items-center "
                         >
                           <div className="w-10 h-16 md:w-16 ">
                             <div
-                              key={color?.images[0]?.name}
+                              key={color?.image}
                               className="w-full h-full object-contain"
                             >
-                              <LazyImage
-                                src={color?.images[0]}
+                              <ServerLazyImage
+                                src={color?.images}
                                 alt="phone image "
                               />
                             </div>

@@ -1,8 +1,6 @@
-export const getDiscountPercentage = (product: any) => {
+export const getDiscountPercentage = (price: any, mrp: any) => {
   const DiscountPercentage = Math.floor(
-    ((product.mrp - product.salesPrice) /
-      ((product.mrp + product.salesPrice) / 2)) *
-      100
+    ((mrp - price) / ((mrp + price) / 2)) * 100
   );
   return DiscountPercentage;
 };

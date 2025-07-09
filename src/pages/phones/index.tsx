@@ -2,10 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import ProductList from "components/commonComponents/productList";
-import { getNewArrivalPhones } from "utils/getNewArrival";
-import { getTrendingPhones } from "utils/getTrendingPhones";
-import { getSpecialOfferPhones } from "utils/getSpecialOfferPhone";
-import { getSearchPhones } from "utils/getSearchPhones";
 
 const Phones = () => {
   const [products, setProducts] = useState<any>([]);
@@ -14,19 +10,18 @@ const Phones = () => {
   useEffect(() => {
     switch (phoneType) {
       case "newArrival":
-        setProducts(getNewArrivalPhones());
+        setProducts([]);
         break;
       case "trendingPhones":
-        setProducts(getTrendingPhones());
+        setProducts([]);
         break;
       case "specialOffer":
-        setProducts(getSpecialOfferPhones());
+        setProducts([]);
         break;
       default:
-        setProducts(getSearchPhones(phoneType ?? ""));
+        setProducts([]);
     }
   }, [phoneType]);
-  console.log(getSearchPhones("oppo"));
   return (
     <div>
       {products && Array.isArray(products) ? (

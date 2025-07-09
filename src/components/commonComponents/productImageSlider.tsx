@@ -20,13 +20,13 @@ const ProductImageSlider: FC<any> = ({ productImages }) => {
     <div className="w-[70vw] flex items-center justify-center pb-5">
       <div className="w-full h-full">
         <Slider {...settings}>
-          {productImages?.images?.map((src: any, index: number) => (
+          {productImages?.map((src: any, index: number) => (
             <div key={index}>
               <Zoom>
                 <img
                   className=" h-[80vw] w-full object-contain "
-                  src={src}
-                  alt="Product Image"
+                  src={`http://localhost:9000${src}`}
+                  alt="Product "
                 />
               </Zoom>
             </div>

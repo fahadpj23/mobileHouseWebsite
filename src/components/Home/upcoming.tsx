@@ -2,7 +2,6 @@ import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { fetchUpcoming } from "store/slice/upcomingSlice";
 import { fetchNewArrivals } from "store/slice/newArrivalSlice";
 import LaunchBanner from "components/commonComponents/launchBanner";
-import { UPCOMINGITEMS } from "constants/upcomingItems";
 import { useEffect } from "react";
 
 const Upcoming = () => {
