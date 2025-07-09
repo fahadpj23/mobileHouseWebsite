@@ -76,6 +76,15 @@ export const getProductById = createAsyncThunk(
     return response.data;
   }
 );
+
+export const getProductByIdEdit = createAsyncThunk(
+  "products/getProductByIdEdit",
+  async (id: number) => {
+    const response = await axiosInstance.get(`products/${id}/edit`);
+    return response.data;
+  }
+);
+
 export const getProductVariants = createAsyncThunk(
   "products/getProductVariants",
   async (productId: any) => {
@@ -145,6 +154,14 @@ const productSlice = createSlice({
           state.entity = action.payload;
         }
       )
+
+      .addCase(
+        getProductByIdEdit.fulfilled,
+        (state, action: PayloadAction<any>) => {
+          state.loading = false;
+          state.entity = action.payload;
+        }
+      )
       .addCase(
         getSpecialOffer.fulfilled,
         (state, action: PayloadAction<any>) => {
@@ -193,7 +210,8 @@ const productSlice = createSlice({
           addproducts,
           getProductByBrand,
           getProductVariants,
-          getProductColors
+          getProductColors,
+          getProductByIdEdit
         ),
         (state, action) => {
           state.loading = true;

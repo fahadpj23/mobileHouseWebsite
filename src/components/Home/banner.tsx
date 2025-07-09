@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { MINIBANNERS } from "constants/miniBannerItem";
+
 import ImageSlider from "./imageSlider";
 import LazyImage from "components/commonComponents/imageLazyLoading";
 import { MINIBANNERMODEL } from "model/miniBannerModel";
 const Banner = () => {
   return (
     <div>
-      <div className="hidden justify-between space-x-5  md:flex">
+      {/* <div className="hidden justify-between space-x-5  md:flex">
         {MINIBANNERS?.map((banner: MINIBANNERMODEL) => {
           return (
             <Link
@@ -23,7 +23,7 @@ const Banner = () => {
       </div>
       <div className="block md:hidden">
         <ImageSlider bannerItems={MINIBANNERS} />
-      </div>
+      </div> */}
     </div>
   );
 };

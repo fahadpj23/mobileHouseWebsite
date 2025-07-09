@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
-import { WhatappAdsList } from "constants/whatsappAds";
+
 import LazyImage from "components/commonComponents/imageLazyLoading";
 import { WHATSAPPADSMODEL } from "model/whatsappAdsModel";
 import { useScreenSize } from "hooks/useScreenSize";

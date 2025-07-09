@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { getBrandPhones } from "utils/getBrandPhone";
 import ProductList from "components/commonComponents/productList";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { getProductByBrand } from "store/slice/productSlice";

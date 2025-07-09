@@ -247,7 +247,7 @@ const SingleItem = () => {
                     key={variant?.id}
                     onClick={() => handleVariant(variant?.id)}
                     className={`p-1 border ${
-                      product?.id === variant?.id
+                      product?.variants[0]?.id === variant?.id
                         ? "border-2 border-blue-500"
                         : "border border-gray-400"
                     } text-[12px] rounded-xs`}

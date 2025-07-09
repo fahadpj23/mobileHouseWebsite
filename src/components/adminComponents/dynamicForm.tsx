@@ -375,7 +375,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                       style={{ padding: "16px", margin: "8px 0" }}
                     >
                       <div className="flex space-x-2 items-center">
-                        <h1>{item?.color}</h1>
+                        <h1>{item?.name}</h1>
                         <IconButton onClick={() => remove(index)} color="error">
                           <RemoveCircleOutline />
                         </IconButton>

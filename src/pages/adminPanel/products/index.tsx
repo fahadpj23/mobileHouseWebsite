@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import {
   deleteProduct,
   fetchProducts,
-  getProductById,
+  getProductByIdEdit,
 } from "store/slice/productSlice";
 import { useEffect, useState } from "react";
 
@@ -29,6 +29,7 @@ const Products = () => {
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);
+
   useEffect(() => {
     if (successMessage) {
       handleForm();
@@ -41,7 +42,8 @@ const Products = () => {
 
   const handleEdit = (id: number) => {
     setEditId(id);
-    dispatch(getProductById(id));
+
+    dispatch(getProductByIdEdit(id));
   };
 
   const handleDelete = (id: number) => {
