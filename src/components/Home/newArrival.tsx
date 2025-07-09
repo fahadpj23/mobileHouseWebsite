@@ -6,7 +6,7 @@ import { useEffect } from "react";
 const NewArrival = () => {
   const dispatch = useAppDispatch();
   const { entities: newArrival } = useAppSelector(
-    (state) => state.user.upcoming
+    (state) => state.user.newArrival
   );
 
   useEffect(() => {

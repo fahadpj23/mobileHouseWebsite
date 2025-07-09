@@ -14,7 +14,7 @@ const ProductMiniList: FC<props> = ({ title, listItems, link }) => {
       <div className="flex justify-between pb-2 items-center ">
         <h1 className="font-semibold text-sm md:text-lg ">{title}</h1>
         <div className="flex space-x-1 text-xs items-center">
-          <Link to={link} className="text-blue-600">
+          <Link to={`Phones${link}`} className="text-blue-600">
             show more
           </Link>
         </div>

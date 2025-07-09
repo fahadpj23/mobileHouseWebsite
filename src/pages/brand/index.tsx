@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import ProductList from "components/commonComponents/productList";
@@ -9,10 +9,8 @@ const Brand = () => {
   const { brandName } = useParams();
   const dispatch = useAppDispatch();
   const { entities } = useAppSelector((state) => state.user.products);
-  const [phoneList, setPhoneList] = useState<any>([]);
   useEffect(() => {
     brandName && dispatch(getProductByBrand(brandName));
-    // brandName && setPhoneList(getBrandPhones(brandName));
   }, [brandName]);
 
   return (

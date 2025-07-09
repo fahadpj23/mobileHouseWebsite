@@ -42,7 +42,7 @@ const HomePage = () => {
           <ProductMiniList
             title="New Arrival"
             listItems={Array.isArray(newArrival) ? newArrival.slice(0, 7) : []}
-            link="/newArrival"
+            link="/newArrivalProduct"
           />
         </div>
         <LazyLoad>
@@ -58,7 +58,7 @@ const HomePage = () => {
               listItems={
                 Array.isArray(trendingPhone) ? trendingPhone.slice(0, 7) : []
               }
-              link="/trendingPhones"
+              link="/trendingPhone"
             />
           </div>
         </LazyLoad>
