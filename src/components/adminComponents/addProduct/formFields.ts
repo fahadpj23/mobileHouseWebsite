@@ -108,6 +108,14 @@ export const formFields: ProductFormField[] = [
   },
 
   {
+    name: "description",
+    label: "Product Description",
+    type: "textarea",
+    required: true,
+    validation: Yup.string().required("Product description is required"),
+  },
+
+  {
     name: "variants",
     label: "variants",
     type: "subForm",

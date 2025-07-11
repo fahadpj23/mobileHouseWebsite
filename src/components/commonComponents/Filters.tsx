@@ -110,7 +110,7 @@ const ProductListFilters: FC<props> = ({
       </div>
     </div>
   );
-
+  console.log(productFilters);
   return (
     <div>
       <div>

@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { useEffect } from "react";
 import ImageSlider from "components/Home/imageSlider";
 import Brands from "components/Home/Brands";
 import AvailableEmi from "components/Home/availableEmi";
@@ -11,7 +12,7 @@ import NewArrival from "components/Home/newArrival";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { fetchBanners } from "store/slice/bannerSlice";
 import {
-  getNewArrival,
+  getNewArrivalProduct,
   getSpecialOffer,
   getTrendingPhone,
 } from "store/slice/productSlice";
@@ -25,10 +26,13 @@ const HomePage = () => {
 
   useEffect(() => {
     dispatch(fetchBanners());
-    dispatch(getNewArrival());
-    dispatch(getSpecialOffer());
+    dispatch(getNewArrivalProduct());
     dispatch(getTrendingPhone());
   }, []);
+
+  const fetchSpecialOffer = () => dispatch(getSpecialOffer());
+
+  // const fetchTrendingPhone = () => );
 
   return (
     <div className="w-screen flex justify-center pb-6 ">
@@ -37,7 +41,7 @@ const HomePage = () => {
 
         <Brands />
         <AvailableEmi />
-        {/* <Suspense fallback={<HomeSkeleton />}> */}
+
         <div className="p-2 bg-white ">
           <ProductMiniList
             title="New Arrival"
@@ -66,7 +70,7 @@ const HomePage = () => {
           <WhatsappAds />
         </LazyLoad>
         <LazyLoad>
-          <div>
+          <div onLoad={() => fetchSpecialOffer()}>
             <div className="p-2 bg-white ">
               <ProductMiniList
                 title="Special Offer"
@@ -80,8 +84,6 @@ const HomePage = () => {
             <Footer />
           </div>
         </LazyLoad>
-
-        {/* </Suspense> */}
       </div>
     </div>
   );

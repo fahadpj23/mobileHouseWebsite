@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import ProductList from "components/commonComponents/productList";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import {
-  getNewArrival,
+  getNewArrivalProduct,
   getSpecialOffer,
   getTrendingPhone,
 } from "store/slice/productSlice";
@@ -36,7 +36,7 @@ const Phones = () => {
   useEffect(() => {
     switch (phoneType) {
       case "newArrivalProduct":
-        dispatch(getNewArrival());
+        dispatch(getNewArrivalProduct());
         break;
       case "trendingPhone":
         dispatch(getTrendingPhone());

@@ -39,6 +39,7 @@ const AddProduct: FC<props> = ({
     formData.append("battery", values?.battery);
     formData.append("os", values.os);
     formData.append("processor", values.processor);
+    formData.append("description", values.description);
     values?.colors?.map((color: any) => {
       color?.images?.map((colorDetails: any) => {
         formData.append("images", colorDetails);

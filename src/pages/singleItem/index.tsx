@@ -113,6 +113,18 @@ const SingleItem = () => {
     );
   };
 
+  const displaySpecification = (name: string, value: string | number) => {
+    return (
+      <div className="flex items-center space-x-2 text-xs md:text-base">
+        <div>{getSpecificationIcon(name)}</div>
+        <div>
+          <h1 className="text-gray-500">{name}</h1>
+          <h1>{value}</h1>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="block md:flex items-center ">
       {isLoading && (
@@ -257,40 +269,31 @@ const SingleItem = () => {
                 ))}
               </div>
 
-              {product?.specifications && (
-                <div className=" pb-3">
-                  <div className="space-y-3 py-3">
-                    <h1 className="font-semibold ml-3 md:ml-6">
-                      Specifications
-                    </h1>
-                    <Divider sx={{ width: "100%" }} />
-                  </div>
-
-                  <div className="space-y-3 ml-3 md:ml-6 grid grid-cols-1 md:grid-cols-2 gap-5">
-                    {product &&
-                      Object.entries(product?.specifications).map(
-                        (specification: any) => {
-                          return (
-                            <div
-                              key={specification[0]}
-                              className="flex items-center space-x-2 text-xs md:text-base"
-                            >
-                              <div>
-                                {getSpecificationIcon(specification[0])}
-                              </div>
-                              <div>
-                                <h1 className="text-gray-500">
-                                  {specification[0]}
-                                </h1>
-                                <h1>{specification[1]}</h1>
-                              </div>
-                            </div>
-                          );
-                        }
-                      )}
-                  </div>
+              <div className=" pb-3">
+                <div className="space-y-3 py-3">
+                  <h1 className="font-semibold ml-3 md:ml-6">Specifications</h1>
+                  <Divider sx={{ width: "100%" }} />
                 </div>
-              )}
+                <div className="space-y-3 ml-3 md:ml-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+                  {displaySpecification("Display", product?.display)}
+                  {displaySpecification("Processor", product?.processor)}
+                  {displaySpecification(
+                    "Rear Camera",
+                    `${product?.rearCamera} MP`
+                  )}
+                  {displaySpecification(
+                    "Front Camera",
+                    `${product?.frontCamera} MP`
+                  )}
+                  {displaySpecification("Battery", `${product?.battery} mah`)}
+                  {displaySpecification("Network", product?.networkType)}
+                  {displaySpecification("OS", product?.os)}
+                  {displaySpecification(
+                    "RAM | Storage",
+                    `${product?.variants[0].ram} | ${product?.variants[0].storage}`
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </>

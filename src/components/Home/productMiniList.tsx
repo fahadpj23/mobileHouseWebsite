@@ -20,13 +20,13 @@ const ProductMiniList: FC<props> = ({ title, listItems, link }) => {
         </div>
       </div>
       <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 items-center">
-        {listItems?.slice(0, 6).map((product: PHONEMODEL) => (
-          <SingleProductCard key={product?.name} product={product} />
-        ))}
+        {Array.isArray(listItems) &&
+          listItems
+            ?.slice(0, 6)
+            .map((product: PHONEMODEL) => (
+              <SingleProductCard key={product?.name} product={product} />
+            ))}
       </div>
-      {/* <div className="block md:hidden">
-        <MultiCarousel listItems={listItems} />
-      </div> */}
     </div>
   );
 };

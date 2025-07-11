@@ -18,7 +18,7 @@ const WhatsappAds = () => {
   useEffect(() => {
     dispatch(fetchwhatsappAds());
   }, []);
-
+  console.log("Dfdf");
   const { isMobile } = useScreenSize();
 
   const responsive = {
@@ -61,7 +61,7 @@ const WhatsappAds = () => {
               ) : (
                 <div key={item?.id} className="w-[98%] h-[50vh]  ">
                   <ServerLazyImage
-                    src={item?.imageU}
+                    src={item?.image}
                     alt="phone Image"
                     fill={true}
                   />
@@ -76,7 +76,7 @@ const WhatsappAds = () => {
           arrows={false}
           autoPlay={true}
         >
-          {whatsappAds?.length &&
+          {Array.isArray(whatsappAds) &&
             whatsappAds.map((item: any) =>
               item?.series ? (
                 <Link

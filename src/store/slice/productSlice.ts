@@ -44,7 +44,7 @@ export const fetchProducts = createAsyncThunk(
   }
 );
 
-export const getNewArrival = createAsyncThunk(
+export const getNewArrivalProduct = createAsyncThunk(
   "products/getNewArrivalProduct",
   async () => {
     const response = await axiosInstance.get(`products/newArrivalProduct`);
@@ -190,10 +190,13 @@ const productSlice = createSlice({
           state.trendingPhone = action.payload;
         }
       )
-      .addCase(getNewArrival.fulfilled, (state, action: PayloadAction<any>) => {
-        state.loading = false;
-        state.newArrival = action.payload;
-      })
+      .addCase(
+        getNewArrivalProduct.fulfilled,
+        (state, action: PayloadAction<any>) => {
+          state.loading = false;
+          state.newArrival = action.payload;
+        }
+      )
       .addCase(fetchProducts.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message || "Something went wrong";

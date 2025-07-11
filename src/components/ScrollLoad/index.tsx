@@ -1,40 +1,32 @@
-import React, { useState, useEffect, useRef, ReactNode } from "react";
+// LazyLoad.tsx
+import React, { Suspense } from "react";
+import useIntersectionObserver from "hooks/useIntersectionObserver";
 
-interface LazyLoadProps {
-  children: ReactNode;
-}
+type LazyLoadProps = {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+  threshold?: number;
+};
 
-const LazyLoad: React.FC<LazyLoadProps> = ({ children }) => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const ref = useRef<HTMLDivElement>(null);
+const LazyLoad: React.FC<LazyLoadProps> = ({
+  children,
+  fallback = null,
+  threshold = 0.1,
+}) => {
+  const [ref, hasBeenVisible] = useIntersectionObserver({
+    threshold,
+    rootMargin: "50px",
+  });
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(ref.current!); // Stop observing once visible
-        }
-      },
-      {
-        root: null, // Use the viewport as the root
-        rootMargin: "0px",
-        threshold: 0.1, // Trigger when 10% of the element is visible
-      }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, []);
-
-  return <div ref={ref}>{isVisible ? children : null}</div>;
+  return (
+    <div ref={ref as React.RefObject<HTMLDivElement>}>
+      {hasBeenVisible ? (
+        <Suspense fallback={fallback}>{children}</Suspense>
+      ) : (
+        fallback
+      )}
+    </div>
+  );
 };
 
 export default LazyLoad;

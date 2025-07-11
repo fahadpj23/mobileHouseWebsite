@@ -14,10 +14,12 @@ export interface ProductFormField {
     | "file"
     | "date"
     | "subForm"
+    | "textarea"
     | "array";
   options?: { value: string | number; label: string }[];
   required?: boolean;
   validation?: Yup.AnySchema;
   subForm?: any;
+  rows?: number;
   fields?: ProductFormField[]; // For array type fields
 }

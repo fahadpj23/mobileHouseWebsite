@@ -37,7 +37,7 @@ import {
 
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { AddCircleOutline, RemoveCircleOutline } from "@mui/icons-material";
-import axios from "axios";
+
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { fetchSeries } from "store/slice/seriesSlice";
 
@@ -56,10 +56,12 @@ interface FormField {
     | "file"
     | "date"
     | "subForm"
+    | "textarea"
     | "array";
   options?: { value: string | number; label: string }[];
   required?: boolean;
   subForm?: any;
+  rows?: any;
   validation?: Yup.AnySchema;
   fields?: FormField[]; // For array type fields
 }
@@ -501,6 +503,22 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
               );
             }}
           </FieldArray>
+        );
+      case "textarea":
+        return (
+          <Field
+            as={TextField}
+            name={name}
+            label={label}
+            multiline
+            rows={field.rows || 4} // Default to 4 rows if not specified
+            fullWidth
+            margin="normal"
+            variant="outlined"
+            required={required}
+            error={error}
+            helperText={helperText}
+          />
         );
       case "file":
         return (

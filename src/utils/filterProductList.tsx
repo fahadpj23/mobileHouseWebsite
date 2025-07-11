@@ -4,13 +4,16 @@ export const filterProducts = (products: any, filters: any) => {
       return false;
     }
 
-    if (filters?.ram?.length && !filters.ram?.includes(product.ram)) {
+    if (
+      filters?.ram?.length &&
+      !filters.ram?.includes(product.variants[0].ram)
+    ) {
       return false;
     }
 
     if (
       filters?.storage?.length &&
-      !filters.storage?.includes(product.storage)
+      !filters.storage?.includes(product.variants[0].storage)
     ) {
       return false;
     }
@@ -23,8 +26,9 @@ export const filterProducts = (products: any, filters: any) => {
     }
 
     if (
-      (filters.priceMin && product.salesPrice < Number(filters.priceMin)) ||
-      (filters.priceMax && product.salesPrice > Number(filters.priceMax))
+      (filters.priceMin &&
+        product.variants[0].price < Number(filters.priceMin)) ||
+      (filters.priceMax && product.variants[0].price > Number(filters.priceMax))
     ) {
       return false;
     }
