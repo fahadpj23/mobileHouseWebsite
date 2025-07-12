@@ -28,7 +28,7 @@ const PageRoute = () => {
           <Route element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="brand/:brandName" element={<Brand />} />
-            <Route path="series/:seriesList" element={<SeriesList />} />
+            <Route path="series/:seriesId" element={<SeriesList />} />
             <Route path="specCreator" element={<SpecCreator />} />
             <Route path="Phones/:phoneType" element={<Phones />} />
             <Route

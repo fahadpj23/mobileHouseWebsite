@@ -36,6 +36,14 @@ const initialState: UserState = {
 };
 
 // Async thunk to fetch products data
+export const fetchSeriesProducts = createAsyncThunk(
+  "products/getSeriesProduct",
+  async (seriesId: number) => {
+    const response = await axiosInstance.get(`products/series/${seriesId}`);
+    return response.data;
+  }
+);
+
 export const fetchProducts = createAsyncThunk(
   "products/fetchProduct",
   async () => {
@@ -184,6 +192,14 @@ const productSlice = createSlice({
         }
       )
       .addCase(
+        fetchSeriesProducts.fulfilled,
+        (state, action: PayloadAction<any>) => {
+          state.loading = false;
+          state.entities = action.payload;
+        }
+      )
+
+      .addCase(
         getTrendingPhone.fulfilled,
         (state, action: PayloadAction<any>) => {
           state.loading = false;
@@ -214,7 +230,8 @@ const productSlice = createSlice({
           getProductByBrand,
           getProductVariants,
           getProductColors,
-          getProductByIdEdit
+          getProductByIdEdit,
+          fetchSeriesProducts
         ),
         (state, action) => {
           state.loading = true;

@@ -20,7 +20,7 @@ const ProductImageSlider: FC<any> = ({ productImages }) => {
     <div className="w-[70vw] flex items-center justify-center pb-5">
       <div className="w-full h-full">
         <Slider {...settings}>
-          {productImages?.map((image: any, index: number) => (
+          {productImages?.map((image: any) => (
             <div key={image?.id}>
               <Zoom>
                 <img

@@ -39,7 +39,7 @@ export const getBannerById = createAsyncThunk(
 );
 
 export const deleteBanner = createAsyncThunk(
-  "banner/getBannerById",
+  "banner/deleteBannerById",
   async (id: number) => {
     const response = await axiosInstance.delete(`banner/${id}`);
     return response.data;
@@ -81,11 +81,16 @@ const bannerSlice = createSlice({
         state.loading = false;
         state.successMessage = "added SuccessFully";
       })
+      .addCase(deleteBanner.fulfilled, (state, action) => {
+        state.loading = false;
+        state.successMessage = "deleted SuccessFully";
+      })
       .addMatcher(
         isPending(fetchBanners, getBannerById, addBanners),
         (state, action) => {
           state.loading = true;
           state.error = null;
+          state.successMessage = "";
         }
       );
   },

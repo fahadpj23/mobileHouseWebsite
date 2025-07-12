@@ -293,6 +293,14 @@ const SingleItem = () => {
                     `${product?.variants[0].ram} | ${product?.variants[0].storage}`
                   )}
                 </div>
+                {product?.description && (
+                  <div className="w-full  break-words md:max-w-lg mt-5">
+                    <h1 className="text-lg font-semibold">
+                      Product Description
+                    </h1>
+                    <h1>{product?.description}</h1>
+                  </div>
+                )}
               </div>
             </div>
           </div>

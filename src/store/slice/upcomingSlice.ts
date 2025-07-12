@@ -92,6 +92,8 @@ const upcomingSlice = createSlice({
         (state, action) => {
           state.loading = true;
           state.error = null;
+          state.error = null;
+          state.successMessage = "";
         }
       );
   },

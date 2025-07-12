@@ -95,6 +95,7 @@ const whatsappAdsSlice = createSlice({
         (state, action) => {
           state.loading = true;
           state.error = null;
+          state.successMessage = "";
         }
       );
   },

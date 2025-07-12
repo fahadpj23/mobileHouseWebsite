@@ -21,7 +21,7 @@ const ImageSlider: FC<props> = ({ bannerItems }) => {
       >
         {bannerItems?.map((banner: any) =>
           banner?.series ? (
-            <Link to={`series/${banner?.series}`} key={banner?.id}>
+            <Link to={`series/${banner?.seriesId}`} key={banner?.id}>
               <div className="relative">
                 <div className="h-[50vw] md:h-[25vw] w-full  rounded-none md:rounded-xl  ">
                   <ServerLazyImage
