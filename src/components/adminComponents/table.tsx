@@ -3,6 +3,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+import ServerLazyImage from "components/commonComponents/serverImageLazyLoading";
 
 interface props {
   TableHead: any;
@@ -39,8 +40,8 @@ const TableData: FC<props> = ({
             {TableHead?.map((head: any) => (
               <td key={head?.key} className="border-black text-left p-2">
                 {head.key === "image" ? (
-                  <div>
-                    <img
+                  <div className="w-full h-[40px] md:h-[120px] flex justify-start">
+                    {/* <img
                       src={`http://localhost:9000${data[head?.key]}`}
                       alt={data[head?.key]}
                       style={{
@@ -49,6 +50,11 @@ const TableData: FC<props> = ({
                         objectFit: "contain",
                         borderRadius: "4px",
                       }}
+                    /> */}
+                    <ServerLazyImage
+                      src={data[head?.key]}
+                      alt="phone Image"
+                      // fill={true}
                     />
                   </div>
                 ) : (

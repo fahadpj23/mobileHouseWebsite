@@ -14,14 +14,14 @@ const ServerLazyImage: FC<props> = ({ src, alt, fill = false }) => {
       className="h-full w-full"
       placeholder={
         <img
-          src={`http://localhost:9000${src}`}
+          src={`http://ec2-13-51-64-98.eu-north-1.compute.amazonaws.com:9000${src}`}
           alt={alt}
           className={`${fill ? "object-fill" : "object-contain"} h-full w-full`}
         />
       }
     >
       <img
-        src={`http://localhost:9000${src}`}
+        src={`http://ec2-13-51-64-98.eu-north-1.compute.amazonaws.com:9000${src}`}
         alt={alt}
         className={`${fill ? "object-fill" : "object-contain"} h-full w-full`}
       />
