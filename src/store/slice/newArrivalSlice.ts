@@ -90,8 +90,17 @@ const newArrivalSlice = createSlice({
         state.loading = false;
         state.successMessage = "added SuccessFully";
       })
+      .addCase(deleteNewArrival.fulfilled, (state, action) => {
+        state.loading = false;
+        state.successMessage = "deleted SuccessFully";
+      })
       .addMatcher(
-        isPending(fetchNewArrivals, getNewArrivalById, addNewArrivals),
+        isPending(
+          fetchNewArrivals,
+          getNewArrivalById,
+          addNewArrivals,
+          deleteNewArrival
+        ),
         (state, action) => {
           state.loading = true;
           state.error = null;

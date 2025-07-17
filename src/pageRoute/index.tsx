@@ -41,16 +41,16 @@ const PageRoute = () => {
             <Route path="login" element={<Login />} />
           </Route>
           {/* Admin Routes */}
-          <Route element={<ProtectedRoute />}>
-            <Route element={<AdminMainLayout />}>
-              <Route path="admin/products" element={<Products />} />
-              <Route path="admin/newArrival" element={<NewArrival />} />
-              <Route path="admin/upcoming" element={<Upcoming />} />
-              <Route path="admin/whatsappAds" element={<WhatsappAds />} />
-              <Route path="admin/banner" element={<Banner />} />
-              <Route path="admin/series" element={<Series />} />
-            </Route>
+          {/* <Route element={<ProtectedRoute />}> */}
+          <Route element={<AdminMainLayout />}>
+            <Route path="admin/products" element={<Products />} />
+            <Route path="admin/newArrival" element={<NewArrival />} />
+            <Route path="admin/upcoming" element={<Upcoming />} />
+            <Route path="admin/whatsappAds" element={<WhatsappAds />} />
+            <Route path="admin/banner" element={<Banner />} />
+            <Route path="admin/series" element={<Series />} />
           </Route>
+          {/* </Route> */}
         </Routes>
       </BrowserRouter>
     </div>

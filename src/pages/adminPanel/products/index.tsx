@@ -33,7 +33,7 @@ const Products = () => {
   useEffect(() => {
     if (successMessage) {
       handleForm();
-      showToast();
+      showToast(successMessage);
       dispatch(fetchProducts());
     }
   }, [successMessage]);

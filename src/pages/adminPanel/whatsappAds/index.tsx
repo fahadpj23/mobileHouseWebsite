@@ -46,7 +46,7 @@ const WhatsappAds = () => {
   useEffect(() => {
     if (successMessage) {
       handleForm();
-      showToast();
+      showToast(successMessage);
       dispatch(fetchwhatsappAds());
     }
   }, [successMessage]);

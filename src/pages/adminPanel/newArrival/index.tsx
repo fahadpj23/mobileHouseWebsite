@@ -56,7 +56,7 @@ const NewArrival = () => {
   useEffect(() => {
     if (successMessage) {
       handleForm();
-      showToast();
+      showToast(successMessage);
       dispatch(fetchNewArrivals());
     }
   }, [successMessage]);

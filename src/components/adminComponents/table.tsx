@@ -41,28 +41,14 @@ const TableData: FC<props> = ({
               <td key={head?.key} className="border-black text-left p-2">
                 {head.key === "image" ? (
                   <div className="w-full h-[40px] md:h-[120px] flex justify-start">
-                    {/* <img
-                      src={`http://localhost:9000${data[head?.key]}`}
-                      alt={data[head?.key]}
-                      style={{
-                        width: "100%",
-                        height: "80px",
-                        objectFit: "contain",
-                        borderRadius: "4px",
-                      }}
-                    /> */}
-                    <ServerLazyImage
-                      src={data[head?.key]}
-                      alt="phone Image"
-                      // fill={true}
-                    />
+                    <ServerLazyImage src={data[head?.key]} alt="phone Image" />
                   </div>
                 ) : (
                   data[head?.key]
                 )}
               </td>
             ))}
-            <td className="flex space-x-2 border-black text-left p-2">
+            <td className="flex space-x-4 border-black text-left p-2">
               <RemoveRedEyeIcon />
               <button onClick={() => handleEdit(data?.id)}>
                 <EditIcon />

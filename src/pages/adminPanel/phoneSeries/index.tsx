@@ -48,7 +48,7 @@ const Series = () => {
   useEffect(() => {
     if (successMessage) {
       handleForm();
-      showToast();
+      showToast(successMessage);
       dispatch(fetchSeries());
     }
   }, [successMessage]);

@@ -77,12 +77,16 @@ const seriesSlice = createSlice({
         state.loading = false;
         state.successMessage = "added SuccessFully";
       })
+      .addCase(deleteSeries.fulfilled, (state, action) => {
+        state.loading = false;
+        state.successMessage = "deleted SuccessFully";
+      })
       .addCase(fetchSeries.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message || "Something went wrong";
       })
       .addMatcher(
-        isPending(fetchSeries, getseriesById, addSeries),
+        isPending(fetchSeries, getseriesById, addSeries, deleteSeries),
         (state, action) => {
           state.loading = true;
           state.error = null;

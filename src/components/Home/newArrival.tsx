@@ -12,9 +12,14 @@ const NewArrival = () => {
   useEffect(() => {
     dispatch(fetchNewArrivals());
   }, []);
+  console.log(newArrival);
 
-  return newArrival?.length ? (
-    <LaunchBanner title="New Arrivals" BannerItems={newArrival} />
-  ) : null;
+  return (
+    <>
+      {Array.isArray(newArrival) && newArrival?.length ? (
+        <LaunchBanner title="New Arrivals" BannerItems={newArrival} />
+      ) : null}
+    </>
+  );
 };
 export default NewArrival;

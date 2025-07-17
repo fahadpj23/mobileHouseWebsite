@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 
-export const showToast = () => {
-  toast.success("added successfully ", {
+export const showToast = (successMessage: String) => {
+  toast.success(successMessage ?? "success", {
     position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,

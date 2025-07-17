@@ -87,8 +87,12 @@ const upcomingSlice = createSlice({
         state.loading = false;
         state.successMessage = "added SuccessFully";
       })
+      .addCase(deleteUpcoming.fulfilled, (state, action) => {
+        state.loading = false;
+        state.successMessage = "deleted SuccessFully";
+      })
       .addMatcher(
-        isPending(fetchUpcoming, getUpcomingById, addUpcoming),
+        isPending(fetchUpcoming, getUpcomingById, addUpcoming, deleteUpcoming),
         (state, action) => {
           state.loading = true;
           state.error = null;

@@ -221,6 +221,10 @@ const productSlice = createSlice({
         state.loading = false;
         state.successMessage = "added SuccessFully";
       })
+      .addCase(deleteProduct.fulfilled, (state, action) => {
+        state.loading = false;
+        state.successMessage = "deleted SuccessFully";
+      })
       .addMatcher(
         isPending(
           fetchProducts,
@@ -231,7 +235,8 @@ const productSlice = createSlice({
           getProductVariants,
           getProductColors,
           getProductByIdEdit,
-          fetchSeriesProducts
+          fetchSeriesProducts,
+          deleteProduct
         ),
         (state, action) => {
           state.loading = true;

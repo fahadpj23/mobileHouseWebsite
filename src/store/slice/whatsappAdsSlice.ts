@@ -90,8 +90,17 @@ const whatsappAdsSlice = createSlice({
         state.loading = false;
         state.successMessage = "added SuccessFully";
       })
+      .addCase(deleteWhatsappAds.fulfilled, (state, action) => {
+        state.loading = false;
+        state.successMessage = "deleted SuccessFully";
+      })
       .addMatcher(
-        isPending(fetchwhatsappAds, getwhatsappAdsById, addwhatsappAds),
+        isPending(
+          fetchwhatsappAds,
+          getwhatsappAdsById,
+          addwhatsappAds,
+          deleteWhatsappAds
+        ),
         (state, action) => {
           state.loading = true;
           state.error = null;

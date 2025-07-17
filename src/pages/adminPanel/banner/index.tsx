@@ -39,7 +39,6 @@ const Banner = () => {
   };
 
   const handleDelete = (id: number) => {
-    console.log("FD");
     dispatch(deleteBanner(id));
   };
 
@@ -53,7 +52,7 @@ const Banner = () => {
 
   useEffect(() => {
     if (successMessage) {
-      showToast();
+      showToast(successMessage);
       handleForm();
       dispatch(fetchBanners());
     }
