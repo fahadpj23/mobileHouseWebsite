@@ -53,7 +53,7 @@ export const addUpcoming = createAsyncThunk(
 );
 
 export const deleteUpcoming = createAsyncThunk(
-  "Upcoming/getUpcomingById",
+  "Upcoming/deleteUpcoming",
   async (id: number) => {
     const response = await axiosInstance.delete(`Upcoming/${id}`);
     return response.data;

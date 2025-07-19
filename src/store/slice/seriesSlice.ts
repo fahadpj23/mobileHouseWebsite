@@ -50,7 +50,7 @@ export const addSeries = createAsyncThunk(
 );
 
 export const deleteSeries = createAsyncThunk(
-  "series/getSeriesById",
+  "series/deleteSeries",
   async (id: number) => {
     const response = await axiosInstance.delete(`series/${id}`);
     return response.data;
