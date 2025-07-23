@@ -1,11 +1,11 @@
 import { Divider } from "@mui/material";
-import { FaShare } from "react-icons/fa";
+import ShareIcon from "@mui/icons-material/Share";
 import { getSpecificationIcon } from "utils/getSpecificationIcon";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getProductDetails } from "utils/getProductDetails";
 import { getDiscountPercentage } from "utils/getDiscountPercentage";
-import { RiWhatsappFill } from "react-icons/ri";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { useScreenSize } from "hooks/useScreenSize";
 import ProductImageSlider from "components/commonComponents/productImageSlider";
 import { getPhoneVariants } from "utils/getPhoneVariants";
@@ -135,7 +135,7 @@ const SingleItem = () => {
                 <h1 className=" text-[#11a453] text-[18px] rounded p-1 font-semibold  text-sm md:text-base">
                   {product && getDiscountPercentage(product)}% off
                 </h1>
-                <FaShare
+                <ShareIcon
                   className="text-blue-500"
                   onClick={() => handleWhatapp(product)}
                 />
@@ -150,7 +150,7 @@ const SingleItem = () => {
               )}
             </div>
 
-            <RiWhatsappFill
+            <WhatsAppIcon
               onClick={() => handleWhatapp(product)}
               className="fixed bottom-10 right-10 text-green-600 z-50 text-[40px] animate-bounce shadow-2xl "
             />

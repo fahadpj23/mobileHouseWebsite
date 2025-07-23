@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { Link } from "react-router-dom";
-import { CiSearch } from "react-icons/ci";
+import SearchIcon from "@mui/icons-material/Search";
 import { Divider } from "@mui/material";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
@@ -64,7 +64,7 @@ const SearchBar: FC<any> = ({ setSearchOpen }) => {
             className="flex space-x-2 p-2 items-center"
             onClick={() => setSearchOpen(false)}
           >
-            <CiSearch className="mt-1" />
+            <SearchIcon className="mt-1" />
             <h1>{searchValue}</h1>
           </Link>
         )}

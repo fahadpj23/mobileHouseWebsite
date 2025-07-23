@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
-import { BsSortDown } from "react-icons/bs";
-import { CiFilter } from "react-icons/ci";
+import FilterListIcon from "@mui/icons-material/FilterList";
+import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
 import SingleProductCard from "./singleProductCard";
 import { filterProducts } from "utils/filterProductList";
 import NOPRODUCTIMAGE from "assets/noProduct.jpg";
@@ -180,14 +180,14 @@ const ProductList: FC<any> = ({ products }) => {
             className="flex justify-center w-1/2 border-r border-gray-300 items-center font-semibold space-x-1"
             onClick={() => setSortIsOpen(true)}
           >
-            <BsSortDown />
+            <FilterListIcon />
             <h1>Sort</h1>
           </button>
           <button
             className="flex justify-center w-1/2 items-center font-semibold space-x-1"
             onClick={() => setFilterIsOpen(true)}
           >
-            <CiFilter />
+            <FilterAltOutlinedIcon />
             <h1>Filters</h1>
           </button>
         </div>

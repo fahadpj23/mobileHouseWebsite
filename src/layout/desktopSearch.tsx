@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { CiSearch } from "react-icons/ci";
+import SearchIcon from "@mui/icons-material/Search";
+
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 import { ALLPHONES } from "constants/allPhone";
@@ -72,7 +73,7 @@ const DesktopSearch = () => {
               className="flex space-x-2 p-2 items-center"
               onClick={() => handleSelect()}
             >
-              <CiSearch className="mt-1" />
+              <SearchIcon className="mt-1" />
               <h1>{searchValue}</h1>
             </Link>
           )}

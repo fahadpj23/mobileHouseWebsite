@@ -1,20 +1,24 @@
-import { RiDiscountPercentLine } from "react-icons/ri";
-import { GrAnnounce } from "react-icons/gr";
-import { FaArrowTrendUp } from "react-icons/fa6";
-import { IoHomeOutline } from "react-icons/io5";
+import DiscountIcon from "@mui/icons-material/Discount";
+import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
+import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import { NAVIGATIONITEMMODEL } from "model/navigationItemModel";
 
 export const NAVIGATIONITEMS: NAVIGATIONITEMMODEL[] = [
-  { title: "Home", link: "/", icon: <IoHomeOutline /> },
-  { title: "New Arrival", link: "phones/newArrival", icon: <GrAnnounce /> },
+  { title: "Home", link: "/", icon: <HomeOutlinedIcon /> },
+  {
+    title: "New Arrival",
+    link: "phones/newArrival",
+    icon: <CampaignOutlinedIcon />,
+  },
   {
     title: "Special Offer",
     link: "phones/specialOffer",
-    icon: <RiDiscountPercentLine />,
+    icon: <DiscountIcon />,
   },
   {
     title: "Trending Phone",
     link: "phones/trendingPhones",
-    icon: <FaArrowTrendUp />,
+    icon: <TrendingUpIcon />,
   },
 ];

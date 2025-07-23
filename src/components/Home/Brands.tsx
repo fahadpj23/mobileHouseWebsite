@@ -1,6 +1,6 @@
 import Carousel from "react-multi-carousel";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoIosArrowBack } from "react-icons/io";
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
+import ArrowBackIosOutlinedIcon from "@mui/icons-material/ArrowBackIosOutlined";
 import LazyImage from "components/commonComponents/imageLazyLoading";
 import { PHONEBRANDS } from "constants/phoneBrands";
 import { Link } from "react-router-dom";
@@ -33,7 +33,7 @@ const Brands = () => {
         zIndex: 1,
       }}
     >
-      <IoIosArrowBack />
+      <ArrowBackIosOutlinedIcon />
     </button>
   );
 
@@ -58,7 +58,7 @@ const Brands = () => {
         zIndex: 1,
       }}
     >
-      <IoIosArrowForward />
+      <ArrowForwardIosOutlinedIcon />
     </button>
   );
 
