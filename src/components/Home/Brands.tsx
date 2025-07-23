@@ -87,7 +87,7 @@ const Brands = () => {
   };
 
   return (
-    <div className="pb-5 ">
+    <div className="pb-5  ">
       {/* <div className="  w-full mb-3">
         <div className="w-full flex bg-grayBackground p-2 justify-start md:justify-center overflow-x-auto scrollbar-hide px-3 scroll-smooth  ">
           <div className=" flex  ">

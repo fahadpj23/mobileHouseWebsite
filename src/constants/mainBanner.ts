@@ -2,9 +2,9 @@ import { MAINBANNERMODEL } from "model/mainBannerModel";
 import BANNER1 from "assets/mainBanner/banner1.jpeg";
 import BANNER2 from "assets/mainBanner/banner2.jpeg";
 
-import BANNER4 from "assets/mainBanner/banner4.webp";
-import BANNER5 from "assets/mainBanner/banner5.webp";
-import BANNER6 from "assets/mainBanner/banner6.webp";
+import BANNER4 from "assets/mainBanner/banner3.webp";
+import BANNER5 from "assets/mainBanner/banner4.webp";
+import BANNER6 from "assets/mainBanner/banner5.webp";
 
 export const MAINBANNER: MAINBANNERMODEL[] = [
   {

@@ -4,8 +4,6 @@ import SAMSUNGLOGO from "assets/brands/samsungLogo.webp";
 import REALMELOGO from "assets/brands/realmeLogo.webp";
 import MILOGO from "assets/brands/miLogo.webp";
 import TECNOLOGO from "assets/brands/tecnoLogo.webp";
-import IQOO from "assets/brands/IQOO.webp";
-import MOTOLOGO from "assets/brands/motoLogo.webp";
 import POCOLOGO from "assets/brands/pocoLogo.webp";
 
 export const PHONEBRANDS = [
@@ -15,7 +13,6 @@ export const PHONEBRANDS = [
   { name: "REALME", image: REALMELOGO, link: "/realme", value: "realme" },
   { name: "MI", image: MILOGO, link: "/mi", value: "mi" },
   { name: "TECNO", image: TECNOLOGO, link: "/tecno", value: "tecno" },
-  { name: "IQOO", image: IQOO, link: "/iqoo", value: "iq00" },
-  { name: "MOTOROLA", image: MOTOLOGO, link: "/motorola", value: "motorola" },
+
   { name: "POCO", image: POCOLOGO, link: "/poco", value: "poco" },
 ];
