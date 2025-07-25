@@ -5,8 +5,14 @@ import BANNER2 from "assets/mainBanner/banner2.jpeg";
 import BANNER4 from "assets/mainBanner/banner3.webp";
 import BANNER5 from "assets/mainBanner/banner4.webp";
 import BANNER6 from "assets/mainBanner/banner5.webp";
+import BANNER7 from "assets/mainBanner/banner6.jpg";
 
 export const MAINBANNER: MAINBANNERMODEL[] = [
+  {
+    id: 7,
+    image: BANNER7,
+    series: ["SAMSUNGZFLIP7FE", "SAMSUNGZFOLD7", "SAMSUNGZFLIP7"],
+  },
   {
     id: 1,
     image: BANNER1,
@@ -33,5 +39,10 @@ export const MAINBANNER: MAINBANNERMODEL[] = [
     id: 6,
     image: BANNER6,
     series: ["VIVOY400PRO"],
+  },
+  {
+    id: 7,
+    image: BANNER7,
+    series: ["SAMSUNGZFLIP7FE", "SAMSUNGZFOLD7", "SAMSUNGZFLIP7"],
   },
 ];
