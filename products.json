@@ -1,0 +1,134 @@
+[
+  {
+    "productName": "sds",
+    "brand": "samsung",
+    "ram": "",
+    "storage": "",
+    "price": "",
+    "mrp": "",
+    "networkType": "4G",
+    "category": "1",
+    "display": "45",
+    "frontCamera": "454",
+    "rearCamera": "54",
+    "variants": [
+      {
+        "ram": "6",
+        "storage": "32",
+        "price": "4588",
+        "mrp": "89898"
+      }
+    ],
+    "colors": [],
+    "os": "45",
+    "processor": "454",
+    "battery": "45",
+    "rating": 4,
+    "launchDate": "2025-08-13",
+    "description": "54",
+    "id": "35ef0ccb-c707-4de8-bef1-8f6cac0283c6",
+    "createdAt": "2025-08-01T10:57:53.801Z",
+    "updatedAt": "2025-08-01T10:57:53.801Z"
+  },
+  {
+    "productName": "sds",
+    "brand": "samsung",
+    "ram": "",
+    "storage": "",
+    "price": "",
+    "mrp": "",
+    "networkType": "4G",
+    "category": "1",
+    "display": "45",
+    "frontCamera": "454",
+    "rearCamera": "54",
+    "variants": [
+      {
+        "ram": "6",
+        "storage": "32",
+        "price": "4588",
+        "mrp": "89898"
+      }
+    ],
+    "colors": [],
+    "os": "45",
+    "processor": "454",
+    "battery": "45",
+    "rating": 4,
+    "launchDate": "2025-08-13",
+    "description": "54",
+    "id": "1270d52b-73af-4c68-adf0-b22cb0e5397c",
+    "createdAt": "2025-08-01T10:57:54.577Z",
+    "updatedAt": "2025-08-01T10:57:54.577Z"
+  },
+  {
+    "productName": "sds",
+    "brand": "samsung",
+    "ram": "",
+    "storage": "",
+    "price": "",
+    "mrp": "",
+    "networkType": "4G",
+    "category": "1",
+    "display": "45",
+    "frontCamera": "454",
+    "rearCamera": "54",
+    "variants": [
+      {
+        "ram": "6",
+        "storage": "32",
+        "price": "4588",
+        "mrp": "89898"
+      }
+    ],
+    "colors": [],
+    "os": "45",
+    "processor": "454",
+    "battery": "45",
+    "rating": 4,
+    "launchDate": "2025-08-13",
+    "description": "54",
+    "id": "b65bc0c1-9cfa-4558-8e80-39c2e78f928c",
+    "createdAt": "2025-08-01T11:08:37.070Z",
+    "updatedAt": "2025-08-01T11:08:37.070Z"
+  },
+  {
+    "productName": "sds",
+    "brand": "samsung",
+    "ram": "",
+    "storage": "",
+    "price": "",
+    "mrp": "",
+    "networkType": "4G",
+    "category": "1",
+    "display": "45",
+    "frontCamera": "454",
+    "rearCamera": "54",
+    "variants": [
+      {
+        "ram": "6",
+        "storage": "32",
+        "price": "4588",
+        "mrp": "89898"
+      }
+    ],
+    "colors": [
+      {
+        "name": "sa",
+        "images": [
+          {},
+          {}
+        ]
+      }
+    ],
+    "os": "45",
+    "processor": "454",
+    "battery": "45",
+    "rating": 4,
+    "launchDate": "2025-08-13",
+    "description": "54",
+    "id": "54914a4a-6f79-43d8-8e3b-8b57e3357d5d",
+    "createdAt": "2025-08-01T11:09:26.561Z",
+    "updatedAt": "2025-08-01T11:09:26.561Z"
+  }
+]

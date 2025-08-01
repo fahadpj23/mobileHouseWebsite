@@ -5,7 +5,7 @@ export const initialValues = {
   storage: "",
   price: "",
   mrp: "",
-  seriesId: "",
+  // seriesId: "",
   networkType: "",
   category: "1",
   display: "",
