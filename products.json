@@ -1,0 +1,33 @@
+[
+  {
+    "name": "ds",
+    "price": 455,
+    "description": "454",
+    "images": [],
+    "id": "5a8aeb6f-3892-4326-9599-c473e29d9105",
+    "createdAt": "2025-08-01T06:17:37.636Z",
+    "updatedAt": "2025-08-01T06:17:37.636Z"
+  },
+  {
+    "name": "dd",
+    "price": 544,
+    "description": "4\n4\n",
+    "images": [
+      "/uploads/img-8e444847-1f9a-410b-8138-3f356f6f1fe0.jpg"
+    ],
+    "id": "325b1136-36e2-44ec-8245-9f25802f87e6",
+    "createdAt": "2025-08-01T06:22:41.211Z",
+    "updatedAt": "2025-08-01T06:22:41.211Z"
+  },
+  {
+    "name": "vivo y400",
+    "price": 45888,
+    "description": "y400",
+    "images": [
+      "/uploads/img-bc58fbfc-5385-4a3c-bf97-4a1c425e40de.jpg"
+    ],
+    "id": "0afdb8a9-e978-46d5-8c3a-02f4b00394b4",
+    "createdAt": "2025-08-01T06:23:23.249Z",
+    "updatedAt": "2025-08-01T06:23:23.249Z"
+  }
+]
