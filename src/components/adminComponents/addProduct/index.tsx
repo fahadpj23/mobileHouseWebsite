@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 
 import { addproducts, editProduct } from "store/slice/productSlice";
 import { useAppDispatch } from "hooks/useRedux";
@@ -25,36 +25,50 @@ const AddProduct: FC<props> = ({
 
   const handleImageUpload = async (files: any) => {
     try {
-      for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-        const reader = new FileReader();
+      const file = files[0].images[0];
+      console.log(file);
+      const reader = new FileReader();
 
-        reader.onloadend = async () => {
-          const base64Image: any = reader.result;
-          const response = await axios.post(
-            "/.netlify/functions/upload",
-            `image=${encodeURIComponent(base64Image)}`,
-            {
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-              },
-            }
-          );
+      reader.onloadend = async () => {
+        const base64Image: any = reader.result;
+        const response = await axios.post(
+          "/.netlify/functions/upload",
+          `image=${encodeURIComponent(base64Image)}`,
+          {
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+          }
+        );
 
-          // newImages.push(response.data.imageUrl);
-          // newPreviews.push(response.data.imageUrl);
+        // newImages.push(response.data.imageUrl);
+        // newPreviews.push(response.data.imageUrl);
 
-          // setFormData({ ...formData, images: newImages });
-          // setPreviewImages(newPreviews);
-        };
+        // setFormData({ ...formData, images: newImages });
+        // setPreviewImages(newPreviews);
+      };
 
-        reader.readAsDataURL(file);
-      }
+      reader.readAsDataURL(file);
     } catch (error) {
       console.error("Error uploading images:", error);
     } finally {
     }
   };
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get("/.netlify/functions/products");
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      } finally {
+        console.log(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   const handleSubmit = async (values: typeof initialValues) => {
     try {
@@ -67,8 +81,7 @@ const AddProduct: FC<props> = ({
         url,
         data: productData,
       });
-      handleImageUpload(values?.images);
-      console.log(response.data);
+      handleImageUpload(values?.colors);
     } catch (error) {
       console.error("Error saving product:", error);
     } finally {

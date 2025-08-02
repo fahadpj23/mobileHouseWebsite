@@ -130,5 +130,83 @@
     "id": "54914a4a-6f79-43d8-8e3b-8b57e3357d5d",
     "createdAt": "2025-08-01T11:09:26.561Z",
     "updatedAt": "2025-08-01T11:09:26.561Z"
+  },
+  {
+    "productName": "sas",
+    "brand": "samsung",
+    "ram": "",
+    "storage": "",
+    "price": "",
+    "mrp": "",
+    "networkType": "4G",
+    "category": "1",
+    "display": "4545",
+    "frontCamera": "5454",
+    "rearCamera": "4545",
+    "variants": [
+      {
+        "ram": "4",
+        "storage": "64",
+        "price": "1221",
+        "mrp": "2452"
+      }
+    ],
+    "colors": [
+      {
+        "name": "red",
+        "images": [
+          {},
+          {}
+        ]
+      }
+    ],
+    "os": "54",
+    "processor": "5454",
+    "battery": "5",
+    "rating": 545,
+    "launchDate": "2025-08-01",
+    "description": "4",
+    "id": "baf36cc4-b55d-4ffe-a32c-db2a33b75acf",
+    "createdAt": "2025-08-01T13:34:23.601Z",
+    "updatedAt": "2025-08-01T13:34:23.601Z"
+  },
+  {
+    "productName": "dss",
+    "brand": "vivo",
+    "ram": "",
+    "storage": "",
+    "price": "",
+    "mrp": "",
+    "networkType": "5G",
+    "category": "1",
+    "display": "dss",
+    "frontCamera": "454",
+    "rearCamera": "54",
+    "variants": [
+      {
+        "ram": "6",
+        "storage": "64",
+        "price": "45454",
+        "mrp": "87878"
+      }
+    ],
+    "colors": [
+      {
+        "name": "sds",
+        "images": [
+          {},
+          {}
+        ]
+      }
+    ],
+    "os": "45",
+    "processor": "45",
+    "battery": "45",
+    "rating": 4,
+    "launchDate": "2025-08-12",
+    "description": "45",
+    "id": "0ecff6a3-e961-43d2-a857-0a8fede96465",
+    "createdAt": "2025-08-02T04:40:00.730Z",
+    "updatedAt": "2025-08-02T04:40:00.730Z"
   }
 ]
