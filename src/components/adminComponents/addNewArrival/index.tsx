@@ -24,11 +24,12 @@ const AddBanner: FC<props> = ({
   const { successMessage } = useAppSelector((state) => state.user.newArrival);
   const handleSubmit = (values: typeof initialValues) => {
     const formData = new FormData();
-    formData.append("seriesId", values.seriesId);
-    values.images.forEach((image: any) => {
-      formData.append("images", image);
-    });
-    dispatch(addNewArrivals(formData));
+    // formData.append("seriesId", values.seriesId);
+    // formData.append("image", values.image);
+    // values.images.forEach((image: any) => {
+    //   formData.append("images", image);
+    // });
+    dispatch(addNewArrivals(values));
   };
 
   return (

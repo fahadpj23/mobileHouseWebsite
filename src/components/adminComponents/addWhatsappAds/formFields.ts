@@ -3,11 +3,11 @@ import { BannerFormField } from "./formFieldType";
 
 export const formFields: BannerFormField[] = [
   {
-    name: "images",
-    label: "images",
-    type: "file",
+    name: "image",
+    label: "Image",
+    type: "text",
     required: true,
-    validation: Yup.string().required("image is required"),
+    validation: Yup.string().required("image  is required"),
   },
   {
     name: "seriesId",

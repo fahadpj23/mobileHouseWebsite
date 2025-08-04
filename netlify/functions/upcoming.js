@@ -18,23 +18,23 @@ if (!admin.apps.length) {
 }
 
 const db = admin.firestore();
-const productsCollection = db.collection("products");
+const upcomingCollection = db.collection("upcoming");
 
 exports.handler = async (event, context) => {
   try {
-    // GET - List all products
+    // GET - List all upcoming
     if (event.httpMethod === "GET") {
       // Check if there's an ID in the query parameters
-      const productId = event.queryStringParameters?.id;
+      const upcomingId = event.queryStringParameters?.id;
 
-      if (productId) {
-        // GET BY ID - Get single product
-        const doc = await productsCollection.doc(productId).get();
+      if (upcomingId) {
+        // GET BY ID - Get single upcoming
+        const doc = await upcomingCollection.doc(upcomingId).get();
 
         if (!doc.exists) {
           return {
             statusCode: 404,
-            body: JSON.stringify({ error: "Product not found" }),
+            body: JSON.stringify({ error: "upcoming not found" }),
           };
         }
 
@@ -43,49 +43,49 @@ exports.handler = async (event, context) => {
           body: JSON.stringify({ id: doc.id, ...doc.data() }),
         };
       } else {
-        // GET ALL - List all products
-        const snapshot = await productsCollection.get();
-        const products = snapshot.docs.map((doc) => ({
+        // GET ALL - List all upcoming
+        const snapshot = await upcomingCollection.get();
+        const upcoming = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
 
         return {
           statusCode: 200,
-          body: JSON.stringify(products),
+          body: JSON.stringify(upcoming),
         };
       }
     }
 
-    // POST - Create new product
+    // POST - Create new upcoming
     if (event.httpMethod === "POST") {
-      const newProduct = JSON.parse(event.body);
-      const productId = uuidv4();
-      const productData = {
-        ...newProduct,
+      const newupcoming = JSON.parse(event.body);
+      const upcomingId = uuidv4();
+      const upcomingData = {
+        ...newupcoming,
         createdAt: admin.firestore.FieldValue.serverTimestamp(),
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),
       };
 
-      await productsCollection.doc(productId).set(productData);
+      await upcomingCollection.doc(upcomingId).set(upcomingData);
 
       return {
         statusCode: 201,
-        body: JSON.stringify({ id: productId, ...productData }),
+        body: JSON.stringify({ id: upcomingId, ...upcomingData }),
       };
     }
 
-    // PUT - Update product
+    // PUT - Update upcoming
     if (event.httpMethod === "PUT") {
-      const updatedProduct = JSON.parse(event.body);
-      const productRef = productsCollection.doc(updatedProduct.id);
+      const updatedupcoming = JSON.parse(event.body);
+      const upcomingRef = upcomingCollection.doc(updatedupcoming.id);
 
-      await productRef.update({
-        ...updatedProduct,
+      await upcomingRef.update({
+        ...updatedupcoming,
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),
       });
 
-      const updatedDoc = await productRef.get();
+      const updatedDoc = await upcomingRef.get();
 
       return {
         statusCode: 200,
@@ -96,14 +96,14 @@ exports.handler = async (event, context) => {
       };
     }
 
-    // DELETE - Remove product
+    // DELETE - Remove upcoming
     if (event.httpMethod === "DELETE") {
       const { id } = JSON.parse(event.body);
-      await productsCollection.doc(id).delete();
+      await upcomingCollection.doc(id).delete();
 
       return {
         statusCode: 200,
-        body: JSON.stringify({ message: "Product deleted", id }),
+        body: JSON.stringify({ message: "upcoming deleted", id }),
       };
     }
 

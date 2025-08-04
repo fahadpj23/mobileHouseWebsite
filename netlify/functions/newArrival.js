@@ -18,23 +18,23 @@ if (!admin.apps.length) {
 }
 
 const db = admin.firestore();
-const productsCollection = db.collection("products");
+const newArrivalCollection = db.collection("newArrival");
 
 exports.handler = async (event, context) => {
   try {
-    // GET - List all products
+    // GET - List all newArrival
     if (event.httpMethod === "GET") {
       // Check if there's an ID in the query parameters
-      const productId = event.queryStringParameters?.id;
+      const newArrivalId = event.queryStringParameters?.id;
 
-      if (productId) {
-        // GET BY ID - Get single product
-        const doc = await productsCollection.doc(productId).get();
+      if (newArrivalId) {
+        // GET BY ID - Get single newArrival
+        const doc = await newArrivalCollection.doc(newArrivalId).get();
 
         if (!doc.exists) {
           return {
             statusCode: 404,
-            body: JSON.stringify({ error: "Product not found" }),
+            body: JSON.stringify({ error: "newArrival not found" }),
           };
         }
 
@@ -43,49 +43,49 @@ exports.handler = async (event, context) => {
           body: JSON.stringify({ id: doc.id, ...doc.data() }),
         };
       } else {
-        // GET ALL - List all products
-        const snapshot = await productsCollection.get();
-        const products = snapshot.docs.map((doc) => ({
+        // GET ALL - List all newArrival
+        const snapshot = await newArrivalCollection.get();
+        const newArrival = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
 
         return {
           statusCode: 200,
-          body: JSON.stringify(products),
+          body: JSON.stringify(newArrival),
         };
       }
     }
 
-    // POST - Create new product
+    // POST - Create new newArrival
     if (event.httpMethod === "POST") {
-      const newProduct = JSON.parse(event.body);
-      const productId = uuidv4();
-      const productData = {
-        ...newProduct,
+      const newnewArrival = JSON.parse(event.body);
+      const newArrivalId = uuidv4();
+      const newArrivalData = {
+        ...newnewArrival,
         createdAt: admin.firestore.FieldValue.serverTimestamp(),
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),
       };
 
-      await productsCollection.doc(productId).set(productData);
+      await newArrivalCollection.doc(newArrivalId).set(newArrivalData);
 
       return {
         statusCode: 201,
-        body: JSON.stringify({ id: productId, ...productData }),
+        body: JSON.stringify({ id: newArrivalId, ...newArrivalData }),
       };
     }
 
-    // PUT - Update product
+    // PUT - Update newArrival
     if (event.httpMethod === "PUT") {
-      const updatedProduct = JSON.parse(event.body);
-      const productRef = productsCollection.doc(updatedProduct.id);
+      const updatednewArrival = JSON.parse(event.body);
+      const newArrivalRef = newArrivalCollection.doc(updatednewArrival.id);
 
-      await productRef.update({
-        ...updatedProduct,
+      await newArrivalRef.update({
+        ...updatednewArrival,
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),
       });
 
-      const updatedDoc = await productRef.get();
+      const updatedDoc = await newArrivalRef.get();
 
       return {
         statusCode: 200,
@@ -96,14 +96,14 @@ exports.handler = async (event, context) => {
       };
     }
 
-    // DELETE - Remove product
+    // DELETE - Remove newArrival
     if (event.httpMethod === "DELETE") {
       const { id } = JSON.parse(event.body);
-      await productsCollection.doc(id).delete();
+      await newArrivalCollection.doc(id).delete();
 
       return {
         statusCode: 200,
-        body: JSON.stringify({ message: "Product deleted", id }),
+        body: JSON.stringify({ message: "newArrival deleted", id }),
       };
     }
 

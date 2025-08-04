@@ -18,23 +18,23 @@ if (!admin.apps.length) {
 }
 
 const db = admin.firestore();
-const productsCollection = db.collection("products");
+const bannerCollection = db.collection("banner");
 
 exports.handler = async (event, context) => {
   try {
-    // GET - List all products
+    // GET - List all banner
     if (event.httpMethod === "GET") {
       // Check if there's an ID in the query parameters
-      const productId = event.queryStringParameters?.id;
+      const bannerId = event.queryStringParameters?.id;
 
-      if (productId) {
-        // GET BY ID - Get single product
-        const doc = await productsCollection.doc(productId).get();
+      if (bannerId) {
+        // GET BY ID - Get single banner
+        const doc = await bannerCollection.doc(bannerId).get();
 
         if (!doc.exists) {
           return {
             statusCode: 404,
-            body: JSON.stringify({ error: "Product not found" }),
+            body: JSON.stringify({ error: "banner not found" }),
           };
         }
 
@@ -43,49 +43,49 @@ exports.handler = async (event, context) => {
           body: JSON.stringify({ id: doc.id, ...doc.data() }),
         };
       } else {
-        // GET ALL - List all products
-        const snapshot = await productsCollection.get();
-        const products = snapshot.docs.map((doc) => ({
+        // GET ALL - List all banner
+        const snapshot = await bannerCollection.get();
+        const banner = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
 
         return {
           statusCode: 200,
-          body: JSON.stringify(products),
+          body: JSON.stringify(banner),
         };
       }
     }
 
-    // POST - Create new product
+    // POST - Create new banner
     if (event.httpMethod === "POST") {
-      const newProduct = JSON.parse(event.body);
-      const productId = uuidv4();
-      const productData = {
-        ...newProduct,
+      const newbanner = JSON.parse(event.body);
+      const bannerId = uuidv4();
+      const bannerData = {
+        ...newbanner,
         createdAt: admin.firestore.FieldValue.serverTimestamp(),
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),
       };
 
-      await productsCollection.doc(productId).set(productData);
+      await bannerCollection.doc(bannerId).set(bannerData);
 
       return {
         statusCode: 201,
-        body: JSON.stringify({ id: productId, ...productData }),
+        body: JSON.stringify({ id: bannerId, ...bannerData }),
       };
     }
 
-    // PUT - Update product
+    // PUT - Update banner
     if (event.httpMethod === "PUT") {
-      const updatedProduct = JSON.parse(event.body);
-      const productRef = productsCollection.doc(updatedProduct.id);
+      const updatedbanner = JSON.parse(event.body);
+      const bannerRef = bannerCollection.doc(updatedbanner.id);
 
-      await productRef.update({
-        ...updatedProduct,
+      await bannerRef.update({
+        ...updatedbanner,
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),
       });
 
-      const updatedDoc = await productRef.get();
+      const updatedDoc = await bannerRef.get();
 
       return {
         statusCode: 200,
@@ -96,14 +96,14 @@ exports.handler = async (event, context) => {
       };
     }
 
-    // DELETE - Remove product
+    // DELETE - Remove banner
     if (event.httpMethod === "DELETE") {
       const { id } = JSON.parse(event.body);
-      await productsCollection.doc(id).delete();
+      await bannerCollection.doc(id).delete();
 
       return {
         statusCode: 200,
-        body: JSON.stringify({ message: "Product deleted", id }),
+        body: JSON.stringify({ message: "banner deleted", id }),
       };
     }
 

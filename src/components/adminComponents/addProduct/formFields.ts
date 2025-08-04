@@ -37,14 +37,14 @@ export const formFields: ProductFormField[] = [
     validation: Yup.string().required("Rating is required"),
   },
 
-  // {
-  //   name: "seriesId",
-  //   label: "Series",
-  //   type: "select",
-  //   required: true,
-  //   options: [],
-  //   validation: Yup.string().required("networkType is required"),
-  // },
+  {
+    name: "seriesId",
+    label: "Series",
+    type: "select",
+    required: true,
+    options: [],
+    validation: Yup.string().required("networkType is required"),
+  },
   {
     name: "launchDate",
     label: "launch Date",
@@ -97,7 +97,7 @@ export const formFields: ProductFormField[] = [
     label: "Image",
     type: "text",
     required: true,
-    validation: Yup.string().required("android Version is required"),
+    validation: Yup.string().required("image Version is required"),
   },
   {
     name: "processor",

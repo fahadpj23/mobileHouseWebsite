@@ -18,23 +18,23 @@ if (!admin.apps.length) {
 }
 
 const db = admin.firestore();
-const productsCollection = db.collection("products");
+const whatsappAdsCollection = db.collection("whatsappAds");
 
 exports.handler = async (event, context) => {
   try {
-    // GET - List all products
+    // GET - List all whatsappAds
     if (event.httpMethod === "GET") {
       // Check if there's an ID in the query parameters
-      const productId = event.queryStringParameters?.id;
+      const whatsappAdsId = event.queryStringParameters?.id;
 
-      if (productId) {
-        // GET BY ID - Get single product
-        const doc = await productsCollection.doc(productId).get();
+      if (whatsappAdsId) {
+        // GET BY ID - Get single whatsappAds
+        const doc = await whatsappAdsCollection.doc(whatsappAdsId).get();
 
         if (!doc.exists) {
           return {
             statusCode: 404,
-            body: JSON.stringify({ error: "Product not found" }),
+            body: JSON.stringify({ error: "whatsappAds not found" }),
           };
         }
 
@@ -43,49 +43,49 @@ exports.handler = async (event, context) => {
           body: JSON.stringify({ id: doc.id, ...doc.data() }),
         };
       } else {
-        // GET ALL - List all products
-        const snapshot = await productsCollection.get();
-        const products = snapshot.docs.map((doc) => ({
+        // GET ALL - List all whatsappAds
+        const snapshot = await whatsappAdsCollection.get();
+        const whatsappAds = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
 
         return {
           statusCode: 200,
-          body: JSON.stringify(products),
+          body: JSON.stringify(whatsappAds),
         };
       }
     }
 
-    // POST - Create new product
+    // POST - Create new whatsappAds
     if (event.httpMethod === "POST") {
-      const newProduct = JSON.parse(event.body);
-      const productId = uuidv4();
-      const productData = {
-        ...newProduct,
+      const newwhatsappAds = JSON.parse(event.body);
+      const whatsappAdsId = uuidv4();
+      const whatsappAdsData = {
+        ...newwhatsappAds,
         createdAt: admin.firestore.FieldValue.serverTimestamp(),
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),
       };
 
-      await productsCollection.doc(productId).set(productData);
+      await whatsappAdsCollection.doc(whatsappAdsId).set(whatsappAdsData);
 
       return {
         statusCode: 201,
-        body: JSON.stringify({ id: productId, ...productData }),
+        body: JSON.stringify({ id: whatsappAdsId, ...whatsappAdsData }),
       };
     }
 
-    // PUT - Update product
+    // PUT - Update whatsappAds
     if (event.httpMethod === "PUT") {
-      const updatedProduct = JSON.parse(event.body);
-      const productRef = productsCollection.doc(updatedProduct.id);
+      const updatedwhatsappAds = JSON.parse(event.body);
+      const whatsappAdsRef = whatsappAdsCollection.doc(updatedwhatsappAds.id);
 
-      await productRef.update({
-        ...updatedProduct,
+      await whatsappAdsRef.update({
+        ...updatedwhatsappAds,
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),
       });
 
-      const updatedDoc = await productRef.get();
+      const updatedDoc = await whatsappAdsRef.get();
 
       return {
         statusCode: 200,
@@ -96,14 +96,14 @@ exports.handler = async (event, context) => {
       };
     }
 
-    // DELETE - Remove product
+    // DELETE - Remove whatsappAds
     if (event.httpMethod === "DELETE") {
       const { id } = JSON.parse(event.body);
-      await productsCollection.doc(id).delete();
+      await whatsappAdsCollection.doc(id).delete();
 
       return {
         statusCode: 200,
-        body: JSON.stringify({ message: "Product deleted", id }),
+        body: JSON.stringify({ message: "whatsappAds deleted", id }),
       };
     }
 

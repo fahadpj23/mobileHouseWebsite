@@ -44,11 +44,7 @@ export const getwhatsappAdsById = createAsyncThunk(
 export const addwhatsappAds = createAsyncThunk(
   "whatsappAds/addwhatsappAds",
   async (data: any) => {
-    const response = await axiosInstance.post(`whatsappAds/`, data, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+    const response = await axiosInstance.post(`whatsappAds/`, data);
   }
 );
 

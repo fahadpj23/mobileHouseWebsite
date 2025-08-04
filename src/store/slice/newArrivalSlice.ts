@@ -52,11 +52,7 @@ export const deleteNewArrival = createAsyncThunk(
 export const addNewArrivals = createAsyncThunk(
   "newArrival/addNewArrival",
   async (data: any) => {
-    const response = await axiosInstance.post(`newArrival/`, data, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+    const response = await axiosInstance.post(`newArrival/`, data);
   }
 );
 

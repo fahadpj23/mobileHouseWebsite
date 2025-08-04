@@ -114,6 +114,10 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
     return date ? format(date, "yyyy-MM-dd") : null;
   };
 
+  const generateId = () => {
+    return Date.now().toString(36) + Math.random().toString(36).substring(2);
+  };
+
   //form  dynamic rendering
   const renderFormField = (
     field: FormField,
@@ -229,6 +233,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
               const handleAddVariant = (arrayIndex: number) => {
                 let updatedItems: any = [...formik.values[name]];
                 updatedItems.push({
+                  id: generateId(),
                   ram: "",
                   storage: "",
                   price: "",
@@ -236,15 +241,6 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                 });
                 formik.setFieldValue(name, updatedItems);
                 setNewItemValue("");
-              };
-
-              const handleRemoveVariant = (
-                arrayIndex: number,
-                variantIndex: number
-              ) => {
-                const updatedItems = [...formik.values[name]];
-                updatedItems[arrayIndex].variants.splice(variantIndex, 1);
-                formik.setFieldValue(name, updatedItems);
               };
 
               return (
@@ -364,7 +360,11 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
             {({ push, remove }) => {
               const handleAddItem = () => {
                 if (newItemName.trim()) {
-                  push({ name: newItemName.trim(), values: [] });
+                  push({
+                    id: generateId(),
+                    name: newItemName.trim(),
+                    values: [],
+                  });
                   setNewItemName("");
                 }
               };

@@ -22,8 +22,12 @@ const AddSeries: FC<props> = ({
 }) => {
   const dispatch = useAppDispatch();
 
+  const generateId = () => {
+    return Date.now().toString(36) + Math.random().toString(36).substring(2);
+  };
   const handleSubmit = (values: typeof initialValues) => {
     const formData = new FormData();
+    formData.append("id", generateId());
     formData.append("seriesName", values.seriesName);
     dispatch(addSeries(formData));
   };

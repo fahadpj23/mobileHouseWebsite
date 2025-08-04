@@ -47,7 +47,7 @@ export const fetchSeriesProducts = createAsyncThunk(
 export const fetchProducts = createAsyncThunk(
   "products/fetchProduct",
   async () => {
-    const response = await axiosInstance.get(`/.netlify/functions/products/`);
+    const response = await axiosInstance.get(`products/`);
     return response.data;
   }
 );
@@ -88,7 +88,9 @@ export const getProductById = createAsyncThunk(
 export const getProductByIdEdit = createAsyncThunk(
   "products/getProductByIdEdit",
   async (id: number) => {
-    const response = await axiosInstance.get(`products/${id}/edit`);
+    const response = await axiosInstance.get(`products/,`, {
+      params: { id },
+    });
     return response.data;
   }
 );

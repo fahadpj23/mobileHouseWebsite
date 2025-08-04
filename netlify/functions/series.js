@@ -18,23 +18,23 @@ if (!admin.apps.length) {
 }
 
 const db = admin.firestore();
-const productsCollection = db.collection("products");
+const seriesCollection = db.collection("series");
 
 exports.handler = async (event, context) => {
   try {
-    // GET - List all products
+    // GET - List all series
     if (event.httpMethod === "GET") {
       // Check if there's an ID in the query parameters
-      const productId = event.queryStringParameters?.id;
+      const seriesId = event.queryStringParameters?.id;
 
-      if (productId) {
-        // GET BY ID - Get single product
-        const doc = await productsCollection.doc(productId).get();
+      if (seriesId) {
+        // GET BY ID - Get single series
+        const doc = await seriesCollection.doc(seriesId).get();
 
         if (!doc.exists) {
           return {
             statusCode: 404,
-            body: JSON.stringify({ error: "Product not found" }),
+            body: JSON.stringify({ error: "series not found" }),
           };
         }
 
@@ -43,49 +43,49 @@ exports.handler = async (event, context) => {
           body: JSON.stringify({ id: doc.id, ...doc.data() }),
         };
       } else {
-        // GET ALL - List all products
-        const snapshot = await productsCollection.get();
-        const products = snapshot.docs.map((doc) => ({
+        // GET ALL - List all series
+        const snapshot = await seriesCollection.get();
+        const series = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
 
         return {
           statusCode: 200,
-          body: JSON.stringify(products),
+          body: JSON.stringify(series),
         };
       }
     }
 
-    // POST - Create new product
+    // POST - Create new series
     if (event.httpMethod === "POST") {
-      const newProduct = JSON.parse(event.body);
-      const productId = uuidv4();
-      const productData = {
-        ...newProduct,
+      const newseries = JSON.parse(event.body);
+      const seriesId = uuidv4();
+      const seriesData = {
+        ...newseries,
         createdAt: admin.firestore.FieldValue.serverTimestamp(),
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),
       };
 
-      await productsCollection.doc(productId).set(productData);
+      await seriesCollection.doc(seriesId).set(seriesData);
 
       return {
         statusCode: 201,
-        body: JSON.stringify({ id: productId, ...productData }),
+        body: JSON.stringify({ id: seriesId, ...seriesData }),
       };
     }
 
-    // PUT - Update product
+    // PUT - Update series
     if (event.httpMethod === "PUT") {
-      const updatedProduct = JSON.parse(event.body);
-      const productRef = productsCollection.doc(updatedProduct.id);
+      const updatedseries = JSON.parse(event.body);
+      const seriesRef = seriesCollection.doc(updatedseries.id);
 
-      await productRef.update({
-        ...updatedProduct,
+      await seriesRef.update({
+        ...updatedseries,
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),
       });
 
-      const updatedDoc = await productRef.get();
+      const updatedDoc = await seriesRef.get();
 
       return {
         statusCode: 200,
@@ -96,14 +96,14 @@ exports.handler = async (event, context) => {
       };
     }
 
-    // DELETE - Remove product
+    // DELETE - Remove series
     if (event.httpMethod === "DELETE") {
       const { id } = JSON.parse(event.body);
-      await productsCollection.doc(id).delete();
+      await seriesCollection.doc(id).delete();
 
       return {
         statusCode: 200,
-        body: JSON.stringify({ message: "Product deleted", id }),
+        body: JSON.stringify({ message: "series deleted", id }),
       };
     }
 
