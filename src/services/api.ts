@@ -4,8 +4,7 @@ import { logout, setCredentials } from "store/slice/authSlice";
 
 const axiosInstance = axios.create({
   // baseURL: "http://localhost:9000/api", // ✅  API base URL
-  baseURL:
-    "http://ec2-3-110-122-137.ap-south-1.compute.amazonaws.com:9000/api/", // ✅  API base URL
+  baseURL: "", // ✅  API base URL
   timeout: 10000,
 });
 

@@ -26,7 +26,7 @@ const AddProduct: FC<props> = ({
   const handleImageUpload = async (files: any) => {
     try {
       const file = files[0].images[0];
-      console.log(file);
+
       const reader = new FileReader();
 
       reader.onloadend = async () => {
@@ -55,21 +55,6 @@ const AddProduct: FC<props> = ({
     }
   };
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get("/.netlify/functions/products");
-        console.log(response.data);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      } finally {
-        console.log(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
   const handleSubmit = async (values: typeof initialValues) => {
     try {
       const productData = values;
@@ -81,7 +66,7 @@ const AddProduct: FC<props> = ({
         url,
         data: productData,
       });
-      handleImageUpload(values?.colors);
+      // handleImageUpload(values?.colors);
     } catch (error) {
       console.error("Error saving product:", error);
     } finally {

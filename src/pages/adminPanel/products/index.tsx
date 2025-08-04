@@ -15,6 +15,7 @@ import Header from "components/adminComponents/header";
 import AddProduct from "components/adminComponents/addProduct";
 import { showToast } from "utils/toast";
 import { ToastContainer } from "react-toastify";
+import axios from "axios";
 
 const Products = () => {
   const dispatch = useAppDispatch();

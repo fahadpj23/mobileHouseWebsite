@@ -89,6 +89,10 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
   const [image, setImage] = useState<any>("");
   const dispatch = useAppDispatch();
   const { entities, entity } = useAppSelector((state) => state.user.series);
+  const [newItemName, setNewItemName] = useState("");
+  const [newValueInputs, setNewValueInputs] = useState<{
+    [key: number]: string;
+  }>({});
 
   useEffect(() => {
     dispatch(fetchSeries());
@@ -115,7 +119,6 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
     field: FormField,
     formik: FormikProps<FormikValues>
   ) => {
-    console.log(formik?.values);
     const { name, label, type, options = [], required = false } = field;
     const error = formik.touched[name] && Boolean(formik.errors[name]);
     const helperText =
@@ -360,143 +363,144 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
           <FieldArray name={name}>
             {({ push, remove }) => {
               const handleAddItem = () => {
-                if (newItemValue.trim()) {
-                  push({ name: newItemValue.trim(), images: [] });
-                  setNewItemValue("");
+                if (newItemName.trim()) {
+                  push({ name: newItemName.trim(), values: [] });
+                  setNewItemName("");
                 }
+              };
+
+              const handleAddValue = (index: number) => {
+                const valueToAdd = newValueInputs[index]?.trim();
+                if (!valueToAdd) return;
+
+                const updatedItems = [...formik.values[name]];
+                updatedItems[index].values = [
+                  ...updatedItems[index].values,
+                  valueToAdd,
+                ];
+                formik.setFieldValue(name, updatedItems);
+                setNewValueInputs({ ...newValueInputs, [index]: "" });
+              };
+
+              const handleRemoveValue = (
+                itemIndex: number,
+                valueIndex: number
+              ) => {
+                const updatedItems = [...formik.values[name]];
+                updatedItems[itemIndex].values.splice(valueIndex, 1);
+                formik.setFieldValue(name, updatedItems);
               };
 
               return (
                 <Box marginY={2}>
                   <Typography variant="h6">{label}</Typography>
 
-                  {formik.values[name]?.map((item: any, index: number) => (
-                    <Paper
-                      key={index}
-                      elevation={2}
-                      style={{ padding: "16px", margin: "8px 0" }}
-                    >
-                      <div className="flex space-x-2 items-center">
-                        <h1>{item?.name}</h1>
-                        <IconButton onClick={() => remove(index)} color="error">
-                          <RemoveCircleOutline />
-                        </IconButton>
-                      </div>
-
-                      {/* File Input (Hidden) */}
-                      <input
-                        accept="image/*"
-                        style={{ display: "none" }}
-                        id={`${name}-file-input-${index}`} // Unique ID per item
-                        multiple
-                        type="file"
-                        onChange={(event) => {
-                          const files = event.currentTarget.files;
-                          if (files) {
-                            const newFiles = Array.from(files);
-                            const updatedItems = [...formik.values[name]];
-                            updatedItems[index] = {
-                              ...updatedItems[index],
-                              images: [
-                                ...(updatedItems[index].images || []),
-                                ...newFiles,
-                              ],
-                            };
-                            formik.setFieldValue(name, updatedItems);
-                          }
-                        }}
-                      />
-
-                      {/* Preview Uploaded Images */}
-                      <div>
-                        {item?.id ? (
-                          <div className="space-y-2">
-                            {item?.images?.map(
-                              (file: any, fileIndex: number) => (
-                                <img
-                                  src={`http://localhost:9000${file?.image}`}
-                                  alt={file.name}
-                                  style={{
-                                    width: "100%",
-                                    height: "150px",
-                                    objectFit: "contain",
-                                    borderRadius: "4px",
-                                  }}
-                                />
-                              )
-                            )}
-                          </div>
-                        ) : (
-                          item?.images?.map((file: any, fileIndex: number) =>
-                            file.type.startsWith("image/") ? (
-                              <img
-                                key={fileIndex}
-                                src={URL.createObjectURL(file)}
-                                alt={file.name}
-                                style={{
-                                  width: "100%",
-                                  height: "150px",
-                                  objectFit: "cover",
-                                  borderRadius: "4px",
-                                }}
-                              />
-                            ) : (
-                              <Box
-                                key={fileIndex}
-                                style={{
-                                  width: "100%",
-                                  height: "150px",
-                                  display: "flex",
-                                  alignItems: "center",
-                                  justifyContent: "center",
-                                  backgroundColor: "#f5f5f5",
-                                }}
-                              >
-                                <InsertDriveFile
-                                  style={{ fontSize: 48, color: "#757575" }}
-                                />
-                              </Box>
-                            )
-                          )
-                        )}
-                      </div>
-
-                      {/* Upload Button (Now Linked to Correct Input) */}
-                      <FormControl fullWidth margin="normal" error={error}>
-                        <InputLabel shrink>{label}</InputLabel>
-                        <Box mt={2}>
-                          <label htmlFor={`${name}-file-input-${index}`}>
-                            {" "}
-                            {/* Matches input ID */}
-                            <Button
-                              variant="outlined"
-                              component="span"
-                              startIcon={<CloudUpload />}
-                            >
-                              Upload Files
-                            </Button>
-                          </label>
+                  {formik.values[name]?.map(
+                    (
+                      item: { name: string; values: string[] },
+                      index: number
+                    ) => (
+                      <Paper
+                        key={index}
+                        elevation={2}
+                        style={{ padding: "16px", margin: "8px 0" }}
+                      >
+                        <Box
+                          display="flex"
+                          justifyContent="space-between"
+                          alignItems="center"
+                          mb={2}
+                        >
+                          <Typography variant="subtitle1">
+                            {item.name}
+                          </Typography>
+                          <IconButton
+                            onClick={() => remove(index)}
+                            color="error"
+                          >
+                            <RemoveCircleOutline />
+                          </IconButton>
                         </Box>
-                        {error && <FormHelperText>{helperText}</FormHelperText>}
-                      </FormControl>
-                    </Paper>
-                  ))}
-                  <Box display="flex" gap={2} mb={2}>
+
+                        {/* Values List */}
+                        <Box mb={2}>
+                          {item.values.map((value, valueIndex) => (
+                            <Box
+                              key={valueIndex}
+                              display="flex"
+                              alignItems="center"
+                              gap={1}
+                              mb={1}
+                            >
+                              <TextField
+                                value={value}
+                                onChange={(e) => {
+                                  const updatedItems = [...formik.values[name]];
+                                  updatedItems[index].values[valueIndex] =
+                                    e.target.value;
+                                  formik.setFieldValue(name, updatedItems);
+                                }}
+                                fullWidth
+                                size="small"
+                              />
+                              <IconButton
+                                onClick={() =>
+                                  handleRemoveValue(index, valueIndex)
+                                }
+                                size="small"
+                                color="error"
+                              >
+                                <Close fontSize="small" />
+                              </IconButton>
+                            </Box>
+                          ))}
+                        </Box>
+
+                        {/* Add New Value */}
+                        <Box display="flex" gap={1}>
+                          <TextField
+                            value={newValueInputs[index] || ""}
+                            onChange={(e) =>
+                              setNewValueInputs({
+                                ...newValueInputs,
+                                [index]: e.target.value,
+                              })
+                            }
+                            placeholder="Add new value"
+                            fullWidth
+                            size="small"
+                            onKeyPress={(e) =>
+                              e.key === "Enter" && handleAddValue(index)
+                            }
+                          />
+                          <Button
+                            variant="outlined"
+                            onClick={() => handleAddValue(index)}
+                            size="small"
+                          >
+                            Add Value
+                          </Button>
+                        </Box>
+                      </Paper>
+                    )
+                  )}
+
+                  {/* Add New Item */}
+                  <Box display="flex" gap={2} mt={2}>
                     <TextField
+                      value={newItemName}
+                      onChange={(e) => setNewItemName(e.target.value)}
+                      placeholder={`Add new ${label.toLowerCase()}`}
                       fullWidth
-                      variant="outlined"
                       size="small"
-                      value={newItemValue}
-                      onChange={(e) => setNewItemValue(e.target.value)}
                       onKeyPress={(e) => e.key === "Enter" && handleAddItem()}
-                      label={`Add new ${label.toLowerCase()}`}
                     />
                     <Button
                       variant="contained"
                       onClick={handleAddItem}
-                      disabled={!newItemValue.trim()}
+                      disabled={!newItemName.trim()}
                     >
-                      Add
+                      Add Item
                     </Button>
                   </Box>
                 </Box>
@@ -504,6 +508,155 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
             }}
           </FieldArray>
         );
+      // case "array":
+      //   return (
+      //     <FieldArray name={name}>
+      //       {({ push, remove }) => {
+      //         const handleAddItem = () => {
+      //           if (newItemValue.trim()) {
+      //             push({ name: newItemValue.trim(), images: [] });
+      //             setNewItemValue("");
+      //           }
+      //         };
+
+      //         return (
+      //           <Box marginY={2}>
+      //             <Typography variant="h6">{label}</Typography>
+
+      //             {formik.values[name]?.map((item: any, index: number) => (
+      //               <Paper
+      //                 key={index}
+      //                 elevation={2}
+      //                 style={{ padding: "16px", margin: "8px 0" }}
+      //               >
+      //                 <div className="flex space-x-2 items-center">
+      //                   <h1>{item?.name}</h1>
+      //                   <IconButton onClick={() => remove(index)} color="error">
+      //                     <RemoveCircleOutline />
+      //                   </IconButton>
+      //                 </div>
+
+      //                 {/* File Input (Hidden) */}
+      //                 <input
+      //                   accept="image/*"
+      //                   style={{ display: "none" }}
+      //                   id={`${name}-file-input-${index}`} // Unique ID per item
+      //                   multiple
+      //                   type="file"
+      //                   onChange={(event) => {
+      //                     const files = event.currentTarget.files;
+      //                     if (files) {
+      //                       const newFiles = Array.from(files);
+      //                       const updatedItems = [...formik.values[name]];
+      //                       updatedItems[index] = {
+      //                         ...updatedItems[index],
+      //                         images: [
+      //                           ...(updatedItems[index].images || []),
+      //                           ...newFiles,
+      //                         ],
+      //                       };
+      //                       formik.setFieldValue(name, updatedItems);
+      //                     }
+      //                   }}
+      //                 />
+
+      //                 {/* Preview Uploaded Images */}
+      //                 <div>
+      //                   {item?.id ? (
+      //                     <div className="space-y-2">
+      //                       {item?.images?.map(
+      //                         (file: any, fileIndex: number) => (
+      //                           <img
+      //                             src={`http://localhost:9000${file?.image}`}
+      //                             alt={file.name}
+      //                             style={{
+      //                               width: "100%",
+      //                               height: "150px",
+      //                               objectFit: "contain",
+      //                               borderRadius: "4px",
+      //                             }}
+      //                           />
+      //                         )
+      //                       )}
+      //                     </div>
+      //                   ) : (
+      //                     item?.images?.map((file: any, fileIndex: number) =>
+      //                       file.type.startsWith("image/") ? (
+      //                         <img
+      //                           key={fileIndex}
+      //                           src={URL.createObjectURL(file)}
+      //                           alt={file.name}
+      //                           style={{
+      //                             width: "100%",
+      //                             height: "150px",
+      //                             objectFit: "cover",
+      //                             borderRadius: "4px",
+      //                           }}
+      //                         />
+      //                       ) : (
+      //                         <Box
+      //                           key={fileIndex}
+      //                           style={{
+      //                             width: "100%",
+      //                             height: "150px",
+      //                             display: "flex",
+      //                             alignItems: "center",
+      //                             justifyContent: "center",
+      //                             backgroundColor: "#f5f5f5",
+      //                           }}
+      //                         >
+      //                           <InsertDriveFile
+      //                             style={{ fontSize: 48, color: "#757575" }}
+      //                           />
+      //                         </Box>
+      //                       )
+      //                     )
+      //                   )}
+      //                 </div>
+
+      //                 {/* Upload Button (Now Linked to Correct Input) */}
+      //                 <FormControl fullWidth margin="normal" error={error}>
+      //                   <InputLabel shrink>{label}</InputLabel>
+      //                   <Box mt={2}>
+      //                     <label htmlFor={`${name}-file-input-${index}`}>
+      //                       {" "}
+      //                       {/* Matches input ID */}
+      //                       <Button
+      //                         variant="outlined"
+      //                         component="span"
+      //                         startIcon={<CloudUpload />}
+      //                       >
+      //                         Upload Files
+      //                       </Button>
+      //                     </label>
+      //                   </Box>
+      //                   {error && <FormHelperText>{helperText}</FormHelperText>}
+      //                 </FormControl>
+      //               </Paper>
+      //             ))}
+      //             <Box display="flex" gap={2} mb={2}>
+      //               <TextField
+      //                 fullWidth
+      //                 variant="outlined"
+      //                 size="small"
+      //                 value={newItemValue}
+      //                 onChange={(e) => setNewItemValue(e.target.value)}
+      //                 onKeyPress={(e) => e.key === "Enter" && handleAddItem()}
+      //                 label={`Add new ${label.toLowerCase()}`}
+      //               />
+      //               <Button
+      //                 variant="contained"
+      //                 onClick={handleAddItem}
+      //                 disabled={!newItemValue.trim()}
+      //               >
+      //                 Add
+      //               </Button>
+      //             </Box>
+      //           </Box>
+      //         );
+      //       }}
+      //     </FieldArray>
+      //   );
       case "textarea":
         return (
           <Field
