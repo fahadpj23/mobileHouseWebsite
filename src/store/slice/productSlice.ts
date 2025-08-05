@@ -38,8 +38,10 @@ const initialState: UserState = {
 // Async thunk to fetch products data
 export const fetchSeriesProducts = createAsyncThunk(
   "products/getSeriesProduct",
-  async (seriesId: number) => {
-    const response = await axiosInstance.get(`products/series/${seriesId}`);
+  async (seriesId: string) => {
+    const response = await axiosInstance.get(`products/,`, {
+      params: { seriesId },
+    });
     return response.data;
   }
 );
@@ -77,17 +79,19 @@ export const getTrendingPhone = createAsyncThunk(
 
 export const getProductById = createAsyncThunk(
   "products/getProductById",
-  async ({ id, productVariantId, productColorId }: any) => {
-    const response = await axiosInstance.get(
-      `products/${id}/${productVariantId}/${productColorId}`
-    );
+  async (id: string | number) => {
+    const response = await axiosInstance.get(`products/,`, {
+      params: {
+        productId: id,
+      },
+    });
     return response.data;
   }
 );
 
 export const getProductByIdEdit = createAsyncThunk(
   "products/getProductByIdEdit",
-  async (id: number) => {
+  async (id: string | number) => {
     const response = await axiosInstance.get(`products/,`, {
       params: { id },
     });
@@ -161,7 +165,7 @@ const productSlice = createSlice({
         getProductById.fulfilled,
         (state, action: PayloadAction<any>) => {
           state.loading = false;
-          state.entity = action.payload;
+          state.entity = action.payload[0];
         }
       )
 

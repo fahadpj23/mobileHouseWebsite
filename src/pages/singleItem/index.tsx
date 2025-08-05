@@ -9,11 +9,7 @@ import { useScreenSize } from "hooks/useScreenSize";
 import ProductImageSlider from "components/commonComponents/productImageSlider";
 import { toPascalCase } from "utils/pascalCaseConvert";
 
-import {
-  getProductById,
-  getProductColors,
-  getProductVariants,
-} from "store/slice/productSlice";
+import { getProductById } from "store/slice/productSlice";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import ServerLazyImage from "components/commonComponents/serverImageLazyLoading";
 
@@ -35,15 +31,9 @@ const SingleItem = () => {
 
   useEffect(() => {
     if (productId && productVariantId && productColorId) {
-      dispatch(
-        getProductById({
-          id: +productId,
-          productVariantId: +productVariantId,
-          productColorId: +productColorId,
-        })
-      );
-      dispatch(getProductVariants(productId));
-      dispatch(getProductColors(productId));
+      dispatch(getProductById(productId));
+      // dispatch(getProductVariants(productId));
+      // dispatch(getProductColors(productId));
     }
   }, [productId]);
 
@@ -56,14 +46,8 @@ const SingleItem = () => {
   }, [colors]);
 
   useEffect(() => {
-    if (productId && variantId && colorId) {
-      dispatch(
-        getProductById({
-          id: +productId,
-          productVariantId: +variantId,
-          productColorId: +colorId,
-        })
-      );
+    if (productId) {
+      dispatch(getProductById(productId));
     }
   }, [colorId, variantId, productId]);
 
@@ -137,15 +121,13 @@ const SingleItem = () => {
           <div className="flex justify-center w-full md:w-1/2 ">
             <div className=" flex flex-col justify-center items-center ">
               <div className=" p-3 w-screen mb-3 flex justify-center ">
-                {isMobile && !isLoading && colors?.length ? (
-                  <ProductImageSlider
-                    productImages={product?.colors[0]?.images}
-                  />
+                {isMobile && Array.isArray(product?.colors) ? (
+                  <ProductImageSlider productImages={product?.colors[0]} />
                 ) : (
                   <div className="w-[80vw] h-[50vh] md:w-[30vw] md:h-[30vw] flex justify-center items-center   ">
                     <div className="w-full h-full ">
                       <ServerLazyImage
-                        src={product?.colors[0].images[0]?.image}
+                        src={product?.image}
                         alt={`${product?.name} Image `}
                       />
                     </div>
@@ -154,17 +136,14 @@ const SingleItem = () => {
               </div>
               <div className="flex space-x-3 justify-center w-full ">
                 {!isMobile &&
-                  product?.colors[0]?.images?.map((image: any) => {
+                  product?.colors[0]?.values?.map((image: any) => {
                     return (
                       <button
                         key={image}
                         className="p-1 border border-gray-300 rounded-md w-10 h-14 md:w-20 md:h-16 "
                       >
                         <div className="w-full h-full object-contain">
-                          <ServerLazyImage
-                            src={image?.image}
-                            alt="phone image "
-                          />
+                          <ServerLazyImage src={image} alt="phone image " />
                         </div>
                       </button>
                     );
@@ -223,10 +202,10 @@ const SingleItem = () => {
             </div>
 
             <div className="flex flex-col">
-              {productColors.length ? (
+              {Array.isArray(product?.colors) ? (
                 <div>
                   <div className="flex space-x-6 ml-6 mt-6 ">
-                    {productColors?.map((color: any) => {
+                    {product?.colors?.map((color: any) => {
                       return (
                         <button
                           key={color?.id}
@@ -235,11 +214,11 @@ const SingleItem = () => {
                         >
                           <div className="w-10 h-16 md:w-16 ">
                             <div
-                              key={color?.images[0]?.image}
+                              key={color?.values[0]}
                               className="w-full h-full object-contain"
                             >
                               <ServerLazyImage
-                                src={color?.images[0]?.image}
+                                src={color?.values[0]}
                                 alt="phone image "
                               />
                             </div>

@@ -28,30 +28,30 @@ const initialState: UserState = {
 export const fetchUpcoming = createAsyncThunk(
   "upcoming/fetchUpcoming",
   async () => {
-    const response = await axiosInstance.get(`Upcoming/`);
+    const response = await axiosInstance.get(`upcoming/`);
     return response.data;
   }
 );
 
 export const getUpcomingById = createAsyncThunk(
-  "Upcoming/getUpcomingById",
+  "upcoming/getUpcomingById",
   async (id: number) => {
-    const response = await axiosInstance.get(`Upcoming/${id}`);
+    const response = await axiosInstance.get(`upcoming/${id}`);
     return response.data;
   }
 );
 
 export const addUpcoming = createAsyncThunk(
-  "Upcoming/addUpcoming",
+  "upcoming/addUpcoming",
   async (data: any) => {
-    const response = await axiosInstance.post(`Upcoming/`, data);
+    const response = await axiosInstance.post(`upcoming/`, data);
   }
 );
 
 export const deleteUpcoming = createAsyncThunk(
-  "Upcoming/deleteUpcoming",
+  "upcoming/deleteUpcoming",
   async (id: number) => {
-    const response = await axiosInstance.delete(`Upcoming/${id}`);
+    const response = await axiosInstance.delete(`upcoming/${id}`);
     return response.data;
   }
 );

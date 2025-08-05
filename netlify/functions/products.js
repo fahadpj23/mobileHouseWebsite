@@ -26,6 +26,7 @@ exports.handler = async (event, context) => {
     if (event.httpMethod === "GET") {
       // Check if there's an ID in the query parameters
       const productId = event.queryStringParameters?.id;
+      const seriesId = event.queryStringParameters?.seriesId;
 
       if (productId) {
         // GET BY ID - Get single product
@@ -41,6 +42,21 @@ exports.handler = async (event, context) => {
         return {
           statusCode: 200,
           body: JSON.stringify({ id: doc.id, ...doc.data() }),
+        };
+      } else if (seriesId) {
+        // GET BY SERIES ID - Get all products with matching seriesId
+        const snapshot = await productsCollection
+          .where("seriesId", "==", seriesId)
+          .get();
+
+        const products = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        return {
+          statusCode: 200,
+          body: JSON.stringify(products),
         };
       } else {
         // GET ALL - List all products

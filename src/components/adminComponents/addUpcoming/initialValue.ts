@@ -1,3 +1,3 @@
 export const initialValues = {
-  images: [],
+    image: "",
 };

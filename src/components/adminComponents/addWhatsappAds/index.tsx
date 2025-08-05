@@ -27,7 +27,7 @@ const AddBanner: FC<props> = ({
     // values.images.forEach((image: any) => {
     //   formData.append("images", image);
     // });
-
+    console.log(values);
     dispatch(addwhatsappAds(values));
   };
 

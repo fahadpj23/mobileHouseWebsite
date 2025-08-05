@@ -11,18 +11,30 @@ interface props {
 const ImageSlider: FC<props> = ({ bannerItems }) => {
   return (
     <div className="h-[50vw] md:h-[30vw] mt-3">
-      <Carousel
-        autoPlay={true}
-        showThumbs={false}
-        showIndicators={true}
-        infiniteLoop={true}
-        showStatus={false}
-        showArrows={false}
-      >
-        {bannerItems?.map((banner: any) =>
-          banner?.series ? (
-            <Link to={`series/${banner?.seriesId}`} key={banner?.id}>
-              <div className="relative">
+      {Array.isArray(bannerItems) ? (
+        <Carousel
+          autoPlay={true}
+          showThumbs={false}
+          showIndicators={true}
+          infiniteLoop={true}
+          showStatus={false}
+          showArrows={false}
+        >
+          {bannerItems?.map((banner: any) =>
+            banner?.seriesId ? (
+              <Link to={`series/${banner?.seriesId}`} key={banner?.id}>
+                <div className="relative">
+                  <div className="h-[50vw] md:h-[25vw] w-full  rounded-none md:rounded-xl  ">
+                    <ServerLazyImage
+                      src={banner?.image}
+                      alt="banner"
+                      fill={true}
+                    />
+                  </div>
+                </div>
+              </Link>
+            ) : (
+              <div key={banner?.id} className="relative">
                 <div className="h-[50vw] md:h-[25vw] w-full  rounded-none md:rounded-xl  ">
                   <ServerLazyImage
                     src={banner?.image}
@@ -31,16 +43,10 @@ const ImageSlider: FC<props> = ({ bannerItems }) => {
                   />
                 </div>
               </div>
-            </Link>
-          ) : (
-            <div key={banner?.id} className="relative">
-              <div className="h-[50vw] md:h-[25vw] w-full  rounded-none md:rounded-xl  ">
-                <ServerLazyImage src={banner?.image} alt="banner" fill={true} />
-              </div>
-            </div>
-          )
-        )}
-      </Carousel>
+            )
+          )}
+        </Carousel>
+      ) : null}
     </div>
   );
 };

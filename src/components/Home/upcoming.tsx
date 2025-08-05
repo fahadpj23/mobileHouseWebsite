@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { fetchUpcoming } from "store/slice/upcomingSlice";
-import { fetchNewArrivals } from "store/slice/newArrivalSlice";
+
 import LaunchBanner from "components/commonComponents/launchBanner";
 import { useEffect } from "react";
 
@@ -12,7 +12,7 @@ const Upcoming = () => {
     dispatch(fetchUpcoming());
   }, []);
 
-  return upcoming?.length ? (
+  return Array.isArray(upcoming) ? (
     <LaunchBanner title="upcoming Launches" BannerItems={upcoming} />
   ) : null;
 };

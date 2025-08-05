@@ -11,10 +11,9 @@ const SeriesList = () => {
   const { entities } = useAppSelector((state) => state.user.products);
 
   useEffect(() => {
-    seriesId && dispatch(fetchSeriesProducts(+seriesId));
+    seriesId && dispatch(fetchSeriesProducts(seriesId));
   }, [seriesId]);
   useEffect(() => {
-    console.log(entities);
     entities && setProductList(entities);
   }, [entities]);
 
