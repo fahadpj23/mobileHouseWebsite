@@ -27,6 +27,8 @@ exports.handler = async (event, context) => {
       // Check if there's an ID in the query parameters
       const productId = event.queryStringParameters?.id;
       const seriesId = event.queryStringParameters?.seriesId;
+      const newArrival = event.queryStringParameters?.newArrival;
+      const trendingPhone = event.queryStringParameters?.trendingPhone;
 
       if (productId) {
         // GET BY ID - Get single product
@@ -42,6 +44,55 @@ exports.handler = async (event, context) => {
         return {
           statusCode: 200,
           body: JSON.stringify({ id: doc.id, ...doc.data() }),
+        };
+      } else if (trendingPhone) {
+        const minRating = 4;
+
+        const snapshot = await productsCollection
+          .where("rating", ">", minRating) // or "avgRating"
+          .orderBy("rating", "desc") // Sort highest-rated first
+          .get();
+
+        const highRatedProducts = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        return {
+          statusCode: 200,
+          body: JSON.stringify(highRatedProducts),
+        };
+      } else if (newArrival) {
+        // GET UPCOMING PRODUCTS - Launch date within next 6 months
+        const currentDate = new Date();
+        const sixMonthsFromNow = new Date();
+        sixMonthsFromNow.setMonth(sixMonthsFromNow.getMonth() + 6);
+
+        // Format dates to match your string format (YYYY-MM-DD)
+        const formatDate = (date) => {
+          const year = date.getFullYear();
+          const month = String(date.getMonth() + 1).padStart(2, "0");
+          const day = String(date.getDate()).padStart(2, "0");
+          return `${year}-${month}-${day}`;
+        };
+
+        const currentDateStr = formatDate(currentDate);
+        const sixMonthsFromNowStr = formatDate(sixMonthsFromNow);
+
+        const snapshot = await productsCollection
+          .where("launchDate", ">=", currentDateStr)
+          .where("launchDate", "<=", sixMonthsFromNowStr)
+          .orderBy("launchDate", "asc")
+          .get();
+
+        const products = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        return {
+          statusCode: 200,
+          body: JSON.stringify(products),
         };
       } else if (seriesId) {
         // GET BY SERIES ID - Get all products with matching seriesId
