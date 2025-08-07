@@ -64,16 +64,14 @@ exports.handler = async (event, context) => {
         };
       } else if (newArrival) {
         // GET UPCOMING PRODUCTS - Launch date within next 6 months
+
         const currentDate = new Date();
         const sixMonthsFromNow = new Date();
         sixMonthsFromNow.setMonth(sixMonthsFromNow.getMonth() + 6);
 
         // Format dates to match your string format (YYYY-MM-DD)
         const formatDate = (date) => {
-          const year = date.getFullYear();
-          const month = String(date.getMonth() + 1).padStart(2, "0");
-          const day = String(date.getDate()).padStart(2, "0");
-          return `${year}-${month}-${day}`;
+          return date.toISOString().split("T")[0]; // Ensures YYYY-MM-DD in UTC
         };
 
         const currentDateStr = formatDate(currentDate);

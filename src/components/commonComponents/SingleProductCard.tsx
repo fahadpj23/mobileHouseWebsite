@@ -11,8 +11,8 @@ interface props {
 const SingleProductCard: FC<props> = ({ product }) => {
   const DiscountPercentage =
     Array.isArray(product?.variants) &&
-    ((product?.variants[0]?.mrp - product?.variants[0]?.price) /
-      ((product?.variants[0]?.mrp + product?.variants[0]?.price) / 2)) *
+    ((+product?.variants[0]?.mrp - +product?.variants[0]?.price) /
+      ((+product?.variants[0]?.mrp + +product?.variants[0]?.price) / 2)) *
       100;
 
   return (
@@ -22,7 +22,7 @@ const SingleProductCard: FC<props> = ({ product }) => {
           Array.isArray(product?.variants) && product?.variants[0]?.id
         }/${
           Array.isArray(product?.colors) && product?.colors[0]?.id
-        } /${encodeURIComponent(product?.productName)}`}
+        }/${encodeURIComponent(product?.productName)}`}
       >
         <div className=" p-3 md:p-6 flex flex-col space-y-2  bg-white relative rounded-md">
           <div className="flex justify-center bg-grayBackground rounded-md shadow-md p-2">

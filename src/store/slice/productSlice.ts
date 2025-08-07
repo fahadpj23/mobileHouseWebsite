@@ -85,9 +85,7 @@ export const getProductById = createAsyncThunk(
   "products/getProductById",
   async (id: string | number) => {
     const response = await axiosInstance.get(`products/,`, {
-      params: {
-        productId: id,
-      },
+      params: { id },
     });
     return response.data;
   }
@@ -122,7 +120,9 @@ export const getProductColors = createAsyncThunk(
 export const deleteProduct = createAsyncThunk(
   "products/deleteProduct",
   async (id: number) => {
-    const response = await axiosInstance.delete(`products/${id}`);
+    const response = await axiosInstance.delete(`products/`, {
+      params: { id },
+    });
     return response.data;
   }
 );
@@ -134,25 +134,17 @@ export const getProductByBrand = createAsyncThunk(
     return response.data;
   }
 );
-export const addproducts = createAsyncThunk(
+export const addproduct = createAsyncThunk(
   "products/addProduct",
   async (data: any) => {
-    const response = await axiosInstance.post(`products/`, data, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+    const response = await axiosInstance.post(`products/`, data);
   }
 );
 
 export const editProduct = createAsyncThunk(
   "products/editProduct",
-  async ({ data, editId }: { data: any; editId: number }) => {
-    const response = await axiosInstance.put(`products/${editId}`, data, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+  async (data) => {
+    const response = await axiosInstance.put(`products/`, data);
     return response.data; // Don't forget to return the data
   }
 );
@@ -169,7 +161,7 @@ const productSlice = createSlice({
         getProductById.fulfilled,
         (state, action: PayloadAction<any>) => {
           state.loading = false;
-          state.entity = action.payload[0];
+          state.entity = action.payload;
         }
       )
 
@@ -227,9 +219,13 @@ const productSlice = createSlice({
         state.loading = false;
         state.error = action.error.message || "Something went wrong";
       })
-      .addCase(addproducts.fulfilled, (state, action) => {
+      .addCase(addproduct.fulfilled, (state, action) => {
         state.loading = false;
         state.successMessage = "added SuccessFully";
+      })
+      .addCase(editProduct.fulfilled, (state, action) => {
+        state.loading = false;
+        state.successMessage = "product updated SuccessFully";
       })
       .addCase(deleteProduct.fulfilled, (state, action) => {
         state.loading = false;
@@ -240,7 +236,7 @@ const productSlice = createSlice({
           fetchProducts,
           getProductById,
           editProduct,
-          addproducts,
+          addproduct,
           getProductByBrand,
           getProductVariants,
           getProductColors,

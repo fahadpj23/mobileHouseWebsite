@@ -18,42 +18,23 @@ const SingleItem = () => {
   const navigate = useNavigate();
 
   const dispatch = useAppDispatch();
-  const { entity, colors, variants } = useAppSelector(
-    (state) => state.user.products
-  );
+  const { entity } = useAppSelector((state) => state.user.products);
   const [product, setProduct] = useState<any>(entity);
-  const [colorId, setColorId] = useState<any>(productColorId);
-  const [variantId, setVariantId] = useState<any>(productVariantId);
-  const [productColors, setProductColors] = useState<any>(colors ?? []);
-  const [productVariants, setProductVariants] = useState<any>(variants ?? []);
+  const [variantDetails, setVariantDetails] = useState<any>({});
+
+  const [selectedColorsDetails, setSelectedColorsDetails] = useState<any>({});
   const [isLoading, setIsLoading] = useState<any>(true);
   const { isMobile } = useScreenSize();
 
   useEffect(() => {
-    if (productId && productVariantId && productColorId) {
+    if (productId) {
       dispatch(getProductById(productId));
-      // dispatch(getProductVariants(productId));
-      // dispatch(getProductColors(productId));
     }
   }, [productId]);
 
   useEffect(() => {
     entity && setProduct(entity);
   }, [entity]);
-
-  useEffect(() => {
-    colors && setProductColors(colors);
-  }, [colors]);
-
-  useEffect(() => {
-    if (productId) {
-      dispatch(getProductById(productId));
-    }
-  }, [colorId, variantId, productId]);
-
-  useEffect(() => {
-    variants && setProductVariants(variants);
-  }, [variants]);
 
   const handleWhatapp = (product: any) => {
     const phoneNumber = "8304830868";
@@ -79,19 +60,19 @@ const SingleItem = () => {
 
   const handleColor = (id: number) => {
     setIsLoading(true);
-    setColorId(id);
+    // setColorId(id);
     navigate(
-      `/phone/${product?.id}/${
-        product?.variants[0]?.id
-      }/${id} /${encodeURIComponent(product?.productName)}`
+      `/phone/${product?.id}/${productVariantId}/${id}/${encodeURIComponent(
+        product?.productName
+      )}`
     );
   };
 
   const handleVariant = (id: number) => {
+    // setVariantId(id);
     setIsLoading(true);
-    setVariantId(id);
     navigate(
-      `/phone/${productId}/${colorId}/${variantId} /${encodeURIComponent(
+      `/phone/${productId}/${id}/${productColorId}/${encodeURIComponent(
         product?.productName
       )}`
     );
@@ -109,6 +90,28 @@ const SingleItem = () => {
     );
   };
 
+  useEffect(() => {
+    if (product && productColorId && Array.isArray(product?.colors)) {
+      const colorValue = productColorId;
+      const colorInfo = product?.colors.find(
+        (color: any) => color.id === colorValue
+      );
+      setSelectedColorsDetails(colorInfo);
+    }
+  }, [productColorId, productId, product]);
+
+  useEffect(() => {
+    if (product && productVariantId && Array.isArray(product?.variants)) {
+      const variantInfo = product?.variants.find(
+        (variant: any) => variant.id === productVariantId
+      );
+      setVariantDetails(variantInfo);
+    }
+  }, [productId, productVariantId, product]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="block md:flex items-center ">
       {isLoading && (
@@ -122,12 +125,16 @@ const SingleItem = () => {
             <div className=" flex flex-col justify-center items-center ">
               <div className=" p-3 w-screen mb-3 flex justify-center ">
                 {isMobile && Array.isArray(product?.colors) ? (
-                  <ProductImageSlider productImages={product?.colors[0]} />
+                  <ProductImageSlider productImages={selectedColorsDetails} />
                 ) : (
                   <div className="w-[80vw] h-[50vh] md:w-[30vw] md:h-[30vw] flex justify-center items-center   ">
                     <div className="w-full h-full ">
                       <ServerLazyImage
-                        src={product?.image}
+                        src={
+                          selectedColorsDetails &&
+                          Array.isArray(selectedColorsDetails?.values) &&
+                          selectedColorsDetails?.values[0]
+                        }
                         alt={`${product?.name} Image `}
                       />
                     </div>
@@ -136,7 +143,7 @@ const SingleItem = () => {
               </div>
               <div className="flex space-x-3 justify-center w-full ">
                 {!isMobile &&
-                  product?.colors[0]?.values?.map((image: any) => {
+                  selectedColorsDetails?.values?.map((image: any) => {
                     return (
                       <button
                         key={image}
@@ -157,26 +164,27 @@ const SingleItem = () => {
                 <span>
                   {product?.productName && toPascalCase(product?.productName)}
                 </span>
-                <span>{product?.variants[0].ram}/</span>
-                <span>{product?.variants[0].storage}</span>
+                <span>{variantDetails?.ram}/</span>
+                <span>{variantDetails?.storage}</span>
                 <span>
-                  {product?.colors[0]?.name &&
-                    toPascalCase(product?.colors[0]?.name)}
+                  {selectedColorsDetails?.name &&
+                    toPascalCase(selectedColorsDetails?.name)}
                 </span>
               </h1>
               <div className="flex items-center space-x-2 text-base">
                 <h1 className="font-semibold   tracking-wide text-[16px]">
-                  ₹{product.variants[0].price}.00
+                  ₹{variantDetails?.price}.00
                 </h1>
 
                 <h1 className="line-through text-gray-500 text-xs">
-                  MRP: ₹{product.variants[0].mrp}
+                  MRP: ₹{variantDetails?.mrp}
                 </h1>
                 <h1 className=" text-[#11a453] text-[18px] rounded p-1 font-semibold  text-sm md:text-base">
                   {product &&
+                    variantDetails &&
                     getDiscountPercentage(
-                      product.variants[0].price,
-                      product.variants[0].mrp
+                      +variantDetails?.price,
+                      +variantDetails?.mrp
                     )}
                   % off
                 </h1>
@@ -233,12 +241,12 @@ const SingleItem = () => {
                 </div>
               ) : null}
               <div className="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-4 py-3 ml-2 mt-5 text-center">
-                {productVariants?.map((variant: any) => (
+                {product?.variants?.map((variant: any) => (
                   <button
                     key={variant?.id}
                     onClick={() => handleVariant(variant?.id)}
                     className={`p-1 border ${
-                      product?.variants[0]?.id === variant?.id
+                      productVariantId === variant?.id
                         ? "border-2 border-blue-500"
                         : "border border-gray-400"
                     } text-[12px] rounded-xs`}
@@ -269,7 +277,7 @@ const SingleItem = () => {
                   {displaySpecification("OS", product?.os)}
                   {displaySpecification(
                     "RAM | Storage",
-                    `${product?.variants[0].ram} | ${product?.variants[0].storage}`
+                    `${variantDetails?.ram} Gb | ${variantDetails?.storage} Gb`
                   )}
                 </div>
                 {product?.description && (

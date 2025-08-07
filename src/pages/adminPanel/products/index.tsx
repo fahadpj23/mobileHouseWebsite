@@ -33,7 +33,8 @@ const Products = () => {
 
   useEffect(() => {
     if (successMessage) {
-      handleForm();
+      setIsAddModalOpen(false);
+      setIsEdit(false);
       showToast(successMessage);
       dispatch(fetchProducts());
     }

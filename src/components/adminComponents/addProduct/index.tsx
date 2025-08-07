@@ -1,6 +1,6 @@
 import { FC, useEffect } from "react";
 
-import { addproducts, editProduct } from "store/slice/productSlice";
+import { addproduct, editProduct } from "store/slice/productSlice";
 import { useAppDispatch } from "hooks/useRedux";
 import DynamicForm from "../dynamicForm";
 import axios from "axios";
@@ -25,16 +25,8 @@ const AddProduct: FC<props> = ({
 
   const handleSubmit = async (values: typeof initialValues) => {
     try {
-      const productData = values;
-
-      const url = "/.netlify/functions/products";
-      const method = editId ? "PUT" : "POST";
-      const response = await axios({
-        method,
-        url,
-        data: productData,
-      });
-      // handleImageUpload(values?.colors);
+      if (editId) dispatch(editProduct(values));
+      else dispatch(addproduct(values));
     } catch (error) {
       console.error("Error saving product:", error);
     } finally {
