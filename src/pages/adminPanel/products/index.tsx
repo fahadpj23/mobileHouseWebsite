@@ -74,12 +74,12 @@ const Products = () => {
       )}
       {(isAddModalOpen || isEdit) && (
         <AddProduct
-          handleForm={handleForm}
-          isAddModalOpen={isAddModalOpen || isEdit}
-          formFields={formFields}
-          validationSchema={validationSchema}
-          initialValues={values}
-          editId={editId}
+        // handleForm={handleForm}
+        // isAddModalOpen={isAddModalOpen || isEdit}
+        // formFields={formFields}
+        // validationSchema={validationSchema}
+        // initialValues={values}
+        // editId={editId}
         />
       )}
     </div>
