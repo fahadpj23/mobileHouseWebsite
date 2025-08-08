@@ -3,7 +3,22 @@
   publish = "build"
   functions = "netlify/functions"
 
+[dev]
+  framework = "#custom"
+  command = "npm run start"
+  targetPort = 3000
+
+
+
+# Single page app fallback (for React Router)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Headers for CORS and caching
+[[headers]]
+  for = "/.netlify/functions/get-image"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=31536000, immutable"
