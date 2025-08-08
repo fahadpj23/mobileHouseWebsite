@@ -137,7 +137,11 @@ export const getProductByBrand = createAsyncThunk(
 export const addproduct = createAsyncThunk(
   "products/addProduct",
   async (data: any) => {
-    const response = await axiosInstance.post(`products/`, data);
+    const response = await axiosInstance.post(`add-product/`, data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
   }
 );
 

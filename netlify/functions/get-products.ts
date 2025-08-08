@@ -28,48 +28,51 @@ export const handler: Handler = async () => {
     });
 
     const { blobs } = await productStore.list();
-    const products: Product[] = [];
 
-    for (const blob of blobs) {
-      try {
-        // Only get JSON from product store
-        const product = (await productStore.get(blob.key, {
-          type: "json",
-        })) as Product;
+    // Process products in parallel with Promise.all
+    const products = await Promise.all(
+      blobs.map(async (blob) => {
+        try {
+          const product = (await productStore.get(blob.key, {
+            type: "json",
+          })) as Product;
+          if (!product) return null;
 
-        if (product) {
-          // Verify images exist without loading binary data
-          const images = await Promise.all(
-            product.imageKeys.map(async (key) => {
-              const exists = await imageStore.getMetadata(key);
-              return {
-                url: `/.netlify/functions/get-image?key=${key}`,
-                altText: product.name,
-              };
-            })
+          // Check all image metadata in parallel
+          const imageChecks = await Promise.all(
+            product.imageKeys.map((key) => imageStore.getMetadata(key))
           );
 
-          products.push({
+          const images = imageChecks.map((_, index) => ({
+            url: `/.netlify/functions/get-image?key=${product.imageKeys[index]}`,
+            altText: product.name,
+          }));
+
+          return {
             ...product,
             id: blob.key,
             images,
-          });
+          };
+        } catch (error) {
+          console.error(`Error processing product ${blob.key}:`, error);
+          return null;
         }
-      } catch (error) {
-        console.error(`Error processing product ${blob.key}:`, error);
-        continue;
-      }
-    }
+      })
+    );
+
+    // Filter out null values from failed processing
+    const validProducts = products.filter(Boolean) as Product[];
 
     return {
       statusCode: 200,
-      body: JSON.stringify(products),
+      body: JSON.stringify(validProducts),
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
     };
   } catch (error) {
+    console.error("Error in get-products:", error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: "Failed to fetch products" }),
