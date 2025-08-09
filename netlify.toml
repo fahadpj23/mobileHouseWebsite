@@ -7,23 +7,15 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
+  
 [[redirects]]
   from = "/blobs/*"
-  to = "/.netlify/functions/products"
+  to = "/.netlify/functions/products?blob=:splat"
   status = 200
   force = true
 
 [[headers]]
   for = "/blobs/*"
   [headers.values]
-    Access-Control-Allow-Origin = "*"
     Cache-Control = "public, max-age=31536000, immutable"
-    Content-Security-Policy = "default-src 'self'; img-src 'self' data: blob:;"
-
-[[headers]]
-  for = "/.netlify/functions/*"
-  [headers.values]
     Access-Control-Allow-Origin = "*"
-    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
-    Access-Control-Allow-Headers = "Content-Type, Authorization"

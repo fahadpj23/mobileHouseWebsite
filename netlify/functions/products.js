@@ -34,108 +34,8 @@ const getBlobStore = (storeName) => {
 const store = getBlobStore("product-images");
 const productsCollection = db.collection("products");
 
-exports.handler = async (event, context, req) => {
+exports.handler = async (event, context) => {
   try {
-    // GET - List all products
-    // if (event.httpMethod === "GET") {
-    //   // Check if there's an ID in the query parameters
-    //   const productId = event.queryStringParameters?.id;
-    //   const seriesId = event.queryStringParameters?.seriesId;
-    //   const newArrival = event.queryStringParameters?.newArrival;
-    //   const trendingPhone = event.queryStringParameters?.trendingPhone;
-
-    //   if (productId) {
-    //     // GET BY ID - Get single product
-    //     const doc = await productsCollection.doc(productId).get();
-
-    //     if (!doc.exists) {
-    //       return {
-    //         statusCode: 404,
-    //         body: JSON.stringify({ error: "Product not found" }),
-    //       };
-    //     }
-
-    //     return {
-    //       statusCode: 200,
-    //       body: JSON.stringify({ id: doc.id, ...doc.data() }),
-    //     };
-    //   } else if (trendingPhone) {
-    //     const minRating = 4;
-
-    //     const snapshot = await productsCollection
-    //       .where("rating", ">", minRating) // or "avgRating"
-    //       .orderBy("rating", "desc") // Sort highest-rated first
-    //       .get();
-
-    //     const highRatedProducts = snapshot.docs.map((doc) => ({
-    //       id: doc.id,
-    //       ...doc.data(),
-    //     }));
-
-    //     return {
-    //       statusCode: 200,
-    //       body: JSON.stringify(highRatedProducts),
-    //     };
-    //   } else if (newArrival) {
-    //     // GET UPCOMING PRODUCTS - Launch date within next 6 months
-
-    //     const currentDate = new Date();
-    //     const sixMonthsFromNow = new Date();
-    //     sixMonthsFromNow.setMonth(sixMonthsFromNow.getMonth() + 6);
-
-    //     // Format dates to match your string format (YYYY-MM-DD)
-    //     const formatDate = (date) => {
-    //       return date.toISOString().split("T")[0]; // Ensures YYYY-MM-DD in UTC
-    //     };
-
-    //     const currentDateStr = formatDate(currentDate);
-    //     const sixMonthsFromNowStr = formatDate(sixMonthsFromNow);
-
-    //     const snapshot = await productsCollection
-    //       .where("launchDate", ">=", currentDateStr)
-    //       .where("launchDate", "<=", sixMonthsFromNowStr)
-    //       .orderBy("launchDate", "asc")
-    //       .get();
-
-    //     const products = snapshot.docs.map((doc) => ({
-    //       id: doc.id,
-    //       ...doc.data(),
-    //     }));
-
-    //     return {
-    //       statusCode: 200,
-    //       body: JSON.stringify(products),
-    //     };
-    //   } else if (seriesId) {
-    //     // GET BY SERIES ID - Get all products with matching seriesId
-    //     const snapshot = await productsCollection
-    //       .where("seriesId", "==", seriesId)
-    //       .get();
-
-    //     const products = snapshot.docs.map((doc) => ({
-    //       id: doc.id,
-    //       ...doc.data(),
-    //     }));
-
-    //     return {
-    //       statusCode: 200,
-    //       body: JSON.stringify(products),
-    //     };
-    //   } else {
-    //     // GET ALL - List all products
-    //     const snapshot = await productsCollection.get();
-    //     const products = snapshot.docs.map((doc) => ({
-    //       id: doc.id,
-    //       ...doc.data(),
-    //     }));
-
-    //     return {
-    //       statusCode: 200,
-    //       body: JSON.stringify(products),
-    //     };
-    //   }
-    // }
-    // GET - Handle all product requests
     if (event.httpMethod === "GET") {
       // Handle image requests
       if (event.path.includes("/blobs/")) {
@@ -183,6 +83,50 @@ exports.handler = async (event, context, req) => {
         statusCode: 200,
         body: JSON.stringify(products),
       };
+    }
+    // Handle image requests
+    if (event.path.includes("/blobs/") || event.queryStringParameters.blob) {
+      const blobId = event.path.includes("/blobs/")
+        ? event.path.split("/blobs/")[1]
+        : event.queryStringParameters.blob;
+
+      try {
+        const { data, metadata } = await store.getWithMetadata(blobId);
+
+        if (!data) {
+          return {
+            statusCode: 404,
+            body: "Image not found",
+          };
+        }
+
+        // Determine content type from metadata or file extension
+        let contentType = metadata?.contentType;
+        if (!contentType) {
+          const extension = blobId.split(".").pop().toLowerCase();
+          contentType =
+            extension === "png"
+              ? "image/png"
+              : extension === "gif"
+              ? "image/gif"
+              : "image/jpeg"; // default to jpeg
+        }
+
+        return {
+          statusCode: 200,
+          headers: {
+            "Content-Type": contentType,
+            "Cache-Control": "public, max-age=31536000, immutable",
+          },
+          body: data.toString("base64"),
+          isBase64Encoded: true,
+        };
+      } catch (error) {
+        return {
+          statusCode: 500,
+          body: JSON.stringify({ error: error.message }),
+        };
+      }
     }
     // POST - Create new product
     if (event.httpMethod === "POST") {
