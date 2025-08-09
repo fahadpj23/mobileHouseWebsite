@@ -1,5 +1,10 @@
-const { v4: uuidv4 } = require("uuid");
+const { getStore } = require("@netlify/blobs");
+const { getFirestore, collection, addDoc } = require("firebase/firestore");
+const { initializeApp } = require("firebase/app");
+const { parse } = require("lambda-multipart-parser");
 const admin = require("firebase-admin");
+// const { v4: uuidv4 } = require("uuid");
+// const admin = require("firebase-admin");
 
 // Initialize Firebase if not already initialized
 if (!admin.apps.length) {
@@ -17,10 +22,19 @@ if (!admin.apps.length) {
   });
 }
 
-const db = admin.firestore();
+const db = admin.firestore(); // Correct Firestore instance
+const getBlobStore = (storeName) => {
+  return getStore({
+    name: "product-images",
+    siteID: "cd343d69-cc85-4f10-8147-8d45480dc62e",
+    token: "nfp_LpuPMgwQym2qkcfG3YsbV2i5akyFT1jz37ad",
+    consistency: "strong",
+  });
+};
+const store = getBlobStore("product-images");
 const productsCollection = db.collection("products");
 
-exports.handler = async (event, context) => {
+exports.handler = async (event, context, req) => {
   try {
     // GET - List all products
     if (event.httpMethod === "GET") {
@@ -124,19 +138,57 @@ exports.handler = async (event, context) => {
 
     // POST - Create new product
     if (event.httpMethod === "POST") {
-      const newProduct = JSON.parse(event.body);
-      const productId = uuidv4();
-      const productData = {
-        ...newProduct,
-        createdAt: admin.firestore.FieldValue.serverTimestamp(),
-        updatedAt: admin.firestore.FieldValue.serverTimestamp(),
-      };
+      const result = await parse(event);
 
-      await productsCollection.doc(productId).set(productData);
+      // Extract all fields from the form data
+      const { productName, colors, variants, ...otherFields } = result;
+
+      // Get the files from the parsed result
+      const files = result.files || [];
+
+      // Create a mapping of field names to their files
+      const fileMap = {};
+      files.forEach((file) => {
+        fileMap[file.fieldname] = file;
+      });
+
+      // Process colors - now contains references to file fields
+      const colorData = JSON.parse(colors);
+      const processedColors = await Promise.all(
+        colorData.map(async (color) => {
+          const imageUrls = await Promise.all(
+            color.images.map(async (imageFieldRef, index) => {
+              const file = fileMap[imageFieldRef]; // Get the actual file using the reference
+              if (!file) {
+                throw new Error(`File not found for field: ${imageFieldRef}`);
+              }
+
+              const blobId = `${color.name.toLowerCase()}-${Date.now()}-${index}.jpg`;
+              await store.set(blobId, file.content, {
+                metadata: { contentType: file.contentType },
+              });
+              return `/blobs/${blobId}`;
+            })
+          );
+          return { ...color, images: imageUrls };
+        })
+      );
+
+      // Save product to Firestore
+      const productRef = await productsCollection.add({
+        productName: productName,
+        variants: JSON.parse(variants),
+        ...otherFields,
+        colors: processedColors,
+        createdAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
 
       return {
-        statusCode: 201,
-        body: JSON.stringify({ id: productId, ...productData }),
+        statusCode: 200,
+        body: JSON.stringify({
+          id: productRef,
+          message: "Product created successfully",
+        }),
       };
     }
 
@@ -147,7 +199,7 @@ exports.handler = async (event, context) => {
 
       await productRef.update({
         ...updatedProduct,
-        updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+        // updatedAt: admin.firestore.FieldValue.serverTimestamp(),
       });
 
       const updatedDoc = await productRef.get();
