@@ -53,22 +53,6 @@ const Products = () => {
   };
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get("/.netlify/functions/get-products");
-        console.log(response.data);
-      } catch (err) {
-        console.log("Failed to load products");
-        console.error("Error fetching products:", err);
-      } finally {
-        console.log(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
-  useEffect(() => {
     if (entity !== null && entity?.id) {
       setValues(entity);
       setIsEdit(true);

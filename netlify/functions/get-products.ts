@@ -32,51 +32,21 @@ interface Product {
 export const handler: Handler = async () => {
   try {
     // Initialize Netlify Blob store just for images
-    const imageStore = getStore({
-      name: "product-images",
-      siteID: "cd343d69-cc85-4f10-8147-8d45480dc62e",
-      token: "nfp_LpuPMgwQym2qkcfG3YsbV2i5akyFT1jz37ad",
-      consistency: "strong",
-    });
 
     // Get products from Firestore
-    const productsSnapshot = await db.collection("products").get();
+    const productsRef = db.collection("products");
+    const snapshot = await productsRef.get();
+    const products: any = [];
 
-    // Process products in parallel with Promise.all
-    const products = await Promise.all(
-      productsSnapshot.docs.map(async (doc) => {
-        try {
-          const product = doc.data() as Product;
-          if (!product || !product.imageKeys) return null;
-
-          // Check all image metadata in parallel
-          const imageChecks = await Promise.all(
-            product.imageKeys.map((key) => imageStore.getMetadata(key))
-          );
-
-          const images = imageChecks.map((_, index) => ({
-            url: `/.netlify/functions/get-image?key=${product.imageKeys[index]}`,
-            altText: product.name,
-          }));
-
-          return {
-            ...product,
-            id: doc.id, // Use Firebase document ID
-            images,
-          };
-        } catch (error) {
-          console.error(`Error processing product ${doc.id}:`, error);
-          return null;
-        }
-      })
-    );
-
-    // Filter out null values from failed processing
-    const validProducts = products.filter(Boolean) as Product[];
-
+    snapshot.forEach((doc) => {
+      products.push({
+        id: doc.id,
+        ...doc.data(),
+      });
+    });
     return {
       statusCode: 200,
-      body: JSON.stringify(validProducts),
+      body: JSON.stringify(products),
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",

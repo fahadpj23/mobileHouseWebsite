@@ -21,13 +21,12 @@ const AddBanner: FC<props> = ({
 }) => {
   const dispatch = useAppDispatch();
   const handleSubmit = (values: typeof initialValues) => {
-    // const formData = new FormData();
-    // formData.append("seriesId", values.seriesId);
-    // formData.append("image", values.image);
-    // values.images.forEach((image: any) => {
-    //   formData.append("images", image);
-    // });
-    dispatch(addUpcoming(values));
+    const formData = new FormData();
+    formData.append("seriesId", values.seriesId);
+    values.image.forEach((image: any) => {
+      formData.append("images", image);
+    });
+    dispatch(addUpcoming(formData));
   };
 
   return (

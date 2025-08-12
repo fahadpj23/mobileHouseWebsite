@@ -44,7 +44,11 @@ export const getUpcomingById = createAsyncThunk(
 export const addUpcoming = createAsyncThunk(
   "upcoming/addUpcoming",
   async (data: any) => {
-    const response = await axiosInstance.post(`upcoming/`, data);
+    const response = await axiosInstance.post(`upcoming/`, data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
   }
 );
 

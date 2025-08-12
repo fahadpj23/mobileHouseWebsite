@@ -40,17 +40,46 @@ export const handler: Handler = async (event: any) => {
 
   try {
     const { files, ...fields } = await parse(event);
+    const colors = JSON.parse(fields.colors);
 
-    // Store images and get keys
-    const imageKeys = await Promise.all(
-      files.map(async (file: any) => {
-        const key = `img-${Date.now()}-${file.filename.replace(/\s+/g, "-")}`;
+    // Track which files we've processed
+    let fileIndex = 0;
+
+    // Process each color variant and assign images
+    for (const color of colors) {
+      if (!color.images) color.images = [];
+
+      // Assign the next set of files to this color
+      const imagesForColor = color.images || [];
+      for (
+        let i = 0;
+        i < imagesForColor.length && fileIndex < files.length;
+        i++
+      ) {
+        const file: any = files[fileIndex];
+        const key = `img-${Date.now()}-${color.name}-${file.filename.replace(
+          /\s+/g,
+          "-"
+        )}`;
+
         await imageStore.set(key, file.content, {
-          metadata: { contentType: file.contentType },
+          metadata: {
+            contentType: file.contentType,
+            color: color.name,
+            productName: fields.productName,
+          },
         });
-        return key;
-      })
-    );
+
+        imagesForColor[i] = {
+          url: `/.netlify/functions/get-image?key=${key}`,
+          key: key,
+          altText: `${fields.productName} - ${color.name}`,
+        };
+
+        fileIndex++;
+      }
+      color.images = imagesForColor;
+    }
 
     // Create product data for Firestore
     const productData = {
@@ -59,7 +88,7 @@ export const handler: Handler = async (event: any) => {
       variants: JSON.parse(fields.variants),
       seriesId: fields.seriesId,
       description: fields.description,
-      rating: fields.rating,
+      rating: parseFloat(fields.rating),
       display: fields.display,
       frontCamera: fields.frontCamera,
       rearCamera: fields.rearCamera,
@@ -67,10 +96,9 @@ export const handler: Handler = async (event: any) => {
       battery: fields.battery,
       os: fields.os,
       processor: fields.processor,
-      colors: JSON.parse(fields.colors),
+      colors: colors, // Updated colors with image keys
       category: fields.category,
       networkType: fields.networkType,
-      imageKeys, // Store references to images
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
     };

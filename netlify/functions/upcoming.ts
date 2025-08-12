@@ -1,5 +1,7 @@
-const { v4: uuidv4 } = require("uuid");
-const admin = require("firebase-admin");
+import { Handler } from "@netlify/functions";
+import { getStore } from "@netlify/blobs";
+import { parse } from "lambda-multipart-parser";
+import admin from "firebase-admin";
 
 // Initialize Firebase if not already initialized
 if (!admin.apps.length) {
@@ -16,6 +18,13 @@ if (!admin.apps.length) {
     }),
   });
 }
+
+const imageStore = getStore({
+  name: "product-image",
+  siteID: "cd343d69-cc85-4f10-8147-8d45480dc62e",
+  token: "nfp_LpuPMgwQym2qkcfG3YsbV2i5akyFT1jz37ad",
+  consistency: "strong",
+});
 
 const db = admin.firestore();
 const upcomingCollection = db.collection("upcoming");
@@ -59,20 +68,47 @@ exports.handler = async (event, context) => {
 
     // POST - Create new upcoming
     if (event.httpMethod === "POST") {
-      const newupcoming = JSON.parse(event.body);
-      const upcomingId = uuidv4();
-      const upcomingData = {
-        ...newupcoming,
-        createdAt: admin.firestore.FieldValue.serverTimestamp(),
-        updatedAt: admin.firestore.FieldValue.serverTimestamp(),
-      };
+      try {
+        const { files, seriesId } = await parse(event);
 
-      await upcomingCollection.doc(upcomingId).set(upcomingData);
+        // Store images and get keys
+        const file: any = files[0];
+        const key = `img-${Date.now()}-${file.filename.replace(/\s+/g, "-")}`;
 
-      return {
-        statusCode: 201,
-        body: JSON.stringify({ id: upcomingId, ...upcomingData }),
-      };
+        await imageStore.set(key, file.content, {
+          metadata: {
+            contentType: file.contentType,
+          },
+        });
+
+        // Create product data for Firestore
+        const productData = {
+          seriesId,
+          image: `/.netlify/functions/get-image?key=${key}`,
+          createdAt: admin.firestore.FieldValue.serverTimestamp(),
+          updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+        };
+
+        // Add product to Firestore
+        const docRef = await db.collection("upcoming").add(productData);
+
+        return {
+          statusCode: 200,
+          body: JSON.stringify({
+            message: " added successfully",
+            productId: docRef.id,
+          }),
+        };
+      } catch (error) {
+        console.error("Error adding :", error);
+        return {
+          statusCode: 500,
+          body: JSON.stringify({
+            error: "Error adding ",
+            details: error.message,
+          }),
+        };
+      }
     }
 
     // PUT - Update upcoming
