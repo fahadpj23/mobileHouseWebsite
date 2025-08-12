@@ -12,7 +12,7 @@ export const handler: Handler = async (event) => {
   if (!key) return { statusCode: 400 };
   const getBlobStore = (storeName: string) => {
     return getStore({
-      name: "product-images",
+      name: "product-image",
       siteID: "cd343d69-cc85-4f10-8147-8d45480dc62e",
       token: "nfp_LpuPMgwQym2qkcfG3YsbV2i5akyFT1jz37ad",
       consistency: "strong",
@@ -20,7 +20,7 @@ export const handler: Handler = async (event) => {
   };
 
   try {
-    const store = getBlobStore("product-images");
+    const store = getBlobStore("product-image");
     const [imageData, metadataResult] = await Promise.all([
       store.get(key, { type: "arrayBuffer" }),
       store.getWithMetadata(key),

@@ -49,7 +49,7 @@ export const fetchSeriesProducts = createAsyncThunk(
 export const fetchProducts = createAsyncThunk(
   "products/fetchProduct",
   async () => {
-    const response = await axiosInstance.get(`products/`);
+    const response = await axiosInstance.get(`get-products/`);
     return response.data;
   }
 );

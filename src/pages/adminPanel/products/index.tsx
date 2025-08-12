@@ -31,14 +31,14 @@ const Products = () => {
     dispatch(fetchProducts());
   }, []);
 
-  useEffect(() => {
-    if (successMessage) {
-      setIsAddModalOpen(false);
-      setIsEdit(false);
-      showToast(successMessage);
-      dispatch(fetchProducts());
-    }
-  }, [successMessage]);
+  // useEffect(() => {
+  //   if (successMessage) {
+  //     setIsAddModalOpen(false);
+  //     setIsEdit(false);
+  //     showToast(successMessage);
+  //     dispatch(fetchProducts());
+  //   }
+  // }, [successMessage]);
 
   const handleForm = () => setIsAddModalOpen(!isAddModalOpen);
 

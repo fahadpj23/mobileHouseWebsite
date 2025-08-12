@@ -1,24 +1,25 @@
-[build]
-  command = "npm run build"
-  publish = "build"
-  functions = "netlify/functions"
-
-[dev]
-  framework = "#custom"
-  command = "npm run start"
-  targetPort = 3000
-
-
-
-# Single page app fallback (for React Router)
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/product-images/*"
+  to = "/.netlify/functions/get-image?key=:splat"
   status = 200
+  force = true
 
-# Headers for CORS and caching
+# For direct blob access (if needed)
+[[redirects]]
+  from = "/blobs/*"
+  to = "/.netlify/blobs/:splat"
+  status = 200
+  force = true
+
+# Image transformations
+[[redirects]]
+  from = "/_image"
+  to = "/.netlify/image"
+  status = 200
+  force = true
+
 [[headers]]
-  for = "/.netlify/functions/get-image"
+  for = "/product-images/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Cache-Control = "public, max-age=31536000, immutable"
