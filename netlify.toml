@@ -4,6 +4,11 @@
   status = 200
   force = true
 
+ [[redirects]]
+    from = "/*"
+    to = "/"
+    status = 200 
+
 # For direct blob access (if needed)
 [[redirects]]
   from = "/blobs/*"

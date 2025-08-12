@@ -92,13 +92,7 @@ export const formFields: ProductFormField[] = [
     required: true,
     validation: Yup.string().required("android Version is required"),
   },
-  {
-    name: "image",
-    label: "Image",
-    type: "text",
-    required: true,
-    validation: Yup.string().required("image Version is required"),
-  },
+
   {
     name: "processor",
     label: "Processor",
