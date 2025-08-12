@@ -14,7 +14,7 @@ const SingleProductCard: FC<props> = ({ product }) => {
     ((+product?.variants[0]?.mrp - +product?.variants[0]?.price) /
       ((+product?.variants[0]?.mrp + +product?.variants[0]?.price) / 2)) *
       100;
-
+  console.log(product?.colors[0]?.images[0]?.url);
   return (
     <>
       <Link
@@ -27,7 +27,10 @@ const SingleProductCard: FC<props> = ({ product }) => {
         <div className=" p-3 md:p-6 flex flex-col space-y-2  bg-white relative rounded-md">
           <div className="flex justify-center bg-grayBackground rounded-md shadow-md p-2">
             <div className="w-full h-[150px]  md:h-[170px] object-contain">
-              <LazyImage src={product?.image} alt="Product Image" />
+              <LazyImage
+                src={product?.colors[0]?.images[0]?.url}
+                alt="Product Image"
+              />
             </div>
           </div>
           <div className="flex flex-col space-y-1">

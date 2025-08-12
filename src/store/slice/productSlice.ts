@@ -39,7 +39,7 @@ const initialState: UserState = {
 export const fetchSeriesProducts = createAsyncThunk(
   "products/getSeriesProduct",
   async (seriesId: string) => {
-    const response = await axiosInstance.get(`products/,`, {
+    const response = await axiosInstance.get(`get-product-by-series/,`, {
       params: { seriesId },
     });
     return response.data;
@@ -84,7 +84,7 @@ export const getTrendingPhone = createAsyncThunk(
 export const getProductById = createAsyncThunk(
   "products/getProductById",
   async (id: string | number) => {
-    const response = await axiosInstance.get(`products/,`, {
+    const response = await axiosInstance.get(`get-product-by-id/,`, {
       params: { id },
     });
     return response.data;
