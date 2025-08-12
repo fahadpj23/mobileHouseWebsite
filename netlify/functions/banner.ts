@@ -27,26 +27,26 @@ const imageStore = getStore({
 });
 
 const db = admin.firestore();
-const upcomingCollection = db.collection("upcoming");
+const bannerCollection = db.collection("banner");
 
 exports.handler = async (event, context) => {
   try {
-    // GET - List all upcoming
+    // GET - List all banner
     if (event.httpMethod === "GET") {
       try {
         // Get products from Firestore
-        const snapshot = await upcomingCollection.get();
-        const upcoming: any = [];
+        const snapshot = await bannerCollection.get();
+        const banner: any = [];
 
         snapshot.forEach((doc) => {
-          upcoming.push({
+          banner.push({
             id: doc.id,
             ...doc.data(),
           });
         });
         return {
           statusCode: 200,
-          body: JSON.stringify(upcoming),
+          body: JSON.stringify(banner),
           headers: {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
@@ -61,7 +61,7 @@ exports.handler = async (event, context) => {
       }
     }
 
-    // POST - Create new upcoming
+    // POST - Create new banner
     if (event.httpMethod === "POST") {
       try {
         const { files, seriesId } = await parse(event);
@@ -85,7 +85,7 @@ exports.handler = async (event, context) => {
         };
 
         // Add product to Firestore
-        const docRef = await db.collection("upcoming").add(productData);
+        const docRef = await db.collection("banner").add(productData);
 
         return {
           statusCode: 200,
@@ -106,12 +106,12 @@ exports.handler = async (event, context) => {
       }
     }
 
-    // DELETE - Remove upcoming
+    // DELETE - Remove banner
     if (event.httpMethod === "DELETE") {
       let id = event.path.split("/").pop();
 
       // If no ID in path, try to get from body
-      if (!id || id === "upcoming") {
+      if (!id || id === "banner") {
         const body = event.body ? JSON.parse(event.body) : {};
         id = body.id;
       }
@@ -122,8 +122,8 @@ exports.handler = async (event, context) => {
           body: JSON.stringify({ error: "Missing ID parameter" }),
         };
       }
-      const upcomingRef = db.collection("upcoming").doc(id);
-      const docSnapshot = await upcomingRef.get();
+      const bannerRef = db.collection("banner").doc(id);
+      const docSnapshot = await bannerRef.get();
 
       if (!docSnapshot.exists) {
         return {
@@ -133,12 +133,12 @@ exports.handler = async (event, context) => {
       }
 
       // Delete the document
-      await upcomingRef.delete();
+      await bannerRef.delete();
 
       return {
         statusCode: 200,
         body: JSON.stringify({
-          message: "Upcoming item deleted successfully",
+          message: "banner item deleted successfully",
           id: id,
         }),
       };

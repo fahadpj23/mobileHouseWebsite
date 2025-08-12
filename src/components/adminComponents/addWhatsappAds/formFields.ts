@@ -5,7 +5,7 @@ export const formFields: BannerFormField[] = [
   {
     name: "image",
     label: "Image",
-    type: "text",
+    type: "file",
     required: true,
     validation: Yup.string().required("image  is required"),
   },

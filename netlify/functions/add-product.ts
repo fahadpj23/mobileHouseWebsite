@@ -49,7 +49,7 @@ export const handler: Handler = async (event: any) => {
     for (const color of colors) {
       if (!color.images) color.images = [];
 
-      // Assign the next set of files to this color
+      // Assign the ne  xt set of files to this color
       const imagesForColor = color.images || [];
       for (
         let i = 0;

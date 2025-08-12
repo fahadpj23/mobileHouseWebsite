@@ -49,7 +49,11 @@ export const deleteBanner = createAsyncThunk(
 export const addBanners = createAsyncThunk(
   "banner/addBanner",
   async (data: any) => {
-    const response = await axiosInstance.post(`banner/`, data);
+    const response = await axiosInstance.post(`banner/`, data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
   }
 );
 
