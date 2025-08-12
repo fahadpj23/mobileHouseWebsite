@@ -32,6 +32,9 @@ const SingleItem = () => {
     }
   }, [productId]);
 
+  console.log(variantDetails);
+  console.log(selectedColorsDetails);
+
   useEffect(() => {
     entity && setProduct(entity);
   }, [entity]);

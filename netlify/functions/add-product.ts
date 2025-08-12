@@ -47,6 +47,13 @@ export const handler: Handler = async (event: any) => {
 
     // Process each color variant and assign images
     for (const color of colors) {
+      if (!color.id) {
+        color.id = `${fields.productName
+          .toLowerCase()
+          .replace(/\s+/g, "-")}-${color.name
+          .toLowerCase()
+          .replace(/\s+/g, "-")}-${Date.now()}`;
+      }
       if (!color.images) color.images = [];
 
       // Assign the ne  xt set of files to this color
