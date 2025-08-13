@@ -57,9 +57,7 @@ export const fetchProducts = createAsyncThunk(
 export const getNewArrivalProduct = createAsyncThunk(
   "products/getNewArrivalProduct",
   async () => {
-    const response = await axiosInstance.get(`products/`, {
-      params: { newArrival: "newArrival" },
-    });
+    const response = await axiosInstance.get(`get-new-arrival-products`);
     return response.data;
   }
 );
