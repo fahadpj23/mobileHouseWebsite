@@ -49,10 +49,10 @@ const AddProduct: FC<props> = ({
     //   formData.append('images', imageFile);
     // });
 
-    // editId
-    //   ? dispatch(editProduct({ data: formData, editId }))
-    // :
-    dispatch(addproduct(formData));
+    if (editId) {
+      formData.append("productId", editId.toString());
+      dispatch(editProduct(formData));
+    } else dispatch(addproduct(formData));
   };
 
   return (

@@ -92,7 +92,7 @@ export const getProductById = createAsyncThunk(
 export const getProductByIdEdit = createAsyncThunk(
   "products/getProductByIdEdit",
   async (id: string | number) => {
-    const response = await axiosInstance.get(`products/,`, {
+    const response = await axiosInstance.get(`get-product-by-id/,`, {
       params: { id },
     });
     return response.data;
@@ -145,8 +145,8 @@ export const addproduct = createAsyncThunk(
 
 export const editProduct = createAsyncThunk(
   "products/editProduct",
-  async (data) => {
-    const response = await axiosInstance.put(`products/`, data);
+  async (data: any) => {
+    const response = await axiosInstance.put(`update-product`, data);
     return response.data; // Don't forget to return the data
   }
 );

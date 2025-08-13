@@ -567,7 +567,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                             {item?.images?.map(
                               (file: any, fileIndex: number) => (
                                 <img
-                                  src={`http://localhost:9000${file?.image}`}
+                                  src={file?.url}
                                   alt={file.name}
                                   style={{
                                     width: "100%",
@@ -744,7 +744,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                         ) : (
                           <div>
                             <img
-                              src={`http://localhost:9000${file?.image}`}
+                              src={file?.url}
                               alt={file.name}
                               style={{
                                 width: "100%",
@@ -804,7 +804,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <div className="  bg-white p-4 h-[90%] md:h-[80%] w-[90%] md:w-[80%] overflow-y-auto relative">
+      <div className="  bg-white p-4 max-h-[80%] w-[90%] md:w-[80%] overflow-y-auto relative">
         <button
           onClick={() => handleForm()}
           className="absolute top-2 right-2 z-50"
