@@ -589,7 +589,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
                                 style={{
                                   width: "100%",
                                   height: "150px",
-                                  objectFit: "cover",
+                                  objectFit: "contain",
                                   borderRadius: "4px",
                                 }}
                               />

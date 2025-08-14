@@ -35,6 +35,7 @@ const Products = () => {
     if (successMessage) {
       setIsAddModalOpen(false);
       setIsEdit(false);
+      setEditId(0);
       showToast(successMessage);
       dispatch(fetchProducts());
     }

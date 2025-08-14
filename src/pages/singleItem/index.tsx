@@ -23,6 +23,7 @@ const SingleItem = () => {
   const [variantDetails, setVariantDetails] = useState<any>({});
 
   const [selectedColorsDetails, setSelectedColorsDetails] = useState<any>({});
+  const [selectedImage, setSelectedImage] = useState<any>("");
   const [isLoading, setIsLoading] = useState<any>(true);
   const { isMobile } = useScreenSize();
 
@@ -32,11 +33,8 @@ const SingleItem = () => {
     }
   }, [productId]);
 
-  console.log(variantDetails);
-  console.log(selectedColorsDetails);
-
   useEffect(() => {
-    entity && setProduct(entity);
+    entity && Object.keys(entity).length && setProduct(entity);
   }, [entity]);
 
   const handleWhatapp = (product: any) => {
@@ -63,16 +61,15 @@ const SingleItem = () => {
 
   const handleColor = (id: number) => {
     setIsLoading(true);
-    // setColorId(id);
+    setSelectedImage("");
     navigate(
       `/phone/${product?.id}/${productVariantId}/${id}/${encodeURIComponent(
         product?.productName
       )}`
-    );
+    );  
   };
 
   const handleVariant = (id: number) => {
-    // setVariantId(id);
     setIsLoading(true);
     navigate(
       `/phone/${productId}/${id}/${productColorId}/${encodeURIComponent(
@@ -94,7 +91,12 @@ const SingleItem = () => {
   };
 
   useEffect(() => {
-    if (product && productColorId && Array.isArray(product?.colors)) {
+    if (
+      product &&
+      Object.keys(product).length &&
+      productColorId &&
+      Array.isArray(product?.colors)
+    ) {
       const colorValue = productColorId;
       const colorInfo = product?.colors.find(
         (color: any) => color.id === colorValue
@@ -104,7 +106,12 @@ const SingleItem = () => {
   }, [productColorId, productId, product]);
 
   useEffect(() => {
-    if (product && productVariantId && Array.isArray(product?.variants)) {
+    if (
+      product &&
+      Object.keys(product).length &&
+      productVariantId &&
+      Array.isArray(product?.variants)
+    ) {
       const variantInfo = product?.variants.find(
         (variant: any) => variant.id === productVariantId
       );
@@ -122,7 +129,7 @@ const SingleItem = () => {
           <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
-      {product && (
+      {product && Object.keys(product).length && (
         <>
           <div className="flex justify-center w-full md:w-1/2 ">
             <div className=" flex flex-col justify-center items-center ">
@@ -134,9 +141,11 @@ const SingleItem = () => {
                     <div className="w-full h-full ">
                       <ServerLazyImage
                         src={
-                          selectedColorsDetails &&
-                          Array.isArray(selectedColorsDetails?.values) &&
-                          selectedColorsDetails?.values[0]
+                          selectedImage
+                            ? selectedImage?.url
+                            : selectedColorsDetails &&
+                              selectedColorsDetails?.images &&
+                              selectedColorsDetails?.images[0]?.url
                         }
                         alt={`${product?.name} Image `}
                       />
@@ -146,14 +155,18 @@ const SingleItem = () => {
               </div>
               <div className="flex space-x-3 justify-center w-full ">
                 {!isMobile &&
-                  selectedColorsDetails?.values?.map((image: any) => {
+                  selectedColorsDetails?.images?.map((image: any) => {
                     return (
                       <button
+                        onClick={() => setSelectedImage(image)}
                         key={image}
                         className="p-1 border border-gray-300 rounded-md w-10 h-14 md:w-20 md:h-16 "
                       >
                         <div className="w-full h-full object-contain">
-                          <ServerLazyImage src={image} alt="phone image " />
+                          <ServerLazyImage
+                            src={image?.url}
+                            alt="phone image "
+                          />
                         </div>
                       </button>
                     );
@@ -225,11 +238,11 @@ const SingleItem = () => {
                         >
                           <div className="w-10 h-16 md:w-16 ">
                             <div
-                              key={color?.values[0]}
+                              key={color?.images[0]?.url}
                               className="w-full h-full object-contain"
                             >
                               <ServerLazyImage
-                                src={color?.values[0]}
+                                src={color?.images[0]?.url}
                                 alt="phone image "
                               />
                             </div>
@@ -275,7 +288,7 @@ const SingleItem = () => {
                     "Front Camera",
                     `${product?.frontCamera} MP`
                   )}
-                  {displaySpecification("Battery", `${product?.battery} mah`)}
+                  {displaySpecification("Battery", `${product?.battery}`)}
                   {displaySpecification("Network", product?.networkType)}
                   {displaySpecification("OS", product?.os)}
                   {displaySpecification(
@@ -283,14 +296,6 @@ const SingleItem = () => {
                     `${variantDetails?.ram} Gb | ${variantDetails?.storage} Gb`
                   )}
                 </div>
-                {product?.description && (
-                  <div className="w-full  break-words md:max-w-lg mt-5">
-                    <h1 className="text-lg font-semibold">
-                      Product Description
-                    </h1>
-                    <h1>{product?.description}</h1>
-                  </div>
-                )}
               </div>
             </div>
           </div>

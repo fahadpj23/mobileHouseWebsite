@@ -123,7 +123,6 @@ export const handler: Handler = async (event: any) => {
         ? JSON.parse(fields.variants)
         : existingProduct.variants,
       seriesId: fields.seriesId || existingProduct.seriesId,
-      description: fields.description || existingProduct.description,
       rating: fields.rating
         ? parseFloat(fields.rating)
         : existingProduct.rating,

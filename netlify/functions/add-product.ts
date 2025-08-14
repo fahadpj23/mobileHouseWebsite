@@ -94,7 +94,6 @@ export const handler: Handler = async (event: any) => {
       brand: fields.brand,
       variants: JSON.parse(fields.variants),
       seriesId: fields.seriesId,
-      description: fields.description,
       rating: parseFloat(fields.rating),
       display: fields.display,
       frontCamera: fields.frontCamera,
