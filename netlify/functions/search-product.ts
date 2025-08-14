@@ -1,5 +1,4 @@
 import { Handler } from "@netlify/functions";
-import { getStore } from "@netlify/blobs";
 import admin from "firebase-admin";
 
 // Initialize Firebase Admin
@@ -20,40 +19,37 @@ if (!admin.apps.length) {
 
 const db = admin.firestore();
 
-export const handler: Handler = async () => {
+export const handler: Handler = async (event) => {
   try {
     const productsRef = db.collection("products");
 
-    // Calculate date range strings (last 4 months)
-    const currentDate = new Date();
-    const fourMonthsAgo = new Date();
-    fourMonthsAgo.setMonth(currentDate.getMonth() - 4);
+    // Get search query parameter
+    const searchTerm = event.queryStringParameters?.name?.toLowerCase().trim();
 
-    // Format dates as YYYY-MM-DD strings to match Firestore format
-    const formatDateString = (date: Date) => {
-      const year = date.getFullYear();
-      const month = String(date.getMonth() + 1).padStart(2, "0");
-      const day = String(date.getDate()).padStart(2, "0");
-      return `${year}-${month}-${day}`;
-    };
+    if (!searchTerm) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: "Missing search term" }),
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      };
+    }
 
-    const currentDateStr = formatDateString(currentDate);
-    const fourMonthsAgoStr = formatDateString(fourMonthsAgo);
+    // Get all products (consider adding limits for large collections)
+    const snapshot = await productsRef.get();
 
-    // Query products launched in last 4 months (string comparison)
-    const snapshot = await productsRef
-      .where("launchDate", ">=", fourMonthsAgoStr)
-      .where("launchDate", "<=", currentDateStr)
-      .orderBy("launchDate", "desc")
-      .get();
-
-    const products: any = [];
-    snapshot.forEach((doc) => {
-      products.push({
+    // Filter products by name (case-insensitive)
+    const products = snapshot.docs
+      .filter((doc) => {
+        const productName = doc.data().name?.toLowerCase();
+        return productName?.includes(searchTerm);
+      })
+      .map((doc) => ({
         id: doc.id,
         ...doc.data(),
-      });
-    });
+      }));
 
     return {
       statusCode: 200,
@@ -64,10 +60,10 @@ export const handler: Handler = async () => {
       },
     };
   } catch (error) {
-    console.error("Error in get-recent-products:", error);
+    console.error("Error searching products:", error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Failed to fetch recent products" }),
+      body: JSON.stringify({ error: "Failed to search products" }),
     };
   }
 };
