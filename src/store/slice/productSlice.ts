@@ -19,6 +19,7 @@ interface UserState {
   trendingPhone: any;
   colors: any;
   variants: any;
+  searchProduct: any;
 }
 
 // Initial state
@@ -33,6 +34,7 @@ const initialState: UserState = {
   trendingPhone: [],
   colors: [],
   variants: [],
+  searchProduct: [],
 };
 
 // Async thunk to fetch products data
@@ -41,6 +43,16 @@ export const fetchSeriesProducts = createAsyncThunk(
   async (seriesId: string) => {
     const response = await axiosInstance.get(`get-product-by-series/,`, {
       params: { seriesId },
+    });
+    return response.data;
+  }
+);
+
+export const fetchSearchProducts = createAsyncThunk(
+  "products/getSearchProduct",
+  async (searchValue: string) => {
+    const response = await axiosInstance.get(`search-product`, {
+      params: { searchValue },
     });
     return response.data;
   }
@@ -109,7 +121,6 @@ export const getProductVariants = createAsyncThunk(
 export const getProductColors = createAsyncThunk(
   "products/getProductColors",
   async (productId: any) => {
-    console.log(productId);
     const response = await axiosInstance.get(`products/${productId}/colors`);
     return response.data;
   }
@@ -202,6 +213,13 @@ const productSlice = createSlice({
           state.entities = action.payload;
         }
       )
+      .addCase(
+        fetchSearchProducts.fulfilled,
+        (state, action: PayloadAction<any>) => {
+          state.loading = false;
+          state.searchProduct = action.payload;
+        }
+      )
 
       .addCase(
         getTrendingPhone.fulfilled,
@@ -221,6 +239,11 @@ const productSlice = createSlice({
         state.loading = false;
         state.error = action.error.message || "Something went wrong";
       })
+      .addCase(fetchSearchProducts.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message || "Something went wrong";
+      })
+
       .addCase(addproduct.fulfilled, (state, action) => {
         state.loading = false;
         state.successMessage = "added SuccessFully";
@@ -244,11 +267,14 @@ const productSlice = createSlice({
           getProductColors,
           getProductByIdEdit,
           fetchSeriesProducts,
-          deleteProduct
+          deleteProduct,
+          fetchSearchProducts
         ),
         (state, action) => {
           state.loading = true;
           state.error = null;
+          state.entities = [];
+          state.entity = {};
         }
       )
       .addMatcher(

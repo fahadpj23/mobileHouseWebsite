@@ -62,11 +62,12 @@ const SingleItem = () => {
   const handleColor = (id: number) => {
     setIsLoading(true);
     setSelectedImage("");
+    setSelectedColorsDetails({});
     navigate(
       `/phone/${product?.id}/${productVariantId}/${id}/${encodeURIComponent(
         product?.productName
       )}`
-    );  
+    );
   };
 
   const handleVariant = (id: number) => {
@@ -118,9 +119,6 @@ const SingleItem = () => {
       setVariantDetails(variantInfo);
     }
   }, [productId, productVariantId, product]);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div className="block md:flex items-center ">
@@ -134,7 +132,7 @@ const SingleItem = () => {
           <div className="flex justify-center w-full md:w-1/2 ">
             <div className=" flex flex-col justify-center items-center ">
               <div className=" p-3 w-screen mb-3 flex justify-center ">
-                {isMobile && Array.isArray(product?.colors) ? (
+                {isMobile && selectedColorsDetails ? (
                   <ProductImageSlider productImages={selectedColorsDetails} />
                 ) : (
                   <div className="w-[80vw] h-[50vh] md:w-[30vw] md:h-[30vw] flex justify-center items-center   ">

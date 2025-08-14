@@ -24,7 +24,9 @@ export const handler: Handler = async (event) => {
     const productsRef = db.collection("products");
 
     // Get search query parameter
-    const searchTerm = event.queryStringParameters?.name?.toLowerCase().trim();
+    const searchTerm = event.queryStringParameters?.searchValue
+      ?.toLowerCase()
+      .trim();
 
     if (!searchTerm) {
       return {
@@ -43,7 +45,7 @@ export const handler: Handler = async (event) => {
     // Filter products by name (case-insensitive)
     const products = snapshot.docs
       .filter((doc) => {
-        const productName = doc.data().name?.toLowerCase();
+        const productName = doc.data().productName?.toLowerCase();
         return productName?.includes(searchTerm);
       })
       .map((doc) => ({

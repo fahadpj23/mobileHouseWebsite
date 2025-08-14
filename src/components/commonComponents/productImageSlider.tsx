@@ -17,23 +17,27 @@ const ProductImageSlider: FC<any> = ({ productImages }) => {
   };
 
   return (
-    <div className="w-[70vw] flex items-center justify-center pb-5">
-      <div className="w-full h-full">
-        <Slider {...settings}>
-          {productImages?.images?.map((image: any) => (
-            <div key={image?.url}>
-              <Zoom>
-                <img
-                  className=" h-[80vw] w-full object-contain "
-                  src={image?.url}
-                  alt="Product "
-                />
-              </Zoom>
-            </div>
-          ))}
-        </Slider>
-      </div>
-    </div>
+    <>
+      {productImages && Object.keys(productImages).length ? (
+        <div className="w-[70vw] flex items-center justify-center pb-5">
+          <div className="w-full h-full">
+            <Slider {...settings}>
+              {productImages?.images?.map((image: any) => (
+                <div key={image?.url}>
+                  <Zoom>
+                    <img
+                      className=" h-[80vw] w-full object-contain "
+                      src={image?.url}
+                      alt="Product "
+                    />
+                  </Zoom>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      ) : null}
+    </>
   );
 };
 

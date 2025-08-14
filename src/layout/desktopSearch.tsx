@@ -4,17 +4,20 @@ import { CiSearch } from "react-icons/ci";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 import LazyImage from "components/commonComponents/imageLazyLoading";
+import { useAppDispatch, useAppSelector } from "hooks/useRedux";
+import { fetchSearchProducts } from "store/slice/productSlice";
 
 const DesktopSearch = () => {
-  const [searchData, setSearchData] = useState<any>([]);
   const [searchValue, setSearchValue] = useState<string>("");
+  const dispatch = useAppDispatch();
+  const { searchProduct } = useAppSelector((state) => state.user.products);
 
   const handleSearch = (search: any) => {
     setSearchValue(search);
+    dispatch(fetchSearchProducts(search));
   };
 
   const handleSelect = () => {
-    setSearchData([]);
     setSearchValue("");
   };
 
@@ -31,28 +34,31 @@ const DesktopSearch = () => {
       </div>
       {searchValue ? (
         <div className="absolute -left-3 top-12 flex flex-col space-y-4 overflow-y-auto bg-gray-100 ml-3 max-h-[30vw] w-full z-50 p-2 shadow-xl">
-          {searchData?.length
-            ? searchData?.map((phone: any) => {
+          {Array.isArray(searchProduct)
+            ? searchProduct?.map((product: any) => {
                 return (
                   <Link
-                    to={`/phone/${phone?.id}/${encodeURIComponent(
-                      phone?.name
-                    )}`}
-                    key={phone?.id}
+                    to={`/phone/${product?.id}/${
+                      Array.isArray(product?.variants) &&
+                      product?.variants[0]?.id
+                    }/${
+                      Array.isArray(product?.colors) && product?.colors[0]?.id
+                    }/${encodeURIComponent(product?.productName)}`}
+                    key={product?.id}
                     className="flex items-center space-x-4"
                     onClick={() => handleSelect()}
                   >
                     <div className="p-1">
                       <div className="w-10 h-10">
                         <LazyImage
-                          src={phone?.image ?? phone?.colors[0]?.images[0]}
-                          alt="phone Image"
+                          src={product?.image ?? product?.colors[0]?.images[0]}
+                          alt="product Image"
                         />
                       </div>
                     </div>
                     <div className="text-xs">
-                      <h1>{phone?.name}</h1>
-                      <h1 className="text-green-600">₹{phone?.salesPrice}</h1>
+                      <h1>{product?.name}</h1>
+                      <h1 className="text-green-600">₹{product?.salesPrice}</h1>
                     </div>
                   </Link>
                 );
@@ -60,7 +66,7 @@ const DesktopSearch = () => {
             : null}
           {searchValue && (
             <Link
-              to={`/Phones/${encodeURIComponent(searchValue)}`}
+              to={`/products/${encodeURIComponent(searchValue)}`}
               className="flex space-x-2 p-2 items-center"
               onClick={() => handleSelect()}
             >
