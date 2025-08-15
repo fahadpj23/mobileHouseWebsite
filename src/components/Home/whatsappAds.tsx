@@ -86,7 +86,7 @@ const WhatsappAds = () => {
                 >
                   <div className="w-[93%] h-[60vw] md:h-[22vw]  ">
                     <ServerLazyImage
-                      src={item?.imageU}
+                      src={item?.image}
                       alt="phone Image"
                       fill={true}
                     />
@@ -95,7 +95,7 @@ const WhatsappAds = () => {
               ) : (
                 <div key={item?.id} className="w-[93%] h-[60vw] md:h-[22vw]  ">
                   <ServerLazyImage
-                    src={item?.imageU}
+                    src={item?.image}
                     alt="phone Image"
                     fill={true}
                   />

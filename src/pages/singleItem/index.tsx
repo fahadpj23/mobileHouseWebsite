@@ -127,7 +127,7 @@ const SingleItem = () => {
           <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
-      {product && Object.keys(product).length && (
+      {product && Object.keys(product).length ? (
         <>
           <div className="flex justify-center w-full md:w-1/2 ">
             <div className=" flex flex-col justify-center items-center ">
@@ -298,7 +298,7 @@ const SingleItem = () => {
             </div>
           </div>
         </>
-      )}
+      ) : null}
     </div>
   );
 };

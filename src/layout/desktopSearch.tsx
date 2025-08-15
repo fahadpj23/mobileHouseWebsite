@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
@@ -6,16 +6,33 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LazyImage from "components/commonComponents/imageLazyLoading";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { fetchSearchProducts } from "store/slice/productSlice";
+import { debounce } from "lodash";
 
 const DesktopSearch = () => {
   const [searchValue, setSearchValue] = useState<string>("");
   const dispatch = useAppDispatch();
   const { searchProduct } = useAppSelector((state) => state.user.products);
 
-  const handleSearch = (search: any) => {
+  const debouncedSearch = useCallback(
+    debounce((searchTerm: string) => {
+      if (searchTerm.trim()) {
+        dispatch(fetchSearchProducts(searchTerm));
+      }
+    }, 500), // 500ms delay
+    [dispatch]
+  );
+
+  const handleSearch = (search: string) => {
     setSearchValue(search);
-    dispatch(fetchSearchProducts(search));
+    debouncedSearch(search);
   };
+
+  // Cleanup debounce on unmount
+  useEffect(() => {
+    return () => {
+      debouncedSearch.cancel();
+    };
+  }, [debouncedSearch]);
 
   const handleSelect = () => {
     setSearchValue("");
@@ -51,14 +68,19 @@ const DesktopSearch = () => {
                     <div className="p-1">
                       <div className="w-10 h-10">
                         <LazyImage
-                          src={product?.image ?? product?.colors[0]?.images[0]}
+                          src={
+                            product?.image ?? product?.colors[0]?.images[0]?.url
+                          }
                           alt="product Image"
                         />
                       </div>
                     </div>
                     <div className="text-xs">
-                      <h1>{product?.name}</h1>
-                      <h1 className="text-green-600">₹{product?.salesPrice}</h1>
+                      <h1>{product?.productName}</h1>
+                      <h1 className="text-green-600">
+                        {" "}
+                        ₹{product?.variants[0].price}
+                      </h1>
                     </div>
                   </Link>
                 );

@@ -13,14 +13,14 @@ import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { fetchBanners } from "store/slice/bannerSlice";
 import {
   getNewArrivalProduct,
-  getSpecialOffer,
+  // getSpecialOffer,
   getTrendingPhone,
 } from "store/slice/productSlice";
 
 const HomePage = () => {
   const dispatch = useAppDispatch();
   const { entities: banners } = useAppSelector((state) => state.user.banner);
-  const { newArrival, specialOffer, trendingPhone } = useAppSelector(
+  const { newArrival, trendingPhone } = useAppSelector(
     (state) => state.user.products
   );
 
@@ -30,7 +30,7 @@ const HomePage = () => {
     dispatch(getTrendingPhone());
   }, []);
 
-  const fetchSpecialOffer = () => dispatch(getSpecialOffer());
+  // const fetchSpecialOffer = () => dispatch(getSpecialOffer());
 
   // const fetchTrendingPhone = () => );
 
@@ -69,7 +69,7 @@ const HomePage = () => {
         <LazyLoad>
           <WhatsappAds />
         </LazyLoad>
-        <LazyLoad>
+        {/* <LazyLoad>
           <div onLoad={() => fetchSpecialOffer()}>
             <div className="p-2 bg-white ">
               <ProductMiniList
@@ -83,7 +83,7 @@ const HomePage = () => {
 
             <Footer />
           </div>
-        </LazyLoad>
+        </LazyLoad> */}
       </div>
     </div>
   );

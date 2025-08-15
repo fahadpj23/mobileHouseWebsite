@@ -1,9 +1,9 @@
-import { FC, useState } from "react";
+import { FC, useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import { Divider } from "@mui/material";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-
+import { debounce } from "lodash";
 import LazyImage from "components/commonComponents/imageLazyLoading";
 import { toPascalCase } from "utils/pascalCaseConvert";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
@@ -14,10 +14,26 @@ const SearchBar: FC<any> = ({ setSearchOpen }) => {
   const dispatch = useAppDispatch();
   const { searchProduct } = useAppSelector((state) => state.user.products);
 
-  const handleSearch = (search: any) => {
+  const debouncedSearch = useCallback(
+    debounce((searchTerm: string) => {
+      if (searchTerm.trim()) {
+        dispatch(fetchSearchProducts(searchTerm));
+      }
+    }, 500), // 500ms delay
+    [dispatch]
+  );
+
+  const handleSearch = (search: string) => {
     setSearchValue(search);
-    dispatch(fetchSearchProducts(search));
+    debouncedSearch(search);
   };
+
+  // Cleanup debounce on unmount
+  useEffect(() => {
+    return () => {
+      debouncedSearch.cancel();
+    };
+  }, [debouncedSearch]);
 
   return (
     <div className="fixed top-0  left-0 right-0 w-screen h-screen bg-white z-40">

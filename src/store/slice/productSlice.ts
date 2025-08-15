@@ -84,9 +84,7 @@ export const getSpecialOffer = createAsyncThunk(
 export const getTrendingPhone = createAsyncThunk(
   "products/getTrendingPhone",
   async () => {
-    const response = await axiosInstance.get(`products/`, {
-      params: { trendingPhone: "trendingPhone" },
-    });
+    const response = await axiosInstance.get(`trending-phone`);
     return response.data;
   }
 );
