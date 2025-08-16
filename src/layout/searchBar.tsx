@@ -82,7 +82,7 @@ const SearchBar: FC<any> = ({ setSearchOpen }) => {
           })}
         {searchValue && (
           <Link
-            to={`/products/${encodeURIComponent(searchValue)}`}
+            to={`/Phones/${encodeURIComponent(searchValue)}`}
             className="flex space-x-2 p-2 items-center"
             onClick={() => setSearchOpen(false)}
           >

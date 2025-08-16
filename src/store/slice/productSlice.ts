@@ -273,6 +273,7 @@ const productSlice = createSlice({
           state.error = null;
           state.entities = [];
           state.entity = {};
+          state.searchProduct = [];
         }
       )
       .addMatcher(

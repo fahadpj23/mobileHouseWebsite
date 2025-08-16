@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ProductList from "components/commonComponents/productList";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import {
+  fetchSearchProducts,
   getNewArrivalProduct,
   getSpecialOffer,
   getTrendingPhone,
@@ -13,9 +14,8 @@ const Phones = () => {
   const [products, setProducts] = useState<any>([]);
   const { phoneType } = useParams();
   const dispatch = useAppDispatch();
-  const { newArrival, specialOffer, trendingPhone } = useAppSelector(
-    (state) => state.user.products
-  );
+  const { newArrival, specialOffer, trendingPhone, searchProduct } =
+    useAppSelector((state) => state.user.products);
 
   useEffect(() => {
     switch (phoneType) {
@@ -29,9 +29,9 @@ const Phones = () => {
         setProducts(specialOffer ?? []);
         break;
       default:
-        setProducts([]);
+        setProducts(searchProduct ?? []);
     }
-  }, [newArrival, specialOffer, trendingPhone]);
+  }, [newArrival, specialOffer, trendingPhone, searchProduct]);
 
   useEffect(() => {
     switch (phoneType) {
@@ -45,7 +45,7 @@ const Phones = () => {
         dispatch(getSpecialOffer());
         break;
       default:
-        setProducts([]);
+        phoneType && dispatch(fetchSearchProducts(phoneType));
     }
   }, [phoneType]);
   return (
