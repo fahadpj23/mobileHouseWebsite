@@ -78,9 +78,9 @@ const WhatsappAds = () => {
         >
           {Array.isArray(whatsappAds) &&
             whatsappAds.map((item: any) =>
-              item?.series ? (
+              item?.seriesId ? (
                 <Link
-                  to={`series/${item?.series}`}
+                  to={`series/${item?.seriesId}`}
                   key={item?.id}
                   style={{ margin: "3px 8px" }}
                 >
