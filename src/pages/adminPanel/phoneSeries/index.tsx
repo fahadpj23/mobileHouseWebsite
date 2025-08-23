@@ -19,32 +19,18 @@ import { ToastContainer } from "react-toastify";
 
 const Series = () => {
   const dispatch = useAppDispatch();
-  const { entities, entity, successMessage } = useAppSelector(
+  const { entities, deleteMessage, successMessage } = useAppSelector(
     (state) => state.user.series
   );
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
   const [values, setValues] = useState<any>(initialValues);
-  const [isEdit, setIsEdit] = useState<boolean>(false);
-  const [editId, setEditId] = useState<number>(0);
 
   useEffect(() => {
     dispatch(fetchSeries());
   }, []);
-  console.log(entities);
+
   const handleForm = () => setIsAddModalOpen(!isAddModalOpen);
 
-  const handleEdit = (id: number) => {
-    setEditId(id);
-    //   dispatch(getProductById(id));
-  };
-
-  //   useEffect(() => {
-  //     if (entity !== null && entity?.id) {
-  //       setValues(entity);
-  //       setIsEdit(true);
-  //     } else setValues(initialValues);
-  //   }, [entity]);
-  //   console.log(values);
   useEffect(() => {
     if (successMessage) {
       handleForm();
@@ -57,6 +43,13 @@ const Series = () => {
     dispatch(deleteSeries(id));
   };
 
+  useEffect(() => {
+    if (deleteMessage) {
+      showToast(deleteMessage);
+      dispatch(fetchSeries());
+    }
+  }, [deleteMessage]);
+
   return (
     <div>
       <ToastContainer />
@@ -66,14 +59,13 @@ const Series = () => {
         <TableData
           TableHead={SeriesTableHead}
           TableData={entities}
-          handleEdit={handleEdit}
           handleDelete={handleDelete}
         />
       )}
-      {(isAddModalOpen || isEdit) && (
+      {isAddModalOpen && (
         <AddSeries
           handleForm={handleForm}
-          isAddModalOpen={isAddModalOpen || isEdit}
+          isAddModalOpen={isAddModalOpen}
           formFields={formFields}
           validationSchema={validationSchema}
           initialValues={values}

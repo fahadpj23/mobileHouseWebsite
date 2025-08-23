@@ -13,6 +13,7 @@ interface UserState {
   error: string | null;
   entity: any;
   successMessage: string;
+  deleteMessage: string;
 }
 
 // Initial state
@@ -22,6 +23,7 @@ const initialState: UserState = {
   error: null,
   entity: null,
   successMessage: "",
+  deleteMessage: "",
 };
 
 // Async thunk to fetch products data
@@ -92,7 +94,7 @@ const whatsappAdsSlice = createSlice({
       })
       .addCase(deleteWhatsappAds.fulfilled, (state, action) => {
         state.loading = false;
-        state.successMessage = "deleted SuccessFully";
+        state.deleteMessage = "deleted SuccessFully";
       })
       .addMatcher(
         isPending(

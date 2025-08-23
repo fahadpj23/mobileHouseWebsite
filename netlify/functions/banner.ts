@@ -122,6 +122,7 @@ exports.handler = async (event, context) => {
           body: JSON.stringify({ error: "Missing ID parameter" }),
         };
       }
+
       const bannerRef = db.collection("banner").doc(id);
       const docSnapshot = await bannerRef.get();
 
@@ -132,13 +133,32 @@ exports.handler = async (event, context) => {
         };
       }
 
-      // Delete the document
+      const data = docSnapshot.data();
+
+      // 1️⃣ Extract image key from stored URL
+      let imageKey: string | null = null;
+      if (data?.image) {
+        const url = new URL(data.image, "http://dummy"); // dummy base for parsing
+        imageKey = url.searchParams.get("key");
+      }
+
+      // 2️⃣ Delete blob if key exists
+      if (imageKey) {
+        try {
+          await imageStore.delete(imageKey);
+          console.log(`Deleted blob: ${imageKey}`);
+        } catch (err) {
+          console.error("Error deleting blob:", err);
+        }
+      }
+
+      // 3️⃣ Delete Firestore document
       await bannerRef.delete();
 
       return {
         statusCode: 200,
         body: JSON.stringify({
-          message: "banner item deleted successfully",
+          message: "banner item and blob deleted successfully",
           id: id,
         }),
       };

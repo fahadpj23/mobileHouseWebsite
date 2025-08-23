@@ -19,36 +19,21 @@ import { ToastContainer } from "react-toastify";
 
 const Banner = () => {
   const dispatch = useAppDispatch();
-  const { entities, entity, successMessage } = useAppSelector(
+  const { entities, deleteMessage, successMessage } = useAppSelector(
     (state) => state.user.banner
   );
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
   const [values, setValues] = useState<any>(initialValues);
-  const [isEdit, setIsEdit] = useState<boolean>(false);
-  const [editId, setEditId] = useState<number>(0);
 
   useEffect(() => {
     dispatch(fetchBanners());
   }, []);
-  console.log(entities);
-  const handleForm = () => setIsAddModalOpen(!isAddModalOpen);
 
-  const handleEdit = (id: number) => {
-    setEditId(id);
-    //   dispatch(getProductById(id));
-  };
+  const handleForm = () => setIsAddModalOpen(!isAddModalOpen);
 
   const handleDelete = (id: number) => {
     dispatch(deleteBanner(id));
   };
-
-  //   useEffect(() => {
-  //     if (entity !== null && entity?.id) {
-  //       setValues(entity);
-  //       setIsEdit(true);
-  //     } else setValues(initialValues);
-  //   }, [entity]);
-  //   console.log(values);
 
   useEffect(() => {
     if (successMessage) {
@@ -57,6 +42,13 @@ const Banner = () => {
       dispatch(fetchBanners());
     }
   }, [successMessage]);
+
+  useEffect(() => {
+    if (deleteMessage) {
+      showToast(deleteMessage);
+      dispatch(fetchBanners());
+    }
+  }, [deleteMessage]);
 
   return (
     <div>
@@ -67,14 +59,13 @@ const Banner = () => {
         <TableData
           TableHead={BannerTableHead}
           TableData={entities}
-          handleEdit={handleEdit}
           handleDelete={handleDelete}
         />
       )}
-      {(isAddModalOpen || isEdit) && (
+      {isAddModalOpen && (
         <AddBanner
           handleForm={handleForm}
-          isAddModalOpen={isAddModalOpen || isEdit}
+          isAddModalOpen={isAddModalOpen}
           formFields={formFields}
           validationSchema={validationSchema}
           initialValues={values}

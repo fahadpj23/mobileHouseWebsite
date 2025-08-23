@@ -13,6 +13,7 @@ interface UserState {
   error: string | null;
   entity: any;
   successMessage: string;
+  deleteMessage: string;
 }
 
 // Initial state
@@ -22,6 +23,7 @@ const initialState: UserState = {
   error: null,
   entity: null,
   successMessage: "",
+  deleteMessage: "",
 };
 
 // Async thunk to fetch Banners data
@@ -83,7 +85,7 @@ const bannerSlice = createSlice({
       })
       .addCase(deleteBanner.fulfilled, (state, action) => {
         state.loading = false;
-        state.successMessage = "deleted SuccessFully";
+        state.deleteMessage = "deleted SuccessFully";
       })
       .addMatcher(
         isPending(fetchBanners, getBannerById, addBanners),

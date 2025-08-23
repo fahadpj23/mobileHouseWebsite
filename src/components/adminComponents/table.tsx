@@ -8,7 +8,7 @@ import ServerLazyImage from "components/commonComponents/serverImageLazyLoading"
 interface props {
   TableHead: any;
   TableData: any;
-  handleEdit: any;
+  handleEdit?: any;
   handleDelete: any;
 }
 const TableData: FC<props> = ({

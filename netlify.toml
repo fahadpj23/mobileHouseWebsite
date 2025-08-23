@@ -1,3 +1,5 @@
+
+  
 [[redirects]]
   from = "/product-images/*"
   to = "/.netlify/functions/get-image?key=:splat"

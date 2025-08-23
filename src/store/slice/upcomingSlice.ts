@@ -13,6 +13,7 @@ interface UserState {
   error: string | null;
   entity: any;
   successMessage: string;
+  deleteMessage: string;
 }
 
 // Initial state
@@ -22,6 +23,7 @@ const initialState: UserState = {
   error: null,
   entity: null,
   successMessage: "",
+  deleteMessage: "",
 };
 
 // Async thunk to fetch Upcoming data
@@ -89,7 +91,7 @@ const upcomingSlice = createSlice({
       })
       .addCase(deleteUpcoming.fulfilled, (state, action) => {
         state.loading = false;
-        state.successMessage = "deleted SuccessFully";
+        state.deleteMessage = "deleted SuccessFully";
       })
       .addMatcher(
         isPending(fetchUpcoming, getUpcomingById, addUpcoming, deleteUpcoming),

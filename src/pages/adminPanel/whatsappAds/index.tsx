@@ -16,32 +16,17 @@ import { ToastContainer } from "react-toastify";
 
 const WhatsappAds = () => {
   const dispatch = useAppDispatch();
-  const { entities, entity, successMessage } = useAppSelector(
+  const { entities, deleteMessage, successMessage } = useAppSelector(
     (state) => state.user.whatsappAds
   );
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
   const [values, setValues] = useState<any>(initialValues);
-  const [isEdit, setIsEdit] = useState<boolean>(false);
-  const [editId, setEditId] = useState<number>(0);
 
   useEffect(() => {
     dispatch(fetchwhatsappAds());
   }, []);
 
   const handleForm = () => setIsAddModalOpen(!isAddModalOpen);
-
-  const handleEdit = (id: number) => {
-    setEditId(id);
-    // dispatch(getProductById(id));
-  };
-
-  //   useEffect(() => {
-  //     if (entity !== null && entity?.id) {
-  //       setValues(entity);
-  //       setIsEdit(true);
-  //     } else setValues(initialValues);
-  //   }, [entity]);
-  //   console.log(values);
 
   useEffect(() => {
     if (successMessage) {
@@ -54,6 +39,14 @@ const WhatsappAds = () => {
   const handleDelete = (id: number) => {
     dispatch(deleteWhatsappAds(id));
   };
+
+  useEffect(() => {
+    if (deleteMessage) {
+      showToast(deleteMessage);
+      dispatch(fetchwhatsappAds());
+    }
+  }, [deleteMessage]);
+
   return (
     <div>
       <ToastContainer />
@@ -63,14 +56,13 @@ const WhatsappAds = () => {
         <TableData
           TableHead={whatsappAdsTableHead}
           TableData={entities}
-          handleEdit={handleEdit}
           handleDelete={handleDelete}
         />
       )}
-      {(isAddModalOpen || isEdit) && (
+      {isAddModalOpen && (
         <AddWhatsappAds
           handleForm={handleForm}
-          isAddModalOpen={isAddModalOpen || isEdit}
+          isAddModalOpen={isAddModalOpen}
           formFields={formFields}
           validationSchema={validationSchema}
           initialValues={values}

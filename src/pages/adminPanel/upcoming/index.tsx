@@ -13,13 +13,11 @@ import { ToastContainer } from "react-toastify";
 
 const Upcoming = () => {
   const dispatch = useAppDispatch();
-  const { entities, entity, successMessage } = useAppSelector(
+  const { entities, deleteMessage, successMessage } = useAppSelector(
     (state) => state.user.upcoming
   );
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
   const [values, setValues] = useState<any>(initialValues);
-  const [isEdit, setIsEdit] = useState<boolean>(false);
-  const [editId, setEditId] = useState<number>(0);
 
   useEffect(() => {
     dispatch(fetchUpcoming());
@@ -27,22 +25,17 @@ const Upcoming = () => {
 
   const handleForm = () => setIsAddModalOpen(!isAddModalOpen);
 
-  const handleEdit = (id: number) => {
-    setEditId(id);
-    // dispatch(getProductById(id));
-  };
-
   const handleDelete = (id: number) => {
     dispatch(deleteUpcoming(id));
   };
 
-  //   useEffect(() => {
-  //     if (entity !== null && entity?.id) {
-  //       setValues(entity);
-  //       setIsEdit(true);
-  //     } else setValues(initialValues);
-  //   }, [entity]);
-  //   console.log(values);
+  useEffect(() => {
+    if (deleteMessage) {
+      showToast(deleteMessage);
+      dispatch(fetchUpcoming());
+    }
+  }, [deleteMessage]);
+
   useEffect(() => {
     if (successMessage) {
       handleForm();
@@ -59,14 +52,13 @@ const Upcoming = () => {
         <TableData
           TableHead={UpcomingTableHead}
           TableData={entities}
-          handleEdit={handleEdit}
           handleDelete={handleDelete}
         />
       )}
-      {(isAddModalOpen || isEdit) && (
+      {isAddModalOpen && (
         <AddUpcoming
           handleForm={handleForm}
-          isAddModalOpen={isAddModalOpen || isEdit}
+          isAddModalOpen={isAddModalOpen}
           formFields={formFields}
           validationSchema={validationSchema}
           initialValues={values}

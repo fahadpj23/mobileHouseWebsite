@@ -23,13 +23,11 @@ import { ToastContainer } from "react-toastify";
 
 const NewArrival = () => {
   const dispatch = useAppDispatch();
-  const { entities, entity, successMessage } = useAppSelector(
+  const { entities, deleteMessage, successMessage } = useAppSelector(
     (state) => state.user.newArrival
   );
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
   const [values, setValues] = useState<any>(initialValues);
-  const [isEdit, setIsEdit] = useState<boolean>(false);
-  const [editId, setEditId] = useState<number>(0);
 
   useEffect(() => {
     dispatch(fetchNewArrivals());
@@ -37,22 +35,17 @@ const NewArrival = () => {
 
   const handleForm = () => setIsAddModalOpen(!isAddModalOpen);
 
-  const handleEdit = (id: number) => {
-    setEditId(id);
-    // dispatch(getProductById(id));
-  };
-
   const handleDelete = (id: number) => {
     dispatch(deleteNewArrival(id));
   };
 
-  //   useEffect(() => {
-  //     if (entity !== null && entity?.id) {
-  //       setValues(entity);
-  //       setIsEdit(true);
-  //     } else setValues(initialValues);
-  //   }, [entity]);
-  //   console.log(values);
+  useEffect(() => {
+    if (deleteMessage) {
+      showToast(deleteMessage);
+      dispatch(fetchNewArrivals());
+    }
+  }, [deleteMessage]);
+
   useEffect(() => {
     if (successMessage) {
       handleForm();
@@ -69,14 +62,13 @@ const NewArrival = () => {
         <TableData
           TableHead={NewArrivalTableHead}
           TableData={entities}
-          handleEdit={handleEdit}
           handleDelete={handleDelete}
         />
       )}
-      {(isAddModalOpen || isEdit) && (
+      {isAddModalOpen && (
         <AddNewArrival
           handleForm={handleForm}
-          isAddModalOpen={isAddModalOpen || isEdit}
+          isAddModalOpen={isAddModalOpen}
           formFields={formFields}
           validationSchema={validationSchema}
           initialValues={values}

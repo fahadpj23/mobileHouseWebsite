@@ -20,6 +20,7 @@ interface UserState {
   colors: any;
   variants: any;
   searchProduct: any;
+  deleteMessage: any;
 }
 
 // Initial state
@@ -35,6 +36,7 @@ const initialState: UserState = {
   colors: [],
   variants: [],
   searchProduct: [],
+  deleteMessage: [],
 };
 
 // Async thunk to fetch products data
@@ -252,7 +254,7 @@ const productSlice = createSlice({
       })
       .addCase(deleteProduct.fulfilled, (state, action) => {
         state.loading = false;
-        state.successMessage = "deleted SuccessFully";
+        state.deleteMessage = "deleted SuccessFully";
       })
       .addMatcher(
         isPending(

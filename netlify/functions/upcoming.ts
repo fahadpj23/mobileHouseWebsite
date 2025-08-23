@@ -131,7 +131,24 @@ exports.handler = async (event, context) => {
           body: JSON.stringify({ error: "Document not found" }),
         };
       }
+      const data = docSnapshot.data();
 
+      // 1️⃣ Extract image key from stored URL
+      let imageKey: string | null = null;
+      if (data?.image) {
+        const url = new URL(data.image, "http://dummy"); // dummy base for parsing
+        imageKey = url.searchParams.get("key");
+      }
+
+      // 2️⃣ Delete blob if key exists
+      if (imageKey) {
+        try {
+          await imageStore.delete(imageKey);
+          console.log(`Deleted blob: ${imageKey}`);
+        } catch (err) {
+          console.error("Error deleting blob:", err);
+        }
+      }
       // Delete the document
       await upcomingRef.delete();
 
