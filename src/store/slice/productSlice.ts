@@ -128,10 +128,8 @@ export const getProductColors = createAsyncThunk(
 
 export const deleteProduct = createAsyncThunk(
   "products/deleteProduct",
-  async (id: number) => {
-    const response = await axiosInstance.delete(`products/`, {
-      params: { id },
-    });
+  async (productId: number) => {
+    const response = await axiosInstance.delete(`delete-product/${productId}`);
     return response.data;
   }
 );

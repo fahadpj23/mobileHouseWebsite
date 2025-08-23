@@ -20,7 +20,6 @@ if (!admin.apps.length) {
 }
 
 const db = admin.firestore();
-const productsCollection = db.collection("products");
 
 // Initialize Netlify Blob store just for images
 const imageStore = getStore({
@@ -39,8 +38,7 @@ export const handler = async (event: any) => {
   }
 
   try {
-    const { productId } = JSON.parse(event.body);
-
+    let productId = event.path.split("/").pop();
     if (!productId) {
       return {
         statusCode: 400,

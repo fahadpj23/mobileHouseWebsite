@@ -49,8 +49,8 @@ const Products = () => {
     dispatch(getProductByIdEdit(id));
   };
 
-  const handleDelete = (id: number) => {
-    dispatch(deleteProduct(id));
+  const handleDelete = (productId: number) => {
+    dispatch(deleteProduct(productId));
   };
 
   useEffect(() => {
