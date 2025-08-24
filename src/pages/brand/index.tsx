@@ -3,14 +3,14 @@ import { useParams } from "react-router-dom";
 
 import ProductList from "components/commonComponents/productList";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
-import { getProductByBrand } from "store/slice/productSlice";
+import { fetchBrandProducts } from "store/slice/productSlice";
 
 const Brand = () => {
   const { brandName } = useParams();
   const dispatch = useAppDispatch();
   const { entities } = useAppSelector((state) => state.user.products);
   useEffect(() => {
-    brandName && dispatch(getProductByBrand(brandName));
+    brandName && dispatch(fetchBrandProducts(brandName));
   }, [brandName]);
 
   return (

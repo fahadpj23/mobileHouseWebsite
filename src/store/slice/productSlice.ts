@@ -43,8 +43,18 @@ const initialState: UserState = {
 export const fetchSeriesProducts = createAsyncThunk(
   "products/getSeriesProduct",
   async (seriesId: string) => {
-    const response = await axiosInstance.get(`get-product-by-series/,`, {
+    const response = await axiosInstance.get(`get-product-by-series/`, {
       params: { seriesId },
+    });
+    return response.data;
+  }
+);
+
+export const fetchBrandProducts = createAsyncThunk(
+  "products/getBrandProduct",
+  async (brandName: string) => {
+    const response = await axiosInstance.get(`get-product-by-brand`, {
+      params: { brandName },
     });
     return response.data;
   }
@@ -94,7 +104,7 @@ export const getTrendingPhone = createAsyncThunk(
 export const getProductById = createAsyncThunk(
   "products/getProductById",
   async (id: string | number) => {
-    const response = await axiosInstance.get(`get-product-by-id/,`, {
+    const response = await axiosInstance.get(`get-product-by-id`, {
       params: { id },
     });
     return response.data;
@@ -104,7 +114,7 @@ export const getProductById = createAsyncThunk(
 export const getProductByIdEdit = createAsyncThunk(
   "products/getProductByIdEdit",
   async (id: string | number) => {
-    const response = await axiosInstance.get(`get-product-by-id/,`, {
+    const response = await axiosInstance.get(`get-product-by-id`, {
       params: { id },
     });
     return response.data;
@@ -134,13 +144,6 @@ export const deleteProduct = createAsyncThunk(
   }
 );
 
-export const getProductByBrand = createAsyncThunk(
-  "products/getProductByBrand",
-  async (brand: string) => {
-    const response = await axiosInstance.get(`products/brand/${brand}`);
-    return response.data;
-  }
-);
 export const addproduct = createAsyncThunk(
   "products/addProduct",
   async (data: any) => {
@@ -212,6 +215,14 @@ const productSlice = createSlice({
         }
       )
       .addCase(
+        fetchBrandProducts.fulfilled,
+        (state, action: PayloadAction<any>) => {
+          state.loading = false;
+          state.entities = action.payload;
+        }
+      )
+
+      .addCase(
         fetchSearchProducts.fulfilled,
         (state, action: PayloadAction<any>) => {
           state.loading = false;
@@ -260,13 +271,13 @@ const productSlice = createSlice({
           getProductById,
           editProduct,
           addproduct,
-          getProductByBrand,
           getProductVariants,
           getProductColors,
           getProductByIdEdit,
           fetchSeriesProducts,
           deleteProduct,
-          fetchSearchProducts
+          fetchSearchProducts,
+          fetchBrandProducts
         ),
         (state, action) => {
           state.loading = true;
@@ -277,7 +288,7 @@ const productSlice = createSlice({
         }
       )
       .addMatcher(
-        isFulfilled(fetchProducts, getProductByBrand),
+        isFulfilled(fetchProducts),
         (state, action: PayloadAction<any>) => {
           state.loading = false;
           state.entities = action.payload;
