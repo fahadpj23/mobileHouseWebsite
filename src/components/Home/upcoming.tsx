@@ -12,7 +12,7 @@ const Upcoming = () => {
     dispatch(fetchUpcoming());
   }, []);
 
-  return Array.isArray(upcoming) ? (
+  return Array.isArray(upcoming) && upcoming?.length ? (
     <LaunchBanner title="upcoming Launches" BannerItems={upcoming} />
   ) : null;
 };
