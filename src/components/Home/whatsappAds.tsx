@@ -45,7 +45,7 @@ const WhatsappAds = () => {
   return (
     <div className="p-2">
       {isMobile ? (
-        <div>
+        <div className="space-y-2">
           {Array.isArray(whatsappAds) &&
             whatsappAds.map((item: any) =>
               item?.seriesId ? (

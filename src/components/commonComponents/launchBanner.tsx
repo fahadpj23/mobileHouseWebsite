@@ -16,7 +16,7 @@ const LaunchBanner: FC<props> = ({ title, BannerItems }) => {
       </h1>
       <div className="flex flex-col  w-full">
         {BannerItems?.map((banner: any) =>
-          banner?.series ? (
+          banner?.seriesId ? (
             <Link to={`series/${banner?.seriesId}`} key={banner?.id}>
               <div className="w-full h-[45vw] md:h-[22vw]  ">
                 <ServerLazyImage

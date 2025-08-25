@@ -29,6 +29,7 @@ const SingleItem = () => {
 
   useEffect(() => {
     if (productId) {
+      setIsLoading(true);
       dispatch(getProductById(productId));
     }
   }, [productId]);

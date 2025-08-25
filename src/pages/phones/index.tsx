@@ -52,7 +52,11 @@ const Phones = () => {
     <div>
       {products && Array.isArray(products) ? (
         <ProductList products={products} />
-      ) : null}
+      ) : (
+        <div className="flex items-center justify-center min-h-screen fixed top-0 left-0 w-screen z-50 bg-white">
+          <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      )}
     </div>
   );
 };
