@@ -83,16 +83,10 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
   handleForm,
   isAddModalOpen,
 }) => {
-  const [file, setFile] = useState<File | null>(null);
   const [series, setSeries] = useState<any>(null);
   const [newItemValue, setNewItemValue] = useState<any>("");
-  const [image, setImage] = useState<any>("");
   const dispatch = useAppDispatch();
-  const { entities, entity } = useAppSelector((state) => state.user.series);
-  const [newItemName, setNewItemName] = useState("");
-  const [newValueInputs, setNewValueInputs] = useState<{
-    [key: number]: string;
-  }>({});
+  const { entities } = useAppSelector((state) => state.user.series);
 
   useEffect(() => {
     dispatch(fetchSeries());

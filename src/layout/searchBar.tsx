@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect, useState } from "react";
+import { FC, useCallback, useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import { Divider } from "@mui/material";
@@ -9,24 +9,32 @@ import { toPascalCase } from "utils/pascalCaseConvert";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { fetchSearchProducts } from "store/slice/productSlice";
 
-const SearchBar: FC<any> = ({ setSearchOpen }) => {
+interface SearchBarProps {
+  setSearchOpen: (open: boolean) => void;
+}
+
+const SearchBar: FC<SearchBarProps> = ({ setSearchOpen }) => {
   const [searchValue, setSearchValue] = useState<string>("");
   const dispatch = useAppDispatch();
   const { searchProduct } = useAppSelector((state) => state.user.products);
 
+  // Memoized debounced search function
   const debouncedSearch = useCallback(
     debounce((searchTerm: string) => {
       if (searchTerm.trim()) {
         dispatch(fetchSearchProducts(searchTerm));
       }
-    }, 500), // 500ms delay
+    }, 500),
     [dispatch]
   );
 
-  const handleSearch = (search: string) => {
-    setSearchValue(search);
-    debouncedSearch(search);
-  };
+  const handleSearch = useCallback(
+    (search: string) => {
+      setSearchValue(search);
+      debouncedSearch(search);
+    },
+    [debouncedSearch]
+  );
 
   // Cleanup debounce on unmount
   useEffect(() => {
@@ -35,66 +43,107 @@ const SearchBar: FC<any> = ({ setSearchOpen }) => {
     };
   }, [debouncedSearch]);
 
+  // Memoize search results
+  const searchResults = useMemo(
+    () => (Array.isArray(searchProduct) ? searchProduct : []),
+    [searchProduct]
+  );
+
+  // Memoize product URL generation
+  const getProductUrl = useCallback((product: any) => {
+    if (!product?.id) return "#";
+
+    const variantId = product.variants?.[0]?.id || "";
+    const colorId = product.colors?.[0]?.id || "";
+    const productName = product.productName
+      ? encodeURIComponent(product.productName)
+      : "";
+
+    return `/phone/${product.id}/${variantId}/${colorId}/${productName}`;
+  }, []);
+
+  // Memoize rendered search results
+  const renderedSearchResults = useMemo(
+    () =>
+      searchResults.map((product: any) => {
+        const productUrl = getProductUrl(product);
+        const imageUrl = product.colors?.[0]?.images?.[0]?.url;
+        const productName = product.productName
+          ? toPascalCase(product.productName)
+          : "";
+        const price = product.variants?.[0]?.price || "";
+
+        return (
+          <Link
+            onClick={() => setSearchOpen(false)}
+            to={productUrl}
+            key={product.id}
+            className="flex items-center space-x-4 p-2 hover:bg-gray-50 rounded"
+          >
+            <div className="p-1">
+              <div className="w-8 h-10">
+                <LazyImage
+                  src={imageUrl}
+                  alt={`${productName} product image`}
+                />
+              </div>
+            </div>
+            <div className="text-xs space-y-1">
+              <h1 className="font-medium">{productName}</h1>
+              <h1 className="text-green-600 tracking-wide">₹{price}</h1>
+            </div>
+          </Link>
+        );
+      }),
+    [searchResults, getProductUrl, setSearchOpen]
+  );
+
+  const hasSearchResults = searchResults.length > 0;
+  const hasSearchValue = searchValue.trim().length > 0;
+
   return (
-    <div className="fixed top-0  left-0 right-0 w-screen h-screen bg-white z-40">
-      <div className="flex space-x-3 w-full   p-2 ">
+    <div className="fixed top-0 left-0 right-0 w-screen h-screen bg-white z-40 flex flex-col">
+      {/* Search Header */}
+      <div className="flex items-center w-full p-3 border-b">
         <SearchOutlinedIcon sx={{ color: "#0e86d4" }} />
         <input
           autoFocus
-          placeholder="search Here"
-          className="focus:outline-none"
+          placeholder="Search here..."
+          className="focus:outline-none flex-1 ml-2"
+          value={searchValue}
           onChange={(e) => handleSearch(e.target.value)}
         />
       </div>
+
       <Divider />
-      <div className="flex flex-col space-y-4 overflow-y-auto ml-3 h-[90vh]">
-        {Array.isArray(searchProduct) &&
-          searchProduct?.map((product: any) => {
-            return (
-              <Link
-                onClick={() => setSearchOpen(false)}
-                to={`/phone/${product?.id}/${
-                  Array.isArray(product?.variants) && product?.variants[0]?.id
-                }/${
-                  Array.isArray(product?.colors) && product?.colors[0]?.id
-                }/${encodeURIComponent(product?.productName)}`}
-                key={product?.id}
-                className="flex items-center space-x-4"
-              >
-                <div className="p-1">
-                  <div className="w-8 h-10">
-                    <LazyImage
-                      src={product?.colors[0]?.images[0].url}
-                      alt="product Image"
-                    />
-                  </div>
-                </div>
-                <div className="text-xs space-y-1">
-                  <h1>
-                    {product?.productName && toPascalCase(product?.productName)}
-                  </h1>
-                  <h1 className="text-green-600 tracking-wide">
-                    ₹{product?.variants[0].price}
-                  </h1>
-                </div>
-              </Link>
-            );
-          })}
-        {searchValue && (
+
+      {/* Search Results */}
+      <div className="flex-1 overflow-y-auto">
+        {hasSearchResults ? (
+          <div className="divide-y">{renderedSearchResults}</div>
+        ) : hasSearchValue ? (
+          <div className="p-4 text-center text-gray-500">
+            No results found for "{searchValue}"
+          </div>
+        ) : null}
+
+        {hasSearchValue && !hasSearchResults && (
           <Link
             to={`/Phones/${encodeURIComponent(searchValue)}`}
-            className="flex space-x-2 p-2 items-center"
+            className="flex items-center space-x-2 p-4 hover:bg-gray-50"
             onClick={() => setSearchOpen(false)}
           >
-            <CiSearch className="mt-1" />
-            <h1>{searchValue}</h1>
+            <CiSearch className="text-gray-600" />
+            <span>Search for "{searchValue}"</span>
           </Link>
         )}
       </div>
-      <div className="p-2 fixed bottom-1 left-0 w-full">
+
+      {/* Footer Button */}
+      <div className="p-3 border-t bg-white">
         <button
           onClick={() => setSearchOpen(false)}
-          className="border-2 border-blue-600 bg-white  text-blue-600 text-center p-2  w-full"
+          className="border-2 border-blue-600 bg-white text-blue-600 text-center p-3 w-full rounded hover:bg-blue-50 transition-colors"
         >
           Go Back
         </button>
@@ -102,4 +151,5 @@ const SearchBar: FC<any> = ({ setSearchOpen }) => {
     </div>
   );
 };
+
 export default SearchBar;

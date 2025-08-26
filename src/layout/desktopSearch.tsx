@@ -1,31 +1,44 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-
+import { debounce } from "lodash";
 import LazyImage from "components/commonComponents/imageLazyLoading";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { fetchSearchProducts } from "store/slice/productSlice";
-import { debounce } from "lodash";
 
 const DesktopSearch = () => {
   const [searchValue, setSearchValue] = useState<string>("");
   const dispatch = useAppDispatch();
   const { searchProduct } = useAppSelector((state) => state.user.products);
 
+  // Memoized search results
+  const searchResults = useMemo(
+    () => (Array.isArray(searchProduct) ? searchProduct : []),
+    [searchProduct]
+  );
+
+  // Debounced search function
   const debouncedSearch = useCallback(
     debounce((searchTerm: string) => {
       if (searchTerm.trim()) {
         dispatch(fetchSearchProducts(searchTerm));
       }
-    }, 500), // 500ms delay
+    }, 500),
     [dispatch]
   );
 
-  const handleSearch = (search: string) => {
-    setSearchValue(search);
-    debouncedSearch(search);
-  };
+  const handleSearch = useCallback(
+    (search: string) => {
+      setSearchValue(search);
+      debouncedSearch(search);
+    },
+    [debouncedSearch]
+  );
+
+  const handleSelect = useCallback(() => {
+    setSearchValue("");
+  }, []);
 
   // Cleanup debounce on unmount
   useEffect(() => {
@@ -34,71 +47,85 @@ const DesktopSearch = () => {
     };
   }, [debouncedSearch]);
 
-  const handleSelect = () => {
-    setSearchValue("");
-  };
+  // Memoize product URL generation
+  const getProductUrl = useCallback((product: any) => {
+    if (!product?.id) return "#";
+
+    const variantId = product.variants?.[0]?.id || "";
+    const colorId = product.colors?.[0]?.id || "";
+    const productName = product.productName
+      ? encodeURIComponent(product.productName)
+      : "";
+
+    return `/phone/${product.id}/${variantId}/${colorId}/${productName}`;
+  }, []);
+
+  // Memoize rendered search results
+  const renderedSearchResults = useMemo(
+    () =>
+      searchResults.map((product: any) => {
+        const imageUrl =
+          product?.image ?? product?.colors?.[0]?.images?.[0]?.url;
+        const productName = product?.productName || "";
+        const price = product?.variants?.[0]?.price || "";
+
+        return (
+          <Link
+            to={getProductUrl(product)}
+            key={product.id}
+            className="flex items-center space-x-3 p-2 hover:bg-gray-200 rounded transition-colors"
+            onClick={handleSelect}
+          >
+            <div className="w-10 h-10 flex-shrink-0">
+              <LazyImage src={imageUrl} alt={`${productName} product image`} />
+            </div>
+            <div className="text-xs min-w-0 flex-1">
+              <h1 className="font-medium truncate">{productName}</h1>
+              <h1 className="text-green-600 font-semibold">₹{price}</h1>
+            </div>
+          </Link>
+        );
+      }),
+    [searchResults, getProductUrl, handleSelect]
+  );
+
+  const hasSearchValue = searchValue.trim().length > 0;
+  const hasSearchResults = searchResults.length > 0;
 
   return (
     <div className="relative">
-      <div className="flex items-center border border-gray-500 rounded-lg p-2 w-[22vw] justify-between">
+      <div className="flex items-center border border-gray-300 rounded-lg px-3 py-2 w-[22vw] justify-between focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500 transition-colors">
         <input
           value={searchValue}
-          placeholder="search here"
-          className="focus:outline-none"
+          placeholder="Search here..."
+          className="focus:outline-none w-full bg-transparent"
           onChange={(e) => handleSearch(e.target.value)}
         />
-        <SearchOutlinedIcon sx={{ color: "#808080" }} />
+        <SearchOutlinedIcon sx={{ color: "#808080", fontSize: 20 }} />
       </div>
-      {searchValue ? (
-        <div className="absolute -left-3 top-12 flex flex-col space-y-4 overflow-y-auto bg-gray-100 ml-3 max-h-[30vw] w-full z-50 p-2 shadow-xl">
-          {Array.isArray(searchProduct)
-            ? searchProduct?.map((product: any) => {
-                return (
-                  <Link
-                    to={`/phone/${product?.id}/${
-                      Array.isArray(product?.variants) &&
-                      product?.variants[0]?.id
-                    }/${
-                      Array.isArray(product?.colors) && product?.colors[0]?.id
-                    }/${encodeURIComponent(product?.productName)}`}
-                    key={product?.id}
-                    className="flex items-center space-x-4"
-                    onClick={() => handleSelect()}
-                  >
-                    <div className="p-1">
-                      <div className="w-10 h-10">
-                        <LazyImage
-                          src={
-                            product?.image ?? product?.colors[0]?.images[0]?.url
-                          }
-                          alt="product Image"
-                        />
-                      </div>
-                    </div>
-                    <div className="text-xs">
-                      <h1>{product?.productName}</h1>
-                      <h1 className="text-green-600">
-                        {" "}
-                        ₹{product?.variants[0].price}
-                      </h1>
-                    </div>
-                  </Link>
-                );
-              })
-            : null}
-          {searchValue && (
-            <Link
-              to={`/Phones/${encodeURIComponent(searchValue)}`}
-              className="flex space-x-2 p-2 items-center"
-              onClick={() => handleSelect()}
-            >
-              <CiSearch className="mt-1" />
-              <h1>{searchValue}</h1>
-            </Link>
+
+      {hasSearchValue && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-80 overflow-y-auto">
+          {hasSearchResults ? (
+            <div className="py-2">{renderedSearchResults}</div>
+          ) : (
+            <div className="p-4 text-center text-gray-500 text-sm">
+              No results found
+            </div>
           )}
+
+          <Link
+            to={`/Phones/${encodeURIComponent(searchValue)}`}
+            className="flex items-center space-x-2 p-3 border-t border-gray-100 hover:bg-gray-50 transition-colors"
+            onClick={handleSelect}
+          >
+            <CiSearch className="text-gray-600" />
+            <span className="text-sm">Search for "{searchValue}"</span>
+          </Link>
         </div>
-      ) : null}
+      )}
     </div>
   );
 };
+
 export default DesktopSearch;

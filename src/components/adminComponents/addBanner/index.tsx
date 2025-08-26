@@ -1,11 +1,9 @@
 import { FC, useEffect } from "react";
 
 // import { AddBanners } from "store/slice/products/productSlice";
-import { useAppDispatch, useAppSelector } from "hooks/useRedux";
+import { useAppDispatch } from "hooks/useRedux";
 import DynamicForm from "../dynamicForm";
-import { addBanners, fetchBanners } from "store/slice/bannerSlice";
-import { ToastContainer } from "react-toastify";
-import { showToast } from "utils/toast";
+import { addBanners } from "store/slice/bannerSlice";
 
 interface props {
   handleForm: any;
@@ -24,10 +22,6 @@ const AddBanner: FC<props> = ({
 }) => {
   const dispatch = useAppDispatch();
   const handleSubmit = (values: typeof initialValues) => {
-    // const formData = new FormData();
-    // formData.append("seriesId", values.seriesId);
-    // formData.append("image", values.image);
-
     dispatch(addBanners(values));
   };
 

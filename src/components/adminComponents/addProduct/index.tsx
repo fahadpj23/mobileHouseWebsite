@@ -43,9 +43,6 @@ const AddProduct: FC<props> = ({
         formData.append("images", colorDetails);
       });
     });
-    // values.color.images.forEach(imageFile => {
-    //   formData.append('images', imageFile);
-    // });
 
     if (editId) {
       formData.append("productId", editId.toString());

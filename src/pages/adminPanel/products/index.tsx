@@ -15,11 +15,11 @@ import Header from "components/adminComponents/header";
 import AddProduct from "components/adminComponents/addProduct";
 import { showToast } from "utils/toast";
 import { ToastContainer } from "react-toastify";
-import axios from "axios";
+import Loading from "components/commonComponents/loading";
 
 const Products = () => {
   const dispatch = useAppDispatch();
-  const { entities, entity, successMessage } = useAppSelector(
+  const { entities, entity, successMessage, loading } = useAppSelector(
     (state) => state.user.products
   );
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
@@ -63,6 +63,7 @@ const Products = () => {
   return (
     <div>
       <ToastContainer />
+      {loading && <Loading />}
       <Header title="Product" handleForm={handleForm} />
 
       {Array.isArray(entities) && (
