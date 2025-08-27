@@ -22,6 +22,7 @@ const AddBanner: FC<props> = ({
 }) => {
   const dispatch = useAppDispatch();
   const handleSubmit = (values: typeof initialValues) => {
+    console.log(values)
     dispatch(addBanners(values));
   };
 

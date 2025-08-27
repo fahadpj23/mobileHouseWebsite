@@ -6,7 +6,6 @@ import Brand from "pages/brand";
 import SingleItem from "pages/singleItem";
 import SeriesList from "pages/seriesList";
 import PageNotFound from "pages/404Page";
-import SpecCreator from "pages/specCreator";
 import Phones from "pages/phones";
 import Products from "pages/adminPanel/products";
 import AdminMainLayout from "layout/adminLayout";
@@ -29,7 +28,6 @@ const PageRoute = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="brand/:brandName" element={<Brand />} />
             <Route path="series/:seriesId" element={<SeriesList />} />
-            <Route path="specCreator" element={<SpecCreator />} />
             <Route path="Phones/:phoneType" element={<Phones />} />
             <Route
               path="phone/:productId/:productVariantId/:productColorId/:productName"

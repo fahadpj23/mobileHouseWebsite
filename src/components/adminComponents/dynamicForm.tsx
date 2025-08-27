@@ -40,6 +40,7 @@ import { AddCircleOutline, RemoveCircleOutline } from "@mui/icons-material";
 
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { fetchSeries } from "store/slice/seriesSlice";
+import Loading from "components/commonComponents/loading";
 
 // Define types for our form
 interface FormField {
@@ -84,6 +85,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
   isAddModalOpen,
 }) => {
   const [series, setSeries] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [newItemValue, setNewItemValue] = useState<any>("");
   const dispatch = useAppDispatch();
   const { entities } = useAppSelector((state) => state.user.series);
@@ -91,6 +93,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
   useEffect(() => {
     dispatch(fetchSeries());
   }, []);
+
 
   useEffect(() => {
     const newArray =
@@ -112,6 +115,10 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
     return Date.now().toString(36) + Math.random().toString(36).substring(2);
   };
 
+  const handleSubmit=(values:any)=>{
+      setIsLoading(true)
+      onSubmit(values)
+  }
   //form  dynamic rendering
   const renderFormField = (
     field: FormField,
@@ -799,6 +806,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
       aria-describedby="modal-modal-description"
     >
       <div className="  bg-white p-4 max-h-[80%] w-[90%] md:w-[80%] overflow-y-auto relative">
+      {isLoading && <Loading/>}
         <button
           onClick={() => handleForm()}
           className="absolute top-2 right-2 z-50"
@@ -808,7 +816,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          onSubmit={onSubmit}
+          onSubmit={handleSubmit}
         >
           {(formik) => (
             <Form>
