@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import ImageSlider from "components/Home/imageSlider";
 import Brands from "components/Home/Brands";
 import AvailableEmi from "components/Home/availableEmi";
@@ -13,6 +13,7 @@ import {
   getNewArrivalProduct,
   getTrendingPhone,
 } from "store/slice/productSlice";
+import LazyLoadWithTrigger from "components/LazyLoadWithTrigger";
 
 const HomePage = () => {
   const dispatch = useAppDispatch();
@@ -20,13 +21,22 @@ const HomePage = () => {
   const { newArrival, trendingPhone } = useAppSelector(
     (state) => state.user.products
   );
+  
+  const [hasFetchedTrending, setHasFetchedTrending] = useState(false);
 
   // Memoized data fetching functions
   const fetchInitialData = useCallback(() => {
     dispatch(fetchBanners());
     dispatch(getNewArrivalProduct());
-    dispatch(getTrendingPhone());
+    // Removed getTrendingPhone from initial fetch
   }, [dispatch]);
+
+  const fetchTrendingPhone = useCallback(() => {
+    if (!hasFetchedTrending) {
+      dispatch(getTrendingPhone());
+      setHasFetchedTrending(true);
+    }
+  }, [dispatch, hasFetchedTrending]);
 
   useEffect(() => {
     fetchInitialData();
@@ -67,7 +77,7 @@ const HomePage = () => {
           <NewArrival />
         </LazyLoad>
 
-        <LazyLoad>
+         <LazyLoadWithTrigger onVisible={fetchTrendingPhone}>
           <div className="p-2 bg-white">
             <ProductMiniList
               title="Trending Phones"
@@ -75,7 +85,7 @@ const HomePage = () => {
               link="/trendingPhone"
             />
           </div>
-        </LazyLoad>
+        </LazyLoadWithTrigger>
 
         <LazyLoad>
           <WhatsappAds />
