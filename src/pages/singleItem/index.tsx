@@ -11,6 +11,7 @@ import { toPascalCase } from "utils/pascalCaseConvert";
 import { getProductById } from "store/slice/productSlice";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import ServerLazyImage from "components/commonComponents/serverImageLazyLoading";
+import Skeleton from "./skeleton";
 
 const SingleItem = () => {
   const { productId, productVariantId, productColorId } = useParams();
@@ -127,11 +128,7 @@ const SingleItem = () => {
 
   // Early return for loading state
   if (isLoading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen fixed top-0 left-0 w-screen z-50 bg-white">
-        <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-      </div>
-    );
+    return <Skeleton />;
   }
 
   // Early return if no product data
@@ -141,11 +138,7 @@ const SingleItem = () => {
     !variantDetails ||
     !selectedColorsDetails
   ) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
-        Product not found
-      </div>
-    );
+    return <Skeleton />;
   }
 
   return (
@@ -189,10 +182,12 @@ const SingleItem = () => {
 
       <div className="w-full md:w-1/2 mt-0 md:mt-10">
         <div className="space-y-2 ml-3 md:ml-6">
-          <h1 className="font-semibold truncate w-full text-[15px] md:text-base flex items-center space-x-1">
+          <h1 className="font-semibold truncate w-full text-[15px] md:text-base flex items-center space-x-1 ">
             <span>{toPascalCase(product.productName)}</span>
-            <span>{variantDetails.ram}/</span>
-            <span>{variantDetails.storage}</span>
+            <div className="p-1">
+              <span>{variantDetails.ram}/</span>
+              <span>{variantDetails.storage}</span>
+            </div>
             <span>{toPascalCase(selectedColorsDetails.name)}</span>
           </h1>
           <div className="flex items-center space-x-2 text-base">
