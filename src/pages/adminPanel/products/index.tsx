@@ -2,9 +2,10 @@ import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import {
   deleteProduct,
   fetchProducts,
+  fetchSearchProducts,
   getProductByIdEdit,
 } from "store/slice/productSlice";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import TableData from "components/adminComponents/table";
 import { formFields } from "components/adminComponents/addProduct/formFields";
@@ -16,12 +17,15 @@ import AddProduct from "components/adminComponents/addProduct";
 import { showToast } from "utils/toast";
 import { ToastContainer } from "react-toastify";
 import Loading from "components/commonComponents/loading";
+import { debounce } from "lodash";
 
 const Products = () => {
   const dispatch = useAppDispatch();
-  const { entities, entity, successMessage, loading } = useAppSelector(
+  const { entities, entity, successMessage, loading,searchProduct } = useAppSelector(
     (state) => state.user.products
   );
+      const [searchValue, setSearchValue] = useState<string>("");
+    
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
   const [values, setValues] = useState<any>(initialValues);
   const [isEdit, setIsEdit] = useState<boolean>(false);
@@ -60,16 +64,44 @@ const Products = () => {
     } else setValues(initialValues);
   }, [entity]);
 
+
+    const debouncedSearch = useCallback(
+      debounce((searchTerm: string) => {
+        if (searchTerm.trim()) {
+          dispatch(fetchSearchProducts(searchTerm));
+        }
+        else
+        dispatch(fetchProducts())
+      }, 500),
+      [dispatch]
+    );
+  
+    const handleSearch = useCallback(
+      (search: string) => {
+        setSearchValue(search);
+        debouncedSearch(search);
+      },
+      [debouncedSearch]
+    );
+  
+    // Cleanup debounce on unmount
+    useEffect(() => {
+      return () => {
+        debouncedSearch.cancel();
+      };
+    }, [debouncedSearch]);
+
+
   return (
     <div>
       <ToastContainer />
       {loading && <Loading />}
-      <Header title="Product" handleForm={handleForm} />
+      <Header title="Product" handleForm={handleForm} searchValue={searchValue} handleSearch={handleSearch}/>
 
       {Array.isArray(entities) && (
         <TableData
           TableHead={ProductTableHead}
-          TableData={entities}
+          TableData={searchValue ? searchProduct :entities}
           handleEdit={handleEdit}
           handleDelete={handleDelete}
         />
