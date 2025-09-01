@@ -1,36 +1,44 @@
-export const filterProducts = (products: any, filters: any) => {
-  return products.filter((product: any) => {
-    if (filters?.brand?.length && !filters.brand.includes(product.brand)) {
-      return false;
+// utils/filterProductList.ts
+export const filterProducts = (products: any[], filters: any) => {
+  if (!products || products.length === 0) return [];
+
+  // Extract only filter properties, exclude sort
+  const { sort: _, ...filterParams } = filters;
+
+  return products.filter((product) => {
+    // Check if product has variants
+    if (!product.variants || product.variants.length === 0) return false;
+
+    const firstVariant = product.variants[0];
+
+    // Convert variant values to numbers for comparison
+    const variantPrice = parseInt(firstVariant.price) || 0;
+    const variantRam = parseInt(firstVariant.ram) || 0;
+    const variantStorage = parseInt(firstVariant.storage) || 0;
+
+    // Apply filters
+    if (filterParams.brand && filterParams.brand.length > 0) {
+      if (!filterParams.brand.includes(product.brand)) return false;
     }
 
-    if (
-      filters?.ram?.length &&
-      !filters.ram?.includes(product.variants[0].ram)
-    ) {
-      return false;
+    if (filterParams.network && filterParams.network.length > 0) {
+      if (!filterParams.network.includes(product.networkType)) return false;
     }
 
-    if (
-      filters?.storage?.length &&
-      !filters.storage?.includes(product.variants[0].storage)
-    ) {
-      return false;
+    if (filterParams.ram && filterParams.ram.length > 0) {
+      if (!filterParams.ram.includes(variantRam)) return false;
     }
 
-    if (
-      filters?.network?.length &&
-      !filters.network?.includes(product.networkType)
-    ) {
-      return false;
+    if (filterParams.storage && filterParams.storage.length > 0) {
+      if (!filterParams.storage.includes(variantStorage)) return false;
     }
 
-    if (
-      (filters.priceMin &&
-        product.variants[0].price < Number(filters.priceMin)) ||
-      (filters.priceMax && product.variants[0].price > Number(filters.priceMax))
-    ) {
-      return false;
+    if (filterParams.priceMin !== undefined && filterParams.priceMin !== null) {
+      if (variantPrice < filterParams.priceMin) return false;
+    }
+
+    if (filterParams.priceMax !== undefined && filterParams.priceMax !== null) {
+      if (variantPrice > filterParams.priceMax) return false;
     }
 
     return true;

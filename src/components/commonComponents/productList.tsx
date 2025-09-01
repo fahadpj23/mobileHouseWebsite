@@ -4,6 +4,7 @@ import { CiFilter } from "react-icons/ci";
 import SingleProductCard from "./singleProductCard";
 import { filterProducts } from "utils/filterProductList";
 import NOPRODUCTIMAGE from "assets/noProduct.jpg";
+
 import {
   Box,
   Drawer,
@@ -24,10 +25,12 @@ const ProductList: FC<any> = ({ products }) => {
   const [searchParams] = useSearchParams();
   const { isMobile } = useScreenSize();
 
-  // Memoize initial filter values
+  // Memoize initial filter and sort values
   const filterInitialValue = useMemo(
     () => ({
-      network: searchParams.get("network") || [],
+      network: searchParams.get("network")
+        ? searchParams.get("network")?.split(",")
+        : [],
       ram: searchParams.get("ram")
         ? searchParams.get("ram")?.split(",").map(Number)
         : [],
@@ -43,6 +46,7 @@ const ProductList: FC<any> = ({ products }) => {
       priceMax: searchParams.get("priceMax")
         ? Number(searchParams.get("priceMax"))
         : 150000,
+      sort: searchParams.get("sort") ?? "newest", // Add sort to filters
     }),
     [searchParams]
   );
@@ -50,21 +54,72 @@ const ProductList: FC<any> = ({ products }) => {
   const [filters, setFilters] = useState<any>(filterInitialValue);
   const [productList, setProductList] = useState(products);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [sort, setSort] = useState(searchParams.get("sort") ?? "newest");
   const [isSortOpen, setSortIsOpen] = useState(false);
   const [isFilterOpen, setFilterIsOpen] = useState<boolean>(false);
 
-  // Memoize filtered products
-  const filteredProducts = useMemo(
-    () => filterProducts(products, filters),
-    [products, filters]
-  );
+  // Memoize filtered and sorted products
+  const filteredAndSortedProducts = useMemo(() => {
+    // First filter the products
+    const filtered = filterProducts(products, filters);
 
-  // Optimize filter updates
+    // Then apply sorting
+    return [...filtered].sort((a, b) => {
+      const firstVariantA = a.variants[0];
+      const firstVariantB = b.variants[0];
+
+      const priceA = parseInt(firstVariantA?.price) || 0;
+      const priceB = parseInt(firstVariantB?.price) || 0;
+
+      const dateA = a.createdAt?._seconds
+        ? new Date(a.createdAt._seconds * 1000)
+        : new Date(0);
+      const dateB = b.createdAt?._seconds
+        ? new Date(b.createdAt._seconds * 1000)
+        : new Date(0);
+
+      switch (filters.sort) {
+        case "HighToLow":
+          return priceB - priceA;
+        case "LowToHigh":
+          return priceA - priceB;
+        case "newest":
+        default:
+          return dateB.getTime() - dateA.getTime();
+      }
+    });
+  }, [products, filters]);
+
+  // Optimize filter updates (including sort)
   const desktopFilterAdd = useCallback((key: any, value: any) => {
     UrlReplace(key, value);
     setIsLoading(true);
     setFilters((prev: any) => ({ ...prev, [key]: value }));
+  }, []);
+
+  // Handle sort changes - update both URL and filters state
+  const handleSort = useCallback((sortValue: string) => {
+    setSortIsOpen(false);
+    UrlReplace("sort", sortValue);
+    setIsLoading(true);
+    // Update sort in the filters state
+    setFilters((prev: any) => ({ ...prev, sort: sortValue }));
+  }, []);
+
+  // Handle filter changes
+  const addFilter = useCallback((selectedProductFilters: any) => {
+    Object.entries(selectedProductFilters)?.forEach(
+      ([key, value]: [string, any]) => {
+        UrlReplace(key, value);
+      }
+    );
+
+    setFilters((prev: any) => ({
+      ...prev,
+      ...selectedProductFilters,
+    }));
+
+    setFilterIsOpen(false);
+    setIsLoading(true);
   }, []);
 
   // Debounced loading state
@@ -77,40 +132,14 @@ const ProductList: FC<any> = ({ products }) => {
 
   // Update product list when filters or products change
   useEffect(() => {
-    setProductList(filteredProducts);
-  }, [filteredProducts]);
+    setProductList(filteredAndSortedProducts);
+  }, [filteredAndSortedProducts]);
 
   // Handle URL parameter changes
   useEffect(() => {
     setFilters(filterInitialValue);
     setIsLoading(true);
   }, [filterInitialValue]);
-
-  const handleSort = useCallback((sortValue: string) => {
-    setSortIsOpen(false);
-    setSort(sortValue);
-    UrlReplace("sort", sortValue);
-    setIsLoading(true);
-  }, []);
-
-  const addFilter = useCallback((selectedProductFilters: any) => {
-    Object.entries(selectedProductFilters)?.forEach((filter: any) => {
-      UrlReplace(filter[0], filter[1]);
-    });
-
-    setFilters((prev: any) => ({
-      ...prev,
-      storage: selectedProductFilters?.storage,
-      ram: selectedProductFilters?.ram,
-      brand: selectedProductFilters?.brand,
-      network: selectedProductFilters?.network,
-      priceMin: selectedProductFilters?.priceMin,
-      priceMax: selectedProductFilters?.priceMax,
-    }));
-
-    setFilterIsOpen(false);
-    setIsLoading(true);
-  }, []);
 
   // Memoize sort filter drawer
   const sortFilter = useMemo(
@@ -130,7 +159,7 @@ const ProductList: FC<any> = ({ products }) => {
           <FormControl>
             <RadioGroup
               aria-labelledby="demo-radio-buttons-group-label"
-              value={sort}
+              value={filters.sort}
               name="radio-buttons-group"
               onChange={(e) => handleSort(e.target?.value)}
             >
@@ -142,19 +171,19 @@ const ProductList: FC<any> = ({ products }) => {
               <FormControlLabel
                 value={"HighToLow"}
                 control={<Radio size="small" />}
-                label=" price -- High to Low"
+                label="Price -- High to Low"
               />
               <FormControlLabel
                 value={"LowToHigh"}
                 control={<Radio size="small" />}
-                label=" price -- Low to High"
+                label="Price -- Low to High"
               />
             </RadioGroup>
           </FormControl>
         </Box>
       </Drawer>
     ),
-    [isSortOpen, sort, handleSort]
+    [isSortOpen, filters.sort, handleSort]
   );
 
   // Memoize skeleton array

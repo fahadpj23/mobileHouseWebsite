@@ -110,7 +110,7 @@ const ProductListFilters: FC<props> = ({
       </div>
     </div>
   );
-  console.log(productFilters);
+
   return (
     <div>
       <div>
@@ -142,7 +142,7 @@ const ProductListFilters: FC<props> = ({
                 {(() => {
                   switch (selectedFilter) {
                     case "brand":
-                      return checkBoxList(products);
+                      return checkBoxList(PHONEBRANDS);
                     case "ram":
                       return checkBoxList(RamVariant);
                     case "storage":
