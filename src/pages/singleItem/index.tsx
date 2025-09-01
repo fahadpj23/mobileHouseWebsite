@@ -12,6 +12,8 @@ import { getProductById } from "store/slice/productSlice";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import ServerLazyImage from "components/commonComponents/serverImageLazyLoading";
 import Skeleton from "./skeleton";
+import GIFTIMAGE from "assets/gift.webp";
+import LazyImage from "components/commonComponents/imageLazyLoading";
 
 const SingleItem = () => {
   const { productId, productVariantId, productColorId } = useParams();
@@ -83,6 +85,7 @@ const SingleItem = () => {
   const handleColor = useCallback(
     (id: string) => {
       setIsLoading(true);
+
       setSelectedImage("");
       navigate(
         `/phone/${product?.id}/${productVariantId}/${id}/${encodeURIComponent(
@@ -96,6 +99,7 @@ const SingleItem = () => {
   const handleVariant = useCallback(
     (id: String) => {
       setIsLoading(true);
+
       navigate(
         `/phone/${productId}/${id}/${productColorId}/${encodeURIComponent(
           product?.productName
@@ -143,24 +147,31 @@ const SingleItem = () => {
 
   return (
     <div className="block md:flex items-center">
+      <input autoFocus className="w-0 h-0 " readOnly />
       <div className="flex justify-center w-full md:w-1/2">
         <div className="flex flex-col justify-center items-center">
-          <div className="p-3 w-screen mb-3 flex justify-center">
-            {isMobile ? (
-              <ProductImageSlider productImages={selectedColorsDetails} />
-            ) : (
-              <div className="w-[80vw] h-[50vh] md:w-[30vw] md:h-[30vw] flex justify-center items-center">
-                <div className="w-full h-full">
-                  <ServerLazyImage
-                    src={
-                      selectedImage?.url ||
-                      selectedColorsDetails?.images?.[0]?.url
-                    }
-                    alt={`${product?.name} Image`}
-                  />
-                </div>
+          <div className="p-3 w-screen mb-3 flex justify-center ">
+            <div className="relative">
+              <div className="absolute -top-16 -right-12 w-20 h-20 md:h-24 md:w-24">
+                <LazyImage src={GIFTIMAGE} alt="gift" />
               </div>
-            )}
+
+              {isMobile ? (
+                <ProductImageSlider productImages={selectedColorsDetails} />
+              ) : (
+                <div className="w-[80vw] h-[50vh] md:w-[30vw] md:h-[30vw] flex justify-center items-center">
+                  <div className="w-full h-full">
+                    <ServerLazyImage
+                      src={
+                        selectedImage?.url ||
+                        selectedColorsDetails?.images?.[0]?.url
+                      }
+                      alt={`${product?.name} Image`}
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
           {!isMobile && (
             <div className="flex space-x-3 justify-center w-full">

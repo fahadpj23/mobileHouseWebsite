@@ -27,7 +27,7 @@ const SeriesList = () => {
           })}
         </div>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-2 md:gap-5 animate-spin">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-2 md:gap-5 animate-pulse">
           {[...Array(5)].map((item, key) => {
             return <SingleProductSkeleton />;
           })}

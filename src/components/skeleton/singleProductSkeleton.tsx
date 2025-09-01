@@ -11,9 +11,6 @@ const SingleProductSkeleton = () => {
         {/* Product Title */}
         <div className="h-4 bg-gray-300 rounded w-4/5"></div>
 
-        {/* Discount Badge (always shown in skeleton) */}
-        <div className="absolute top-3 right-3 bg-gray-300 text-white rounded p-1 w-10 h-6"></div>
-
         {/* Price Section */}
         <div className="flex space-x-3 items-center">
           <div className="h-5 bg-gray-300 rounded w-12"></div>

@@ -20,7 +20,7 @@ const MainLayout = ({ children }: any) => {
     <div className="p-1 md:p-5">
       <div className=" flex  justify-between w-full items-center">
         <div className=" block md:hidden ml-2 ">
-          <SideDrawar NAVIGATIONITEMS={NAVIGATIONITEMS} />
+          {/* <SideDrawar NAVIGATIONITEMS={NAVIGATIONITEMS} /> */}
         </div>
         <Link
           to="/"
