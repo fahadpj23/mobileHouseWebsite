@@ -28,22 +28,28 @@ interface Product {
   images: any;
   imageKeys: string[];
 }
-
 export const handler: Handler = async () => {
   try {
-    // Initialize Netlify Blob store just for images
-
-    // Get products from Firestore
+    // Get products from Firestore sorted by creation date (newest first)
     const productsRef = db.collection("products");
-    const snapshot = await productsRef.get();
+    const snapshot = await productsRef
+      .orderBy("createdAt", "desc") // Sort by createdAt descending (newest first)
+      .get();
+
     const products: any = [];
 
     snapshot.forEach((doc) => {
+      const data = doc.data();
       products.push({
         id: doc.id,
-        ...doc.data(),
+        ...data,
+        // Ensure createdAt is properly formatted
+        createdAt: data.createdAt
+          ? data.createdAt.toDate().toISOString()
+          : null,
       });
     });
+
     return {
       statusCode: 200,
       body: JSON.stringify(products),
@@ -57,6 +63,10 @@ export const handler: Handler = async () => {
     return {
       statusCode: 500,
       body: JSON.stringify({ error: "Failed to fetch products" }),
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
     };
   }
 };

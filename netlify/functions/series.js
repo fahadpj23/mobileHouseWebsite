@@ -44,12 +44,14 @@ exports.handler = async (event, context) => {
         };
       } else {
         // GET ALL - List all series
-        const snapshot = await seriesCollection.get();
+        const snapshot = await seriesCollection
+          .orderBy("createdAt", "desc")
+          .get();
+
         const series = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
-
         return {
           statusCode: 200,
           body: JSON.stringify(series),

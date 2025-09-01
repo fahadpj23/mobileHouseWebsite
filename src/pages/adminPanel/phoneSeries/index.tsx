@@ -27,7 +27,7 @@ const Series = () => {
 
   useEffect(() => {
     dispatch(fetchSeries());
-  }, []);
+  }, [dispatch]);
 
   const handleForm = () => setIsAddModalOpen(!isAddModalOpen);
 
