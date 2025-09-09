@@ -10,7 +10,9 @@ import { fetchSearchProducts } from "store/slice/productSlice";
 const DesktopSearch = () => {
   const [searchValue, setSearchValue] = useState<string>("");
   const dispatch = useAppDispatch();
-  const { searchProduct } = useAppSelector((state) => state.user.products);
+  const { searchProduct, loading } = useAppSelector(
+    (state) => state.user.products
+  );
 
   // Memoized search results
   const searchResults = useMemo(
@@ -106,7 +108,21 @@ const DesktopSearch = () => {
 
       {hasSearchValue && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-80 overflow-y-auto">
-          {hasSearchResults ? (
+          {loading ? (
+            <div>
+              {[...Array(3)].map((item, key) => {
+                return (
+                  <div className="flex items-center space-x-3 p-2 rounded transition-colors animate-pulse">
+                    <div className="w-10 h-10 flex-shrink-0 bg-gray-300 rounded"></div>
+                    <div className="text-xs min-w-0 flex-1 space-y-2">
+                      <div className="h-3 bg-gray-300 rounded w-3/4"></div>
+                      <div className="h-3 bg-gray-300 rounded w-1/2"></div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : hasSearchResults ? (
             <div className="py-2">{renderedSearchResults}</div>
           ) : (
             <div className="p-4 text-center text-gray-500 text-sm">

@@ -35,7 +35,9 @@ exports.handler = async (event, context) => {
     if (event.httpMethod === "GET") {
       try {
         // Get products from Firestore
-        const snapshot = await whatsappAdsCollection.get();
+        const snapshot = await whatsappAdsCollection
+          .orderBy("createdAt", "desc")
+          .get();
         const whatsappAds: any = [];
 
         snapshot.forEach((doc) => {

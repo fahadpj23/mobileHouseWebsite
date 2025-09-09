@@ -35,7 +35,9 @@ exports.handler = async (event, context) => {
     if (event.httpMethod === "GET") {
       try {
         // Get products from Firestore
-        const snapshot = await upcomingCollection.get();
+        const snapshot = await upcomingCollection
+          .orderBy("createdAt", "desc")
+          .get();
         const upcoming: any = [];
 
         snapshot.forEach((doc) => {
