@@ -23,7 +23,13 @@ const SeriesList = () => {
       {productList?.length ? (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-2 md:gap-5">
           {productList?.map((product: any) => {
-            return <SingleProductCard product={product} key={product?.id} />;
+            return (
+              <SingleProductCard
+                product={product}
+                key={product?.id}
+                productVariant={product?.variants[0]}
+              />
+            );
           })}
         </div>
       ) : (

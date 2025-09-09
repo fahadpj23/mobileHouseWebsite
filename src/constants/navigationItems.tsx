@@ -6,7 +6,11 @@ import { NAVIGATIONITEMMODEL } from "model/navigationItemModel";
 
 export const NAVIGATIONITEMS: NAVIGATIONITEMMODEL[] = [
   { title: "Home", link: "/", icon: <IoHomeOutline /> },
-  { title: "New Arrival", link: "phones/newArrival", icon: <GrAnnounce /> },
+  {
+    title: "New Arrival",
+    link: "phones/newArrivalProduct",
+    icon: <GrAnnounce />,
+  },
   {
     title: "Special Offer",
     link: "phones/specialOffer",

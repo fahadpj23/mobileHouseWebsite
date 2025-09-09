@@ -21,7 +21,7 @@ const HomePage = () => {
   const { newArrival, trendingPhone } = useAppSelector(
     (state) => state.user.products
   );
-  
+
   const [hasFetchedTrending, setHasFetchedTrending] = useState(false);
 
   // Memoized data fetching functions
@@ -77,7 +77,7 @@ const HomePage = () => {
           <NewArrival />
         </LazyLoad>
 
-         <LazyLoadWithTrigger onVisible={fetchTrendingPhone}>
+        <LazyLoadWithTrigger onVisible={fetchTrendingPhone}>
           <div className="p-2 bg-white">
             <ProductMiniList
               title="Trending Phones"

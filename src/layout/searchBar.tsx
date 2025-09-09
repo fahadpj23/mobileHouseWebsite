@@ -16,7 +16,7 @@ interface SearchBarProps {
 const SearchBar: FC<SearchBarProps> = ({ setSearchOpen }) => {
   const [searchValue, setSearchValue] = useState<string>("");
   const dispatch = useAppDispatch();
-  const { searchProduct } = useAppSelector((state) => state.user.products);
+  const { searchProduct,loading } = useAppSelector((state) => state.user.products);
 
   // Memoized debounced search function
   const debouncedSearch = useCallback(
@@ -24,7 +24,7 @@ const SearchBar: FC<SearchBarProps> = ({ setSearchOpen }) => {
       if (searchTerm.trim()) {
         dispatch(fetchSearchProducts(searchTerm));
       }
-    }, 500),
+    }, 100),
     [dispatch]
   );
 
@@ -121,7 +121,7 @@ const SearchBar: FC<SearchBarProps> = ({ setSearchOpen }) => {
       <div className="flex-1 overflow-y-auto">
         {hasSearchResults ? (
           <div className="divide-y">{renderedSearchResults}</div>
-        ) : hasSearchValue ? (
+        ) : hasSearchValue && !loading ? (
           <div className="p-4 text-center text-gray-500">
             No results found for "{searchValue}"
           </div>

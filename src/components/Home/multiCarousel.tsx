@@ -32,9 +32,12 @@ const MultiCarousel: FC<props> = ({ listItems }) => {
   return (
     <div className="bg-white">
       <Carousel responsive={responsive} infinite={true} arrows={false}>
-        {listItems?.map((product: PHONEMODEL) => (
+        {listItems?.map((product: any) => (
           <div key={product?.name} style={{ margin: "0px 2px" }}>
-            <SingleProductCard product={product} />
+            <SingleProductCard
+              product={product}
+              productVariant={product?.variants[0]}
+            />
           </div>
         ))}
       </Carousel>

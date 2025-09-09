@@ -192,12 +192,18 @@ const ProductList: FC<any> = ({ products }) => {
   // Memoize product cards
   const productCards = useMemo(
     () =>
-      productList?.map((product: any) => (
-        <SingleProductCard
-          product={product}
-          key={product?.id || product?.name}
-        />
-      )),
+      productList?.map((product: any) =>
+        product?.variants?.map((productVariantDetails: any) => (
+          <SingleProductCard
+            product={product}
+            productVariant={productVariantDetails}
+            key={
+              `${product?.id}-${productVariantDetails?.id}` ||
+              `${product?.name}-${productVariantDetails?.id}`
+            }
+          />
+        ))
+      ),
     [productList]
   );
 
@@ -255,8 +261,8 @@ const ProductList: FC<any> = ({ products }) => {
             </div>
           )}
 
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 md:gap-5 w-full justify-between">
-            {productList?.length ? (
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-2  md:gap-5 h-56  ">
+            {Array.isArray(productList) && productList?.length ? (
               productCards
             ) : (
               <div className="w-screen md:w-auto h-full flex justify-center col-span-full">

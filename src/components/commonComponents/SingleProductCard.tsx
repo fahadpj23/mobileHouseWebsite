@@ -7,21 +7,16 @@ import React from "react";
 
 interface Props {
   product: any;
+  productVariant: any;
 }
 
-const SingleProductCard: FC<Props> = ({ product }) => {
+const SingleProductCard: FC<Props> = ({ product, productVariant }) => {
   // Memoized calculations
   const discountPercentage = useMemo(() => {
-    if (!Array.isArray(product?.variants) || product.variants.length === 0)
-      return 0;
-
-    const variant = product.variants[0];
-    if (!variant?.mrp || !variant?.price) return 0;
-
-    const mrp = +variant.mrp;
-    const price = +variant.price;
+    const mrp = +productVariant.mrp;
+    const price = +productVariant.price;
     return ((mrp - price) / ((mrp + price) / 2)) * 100;
-  }, [product?.variants]);
+  }, [productVariant]);
 
   const productUrl = useMemo(() => {
     if (
@@ -31,7 +26,7 @@ const SingleProductCard: FC<Props> = ({ product }) => {
     )
       return "#";
 
-    return `/phone/${product.id}/${product.variants[0]?.id || ""}/${
+    return `/phone/${product.id}/${productVariant?.id || ""}/${
       product.colors[0]?.id || ""
     }/${encodeURIComponent(product.productName || "")}`;
   }, [product]);
@@ -41,8 +36,8 @@ const SingleProductCard: FC<Props> = ({ product }) => {
 
     const baseName = toPascalCase(product.productName);
     const variantInfo = product.variants?.[0]
-      ? `${product.variants[0].ram}${
-          product.variants[0].storage ? ` / ${product.variants[0].storage}` : ""
+      ? `${productVariant.ram}${
+          productVariant.storage ? `/${productVariant.storage}` : ""
         }`
       : "";
 
@@ -54,8 +49,8 @@ const SingleProductCard: FC<Props> = ({ product }) => {
       return { price: 0, mrp: 0 };
 
     return {
-      price: product.variants[0]?.price || 0,
-      mrp: product.variants[0]?.mrp || 0,
+      price: productVariant?.price || 0,
+      mrp: productVariant?.mrp || 0,
     };
   }, [product?.variants]);
 

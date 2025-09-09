@@ -1,72 +1,86 @@
-// utils/filterProductList.ts
 export const filterProducts = (products: any[], filters: any) => {
   if (!products || products.length === 0) return [];
 
-  return products.filter((product) => {
-    // Check if product has variants
-    if (!product.variants || product.variants.length === 0) return false;
+  return products
+    .filter((product) => {
+      // Check if product has variants
+      if (!product.variants || product.variants.length === 0) return false;
 
-    const firstVariant = product.variants[0];
+      // Check if ANY variant matches all the filters
+      return product.variants.some((variant: any) => {
+        // Convert variant values to numbers for comparison
+        const variantPrice = parseInt(variant.price) || 0;
+        const variantRam = parseInt(variant.ram) || 0;
+        const variantStorage = parseInt(variant.storage) || 0;
 
-    // Convert variant values to numbers for comparison
-    const variantPrice = parseInt(firstVariant.price) || 0;
-    const variantRam = parseInt(firstVariant.ram) || 0;
-    const variantStorage = parseInt(firstVariant.storage) || 0;
+        // Apply filters
+        if (filters.brand && filters.brand.length > 0) {
+          if (!filters.brand.includes(product.brand)) return false;
+        }
 
-    // Apply filters
-    if (filters.brand && filters.brand.length > 0) {
-      if (!filters.brand.includes(product.brand)) return false;
-    }
+        if (filters.network && filters.network.length > 0) {
+          if (!filters.network.includes(product.networkType)) return false;
+        }
 
-    if (filters.network && filters.network.length > 0) {
-      if (!filters.network.includes(product.networkType)) return false;
-    }
+        if (filters.ram && filters.ram.length > 0) {
+          if (!filters.ram.includes(variantRam)) return false;
+        }
 
-    if (filters.ram && filters.ram.length > 0) {
-      if (!filters.ram.includes(variantRam)) return false;
-    }
+        if (filters.storage && filters.storage.length > 0) {
+          if (!filters.storage.includes(variantStorage)) return false;
+        }
 
-    if (filters.storage && filters.storage.length > 0) {
-      if (!filters.storage.includes(variantStorage)) return false;
-    }
+        if (filters.priceMin !== undefined && filters.priceMin !== null) {
+          if (variantPrice < filters.priceMin) return false;
+        }
 
-    if (filters.priceMin !== undefined && filters.priceMin !== null) {
-      if (variantPrice < filters.priceMin) return false;
-    }
+        if (filters.priceMax !== undefined && filters.priceMax !== null) {
+          if (variantPrice > filters.priceMax) return false;
+        }
 
-    if (filters.priceMax !== undefined && filters.priceMax !== null) {
-      if (variantPrice > filters.priceMax) return false;
-    }
+        return true;
+      });
+    })
+    .map((product) => {
+      // For each product that has at least one matching variant,
+      // create a new product object with only the matching variants
+      const matchingVariants = product.variants.filter((variant: any) => {
+        const variantPrice = parseInt(variant.price) || 0;
+        const variantRam = parseInt(variant.ram) || 0;
+        const variantStorage = parseInt(variant.storage) || 0;
 
-    return true;
-  });
-};
+        // Apply the same filter logic to individual variants
+        if (filters.brand && filters.brand.length > 0) {
+          if (!filters.brand.includes(product.brand)) return false;
+        }
 
-export const sortProducts = (products: any[], sortType: string) => {
-  if (!products || products.length === 0) return [];
+        if (filters.network && filters.network.length > 0) {
+          if (!filters.network.includes(product.networkType)) return false;
+        }
 
-  return [...products].sort((a, b) => {
-    const firstVariantA = a.variants[0];
-    const firstVariantB = b.variants[0];
+        if (filters.ram && filters.ram.length > 0) {
+          if (!filters.ram.includes(variantRam)) return false;
+        }
 
-    const priceA = parseInt(firstVariantA?.price) || 0;
-    const priceB = parseInt(firstVariantB?.price) || 0;
+        if (filters.storage && filters.storage.length > 0) {
+          if (!filters.storage.includes(variantStorage)) return false;
+        }
 
-    const dateA = a.createdAt?._seconds
-      ? new Date(a.createdAt._seconds * 1000)
-      : new Date(0);
-    const dateB = b.createdAt?._seconds
-      ? new Date(b.createdAt._seconds * 1000)
-      : new Date(0);
+        if (filters.priceMin !== undefined && filters.priceMin !== null) {
+          if (variantPrice < filters.priceMin) return false;
+        }
 
-    switch (sortType) {
-      case "HighToLow":
-        return priceB - priceA;
-      case "LowToHigh":
-        return priceA - priceB;
-      case "newest":
-      default:
-        return dateB.getTime() - dateA.getTime();
-    }
-  });
+        if (filters.priceMax !== undefined && filters.priceMax !== null) {
+          if (variantPrice > filters.priceMax) return false;
+        }
+
+        return true;
+      });
+
+      // Return a new product object with only the matching variants
+      return {
+        ...product,
+        variants: matchingVariants,
+      };
+    });
 };

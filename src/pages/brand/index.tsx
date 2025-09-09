@@ -12,12 +12,12 @@ const Brand = () => {
   const { entities } = useAppSelector((state) => state.user.products);
   useEffect(() => {
     brandName && dispatch(fetchBrandProducts(brandName));
-  }, [brandName]);
+  }, [brandName, dispatch]);
 
   return (
     <div>
       <div>
-        {entities?.length ? (
+        {Array.isArray(entities) && entities?.length ? (
           <ProductList products={entities} />
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-2 md:gap-5 animate-pulse">

@@ -6,7 +6,7 @@ import ProductCardSkeleton from "./productCardSkeleton"; // Extract skeleton to 
 
 interface Props {
   title: string;
-  listItems: PHONEMODEL[];
+  listItems: any;
   link: string;
 }
 
@@ -37,6 +37,7 @@ const ProductMiniList: FC<Props> = ({ title, listItems, link }) => {
             <SingleProductCard
               key={`${product.id}-${product.name}`}
               product={product}
+              productVariant={product?.variants[0]}
             />
           ))
         ) : (
