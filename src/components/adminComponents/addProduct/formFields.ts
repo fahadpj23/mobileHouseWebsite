@@ -119,6 +119,7 @@ export const formFields: ProductFormField[] = [
         type: "select",
         options: [
           { value: "2", label: "2" },
+          { value: "3", label: "3" },
           { value: "4", label: "4" },
           { value: "8", label: "8" },
           { value: "12", label: "12" },

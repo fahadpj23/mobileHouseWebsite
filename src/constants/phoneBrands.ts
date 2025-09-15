@@ -13,7 +13,7 @@ export const PHONEBRANDS = [
   { name: "OPPO", image: OPPOLOGO, link: "/oppo", value: "oppo" },
   { name: "SAMSUNG", image: SAMSUNGLOGO, link: "/samsung", value: "samsung" },
   { name: "REALME", image: REALMELOGO, link: "/realme", value: "realme" },
-  { name: "MI", image: MILOGO, link: "/mi", value: "mi" },
+  { name: "MI", image: MILOGO, link: "/redmi", value: "redmi" },
   { name: "TECNO", image: TECNOLOGO, link: "/tecno", value: "tecno" },
   // { name: "IQOO", image: IQOO, link: "/iqoo", value: "iq00" },
   // { name: "MOTOROLA", image: MOTOLOGO, link: "/motorola", value: "motorola" },

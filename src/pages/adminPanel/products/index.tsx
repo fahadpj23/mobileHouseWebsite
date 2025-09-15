@@ -21,11 +21,10 @@ import { debounce } from "lodash";
 
 const Products = () => {
   const dispatch = useAppDispatch();
-  const { entities, entity, successMessage, loading,searchProduct } = useAppSelector(
-    (state) => state.user.products
-  );
-      const [searchValue, setSearchValue] = useState<string>("");
-    
+  const { entities, entity, successMessage, loading, searchProduct } =
+    useAppSelector((state) => state.user.products);
+  const [searchValue, setSearchValue] = useState<string>("");
+
   const [isAddModalOpen, setIsAddModalOpen] = useState<boolean>(false);
   const [values, setValues] = useState<any>(initialValues);
   const [isEdit, setIsEdit] = useState<boolean>(false);
@@ -64,44 +63,45 @@ const Products = () => {
     } else setValues(initialValues);
   }, [entity]);
 
+  const debouncedSearch = useCallback(
+    debounce((searchTerm: string) => {
+      if (searchTerm.trim()) {
+        dispatch(fetchSearchProducts(searchTerm));
+      } else dispatch(fetchProducts());
+    }, 500),
+    [dispatch]
+  );
 
-    const debouncedSearch = useCallback(
-      debounce((searchTerm: string) => {
-        if (searchTerm.trim()) {
-          dispatch(fetchSearchProducts(searchTerm));
-        }
-        else
-        dispatch(fetchProducts())
-      }, 500),
-      [dispatch]
-    );
-  
-    const handleSearch = useCallback(
-      (search: string) => {
-        setSearchValue(search);
-        debouncedSearch(search);
-      },
-      [debouncedSearch]
-    );
-  
-    // Cleanup debounce on unmount
-    useEffect(() => {
-      return () => {
-        debouncedSearch.cancel();
-      };
-    }, [debouncedSearch]);
+  const handleSearch = useCallback(
+    (search: string) => {
+      setSearchValue(search);
+      debouncedSearch(search);
+    },
+    [debouncedSearch]
+  );
 
+  // Cleanup debounce on unmount
+  useEffect(() => {
+    return () => {
+      debouncedSearch.cancel();
+    };
+  }, [debouncedSearch]);
 
   return (
     <div>
       <ToastContainer />
       {loading && <Loading />}
-      <Header title="Product" handleForm={handleForm} searchValue={searchValue} handleSearch={handleSearch}/>
+      <Header
+        title="Product"
+        handleForm={handleForm}
+        searchValue={searchValue}
+        handleSearch={handleSearch}
+      />
 
       {Array.isArray(entities) && (
         <TableData
           TableHead={ProductTableHead}
-          TableData={searchValue ? searchProduct :entities}
+          TableData={searchValue ? searchProduct : entities}
           handleEdit={handleEdit}
           handleDelete={handleDelete}
         />

@@ -27,7 +27,7 @@ const ImageSlider: FC<Props> = ({ bannerItems }) => {
       <div className="relative">
         <div className="h-[50vw] md:h-[25vw] w-full rounded-none md:rounded-xl">
           <ServerLazyImage
-            src={banner.image}
+            src={`/.netlify/images?url=${banner.image}&w=600&fm=webp `}
             alt="Promotional banner"
             fill={true}
           />

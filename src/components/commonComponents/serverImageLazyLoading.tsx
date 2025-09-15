@@ -14,14 +14,14 @@ const ServerLazyImage: FC<props> = ({ src, alt, fill = false }) => {
       className="h-full w-full"
       placeholder={
         <img
-          src={src}
+          src={`/.netlify/images?url=${src}&w=600&fm=webp `}
           alt={alt}
           className={`${fill ? "object-fill" : "object-contain"} h-full w-full`}
         />
       }
     >
       <img
-        src={src}
+        src={`/.netlify/images?url=${src}&w=600&fm=webp `}
         alt={alt}
         className={`${fill ? "object-fill" : "object-contain"} h-full w-full`}
       />
