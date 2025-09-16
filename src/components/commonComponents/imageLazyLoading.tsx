@@ -24,7 +24,7 @@ const LazyImage: FC<Props> = ({
   const placeholder = useMemo(
     () => (
       <img
-        src={`/.netlify/images?url=${placeholderSrc || src}&w=600&fm=webp `}
+        src={placeholderSrc || src}
         alt={alt}
         className={imageClass}
         loading="lazy"
@@ -36,7 +36,7 @@ const LazyImage: FC<Props> = ({
   const actualImage = useMemo(
     () => (
       <img
-        src={`/.netlify/images?url=${src}&w=600&fm=webp `}
+        src={src}
         alt={alt}
         className={imageClass}
         loading="lazy" // Native lazy loading as fallback

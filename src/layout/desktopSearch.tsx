@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { debounce } from "lodash";
-import LazyImage from "components/commonComponents/imageLazyLoading";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { fetchSearchProducts } from "store/slice/productSlice";
+import ServerLazyImage from "components/commonComponents/serverImageLazyLoading";
 
 const DesktopSearch = () => {
   const [searchValue, setSearchValue] = useState<string>("");
@@ -26,7 +26,7 @@ const DesktopSearch = () => {
       if (searchTerm.trim()) {
         dispatch(fetchSearchProducts(searchTerm));
       }
-    }, 200),
+    }, 300),
     [dispatch]
   );
 
@@ -79,7 +79,10 @@ const DesktopSearch = () => {
             onClick={handleSelect}
           >
             <div className="w-10 h-10 flex-shrink-0">
-              <LazyImage src={imageUrl} alt={`${productName} product image`} />
+              <ServerLazyImage
+                src={imageUrl}
+                alt={`${productName} product image`}
+              />
             </div>
             <div className="text-xs min-w-0 flex-1">
               <h1 className="font-medium truncate">{productName}</h1>

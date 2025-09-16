@@ -78,7 +78,7 @@ export const handler: Handler = async (event: any) => {
         });
 
         imagesForColor[i] = {
-          url: `/.netlify/functions/get-image?key=${key}`,
+          url: key,
           key: key,
           altText: `${fields.productName} - ${color.name}`,
         };

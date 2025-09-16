@@ -4,10 +4,11 @@ import { CiSearch } from "react-icons/ci";
 import { Divider } from "@mui/material";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { debounce } from "lodash";
-import LazyImage from "components/commonComponents/imageLazyLoading";
+
 import { toPascalCase } from "utils/pascalCaseConvert";
 import { useAppDispatch, useAppSelector } from "hooks/useRedux";
 import { fetchSearchProducts } from "store/slice/productSlice";
+import ServerLazyImage from "components/commonComponents/serverImageLazyLoading";
 
 interface SearchBarProps {
   setSearchOpen: (open: boolean) => void;
@@ -26,7 +27,7 @@ const SearchBar: FC<SearchBarProps> = ({ setSearchOpen }) => {
       if (searchTerm.trim()) {
         dispatch(fetchSearchProducts(searchTerm));
       }
-    }, 200),
+    }, 300),
     [dispatch]
   );
 
@@ -84,7 +85,7 @@ const SearchBar: FC<SearchBarProps> = ({ setSearchOpen }) => {
           >
             <div className="p-1">
               <div className="w-8 h-10">
-                <LazyImage
+                <ServerLazyImage
                   src={imageUrl}
                   alt={`${productName} product image`}
                 />

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import LazyImage from "./imageLazyLoading";
 import { toPascalCase } from "utils/pascalCaseConvert";
 import React from "react";
+import ServerLazyImage from "./serverImageLazyLoading";
 
 interface Props {
   product: any;
@@ -55,7 +56,7 @@ const SingleProductCard: FC<Props> = ({ product, productVariant }) => {
   }, [product?.variants]);
 
   const imageUrl = useMemo(
-    () => product?.colors?.[0]?.images?.[0]?.url || "",
+    () => product?.colors?.[0]?.images?.[0]?.key || "",
     [product?.colors]
   );
 
@@ -67,7 +68,7 @@ const SingleProductCard: FC<Props> = ({ product, productVariant }) => {
       <div className="p-3 md:p-6 flex flex-col space-y-2 bg-white relative rounded-md">
         <div className="flex justify-center bg-grayBackground rounded-md shadow-md p-2">
           <div className="w-full h-[150px] md:h-[170px] object-contain">
-            <LazyImage src={imageUrl} alt="Product Image" />
+            <ServerLazyImage src={imageUrl} alt="Product Image" />
           </div>
         </div>
 

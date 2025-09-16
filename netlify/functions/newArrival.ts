@@ -81,7 +81,7 @@ exports.handler = async (event, context) => {
         // Create product data for Firestore
         const productData = {
           seriesId,
-          image: `/.netlify/functions/get-image?key=${key}`,
+          image: key,
           createdAt: admin.firestore.FieldValue.serverTimestamp(),
           updatedAt: admin.firestore.FieldValue.serverTimestamp(),
         };

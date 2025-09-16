@@ -26,9 +26,13 @@ const ProductImageSlider: FC<any> = ({ productImages }) => {
                 <div key={image?.url}>
                   <Zoom>
                     <img
+                      src={`https://mobilehouse.in/.netlify/functions/get-image?key=${image?.url}&w=800&q=75&fm=webp`}
+                      srcSet={`https://mobilehouse.in/.netlify/functions/get-image?key=${image?.url}&w=400&q=75&fm=webp 400w,
+             https://mobilehouse.in/.netlify/functions/get-image?key=${image?.url}&w=800&q=75&fm=webp 800w,
+             https://mobilehouse.in/.netlify/functions/get-image?key=${image?.url}&w=1200&q=75&fm=webp 1200w`}
+                      sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
+                      alt={"product"}
                       className=" h-[80vw] w-full object-contain "
-                      src={image?.url}
-                      alt="Product "
                     />
                   </Zoom>
                 </div>
