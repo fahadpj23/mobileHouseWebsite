@@ -9,7 +9,7 @@ import { authReducer } from "./slice/authSlice";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // Local storage for persistence
 
-// Persist config: specifies which parts of the state to persist
+// Persist config
 const persistConfig = {
   key: "root",
   storage,
@@ -28,7 +28,6 @@ const rootReducer = combineReducers({
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// Creating the Redux store
 export const store = configureStore({
   reducer: {
     user: persistedReducer,
@@ -37,13 +36,17 @@ export const store = configureStore({
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
+        ignoredPaths: [
+          "user.products.entities",
+          "user.products.entity",
+          "user.products.items", // add if you store Firestore docs directly
+        ],
       },
     }),
 });
 
-// Create the persistor
 export const persistor = persistStore(store);
 
-// Infer the RootState and AppDispatch types from the store
+// Types
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

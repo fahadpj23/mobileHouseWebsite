@@ -5,6 +5,8 @@ import {
   isPending,
 } from "@reduxjs/toolkit";
 import axiosInstance from "services/api";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
 
 // Define the initial state for the user
 interface UserState {
@@ -30,8 +32,12 @@ const initialState: UserState = {
 export const fetchwhatsappAds = createAsyncThunk(
   "whatsappAds/fetchwhatsappAds",
   async () => {
-    const response = await axiosInstance.get(`whatsappAds/`);
-    return response.data;
+    const snapshot = await getDocs(collection(db, "whatsappAds"));
+    const whatsappAds = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    return whatsappAds;
   }
 );
 

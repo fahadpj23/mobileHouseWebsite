@@ -27,7 +27,10 @@ const SideDrawar: FC<props> = ({ NAVIGATIONITEMS }) => {
 
   return (
     <>
-      <button className="ml-0 md:ml-4" onClick={toggleDrawer(true)}>
+      <button
+        className="ml-0 md:ml-4 h-10 w-10 z-50"
+        onClick={toggleDrawer(true)}
+      >
         <MenuIcon />
       </button>
       <SwipeableDrawer

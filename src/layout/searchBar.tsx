@@ -27,7 +27,7 @@ const SearchBar: FC<SearchBarProps> = ({ setSearchOpen }) => {
       if (searchTerm.trim()) {
         dispatch(fetchSearchProducts(searchTerm));
       }
-    }, 300),
+    }, 200),
     [dispatch]
   );
 

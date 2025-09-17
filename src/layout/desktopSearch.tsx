@@ -26,7 +26,7 @@ const DesktopSearch = () => {
       if (searchTerm.trim()) {
         dispatch(fetchSearchProducts(searchTerm));
       }
-    }, 300),
+    }, 200),
     [dispatch]
   );
 

@@ -6,6 +6,9 @@ import {
 } from "@reduxjs/toolkit";
 import axiosInstance from "services/api";
 
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
+
 // Define the initial state for the user
 interface UserState {
   loading: boolean;
@@ -30,8 +33,12 @@ const initialState: UserState = {
 export const fetchUpcoming = createAsyncThunk(
   "upcoming/fetchUpcoming",
   async () => {
-    const response = await axiosInstance.get(`upcoming/`);
-    return response.data;
+    const snapshot = await getDocs(collection(db, "upcoming"));
+    const upcoming = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    return upcoming;
   }
 );
 

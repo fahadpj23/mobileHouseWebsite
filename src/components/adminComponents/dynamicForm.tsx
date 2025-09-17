@@ -94,7 +94,6 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
     dispatch(fetchSeries());
   }, []);
 
-
   useEffect(() => {
     const newArray =
       Array.isArray(entities) &&
@@ -115,10 +114,10 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
     return Date.now().toString(36) + Math.random().toString(36).substring(2);
   };
 
-  const handleSubmit=(values:any)=>{
-      setIsLoading(true)
-      onSubmit(values)
-  }
+  const handleSubmit = (values: any) => {
+    setIsLoading(true);
+    onSubmit(values);
+  };
   //form  dynamic rendering
   const renderFormField = (
     field: FormField,
@@ -228,7 +227,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
           <FieldArray name={name}>
             {({ push, remove }) => {
               // Define options for RAM and Storage
-              const ramOptions = ["2", "4", "6", "8", "12", "16", "32"];
+              const ramOptions = ["2", "3", "4", "6", "8", "12", "16", "32"];
               const storageOptions = ["32", "64", "128", "256", "512", "1024"];
 
               const handleAddVariant = (arrayIndex: number) => {
@@ -806,13 +805,14 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
       aria-describedby="modal-modal-description"
     >
       <div className="  bg-white p-4 max-h-[80%] w-[90%] md:w-[80%] overflow-y-auto relative">
-      {isLoading && <Loading/>}
+        {isLoading && <Loading />}
         <button
           onClick={() => handleForm()}
           className="absolute top-2 right-2 z-50"
         >
           <CloseIcon />
         </button>
+
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}

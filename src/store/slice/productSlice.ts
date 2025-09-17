@@ -6,6 +6,17 @@ import {
   isFulfilled,
 } from "@reduxjs/toolkit";
 import axiosInstance from "services/api";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  orderBy,
+  query,
+  Timestamp,
+  where,
+} from "firebase/firestore";
+import { db } from "../../firebase";
 
 // Define the initial state for the user
 interface UserState {
@@ -39,50 +50,120 @@ const initialState: UserState = {
   deleteMessage: [],
 };
 
+const formatDateString = (date: Date) => {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+};
+
 // Async thunk to fetch products data
 export const fetchSeriesProducts = createAsyncThunk(
   "products/getSeriesProduct",
   async (seriesId: string) => {
-    const response = await axiosInstance.get(`get-product-by-series/`, {
-      params: { seriesId },
-    });
-    return response.data;
+    const q = query(
+      collection(db, "products"),
+      where("seriesId", "==", seriesId) // match brand field in Firestore
+    );
+    const snapshot = await getDocs(q);
+    const products = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    return products;
   }
 );
 
 export const fetchBrandProducts = createAsyncThunk(
   "products/getBrandProduct",
   async (brandName: string) => {
-    const response = await axiosInstance.get(`get-product-by-brand`, {
-      params: { brandName },
-    });
-    return response.data;
+    const brandNameTrim = brandName.trim().toLowerCase();
+
+    const q = query(
+      collection(db, "products"),
+      where("brand", "==", brandNameTrim) // match brand field in Firestore
+    );
+    const snapshot = await getDocs(q);
+    const products = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    return products; //
   }
 );
 
 export const fetchSearchProducts = createAsyncThunk(
   "products/getSearchProduct",
   async (searchValue: string) => {
-    const response = await axiosInstance.get(`search-product`, {
-      params: { searchValue },
-    });
-    return response.data;
+    // const response = await axiosInstance.get(`search-product`, {
+    //   params: { searchValue },
+    // });
+    // return response.data;
+    const cleanedSearch = searchValue.trim().toLowerCase();
+
+    const snapshot = await getDocs(collection(db, "products"));
+
+    const products = snapshot.docs
+      .map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }))
+      .filter((product: any) => {
+        const name = (product.productName || "").trim().toLowerCase();
+        return name.includes(cleanedSearch);
+      });
+
+    return products;
   }
 );
 
 export const fetchProducts = createAsyncThunk(
   "products/fetchProduct",
-  async () => {
-    const response = await axiosInstance.get(`get-products`);
-    return response.data;
+  async (_, { rejectWithValue }) => {
+    try {
+      const productsRef = collection(db, "products");
+      const snapshot = await getDocs(productsRef);
+
+      return snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+    } catch (error: any) {
+      console.error("❌ fetchProducts error:", error);
+      return rejectWithValue(error.message || "Failed to fetch products");
+    }
   }
 );
 
 export const getNewArrivalProduct = createAsyncThunk(
   "products/getNewArrivalProduct",
   async () => {
-    const response = await axiosInstance.get(`get-new-arrival-products`);
-    return response.data;
+    const currentDate = new Date();
+    const fourMonthsAgo = new Date();
+    fourMonthsAgo.setMonth(currentDate.getMonth() - 4);
+
+    const currentDateStr = formatDateString(currentDate);
+    const fourMonthsAgoStr = formatDateString(fourMonthsAgo);
+
+    // ✅ Build query
+    const productsRef = collection(db, "products");
+    const q = query(
+      productsRef,
+      where("launchDate", ">=", fourMonthsAgoStr),
+      where("launchDate", "<=", currentDateStr),
+      orderBy("launchDate", "desc")
+    );
+
+    const snapshot = await getDocs(q);
+
+    const products: any[] = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+
+    return products;
+
+    // Return response
   }
 );
 
@@ -96,18 +177,33 @@ export const getSpecialOffer = createAsyncThunk(
 export const getTrendingPhone = createAsyncThunk(
   "products/getTrendingPhone",
   async () => {
-    const response = await axiosInstance.get(`trending-phone`);
-    return response.data;
+    const productsRef = collection(db, "products");
+
+    // ✅ Firestore numeric comparison
+    const q = query(productsRef, where("rating", ">", 4.2));
+
+    const snapshot = await getDocs(q);
+
+    const products: any[] = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+
+    return products;
   }
 );
 
 export const getProductById = createAsyncThunk(
   "products/getProductById",
-  async (id: string | number) => {
-    const response = await axiosInstance.get(`get-product-by-id`, {
-      params: { id },
-    });
-    return response.data;
+  async (id: string) => {
+    const docRef = doc(db, "products", id); // 🔹 points to /products/{id}
+    const docSnap: any = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      return { id: docSnap.id, ...docSnap.data() }; // ✅ return product object
+    } else {
+      throw new Error("Product not found"); // ❌ handle missing product
+    }
   }
 );
 

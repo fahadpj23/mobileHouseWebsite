@@ -17,6 +17,17 @@ const TableData: FC<props> = ({
   handleEdit,
   handleDelete,
 }) => {
+  const DeleteConfirm = (id: string) => {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this product?"
+    );
+    if (confirmed) {
+      handleDelete(id);
+    } else {
+      console.log("Delete cancelled");
+    }
+  };
+
   return (
     <table className="w-full border-collapse [&_tr:nth-child(odd)]:bg-gray-100">
       <thead>
@@ -53,7 +64,7 @@ const TableData: FC<props> = ({
               <button onClick={() => handleEdit(data?.id)}>
                 <EditIcon />
               </button>
-              <button onClick={() => handleDelete(data?.id)}>
+              <button onClick={() => DeleteConfirm(data?.id)}>
                 <DeleteIcon />
               </button>
             </td>

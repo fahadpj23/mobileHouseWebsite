@@ -249,7 +249,7 @@ const ProductList: FC<any> = ({ products }) => {
           />
         )}
 
-        <div className="flex">
+        <div className="flex w-full">
           {!isMobile && (
             <div className="w-[15vw] bg-gray-100 shadow-xl p-1 overflow-y-auto">
               <DesktopFilter
@@ -261,7 +261,7 @@ const ProductList: FC<any> = ({ products }) => {
             </div>
           )}
 
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-2  md:gap-5 h-56  ">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-2  md:gap-5 h-56 w-full  ">
             {Array.isArray(productList) && productList?.length ? (
               productCards
             ) : (
