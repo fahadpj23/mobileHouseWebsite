@@ -11,14 +11,14 @@ export const NAVIGATIONITEMS: NAVIGATIONITEMMODEL[] = [
     link: "phones/newArrivalProduct",
     icon: <GrAnnounce />,
   },
-  {
-    title: "Special Offer",
-    link: "phones/specialOffer",
-    icon: <GrAnnounce />,
-  },
+  // {
+  //   title: "Special Offer",
+  //   link: "phones/specialOffer",
+  //   icon: <GrAnnounce />,
+  // },
   {
     title: "Trending Phone",
-    link: "phones/trendingPhones",
+    link: "Phones/trendingPhone",
     icon: <FaArrowTrendUp />,
   },
 ];

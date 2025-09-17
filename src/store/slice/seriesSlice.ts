@@ -5,7 +5,8 @@ import {
   isPending,
 } from "@reduxjs/toolkit";
 import axiosInstance from "services/api";
-
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
 // Define the initial state for the user
 interface UserState {
   loading: boolean;
@@ -27,11 +28,22 @@ const initialState: UserState = {
 };
 
 // Async thunk to fetch Series data
-export const fetchSeries = createAsyncThunk("series/fetchSeries", async () => {
-  const response = await axiosInstance.get(`series/`);
-  return response.data;
-});
-
+export const fetchSeries = createAsyncThunk(
+  "series/fetchSeries",
+  async (_, { rejectWithValue }) => {
+    try {
+      const snapshot = await getDocs(collection(db, "series"));
+      const series = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      return series;
+    } catch (error: any) {
+      console.error("Error fetching series:", error);
+      return rejectWithValue(error.message || "Failed to fetch series");
+    }
+  }
+);
 export const getseriesById = createAsyncThunk(
   "series/getSeriesById",
   async (id: number) => {

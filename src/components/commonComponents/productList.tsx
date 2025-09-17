@@ -208,7 +208,8 @@ const ProductList: FC<any> = ({ products }) => {
   );
 
   return (
-    <div className="mt-4">
+    <div>
+      <input autoFocus className="hidden " readOnly />
       {isLoading && (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-5 animate-pulse">
           {skeletonArray.map((_, index) => (
