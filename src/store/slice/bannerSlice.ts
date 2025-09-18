@@ -6,7 +6,7 @@ import {
 } from "@reduxjs/toolkit";
 import axiosInstance from "services/api";
 
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../../firebase";
 
 // Define the initial state for the user
@@ -31,11 +31,18 @@ const initialState: UserState = {
 
 // Async thunk to fetch Banners data
 export const fetchBanners = createAsyncThunk("banner/fetchBanner", async () => {
-  const snapshot = await getDocs(collection(db, "banner"));
+  const q = query(
+    collection(db, "banner"),
+    orderBy("createdAt", "desc") // sort by created date
+  );
+
+  const snapshot = await getDocs(q);
+
   const banners = snapshot.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),
   }));
+
   return banners;
 });
 

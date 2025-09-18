@@ -5,7 +5,7 @@ import {
   isPending,
 } from "@reduxjs/toolkit";
 import axiosInstance from "services/api";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../../firebase";
 
 // Define the initial state for the user
@@ -32,11 +32,18 @@ const initialState: UserState = {
 export const fetchwhatsappAds = createAsyncThunk(
   "whatsappAds/fetchwhatsappAds",
   async () => {
-    const snapshot = await getDocs(collection(db, "whatsappAds"));
+    const q = query(
+      collection(db, "whatsappAds"),
+      orderBy("createdAt", "desc") // sort by created date
+    );
+
+    const snapshot = await getDocs(q);
+
     const whatsappAds = snapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
     }));
+
     return whatsappAds;
   }
 );

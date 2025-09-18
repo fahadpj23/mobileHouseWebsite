@@ -5,7 +5,7 @@ import {
   isPending,
 } from "@reduxjs/toolkit";
 import axiosInstance from "services/api";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../../firebase";
 // Define the initial state for the user
 interface UserState {
@@ -32,11 +32,18 @@ export const fetchSeries = createAsyncThunk(
   "series/fetchSeries",
   async (_, { rejectWithValue }) => {
     try {
-      const snapshot = await getDocs(collection(db, "series"));
+      const q = query(
+        collection(db, "series"),
+        orderBy("createdAt", "desc") // sort by created date
+      );
+
+      const snapshot = await getDocs(q);
+
       const series = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
+
       return series;
     } catch (error: any) {
       console.error("Error fetching series:", error);
@@ -44,6 +51,7 @@ export const fetchSeries = createAsyncThunk(
     }
   }
 );
+
 export const getseriesById = createAsyncThunk(
   "series/getSeriesById",
   async (id: number) => {

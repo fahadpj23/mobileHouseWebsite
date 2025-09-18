@@ -63,13 +63,16 @@ export const fetchSeriesProducts = createAsyncThunk(
   async (seriesId: string) => {
     const q = query(
       collection(db, "products"),
-      where("seriesId", "==", seriesId) // match brand field in Firestore
+      where("seriesId", "==", seriesId),
+      orderBy("createdAt", "desc") // sort by created date
     );
+
     const snapshot = await getDocs(q);
     const products = snapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
     }));
+
     return products;
   }
 );
@@ -81,14 +84,17 @@ export const fetchBrandProducts = createAsyncThunk(
 
     const q = query(
       collection(db, "products"),
-      where("brand", "==", brandNameTrim) // match brand field in Firestore
+      where("brand", "==", brandNameTrim),
+      orderBy("createdAt", "desc") // sort by created date
     );
+
     const snapshot = await getDocs(q);
     const products = snapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
     }));
-    return products; //
+
+    return products;
   }
 );
 
@@ -122,7 +128,9 @@ export const fetchProducts = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const productsRef = collection(db, "products");
-      const snapshot = await getDocs(productsRef);
+
+      const q = query(productsRef, orderBy("createdAt", "desc")); // sort by created date
+      const snapshot = await getDocs(q);
 
       return snapshot.docs.map((doc) => ({
         id: doc.id,
