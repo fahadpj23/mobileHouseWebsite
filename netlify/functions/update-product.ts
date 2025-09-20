@@ -19,7 +19,6 @@ export const handler: Handler = async (event: any) => {
       }),
     });
   }
-
   const db = admin.firestore();
   const productsCollection = db.collection("products");
   const imageStore = getStore({
@@ -47,7 +46,6 @@ export const handler: Handler = async (event: any) => {
       };
     }
 
-    // Get the existing product
     const productRef = productsCollection.doc(productId);
     const productDoc = await productRef.get();
 
@@ -59,18 +57,18 @@ export const handler: Handler = async (event: any) => {
     }
 
     const existingProduct: any = productDoc.data();
-    let colors = existingProduct.colors;
+    let oldColors = existingProduct.colors || [];
+    let newColors = fields.colors ? JSON.parse(fields.colors) : oldColors;
 
-    // If new colors are provided, parse them
-    if (fields.colors) {
-      colors = JSON.parse(fields.colors);
-    }
-
-    // Track which files we've processed
     let fileIndex = 0;
 
-    // Process each color variant and assign images
-    for (const color of colors) {
+    // Build a set of old image keys for cleanup later
+    const oldImageKeys = oldColors.flatMap((c: any) =>
+      (c.images || []).map((img: any) => img.key)
+    );
+
+    // Process updated colors/images
+    for (const color of newColors) {
       if (!color.id) {
         color.id = `${
           fields.productName ||
@@ -78,10 +76,8 @@ export const handler: Handler = async (event: any) => {
         }-${color.name.toLowerCase().replace(/\s+/g, "-")}-${Date.now()}`;
       }
 
-      // Initialize images array if it doesn't exist
       if (!color.images) color.images = [];
 
-      // Assign the next set of files to this color
       const imagesForColor = color.images || [];
       for (
         let i = 0;
@@ -115,7 +111,26 @@ export const handler: Handler = async (event: any) => {
       color.images = imagesForColor;
     }
 
-    // Create updated product data
+    // Collect new image keys
+    const newImageKeys = newColors.flatMap((c: any) =>
+      (c.images || []).map((img: any) => img.key)
+    );
+
+    // Find removed images
+    const removedKeys = oldImageKeys.filter(
+      (key: string) => !newImageKeys.includes(key)
+    );
+
+    // Delete removed images from blob
+    for (const key of removedKeys) {
+      try {
+        await imageStore.delete(key);
+        console.log(`Deleted old image: ${key}`);
+      } catch (err) {
+        console.error(`Failed to delete image ${key}:`, err);
+      }
+    }
+
     const updatedProductData = {
       productName: fields.productName || existingProduct.productName,
       brand: fields.brand || existingProduct.brand,
@@ -133,32 +148,30 @@ export const handler: Handler = async (event: any) => {
       battery: fields.battery || existingProduct.battery,
       os: fields.os || existingProduct.os,
       processor: fields.processor || existingProduct.processor,
-      colors: colors, // Updated colors with image keys
+      colors: newColors,
       category: fields.category || existingProduct.category,
       networkType: fields.networkType || existingProduct.networkType,
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
-      // Keep the original createdAt
       createdAt: existingProduct.createdAt,
     };
 
-    // Update product in Firestore
     await productRef.update(updatedProductData);
 
     return {
       statusCode: 200,
       body: JSON.stringify({
         message: "Product updated successfully",
-        productId: productId,
+        productId,
         product: updatedProductData,
       }),
     };
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error updating product:", error);
     return {
       statusCode: 500,
       body: JSON.stringify({
         error: "Error updating product",
-        details: error.message,
+        details: error?.message,
       }),
     };
   }

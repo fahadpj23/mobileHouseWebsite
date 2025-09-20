@@ -63,8 +63,7 @@ export const fetchSeriesProducts = createAsyncThunk(
   async (seriesId: string) => {
     const q = query(
       collection(db, "products"),
-      where("seriesId", "==", seriesId),
-      orderBy("createdAt", "desc") // sort by created date
+      where("seriesId", "==", seriesId)
     );
 
     const snapshot = await getDocs(q);
@@ -80,12 +79,12 @@ export const fetchSeriesProducts = createAsyncThunk(
 export const fetchBrandProducts = createAsyncThunk(
   "products/getBrandProduct",
   async (brandName: string) => {
+    console.log("Fdf");
     const brandNameTrim = brandName.trim().toLowerCase();
 
     const q = query(
       collection(db, "products"),
-      where("brand", "==", brandNameTrim),
-      orderBy("createdAt", "desc") // sort by created date
+      where("brand", "==", brandNameTrim)
     );
 
     const snapshot = await getDocs(q);
