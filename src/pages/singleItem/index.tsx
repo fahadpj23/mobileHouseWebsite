@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Divider } from "@mui/material";
 import { FaShare } from "react-icons/fa";
 import { RiWhatsappFill } from "react-icons/ri";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { getSpecificationIcon } from "utils/getSpecificationIcon";
 import { getDiscountPercentage } from "utils/getDiscountPercentage";
 import { useScreenSize } from "hooks/useScreenSize";
@@ -219,6 +219,12 @@ const SingleItem = () => {
               className="text-blue-500 cursor-pointer"
               onClick={() => handleWhatapp(product)}
             />
+            <Link
+              to={`/order/${productId}/${productVariantId}/${productColorId}/${product?.name}`}
+              className=" hidden md:block text-center bg-orange-500 text-white p-2 rounded-md"
+            >
+              Order Now
+            </Link>
           </div>
           {product.prebook && (
             <button
@@ -228,6 +234,12 @@ const SingleItem = () => {
               Prebook Now
             </button>
           )}
+          <Link
+            to={`/order/${productId}/${productVariantId}/${productColorId}/${product?.name}`}
+            className="w-full block md:hidden text-center bg-orange-500 text-white p-2 rounded-md"
+          >
+            Order Now
+          </Link>
         </div>
 
         <RiWhatsappFill

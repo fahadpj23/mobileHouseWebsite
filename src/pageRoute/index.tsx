@@ -15,8 +15,9 @@ import Upcoming from "pages/adminPanel/upcoming";
 import NewArrival from "pages/adminPanel/newArrival";
 import Series from "pages/adminPanel/phoneSeries";
 import Login from "pages/login";
-import ProtectedRoute from "components/protectedRoute";
 import { AuthRedirect } from "components/authRedirect";
+import Stock from "pages/adminPanel/stock";
+import CustomerOrder from "pages/customerOrder";
 
 const PageRoute = () => {
   return (
@@ -29,6 +30,10 @@ const PageRoute = () => {
             <Route path="brand/:brandName" element={<Brand />} />
             <Route path="series/:seriesId" element={<SeriesList />} />
             <Route path="Phones/:phoneType" element={<Phones />} />
+            <Route
+              path="order/:productId/:productVariantId/:productColorId/:productName"
+              element={<CustomerOrder />}
+            />
             <Route
               path="phone/:productId/:productVariantId/:productColorId/:productName"
               element={<SingleItem />}
@@ -47,6 +52,7 @@ const PageRoute = () => {
             <Route path="admin/whatsappAds" element={<WhatsappAds />} />
             <Route path="admin/banner" element={<Banner />} />
             <Route path="admin/series" element={<Series />} />
+            <Route path="admin/stock" element={<Stock />} />
           </Route>
           {/* </Route> */}
         </Routes>

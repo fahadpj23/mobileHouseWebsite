@@ -24,6 +24,7 @@ interface UserState {
   entities: any | null; // Type based on your API response
   error: string | null;
   entity: any;
+  orderProduct: any;
   successMessage: string;
   newArrival: any;
   specialOffer: any;
@@ -40,6 +41,7 @@ const initialState: UserState = {
   entities: null,
   error: null,
   entity: null,
+  orderProduct: null,
   successMessage: "",
   newArrival: [],
   specialOffer: [],
@@ -207,6 +209,57 @@ export const getProductById = createAsyncThunk(
   }
 );
 
+export const fetchProductDetails = createAsyncThunk(
+  "product/fetchProductDetails",
+  async (
+    { productId, productVariantId, productColorId }: any,
+    { rejectWithValue }
+  ) => {
+    try {
+      // Fetch the main product document
+      const productDocRef = doc(db, "products", productId);
+      const productDoc = await getDoc(productDocRef);
+
+      if (!productDoc.exists()) {
+        return rejectWithValue("Product not found");
+      }
+
+      const productData = productDoc.data();
+
+      // Find specific variant
+      const selectedVariant = productData.variants.find(
+        (variant: any) => variant.id === productVariantId
+      );
+
+      // Find specific color
+      const selectedColor = productData.colors.find(
+        (color: any) => color.id === productColorId
+      );
+
+      if (!selectedVariant) {
+        return rejectWithValue("Variant not found");
+      }
+
+      if (!selectedColor) {
+        return rejectWithValue("Color not found");
+      }
+
+      // Return only essential data, removing full variants and colors arrays
+      const filterData = {
+        // Basic product info
+        productId: productDoc.id,
+        productName: productData.productName,
+        selectedVariant,
+        selectedColor,
+      };
+      return filterData;
+    } catch (error: any) {
+      console.error("Error fetching product:", error);
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
 export const getProductByIdEdit = createAsyncThunk(
   "products/getProductByIdEdit",
   async (id: string | number) => {
@@ -325,6 +378,13 @@ const productSlice = createSlice({
           state.searchProduct = action.payload;
         }
       )
+      .addCase(
+        fetchProductDetails.fulfilled,
+        (state, action: PayloadAction<any>) => {
+          state.loading = false;
+          state.orderProduct = action.payload;
+        }
+      )
 
       .addCase(
         getTrendingPhone.fulfilled,
@@ -373,13 +433,15 @@ const productSlice = createSlice({
           fetchSeriesProducts,
           deleteProduct,
           fetchSearchProducts,
-          fetchBrandProducts
+          fetchBrandProducts,
+          fetchProductDetails
         ),
         (state, action) => {
           state.loading = true;
           state.error = null;
           state.entities = [];
           state.entity = {};
+          state.orderProduct = null;
           state.searchProduct = [];
         }
       )

@@ -29,7 +29,7 @@ const imageStore = getStore({
 const db = admin.firestore();
 const upcomingCollection = db.collection("upcoming");
 
-exports.handler = async (event, context) => {
+exports.handler = async (event: any, context: any) => {
   try {
     // GET - List all upcoming
     if (event.httpMethod === "GET") {
@@ -96,7 +96,7 @@ exports.handler = async (event, context) => {
             productId: docRef.id,
           }),
         };
-      } catch (error) {
+      } catch (error: any) {
         console.error("Error adding :", error);
         return {
           statusCode: 500,
@@ -167,7 +167,7 @@ exports.handler = async (event, context) => {
       statusCode: 405,
       body: "Method Not Allowed",
     };
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error:", error);
     return {
       statusCode: 500,

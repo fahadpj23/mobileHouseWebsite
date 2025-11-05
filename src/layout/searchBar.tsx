@@ -2,7 +2,7 @@ import { FC, useCallback, useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import { Divider } from "@mui/material";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { debounce } from "lodash";
 
 import { toPascalCase } from "utils/pascalCaseConvert";
@@ -108,7 +108,10 @@ const SearchBar: FC<SearchBarProps> = ({ setSearchOpen }) => {
     <div className="fixed top-0 left-0 right-0 w-screen h-screen bg-white z-40 flex flex-col">
       {/* Search Header */}
       <div className="flex items-center w-full p-3 border-b">
-        <SearchOutlinedIcon sx={{ color: "#0e86d4" }} />
+        <ArrowBackIcon
+          sx={{ color: "#818589" }}
+          onClick={() => setSearchOpen(false)}
+        />
         <input
           autoFocus
           placeholder="Search here..."
@@ -154,16 +157,6 @@ const SearchBar: FC<SearchBarProps> = ({ setSearchOpen }) => {
             <span>Search for "{searchValue}"</span>
           </Link>
         )}
-      </div>
-
-      {/* Footer Button */}
-      <div className="p-3 border-t bg-white">
-        <button
-          onClick={() => setSearchOpen(false)}
-          className="border-2 border-blue-600 bg-white text-blue-600 text-center p-3 w-full rounded hover:bg-blue-50 transition-colors"
-        >
-          Go Back
-        </button>
       </div>
     </div>
   );
