@@ -8,6 +8,7 @@ import { seriesReducer } from "./slice/seriesSlice";
 import { authReducer } from "./slice/authSlice";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // Local storage for persistence
+import { customerOrderReducer } from "./slice/customerOrderSlice";
 
 // Persist config
 const persistConfig = {
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   newArrival: newArrivalReducer,
   whatsappAds: whatsappAdsReducer,
   series: seriesReducer,
+  customerOrder: customerOrderReducer,
   auth: authReducer,
 });
 
