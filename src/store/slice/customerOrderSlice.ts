@@ -60,12 +60,14 @@ export const addCustomerOrder = createAsyncThunk(
       const docRef = await addDoc(collection(db, "customers"), {
         name: data.name,
         address: data.address,
-        phone: data.phone,
+        phone: data.phoneNumber,
         pincode: data.pincode,
-        phoneId: data.phoneId,
-        phoneName: data.PhoneName,
+        phoneName: data.phoneName,
+        qty: data?.qty,
         price: data.price,
-        createdAt: new Date(),
+        productId: data?.productId,
+        productVariantId: data?.productVariantId,
+        productColorId: data?.productVariantId,
       });
 
       console.log("✅ Customer added with ID:", docRef.id);

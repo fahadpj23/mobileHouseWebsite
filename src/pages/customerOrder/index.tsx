@@ -28,9 +28,9 @@ const CustomerOrder = () => {
     const data = {
       name: customerDetails.name,
       address: customerDetails.address,
-      phone: customerDetails.phoneNumber,
+      phoneNumber: customerDetails.phoneNumber,
       pincode: customerDetails.pincode,
-      phoneId:
+      phoneName:
         orderProduct.productName +
         " " +
         orderProduct?.selectedVariant?.ram +
@@ -41,14 +41,12 @@ const CustomerOrder = () => {
         orderProduct?.selectedColor?.name,
       price: orderProduct?.selectedVariant?.price,
       productId,
+      qty,
       productVariantId,
       productColorId,
-      // phoneName: data.PhoneName,
-      // price: data.price,
-      // createdAt: new Date(),
     };
     console.log(data);
-    // dispatch(addCustomerOrder(data));
+    dispatch(addCustomerOrder(data));
   };
   console.log(customerDetails);
   console.log(orderProduct);
