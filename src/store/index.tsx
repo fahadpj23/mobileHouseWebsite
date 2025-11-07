@@ -36,14 +36,7 @@ export const store = configureStore({
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
-        ignoredPaths: [
-          "user.products.entities",
-          "user.products.entity",
-          "user.products.items", // add if you store Firestore docs directly
-        ],
-      },
+      serializableCheck: false,
     }),
 });
 

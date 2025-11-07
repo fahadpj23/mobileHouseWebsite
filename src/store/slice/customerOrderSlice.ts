@@ -15,6 +15,7 @@ interface UserState {
   entity: any;
   successMessage: string;
   deleteMessage: string;
+  orderSuccessDetails: any;
 }
 
 // Initial state
@@ -25,32 +26,10 @@ const initialState: UserState = {
   entity: null,
   successMessage: "",
   deleteMessage: "",
+  orderSuccessDetails: "",
 };
 
 // Async thunk to fetch Series data
-export const fetchSeries = createAsyncThunk(
-  "series/fetchSeries",
-  async (_, { rejectWithValue }) => {
-    try {
-      const snapshot = await getDocs(collection(db, "series"));
-      const series = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      return series;
-    } catch (error: any) {
-      console.error("Error fetching series:", error);
-      return rejectWithValue(error.message || "Failed to fetch series");
-    }
-  }
-);
-export const getseriesById = createAsyncThunk(
-  "series/getSeriesById",
-  async (id: number) => {
-    const response = await axiosInstance.get(`series/${id}`);
-    return response.data;
-  }
-);
 
 export const addCustomerOrder = createAsyncThunk(
   "customer/addCustomerOrder",
@@ -70,8 +49,6 @@ export const addCustomerOrder = createAsyncThunk(
         productColorId: data?.productVariantId,
       });
 
-      console.log("✅ Customer added with ID:", docRef.id);
-
       return {
         id: docRef.id,
         ...data,
@@ -83,50 +60,17 @@ export const addCustomerOrder = createAsyncThunk(
   }
 );
 
-export const deleteSeries = createAsyncThunk(
-  "series/deleteSeries",
-  async (id: number) => {
-    const response = await axiosInstance.delete(`series/${id}`);
-    return response.data;
-  }
-);
-
 // Create slice
 const customerOrderSlice = createSlice({
   name: "Series",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder
-
-      .addCase(fetchSeries.fulfilled, (state, action: PayloadAction<any>) => {
-        state.loading = false;
-        state.entities = action.payload;
-      })
-      .addCase(getseriesById.fulfilled, (state, action: PayloadAction<any>) => {
-        state.loading = false;
-        state.entity = action.payload;
-      })
-      .addCase(addCustomerOrder.fulfilled, (state, action) => {
-        state.loading = false;
-        state.successMessage = "added SuccessFully";
-      })
-      .addCase(deleteSeries.fulfilled, (state, action) => {
-        state.loading = false;
-        state.deleteMessage = "deleted SuccessFully";
-      })
-      .addCase(fetchSeries.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message || "Something went wrong";
-      })
-      .addMatcher(
-        isPending(fetchSeries, getseriesById, addCustomerOrder, deleteSeries),
-        (state, action) => {
-          state.loading = true;
-          state.error = null;
-          state.successMessage = "";
-        }
-      );
+    builder.addCase(addCustomerOrder.fulfilled, (state, action) => {
+      state.loading = false;
+      state.successMessage = "product ordered SuccessFully";
+      state.orderSuccessDetails = action.payload;
+    });
   },
 });
 

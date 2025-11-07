@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import ServerLazyImage from "components/commonComponents/serverImageLazyLoading";
 import { toPascalCase } from "utils/pascalCaseConvert";
 import { addCustomerOrder } from "store/slice/customerOrderSlice";
+
 const CustomerOrder = () => {
   const { productId, productVariantId, productColorId, productName } =
     useParams();
@@ -16,28 +17,56 @@ const CustomerOrder = () => {
     phoneNumber: "",
     pincode: "",
   });
+
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const { orderProduct } = useAppSelector((state) => state?.user?.products);
+  const { successMessage, orderSuccessDetails } = useAppSelector(
+    (state) => state.user?.customerOrder
+  );
 
   useEffect(() => {
     dispatch(
       fetchProductDetails({ productId, productVariantId, productColorId })
     );
-  }, [productId, productVariantId, productColorId]);
+  }, [productId, productVariantId, productColorId, dispatch]);
+
+  useEffect(() => {
+    alert("product ordered succesfully" + " " + orderSuccessDetails?.id);
+  }, [successMessage, orderSuccessDetails]);
+
+  const validateFields = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!customerDetails.name.trim()) newErrors.name = "Name is required";
+    if (!customerDetails.address.trim())
+      newErrors.address = "Address is required";
+    if (!customerDetails.pincode.trim())
+      newErrors.pincode = "Pincode is required";
+    if (!customerDetails.phoneNumber.trim()) {
+      newErrors.phoneNumber = "Phone number is required";
+    } else if (!/^\d{10}$/.test(customerDetails.phoneNumber)) {
+      newErrors.phoneNumber = "Enter a valid 10-digit phone number";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const submitOrder = () => {
+    if (!validateFields()) return; // ❌ Stop if validation fails
+
     const data = {
-      name: customerDetails.name,
-      address: customerDetails.address,
-      phoneNumber: customerDetails.phoneNumber,
-      pincode: customerDetails.pincode,
+      name: customerDetails.name.trim(),
+      address: customerDetails.address.trim(),
+      phoneNumber: customerDetails.phoneNumber.trim(),
+      pincode: customerDetails.pincode.trim(),
       phoneName:
-        orderProduct.productName +
+        orderProduct?.productName +
         " " +
         orderProduct?.selectedVariant?.ram +
         "/" +
         orderProduct?.selectedVariant?.storage +
-        "  " +
-        "  " +
+        " " +
         orderProduct?.selectedColor?.name,
       price: orderProduct?.selectedVariant?.price,
       productId,
@@ -45,15 +74,15 @@ const CustomerOrder = () => {
       productVariantId,
       productColorId,
     };
-    console.log(data);
+
     dispatch(addCustomerOrder(data));
   };
-  console.log(customerDetails);
-  console.log(orderProduct);
+
   return (
     <div className="mt-6 h-full md:h-screen">
       {orderProduct ? (
-        <div className="block md:flex h-full md:h-3/5 ">
+        <div className="block md:flex h-full md:h-3/5">
+          {/* Product section */}
           <div className="flex w-full md:w-1/2 h-full items-center justify-center">
             <div className="w-1/3 h-[100px] md:h-[170px] object-contain">
               <ServerLazyImage
@@ -62,15 +91,13 @@ const CustomerOrder = () => {
               />
             </div>
             <div className="space-y-2 font-semibold text-sm">
-              <h1 className="space-x-1 ">
-                <span>{`${toPascalCase(orderProduct?.productName)}`} </span>
-
+              <h1 className="space-x-1">
+                <span>{toPascalCase(orderProduct?.productName)}</span>
                 <span>
                   {`${orderProduct?.selectedVariant?.ram}/${orderProduct?.selectedVariant?.storage}`}
                 </span>
-                <span> {toPascalCase(orderProduct?.selectedColor?.name)}</span>
+                <span>{toPascalCase(orderProduct?.selectedColor?.name)}</span>
               </h1>
-
               <h1 className="text-green-500 font-semibold">
                 ₹{orderProduct?.selectedVariant?.price}
               </h1>
@@ -86,7 +113,6 @@ const CustomerOrder = () => {
                   <input
                     onChange={(e) => {
                       const value = e.target.value;
-                      // Ensure it's a positive integer
                       if (/^\d*$/.test(value)) {
                         setQty(value);
                       }
@@ -94,13 +120,10 @@ const CustomerOrder = () => {
                     className="border border-gray-500 w-8 text-center"
                     value={qty}
                     type="text"
-                    min="1" // Minimum value
-                    step="1" // Only whole numbers
+                    min="1"
+                    step="1"
                     onKeyPress={(e) => {
-                      // Prevent non-digit characters
-                      if (!/[0-9]/.test(e.key)) {
-                        e.preventDefault();
-                      }
+                      if (!/[0-9]/.test(e.key)) e.preventDefault();
                     }}
                   />
                   <button
@@ -113,55 +136,83 @@ const CustomerOrder = () => {
               </div>
             </div>
           </div>
-          <div className="p-2 space-y-2 mt-3">
-            <input
-              className="border border-gray-500 rounded-sm text-sm w-full p-2"
-              placeholder="Name"
-              name="name"
-              onChange={(e) =>
-                setCustomerDetails({
-                  ...customerDetails,
-                  [e.target.name]: e.target.value,
-                })
-              }
-            />
-            <textarea
-              rows={3}
-              className="border border-gray-500 rounded-sm text-sm w-full p-2"
-              placeholder="Address"
-              name="address"
-              onChange={(e) =>
-                setCustomerDetails({
-                  ...customerDetails,
-                  [e.target.name]: e.target.value,
-                })
-              }
-            />
-            <input
-              className="border border-gray-500 rounded-sm text-sm w-full p-2"
-              placeholder="pincode"
-              name="pincode"
-              onChange={(e) =>
-                setCustomerDetails({
-                  ...customerDetails,
-                  [e.target.name]: e.target.value,
-                })
-              }
-            />
-            <input
-              name="phoneNumber"
-              onChange={(e) =>
-                setCustomerDetails({
-                  ...customerDetails,
-                  [e.target.name]: e.target.value,
-                })
-              }
-              className="border border-gray-500 rounded-sm text-sm w-full p-2"
-              placeholder="Phone number"
-            />
+
+          {/* Customer form section */}
+          <div className="p-2 space-y-3 mt-3 md:w-1/2">
+            <div>
+              <input
+                className="border border-gray-500 rounded-sm text-sm w-full p-2"
+                placeholder="Name"
+                name="name"
+                onChange={(e) =>
+                  setCustomerDetails({
+                    ...customerDetails,
+                    [e.target.name]: e.target.value,
+                  })
+                }
+              />
+              {errors.name && (
+                <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+              )}
+            </div>
+
+            <div>
+              <textarea
+                rows={3}
+                className="border border-gray-500 rounded-sm text-sm w-full p-2"
+                placeholder="Address"
+                name="address"
+                onChange={(e) =>
+                  setCustomerDetails({
+                    ...customerDetails,
+                    [e.target.name]: e.target.value,
+                  })
+                }
+              />
+              {errors.address && (
+                <p className="text-red-500 text-xs mt-1">{errors.address}</p>
+              )}
+            </div>
+
+            <div>
+              <input
+                className="border border-gray-500 rounded-sm text-sm w-full p-2"
+                placeholder="Pincode"
+                name="pincode"
+                onChange={(e) =>
+                  setCustomerDetails({
+                    ...customerDetails,
+                    [e.target.name]: e.target.value,
+                  })
+                }
+              />
+              {errors.pincode && (
+                <p className="text-red-500 text-xs mt-1">{errors.pincode}</p>
+              )}
+            </div>
+
+            <div>
+              <input
+                name="phoneNumber"
+                onChange={(e) =>
+                  setCustomerDetails({
+                    ...customerDetails,
+                    [e.target.name]: e.target.value,
+                  })
+                }
+                className="border border-gray-500 rounded-sm text-sm w-full p-2"
+                placeholder="Phone number"
+              />
+              {errors.phoneNumber && (
+                <p className="text-red-500 text-xs mt-1">
+                  {errors.phoneNumber}
+                </p>
+              )}
+            </div>
+
             <button
               onClick={submitOrder}
-              className="bg-orange-500 text-white text-center w-full p-2 "
+              className="bg-orange-500 text-white text-center w-full p-2 mt-2"
             >
               Place Order
             </button>
@@ -171,4 +222,5 @@ const CustomerOrder = () => {
     </div>
   );
 };
+
 export default CustomerOrder;
