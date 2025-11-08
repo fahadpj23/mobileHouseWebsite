@@ -5,12 +5,14 @@ import { useParams } from "react-router-dom";
 import ServerLazyImage from "components/commonComponents/serverImageLazyLoading";
 import { toPascalCase } from "utils/pascalCaseConvert";
 import { addCustomerOrder } from "store/slice/customerOrderSlice";
+import OrderSuccessDialog from "./orderSuccess";
 
 const CustomerOrder = () => {
   const { productId, productVariantId, productColorId, productName } =
     useParams();
   const [qty, setQty] = useState<any>(1);
   const dispatch = useAppDispatch();
+  const [placeOrder, setPlaceOrder] = useState(false);
   const [customerDetails, setCustomerDetails] = useState({
     name: "",
     address: "",
@@ -29,10 +31,6 @@ const CustomerOrder = () => {
       fetchProductDetails({ productId, productVariantId, productColorId })
     );
   }, [productId, productVariantId, productColorId, dispatch]);
-
-  useEffect(() => {
-    alert("product ordered succesfully" + " " + orderSuccessDetails?.id);
-  }, [successMessage, orderSuccessDetails]);
 
   const validateFields = () => {
     const newErrors: Record<string, string> = {};
@@ -54,7 +52,7 @@ const CustomerOrder = () => {
 
   const submitOrder = () => {
     if (!validateFields()) return; // ❌ Stop if validation fails
-
+    setPlaceOrder(true);
     const data = {
       name: customerDetails.name.trim(),
       address: customerDetails.address.trim(),
@@ -80,6 +78,9 @@ const CustomerOrder = () => {
 
   return (
     <div className="mt-6 h-full md:h-screen">
+      {placeOrder && orderSuccessDetails && (
+        <OrderSuccessDialog open={true} orderId={orderSuccessDetails?.id} />
+      )}
       {orderProduct ? (
         <div className="block md:flex h-full md:h-3/5">
           {/* Product section */}
