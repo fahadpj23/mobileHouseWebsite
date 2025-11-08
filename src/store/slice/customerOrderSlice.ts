@@ -29,14 +29,14 @@ const initialState: UserState = {
   orderSuccessDetails: "",
 };
 
-// Async thunk to fetch Series data
+// Async thunk to fetch Order data
 
 export const addCustomerOrder = createAsyncThunk(
-  "customer/addCustomerOrder",
+  "order/addCustomerOrder",
   async (data: any, { rejectWithValue }) => {
     try {
       // Add to Firestore
-      const docRef = await addDoc(collection(db, "customers"), {
+      const docRef = await addDoc(collection(db, "customerOrder"), {
         name: data.name,
         address: data.address,
         phone: data.phoneNumber,
@@ -60,9 +60,26 @@ export const addCustomerOrder = createAsyncThunk(
   }
 );
 
+export const fetchCustomerOrder = createAsyncThunk(
+  "order/fetchOrder",
+  async (_, { rejectWithValue }) => {
+    try {
+      const snapshot = await getDocs(collection(db, "customerOrder"));
+      const Order = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      return Order;
+    } catch (error: any) {
+      console.error("Error fetching Order:", error);
+      return rejectWithValue(error.message || "Failed to fetch Order");
+    }
+  }
+);
+
 // Create slice
 const customerOrderSlice = createSlice({
-  name: "Series",
+  name: "Order",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -70,6 +87,10 @@ const customerOrderSlice = createSlice({
       state.loading = false;
       state.successMessage = "product ordered SuccessFully";
       state.orderSuccessDetails = action.payload;
+    });
+    builder.addCase(fetchCustomerOrder.fulfilled, (state, action) => {
+      state.loading = false;
+      state.entities = action.payload;
     });
   },
 });

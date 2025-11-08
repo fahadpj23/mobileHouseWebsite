@@ -6,11 +6,37 @@ import ServerLazyImage from "components/commonComponents/serverImageLazyLoading"
 import { toPascalCase } from "utils/pascalCaseConvert";
 import { addCustomerOrder } from "store/slice/customerOrderSlice";
 import OrderSuccessDialog from "./orderSuccess";
+import {
+  Box,
+  Container,
+  Grid,
+  Card,
+  CardContent,
+  Typography,
+  TextField,
+  Button,
+  Paper,
+  Divider,
+  IconButton,
+  Chip,
+  Stack,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
+import {
+  Add,
+  Remove,
+  ShoppingBag,
+  Person,
+  LocationOn,
+  LocalPhone,
+  PinDrop,
+} from "@mui/icons-material";
 
 const CustomerOrder = () => {
   const { productId, productVariantId, productColorId, productName } =
     useParams();
-  const [qty, setQty] = useState<any>(1);
+  const [qty, setQty] = useState<number>(1);
   const dispatch = useAppDispatch();
   const [placeOrder, setPlaceOrder] = useState(false);
   const [customerDetails, setCustomerDetails] = useState({
@@ -25,6 +51,9 @@ const CustomerOrder = () => {
   const { successMessage, orderSuccessDetails } = useAppSelector(
     (state) => state.user?.customerOrder
   );
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
     dispatch(
@@ -51,7 +80,7 @@ const CustomerOrder = () => {
   };
 
   const submitOrder = () => {
-    if (!validateFields()) return; // ❌ Stop if validation fails
+    if (!validateFields()) return;
     setPlaceOrder(true);
     const data = {
       name: customerDetails.name.trim(),
@@ -76,151 +105,616 @@ const CustomerOrder = () => {
     dispatch(addCustomerOrder(data));
   };
 
+  const handleQtyChange = (value: string) => {
+    if (/^\d*$/.test(value) && value !== "") {
+      const numValue = parseInt(value);
+      if (numValue > 0) setQty(numValue);
+    }
+  };
+
+  // Mobile Layout
+  if (isMobile) {
+    return (
+      <Box sx={{ p: 2 }}>
+        {placeOrder && orderSuccessDetails && (
+          <OrderSuccessDialog open={true} orderId={orderSuccessDetails?.id} />
+        )}
+
+        {orderProduct ? (
+          <Stack spacing={3}>
+            {/* Product Card - Mobile */}
+            <Card sx={{ boxShadow: 2, borderRadius: 2 }}>
+              <CardContent sx={{ p: 2 }}>
+                <Typography
+                  variant="h6"
+                  gutterBottom
+                  fontWeight="bold"
+                  color="primary"
+                  align="center"
+                >
+                  Order Summary
+                </Typography>
+                <Divider sx={{ mb: 2 }} />
+
+                {/* Product Image and Details */}
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 2,
+                    alignItems: "flex-start",
+                    mb: 2,
+                  }}
+                >
+                  <Box sx={{ width: 80, height: 80, flexShrink: 0 }}>
+                    <Box
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "contain",
+                        borderRadius: 1,
+                      }}
+                    >
+                      <ServerLazyImage
+                        src={orderProduct?.selectedColor?.images[0]?.url}
+                        alt="Product Image"
+                      />
+                    </Box>
+                  </Box>
+
+                  <Box sx={{ flex: 1 }}>
+                    <Typography
+                      variant="subtitle1"
+                      fontWeight="bold"
+                      gutterBottom
+                    >
+                      {toPascalCase(orderProduct?.productName)}
+                    </Typography>
+
+                    <Stack
+                      direction="row"
+                      spacing={1}
+                      sx={{ mb: 1 }}
+                      flexWrap="wrap"
+                    >
+                      <Chip
+                        label={`${orderProduct?.selectedVariant?.ram}/${orderProduct?.selectedVariant?.storage}`}
+                        size="small"
+                        color="primary"
+                      />
+                      <Chip
+                        label={toPascalCase(orderProduct?.selectedColor?.name)}
+                        size="small"
+                        color="secondary"
+                      />
+                    </Stack>
+
+                    <Typography
+                      variant="h6"
+                      color="success.main"
+                      fontWeight="bold"
+                    >
+                      ₹{orderProduct?.selectedVariant?.price}
+                    </Typography>
+                  </Box>
+                </Box>
+
+                {/* Quantity Selector - Mobile */}
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    mb: 2,
+                  }}
+                >
+                  <Typography variant="body1" fontWeight="medium">
+                    Quantity:
+                  </Typography>
+                  <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                    <IconButton
+                      onClick={() => qty > 1 && setQty(qty - 1)}
+                      sx={{
+                        bgcolor: "error.light",
+                        color: "white",
+                        "&:hover": { bgcolor: "error.main" },
+                        width: 28,
+                        height: 28,
+                      }}
+                      size="small"
+                    >
+                      <Remove fontSize="small" />
+                    </IconButton>
+
+                    <TextField
+                      value={qty}
+                      onChange={(e) => handleQtyChange(e.target.value)}
+                      sx={{
+                        width: 50,
+                        "& .MuiInputBase-input": {
+                          textAlign: "center",
+                          py: 0.5,
+                          fontSize: "0.9rem",
+                        },
+                      }}
+                      size="small"
+                      inputProps={{
+                        min: 1,
+                        style: { textAlign: "center" },
+                      }}
+                    />
+
+                    <IconButton
+                      onClick={() => setQty(qty + 1)}
+                      sx={{
+                        bgcolor: "success.light",
+                        color: "white",
+                        "&:hover": { bgcolor: "success.main" },
+                        width: 28,
+                        height: 28,
+                      }}
+                      size="small"
+                    >
+                      <Add fontSize="small" />
+                    </IconButton>
+                  </Box>
+                </Box>
+
+                {/* Total Price - Mobile */}
+                <Box
+                  sx={{
+                    p: 1.5,
+                    bgcolor: "grey.50",
+                    borderRadius: 1,
+                    textAlign: "center",
+                  }}
+                >
+                  <Typography variant="body1" fontWeight="bold">
+                    Total: ₹
+                    {(orderProduct?.selectedVariant?.price * qty).toFixed(2)}
+                  </Typography>
+                </Box>
+              </CardContent>
+            </Card>
+
+            {/* Customer Form - Mobile */}
+            <Card sx={{ boxShadow: 2, borderRadius: 2 }}>
+              <CardContent sx={{ p: 2 }}>
+                <Typography
+                  variant="h6"
+                  gutterBottom
+                  fontWeight="bold"
+                  color="primary"
+                  align="center"
+                >
+                  Customer Details
+                </Typography>
+                <Divider sx={{ mb: 2 }} />
+
+                <Stack spacing={2}>
+                  {/* Name Field */}
+                  <TextField
+                    fullWidth
+                    label="Full Name"
+                    value={customerDetails.name}
+                    onChange={(e) =>
+                      setCustomerDetails({
+                        ...customerDetails,
+                        name: e.target.value,
+                      })
+                    }
+                    error={!!errors.name}
+                    helperText={errors.name}
+                    size="small"
+                    InputProps={{
+                      startAdornment: <Person color="action" sx={{ mr: 1 }} />,
+                    }}
+                    variant="outlined"
+                  />
+
+                  {/* Address Field */}
+                  <TextField
+                    fullWidth
+                    label="Delivery Address"
+                    value={customerDetails.address}
+                    onChange={(e) =>
+                      setCustomerDetails({
+                        ...customerDetails,
+                        address: e.target.value,
+                      })
+                    }
+                    error={!!errors.address}
+                    helperText={errors.address}
+                    multiline
+                    rows={2}
+                    size="small"
+                    InputProps={{
+                      startAdornment: (
+                        <LocationOn
+                          color="action"
+                          sx={{ mr: 1, mt: 1, alignSelf: "flex-start" }}
+                        />
+                      ),
+                    }}
+                    variant="outlined"
+                  />
+
+                  {/* Pincode Field */}
+                  <TextField
+                    fullWidth
+                    label="Pincode"
+                    value={customerDetails.pincode}
+                    onChange={(e) =>
+                      setCustomerDetails({
+                        ...customerDetails,
+                        pincode: e.target.value,
+                      })
+                    }
+                    error={!!errors.pincode}
+                    helperText={errors.pincode}
+                    size="small"
+                    InputProps={{
+                      startAdornment: <PinDrop color="action" sx={{ mr: 1 }} />,
+                    }}
+                    variant="outlined"
+                  />
+
+                  {/* Phone Number Field */}
+                  <TextField
+                    fullWidth
+                    label="Phone Number"
+                    value={customerDetails.phoneNumber}
+                    onChange={(e) =>
+                      setCustomerDetails({
+                        ...customerDetails,
+                        phoneNumber: e.target.value,
+                      })
+                    }
+                    error={!!errors.phoneNumber}
+                    helperText={errors.phoneNumber}
+                    size="small"
+                    InputProps={{
+                      startAdornment: (
+                        <LocalPhone color="action" sx={{ mr: 1 }} />
+                      ),
+                    }}
+                    variant="outlined"
+                  />
+
+                  {/* Place Order Button - Mobile */}
+                  <Button
+                    variant="contained"
+                    size="large"
+                    fullWidth
+                    onClick={submitOrder}
+                    startIcon={<ShoppingBag />}
+                    sx={{
+                      py: 1.2,
+                      bgcolor: "orange.main",
+                      "&:hover": {
+                        bgcolor: "orange.dark",
+                      },
+                      fontSize: "1rem",
+                      fontWeight: "bold",
+                      mt: 1,
+                    }}
+                  >
+                    Place Order
+                  </Button>
+                </Stack>
+              </CardContent>
+            </Card>
+          </Stack>
+        ) : (
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "50vh",
+            }}
+          >
+            <Typography variant="h6" color="text.secondary">
+              Loading product details...
+            </Typography>
+          </Box>
+        )}
+      </Box>
+    );
+  }
+
+  // Desktop Layout
   return (
-    <div className="mt-6 h-full md:h-screen">
+    <Container maxWidth="lg" sx={{ py: 4 }}>
       {placeOrder && orderSuccessDetails && (
         <OrderSuccessDialog open={true} orderId={orderSuccessDetails?.id} />
       )}
+
       {orderProduct ? (
-        <div className="block md:flex h-full md:h-3/5">
-          {/* Product section */}
-          <div className="flex w-full md:w-1/2 h-full items-center justify-center">
-            <div className="w-1/3 h-[100px] md:h-[170px] object-contain">
-              <ServerLazyImage
-                src={orderProduct?.selectedColor?.images[0]?.url}
-                alt="Product Image"
-              />
-            </div>
-            <div className="space-y-2 font-semibold text-sm">
-              <h1 className="space-x-1">
-                <span>{toPascalCase(orderProduct?.productName)}</span>
-                <span>
-                  {`${orderProduct?.selectedVariant?.ram}/${orderProduct?.selectedVariant?.storage}`}
-                </span>
-                <span>{toPascalCase(orderProduct?.selectedColor?.name)}</span>
-              </h1>
-              <h1 className="text-green-500 font-semibold">
-                ₹{orderProduct?.selectedVariant?.price}
-              </h1>
-              <div className="flex space-x-2">
-                <h1>qty:</h1>
-                <div className="flex space-x-1">
-                  <button
-                    onClick={() => (qty - 1 > 0 ? setQty(+qty - 1) : qty)}
-                    className="bg-red-500 text-white text-xl w-8 text-center"
-                  >
-                    -
-                  </button>
-                  <input
-                    onChange={(e) => {
-                      const value = e.target.value;
-                      if (/^\d*$/.test(value)) {
-                        setQty(value);
-                      }
+        <Grid container spacing={4}>
+          {/* Product Section */}
+          <Grid item xs={12} md={6}>
+            <Card sx={{ boxShadow: 3, borderRadius: 2 }}>
+              <CardContent sx={{ p: 3 }}>
+                <Typography
+                  variant="h5"
+                  gutterBottom
+                  fontWeight="bold"
+                  color="primary"
+                >
+                  Order Summary
+                </Typography>
+                <Divider sx={{ mb: 3 }} />
+
+                <Box sx={{ display: "flex", gap: 3, alignItems: "flex-start" }}>
+                  <Box sx={{ width: 120, height: 120, flexShrink: 0 }}>
+                    <Box
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "contain",
+                        borderRadius: 1,
+                      }}
+                    >
+                      <ServerLazyImage
+                        src={orderProduct?.selectedColor?.images[0]?.url}
+                        alt="Product Image"
+                      />
+                    </Box>
+                  </Box>
+
+                  <Box sx={{ flex: 1 }}>
+                    <Typography variant="h6" fontWeight="bold" gutterBottom>
+                      {toPascalCase(orderProduct?.productName)}
+                    </Typography>
+
+                    <Stack
+                      direction="row"
+                      spacing={1}
+                      sx={{ mb: 2 }}
+                      flexWrap="wrap"
+                    >
+                      <Chip
+                        label={`${orderProduct?.selectedVariant?.ram}/${orderProduct?.selectedVariant?.storage}`}
+                        size="small"
+                        color="primary"
+                        variant="outlined"
+                      />
+                      <Chip
+                        label={toPascalCase(orderProduct?.selectedColor?.name)}
+                        size="small"
+                        color="secondary"
+                        variant="outlined"
+                      />
+                    </Stack>
+
+                    <Typography
+                      variant="h5"
+                      color="success.main"
+                      fontWeight="bold"
+                      gutterBottom
+                    >
+                      ₹{orderProduct?.selectedVariant?.price}
+                    </Typography>
+
+                    {/* Quantity Selector */}
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 2,
+                        mt: 2,
+                      }}
+                    >
+                      <Typography variant="body1" fontWeight="medium">
+                        Quantity:
+                      </Typography>
+                      <Box
+                        sx={{ display: "flex", alignItems: "center", gap: 1 }}
+                      >
+                        <IconButton
+                          onClick={() => qty > 1 && setQty(qty - 1)}
+                          sx={{
+                            bgcolor: "error.light",
+                            color: "white",
+                            "&:hover": { bgcolor: "error.main" },
+                            width: 32,
+                            height: 32,
+                          }}
+                          size="small"
+                        >
+                          <Remove />
+                        </IconButton>
+
+                        <TextField
+                          value={qty}
+                          onChange={(e) => handleQtyChange(e.target.value)}
+                          sx={{
+                            width: 60,
+                            "& .MuiInputBase-input": {
+                              textAlign: "center",
+                              py: 0.5,
+                            },
+                          }}
+                          size="small"
+                          inputProps={{
+                            min: 1,
+                            style: { textAlign: "center" },
+                          }}
+                        />
+
+                        <IconButton
+                          onClick={() => setQty(qty + 1)}
+                          sx={{
+                            bgcolor: "success.light",
+                            color: "white",
+                            "&:hover": { bgcolor: "success.main" },
+                            width: 32,
+                            height: 32,
+                          }}
+                          size="small"
+                        >
+                          <Add />
+                        </IconButton>
+                      </Box>
+                    </Box>
+
+                    {/* Total Price */}
+                    <Box
+                      sx={{ mt: 2, p: 2, bgcolor: "grey.50", borderRadius: 1 }}
+                    >
+                      <Typography variant="body1" fontWeight="bold">
+                        Total: ₹
+                        {(orderProduct?.selectedVariant?.price * qty).toFixed(
+                          2
+                        )}
+                      </Typography>
+                    </Box>
+                  </Box>
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Customer Form Section */}
+          <Grid item xs={12} md={6}>
+            <Card sx={{ boxShadow: 3, borderRadius: 2 }}>
+              <CardContent sx={{ p: 3 }}>
+                <Typography
+                  variant="h5"
+                  gutterBottom
+                  fontWeight="bold"
+                  color="primary"
+                >
+                  <Person sx={{ mr: 1, verticalAlign: "middle" }} />
+                  Customer Details
+                </Typography>
+                <Divider sx={{ mb: 3 }} />
+
+                <Stack spacing={3}>
+                  {/* Name Field */}
+                  <TextField
+                    fullWidth
+                    label="Full Name"
+                    value={customerDetails.name}
+                    onChange={(e) =>
+                      setCustomerDetails({
+                        ...customerDetails,
+                        name: e.target.value,
+                      })
+                    }
+                    error={!!errors.name}
+                    helperText={errors.name}
+                    InputProps={{
+                      startAdornment: <Person color="action" sx={{ mr: 1 }} />,
                     }}
-                    className="border border-gray-500 w-8 text-center"
-                    value={qty}
-                    type="text"
-                    min="1"
-                    step="1"
-                    onKeyPress={(e) => {
-                      if (!/[0-9]/.test(e.key)) e.preventDefault();
-                    }}
+                    variant="outlined"
                   />
-                  <button
-                    onClick={() => setQty(+qty + 1)}
-                    className="bg-green-500 text-white text-xl w-8"
+
+                  {/* Address Field */}
+                  <TextField
+                    fullWidth
+                    label="Delivery Address"
+                    value={customerDetails.address}
+                    onChange={(e) =>
+                      setCustomerDetails({
+                        ...customerDetails,
+                        address: e.target.value,
+                      })
+                    }
+                    error={!!errors.address}
+                    helperText={errors.address}
+                    multiline
+                    rows={3}
+                    InputProps={{
+                      startAdornment: (
+                        <LocationOn
+                          color="action"
+                          sx={{ mr: 1, mt: 1, alignSelf: "flex-start" }}
+                        />
+                      ),
+                    }}
+                    variant="outlined"
+                  />
+
+                  {/* Pincode Field */}
+                  <TextField
+                    fullWidth
+                    label="Pincode"
+                    value={customerDetails.pincode}
+                    onChange={(e) =>
+                      setCustomerDetails({
+                        ...customerDetails,
+                        pincode: e.target.value,
+                      })
+                    }
+                    error={!!errors.pincode}
+                    helperText={errors.pincode}
+                    InputProps={{
+                      startAdornment: <PinDrop color="action" sx={{ mr: 1 }} />,
+                    }}
+                    variant="outlined"
+                  />
+
+                  {/* Phone Number Field */}
+                  <TextField
+                    fullWidth
+                    label="Phone Number"
+                    value={customerDetails.phoneNumber}
+                    onChange={(e) =>
+                      setCustomerDetails({
+                        ...customerDetails,
+                        phoneNumber: e.target.value,
+                      })
+                    }
+                    error={!!errors.phoneNumber}
+                    helperText={errors.phoneNumber}
+                    InputProps={{
+                      startAdornment: (
+                        <LocalPhone color="action" sx={{ mr: 1 }} />
+                      ),
+                    }}
+                    variant="outlined"
+                  />
+
+                  {/* Place Order Button */}
+                  <Button
+                    variant="contained"
+                    size="large"
+                    fullWidth
+                    onClick={submitOrder}
+                    startIcon={<ShoppingBag />}
+                    sx={{
+                      py: 1.5,
+                      bgcolor: "orange.main",
+                      "&:hover": {
+                        bgcolor: "orange.dark",
+                      },
+                      fontSize: "1.1rem",
+                      fontWeight: "bold",
+                    }}
                   >
-                    +
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Customer form section */}
-          <div className="p-2 space-y-3 mt-3 md:w-1/2">
-            <div>
-              <input
-                className="border border-gray-500 rounded-sm text-sm w-full p-2"
-                placeholder="Name"
-                name="name"
-                onChange={(e) =>
-                  setCustomerDetails({
-                    ...customerDetails,
-                    [e.target.name]: e.target.value,
-                  })
-                }
-              />
-              {errors.name && (
-                <p className="text-red-500 text-xs mt-1">{errors.name}</p>
-              )}
-            </div>
-
-            <div>
-              <textarea
-                rows={3}
-                className="border border-gray-500 rounded-sm text-sm w-full p-2"
-                placeholder="Address"
-                name="address"
-                onChange={(e) =>
-                  setCustomerDetails({
-                    ...customerDetails,
-                    [e.target.name]: e.target.value,
-                  })
-                }
-              />
-              {errors.address && (
-                <p className="text-red-500 text-xs mt-1">{errors.address}</p>
-              )}
-            </div>
-
-            <div>
-              <input
-                className="border border-gray-500 rounded-sm text-sm w-full p-2"
-                placeholder="Pincode"
-                name="pincode"
-                onChange={(e) =>
-                  setCustomerDetails({
-                    ...customerDetails,
-                    [e.target.name]: e.target.value,
-                  })
-                }
-              />
-              {errors.pincode && (
-                <p className="text-red-500 text-xs mt-1">{errors.pincode}</p>
-              )}
-            </div>
-
-            <div>
-              <input
-                name="phoneNumber"
-                onChange={(e) =>
-                  setCustomerDetails({
-                    ...customerDetails,
-                    [e.target.name]: e.target.value,
-                  })
-                }
-                className="border border-gray-500 rounded-sm text-sm w-full p-2"
-                placeholder="Phone number"
-              />
-              {errors.phoneNumber && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.phoneNumber}
-                </p>
-              )}
-            </div>
-
-            <button
-              onClick={submitOrder}
-              className="bg-orange-500 text-white text-center w-full p-2 mt-2"
-            >
-              Place Order
-            </button>
-          </div>
-        </div>
-      ) : null}
-    </div>
+                    Place Order
+                  </Button>
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      ) : (
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "50vh",
+          }}
+        >
+          <Typography variant="h6" color="text.secondary">
+            Loading product details...
+          </Typography>
+        </Box>
+      )}
+    </Container>
   );
 };
 

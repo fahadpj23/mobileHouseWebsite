@@ -18,6 +18,7 @@ import Login from "pages/login";
 import { AuthRedirect } from "components/authRedirect";
 import Stock from "pages/adminPanel/stock";
 import CustomerOrder from "pages/customerOrder";
+import Order from "pages/adminPanel/order";
 
 const PageRoute = () => {
   return (
@@ -53,6 +54,7 @@ const PageRoute = () => {
             <Route path="admin/banner" element={<Banner />} />
             <Route path="admin/series" element={<Series />} />
             <Route path="admin/stock" element={<Stock />} />
+            <Route path="admin/order" element={<Order />} />
           </Route>
           {/* </Route> */}
         </Routes>

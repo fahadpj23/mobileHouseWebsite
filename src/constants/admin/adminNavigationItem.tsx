@@ -25,4 +25,9 @@ export const ADMINNAVIGATIONITEMS: NAVIGATIONITEMMODEL[] = [
     link: "/admin/stock",
     icon: <IoHomeOutline />,
   },
+  {
+    title: "Order",
+    link: "/admin/order",
+    icon: <IoHomeOutline />,
+  },
 ];
