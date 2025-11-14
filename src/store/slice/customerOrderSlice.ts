@@ -4,8 +4,13 @@ import {
   PayloadAction,
   isPending,
 } from "@reduxjs/toolkit";
-import axiosInstance from "services/api";
-import { addDoc, collection, getDocs } from "firebase/firestore";
+
+import {
+  addDoc,
+  collection,
+  getDocs,
+  serverTimestamp,
+} from "firebase/firestore";
 import { db } from "../../firebase";
 // Define the initial state for the user
 interface UserState {
@@ -47,6 +52,7 @@ export const addCustomerOrder = createAsyncThunk(
         productId: data?.productId,
         productVariantId: data?.productVariantId,
         productColorId: data?.productVariantId,
+        orderDate: serverTimestamp(),
       });
 
       return {
@@ -65,10 +71,41 @@ export const fetchCustomerOrder = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const snapshot = await getDocs(collection(db, "customerOrder"));
-      const Order = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
+      const Order = snapshot.docs.map((doc) => {
+        const data = doc.data();
+
+        // Format the orderDate with better error handling
+        const formatOrderDate = (timestamp: any) => {
+          try {
+            if (!timestamp) return "N/A";
+            const date = timestamp.toDate();
+            return {
+              formatted: `${date.getDate().toString().padStart(2, "0")}/${(
+                date.getMonth() + 1
+              )
+                .toString()
+                .padStart(2, "0")}/${date.getFullYear()} ${date
+                .getHours()
+                .toString()
+                .padStart(2, "0")}:${date
+                .getMinutes()
+                .toString()
+                .padStart(2, "0")}`,
+            };
+          } catch (error) {
+            console.error("Error formatting date:", error);
+            return { formatted: "Invalid Date" };
+          }
+        };
+
+        const dateInfo: any = formatOrderDate(data.orderDate);
+
+        return {
+          id: doc.id,
+          ...data,
+          DateOrdered: dateInfo.formatted,
+        };
+      });
       return Order;
     } catch (error: any) {
       console.error("Error fetching Order:", error);

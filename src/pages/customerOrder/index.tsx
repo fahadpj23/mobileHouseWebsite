@@ -286,7 +286,7 @@ const CustomerOrder = () => {
                   color="primary"
                   align="center"
                 >
-                  Customer Details
+                  Details
                 </Typography>
                 <Divider sx={{ mb: 2 }} />
 
@@ -586,7 +586,7 @@ const CustomerOrder = () => {
                   color="primary"
                 >
                   <Person sx={{ mr: 1, verticalAlign: "middle" }} />
-                  Customer Details
+                  Details
                 </Typography>
                 <Divider sx={{ mb: 3 }} />
 

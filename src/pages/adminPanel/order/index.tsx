@@ -18,7 +18,7 @@ const Order = () => {
   useEffect(() => {
     dispatch(fetchCustomerOrder());
   }, []);
-  console.log(entities);
+
   return (
     <div>
       <ToastContainer />

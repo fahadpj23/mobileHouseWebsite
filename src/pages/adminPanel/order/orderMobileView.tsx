@@ -28,7 +28,6 @@ const OrderCard: FC<props> = ({ entities }) => {
         sx={{ backgroundColor: "primary.main", color: "white", py: 1.5 }}
       />
       <CardContent sx={{ p: 0 }}>
-        {/* Entity List - Mobile Layout */}
         <Stack spacing={2} sx={{ p: 2 }}>
           {entities.map((entity: any, index: number) => (
             <Box key={entity.id}>
@@ -41,7 +40,7 @@ const OrderCard: FC<props> = ({ entities }) => {
                   borderColor: "divider",
                 }}
               >
-                {/* Customer Name - Top Section */}
+                {/* Customer Name & Order Date */}
                 <Box sx={{ textAlign: "center", mb: 2 }}>
                   <Typography
                     variant="subtitle2"
@@ -50,13 +49,27 @@ const OrderCard: FC<props> = ({ entities }) => {
                   >
                     Customer
                   </Typography>
-                  <Typography variant="h6" fontWeight="bold">
+                  <Typography variant="h6" fontWeight="bold" gutterBottom>
                     {entity.name}
                   </Typography>
+
+                  {/* Order Date below customer name */}
+                  <Chip
+                    label={`Ordered: ${entity.DateOrdered || "N/A"}`}
+                    size="small"
+                    color="primary"
+                    variant="filled"
+                    sx={{
+                      fontWeight: "medium",
+                      fontSize: "0.7rem",
+                      backgroundColor: "grey.300",
+                      color: "grey.800",
+                    }}
+                  />
                 </Box>
 
                 <Grid container spacing={2}>
-                  {/* Phone Name - Full width to show complete text */}
+                  {/* Phone Name */}
                   <Grid item xs={12} sx={{ mb: 1 }}>
                     <Typography
                       variant="body2"
@@ -148,7 +161,6 @@ const OrderCard: FC<props> = ({ entities }) => {
                 </Grid>
               </Paper>
 
-              {/* Divider between items */}
               {index < entities.length - 1 && <Divider sx={{ my: 1 }} />}
             </Box>
           ))}
